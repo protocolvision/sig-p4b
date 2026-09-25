@@ -16,8 +16,8 @@ body text, Instrument Serif for the page title, cobalt links.
 
 ```
 index.html               overview, research questions, session list, essays
-syllabus/index.html      12 sessions with readings and monthly deliverables, plus the case-study template
-case-studies/index.html  water + construction briefs
+syllabus/index.html      reading group: 20 readings in 12 sessions, seven parts ending on stigmergy and swarms
+case-studies/index.html  practical work: water, construction, brand kit; timeline; shared template
 style.css                the only stylesheet
 favicon.svg              PI P-mark
 deploy.sh                publish to here.now and mount at npc.here.now/protocolvision
