@@ -1,0 +1,6 @@
+{
+  "name": "sig-p4b-signup",
+  "private": true,
+  "scripts": { "deploy": "wrangler deploy", "dev": "wrangler dev" },
+  "devDependencies": { "@cloudflare/workers-types": "^4.20250901.0", "typescript": "^5.5.0" }
+}

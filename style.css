@@ -58,13 +58,14 @@ p, li { text-wrap: pretty; }
 }
 .schedule li:last-child { border-bottom: 1px solid var(--rule); }
 .schedule time {
-  flex: 0 0 9rem;
+  flex: 0 0 10.75rem;
+  white-space: nowrap;
   color: var(--muted);
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
 }
 .schedule .what { flex: 1 1 16rem; }
-.schedule .also { flex: 1 0 100%; padding-left: 9.75rem; font-size: 0.9rem; color: var(--muted); }
+.schedule .also { flex: 1 0 100%; padding-left: 11.5rem; font-size: 0.9rem; color: var(--muted); }
 .kind {
   font-family: Outfit, system-ui, sans-serif;
   font-size: 0.68rem;
@@ -118,3 +119,18 @@ body::before {
 @media print { body::before { display: none; } html { border-top: 0; } }
 ::selection { background: #e6efff; }
 footer .mark { width: 12px; height: 12px; vertical-align: -1px; margin-right: 0.35rem; border-radius: 2px; }
+
+/* Sign-up: one quiet row above the fold. */
+.join { margin: 1.75rem 0 2rem; padding: 1rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.join label { display: block; font-size: 0.95rem; margin-bottom: 0.6rem; }
+.join-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.join input { flex: 1 1 10rem; min-width: 0; font: inherit; font-size: 0.95rem; padding: 0.45rem 0.6rem; color: var(--fg); background: var(--bg); border: 1px solid var(--rule); border-radius: 3px; }
+.join input:focus { outline: 2px solid var(--link); outline-offset: -1px; border-color: var(--link); }
+.join button { flex: 0 0 auto; font: 400 0.8rem Outfit, system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.5rem 1.1rem; color: #fff; background: var(--link); border: 0; border-radius: 3px; cursor: pointer; }
+.join button:hover { background: #003fa3; }
+.join button:disabled { opacity: 0.6; cursor: default; }
+.join .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.join-note { margin: 0.6rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.join-status { color: var(--fg); }
+@media (max-width: 480px) { .join button { flex: 1 1 100%; } }
+.schedule .what .muted { font-size: 0.85rem; }
