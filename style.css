@@ -23,8 +23,8 @@ body {
 a { color: var(--link); }
 a:hover { text-decoration: none; }
 
-header { margin-bottom: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; align-items: baseline; }
-header a {
+header { margin-bottom: 2.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: baseline; justify-content: space-between; }
+header a, footer nav a {
   font-family: Outfit, system-ui, sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -32,8 +32,10 @@ header a {
   text-decoration: none;
   color: var(--muted);
 }
-header .home { margin-right: auto; }
+header .home { color: var(--fg); }
+header nav, footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 header a[aria-current] { color: var(--fg); }
+header nav a:hover, footer nav a:hover { color: var(--link); }
 
 h1, h2, h3 { line-height: 1.25; font-weight: 600; text-wrap: balance; }
 h1 { font: 400 2.4rem/1.15 "Instrument Serif", Georgia, serif; margin: 0 0 1rem; }
@@ -95,6 +97,8 @@ blockquote {
 }
 code { font-size: 0.9em; }
 footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+footer p { margin: 0 0 0.6rem; }
+footer nav a { font-size: 0.72rem; }
 
 .claim { margin: 0.75rem 0 0; padding: 0.6rem 0 0.6rem 1rem; border-left: 2px solid var(--link); font-size: 0.95rem; }
 .claim .kind { color: var(--link); }
@@ -102,6 +106,7 @@ h3 { margin-top: 2.5rem; }
 
 /* Quiet brand layer: cube linework from the PI brand kit (art 6), a cobalt hairline, selection tint. */
 html { border-top: 3px solid var(--link); overflow-x: hidden; }
+body { overflow-x: clip; }
 body { position: relative; }
 body::before {
   content: "";
@@ -115,7 +120,11 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
-@media (max-width: 760px) { body::before { right: -9rem; width: 17rem; height: 17rem; opacity: 0.07; } }
+@media (max-width: 760px) { body::before { top: 2.5rem; right: 0; width: 11rem; height: 11rem; opacity: 0.06; } }
+@media (max-width: 600px) {
+  header { flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+  header nav { gap: 0.4rem 1.1rem; }
+}
 @media print { body::before { display: none; } html { border-top: 0; } }
 ::selection { background: #e6efff; }
 footer .mark { width: 12px; height: 12px; vertical-align: -1px; margin-right: 0.35rem; border-radius: 2px; }
