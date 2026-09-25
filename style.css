@@ -3,20 +3,12 @@
    paper + ink tokens, Lora for reading, Instrument Serif (400) for the title only, cobalt links.
    Plain CSS, no build step. */
 :root {
-  --bg: #f9f8f5;   /* paper */
+  color-scheme: light;
+  --bg: #ffffff;
   --fg: #2c2c2a;   /* ink-900 */
   --muted: #5f5e5a;/* ink-600 */
   --rule: #e5e2dc;
   --link: #004fcc; /* cobalt-600, AA on paper */
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161513;
-    --fg: #eae7e1;
-    --muted: #9a948c;
-    --rule: #33302b;
-    --link: #8fb4ff;
-  }
 }
 
 body {
