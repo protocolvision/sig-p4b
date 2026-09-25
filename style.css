@@ -66,13 +66,13 @@ p, li { text-wrap: pretty; }
 }
 .schedule li:last-child { border-bottom: 1px solid var(--rule); }
 .schedule time {
-  flex: 0 0 8rem;
+  flex: 0 0 9rem;
   color: var(--muted);
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
 }
 .schedule .what { flex: 1 1 16rem; }
-.schedule .also { flex: 1 0 100%; padding-left: 8.75rem; font-size: 0.9rem; color: var(--muted); }
+.schedule .also { flex: 1 0 100%; padding-left: 9.75rem; font-size: 0.9rem; color: var(--muted); }
 .kind {
   font-family: Outfit, system-ui, sans-serif;
   font-size: 0.68rem;

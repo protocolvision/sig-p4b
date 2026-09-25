@@ -17,7 +17,7 @@
 </header>
 <main>
 <h1>Case studies</h1>
-<p>We tested the AI Native Data Operations approach in two pilot engagements, in industries that have little else in common. What they share: the important data sits in documents written for people, not machines, and each document comes from a different author. Reading those documents turned out to be the easy part. The hard part was <em>finding</em> the right document and <em>trusting</em> what it said.</p>
+<p>The case studies are the practical side of the group. The <a href="../syllabus/">syllabus</a> is the reading side. We tested the AI Native Data Operations approach in two pilot engagements, in industries that have little else in common. What they share: the important data sits in documents written for people, not machines, and each document comes from a different author. Reading those documents turned out to be the easy part. The hard part was <em>finding</em> the right document and <em>trusting</em> what it said.</p>
 
 <h2 id="water">1. California water rate data</h2>
 <dl class="facts">
@@ -56,7 +56,31 @@
 <h3>The calibration loop</h3>
 <p>Outcome data is public. State DOT lettings publish bid tabulations, council agenda systems publish awards, and engineers post results. None of it needs a portal account. That makes it possible to produce a <strong>shadow forecast</strong> for every regional letting and score it against the actual result, without bidding the job. The first scored forecast came in well above the winning bid. It overturned two assumptions the estimate relied on: one about who can be low bidder on specialty lining work, and one about subcontractor margins setting a price floor.</p>
 <blockquote>A measured forecast gets more accurate over time. An unmeasured one doesn't.</blockquote>
-<p class="small muted">The full case study, written to the <a href="../syllabus/#shared-case-study-template">shared template</a>, is drafted in Month 3 of the syllabus. Client-identifying details stay private.</p>
+<p class="small muted">The full case study is written to the <a href="#template">shared template</a>. Client-identifying details stay private.</p>
+
+<h2 id="brand-kit">3. A small one: the Protocol Institute brand kit</h2>
+<p>The <a href="https://npc.here.now/protocolinstitutebrandkit/">PI brand kit</a> is a quieter example. It is a written specification (tokens, rules, and voice) that agents use to build real pages, such as the Durable AI Adoption deck and the <a href="https://ai.protocolized.dev/kitcraft/">AI Kitcraft</a> workshop page. Its build log records a familiar pattern. A spec without an implementation gets re-derived, with new bugs, every time. Claims that aren't checked go stale. And the problems were caught by the person reviewing, not by the kit. The fix was a shared component layer plus checks that can be run automatically. That is the same move as the construction pipeline's spine, at a much smaller scale.</p>
+
+<h2 id="work">Practical work, October 2026 – March 2027</h2>
+<ul class="schedule">
+  <li><time datetime="2026-10">October</time><span class="what">Settle the shared template. Collect evidence from both pilots into the project repo.</span></li>
+  <li><time datetime="2026-11">November</time><span class="what">Write up the water case: discovery registry, bill calculator, precedents.</span></li>
+  <li><time datetime="2026-12">December – January</time><span class="what">Write up the construction case: intake, audit rule, and the scored shadow forecasts. Add automatic sourcing of public bid tabulations.</span></li>
+  <li><time datetime="2027-02">February</time><span class="what">Compare the cases. Revise the maturity model so every claim is tied to evidence.</span></li>
+  <li><time datetime="2027-03">March</time><span class="what">Engagement playbook v1 and a shortlist of 2027 field-test domains. Publish both cases as open source.</span></li>
+</ul>
+
+<h2 id="template">Shared template</h2>
+<p>Every case, including future engagements, answers the same questions in the same order. That makes the cases comparable and lets them serve as evidence for the model.</p>
+<ol>
+<li><strong>Context:</strong> the industry, the organization's role, and what the data is for.</li>
+<li><strong>Bottleneck:</strong> where the work was actually stuck, and what everyone assumed was the problem.</li>
+<li><strong>Protocols before:</strong> how data was found, extracted, checked, and trusted.</li>
+<li><strong>Intervention:</strong> what became code, what was left to agents, and what stayed with people.</li>
+<li><strong>Evidence:</strong> what was measured and against what, including where the model was wrong.</li>
+<li><strong>Maturity mapping:</strong> the level before and after, and which move made the difference.</li>
+<li><strong>What transfers:</strong> the parts of the playbook another domain could reuse.</li>
+</ol>
 
 <h2>What the two cases have in common</h2>
 <ul>
@@ -66,6 +90,5 @@
 <li><strong>Code the spine, leave judgment to agents.</strong> Keeping the fixed structure apart from the per-job content is what lets a playbook carry over to a new job or domain.</li>
 </ul>
 </main>
-<footer>Special Interest Group in Protocols for Business · <a href="https://protocol-institute.org/">Protocol Institute</a> · <a href="https://github.com/protocolvision/sig-p4b">Edit on GitHub</a></footer>
 </body>
 </html>

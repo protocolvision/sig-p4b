@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SIG P4B Syllabus</title>
-<meta name="description" content="Twelve sessions, October 2026 to March 2027: from the capability maturity model, through the water and construction case studies, to an open-source methodology.">
+<meta name="description" content="Twenty readings on information, documents, standards, and networks, read over twelve sessions from October 2026 to March 2027.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,94 +16,62 @@
 <a href="../case-studies/">Case studies</a>
 </header>
 <main>
-<h1>Syllabus: October 2026 – March 2027</h1>
-<p class="meta">Twelve sessions, every other Monday. Dates are proposed and will be confirmed on the calendar.</p>
-<p>The syllabus has one goal: to get the <a href="../#objective">AI Native Data Operations</a> project to its 2027 charter with evidence it can defend. We start with the model, test it against two real engagements, and then write down what held up so that someone else can use it in another domain.</p>
-<p>Each month ends with a <strong>deliverable</strong>, a concrete artifact that goes into the project repo. Readings marked <span class="kind">core</span> should be read before the session. Readings marked <span class="kind">background</span> are optional.</p>
+<h1>Syllabus</h1>
+<p class="meta">October 2026 – March 2027 · twelve sessions · twenty readings</p>
+<p>These are the readings behind the <a href="../#objective">AI Native Data Operations</a> project. They cover how organizations know things, how information gets filed, standardized, and passed around, and what happens to all of that once machines can read any document. The practical work runs separately, in the <a href="../case-studies/">case studies</a>.</p>
+<p>Readings come from the <a href="https://worrydream.com/refs/">Bret Victor reference library</a>, the Summer of Protocols and Protocolized archives, and our own notes. We meet every other Monday. Each session starts with 15–20 minutes of silent reading and then 30–35 minutes of discussion. Where a text is long, we circulate an excerpt in advance.</p>
 
-<section class="month" id="m1">
-<h2>Month 1: Foundations</h2>
-<p class="meta">October · Deliverable: a one-page statement of the data-ops thesis and a list of the model's current claims.</p>
+<h2 id="schedule">Meetings &amp; readings</h2>
 <ul class="schedule">
-  <li><time datetime="2026-10-05">5 Oct 2026</time>
-    <span class="what"><strong>Kickoff: what the SIG is for in 2027</strong><br>The prospectus, the two P4B projects, and the argument that data operations protocols are where effort pays off most.</span>
-    <span class="also"><span class="kind">core</span> <a href="https://protocolized.summerofprotocols.com/p/finding-fault-lines-within-the-firm">Finding Fault Lines within the Firm</a> · <span class="kind">core</span> <a href="https://protocolized.summerofprotocols.com/p/durable-ai-adoption">Durable AI Adoption</a> · <span class="kind">background</span> <a href="https://protocolized.summerofprotocols.com/p/brackish-strategy">Brackish Strategy</a> · <span class="kind">debrief</span> <a href="https://ai.protocolized.dev/kitcraft/">AI Kitcraft workshop</a></span></li>
-  <li><time datetime="2026-10-19">19 Oct 2026</time>
-    <span class="what"><strong>The capability maturity model</strong><br>The five levels, the archetypes, and the typical failure modes. What does the model claim, and what would show it is wrong?</span>
-    <span class="also"><span class="kind">core</span> <a href="https://protocolized.dev/blog-the-missing-layer/">The Missing Protocol Layer</a> · <span class="kind">core</span> <a href="https://ai.protocolized.dev/">Durable AI Adoption guide</a> · <span class="kind">exercise</span> <a href="https://protocolized.dev/assessment/">take the assessment</a> · <span class="kind">background</span> <a href="https://protocolized.summerofprotocols.com/p/mechanical-currents">Mechanical Currents</a></span></li>
+  <li><time datetime="2026-10-05">5 October 2026</time>
+    <span class="what"><a href="https://www.econlib.org/library/Essays/hykKnw.html">The Use of Knowledge in Society</a> <span class="muted">Hayek, 1945</span><br>
+    <a href="https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/">Leverage Points: Places to Intervene in a System</a> <span class="muted">Meadows, 1999</span></span>
+    <span class="also">Knowledge is spread across an organization, and some interventions do far more than others. Where do data operations sit on Meadows's list?</span></li>
+  <li><time datetime="2026-10-19">19 October 2026</time>
+    <span class="what"><a href="https://doi.org/10.1136/qshc.2003.009522">A Typology of Organisational Cultures</a> <span class="muted">Westrum, 2004</span><br>
+    <a href="https://www.melconway.com/research/committees.html">How Do Committees Invent?</a> <span class="muted">Conway, 1968</span></span>
+    <span class="also">An organization's culture shows in how information moves through it. What it builds mirrors how it communicates.</span></li>
+  <li><time datetime="2026-11-02">2 November 2026</time>
+    <span class="what"><a href="http://sunnyday.mit.edu/16.355/bach-cmm.html">The Immaturity of CMM</a> <span class="muted">Bach, 1994</span><br>
+    <a href="https://jmde.com/index.php/jmde_1/article/view/297">Assessing the Impact of Planned Social Change</a> <span class="muted">Campbell, 1976</span></span>
+    <span class="also">The case against maturity models, and Campbell's law. We read these before revising our own model.</span></li>
+  <li><time datetime="2026-11-16">16 November 2026</time>
+    <span class="what"><a href="https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/">The Filing Cabinet</a> <span class="muted">Robertson, 2021</span><br>
+    <a href="https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion">The Reading Machine and the Inversion of the Standards Stack</a> <span class="muted">Fernández, 2026</span></span>
+    <span class="also">A century of organizing information by filing it. What changes when a machine can read anything, so the hard part becomes finding it?</span></li>
+  <li><time datetime="2026-11-30">30 November 2026</time>
+    <span class="what"><a href="https://www.annualreviews.org/doi/10.1146/annurev.soc.012809.102629">A World of Standards but not a Standard World</a> <span class="muted">Timmermans &amp; Epstein, 2010</span><br>
+    <a href="https://spectrum.ieee.org/osi-the-internet-that-wasnt">OSI: The Internet That Wasn't</a> <span class="muted">Russell, 2013</span></span>
+    <span class="also">How standards actually get made, and a well-known standard that lost to rough consensus and running code.</span></li>
+  <li><time datetime="2026-12-14">14 December 2026</time>
+    <span class="what"><a href="https://people.ischool.berkeley.edu/~buckland/whatdoc.html">What is a "Document"?</a> <span class="muted">Buckland, 1997</span><br>
+    <a href="https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf">PDF Hell. Long-live the PDF.</a> <span class="muted">Fernández, 2026</span></span>
+    <span class="also">What counts as a document is a matter of function, not format. Why the PDF is still the unit that business runs on.</span></li>
+  <li><time datetime="2027-01-11">11 January 2027</time>
+    <span class="what"><a href="https://worrydream.com/refs/Latour_1986_-_Visualisation_and_Cognition.pdf">Visualisation and Cognition: Drawing Things Together</a> <span class="muted">Latour, 1986</span></span>
+    <span class="also">Immutable mobiles: how inscriptions travel and pile up at centers of calculation. What in a bid package or a rate sheet plays that role?</span></li>
+  <li><time datetime="2027-01-25">25 January 2027</time>
+    <span class="what"><a href="https://web.mit.edu/saltzer/www/publications/endtoend/endtoend.pdf">End-to-End Arguments in System Design</a> <span class="muted">Saltzer, Reed &amp; Clark, 1984</span><br>
+    <a href="https://www.eff.org/deeplinks/2019/06/adversarial-interoperability-reviving-elegant-weapon-more-civilized-age-slay">Adversarial Interoperability</a> <span class="muted">Doctorow, 2019</span></span>
+    <span class="also">Where should a function live in a network? And interoperability you don't have to ask permission for.</span></li>
+  <li><time datetime="2027-02-08">8 February 2027</time>
+    <span class="what"><a href="https://journals.sagepub.com/doi/10.1177/00027649921955326">The Ethnography of Infrastructure</a> <span class="muted">Star, 1999</span></span>
+    <span class="also">Plugs, standards, and forms. How to study infrastructure that is boring on purpose.</span></li>
+  <li><time datetime="2027-02-22">22 February 2027</time>
+    <span class="what"><a href="https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1">How a Cockpit Remembers Its Speeds</a> <span class="muted">Hutchins, 1995</span></span>
+    <span class="also">Memory is spread across people and their artifacts. It gives us a way to describe a data operation as a single cognitive system.</span></li>
+  <li><time datetime="2027-03-08">8 March 2027</time>
+    <span class="what"><a href="https://cdn.chriskrycho.com/file/chriskrycho-com/resources/naur1985programming.pdf">Programming as Theory Building</a> <span class="muted">Naur, 1985</span></span>
+    <span class="also">A program is a theory held by the people who wrote it. What has to be written down for a playbook to still work after its authors leave?</span></li>
+  <li><time datetime="2027-03-22">22 March 2027</time>
+    <span class="what"><a href="https://worrydream.com/refs/Licklider_1968_-_The_Computer_as_Communication_Device.pdf">The Computer as a Communication Device</a> <span class="muted">Licklider &amp; Taylor, 1968</span><br>
+    <a href="https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf">Improving Our Ability to Improve</a> <span class="muted">Engelbart, 2003</span></span>
+    <span class="also">Two early visions of networked organizations, and bootstrapping: getting better at the process of getting better.</span></li>
 </ul>
-</section>
+<p class="small muted">Dates are proposed. To suggest a reading, open a pull request.</p>
 
-<section class="month" id="m2">
-<h2>Month 2: Case study 1, California water rates</h2>
-<p class="meta">November · Deliverable: a full draft of the water case study, written to the shared template.</p>
-<ul class="schedule">
-  <li><time datetime="2026-11-02">2 Nov 2026</time>
-    <span class="what"><strong>Discover, don't file</strong><br>Machines can now read any rate sheet. The hard part is finding the right, current source document. Why a registry and <code>llms.txt</code> worked better than a data standard.</span>
-    <span class="also"><span class="kind">core</span> <a href="https://npc.here.now/waterdatastrategy/">It's time to discover, not file, water rate data</a> · <span class="kind">background</span> <a href="https://npc.here.now/waterrates101/">California Water Management field guide</a></span></li>
-  <li><time datetime="2026-11-16">16 Nov 2026</time>
-    <span class="what"><strong>Precedents: how fragmented data got unstuck elsewhere</strong><br>GTFS, FHIR, Open Banking, Green Button, and Australia's BOM. What made it costly for data holders not to take part?</span>
-    <span class="also"><span class="kind">core</span> <a href="https://npc.here.now/waterdatadiscoverycases/">Seven Precedents in Data Discoverability</a> · <span class="kind">core</span> <a href="https://npc.here.now/waterdataexploration/">Five Cases in Data Coordination</a></span></li>
-  <li><time datetime="2026-11-30">30 Nov 2026</time>
-    <span class="what"><strong>Working session: water through the model</strong><br>Place the engagement on the maturity model. What did the bill calculator across 91 water systems show about extraction compared with discovery? Where did the model help, and where was it silent?</span>
-    <span class="also"><span class="kind">bring</span> a one-paragraph answer to: "which data-ops protocol would change the most for a utility, and why?"</span></li>
-</ul>
-</section>
-
-<section class="month" id="m3">
-<h2>Month 3: Case study 2, construction bids</h2>
-<p class="meta">December – January · Deliverable: a full draft of the construction case study (with the client anonymized), written to the same template.</p>
-<ul class="schedule">
-  <li><time datetime="2026-12-14">14 Dec 2026</time>
-    <span class="what"><strong>The solicitation is a PDF</strong><br>Heavy-civil public bids: pay items, quantities, caps, and requirements that change with every owner. The pipeline splits into a code <em>spine</em> (intake, schemas, gates) and agent-owned <em>content</em>, and a bid plan joins the two.</span>
-    <span class="also"><span class="kind">core</span> <a href="../case-studies/#construction">Construction case brief</a> · <span class="kind">background</span> <a href="https://npc.here.now/ai-org/">Org Design After Code Commoditisation</a></span></li>
-  <li><time datetime="2027-01-11">11 Jan 2027</time>
-    <span class="what"><strong>Audit rules and measured forecasts</strong><br>No price goes in without a source. Eval gates run before a bid is submitted. Shadow forecasts are scored against public bid tabulations. The first scored forecast overturned two pricing assumptions. What does it mean for an estimate to be calibrated?</span>
-    <span class="also"><span class="kind">core</span> <a href="../case-studies/#construction">Construction case brief</a> (forecast section) · <span class="kind">background</span> <a href="https://npc.here.now/aibenchmarks101/">Benchmark Design for Domain-Specific Model Evaluation</a></span></li>
-</ul>
-</section>
-
-<section class="month" id="m4">
-<h2>Month 4: Cross-case synthesis</h2>
-<p class="meta">January – February · Deliverable: maturity model v3, with each claim tied to evidence from the cases.</p>
-<ul class="schedule">
-  <li><time datetime="2027-01-25">25 Jan 2027</time>
-    <span class="what"><strong>What the two cases share</strong><br>Put the cases side by side: discovery, provenance, and calibration as recurring data-ops protocols. Which patterns showed up in both industries, and which in only one?</span>
-    <span class="also"><span class="kind">core</span> both case drafts · <span class="kind">background</span> <a href="https://protocolized.summerofprotocols.com/p/sigp4b-update-4-drift-stacking">Drift Stacking</a></span></li>
-  <li><time datetime="2027-02-08">8 Feb 2027</time>
-    <span class="what"><strong>Revising the model</strong><br>Edit the level definitions, failure modes, and moves between levels against the evidence. Remove any claim that no case supports.</span>
-    <span class="also"><span class="kind">core</span> <a href="https://protocolized.dev/litepaper-ai-protocols/">Litepaper</a> · <a href="https://ai.protocolized.dev/">Durable AI Adoption guide</a> (frameworks appendix)</span></li>
-</ul>
-</section>
-
-<section class="month" id="m5">
-<h2>Months 5–6: Playbook and release</h2>
-<p class="meta">February – March · Deliverables: engagement playbook v1, a domain shortlist, and an open-source release.</p>
-<ul class="schedule">
-  <li><time datetime="2027-02-22">22 Feb 2027</time>
-    <span class="what"><strong>The engagement playbook</strong><br>Scoping, diagnostic, pilot, handoff. What each step produces, who owns it, and which parts are code and which are judgment. Also the case-study template that every future engagement will fill in.</span>
-    <span class="also"><span class="kind">core</span> <a href="https://npc.here.now/contexthub101/">Context Hub 101</a> · playbook draft · <span class="kind">example</span> <a href="https://npc.here.now/protocolinstitutebrandkit/">PI brand kit</a>, a written spec that agents build from · <a href="https://ai.protocolized.dev/kitcraft/">AI Kitcraft</a>: Kit → Factory → Bridge</span></li>
-  <li><time datetime="2027-03-08">8 Mar 2027</time>
-    <span class="what"><strong>Choosing the next domains</strong><br>Criteria for 2027 field tests: data fragmentation, document-heavy workflows, public outcome data we can calibrate against, and a partner willing to be named. Sponsor and partner pitch.</span>
-    <span class="also"><span class="kind">bring</span> one candidate domain, with a named data-ops bottleneck</span></li>
-  <li><time datetime="2027-03-22">22 Mar 2027</time>
-    <span class="what"><strong>Release and retrospective</strong><br>Publish methodology v1 and both case studies as open source. Review what the syllabus got wrong, and decide the charter scope with PI.</span>
-    <span class="also"><span class="kind">output</span> release notes and a Protocolized essay</span></li>
-</ul>
-</section>
-
-<h2 id="shared-case-study-template">Shared case-study template</h2>
-<p>Both cases, and every future engagement, answer the same questions in the same order. That makes them comparable and lets them serve as evidence for the model.</p>
-<ol>
-<li><strong>Context:</strong> the industry, the organization's role, and what the data is for.</li>
-<li><strong>Bottleneck:</strong> where the work was actually stuck, and what everyone assumed was the problem.</li>
-<li><strong>Protocols before:</strong> how data was found, extracted, checked, and trusted.</li>
-<li><strong>Intervention:</strong> what became code, what was left to agents, and what stayed with people.</li>
-<li><strong>Evidence:</strong> what was measured and against what, including where the model was wrong.</li>
-<li><strong>Maturity mapping:</strong> the level before and after, and which move made the difference.</li>
-<li><strong>What transfers:</strong> the parts of the playbook another domain could reuse.</li>
-</ol>
+<h2>Background</h2>
+<p>Earlier SIG writing in Protocolized: <a href="https://protocolized.summerofprotocols.com/p/finding-fault-lines-within-the-firm">Finding Fault Lines within the Firm</a>, <a href="https://protocolized.summerofprotocols.com/p/durable-ai-adoption">Durable AI Adoption</a>, <a href="https://protocolized.summerofprotocols.com/p/mechanical-currents">Mechanical Currents</a>, <a href="https://protocolized.summerofprotocols.com/p/brackish-strategy">Brackish Strategy</a>, and <a href="https://protocolized.summerofprotocols.com/p/sigp4b-update-4-drift-stacking">Drift Stacking</a>.</p>
 </main>
-<footer>Special Interest Group in Protocols for Business · <a href="https://protocol-institute.org/">Protocol Institute</a> · <a href="https://github.com/protocolvision/sig-p4b">Edit on GitHub</a></footer>
 </body>
 </html>
