@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIG P4B Case Studies</title>
+<meta name="description" content="Two pilot engagements for AI Native Data Operations: California water rate data and heavy-civil construction bidding.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400&display=swap">
+<link rel="stylesheet" href="../style.css">
+<body>
+<header>
+<a class="home" href="../">Protocols for Business SIG</a>
+<a href="../syllabus/">Syllabus</a>
+<a href="./" aria-current="page">Case studies</a>
+</header>
+<main>
+<h1>Case studies</h1>
+<p>We tested the AI Native Data Operations approach in two pilot engagements, in industries that have little else in common. What they share: the important data sits in documents written for people, not machines, and each document comes from a different author. Reading those documents turned out to be the easy part. The hard part was <em>finding</em> the right document and <em>trusting</em> what it said.</p>
+
+<h2 id="water">1. California water rate data</h2>
+<dl class="facts">
+  <dt>Partner</dt><dd>California Data Collaborative (CaDC), with UNC for benchmarking</dd>
+  <dt>Period</dt><dd>2026. Two tracks are published. The work is paused on purpose while we decide the next phase.</dd>
+  <dt>Data problem</dt><dd>Water rates are public, but they are spread across hundreds of utility websites, PDFs, and board agendas</dd>
+</dl>
+<p>California's water utilities each publish their own rate sheets, in their own formats and in their own places. Earlier efforts tried to get utilities to <em>file</em> data in a common standard. Our view was that LLMs can now read almost any rate sheet well enough. The problem that remains is <strong>discoverability</strong>: knowing each utility's authoritative rate-sheet URL and trusting that it is current.</p>
+<p>The engagement split into two tracks:</p>
+<ul>
+<li><strong>Benchmarking:</strong> a rate-sheet extraction utility and a benchmark study that makes comparing peers cheap. The published report includes a working bill calculator for 91 water systems. It computes a bill from each utility's own published tiers.</li>
+<li><strong>Discoverability:</strong> a registry of each utility's canonical URL, an <code>llms.txt</code> pattern, and a way to verify that a source is current, all without imposing a data standard.</li>
+</ul>
+<p><strong>Principle:</strong> focus on observability, and let LLMs handle standardization that is "sufficiently useful".</p>
+<h3>Read</h3>
+<ul>
+<li><a href="https://npc.here.now/waterdatastrategy/">It's time to discover, not file, water rate data</a>: the strategy report, with the bill calculator (<a href="https://npc.here.now/waterdatastrategy/water-rate-data-report.pdf">PDF</a>)</li>
+<li><a href="https://npc.here.now/waterdatadiscoverycases/">Seven Precedents in Data Discoverability</a>: GTFS, FHIR, Open Banking, Green Button, and others</li>
+<li><a href="https://npc.here.now/waterdataexploration/">Five Cases in Data Coordination</a>: a protocol lens on California water data</li>
+<li><a href="https://npc.here.now/waterrates101/">California Water Management: An Analyst's Field Guide</a>: an introduction to the sector</li>
+</ul>
+
+<h2 id="construction">2. Construction bids from PDF solicitations</h2>
+<dl class="facts">
+  <dt>Partner</dt><dd>A heavy-civil and underground-utility subcontractor (sewer rehabilitation, CIPP lining, chemical grouting). Anonymized.</dd>
+  <dt>Period</dt><dd>2026. MVP pipeline built. Automatic sourcing is next.</dd>
+  <dt>Data problem</dt><dd>Every public solicitation is a PDF with its own pay items, caps, and submission requirements. Pricing evidence is spread across public bid results.</dd>
+</dl>
+<p>A contractor wins or loses a hard-bid job during the estimate. Every bid costs several days of desk work: reading the specification, measuring quantities, building the cost basis, checking wage rules, and assembling the package. Most bids lose, and the firm pays for the work on each of them.</p>
+<p>Solicitations differ, but the estimating process is the same every time. So the pipeline has two layers that are kept separate:</p>
+<ul>
+<li><strong>The spine (code):</strong> intake, the bid board, artifact schemas, the audit rule, eval gates, and version control of each bid.</li>
+<li><strong>The content (agents):</strong> this owner's requirements, the research this job needs, and the pricing judgment.</li>
+</ul>
+<p>An agent writes a <em>bid plan</em> after reading the solicitation. Code validates the plan and runs the gates against it. A new solicitation can bring new caps, requirements, or deliverables without any change to the code. Intake pulls pay items, quantities, and caps from the PDF bid form. It handles descriptions that wrap across lines, watermarks, extra tables of as-needed items, and blank quantities.</p>
+<h3>The calibration loop</h3>
+<p>Outcome data is public. State DOT lettings publish bid tabulations, council agenda systems publish awards, and engineers post results. None of it needs a portal account. That makes it possible to produce a <strong>shadow forecast</strong> for every regional letting and score it against the actual result, without bidding the job. The first scored forecast came in well above the winning bid. It overturned two assumptions the estimate relied on: one about who can be low bidder on specialty lining work, and one about subcontractor margins setting a price floor.</p>
+<blockquote>A measured forecast gets more accurate over time. An unmeasured one doesn't.</blockquote>
+<p class="small muted">The full case study, written to the <a href="../syllabus/#shared-case-study-template">shared template</a>, is drafted in Month 3 of the syllabus. Client-identifying details stay private.</p>
+
+<h2>What the two cases have in common</h2>
+<ul>
+<li><strong>Extraction is solved enough.</strong> In both cases, reading the document was the easy part.</li>
+<li><strong>Discovery and provenance are the protocols that matter.</strong> The value came from knowing where the authoritative source is and requiring every figure to have one.</li>
+<li><strong>Calibration needs public outcomes.</strong> Water bills can be checked against published tiers, and bid forecasts against published tabulations. A model you can't measure against something doesn't improve.</li>
+<li><strong>Code the spine, leave judgment to agents.</strong> Keeping the fixed structure apart from the per-job content is what lets a playbook carry over to a new job or domain.</li>
+</ul>
+</main>
+<footer>Special Interest Group in Protocols for Business · <a href="https://protocol-institute.org/">Protocol Institute</a> · <a href="https://github.com/protocolvision/sig-p4b">Edit on GitHub</a></footer>
+</body>
+</html>
