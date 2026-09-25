@@ -3,7 +3,7 @@
 Site for the Protocol Institute's Special Interest Group in Protocols for Business (SIG P4B):
 the group's relation to Summer of Protocols and PI, the 2027 **AI Native Data Operations** project,
 the two pilot case studies (California water rates; construction bids from PDF solicitations),
-and the October 2026 – March 2027 syllabus.
+and the October 2026 – October 2027 syllabus.
 
 **Live:** https://npc.here.now/protocolvision/
 
@@ -16,7 +16,7 @@ body text, Instrument Serif for the page title, cobalt links.
 
 ```
 index.html               overview, research questions, session list, essays
-syllabus/index.html      reading group: 12 readings, one per session, seven parts ending on stigmergy and swarms
+syllabus/index.html      reading group: 26 readings over a year, one per session, seven parts ending on stigmergy and swarms
 case-studies/index.html  practical work: water, construction, brand kit; timeline; shared template
 style.css                the only stylesheet
 favicon.svg              PI P-mark
