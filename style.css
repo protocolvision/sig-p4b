@@ -134,3 +134,4 @@ footer .mark { width: 12px; height: 12px; vertical-align: -1px; margin-right: 0.
 .join-status { color: var(--fg); }
 @media (max-width: 480px) { .join button { flex: 1 1 100%; } }
 .schedule .what .muted { font-size: 0.85rem; }
+.people time { color: var(--fg); }
