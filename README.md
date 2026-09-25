@@ -17,7 +17,11 @@ body text, Instrument Serif for the page title, cobalt links.
 ```
 index.html               overview, research questions, session list, essays
 syllabus/index.html      year-long reading group: 26 sessions, each a core classic + a response (NPC Memo / Archival Time / Protocolized); 7 parts, each ending in a claim
-case-studies/index.html  practical work: water, construction, brand kit; timeline; shared template
+observations/index.html  observational inventory (the reps): prompts per syllabus part, template, running list
+observations/            one .md per observation (copy TEMPLATE.md)
+case-studies/index.html  the heavy lifts: every participant carries one case; worked examples; milestones; template
+case-studies/<name>/     participant case studies (copy case-studies/TEMPLATE.md)
+assets/                  cube linework watermark + link-preview image (from PI brand kit art 6)
 style.css                the only stylesheet
 favicon.svg              PI P-mark
 deploy.sh                publish to here.now and mount at npc.here.now/protocolvision

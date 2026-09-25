@@ -6,6 +6,9 @@ SLUG_FILE=.herenow-slug
 PUBLISH=~/.claude/skills/here-now/scripts/publish.sh
 OUT=$(mktemp -d)
 rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' ./ "$OUT/"
+# Bust the CDN/browser cache for the stylesheet on every deploy.
+V=$(date +%s)
+find "$OUT" -name '*.html' -exec sed -i '' "s|style.css\"|style.css?v=$V\"|" {} +
 if [[ -f $SLUG_FILE ]]; then
   "$PUBLISH" "$OUT" --slug "$(cat $SLUG_FILE)" --client claude-code
 else
