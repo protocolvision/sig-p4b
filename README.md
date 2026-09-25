@@ -16,7 +16,7 @@ body text, Instrument Serif for the page title, cobalt links.
 
 ```
 index.html               overview, research questions, session list, essays
-syllabus/index.html      reading group: 20 readings in 12 sessions, seven parts ending on stigmergy and swarms
+syllabus/index.html      reading group: 12 readings, one per session, seven parts ending on stigmergy and swarms
 case-studies/index.html  practical work: water, construction, brand kit; timeline; shared template
 style.css                the only stylesheet
 favicon.svg              PI P-mark
