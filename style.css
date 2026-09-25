@@ -106,7 +106,6 @@ h3 { margin-top: 2.5rem; }
 
 /* Quiet brand layer: cube linework from the PI brand kit (art 6), a cobalt hairline, selection tint. */
 html { border-top: 3px solid var(--link); overflow-x: hidden; }
-body { overflow-x: clip; }
 body { position: relative; }
 body::before {
   content: "";
