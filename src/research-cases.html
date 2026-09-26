@@ -1,84 +1,39 @@
-<!-- {"title": "Case Studies · Protocols for Business SIG", "desc": "Worked examples of AI-native data operations (California water rate data, construction bids from PDFs, the Protocol Institute brand kit) and the template every participant uses for their own case.", "path": "research/cases/", "nav": "research", "card": "case-studies"} -->
+<!-- {"title": "Case Studies · Protocols for Business SIG", "desc": "Worked examples of AI-native data operations (California water rate data, construction bids from PDFs, the Protocol Institute brand kit) and a sample template for participants' own cases.", "path": "research/cases/", "nav": "research", "card": "case-studies"} -->
 <h1>Case studies</h1>
-<p class="meta"><a href="../">Research</a> · worked examples and the shared template</p>
-<p>The case studies are the heavy lifts. <strong>Every participant carries one case study for about a year from when they join</strong>, written to a <a href="#template">shared template</a>. Case studies run alongside the <a href="../../play/watching/">observations</a> (the reps) and the <a href="../../sessions/">readings</a> (the perspectives). The cases below are our worked examples. We tested the AI Native Data Operations approach in two pilot engagements, in industries that have little else in common. What they share: the important data sits in documents written for people, not machines, and each document comes from a different author. Reading those documents turned out to be the easy part. The hard part was <em>finding</em> the right document and <em>trusting</em> what it said.</p>
+<p class="meta"><a href="../">Research</a> · worked examples and a sample template</p>
+<p>The case studies are the heavy lifts. Every participant carries one case study for about a year from when they join. These are the worked examples so far.</p>
 
-<h2 id="water">1. California water rate data</h2>
-<dl class="facts">
-  <dt>Partner</dt><dd>California Data Collaborative (CaDC), with UNC for benchmarking</dd>
-  <dt>Period</dt><dd>2026. Two tracks are published. The work is paused on purpose while we decide the next phase.</dd>
-  <dt>Data problem</dt><dd>Water rates are public, but they are spread across hundreds of utility websites, PDFs, and board agendas</dd>
-</dl>
-<p>California's water utilities each publish their own rate sheets, in their own formats and in their own places. Earlier efforts tried to get utilities to <em>file</em> data in a common standard. Our view was that LLMs can now read almost any rate sheet well enough. The problem that remains is <strong>discoverability</strong>: knowing each utility's authoritative rate-sheet URL and trusting that it is current.</p>
-<p>The engagement split into two tracks:</p>
-<ul>
-<li><strong>Benchmarking:</strong> a rate-sheet extraction utility and a benchmark study that makes comparing peers cheap. The published report includes a working bill calculator for 91 water systems. It computes a bill from each utility's own published tiers.</li>
-<li><strong>Discoverability:</strong> a registry of each utility's canonical URL, an <code>llms.txt</code> pattern, and a way to verify that a source is current, all without imposing a data standard.</li>
-</ul>
-<p><strong>Principle:</strong> focus on observability, and let LLMs handle standardization that is "sufficiently useful".</p>
-<h3>Read</h3>
-<ul>
-<li><a href="https://npc.here.now/waterdatastrategy/">It's time to discover, not file, water rate data</a>: the strategy report, with the bill calculator (<a href="https://npc.here.now/waterdatastrategy/water-rate-data-report.pdf">PDF</a>)</li>
-<li><a href="https://npc.here.now/waterdatadiscoverycases/">Seven Precedents in Data Discoverability</a>: GTFS, FHIR, Open Banking, Green Button, and others</li>
-<li><a href="https://npc.here.now/waterdataexploration/">Five Cases in Data Coordination</a>: a protocol lens on California water data</li>
-<li><a href="https://npc.here.now/waterrates101/">California Water Management: An Analyst's Field Guide</a>: an introduction to the sector</li>
-</ul>
+<h2 id="water">California water rate data</h2>
+<p class="meta">Lead: Rafael Fernández · with the California Data Collaborative · paused while we decide the next phase</p>
+<p>California's water rates are public but scattered across hundreds of utility sites and PDFs. Machines can now read any rate sheet; finding the current one is the hard part. So the work focused on discoverability (a registry of each utility's rate page and an <code>llms.txt</code> pattern) rather than a new data standard.</p>
+<p class="small"><a href="https://npc.here.now/waterdatastrategy/">Strategy report</a> · <a href="https://npc.here.now/waterdatadiscoverycases/">Seven precedents</a> · <a href="https://npc.here.now/waterdataexploration/">Five cases in data coordination</a></p>
 
-<h2 id="construction">2. Construction bids from PDF solicitations</h2>
-<dl class="facts">
-  <dt>Partner</dt><dd>A heavy-civil and underground-utility subcontractor (sewer rehabilitation, CIPP lining, chemical grouting). Anonymized.</dd>
-  <dt>Period</dt><dd>2026. MVP pipeline built. Automatic sourcing is next.</dd>
-  <dt>Data problem</dt><dd>Every public solicitation is a PDF with its own pay items, caps, and submission requirements. Pricing evidence is spread across public bid results.</dd>
-</dl>
-<p>A contractor wins or loses a hard-bid job during the estimate. Every bid costs several days of desk work: reading the specification, measuring quantities, building the cost basis, checking wage rules, and assembling the package. Most bids lose, and the firm pays for the work on each of them.</p>
-<p>Solicitations differ, but the estimating process is the same every time. So the pipeline has two layers that are kept separate:</p>
-<ul>
-<li><strong>The spine (code):</strong> intake, the bid board, artifact schemas, the audit rule, eval gates, and version control of each bid.</li>
-<li><strong>The content (agents):</strong> this owner's requirements, the research this job needs, and the pricing judgment.</li>
-</ul>
-<p>An agent writes a <em>bid plan</em> after reading the solicitation. Code validates the plan and runs the gates against it. A new solicitation can bring new caps, requirements, or deliverables without any change to the code. Intake pulls pay items, quantities, and caps from the PDF bid form. It handles descriptions that wrap across lines, watermarks, extra tables of as-needed items, and blank quantities.</p>
-<h3>The calibration loop</h3>
-<p>Outcome data is public. State DOT lettings publish bid tabulations, council agenda systems publish awards, and engineers post results. None of it needs a portal account. That makes it possible to produce a <strong>shadow forecast</strong> for every regional letting and score it against the actual result, without bidding the job. The first scored forecast came in well above the winning bid. It overturned two assumptions the estimate relied on: one about who can be low bidder on specialty lining work, and one about subcontractor margins setting a price floor.</p>
-<blockquote>A measured forecast gets more accurate over time. An unmeasured one doesn't.</blockquote>
-<p class="small muted">The full case study is written to the <a href="#template">shared template</a>. Client-identifying details stay private.</p>
+<h2 id="construction">Construction bids from PDF solicitations</h2>
+<p class="meta">Lead: Andre Comeau · with a heavy-civil subcontractor (anonymized) · MVP built</p>
+<p>Every public bid arrives as a PDF with its own pay items, caps, and requirements. The pipeline keeps a fixed spine in code (intake, schemas, audit rules, gates) and leaves each job's judgment to agents. Forecasts are scored against published bid results, so the estimate improves with every letting.</p>
 
-<h2 id="brand-kit">3. A small one: the Protocol Institute brand kit</h2>
-<p>The <a href="https://npc.here.now/protocolinstitutebrandkit/">PI brand kit</a> is a quieter example. It is a written specification (tokens, rules, and voice) that agents use to build real pages, such as the Durable AI Adoption deck and the <a href="https://ai.protocolized.dev/kitcraft/">AI Kitcraft</a> workshop page. Its build log records a familiar pattern. A spec without an implementation gets re-derived, with new bugs, every time. Claims that aren't checked go stale. And the problems were caught by the person reviewing, not by the kit. The fix was a shared component layer plus checks that can be run automatically. That is the same move as the construction pipeline's spine, at a much smaller scale.</p>
+<h2 id="brand-kit">Protocol Institute brand kit</h2>
+<p class="meta">Small case</p>
+<p>A written brand spec that agents build pages from. It kept producing the same bugs until the kit gained shared components and automated checks. <a href="https://npc.here.now/protocolinstitutebrandkit/">Brand kit</a></p>
 
 <h2 id="yours">Your case study</h2>
-<p>Pick an organization you can see into: your own, a client's, or one whose records are public. Pick a data operation in it that AI is changing, or should change. Then carry it for about a year from whenever you join, sharing progress in a session's show-and-tell along the way.</p>
+<p>Pick an organization you can see into: your own, a client's, or one whose records are public. Pick a data operation in it that AI is changing, or should change, and carry it for about a year from whenever you join, sharing progress in a session's show-and-tell.</p>
 <ul class="schedule">
   <li><time>Month 1</time><span class="what"><strong>Choose.</strong> One paragraph on the organization and where the work gets stuck.</span></li>
-  <li><time>Months 2–3</time><span class="what"><strong>Brief.</strong> One page covering the template's first three questions: context, bottleneck, and the protocols in place before.</span></li>
-  <li><time>Months 4–6</time><span class="what"><strong>Intervene.</strong> What becomes code, what is left to agents, and what stays with people. Decide what you will measure.</span></li>
-  <li><time>Months 7–11</time><span class="what"><strong>Evidence.</strong> Run it, measure it, and record where the maturity model was wrong.</span></li>
-  <li><time>Month 12</time><span class="what"><strong>Publish.</strong> The full write-up, released as open source. Cases are published as they finish and feed into the group's thesis and methodology.</span></li>
+  <li><time>Months 2–3</time><span class="what"><strong>Brief.</strong> One page on the context, the bottleneck, and how the work is done today.</span></li>
+  <li><time>Months 4–6</time><span class="what"><strong>Intervene.</strong> Decide what becomes code, what is left to agents, and what stays with people, and what you will measure.</span></li>
+  <li><time>Months 7–11</time><span class="what"><strong>Evidence.</strong> Run it, measure it, and note what surprised you.</span></li>
+  <li><time>Month 12</time><span class="what"><strong>Publish.</strong> An open write-up, which feeds into the group's thesis.</span></li>
 </ul>
-<p class="small muted">To start, copy <a href="https://github.com/protocolvision/sig-p4b/blob/main/case-studies/TEMPLATE.md">the template</a> into <code>case-studies/your-name/</code> and open a pull request. You can keep a client anonymous.</p>
 
-<h2 id="in-progress">In progress</h2>
-<ul class="schedule">
-  <li><time>Worked example</time><span class="what"><a href="#water">California water rate data</a> <span class="muted">Fernández</span></span></li>
-  <li><time>Worked example</time><span class="what"><a href="#construction">Construction bids from PDF solicitations</a> <span class="muted">Fernández</span></span></li>
-</ul>
-<p class="small muted">Participants' cases are listed here once chosen.</p>
-
-<h2 id="template">Shared template</h2>
-<p>Every case, including each participant's, answers the same questions in the same order. That makes the cases comparable and lets them serve as evidence for the model.</p>
+<h2 id="template">Sample template</h2>
+<p>If a structure helps, the worked examples answer these questions. Find your own way if another shape fits your case better.</p>
 <ol>
-<li><strong>Context:</strong> the industry, the organization's role, and what the data is for.</li>
-<li><strong>Bottleneck:</strong> where the work was actually stuck, and what everyone assumed was the problem.</li>
-<li><strong>Protocols before:</strong> how data was found, extracted, checked, and trusted.</li>
-<li><strong>Intervention:</strong> what became code, what was left to agents, and what stayed with people.</li>
-<li><strong>Evidence:</strong> what was measured and against what, including where the model was wrong.</li>
-<li><strong>Maturity mapping:</strong> the level before and after, and which move made the difference.</li>
-<li><strong>What transfers:</strong> the parts of the playbook another domain could reuse.</li>
+<li><strong>Context:</strong> the organization and what the data is for.</li>
+<li><strong>Bottleneck:</strong> where the work is actually stuck.</li>
+<li><strong>Before:</strong> how data was found, checked, and trusted.</li>
+<li><strong>Intervention:</strong> what became code, what went to agents, what stayed with people.</li>
+<li><strong>Evidence:</strong> what you measured, and where the model was wrong.</li>
+<li><strong>What transfers:</strong> what another domain could reuse.</li>
 </ol>
-
-<h2>What the two cases have in common</h2>
-<ul>
-<li><strong>Extraction is solved enough.</strong> In both cases, reading the document was the easy part.</li>
-<li><strong>Discovery and provenance are the protocols that matter.</strong> The value came from knowing where the authoritative source is and requiring every figure to have one.</li>
-<li><strong>Calibration needs public outcomes.</strong> Water bills can be checked against published tiers, and bid forecasts against published tabulations. A model you can't measure against something doesn't improve.</li>
-<li><strong>Code the spine, leave judgment to agents.</strong> Keeping the fixed structure apart from the per-job content is what lets a playbook carry over to a new job or domain.</li>
-</ul>
+<p class="small muted">To start, copy <a href="https://github.com/protocolvision/sig-p4b/blob/main/case-studies/TEMPLATE.md">the sample template</a> into <code>case-studies/your-name/</code>, or post your case in <code>#protocols-for-business</code>. You can keep a client anonymous.</p>
