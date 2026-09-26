@@ -44,9 +44,9 @@ Keep construction client details anonymized. The client is not named anywhere in
 
 ## Session sign-ups
 
-The homepage form posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-signup` on rafaeldf2.workers.dev) that stores sign-ups in KV.
+The homepage Register button opens a dialog (a bottom drawer on phones) that posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-signup` on rafaeldf2.workers.dev) that stores sign-ups in KV.
 
-- **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. It reads the secret from `~/.config/sig-p4b/export_secret`.
+- **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. Columns: name, email, affiliation, website, github, discord, signed_up, source, unsubscribe_url. It reads the secret from `~/.config/sig-p4b/export_secret`.
 - **Unsubscribe links:** each row has one. Include it in every session email.
 - **Redeploy the worker:** `cd worker && npx wrangler deploy`.
 

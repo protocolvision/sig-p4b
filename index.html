@@ -60,30 +60,51 @@
   } catch (e) {}
 })();
 </script>
-<form id="join" class="join" action="https://sig-p4b-signup.rafaeldf2.workers.dev/signup" method="post">
-<label for="join-email">Get the reading and prep notes before each session. First session: 2 November 2026.</label>
-<div class="join-row">
-<input id="join-name" name="name" type="text" placeholder="Name" autocomplete="name" maxlength="100">
-<input id="join-email" name="email" type="email" placeholder="Email" autocomplete="email" required maxlength="200">
-<button type="submit">Sign up</button>
+<div id="join" class="join">
+<p class="join-line">Get the reading and prep notes before each session. First session: 2 November 2026.</p>
+<div class="join-row"><button type="button" class="btn" data-register>Register</button><span class="join-note"><span class="join-status" aria-live="polite"></span>or join us on <a href="https://discord.gg/zNJdK7caj">Discord</a> in <code>#protocols-for-business</code></span></div>
 </div>
+<dialog id="register" class="register" aria-labelledby="register-title">
+<form method="post" action="https://sig-p4b-signup.rafaeldf2.workers.dev/signup">
+<div class="register-head"><h2 id="register-title">Register for the SIG</h2><button type="button" class="close" data-close aria-label="Close">×</button></div>
+<p class="small muted">We send the reading and prep notes before each session. Only the email is required.</p>
+<label>Name<input name="name" type="text" autocomplete="name" maxlength="100"></label>
+<label>Email <span class="req">required</span><input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+<label>Website<input name="website" type="text" inputmode="url" autocomplete="url" placeholder="yoursite.com" maxlength="200"></label>
+<div class="pair">
+<label>GitHub<input name="github" type="text" placeholder="username" maxlength="60" autocapitalize="off" spellcheck="false"></label>
+<label>Discord<input name="discord" type="text" placeholder="handle" maxlength="60" autocapitalize="off" spellcheck="false"></label>
+</div>
+<label>Affiliation<input name="affiliation" type="text" autocomplete="organization" placeholder="Organization or project" maxlength="150"></label>
 <input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
-<p class="join-note"><span class="join-status" aria-live="polite"></span>Or join us on <a href="https://discord.gg/zNJdK7caj">Discord</a> in <code>#protocols-for-business</code>.</p>
+<p class="form-status" aria-live="polite"></p>
+<div class="register-actions"><button type="submit" class="btn">Register</button><button type="button" class="btn-quiet" data-close>Cancel</button></div>
+<p class="small muted">Sessions are recorded. Each email includes a link to unsubscribe.</p>
 </form>
+</dialog>
 <script>
 (function () {
-  var f = document.getElementById('join'), s = f.querySelector('.join-status');
-  function say(msg) { s.textContent = msg + ' '; }
-  if (/[?&]signup=ok/.test(location.search)) say('Thanks, you\u2019re on the list.');
-  if (/[?&]signup=error/.test(location.search)) say('That didn\u2019t work. Check the email and try again.');
+  var d = document.getElementById('register'), f = d.querySelector('form'), st = f.querySelector('.form-status'),
+      banner = document.querySelector('.join-status');
+  function open(e) { if (e) e.preventDefault(); st.textContent = ''; if (d.showModal) d.showModal(); else d.setAttribute('open', ''); var i = f.querySelector('input[name=name]'); if (i) i.focus(); }
+  function close() { if (d.close) d.close(); else d.removeAttribute('open'); }
+  document.querySelectorAll('[data-register]').forEach(function (b) { b.addEventListener('click', open); });
+  d.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', close); });
+  d.addEventListener('click', function (e) { if (e.target === d) close(); });
+  if (/[?&]signup=ok/.test(location.search)) banner.textContent = 'Thanks, you\u2019re registered. ';
+  if (/[?&]signup=error/.test(location.search)) banner.textContent = 'That didn\u2019t work. Please try again. ';
+  if (location.hash === '#register') open();
   f.addEventListener('submit', function (e) {
     e.preventDefault();
-    var b = f.querySelector('button'); b.disabled = true;
-    fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: f.name.value, email: f.email.value, _hp: f._hp.value, source: 'home' }) })
+    var b = f.querySelector('button[type=submit]'); b.disabled = true; st.textContent = 'Sending\u2026';
+    var data = {}; new FormData(f).forEach(function (v, k) { data[k] = v; }); data.source = 'home';
+    fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
       .then(function (r) { return r.json(); })
-      .then(function (d) { if (d.ok) { say('Thanks, you\u2019re on the list.'); f.reset(); } else { say(d.error || 'That didn\u2019t work.'); } })
-      .catch(function () { say('That didn\u2019t work. Try again, or use Discord.'); })
+      .then(function (r) {
+        if (r.ok) { f.reset(); close(); banner.textContent = 'Thanks, you\u2019re registered. '; }
+        else { st.textContent = r.error || 'That didn\u2019t work.'; }
+      })
+      .catch(function () { st.textContent = 'That didn\u2019t work. Try again, or join us on Discord.'; })
       .finally(function () { b.disabled = false; });
   });
 })();
@@ -127,7 +148,7 @@
   <dt>Calendar</dt><dd><a href="sig-p4b.ics">Add all sessions</a> (.ics) or <a href="webcal://npc.here.now/protocolvision/sig-p4b.ics">subscribe</a> to stay updated. The Protocol Institute's other groups are on the <a href="https://summerofprotocols.com/events">events calendar</a>.</dd>
   <dt>Drop-ins</dt><dd>Welcome. The excerpt is read together in the session, so no preparation is needed. The tracks below are there for anyone who wants more depth.</dd>
   <dt>Recording</dt><dd>Sessions are recorded. Recordings are posted in the <a href="#archive">archive</a>.</dd>
-  <dt>Contact</dt><dd>Rafael Fernández, <code>@rafa_0x</code> on Discord, or <a href="#join">sign up</a> for session emails.</dd>
+  <dt>Contact</dt><dd>Rafael Fernández, <code>@rafa_0x</code> on Discord, or <a href="#register" data-register>register</a> for session emails.</dd>
 </dl>
 
 <h2 id="sessions">How sessions run</h2>
@@ -204,7 +225,7 @@
 </ul>
 
 <h2>Participate</h2>
-<p>Participants read along, bring an observation to each session, and carry one case study through the year. To take part, <a href="#join">sign up for session emails</a> and join us on <a href="https://discord.gg/zNJdK7caj">Discord</a> in <code>#protocols-for-business</code>. To sponsor the project or propose a domain partnership, write to <a href="mailto:venkat@protocol-institute.org">Venkatesh Rao</a> at the Protocol Institute, or contact Rafael Fernández directly (<code>@rafa_0x</code> on Discord).</p>
+<p>Participants read along, bring an observation to each session, and carry one case study through the year. To take part, <a href="#register" data-register>register for session emails</a> and join us on <a href="https://discord.gg/zNJdK7caj">Discord</a> in <code>#protocols-for-business</code>. To sponsor the project or propose a domain partnership, write to <a href="mailto:venkat@protocol-institute.org">Venkatesh Rao</a> at the Protocol Institute, or contact Rafael Fernández directly (<code>@rafa_0x</code> on Discord).</p>
 <p>To contribute to the site, put in a pull request on our <a href="https://github.com/protocolvision/sig-p4b">GitHub repo</a>.</p>
 </main>
 <footer>

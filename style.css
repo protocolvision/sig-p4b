@@ -159,3 +159,34 @@ header .logo { width: 22px; height: 22px; border-radius: 3px; display: block; }
 .topic .muted { display: block; font-size: 0.88rem; margin-top: 0.15rem; }
 .schedule .quote q { display: block; font-style: italic; color: var(--fg); opacity: 0.82; }
 .schedule .quote q + q { margin-top: 0.4rem; }
+
+/* Register: button + dialog (bottom drawer on phones). */
+.join-line { margin: 0 0 0.7rem; font-size: 0.95rem; }
+.join .join-row { align-items: center; gap: 0.5rem 1rem; }
+.btn, .register button[type=submit] { font: 400 0.8rem Outfit, system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.55rem 1.2rem; color: #fff; background: var(--link); border: 0; border-radius: 3px; cursor: pointer; }
+.btn:hover { background: #003fa3; }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.btn-quiet { font: 400 0.8rem Outfit, system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.55rem 0.8rem; color: var(--muted); background: none; border: 0; cursor: pointer; }
+.join .join-note { margin: 0; }
+.register { box-sizing: border-box; overflow-y: auto; overscroll-behavior: contain; width: min(30rem, calc(100vw - 2rem)); max-height: calc(100vh - 3rem); padding: 1.4rem 1.5rem 1.2rem; border: 1px solid var(--rule); border-top: 3px solid var(--link); border-radius: 4px; background: var(--bg); color: var(--fg); box-shadow: 0 18px 50px rgba(20, 30, 60, 0.18); }
+.register::backdrop { background: rgba(28, 26, 23, 0.35); }
+.register-head { display: flex; justify-content: space-between; align-items: baseline; }
+.register h2 { margin: 0 0 0.3rem; font-size: 1.15rem; }
+.register .close { background: none; border: 0; font-size: 1.5rem; line-height: 1; color: var(--muted); cursor: pointer; padding: 0 0.2rem; }
+.register label { display: block; margin: 0.75rem 0 0; font: 400 0.72rem Outfit, system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.register .req { text-transform: none; letter-spacing: 0; color: var(--link); margin-left: 0.3rem; }
+.register input { display: block; width: 100%; box-sizing: border-box; margin-top: 0.3rem; font: 400 0.98rem Lora, Georgia, serif; letter-spacing: 0; text-transform: none; color: var(--fg); padding: 0.5rem 0.6rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--bg); }
+.register input:focus { outline: 2px solid var(--link); outline-offset: -1px; border-color: var(--link); }
+.register .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.75rem; }
+.register .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.register .form-status { min-height: 1.2rem; margin: 0.8rem 0 0; font-size: 0.9rem; color: var(--link); }
+.register-actions { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.4rem; }
+.register .small { margin: 0.6rem 0 0; }
+@media (max-width: 600px) {
+  .register { width: 100%; max-width: 100%; max-height: 90vh; margin: auto 0 0; inset: auto 0 0 0; border-radius: 12px 12px 0 0; border-left: 0; border-right: 0; border-bottom: 0; padding-bottom: 1.6rem; }
+  .register[open] { animation: drawer-up 0.22s ease-out; }
+  .register .pair { grid-template-columns: 1fr; }
+  .register-actions .btn, .register-actions button[type=submit] { flex: 1; }
+}
+@keyframes drawer-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .register[open] { animation: none; } }

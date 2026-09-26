@@ -1,7 +1,7 @@
 /**
  * sig-p4b-signup — session sign-ups for npc.here.now/protocolvision
  *
- * Stores name, email, and affiliation in KV so the facilitators can export
+ * Stores name, email, affiliation, website, GitHub and Discord handles in KV so the facilitators can export
  * the list and send reading prep before each session.
  *
  * Routes:
@@ -22,6 +22,9 @@ interface Signup {
   name: string;
   email: string;
   affiliation: string;
+  website: string;
+  github: string;
+  discord: string;
   ts: string;
   source: string;
 }
@@ -79,6 +82,11 @@ async function readBody(req: Request): Promise<Record<string, string>> {
   return out;
 }
 
+function clean(v: unknown, max: number): string {
+  // Plain text only: trim, cap length, strip control characters.
+  return String(v ?? "").replace(/[\u0000-\u001f\u007f]/g, "").trim().slice(0, max);
+}
+
 async function signup(req: Request, env: Env): Promise<Response> {
   const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
   const done = (ok: boolean, error?: string) =>
@@ -100,10 +108,16 @@ async function signup(req: Request, env: Env): Promise<Response> {
   const ip = req.headers.get("CF-Connecting-IP") || "unknown";
   if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
 
+  let website = clean(body.website, 200);
+  if (website && !/^https?:\/\//i.test(website)) website = "https://" + website;
+  if (website && !/^https?:\/\/[^\s]+\.[^\s]+$/i.test(website)) return done(false, "Please check the website address.");
   const row: Signup = {
-    name: (body.name || "").trim().slice(0, 100),
+    name: clean(body.name, 100),
     email,
-    affiliation: (body.affiliation || "").trim().slice(0, 150),
+    affiliation: clean(body.affiliation, 150),
+    website,
+    github: clean(body.github, 60).replace(/^@/, "").replace(/^https?:\/\/github\.com\//i, "").replace(/\/$/, ""),
+    discord: clean(body.discord, 60).replace(/^@/, ""),
     ts: new Date().toISOString(),
     source: (body.source || "site").slice(0, 50),
   };
@@ -119,7 +133,7 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
   if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) {
     return new Response("Forbidden", { status: 403 });
   }
-  const rows: string[] = ["name,email,affiliation,signed_up,source,unsubscribe_url"];
+  const rows: string[] = ["name,email,affiliation,website,github,discord,signed_up,source,unsubscribe_url"];
   let cursor: string | undefined;
   do {
     const page = await env.SIGNUPS.list({ prefix: "sub:", cursor });
@@ -129,7 +143,8 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
       const r = JSON.parse(v) as Signup;
       const t = await token(r.email, env.EXPORT_SECRET);
       const unsub = `${origin}/unsubscribe?email=${encodeURIComponent(r.email)}&t=${t}`;
-      rows.push([r.name, r.email, r.affiliation, r.ts, r.source, unsub].map(csvCell).join(","));
+      rows.push([r.name, r.email, r.affiliation, r.website ?? "", r.github ?? "", r.discord ?? "", r.ts, r.source, unsub]
+        .map(csvCell).join(","));
     }
     cursor = page.list_complete ? undefined : page.cursor;
   } while (cursor);
