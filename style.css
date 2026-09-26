@@ -145,3 +145,13 @@ footer .mark { width: 12px; height: 12px; vertical-align: -1px; margin-right: 0.
 .people time { color: var(--fg); }
 header .home { display: inline-flex; align-items: center; gap: 0.55rem; }
 header .logo { width: 22px; height: 22px; border-radius: 3px; display: block; }
+
+/* Next-session box: the one thing to bookmark. */
+.next { margin: 1.5rem 0 0.5rem; padding: 0.9rem 1rem; border-left: 3px solid var(--link); background: #f6f8fd; }
+.next p { margin: 0.2rem 0; }
+.next .kind { color: var(--link); margin-right: 0.4rem; }
+.next-when { font-size: 0.9rem; color: var(--muted); }
+.next-what { font-size: 1.05rem; }
+.next-what .muted { font-size: 0.9rem; }
+.next-note { font-size: 0.85rem; color: var(--muted); }
+.empty { color: var(--muted); }

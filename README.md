@@ -47,3 +47,13 @@ The homepage form posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-
 - **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. It reads the secret from `~/.config/sig-p4b/export_secret`.
 - **Unsubscribe links:** each row has one. Include it in every session email.
 - **Redeploy the worker:** `cd worker && npx wrangler deploy`.
+
+## Sessions and calendar
+
+`tools/sessions.json` is the source of truth for the 26 sessions: date, reading, companion piece, and feature. After editing it, run:
+
+    python3 tools/build_calendar.py
+
+The script rebuilds `sig-p4b.ics`, the subscribable calendar with times in UTC (15:30–16:30), and refreshes the homepage's "Next session" box, which picks the next upcoming session in the reader's browser. Run `./deploy.sh` afterwards.
+
+Recordings go in the homepage's "Past sessions" archive. A commented template entry is in `index.html`.
