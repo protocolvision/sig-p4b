@@ -7,7 +7,7 @@ X-WR-CALNAME:Protocols for Business SIG
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20261102T153000Z
 DTEND:20261102T163000Z
 SUMMARY:SIG P4B · The Hugging Face incident and the road ahead
@@ -18,17 +18,17 @@ DESCRIPTION:Recent swarms: What two frontier labs reported about agents co
  unicate by writing files into the Artifactory package manager. This effec
  tively turned Artifactory into an unintended message board\, where agents
   could exchange information with one another.”\n\nAlongside: Securing S
- tigmergic Systems (Nast\, 2026)\nhttps://protocolized.summerofprotocols.c
- om/p/securing-stigmergic-systems\n\nFeature: Kickoff: how the year runs\,
-  and choosing your case\n\nJoin on the Protocol Institute Discord: https:
- //discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syl
- labus/\nSessions are recorded.
+ tigmergic Systems (Patrick Nast\, Protocolized\, 2026)\nhttps://protocoli
+ zed.summerofprotocols.com/p/securing-stigmergic-systems\n\nFeature: Kicko
+ ff: how the year runs\, and choosing your case\n\nJoin on the Protocol In
+ stitute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here
+ .now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:SIG P4B · Patterns and problems in multiagent systems
@@ -38,18 +38,18 @@ DESCRIPTION:Recent swarms: What two frontier labs reported about agents co
  rch/multiagent-systems\n“We consistently saw a multiagent turf war. All
   of the models we tested quickly assumed that others were purposefully im
  peding their work\, and began to sabotage others while protecting their o
- wn contributions.”\n\nAlongside: Securing Stigmergic Systems (Nast\, 20
- 26)\nhttps://protocolized.summerofprotocols.com/p/securing-stigmergic-sys
- tems\n\nFeature: Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)
- \n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\
- nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSessions are re
- corded.
+ wn contributions.”\n\nAlongside: Securing Stigmergic Systems (Patrick N
+ ast\, Protocolized\, 2026)\nhttps://protocolized.summerofprotocols.com/p/
+ securing-stigmergic-systems\n\nFeature: Guest: Formal Protocol Theory SIG
+  (Stigmergic AI Safety)\n\nJoin on the Protocol Institute Discord: https:
+ //discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syl
+ labus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
 SUMMARY:SIG P4B · The Ecology of Collective Behavior
@@ -59,17 +59,17 @@ DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
   ant species studied so far it seems that the allocation of tasks\, or fu
  nctions\, to ants\, uses a distributed system\; changes in conditions shi
  ft the rate of local interaction that regulates ant activity”\n\nAlongs
- ide: Welcome to the Swarm (Fernández\, 2023)\nhttps://npcmemo.substack.c
- om/p/welcome-to-the-swarm\n\nFeature: Case pitches: one paragraph each\n\
- nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
- llabus: https://npc.here.now/protocolvision/syllabus/\nSessions are recor
- ded.
+ ide: Pond brains and GPT-4 (Gordon Brander\, Squishy Computer\, 2023)\nht
+ tps://newsletter.squishy.computer/p/pond-brains-and-gpt-4\n\nFeature: Cas
+ e pitches: one paragraph each\n\nJoin on the Protocol Institute Discord: 
+ https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvisi
+ on/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:SIG P4B · Quorum Sensing in Bacteria
@@ -79,18 +79,18 @@ DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
  rum sensing bacteria produce and release chemical signal molecules called
   autoinducers that increase in concentration as a function of cell densit
  y. The detection of a minimal threshold stimulatory concentration of an a
- utoinducer leads to an alteration in gene expression.”\n\nAlongside: We
- lcome to the Swarm (Fernández\, 2023)\nhttps://npcmemo.substack.com/p/we
- lcome-to-the-swarm\n\nFeature: Guest: Distributed Robotics Group (Decentr
- alized Robot Markets)\n\nJoin on the Protocol Institute Discord: https://
- discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sylla
- bus/\nSessions are recorded.
+ utoinducer leads to an alteration in gene expression.”\n\nAlongside: Po
+ nd brains and GPT-4 (Gordon Brander\, Squishy Computer\, 2023)\nhttps://n
+ ewsletter.squishy.computer/p/pond-brains-and-gpt-4\n\nFeature: Guest: Dis
+ tributed Robotics Group (Decentralized Robot Markets)\n\nJoin on the Prot
+ ocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://n
+ pc.here.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:SIG P4B · The Filing Cabinet
@@ -100,18 +100,18 @@ DESCRIPTION:From files to flows: The filing cabinet\, and what replaced it
  nformation-infrastructure/\n“The filing cabinet does not just store pap
  er\; it stores information\; and because the modern world depends upon an
  d is indeed defined by information\, the filing cabinet must be recognize
- d as critical to the expansion of modernity.”\n\nAlongside: Liquid Serv
- ices and Runtime Procurement (NPC Memo\, 2026)\nhttps://npcmemo.substack.
- com/p/liquid-services-and-runtime-procurement\n\nFeature: Show-and-tell: 
- AI-native tooling\n\nJoin on the Protocol Institute Discord: https://disc
- ord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/
- \nSessions are recorded.
+ d as critical to the expansion of modernity.”\n\nAlongside: Inbox Zero 
+ versus Flow Laminar (Venkatesh Rao\, Ribbonfarm\, 2015)\nhttps://ribbonfa
+ rm.com/2015/07/21/inbox-zero-versus-flow-laminar/\n\nFeature: Show-and-te
+ ll: AI-native tooling\n\nJoin on the Protocol Institute Discord: https://
+ discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sylla
+ bus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:SIG P4B · The Log: What every software engineer should know about
@@ -124,17 +124,18 @@ DESCRIPTION:From files to flows: The filing cabinet\, and what replaced it
  -real-time-datas-unifying\n“The log is the natural data structure for h
  andling data flow between systems. The recipe is very simple: Take all th
  e organization's data and put it into a central log for real-time subscri
- ption.”\n\nAlongside: Liquid Services and Runtime Procurement (NPC Memo
- \, 2026)\nhttps://npcmemo.substack.com/p/liquid-services-and-runtime-proc
- urement\n\nFeature: Guest: Psychohistory SIG (Prophecy Protocols)\n\nJoin
-  on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabu
- s: https://npc.here.now/protocolvision/syllabus/\nSessions are recorded.
+ ption.”\n\nAlongside: Inbox Zero versus Flow Laminar (Venkatesh Rao\, R
+ ibbonfarm\, 2015)\nhttps://ribbonfarm.com/2015/07/21/inbox-zero-versus-fl
+ ow-laminar/\n\nFeature: Guest: Psychohistory SIG (Prophecy Protocols)\n\n
+ Join on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyl
+ labus: https://npc.here.now/protocolvision/syllabus/\nSessions are record
+ ed.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:SIG P4B · Contracts: Events
@@ -143,18 +144,18 @@ DESCRIPTION:Events and feeds: Two open ways to emit: contract events and s
  ://docs.soliditylang.org/en/latest/contracts.html\n“Solidity events giv
  e an abstraction on top of the EVM’s logging functionality. Application
  s can subscribe and listen to these events through the RPC interface of a
- n Ethereum client.”\n\nAlongside: The Reading Machine and the Inversion
-  of the Standards Stack (NPC Memo\, 2026)\nhttps://npcmemo.substack.com/p
- /the-reading-machine-and-the-inversion\n\nFeature: Case study progress\n\
- nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
- llabus: https://npc.here.now/protocolvision/syllabus/\nSessions are recor
- ded.
+ n Ethereum client.”\n\nAlongside: Nature's many attempts to evolve a No
+ str (Gordon Brander\, Squishy Computer\, 2024)\nhttps://newsletter.squish
+ y.computer/p/natures-many-attempts-to-evolve-a\n\nFeature: Case study pro
+ gress\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK
+ 7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSessions a
+ re recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:SIG P4B · RSS 2.0 Specification
@@ -162,18 +163,18 @@ DESCRIPTION:Events and feeds: Two open ways to emit: contract events and s
  yndication.\n\nReading: RSS 2.0 Specification (RSS Advisory Board\, 2003)
  \nhttps://www.rssboard.org/rss-specification\n“ttl stands for time to l
  ive. It's a number of minutes that indicates how long a channel can be ca
- ched before refreshing from the source.”\n\nAlongside: The Reading Mach
- ine and the Inversion of the Standards Stack (NPC Memo\, 2026)\nhttps://n
- pcmemo.substack.com/p/the-reading-machine-and-the-inversion\n\nFeature: S
- how-and-tell: AI-native tooling\n\nJoin on the Protocol Institute Discord
- : https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvi
- sion/syllabus/\nSessions are recorded.
+ ched before refreshing from the source.”\n\nAlongside: Nature's many at
+ tempts to evolve a Nostr (Gordon Brander\, Squishy Computer\, 2024)\nhttp
+ s://newsletter.squishy.computer/p/natures-many-attempts-to-evolve-a\n\nFe
+ ature: Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institute
+  Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/pr
+ otocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:SIG P4B · The Blackboard Model of Problem Solving and the Evoluti
@@ -184,17 +185,18 @@ DESCRIPTION:Boards and notes: The intermediate traces: shared boards and c
  imagazine/index.php/aimagazine/article/view/537\n“Knowledge sources pro
  duce changes to the blackboard that lead incrementally to a solution to t
  he problem. Communication and interaction among the knowledge sources tak
- e place solely through the blackboard.”\n\nAlongside: After the Swarm: 
- We are Blooming (NPC Memo\, 2026)\nhttps://npcmemo.substack.com/p/bloom\n
- \nFeature: Case study progress\n\nJoin on the Protocol Institute Discord:
-  https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvis
- ion/syllabus/\nSessions are recorded.
+ e place solely through the blackboard.”\n\nAlongside: Unprotocolized Kn
+ owledge (Kara Kittel & Toby Shorin\, Summer of Protocols\, 2024)\nhttps:/
+ /summerofprotocols.com/research/module-four/unprotocolized-knowledge\n\nF
+ eature: Case study progress\n\nJoin on the Protocol Institute Discord: ht
+ tps://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision
+ /syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
 SUMMARY:SIG P4B · Birdwatch: Crowd Wisdom and Bridging Algorithms can Inf
@@ -205,17 +207,18 @@ DESCRIPTION:Boards and notes: The intermediate traces: shared boards and c
  t al.\, 2022)\nhttps://arxiv.org/abs/2210.15723\n“It could help set bet
  ter norms for crowd-based discussions of social media posts by rewarding 
  content that is informative and appreciated by a wide range of people.”
- \n\nAlongside: After the Swarm: We are Blooming (NPC Memo\, 2026)\nhttps:
- //npcmemo.substack.com/p/bloom\n\nFeature: Show-and-tell: AI-native tooli
- ng\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7ca
- j\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSessions are 
- recorded.
+ \n\nAlongside: Unprotocolized Knowledge (Kara Kittel & Toby Shorin\, Summ
+ er of Protocols\, 2024)\nhttps://summerofprotocols.com/research/module-fo
+ ur/unprotocolized-knowledge\n\nFeature: Show-and-tell: AI-native tooling\
+ n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\n
+ Syllabus: https://npc.here.now/protocolvision/syllabus/\nSessions are rec
+ orded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:SIG P4B · The Information Bus: An Architecture for Extensible Dis
@@ -226,17 +229,17 @@ DESCRIPTION:Who's listening: Publish/subscribe\, from the first informatio
  s://doi.org/10.1145/168619.168624\n“To disseminate data objects\, data 
  producers generate them\, label them with an appropriate subject\, and pu
  blish them on the Information Bus. To receive such objects\, data consume
- rs subscribe to the same subject.”\n\nAlongside: Have Your Factory Call
-  My Factory (Rao\, 2026)\nhttps://protocolized.summerofprotocols.com/p/ha
- ve-your-factory-call-my-factory\n\nFeature: Case study progress\n\nJoin o
- n the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus:
-  https://npc.here.now/protocolvision/syllabus/\nSessions are recorded.
+ rs subscribe to the same subject.”\n\nAlongside: Agents are actors (Gor
+ don Brander\, Squishy Computer\, 2026)\nhttps://newsletter.squishy.comput
+ er/p/agents-are-actors\n\nFeature: Case study progress\n\nJoin on the Pro
+ tocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://
+ npc.here.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:SIG P4B · Model Context Protocol Specification
@@ -246,17 +249,17 @@ DESCRIPTION:Who's listening: Publish/subscribe\, from the first informatio
  on/latest\n“subscriptions/listen opens a long-lived notification stream
   from the server to the client. Unlike one-off requests\, the stream stay
  s open and delivers notifications until the client cancels it.”\n\nAlon
- gside: Have Your Factory Call My Factory (Rao\, 2026)\nhttps://protocoliz
- ed.summerofprotocols.com/p/have-your-factory-call-my-factory\n\nFeature: 
- Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institute Discor
- d: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolv
- ision/syllabus/\nSessions are recorded.
+ gside: Agents are actors (Gordon Brander\, Squishy Computer\, 2026)\nhttp
+ s://newsletter.squishy.computer/p/agents-are-actors\n\nFeature: Show-and-
+ tell: AI-native tooling\n\nJoin on the Protocol Institute Discord: https:
+ //discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syl
+ labus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:SIG P4B · The Use of Knowledge in Society
@@ -264,17 +267,17 @@ DESCRIPTION:Signals between people: Prices and costly signals.\n\nReading:
   The Use of Knowledge in Society (Hayek\, 1945)\nhttps://www.econlib.org/
  library/Essays/hykKnw.html\n“We must look at the price system as such a
   mechanism for communicating information if we want to understand its rea
- l function…”\n\nAlongside: Owning Demand vs. Writing the Rules (NPC M
- emo\, 2025)\nhttps://npcmemo.substack.com/p/owning-demand-vs-writing-the-
- rules\n\nFeature: Case study progress\n\nJoin on the Protocol Institute D
- iscord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/prot
- ocolvision/syllabus/\nSessions are recorded.
+ l function…”\n\nAlongside: Outsider Trading (Drew Austin\, Kneeling B
+ us\, 2026)\nhttps://kneelingbus.substack.com/p/outsider-trading\n\nFeatur
+ e: Case study progress\n\nJoin on the Protocol Institute Discord: https:/
+ /discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syll
+ abus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270517T153000Z
 DTEND:20270517T163000Z
 SUMMARY:SIG P4B · Job Market Signaling
@@ -282,18 +285,18 @@ DESCRIPTION:Signals between people: Prices and costly signals.\n\nReading:
   Job Market Signaling (Spence\, 1973)\nhttps://doi.org/10.2307/1882010\n
  “It is not difficult to see that a signal will not effectively distingu
  ish one applicant from another\, unless the costs of signaling are negati
- vely correlated with productive capability.”\n\nAlongside: Owning Deman
- d vs. Writing the Rules (NPC Memo\, 2025)\nhttps://npcmemo.substack.com/p
- /owning-demand-vs-writing-the-rules\n\nFeature: Guest: Personhood Researc
- h Group (Personhood Transformations)\n\nJoin on the Protocol Institute Di
- scord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/proto
- colvision/syllabus/\nSessions are recorded.
+ vely correlated with productive capability.”\n\nAlongside: Outsider Tra
+ ding (Drew Austin\, Kneeling Bus\, 2026)\nhttps://kneelingbus.substack.co
+ m/p/outsider-trading\n\nFeature: Guest: Personhood Research Group (Person
+ hood Transformations)\n\nJoin on the Protocol Institute Discord: https://
+ discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sylla
+ bus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270531T153000Z
 DTEND:20270531T163000Z
 SUMMARY:SIG P4B · Collective Mind in Organizations: Heedful Interrelating
@@ -303,17 +306,18 @@ DESCRIPTION:Teams that sense together: How a crew or cockpit coordinates t
  s: Heedful Interrelating on Flight Decks (Weick & Roberts\, 1993)\nhttps:
  //doi.org/10.2307/2393372\n“Collective mind is conceptualized as a patt
  ern of heedful interrelations of actions in a social system.”\n\nAlongs
- ide: Thermal Memory (Benny\, 2026)\nhttps://summerlightning.substack.com/
- p/thermal-memory\n\nFeature: Guest: Memory Research Group (Organizational
-  Memory Architecture)\n\nJoin on the Protocol Institute Discord: https://
- discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sylla
- bus/\nSessions are recorded.
+ ide: Coordinate Leadership (Timber Stinson-Schroff\, Blundercheck\, 2025)
+ \nhttps://blundercheck.timberschroff.com/p/coordinate-leadership\n\nFeatu
+ re: Guest: Memory Research Group (Organizational Memory Architecture)\n\n
+ Join on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyl
+ labus: https://npc.here.now/protocolvision/syllabus/\nSessions are record
+ ed.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270614T153000Z
 DTEND:20270614T163000Z
 SUMMARY:SIG P4B · How a Cockpit Remembers Its Speeds
@@ -322,17 +326,18 @@ DESCRIPTION:Teams that sense together: How a crew or cockpit coordinates t
  eds (Hutchins\, 1995)\nhttps://onlinelibrary.wiley.com/doi/10.1207/s15516
  709cog1903_1\n“The cockpit system remembers its speeds\, and the memory
   process emerges from the activity of the pilots. The memory of the cockp
- it\, however\, is not made primarily of pilot memory.”\n\nAlongside: Th
- ermal Memory (Benny\, 2026)\nhttps://summerlightning.substack.com/p/therm
- al-memory\n\nFeature: Case study progress\n\nJoin on the Protocol Institu
- te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/
- protocolvision/syllabus/\nSessions are recorded.
+ it\, however\, is not made primarily of pilot memory.”\n\nAlongside: Co
+ ordinate Leadership (Timber Stinson-Schroff\, Blundercheck\, 2025)\nhttps
+ ://blundercheck.timberschroff.com/p/coordinate-leadership\n\nFeature: Cas
+ e study progress\n\nJoin on the Protocol Institute Discord: https://disco
+ rd.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\
+ nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270628T153000Z
 DTEND:20270628T163000Z
 SUMMARY:SIG P4B · Designing Freedom
@@ -341,17 +346,18 @@ DESCRIPTION:Organizations that broadcast: How a firm absorbs variety insid
  eedom (Beer\, 1973)\nhttps://systemsorienteddesign.net/wp-content/uploads
  /2022/10/Designing-Freedom_Staford-Beer.pdf\n“What is it that controls 
  variety? The answer is dead simple: variety. Variety absorbs variety\, an
- d nothing else can.”\n\nAlongside: PDF Hell. Long-live the PDF. (NPC Me
- mo\, 2026)\nhttps://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf\n\n
- Feature: Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institu
- te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/
- protocolvision/syllabus/\nSessions are recorded.
+ d nothing else can.”\n\nAlongside: Prophetic Soft Technologies (Sachin 
+ Benny\, Summer Lightning\, 2025)\nhttps://summerlightning.substack.com/p/
+ prophetic-soft-technologies\n\nFeature: Show-and-tell: AI-native tooling\
+ n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\n
+ Syllabus: https://npc.here.now/protocolvision/syllabus/\nSessions are rec
+ orded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:SIG P4B · Form 8-K: General Instructions
@@ -360,17 +366,18 @@ DESCRIPTION:Organizations that broadcast: How a firm absorbs variety insid
  neral Instructions (U.S. Securities and Exchange Commission)\nhttps://www
  .sec.gov/files/form8-k.pdf\n“A report pursuant to Item 1.05 is to be fi
  led within four business days after the registrant determines that it has
-  experienced a material cybersecurity incident.”\n\nAlongside: PDF Hell
- . Long-live the PDF. (NPC Memo\, 2026)\nhttps://npcmemo.substack.com/p/pd
- f-hell-long-live-the-pdf\n\nFeature: Case study progress\n\nJoin on the P
- rotocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https:
- //npc.here.now/protocolvision/syllabus/\nSessions are recorded.
+  experienced a material cybersecurity incident.”\n\nAlongside: Propheti
+ c Soft Technologies (Sachin Benny\, Summer Lightning\, 2025)\nhttps://sum
+ merlightning.substack.com/p/prophetic-soft-technologies\n\nFeature: Case 
+ study progress\n\nJoin on the Protocol Institute Discord: https://discord
+ .gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nS
+ essions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
 SUMMARY:SIG P4B · The Nature of the Firm
@@ -378,18 +385,18 @@ DESCRIPTION:The firm\, re-seen: Why firms exist\, read as a question about
   signals.\n\nReading: The Nature of the Firm (Coase\, 1937)\nhttps://doi.
  org/10.1111/j.1468-0335.1937.tb00002.x\n“The main reason why it is prof
  itable to establish a firm would seem to be that there is a cost of using
-  the price mechanism.”\n\nAlongside: The Nature of the Firm Revisited: 
- A Protocol-Based Account (NPC Memo\, 2025)\nhttps://npcmemo.substack.com/
- p/the-nature-of-the-firm-revisited\n\nFeature: Show-and-tell: AI-native t
- ooling\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJd
- K7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSessions 
- are recorded.
+  the price mechanism.”\n\nAlongside: Why Does AI Development Look Like 
+ 1980s Software Planning? (Sachin Benny\, Summer Lightning\, 2025)\nhttps:
+ //summerlightning.substack.com/p/why-does-ai-development-look-like\n\nFea
+ ture: Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institute 
+ Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/pro
+ tocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:SIG P4B · Organization Design: An Information Processing View
@@ -398,18 +405,18 @@ DESCRIPTION:The firm\, re-seen: Why firms exist\, read as a question about
   (Galbraith\, 1974)\nhttps://doi.org/10.1287/inte.4.3.28\n“Therefore th
  e greater the task uncertainty\, the greater the amount of information th
  at must be processed among decision makers during task execution in order
-  to achieve a given level of performance.”\n\nAlongside: The Nature of 
- the Firm Revisited: A Protocol-Based Account (NPC Memo\, 2025)\nhttps://n
- pcmemo.substack.com/p/the-nature-of-the-firm-revisited\n\nFeature: Case s
- tudy progress\n\nJoin on the Protocol Institute Discord: https://discord.
- gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSe
- ssions are recorded.
+  to achieve a given level of performance.”\n\nAlongside: Why Does AI De
+ velopment Look Like 1980s Software Planning? (Sachin Benny\, Summer Light
+ ning\, 2025)\nhttps://summerlightning.substack.com/p/why-does-ai-developm
+ ent-look-like\n\nFeature: Case study progress\n\nJoin on the Protocol Ins
+ titute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.
+ now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:SIG P4B · Reengineering Work: Don't Automate\, Obliterate
@@ -418,18 +425,17 @@ DESCRIPTION:Redesign and capture: Process redesign\, and how platforms cap
  ate (Hammer\, 1990)\nhttps://hbr.org/1990/07/reengineering-work-dont-auto
  mate-obliterate\n“It is time to stop paving the cow paths. Instead of e
  mbedding outdated processes in silicon and software\, we should obliterat
- e them and start over.”\n\nAlongside: Why Does AI Development Look Like
-  1980s Software Planning? (Benny\, 2025)\nhttps://summerlightning.substac
- k.com/p/why-does-ai-development-look-like\n\nFeature: Show-and-tell: AI-n
- ative tooling\n\nJoin on the Protocol Institute Discord: https://discord.
- gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSe
- ssions are recorded.
+ e them and start over.”\n\nAlongside: Coordination Headwinds (Venkatesh
+  Rao\, Contraptions\, 2021)\nhttps://contraptions.venkateshrao.com/p/coor
+ dination-headwinds\n\nFeature: Show-and-tell: AI-native tooling\n\nJoin o
+ n the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus:
+  https://npc.here.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:SIG P4B · Aggregation Theory
@@ -437,18 +443,18 @@ DESCRIPTION:Redesign and capture: Process redesign\, and how platforms cap
  tured the feeds.\n\nReading: Aggregation Theory (Thompson\, 2015)\nhttps:
  //stratechery.com/2015/aggregation-theory/\n“Secondly\, the Internet ha
  s made transaction costs zero\, making it viable for a distributor to int
- egrate forward with end users/consumers at scale.”\n\nAlongside: Why Do
- es AI Development Look Like 1980s Software Planning? (Benny\, 2025)\nhttp
- s://summerlightning.substack.com/p/why-does-ai-development-look-like\n\nF
- eature: Guest: Protocol Fiction SIG (Protocol Futurism)\n\nJoin on the Pr
- otocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https:/
- /npc.here.now/protocolvision/syllabus/\nSessions are recorded.
+ egrate forward with end users/consumers at scale.”\n\nAlongside: Coordi
+ nation Headwinds (Venkatesh Rao\, Contraptions\, 2021)\nhttps://contrapti
+ ons.venkateshrao.com/p/coordination-headwinds\n\nFeature: Guest: Protocol
+  Fiction SIG (Protocol Futurism)\n\nJoin on the Protocol Institute Discor
+ d: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolv
+ ision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:SIG P4B · Beyond Markets and States: Polycentric Governance of Co
@@ -459,17 +465,17 @@ DESCRIPTION:Governing swarms: Polycentric rules\, and what automation leav
  g/uploads/2018/06/ostrom_lecture.pdf\n“Extensive empirical research lea
  ds me to argue that instead\, a core goal of public policy should be to f
  acilitate the development of institutions that bring out the best in huma
- ns.”\n\nAlongside: Managing the Water\, Not the Ship (NPC Memo\, 2026)\
- nhttps://npcmemo.substack.com/p/managing-the-water-not-the-ship\n\nFeatur
- e: Case study progress\n\nJoin on the Protocol Institute Discord: https:/
- /discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syll
- abus/\nSessions are recorded.
+ ns.”\n\nAlongside: The Problem with Perfect Rules (Timber Stinson-Schro
+ ff\, Blundercheck\, 2026)\nhttps://blundercheck.timberschroff.com/p/the-p
+ roblem-with-perfect-rules\n\nFeature: Case study progress\n\nJoin on the 
+ Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https
+ ://npc.here.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:SIG P4B · Ironies of Automation
@@ -478,18 +484,18 @@ DESCRIPTION:Governing swarms: Polycentric rules\, and what automation leav
  s://doi.org/10.1016/0005-1098(83)90046-8\n“The second irony is that the
   designer who tries to eliminate the operator still leaves the operator t
  o do the tasks which the designer cannot think how to automate.”\n\nAlo
- ngside: Managing the Water\, Not the Ship (NPC Memo\, 2026)\nhttps://npcm
- emo.substack.com/p/managing-the-water-not-the-ship\n\nFeature: Cognitive 
- Ergonomics project (Timber Stinson-Schroff): a progress update from our s
- ister project\n\nJoin on the Protocol Institute Discord: https://discord.
- gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSe
- ssions are recorded.
+ ngside: The Problem with Perfect Rules (Timber Stinson-Schroff\, Blunderc
+ heck\, 2026)\nhttps://blundercheck.timberschroff.com/p/the-problem-with-p
+ erfect-rules\n\nFeature: Cognitive Ergonomics project (Timber Stinson-Sch
+ roff): a progress update from our sister project\n\nJoin on the Protocol 
+ Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.he
+ re.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:SIG P4B · Assessing the Impact of Planned Social Change
@@ -499,17 +505,18 @@ DESCRIPTION:Measure\, then bootstrap: Measuring a swarm honestly\, then im
  w/297\n“The more any quantitative social indicator is used for social d
  ecision-making\, the more subject it will be to corruption pressures and 
  the more apt it will be to distort and corrupt the social processes it is
-  intended to monitor.”\n\nAlongside: Inventing New Nature (Rao\, 2026)\
- nhttps://protocolized.summerofprotocols.com/p/inventing-new-nature\n\nFea
- ture: Case study progress\n\nJoin on the Protocol Institute Discord: http
- s://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/s
- yllabus/\nSessions are recorded.
+  intended to monitor.”\n\nAlongside: Goodhart's Law and Why Measurement
+  is Hard (David Manheim\, Ribbonfarm\, 2016)\nhttps://ribbonfarm.com/2016
+ /06/09/goodharts-law-and-why-measurement-is-hard/\n\nFeature: Case study 
+ progress\n\nJoin on the Protocol Institute Discord: https://discord.gg/zN
+ JdK7caj\nSyllabus: https://npc.here.now/protocolvision/syllabus/\nSession
+ s are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20260926T155045Z
+DTSTAMP:20260926T160352Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:SIG P4B · Improving Our Ability to Improve
@@ -518,11 +525,12 @@ DESCRIPTION:Measure\, then bootstrap: Measuring a swarm honestly\, then im
  elbart\, 2003)\nhttps://worrydream.com/refs/Engelbart_2003_-_Improving_Ou
  r_Ability_to_Improve.pdf\n“When you are operating at the C-level\, coll
  aboration can produce much larger returns than competition.”\n\nAlongsi
- de: Inventing New Nature (Rao\, 2026)\nhttps://protocolized.summerofproto
- cols.com/p/inventing-new-nature\n\nFeature: Thesis session: drafting the 
- AI-native\, post-platform organization\n\nJoin on the Protocol Institute 
- Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/pro
- tocolvision/syllabus/\nSessions are recorded.
+ de: Goodhart's Law and Why Measurement is Hard (David Manheim\, Ribbonfar
+ m\, 2016)\nhttps://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measur
+ ement-is-hard/\n\nFeature: Thesis session: drafting the AI-native\, post-
+ platform organization\n\nJoin on the Protocol Institute Discord: https://
+ discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sylla
+ bus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
