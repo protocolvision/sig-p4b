@@ -201,7 +201,7 @@ main h2 { margin-top: 2.6rem; }
 .rows .v p { margin: 0; }
 .rows .v p + p { margin-top: 0.35rem; }
 .rows .v .muted { font-size: 0.9rem; }
-.rows a.btn, .next a.btn { display: inline-block; text-decoration: none; color: #fff; }
+.rows a.btn, .next a.btn { display: inline-flex; text-decoration: none; color: #fff; }
 .next .row { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; margin-top: 0.7rem; }
 .steps { padding-left: 1.2rem; }
 .steps li { margin: 0.35rem 0; }
@@ -302,3 +302,4 @@ details.mv .schedule li:last-child { border-bottom: 0; }
 .card a.more { font: 500 0.85rem Outfit, system-ui, sans-serif; letter-spacing: 0; text-transform: none; }
 .card a.more::after { content: " ›"; }
 .register:focus, .register:focus-visible { outline: none; }
+.rows li.has-btn .k { padding-top: 0.95rem; }
