@@ -8,7 +8,7 @@ OUT=$(mktemp -d)
 rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'sources' --exclude 'src' ./ "$OUT/"
 # Bust the CDN/browser cache for the stylesheet on every deploy.
 V=$(date +%s)
-find "$OUT" -name '*.html' -exec sed -i '' "s|style.css\"|style.css?v=$V\"|" {} +
+find "$OUT" -name '*.html' -exec sed -i '' -e "s|style.css\"|style.css?v=$V\"|" -e "s|site.js\"|site.js?v=$V\"|" {} +
 if [[ -f $SLUG_FILE ]]; then
   "$PUBLISH" "$OUT" --slug "$(cat $SLUG_FILE)" --client claude-code
 else
