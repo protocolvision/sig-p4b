@@ -2,6 +2,17 @@
    Loaded with <script src="…/assets/site.js" data-root="…/" defer>. No dependencies. */
 (function () {
   var script = document.currentScript || document.querySelector('script[data-root]');
+  /* Deep links into a collapsed syllabus movement: open it, then scroll to the session. */
+  function revealHash() {
+    var id = decodeURIComponent((location.hash || '').slice(1));
+    var el = id && document.getElementById(id);
+    if (!el) return;
+    var d = el.closest && el.closest('details');
+    if (d && !d.open) { d.open = true; el.scrollIntoView({ block: 'start' }); }
+  }
+  revealHash();
+  window.addEventListener('hashchange', revealHash);
+
   var ROOT = (script && script.getAttribute('data-root')) || './';
   var SIGNUP = 'https://sig-p4b-signup.rafaeldf2.workers.dev/signup';
 
