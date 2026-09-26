@@ -63,7 +63,9 @@ home = [f'  <li><time datetime="{s["date"]}">{label(s["date"])}</time><span clas
         f'<a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">· {e(short_feature(s["feature"]))}</span></span></li>'
         for s in S]
 p = ROOT / "index.html"
-t = replace_between(p.read_text(), "schedule", '<ul class="schedule">\n' + "\n".join(home) + "\n</ul>")
+t = p.read_text()
+if "<!-- schedule:start -->" in t:  # homepage list was removed in v1; kept for older layouts
+    t = replace_between(t, "schedule", '<ul class="schedule">\n' + "\n".join(home) + "\n</ul>")
 slim = [{k: s[k] for k in ("date", "title", "url", "cite", "feature")} for s in S]
 t = re.sub(r'(<script id="sessions" type="application/json">).*?(</script>)',
            lambda m: m.group(1) + json.dumps(slim, ensure_ascii=False) + m.group(2), t, flags=re.S)
