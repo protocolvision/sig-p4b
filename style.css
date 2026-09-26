@@ -227,3 +227,78 @@ details.mv .schedule li:last-child { border-bottom: 0; }
   .people, .cards { grid-template-columns: 1fr; }
   .rows li, details.mv summary { grid-template-columns: 1fr; gap: 0.1rem; }
 }
+
+/* ---- HIG-style controls (overrides the earlier rules above) ----
+   Grouped, softly filled containers; sentence-case buttons with 44pt targets;
+   filled primary, tinted secondary; 8pt spacing rhythm. Cobalt is the tint. */
+:root {
+  --fill: #f5f5f7;          /* grouped background */
+  --fill-2: #ebebef;        /* pressed / field border */
+  --tint: #004fcc;
+  --tint-soft: rgba(0, 79, 204, 0.10);
+  --radius-card: 14px;
+  --radius-control: 10px;
+}
+
+/* Callout: next session */
+.next { background: var(--fill); border: 0; border-left: 0; border-radius: var(--radius-card); padding: 16px 20px 18px; margin: 24px 0 8px; }
+.next p { margin: 0; }
+.next p + p { margin-top: 4px; }
+.next .kind { display: block; margin: 0 0 6px; font: 600 0.74rem/1.2 Outfit, system-ui, sans-serif; letter-spacing: 0.02em; text-transform: none; color: var(--tint); }
+.next .when { display: block; font-size: 0.9rem; color: var(--muted); }
+.next .what { font-size: 1.08rem; line-height: 1.4; }
+.next .what a { font-weight: 600; text-decoration: none; }
+.next .what a:hover { text-decoration: underline; }
+.next .row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 16px; }
+.next .row .small { line-height: 1.4; }
+
+/* Buttons */
+.btn, a.btn, .register button[type=submit] {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 0 20px; border: 0; border-radius: var(--radius-control);
+  font: 500 0.95rem/1 Outfit, system-ui, sans-serif; letter-spacing: 0; text-transform: none;
+  color: #fff; background: var(--tint); text-decoration: none; cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+.btn:hover, a.btn:hover { background: #003fa3; color: #fff; }
+.btn:active, a.btn:active { transform: scale(0.98); }
+.btn:focus-visible, .btn-quiet:focus-visible { outline: 3px solid rgba(0, 79, 204, 0.35); outline-offset: 2px; }
+.btn:disabled { opacity: 0.5; transform: none; cursor: default; }
+.btn-quiet, a.btn-quiet {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 0 20px; border: 0; border-radius: var(--radius-control);
+  font: 500 0.95rem/1 Outfit, system-ui, sans-serif; letter-spacing: 0; text-transform: none;
+  color: var(--tint); background: var(--tint-soft); text-decoration: none; cursor: pointer;
+}
+.btn-quiet:hover { background: rgba(0, 79, 204, 0.16); }
+.btn-quiet:active { transform: scale(0.98); }
+
+/* Calendar row on Sessions: primary button, secondary line below */
+.rows .v a.btn { margin: 2px 0 0; }
+.rows .v a.btn + * , .rows .v p + p.small { margin-top: 8px; }
+
+/* Register sheet */
+.register { border: 0; border-radius: var(--radius-card); padding: 20px 24px 24px; box-shadow: 0 24px 60px rgba(20, 24, 40, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.04); }
+.register::backdrop { background: rgba(0, 0, 0, 0.28); backdrop-filter: blur(2px); }
+.register-head { align-items: center; margin-bottom: 4px; }
+.register h2 { font: 600 1.2rem/1.3 Lora, Georgia, serif; margin: 0; }
+.register .close { width: 30px; height: 30px; border-radius: 50%; background: var(--fill); color: var(--muted); font-size: 1.1rem; line-height: 30px; padding: 0; text-align: center; }
+.register .close:hover { background: var(--fill-2); }
+.register label { margin: 14px 0 6px; font: 500 0.82rem/1.2 Outfit, system-ui, sans-serif; letter-spacing: 0; text-transform: none; color: var(--fg); }
+.register .req { color: var(--muted); font-weight: 400; margin-left: 4px; }
+.register input { min-height: 44px; margin-top: 0; padding: 10px 12px; border: 1px solid transparent; border-radius: var(--radius-control); background: var(--fill); font-size: 1rem; }
+.register input:focus { outline: 0; border-color: var(--tint); background: #fff; box-shadow: 0 0 0 3px rgba(0, 79, 204, 0.18); }
+.register .pair { gap: 0 12px; }
+.register .form-status { margin: 12px 0 0; min-height: 1.2em; }
+.register-actions { display: flex; gap: 12px; margin-top: 8px; }
+.register-actions .btn, .register-actions .btn-quiet, .register-actions button[type=submit] { flex: 1; }
+@media (max-width: 600px) {
+  .register { border-radius: 16px 16px 0 0; padding: 12px 20px 28px; }
+  .register::before { content: ""; display: block; width: 36px; height: 5px; border-radius: 3px; background: var(--fill-2); margin: 0 auto 12px; }
+}
+
+/* Cards: same corner language, lighter edge */
+.card { border-color: var(--fill-2); border-radius: 12px; padding: 16px; gap: 6px; }
+.card a.more { font: 500 0.85rem Outfit, system-ui, sans-serif; letter-spacing: 0; text-transform: none; }
+.card a.more::after { content: " ›"; }
+.register:focus, .register:focus-visible { outline: none; }
