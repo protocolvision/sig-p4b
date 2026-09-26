@@ -21,7 +21,8 @@ observations/index.html  protocol watching (the reps): how to see a protocol, bi
 observations/            per observation: Bicorder JSON export + short .md note (copy TEMPLATE.md)
 case-studies/index.html  the heavy lifts: every participant carries one case; worked examples; milestones; template
 case-studies/<name>/     participant case studies (copy case-studies/TEMPLATE.md)
-simulation/index.html    Swarm Simulation — placeholder for a guardrails game (Kestrel Widget Works); linked from homepage + footer, not top menu
+play/index.html          Protocol Play (top menu): games and simulations; first entry is the Swarm Simulation placeholder (Kestrel Widget Works)
+simulation/index.html    redirect stub to play/
 sources/                 local reference copies (field guide, Reader EPUB) — gitignored, never deployed; link out instead
 assets/                  cube linework watermark + link-preview image (from PI brand kit art 6)
 style.css                the only stylesheet
