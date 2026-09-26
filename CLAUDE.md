@@ -7,5 +7,5 @@
 - After editing, run `./deploy.sh`, then commit and push.
 - Three tracks: readings (perspectives), observations (reps, ~100/yr), case studies (heavy lifts, one per participant). Keep all three pages in sync when changing dates or parts.
 - `deploy.sh` stamps `style.css?v=` on each deploy to bust the CDN cache.
-- Schedule changes: edit `tools/sessions.json`, run `python3 tools/build_calendar.py`, then keep the syllabus page, the homepage schedule list, and the observation prompts in sync.
+- Schedule changes: edit `tools/sessions.json`, run `python3 tools/build_schedule.py`, then keep the syllabus page, the homepage schedule list, and the observation prompts in sync.
 - Sessions are fixed at 15:30 UTC (Berlin local time moves with DST). Sessions are recorded; say so wherever meeting details appear.

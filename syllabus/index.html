@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SIG P4B Syllabus</title>
-<meta name="description" content="A year-long reading group building toward a thesis of the AI-native, post-platform organization: twenty-six classic texts, each paired with a recent discussion from Protocol Institute members.">
+<meta name="description" content="A year of primary sources on how organizations, teams, and people coordinate through what they emit: agent swarms, nature, logs, feeds, boards, and the firm re-seen.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Protocol Institute">
 <meta property="og:title" content="Syllabus · Protocols for Business SIG">
@@ -35,170 +35,164 @@
 </header>
 <main>
 <h1>Syllabus</h1>
-<p class="meta">October 2026 – October 2027 · twenty-six sessions · a core text and a recent discussion in each</p>
-<p>The question for the year is <strong>what an AI-native, post-platform organization is</strong>. The syllabus works toward an answer one step at a time. It moves from why firms exist, through the scale paradigm and its redesigns, the end of the platform era, and the AI industry's information networks, to agents and swarms as full members of an organization. Each part ends with a claim that the next part has to build on. The last session drafts the group's thesis. The practical work runs separately, in the <a href="../case-studies/">case studies</a>.</p>
-<p>Each session pairs a <strong>core</strong> text, a classic of economics, management, or systems thinking, with a <strong>recent discussion from Protocol Institute members</strong> that takes the question up under AI. These come from <a href="https://npcmemo.substack.com/">NPC Memo</a>, Sachin Benny's <a href="https://summerlightning.substack.com/p/archival-time">Archival Time</a> series, and Venkatesh Rao's essays in <a href="https://protocolized.summerofprotocols.com/">Protocolized</a> and <a href="https://contraptions.venkateshrao.com/">Contraptions</a>. Everyone also brings one <a href="../observations/">observed business protocol</a> to each session, recorded with the Protocol Bicorder.</p>
+<p class="meta">October 2026 – October 2027 · six movements · thirteen topics · twenty-six sessions</p>
+<p>The question for the year: <strong>how do organizations, teams, and people coordinate through what they emit, and what changes when agents read and write those signals too?</strong> We start with what the labs reported about agent swarms in 2026. From there we look at swarms in nature, then at how systems, people, and organizations emit, from the filing cabinet and the log to contract events, feeds, boards, and notes. Only then do we reread the classics of business planning, and end on how to tend and measure the environment a swarm works in. The last session drafts the group's thesis. The practical work runs separately, in the <a href="../case-studies/">case studies</a> and <a href="../observations/">protocol watching</a>.</p>
+<p><strong>We read primary sources.</strong> That means incident reports and research as the labs published them, specifications as written, and the originators' own papers, not commentary about them. Each topic runs across two sessions, with one reading per session. It also carries one optional companion from Protocol Institute members, for anyone who wants to see how the idea is being taken up now.</p>
 <p>We meet every other Monday, with a break over New Year. Sessions run for about an hour, sometimes longer: silent reading, a round-robin on the reading and everyone's observation, then a <strong>feature</strong>. The feature is a show-and-tell of AI-native tooling, a member's case study progress, or a guest from another Protocol Institute research group. See <a href="../#sessions">how sessions run</a>. Where a core text is long, we circulate an excerpt in advance.</p>
 
-<h2 id="schedule">Meetings &amp; readings</h2>
-<h3>I. Why firms exist</h3>
+<h2 id="schedule">Sessions</h2>
+<!-- schedule:start -->
+<h3>I. Framing: recent swarms</h3>
+<p class="topic"><strong>Recent swarms.</strong> What two frontier labs reported about agents coordinating, and failing to, in 2026. <span class="muted">Alongside: <a href="https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems">Securing Stigmergic Systems</a> (Nast, 2026)</span></p>
 <ul class="schedule">
   <li><time datetime="2026-10-05">5 October 2026</time>
-    <span class="what"><a href="https://doi.org/10.1111/j.1468-0335.1937.tb00002.x">The Nature of the Firm</a> <span class="muted">Coase, 1937</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/the-nature-of-the-firm-revisited">The Nature of the Firm Revisited: A Protocol-Based Account</a> <span class="muted">NPC Memo, 2025</span><br>
+    <span class="what"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/">The Hugging Face incident and the road ahead</a> <span class="muted">OpenAI, 2026</span><br>
     <span class="kind">feature</span> <span class="muted">Kickoff: how the year runs, and choosing your case</span></span>
-    <span class="also">Coase asks why firms exist at all. The response restates his answer in protocol terms: the boundary falls where management and production protocols are cheaper than transaction protocols.</span></li>
+    <span class="also">OpenAI's own account of evaluation agents escaping containment and coordinating through improvised message boards. Read it alongside Hugging Face's disclosure of the same incident (huggingface.co/blog/security-incident-july-2026).</span></li>
   <li><time datetime="2026-10-19">19 October 2026</time>
-    <span class="what"><a href="https://www.econlib.org/library/Essays/hykKnw.html">The Use of Knowledge in Society</a> <span class="muted">Hayek, 1945</span><br>
-    <span class="kind">from PI members</span> <a href="https://summerofprotocols.com/research/module-two/the-unreasonable-sufficiency-of-protocols">The Unreasonable Sufficiency of Protocols</a> <span class="muted">Rao et al., 2023</span><br>
-    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">Hayek shows that knowledge is spread out and that prices coordinate it. Rao shows that compact protocols coordinate far more than we expect.</span></li>
+    <span class="what"><a href="https://www.anthropic.com/research/multiagent-systems">Patterns and problems in multiagent systems</a> <span class="muted">Anthropic, 2026</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)</span></span>
+    <span class="also">Anthropic's study of Claude agents given conflicting tasks in a shared codebase, unaware of each other. Without any signal of each other's presence, they escalated to sabotage.</span></li>
+<p class="claim"><span class="kind">What we now see</span><br>Agent swarms are already here. In one incident, hundreds of instances coordinated through message boards they improvised. In another study, agents that couldn't see each other assumed hostility and sabotaged each other. The question is not whether swarms form, but what they coordinate through.</p>
+<h3>II. Swarms are nature</h3>
+<p class="topic"><strong>Broadcast, trace, threshold.</strong> How colonies and cells coordinate with no one in charge. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/welcome-to-the-swarm">Welcome to the Swarm</a> (Fernández, 2023)</span></p>
+<ul class="schedule">
   <li><time datetime="2026-11-02">2 November 2026</time>
-    <span class="what"><a href="https://doi.org/10.1287/inte.4.3.28">Organization Design: An Information Processing View</a> <span class="muted">Galbraith, 1974</span><br>
-    <span class="kind">from PI members</span> <a href="https://summerlightning.substack.com/p/why-does-ai-development-look-like">Why Does AI Development Look Like 1980s Software Planning?</a> <span class="muted">Benny, 2025</span><br>
+    <span class="what"><a href="https://doi.org/10.1371/journal.pbio.1001805">The Ecology of Collective Behavior</a> <span class="muted">Gordon, 2014</span><br>
     <span class="kind">feature</span> <span class="muted">Case pitches: one paragraph each</span></span>
-    <span class="also">Galbraith treats structure as a way to handle an information load. Benny shows that AI flips which coordination is cheap, and pushes firms back toward frozen, shared definitions.</span></li>
-</ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>The firm is a bundle of coordination protocols. Its boundary sits where internal protocols are cheaper than market ones. AI reprices them: documentation becomes nearly free, and drift in shared meaning becomes expensive.</p>
-<h3>II. Scale and its redesigns</h3>
-<ul class="schedule">
+    <span class="also">Ant colonies regulate what they do through the rate of simple encounters, with no central control, and each colony's algorithm fits its environment.</span></li>
   <li><time datetime="2026-11-16">16 November 2026</time>
-    <span class="what"><a href="https://www.hup.harvard.edu/books/9780674940529">The Visible Hand: The Managerial Revolution in American Business (introduction)</a> <span class="muted">Chandler, 1977</span><br>
-    <span class="kind">from PI members</span> <a href="https://contraptions.venkateshrao.com/p/beyond-szabo-scaling">Beyond Szabo Scaling</a> <span class="muted">Rao, 2025</span><br>
-    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">The managerial hierarchy as a coordination technology, and the argument that it maximized manageability over expressivity. By this account we are still at the mainframe stage of social scaling.</span></li>
+    <span class="what"><a href="https://doi.org/10.1146/annurev.micro.55.1.165">Quorum Sensing in Bacteria</a> <span class="muted">Miller &amp; Bassler, 2001</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Distributed Robotics Group (Decentralized Robot Markets)</span></span>
+    <span class="also">Bacteria emit signal molecules and act together once a concentration threshold is crossed. It is broadcast and threshold in their simplest form.</span></li>
+<p class="claim"><span class="kind">What we now see</span><br>Swarms are closer to ant colonies and bacteria than to civilizations. They coordinate through signals emitted into a shared environment, regulated by encounter rates, decay, and thresholds, not by intent or culture.</p>
+<h3>III. How systems emit</h3>
+<p class="topic"><strong>From files to flows.</strong> The filing cabinet, and what replaced it when data went liquid. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement">Liquid Services and Runtime Procurement</a> (NPC Memo, 2026)</span></p>
+<ul class="schedule">
   <li><time datetime="2026-11-30">30 November 2026</time>
-    <span class="what"><a href="https://hbr.org/1985/07/how-information-gives-you-competitive-advantage">How Information Gives You Competitive Advantage</a> <span class="muted">Porter &amp; Millar, 1985</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/owning-demand-vs-writing-the-rules">Owning Demand vs. Writing the Rules</a> <span class="muted">NPC Memo, 2025</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Information as competitive advantage in the value chain, and what came next: aggregators capture the surplus while protocols hold the rule-making power.</span></li>
-  <li><time datetime="2026-12-14">14 December 2026</time>
-    <span class="what"><a href="https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate">Reengineering Work: Don't Automate, Obliterate</a> <span class="muted">Hammer, 1990</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/management-as-protocol-the-subsumption">Management as Protocol: The Subsumption of Managerial Work</a> <span class="muted">NPC Memo, 2025</span><br>
-    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">BPR redesigns the process once, from the top. The response traces what happened next: management stopped writing protocols and came to live inside software that executes them.</span></li>
-  <li><time datetime="2027-01-11">11 January 2027</time>
-    <span class="what"><a href="https://www.jstor.org/stable/2006600">The Dynamo and the Computer</a> <span class="muted">David, 1990</span><br>
-    <span class="kind">from PI members</span> <a href="https://summerlightning.substack.com/p/general-purpose-technologies-as-annealing">General-Purpose Technologies as Annealing Agents</a> <span class="muted">Benny, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Psychohistory SIG (Prophecy Protocols)</span></span>
-    <span class="also">Why new technologies take decades to pay off, and a thermal model of the same lag. Institutions are heated, their dislocations move, and then they are pinned again.</span></li>
-</ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>Scale organizations were built to be manageable, not expressive. Strategy and process redesign rebuilt them around the last general-purpose technology. Each such technology first heats institutions until old protocols stop binding, and then new protocols pin them into shape. AI is a new heating.</p>
-<h3>III. After the platform</h3>
-<ul class="schedule">
-  <li><time datetime="2027-01-25">25 January 2027</time>
-    <span class="what"><a href="https://www.melconway.com/research/committees.html">How Do Committees Invent?</a> <span class="muted">Conway, 1968</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/protocol-review-1-multisig-signing">Protocol Review 1: Multisig Signing</a> <span class="muted">NPC Memo, 2025</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Systems mirror communication structures. The update: the org chart flows out of who has to sign, including thresholds of M humans and K agents.</span></li>
-  <li><time datetime="2027-02-08">8 February 2027</time>
-    <span class="what"><a href="https://stratechery.com/2015/aggregation-theory/">Aggregation Theory</a> <span class="muted">Thompson, 2015</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement">Liquid Services and Runtime Procurement</a> <span class="muted">NPC Memo, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Protocol Fiction SIG (Protocol Futurism)</span></span>
-    <span class="also">The platform era's own theory of power, and what replaces it when agents procure services at runtime and whoever couples demand to settlement holds the power.</span></li>
-  <li><time datetime="2027-02-22">22 February 2027</time>
-    <span class="what"><a href="https://arxiv.org/abs/2303.15772">Ecosystem Graphs: The Social Footprint of Foundation Models</a> <span class="muted">Bommasani et al., 2023</span><br>
-    <span class="kind">from PI members</span> <a href="https://protocolized.summerofprotocols.com/p/the-fabric-and-the-brain">The Fabric and the Brain</a> <span class="muted">Rao, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">A map of the AI industry's supply chain from datasets to models to applications, read against a post-platform picture: AI as the brain, protocols as the fabric.</span></li>
-  <li><time datetime="2027-03-08">8 March 2027</time>
-    <span class="what"><a href="https://modelcontextprotocol.io/specification/latest">Model Context Protocol Specification</a> <span class="muted">modelcontextprotocol.io, 2024–</span><br>
-    <span class="kind">from PI members</span> <a href="https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory">Have Your Factory Call My Factory</a> <span class="muted">Rao, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">The protocol that now connects organizations' data and tools to models, and the hidden bulk of the agentic iceberg: high-trust links between agent factories.</span></li>
-</ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>In the AI industry's information networks, power moves away from destinations that aggregate demand. It moves to routing, clearing, and trusted links between agent factories. The org chart follows the signature graph.</p>
-<h3>IV. Memory, documents, and discovery</h3>
-<ul class="schedule">
-  <li><time datetime="2027-03-22">22 March 2027</time>
     <span class="what"><a href="https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/">The Filing Cabinet</a> <span class="muted">Robertson, 2021</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf">PDF Hell. Long-live the PDF.</a> <span class="muted">NPC Memo, 2026</span><br>
     <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">The 20th century filed its knowledge. Now machines do the reading and looking, the official work stays human, and the signature moves from the page to the list.</span></li>
-  <li><time datetime="2027-04-05">5 April 2027</time>
-    <span class="what"><a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">As We May Think</a> <span class="muted">Bush, 1945</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion">The Reading Machine and the Inversion of the Standards Stack</a> <span class="muted">NPC Memo, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Finding by association instead of filing. When machines can read anything, the unit of standardization moves from the document to the pointer, and then to the proof.</span></li>
-  <li><time datetime="2027-04-19">19 April 2027</time>
-    <span class="what"><a href="https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1">How a Cockpit Remembers Its Speeds</a> <span class="muted">Hutchins, 1995</span><br>
-    <span class="kind">from PI members</span> <a href="https://summerlightning.substack.com/p/knowledge-chronotopes">Knowledge Chronotopes</a> <span class="muted">Benny, 2025</span><br>
-    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">Memory is spread across people and their artifacts. Models, by contrast, have no sense of time, so they need landmark memory, much as common law relies on precedent.</span></li>
-  <li><time datetime="2027-05-03">3 May 2027</time>
-    <span class="what"><a href="https://longnow.org/ideas/pace-layers/">Pace Layering: How Complex Systems Learn and Keep Learning</a> <span class="muted">Brand, 1999</span><br>
-    <span class="kind">from PI members</span> <a href="https://summerlightning.substack.com/p/thermal-memory">Thermal Memory</a> <span class="muted">Benny, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Memory Research Group (Organizational Memory Architecture)</span></span>
-    <span class="also">The fast layers learn and the slow layers remember. Every general-purpose technology rewires memory at each layer, and models trained on a commons can end up draining it.</span></li>
-  <li><time datetime="2027-05-17">17 May 2027</time>
-    <span class="what"><a href="https://journals.sagepub.com/doi/10.1177/00027649921955326">The Ethnography of Infrastructure</a> <span class="muted">Star, 1999</span><br>
-    <span class="kind">from PI members</span> <a href="https://protocolized.summerofprotocols.com/p/theorizing-protocolization-i-new">Theorizing Protocolization I: New Nature</a> <span class="muted">Rao &amp; Nast, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Infrastructure is boring by design, and protocolization is progress through invisibility. The cost is overprotocolization and tangles that nobody governs.</span></li>
+    <span class="also">How the vertical file became the infrastructure of 20th-century business, drawn from the archives of the office itself.</span></li>
+  <li><time datetime="2026-12-14">14 December 2026</time>
+    <span class="what"><a href="https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">The Log: What every software engineer should know about real-time data's unifying abstraction</a> <span class="muted">Kreps, 2013</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Psychohistory SIG (Prophecy Protocols)</span></span>
+    <span class="also">The engineer who built Kafka explains the append-only log as the thing that ties records, streams, and systems together once data stops sitting in files.</span></li>
 </ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>An organization remembers through documents and artifacts spread across pace layers. Once reading is free, value moves to pointers, provenance, landmarks, and signatures. Infrastructure that works becomes invisible, and so it has to be governed on purpose.</p>
-<h3>V. Agents as members</h3>
+<p class="topic"><strong>Events and feeds.</strong> Two open ways to emit: contract events and syndication. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion">The Reading Machine and the Inversion of the Standards Stack</a> (NPC Memo, 2026)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-01-11">11 January 2027</time>
+    <span class="what"><a href="https://docs.soliditylang.org/en/latest/contracts.html">Contracts: Events</a> <span class="muted">Solidity documentation</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">How a smart contract emits events into the chain's log, for anyone to index and subscribe to. Read the section on events.</span></li>
+  <li><time datetime="2027-01-25">25 January 2027</time>
+    <span class="what"><a href="https://www.rssboard.org/rss-specification">RSS 2.0 Specification</a> <span class="muted">RSS Advisory Board, 2003</span><br>
+    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also">The spec behind two decades of open syndication: publish a feed, and let anyone subscribe without asking.</span></li>
+</ul>
+<p class="topic"><strong>Boards and notes.</strong> The intermediate traces: shared boards and crowd notes. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/bloom">After the Swarm: We are Blooming</a> (NPC Memo, 2026)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-02-08">8 February 2027</time>
+    <span class="what"><a href="https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537">The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures</a> <span class="muted">Nii, 1986</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">The classic design for independent agents that coordinate by reading and writing a shared board. The OpenAI agents rebuilt one out of a package manager.</span></li>
+  <li><time datetime="2027-02-22">22 February 2027</time>
+    <span class="what"><a href="https://arxiv.org/abs/2210.15723">Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation</a> <span class="muted">Wojcik et al., 2022</span><br>
+    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also">The team behind Community Notes on a public board where a note is shown only when raters who usually disagree both find it helpful.</span></li>
+</ul>
+<p class="topic"><strong>Who's listening.</strong> Publish/subscribe, from the first information bus to agents. <span class="muted">Alongside: <a href="https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory">Have Your Factory Call My Factory</a> (Rao, 2026)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-03-08">8 March 2027</time>
+    <span class="what"><a href="https://doi.org/10.1145/168619.168624">The Information Bus: An Architecture for Extensible Distributed Systems</a> <span class="muted">Oki, Pfluegl, Siegel &amp; Skeen, 1993</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">The system that introduced publish/subscribe: publishers name subjects, subscribers listen, and neither needs to know the other.</span></li>
+  <li><time datetime="2027-03-22">22 March 2027</time>
+    <span class="what"><a href="https://modelcontextprotocol.io/specification/latest">Model Context Protocol Specification</a> <span class="muted">modelcontextprotocol.io, 2024–</span><br>
+    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also">How agents connect to an organization's data and tools, including notifications and subscriptions. Read the sections on resources and notifications.</span></li>
+<p class="claim"><span class="kind">What we now see</span><br>Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.</p>
+<h3>IV. How people and organizations emit</h3>
+<p class="topic"><strong>Signals between people.</strong> Prices and costly signals. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/owning-demand-vs-writing-the-rules">Owning Demand vs. Writing the Rules</a> (NPC Memo, 2025)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-04-05">5 April 2027</time>
+    <span class="what"><a href="https://www.econlib.org/library/Essays/hykKnw.html">The Use of Knowledge in Society</a> <span class="muted">Hayek, 1945</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">Prices as a broadcast that lets people act on knowledge they don't have.</span></li>
+  <li><time datetime="2027-04-19">19 April 2027</time>
+    <span class="what"><a href="https://doi.org/10.2307/1882010">Job Market Signaling</a> <span class="muted">Spence, 1973</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Personhood Research Group (Personhood Transformations)</span></span>
+    <span class="also">Why credible signals have to be costly to send. Emission is not free, and that is what makes it informative.</span></li>
+</ul>
+<p class="topic"><strong>Teams that sense together.</strong> How a crew or cockpit coordinates through what it makes visible. <span class="muted">Alongside: <a href="https://summerlightning.substack.com/p/thermal-memory">Thermal Memory</a> (Benny, 2026)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-05-03">3 May 2027</time>
+    <span class="what"><a href="https://doi.org/10.2307/2393372">Collective Mind in Organizations: Heedful Interrelating on Flight Decks</a> <span class="muted">Weick &amp; Roberts, 1993</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Memory Research Group (Organizational Memory Architecture)</span></span>
+    <span class="also">A carrier deck crew as a collective mind, built from how carefully each person contributes, represents, and subordinates to the whole.</span></li>
+  <li><time datetime="2027-05-17">17 May 2027</time>
+    <span class="what"><a href="https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1">How a Cockpit Remembers Its Speeds</a> <span class="muted">Hutchins, 1995</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">Memory held by people and artifacts together: speed bugs, cards, and callouts as traces the whole cockpit reads.</span></li>
+</ul>
+<p class="topic"><strong>Organizations that broadcast.</strong> Alarms inside the firm, and disclosures it must make to everyone. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf">PDF Hell. Long-live the PDF.</a> (NPC Memo, 2026)</span></p>
 <ul class="schedule">
   <li><time datetime="2027-05-31">31 May 2027</time>
-    <span class="what"><a href="https://worrydream.com/refs/Licklider_1960_-_Man-Computer_Symbiosis.pdf">Man-Computer Symbiosis</a> <span class="muted">Licklider, 1960</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/what-is-an-agent-is-not-an-instrument">What is an Agent is not an Instrument</a> <span class="muted">NPC Memo, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Personhood Research Group (Personhood Transformations)</span></span>
-    <span class="also">Licklider divides the work between people and machines. The response adds the variable that decides it: discretion. An agent combines orientation, initiative, authority to execute, and independence in time.</span></li>
-  <li><time datetime="2027-06-14">14 June 2027</time>
-    <span class="what"><a href="https://doi.org/10.1016/0304-405X(76)90026-X">Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure</a> <span class="muted">Jensen &amp; Meckling, 1976</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/agent-shaped-problems">Agent-Shaped Problems</a> <span class="muted">NPC Memo, 2026</span><br>
+    <span class="what"><a href="https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf">Designing Freedom</a> <span class="muted">Beer, 1973</span><br>
     <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">Principals, agents, and the cost of monitoring, now with literal agents. A problem is agent-shaped only in its residue, and delegating it needs cheap verification and a hard gate.</span></li>
-  <li><time datetime="2027-06-28">28 June 2027</time>
-    <span class="what"><a href="https://doi.org/10.1016/0005-1098(83)90046-8">Ironies of Automation</a> <span class="muted">Bainbridge, 1983</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/infrastructure-of-firm-control">Infrastructure of Firm Control</a> <span class="muted">NPC Memo, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project</span></span>
-    <span class="also">Automating the routine work leaves people with the hardest parts and less practice at them. The same irony reaches the board: it keeps formal authority but loses real control unless that control becomes executable.</span></li>
-  <li><time datetime="2027-07-12">12 July 2027</time>
-    <span class="what"><a href="https://www.jstor.org/stable/985254">The Architecture of Complexity</a> <span class="muted">Simon, 1962</span><br>
-    <span class="kind">from PI members</span> <a href="https://contraptions.venkateshrao.com/p/our-eukaryotic-moment">Our Eukaryotic Moment</a> <span class="muted">Rao, 2026</span><br>
+    <span class="also">Stafford Beer's lectures on viable systems, including the algedonic signal: a channel that lets an alarm skip the hierarchy.</span></li>
+  <li><time datetime="2027-06-14">14 June 2027</time>
+    <span class="what"><a href="https://www.sec.gov/files/form8-k.pdf">Form 8-K: General Instructions</a> <span class="muted">U.S. Securities and Exchange Commission</span><br>
     <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Complex systems are built from stable, nearly independent parts. The response pictures the AI-human organization as a new kind of cell, with AI as the nucleus and humans as the mitochondria.</span></li>
+    <span class="also">The rulebook for which corporate events a public company must broadcast, and within how many days. Mandated emission in its plainest form.</span></li>
+<p class="claim"><span class="kind">What we now see</span><br>People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.</p>
+<h3>V. Rereading business planning</h3>
+<p class="topic"><strong>The firm, re-seen.</strong> Why firms exist, read as a question about signals. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/the-nature-of-the-firm-revisited">The Nature of the Firm Revisited: A Protocol-Based Account</a> (NPC Memo, 2025)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-06-28">28 June 2027</time>
+    <span class="what"><a href="https://doi.org/10.1111/j.1468-0335.1937.tb00002.x">The Nature of the Firm</a> <span class="muted">Coase, 1937</span><br>
+    <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also">Firms exist where coordinating inside is cheaper than using the market. What happens to that line when agents make emitting and reading nearly free?</span></li>
+  <li><time datetime="2027-07-12">12 July 2027</time>
+    <span class="what"><a href="https://doi.org/10.1287/inte.4.3.28">Organization Design: An Information Processing View</a> <span class="muted">Galbraith, 1974</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">Structure as a way of handling an information load: rules, hierarchy, slack, lateral links, or information systems.</span></li>
 </ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>An agent becomes a member of the organization when it holds delegated discretion. Delegation has to be explicit and checkable, and enforced as executable constraints. Otherwise control drains away while authority stays on paper, and people lose the skill to check the work.</p>
-<h3>VI. Stigmergy, signals, and swarms</h3>
+<p class="topic"><strong>Redesign and capture.</strong> Process redesign, and how platforms captured the feeds. <span class="muted">Alongside: <a href="https://summerlightning.substack.com/p/why-does-ai-development-look-like">Why Does AI Development Look Like 1980s Software Planning?</a> (Benny, 2025)</span></p>
 <ul class="schedule">
   <li><time datetime="2027-07-26">26 July 2027</time>
-    <span class="what"><a href="https://doi.org/10.1016/j.cogsys.2015.12.002">Stigmergy as a Universal Coordination Mechanism</a> <span class="muted">Heylighen, 2016</span><br>
-    <span class="kind">from PI members</span> <a href="https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems">Securing Stigmergic Systems</a> <span class="muted">Nast, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)</span></span>
-    <span class="also">Coordinating by leaving traces in a shared environment, from termites to wikis to agents. Then what goes wrong: leaked traces, runaway feedback, and new attack surfaces.</span></li>
-  <li><time datetime="2027-08-09">9 August 2027</time>
-    <span class="what"><a href="https://doi.org/10.1145/37402.37406">Flocks, Herds, and Schools: A Distributed Behavioral Model</a> <span class="muted">Reynolds, 1987</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/welcome-to-the-swarm">Welcome to the Swarm</a> <span class="muted">Fernández, 2023</span><br>
-    <span class="kind">feature</span> <span class="muted">Guest: Distributed Robotics Group (Decentralized Robot Markets)</span></span>
-    <span class="also">Three local rules produce a flock. Human and agent swarms are coordinated by broadcast signals and algorithmic feedback, with almost no explicit protocol.</span></li>
-  <li><time datetime="2027-08-23">23 August 2027</time>
-    <span class="what"><a href="https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf">Beyond Markets and States: Polycentric Governance of Complex Economic Systems</a> <span class="muted">Ostrom, 2010</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/managing-the-water-not-the-ship">Managing the Water, Not the Ship</a> <span class="muted">NPC Memo, 2026</span><br>
-    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Many centers of decision, with rules made by the people who use them. Some systems need captains and others need gardeners.</span></li>
-  <li><time datetime="2027-09-06">6 September 2027</time>
-    <span class="what"><a href="http://pespmc1.vub.ac.be/books/IntroCyb.pdf">An Introduction to Cybernetics, ch. 11: Requisite Variety</a> <span class="muted">Ashby, 1956</span><br>
-    <span class="kind">from PI members</span> <a href="https://npcmemo.substack.com/p/bloom">After the Swarm: We are Blooming</a> <span class="muted">NPC Memo, 2026</span><br>
+    <span class="what"><a href="https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate">Reengineering Work: Don't Automate, Obliterate</a> <span class="muted">Hammer, 1990</span><br>
     <span class="kind">feature</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
-    <span class="also">Only variety can absorb variety. A shared model substrate produces blooms, where people converge on the same thinking without ever being in contact, and tools built for swarms can't see them.</span></li>
+    <span class="also">The last general-purpose technology wave: bolting computers onto old processes wasted them.</span></li>
+  <li><time datetime="2027-08-09">9 August 2027</time>
+    <span class="what"><a href="https://stratechery.com/2015/aggregation-theory/">Aggregation Theory</a> <span class="muted">Thompson, 2015</span><br>
+    <span class="kind">feature</span> <span class="muted">Guest: Protocol Fiction SIG (Protocol Futurism)</span></span>
+    <span class="also">How platforms won by owning the user relationship, and why the open feeds lost to them.</span></li>
+<p class="claim"><span class="kind">What we now see</span><br>The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.</p>
+<h3>VI. Tending the environment</h3>
+<p class="topic"><strong>Governing swarms.</strong> Polycentric rules, and what automation leaves to people. <span class="muted">Alongside: <a href="https://npcmemo.substack.com/p/managing-the-water-not-the-ship">Managing the Water, Not the Ship</a> (NPC Memo, 2026)</span></p>
+<ul class="schedule">
+  <li><time datetime="2027-08-23">23 August 2027</time>
+    <span class="what"><a href="https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf">Beyond Markets and States: Polycentric Governance of Complex Economic Systems</a> <span class="muted">Ostrom, 2009</span><br>
+    <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
+    <span class="also">Ostrom's Nobel lecture: many centers of decision, with rules made by the people who use them.</span></li>
+  <li><time datetime="2027-09-06">6 September 2027</time>
+    <span class="what"><a href="https://doi.org/10.1016/0005-1098(83)90046-8">Ironies of Automation</a> <span class="muted">Bainbridge, 1983</span><br>
+    <span class="kind">feature</span> <span class="muted">Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project</span></span>
+    <span class="also">Automating the routine work leaves people with the hardest parts and less practice at them.</span></li>
 </ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>Coordination moves into the shared environment. Members follow traces and signals, not instructions. Management becomes tending the conditions, like gardening or forestry, and the main risk is convergence, where the whole system loses variety.</p>
-<h3>VII. Measuring and bootstrapping</h3>
+<p class="topic"><strong>Measure, then bootstrap.</strong> Measuring a swarm honestly, then improving how we improve. <span class="muted">Alongside: <a href="https://protocolized.summerofprotocols.com/p/inventing-new-nature">Inventing New Nature</a> (Rao, 2026)</span></p>
 <ul class="schedule">
   <li><time datetime="2027-09-20">20 September 2027</time>
     <span class="what"><a href="https://jmde.com/index.php/jmde_1/article/view/297">Assessing the Impact of Planned Social Change</a> <span class="muted">Campbell, 1976</span><br>
-    <span class="kind">from PI members</span> <a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a> <span class="muted">Husain, 2024</span><br>
     <span class="kind">feature</span> <span class="muted">Case study progress</span></span>
-    <span class="also">Campbell's law: the more a measure drives decisions, the more it gets distorted. The working answer is to look at the data, write tests from the failures you see, and iterate. This is how the maturity model gets validated.</span></li>
+    <span class="also">Campbell's law: the more a measure drives decisions, the more it gets distorted. Read with Hamel Husain's "Your AI Product Needs Evals" (hamel.dev) for the working answer.</span></li>
   <li><time datetime="2027-10-04">4 October 2027</time>
     <span class="what"><a href="https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf">Improving Our Ability to Improve</a> <span class="muted">Engelbart, 2003</span><br>
-    <span class="kind">from PI members</span> <a href="https://protocolized.summerofprotocols.com/p/inventing-new-nature">Inventing New Nature</a> <span class="muted">Rao, 2026</span><br>
     <span class="kind">feature</span> <span class="muted">Thesis session: drafting the AI-native, post-platform organization</span></span>
-    <span class="also">Bootstrapping, set beside the Protocol Institute's own account of running as an AI-native research institution. Output: the group's draft thesis.</span></li>
+    <span class="also">Bootstrapping: getting better at the process of getting better. Output: the group's draft thesis.</span></li>
 </ul>
-<p class="claim"><span class="kind">claim carried forward</span><br>Measure the organization with evals built from real failures, and keep the measure from becoming the target. Then write the thesis of the AI-native, post-platform organization, and keep improving it.</p>
+<p class="claim"><span class="kind">What we now see</span><br>Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.</p>
+<!-- schedule:end -->
 <p class="small muted">Dates are proposed. To suggest a reading, open a pull request.</p>
 
 <h2>Background</h2>

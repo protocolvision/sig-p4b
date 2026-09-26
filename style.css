@@ -67,7 +67,7 @@ p, li { text-wrap: pretty; }
   font-variant-numeric: tabular-nums;
 }
 .schedule .what { flex: 1 1 16rem; }
-.schedule .also { flex: 1 0 100%; padding-left: 11.5rem; font-size: 0.9rem; color: var(--muted); }
+.schedule .also { flex: 1 0 100%; box-sizing: border-box; padding-left: 11.5rem; font-size: 0.9rem; color: var(--muted); }
 .kind {
   font-family: Outfit, system-ui, sans-serif;
   font-size: 0.68rem;
@@ -155,3 +155,5 @@ header .logo { width: 22px; height: 22px; border-radius: 3px; display: block; }
 .next-what .muted { font-size: 0.9rem; }
 .next-note { font-size: 0.85rem; color: var(--muted); }
 .empty { color: var(--muted); }
+.topic { margin: 1.6rem 0 0.4rem; }
+.topic .muted { display: block; font-size: 0.88rem; margin-top: 0.15rem; }

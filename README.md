@@ -52,7 +52,7 @@ The homepage form posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-
 
 `tools/sessions.json` is the source of truth for the 26 sessions: date, reading, companion piece, and feature. After editing it, run:
 
-    python3 tools/build_calendar.py
+    python3 tools/build_schedule.py
 
 The script rebuilds `sig-p4b.ics`, the subscribable calendar with times in UTC (15:30–16:30), and refreshes the homepage's "Next session" box, which picks the next upcoming session in the reader's browser. Run `./deploy.sh` afterwards.
 
