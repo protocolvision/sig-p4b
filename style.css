@@ -303,3 +303,27 @@ details.mv .schedule li:last-child { border-bottom: 0; }
 .card a.more::after { content: " ›"; }
 .register:focus, .register:focus-visible { outline: none; }
 .rows li.has-btn .k { padding-top: 0.95rem; }
+
+/* ---- Touch targets (HIG: 44pt) ---- */
+/* Desktop: grow hit areas without moving anything. */
+header nav a, footer nav a { padding: 12px 0; margin: -12px 0; }
+header .home { padding: 11px 0; margin: -11px 0; }
+
+@media (max-width: 600px) {
+  /* Header: brand, then the four sections as an equal-width row, like a tab bar. */
+  header { gap: 4px; margin-bottom: 1.5rem; }
+  header nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; width: 100%; border-bottom: 1px solid var(--rule); }
+  header nav a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0; margin: 0;
+                 font-size: 0.74rem; letter-spacing: 0.06em; border-bottom: 2px solid transparent; }
+  header nav a[aria-current] { color: var(--tint); border-bottom-color: var(--tint); }
+  header .home { min-height: 44px; padding: 0; margin: 0; }
+
+  /* Footer: credit line, then a two-column list of 44pt rows. */
+  footer { margin-top: 3rem; }
+  footer nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  footer nav a { display: flex; align-items: center; min-height: 44px; padding: 0; margin: 0; border-bottom: 1px solid var(--rule); font-size: 0.74rem; }
+  footer p { line-height: 1.5; }
+
+  /* Bottom sheet clears the home indicator. */
+  .register { padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
+}
