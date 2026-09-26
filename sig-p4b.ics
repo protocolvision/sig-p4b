@@ -6,10 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Protocols for Business SIG
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG
 BEGIN:VEVENT
-UID:sig-p4b-20261005@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261005T153000Z
-DTEND:20261005T163000Z
+UID:sig-p4b-20261102@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20261102T153000Z
+DTEND:20261102T163000Z
 SUMMARY:SIG P4B · The Hugging Face incident and the road ahead
 DESCRIPTION:Recent swarms: What two frontier labs reported about agents co
  ordinating\, and failing to\, in 2026.\n\nReading: The Hugging Face incid
@@ -24,10 +24,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20261019@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261019T153000Z
-DTEND:20261019T163000Z
+UID:sig-p4b-20261116@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20261116T153000Z
+DTEND:20261116T163000Z
 SUMMARY:SIG P4B · Patterns and problems in multiagent systems
 DESCRIPTION:Recent swarms: What two frontier labs reported about agents co
  ordinating\, and failing to\, in 2026.\n\nReading: Patterns and problems 
@@ -42,10 +42,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261102T153000Z
-DTEND:20261102T163000Z
+UID:sig-p4b-20261130@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20261130T153000Z
+DTEND:20261130T163000Z
 SUMMARY:SIG P4B · The Ecology of Collective Behavior
 DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
  te with no one in charge.\n\nReading: The Ecology of Collective Behavior 
@@ -59,10 +59,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261116T153000Z
-DTEND:20261116T163000Z
+UID:sig-p4b-20261214@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20261214T153000Z
+DTEND:20261214T163000Z
 SUMMARY:SIG P4B · Quorum Sensing in Bacteria
 DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
  te with no one in charge.\n\nReading: Quorum Sensing in Bacteria (Miller 
@@ -76,10 +76,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261130T153000Z
-DTEND:20261130T163000Z
+UID:sig-p4b-20270111@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270111T153000Z
+DTEND:20270111T163000Z
 SUMMARY:SIG P4B · The Filing Cabinet
 DESCRIPTION:From files to flows: The filing cabinet\, and what replaced it
   when data went liquid.\n\nReading: The Filing Cabinet (Robertson\, 2021)
@@ -94,10 +94,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20261214T153000Z
-DTEND:20261214T163000Z
+UID:sig-p4b-20270125@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270125T153000Z
+DTEND:20270125T163000Z
 SUMMARY:SIG P4B · The Log: What every software engineer should know about
   real-time data's unifying abstraction
 DESCRIPTION:From files to flows: The filing cabinet\, and what replaced it
@@ -115,10 +115,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270111T153000Z
-DTEND:20270111T163000Z
+UID:sig-p4b-20270208@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270208T153000Z
+DTEND:20270208T163000Z
 SUMMARY:SIG P4B · Contracts: Events
 DESCRIPTION:Events and feeds: Two open ways to emit: contract events and s
  yndication.\n\nReading: Contracts: Events (Solidity documentation)\nhttps
@@ -132,10 +132,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270125T153000Z
-DTEND:20270125T163000Z
+UID:sig-p4b-20270222@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270222T153000Z
+DTEND:20270222T163000Z
 SUMMARY:SIG P4B · RSS 2.0 Specification
 DESCRIPTION:Events and feeds: Two open ways to emit: contract events and s
  yndication.\n\nReading: RSS 2.0 Specification (RSS Advisory Board\, 2003)
@@ -149,10 +149,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270208T153000Z
-DTEND:20270208T163000Z
+UID:sig-p4b-20270308@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270308T153000Z
+DTEND:20270308T163000Z
 SUMMARY:SIG P4B · The Blackboard Model of Problem Solving and the Evoluti
  on of Blackboard Architectures
 DESCRIPTION:Boards and notes: The intermediate traces: shared boards and c
@@ -167,10 +167,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270222T153000Z
-DTEND:20270222T163000Z
+UID:sig-p4b-20270322@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270322T153000Z
+DTEND:20270322T163000Z
 SUMMARY:SIG P4B · Birdwatch: Crowd Wisdom and Bridging Algorithms can Inf
  orm Understanding and Reduce the Spread of Misinformation
 DESCRIPTION:Boards and notes: The intermediate traces: shared boards and c
@@ -185,10 +185,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270308T153000Z
-DTEND:20270308T163000Z
+UID:sig-p4b-20270405@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270405T153000Z
+DTEND:20270405T163000Z
 SUMMARY:SIG P4B · The Information Bus: An Architecture for Extensible Dis
  tributed Systems
 DESCRIPTION:Who's listening: Publish/subscribe\, from the first informatio
@@ -203,10 +203,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270322T153000Z
-DTEND:20270322T163000Z
+UID:sig-p4b-20270419@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270419T153000Z
+DTEND:20270419T163000Z
 SUMMARY:SIG P4B · Model Context Protocol Specification
 DESCRIPTION:Who's listening: Publish/subscribe\, from the first informatio
  n bus to agents.\n\nReading: Model Context Protocol Specification (modelc
@@ -220,10 +220,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270405T153000Z
-DTEND:20270405T163000Z
+UID:sig-p4b-20270503@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270503T153000Z
+DTEND:20270503T163000Z
 SUMMARY:SIG P4B · The Use of Knowledge in Society
 DESCRIPTION:Signals between people: Prices and costly signals.\n\nReading:
   The Use of Knowledge in Society (Hayek\, 1945)\nhttps://www.econlib.org/
@@ -236,10 +236,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270419T153000Z
-DTEND:20270419T163000Z
+UID:sig-p4b-20270517@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270517T153000Z
+DTEND:20270517T163000Z
 SUMMARY:SIG P4B · Job Market Signaling
 DESCRIPTION:Signals between people: Prices and costly signals.\n\nReading:
   Job Market Signaling (Spence\, 1973)\nhttps://doi.org/10.2307/1882010\n\
@@ -252,10 +252,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270503T153000Z
-DTEND:20270503T163000Z
+UID:sig-p4b-20270531@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270531T153000Z
+DTEND:20270531T163000Z
 SUMMARY:SIG P4B · Collective Mind in Organizations: Heedful Interrelating
   on Flight Decks
 DESCRIPTION:Teams that sense together: How a crew or cockpit coordinates t
@@ -270,10 +270,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270517T153000Z
-DTEND:20270517T163000Z
+UID:sig-p4b-20270614@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270614T153000Z
+DTEND:20270614T163000Z
 SUMMARY:SIG P4B · How a Cockpit Remembers Its Speeds
 DESCRIPTION:Teams that sense together: How a crew or cockpit coordinates t
  hrough what it makes visible.\n\nReading: How a Cockpit Remembers Its Spe
@@ -287,10 +287,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270531T153000Z
-DTEND:20270531T163000Z
+UID:sig-p4b-20270628@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270628T153000Z
+DTEND:20270628T163000Z
 SUMMARY:SIG P4B · Designing Freedom
 DESCRIPTION:Organizations that broadcast: Alarms inside the firm\, and dis
  closures it must make to everyone.\n\nReading: Designing Freedom (Beer\, 
@@ -304,10 +304,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270614T153000Z
-DTEND:20270614T163000Z
+UID:sig-p4b-20270712@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270712T153000Z
+DTEND:20270712T163000Z
 SUMMARY:SIG P4B · Form 8-K: General Instructions
 DESCRIPTION:Organizations that broadcast: Alarms inside the firm\, and dis
  closures it must make to everyone.\n\nReading: Form 8-K: General Instruct
@@ -321,10 +321,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270628T153000Z
-DTEND:20270628T163000Z
+UID:sig-p4b-20270726@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270726T153000Z
+DTEND:20270726T163000Z
 SUMMARY:SIG P4B · The Nature of the Firm
 DESCRIPTION:The firm\, re-seen: Why firms exist\, read as a question about
   signals.\n\nReading: The Nature of the Firm (Coase\, 1937)\nhttps://doi.
@@ -338,10 +338,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270712T153000Z
-DTEND:20270712T163000Z
+UID:sig-p4b-20270809@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270809T153000Z
+DTEND:20270809T163000Z
 SUMMARY:SIG P4B · Organization Design: An Information Processing View
 DESCRIPTION:The firm\, re-seen: Why firms exist\, read as a question about
   signals.\n\nReading: Organization Design: An Information Processing View
@@ -355,10 +355,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270726T153000Z
-DTEND:20270726T163000Z
+UID:sig-p4b-20270823@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270823T153000Z
+DTEND:20270823T163000Z
 SUMMARY:SIG P4B · Reengineering Work: Don't Automate\, Obliterate
 DESCRIPTION:Redesign and capture: Process redesign\, and how platforms cap
  tured the feeds.\n\nReading: Reengineering Work: Don't Automate\, Obliter
@@ -373,10 +373,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270809T153000Z
-DTEND:20270809T163000Z
+UID:sig-p4b-20270906@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270906T153000Z
+DTEND:20270906T163000Z
 SUMMARY:SIG P4B · Aggregation Theory
 DESCRIPTION:Redesign and capture: Process redesign\, and how platforms cap
  tured the feeds.\n\nReading: Aggregation Theory (Thompson\, 2015)\nhttps:
@@ -390,10 +390,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270823T153000Z
-DTEND:20270823T163000Z
+UID:sig-p4b-20270920@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20270920T153000Z
+DTEND:20270920T163000Z
 SUMMARY:SIG P4B · Beyond Markets and States: Polycentric Governance of Co
  mplex Economic Systems
 DESCRIPTION:Governing swarms: Polycentric rules\, and what automation leav
@@ -408,10 +408,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270906T153000Z
-DTEND:20270906T163000Z
+UID:sig-p4b-20271004@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20271004T153000Z
+DTEND:20271004T163000Z
 SUMMARY:SIG P4B · Ironies of Automation
 DESCRIPTION:Governing swarms: Polycentric rules\, and what automation leav
  es to people.\n\nReading: Ironies of Automation (Bainbridge\, 1983)\nhttp
@@ -425,10 +425,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20270920T153000Z
-DTEND:20270920T163000Z
+UID:sig-p4b-20271018@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20271018T153000Z
+DTEND:20271018T163000Z
 SUMMARY:SIG P4B · Assessing the Impact of Planned Social Change
 DESCRIPTION:Measure\, then bootstrap: Measuring a swarm honestly\, then im
  proving how we improve.\n\nReading: Assessing the Impact of Planned Socia
@@ -442,10 +442,10 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20260926T142241Z
-DTSTART:20271004T153000Z
-DTEND:20271004T163000Z
+UID:sig-p4b-20271101@protocol-institute
+DTSTAMP:20260926T153938Z
+DTSTART:20271101T153000Z
+DTEND:20271101T163000Z
 SUMMARY:SIG P4B · Improving Our Ability to Improve
 DESCRIPTION:Measure\, then bootstrap: Measuring a swarm honestly\, then im
  proving how we improve.\n\nReading: Improving Our Ability to Improve (Eng

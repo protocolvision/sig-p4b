@@ -1,6 +1,6 @@
 [
  {
-  "date": "2026-10-05",
+  "date": "2026-11-02",
   "movement": "I. Framing: recent swarms",
   "movement_claim": "Agent swarms are already here. In one incident, hundreds of instances coordinated through message boards they improvised. In another study, agents that couldn't see each other assumed hostility and sabotaged each other. The question is not whether swarms form, but what they coordinate through.",
   "topic": "Recent swarms",
@@ -16,7 +16,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2026-10-19",
+  "date": "2026-11-16",
   "movement": "I. Framing: recent swarms",
   "movement_claim": "Agent swarms are already here. In one incident, hundreds of instances coordinated through message boards they improvised. In another study, agents that couldn't see each other assumed hostility and sabotaged each other. The question is not whether swarms form, but what they coordinate through.",
   "topic": "Recent swarms",
@@ -32,7 +32,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2026-11-02",
+  "date": "2026-11-30",
   "movement": "II. Swarms are nature",
   "movement_claim": "Swarms are closer to ant colonies and bacteria than to civilizations. They coordinate through signals emitted into a shared environment, regulated by encounter rates, decay, and thresholds, not by intent or culture.",
   "topic": "Broadcast, trace, threshold",
@@ -48,7 +48,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2026-11-16",
+  "date": "2026-12-14",
   "movement": "II. Swarms are nature",
   "movement_claim": "Swarms are closer to ant colonies and bacteria than to civilizations. They coordinate through signals emitted into a shared environment, regulated by encounter rates, decay, and thresholds, not by intent or culture.",
   "topic": "Broadcast, trace, threshold",
@@ -64,7 +64,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2026-11-30",
+  "date": "2027-01-11",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "From files to flows",
@@ -80,7 +80,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2026-12-14",
+  "date": "2027-01-25",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "From files to flows",
@@ -96,7 +96,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-01-11",
+  "date": "2027-02-08",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Events and feeds",
@@ -112,7 +112,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-01-25",
+  "date": "2027-02-22",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Events and feeds",
@@ -128,7 +128,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-02-08",
+  "date": "2027-03-08",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Boards and notes",
@@ -144,7 +144,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-02-22",
+  "date": "2027-03-22",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Boards and notes",
@@ -160,7 +160,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-03-08",
+  "date": "2027-04-05",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Who's listening",
@@ -176,7 +176,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-03-22",
+  "date": "2027-04-19",
   "movement": "III. How systems emit",
   "movement_claim": "Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.",
   "topic": "Who's listening",
@@ -192,7 +192,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-04-05",
+  "date": "2027-05-03",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Signals between people",
@@ -208,7 +208,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-04-19",
+  "date": "2027-05-17",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Signals between people",
@@ -224,7 +224,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-05-03",
+  "date": "2027-05-31",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Teams that sense together",
@@ -240,7 +240,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-05-17",
+  "date": "2027-06-14",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Teams that sense together",
@@ -256,7 +256,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-05-31",
+  "date": "2027-06-28",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Organizations that broadcast",
@@ -272,7 +272,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-06-14",
+  "date": "2027-07-12",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Organizations that broadcast",
@@ -288,7 +288,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-06-28",
+  "date": "2027-07-26",
   "movement": "V. Rereading business planning",
   "movement_claim": "The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.",
   "topic": "The firm, re-seen",
@@ -304,7 +304,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-07-12",
+  "date": "2027-08-09",
   "movement": "V. Rereading business planning",
   "movement_claim": "The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.",
   "topic": "The firm, re-seen",
@@ -320,7 +320,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-07-26",
+  "date": "2027-08-23",
   "movement": "V. Rereading business planning",
   "movement_claim": "The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.",
   "topic": "Redesign and capture",
@@ -336,7 +336,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-08-09",
+  "date": "2027-09-06",
   "movement": "V. Rereading business planning",
   "movement_claim": "The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.",
   "topic": "Redesign and capture",
@@ -352,7 +352,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-08-23",
+  "date": "2027-09-20",
   "movement": "VI. Tending the environment",
   "movement_claim": "Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.",
   "topic": "Governing swarms",
@@ -368,7 +368,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-09-06",
+  "date": "2027-10-04",
   "movement": "VI. Tending the environment",
   "movement_claim": "Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.",
   "topic": "Governing swarms",
@@ -384,7 +384,7 @@
   "first_in_topic": false
  },
  {
-  "date": "2027-09-20",
+  "date": "2027-10-18",
   "movement": "VI. Tending the environment",
   "movement_claim": "Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.",
   "topic": "Measure, then bootstrap",
@@ -400,7 +400,7 @@
   "first_in_topic": true
  },
  {
-  "date": "2027-10-04",
+  "date": "2027-11-01",
   "movement": "VI. Tending the environment",
   "movement_claim": "Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.",
   "topic": "Measure, then bootstrap",
