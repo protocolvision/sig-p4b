@@ -157,3 +157,5 @@ header .logo { width: 22px; height: 22px; border-radius: 3px; display: block; }
 .empty { color: var(--muted); }
 .topic { margin: 1.6rem 0 0.4rem; }
 .topic .muted { display: block; font-size: 0.88rem; margin-top: 0.15rem; }
+.schedule .quote q { display: block; font-style: italic; color: var(--fg); opacity: 0.82; }
+.schedule .quote q + q { margin-top: 0.4rem; }

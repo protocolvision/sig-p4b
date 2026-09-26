@@ -8,12 +8,19 @@
   "title": "The Hugging Face incident and the road ahead",
   "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
   "cite": "OpenAI, 2026",
-  "why": "OpenAI's own account of evaluation agents escaping containment and coordinating through improvised message boards. Read it alongside Hugging Face's disclosure of the same incident (huggingface.co/blog/security-incident-july-2026).",
   "feature": "Kickoff: how the year runs, and choosing your case",
   "pi_title": "Securing Stigmergic Systems",
   "pi_url": "https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems",
   "pi_cite": "Nast, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another.",
+  "quote_loc": "“A message board emerges”",
+  "also_read": {
+   "title": "Security incident disclosure — July 2026",
+   "url": "https://huggingface.co/blog/security-incident-july-2026",
+   "cite": "Hugging Face, 2026",
+   "quote": "To understand what a swarm of tens of thousands of automated actions did, we ran LLM-driven analysis agents over the full attacker action log, comprised of more than 17,000 recorded events."
+  }
  },
  {
   "date": "2026-11-16",
@@ -24,12 +31,13 @@
   "title": "Patterns and problems in multiagent systems",
   "url": "https://www.anthropic.com/research/multiagent-systems",
   "cite": "Anthropic, 2026",
-  "why": "Anthropic's study of Claude agents given conflicting tasks in a shared codebase, unaware of each other. Without any signal of each other's presence, they escalated to sabotage.",
   "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)",
   "pi_title": "Securing Stigmergic Systems",
   "pi_url": "https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems",
   "pi_cite": "Nast, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.",
+  "quote_loc": "“Incompatible goals”"
  },
  {
   "date": "2026-11-30",
@@ -40,12 +48,13 @@
   "title": "The Ecology of Collective Behavior",
   "url": "https://doi.org/10.1371/journal.pbio.1001805",
   "cite": "Gordon, 2014",
-  "why": "Ant colonies regulate what they do through the rate of simple encounters, with no central control, and each colony's algorithm fits its environment.",
   "feature": "Case pitches: one paragraph each",
   "pi_title": "Welcome to the Swarm",
   "pi_url": "https://npcmemo.substack.com/p/welcome-to-the-swarm",
   "pi_cite": "Fernández, 2023",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "In most ant species studied so far it seems that the allocation of tasks, or functions, to ants, uses a distributed system; changes in conditions shift the rate of local interaction that regulates ant activity",
+  "quote_loc": "“Threat of Rupture”"
  },
  {
   "date": "2026-12-14",
@@ -56,12 +65,13 @@
   "title": "Quorum Sensing in Bacteria",
   "url": "https://doi.org/10.1146/annurev.micro.55.1.165",
   "cite": "Miller & Bassler, 2001",
-  "why": "Bacteria emit signal molecules and act together once a concentration threshold is crossed. It is broadcast and threshold in their simplest form.",
   "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)",
   "pi_title": "Welcome to the Swarm",
   "pi_url": "https://npcmemo.substack.com/p/welcome-to-the-swarm",
   "pi_cite": "Fernández, 2023",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression.",
+  "quote_loc": "abstract"
  },
  {
   "date": "2027-01-11",
@@ -72,12 +82,13 @@
   "title": "The Filing Cabinet",
   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
   "cite": "Robertson, 2021",
-  "why": "How the vertical file became the infrastructure of 20th-century business, drawn from the archives of the office itself.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "Liquid Services and Runtime Procurement",
   "pi_url": "https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.",
+  "quote_loc": ""
  },
  {
   "date": "2027-01-25",
@@ -88,12 +99,13 @@
   "title": "The Log: What every software engineer should know about real-time data's unifying abstraction",
   "url": "https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
   "cite": "Kreps, 2013",
-  "why": "The engineer who built Kafka explains the append-only log as the thing that ties records, streams, and systems together once data stops sitting in files.",
   "feature": "Guest: Psychohistory SIG (Prophecy Protocols)",
   "pi_title": "Liquid Services and Runtime Procurement",
   "pi_url": "https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "The log is the natural data structure for handling data flow between systems. The recipe is very simple: Take all the organization's data and put it into a central log for real-time subscription.",
+  "quote_loc": "Part Two"
  },
  {
   "date": "2027-02-08",
@@ -104,12 +116,13 @@
   "title": "Contracts: Events",
   "url": "https://docs.soliditylang.org/en/latest/contracts.html",
   "cite": "Solidity documentation",
-  "why": "How a smart contract emits events into the chain's log, for anyone to index and subscribe to. Read the section on events.",
   "feature": "Case study progress",
   "pi_title": "The Reading Machine and the Inversion of the Standards Stack",
   "pi_url": "https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.",
+  "quote_loc": "Events"
  },
  {
   "date": "2027-02-22",
@@ -120,12 +133,13 @@
   "title": "RSS 2.0 Specification",
   "url": "https://www.rssboard.org/rss-specification",
   "cite": "RSS Advisory Board, 2003",
-  "why": "The spec behind two decades of open syndication: publish a feed, and let anyone subscribe without asking.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "The Reading Machine and the Inversion of the Standards Stack",
   "pi_url": "https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "ttl stands for time to live. It's a number of minutes that indicates how long a channel can be cached before refreshing from the source.",
+  "quote_loc": "<ttl>"
  },
  {
   "date": "2027-03-08",
@@ -136,12 +150,13 @@
   "title": "The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
   "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537",
   "cite": "Nii, 1986",
-  "why": "The classic design for independent agents that coordinate by reading and writing a shared board. The OpenAI agents rebuilt one out of a package manager.",
   "feature": "Case study progress",
   "pi_title": "After the Swarm: We are Blooming",
   "pi_url": "https://npcmemo.substack.com/p/bloom",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "Knowledge sources produce changes to the blackboard that lead incrementally to a solution to the problem. Communication and interaction among the knowledge sources take place solely through the blackboard.",
+  "quote_loc": "p. 39"
  },
  {
   "date": "2027-03-22",
@@ -152,12 +167,13 @@
   "title": "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation",
   "url": "https://arxiv.org/abs/2210.15723",
   "cite": "Wojcik et al., 2022",
-  "why": "The team behind Community Notes on a public board where a note is shown only when raters who usually disagree both find it helpful.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "After the Swarm: We are Blooming",
   "pi_url": "https://npcmemo.substack.com/p/bloom",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "It could help set better norms for crowd-based discussions of social media posts by rewarding content that is informative and appreciated by a wide range of people.",
+  "quote_loc": "§2.3"
  },
  {
   "date": "2027-04-05",
@@ -168,12 +184,13 @@
   "title": "The Information Bus: An Architecture for Extensible Distributed Systems",
   "url": "https://doi.org/10.1145/168619.168624",
   "cite": "Oki, Pfluegl, Siegel & Skeen, 1993",
-  "why": "The system that introduced publish/subscribe: publishers name subjects, subscribers listen, and neither needs to know the other.",
   "feature": "Case study progress",
   "pi_title": "Have Your Factory Call My Factory",
   "pi_url": "https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory",
   "pi_cite": "Rao, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "To disseminate data objects, data producers generate them, label them with an appropriate subject, and publish them on the Information Bus. To receive such objects, data consumers subscribe to the same subject.",
+  "quote_loc": "§3.1"
  },
  {
   "date": "2027-04-19",
@@ -184,12 +201,13 @@
   "title": "Model Context Protocol Specification",
   "url": "https://modelcontextprotocol.io/specification/latest",
   "cite": "modelcontextprotocol.io, 2024–",
-  "why": "How agents connect to an organization's data and tools, including notifications and subscriptions. Read the sections on resources and notifications.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "Have Your Factory Call My Factory",
   "pi_url": "https://protocolized.summerofprotocols.com/p/have-your-factory-call-my-factory",
   "pi_cite": "Rao, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.",
+  "quote_loc": "Subscriptions"
  },
  {
   "date": "2027-05-03",
@@ -200,12 +218,13 @@
   "title": "The Use of Knowledge in Society",
   "url": "https://www.econlib.org/library/Essays/hykKnw.html",
   "cite": "Hayek, 1945",
-  "why": "Prices as a broadcast that lets people act on knowledge they don't have.",
   "feature": "Case study progress",
   "pi_title": "Owning Demand vs. Writing the Rules",
   "pi_url": "https://npcmemo.substack.com/p/owning-demand-vs-writing-the-rules",
   "pi_cite": "NPC Memo, 2025",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "We must look at the price system as such a mechanism for communicating information if we want to understand its real function…",
+  "quote_loc": "§VI"
  },
  {
   "date": "2027-05-17",
@@ -216,12 +235,13 @@
   "title": "Job Market Signaling",
   "url": "https://doi.org/10.2307/1882010",
   "cite": "Spence, 1973",
-  "why": "Why credible signals have to be costly to send. Emission is not free, and that is what makes it informative.",
   "feature": "Guest: Personhood Research Group (Personhood Transformations)",
   "pi_title": "Owning Demand vs. Writing the Rules",
   "pi_url": "https://npcmemo.substack.com/p/owning-demand-vs-writing-the-rules",
   "pi_cite": "NPC Memo, 2025",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "It is not difficult to see that a signal will not effectively distinguish one applicant from another, unless the costs of signaling are negatively correlated with productive capability.",
+  "quote_loc": "p. 358"
  },
  {
   "date": "2027-05-31",
@@ -232,12 +252,13 @@
   "title": "Collective Mind in Organizations: Heedful Interrelating on Flight Decks",
   "url": "https://doi.org/10.2307/2393372",
   "cite": "Weick & Roberts, 1993",
-  "why": "A carrier deck crew as a collective mind, built from how carefully each person contributes, represents, and subordinates to the whole.",
   "feature": "Guest: Memory Research Group (Organizational Memory Architecture)",
   "pi_title": "Thermal Memory",
   "pi_url": "https://summerlightning.substack.com/p/thermal-memory",
   "pi_cite": "Benny, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "Collective mind is conceptualized as a pattern of heedful interrelations of actions in a social system.",
+  "quote_loc": "abstract"
  },
  {
   "date": "2027-06-14",
@@ -248,44 +269,47 @@
   "title": "How a Cockpit Remembers Its Speeds",
   "url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1",
   "cite": "Hutchins, 1995",
-  "why": "Memory held by people and artifacts together: speed bugs, cards, and callouts as traces the whole cockpit reads.",
   "feature": "Case study progress",
   "pi_title": "Thermal Memory",
   "pi_url": "https://summerlightning.substack.com/p/thermal-memory",
   "pi_cite": "Benny, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "The cockpit system remembers its speeds, and the memory process emerges from the activity of the pilots. The memory of the cockpit, however, is not made primarily of pilot memory.",
+  "quote_loc": "p. 286"
  },
  {
   "date": "2027-06-28",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Organizations that broadcast",
-  "topic_line": "Alarms inside the firm, and disclosures it must make to everyone.",
+  "topic_line": "How a firm absorbs variety inside, and the events it must disclose to everyone.",
   "title": "Designing Freedom",
   "url": "https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf",
   "cite": "Beer, 1973",
-  "why": "Stafford Beer's lectures on viable systems, including the algedonic signal: a channel that lets an alarm skip the hierarchy.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "PDF Hell. Long-live the PDF.",
   "pi_url": "https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "What is it that controls variety? The answer is dead simple: variety. Variety absorbs variety, and nothing else can.",
+  "quote_loc": "p. 8"
  },
  {
   "date": "2027-07-12",
   "movement": "IV. How people and organizations emit",
   "movement_claim": "People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.",
   "topic": "Organizations that broadcast",
-  "topic_line": "Alarms inside the firm, and disclosures it must make to everyone.",
+  "topic_line": "How a firm absorbs variety inside, and the events it must disclose to everyone.",
   "title": "Form 8-K: General Instructions",
   "url": "https://www.sec.gov/files/form8-k.pdf",
   "cite": "U.S. Securities and Exchange Commission",
-  "why": "The rulebook for which corporate events a public company must broadcast, and within how many days. Mandated emission in its plainest form.",
   "feature": "Case study progress",
   "pi_title": "PDF Hell. Long-live the PDF.",
   "pi_url": "https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident.",
+  "quote_loc": "Instruction B.1"
  },
  {
   "date": "2027-07-26",
@@ -296,12 +320,13 @@
   "title": "The Nature of the Firm",
   "url": "https://doi.org/10.1111/j.1468-0335.1937.tb00002.x",
   "cite": "Coase, 1937",
-  "why": "Firms exist where coordinating inside is cheaper than using the market. What happens to that line when agents make emitting and reading nearly free?",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "The Nature of the Firm Revisited: A Protocol-Based Account",
   "pi_url": "https://npcmemo.substack.com/p/the-nature-of-the-firm-revisited",
   "pi_cite": "NPC Memo, 2025",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "The main reason why it is profitable to establish a firm would seem to be that there is a cost of using the price mechanism.",
+  "quote_loc": "p. 390"
  },
  {
   "date": "2027-08-09",
@@ -312,12 +337,13 @@
   "title": "Organization Design: An Information Processing View",
   "url": "https://doi.org/10.1287/inte.4.3.28",
   "cite": "Galbraith, 1974",
-  "why": "Structure as a way of handling an information load: rules, hierarchy, slack, lateral links, or information systems.",
   "feature": "Case study progress",
   "pi_title": "The Nature of the Firm Revisited: A Protocol-Based Account",
   "pi_url": "https://npcmemo.substack.com/p/the-nature-of-the-firm-revisited",
   "pi_cite": "NPC Memo, 2025",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "Therefore the greater the task uncertainty, the greater the amount of information that must be processed among decision makers during task execution in order to achieve a given level of performance.",
+  "quote_loc": "p. 28"
  },
  {
   "date": "2027-08-23",
@@ -328,12 +354,13 @@
   "title": "Reengineering Work: Don't Automate, Obliterate",
   "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
   "cite": "Hammer, 1990",
-  "why": "The last general-purpose technology wave: bolting computers onto old processes wasted them.",
   "feature": "Show-and-tell: AI-native tooling",
   "pi_title": "Why Does AI Development Look Like 1980s Software Planning?",
   "pi_url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
   "pi_cite": "Benny, 2025",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "It is time to stop paving the cow paths. Instead of embedding outdated processes in silicon and software, we should obliterate them and start over.",
+  "quote_loc": ""
  },
  {
   "date": "2027-09-06",
@@ -344,12 +371,13 @@
   "title": "Aggregation Theory",
   "url": "https://stratechery.com/2015/aggregation-theory/",
   "cite": "Thompson, 2015",
-  "why": "How platforms won by owning the user relationship, and why the open feeds lost to them.",
   "feature": "Guest: Protocol Fiction SIG (Protocol Futurism)",
   "pi_title": "Why Does AI Development Look Like 1980s Software Planning?",
   "pi_url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
   "pi_cite": "Benny, 2025",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "Secondly, the Internet has made transaction costs zero, making it viable for a distributor to integrate forward with end users/consumers at scale.",
+  "quote_loc": ""
  },
  {
   "date": "2027-09-20",
@@ -360,12 +388,13 @@
   "title": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
   "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
   "cite": "Ostrom, 2009",
-  "why": "Ostrom's Nobel lecture: many centers of decision, with rules made by the people who use them.",
   "feature": "Case study progress",
   "pi_title": "Managing the Water, Not the Ship",
   "pi_url": "https://npcmemo.substack.com/p/managing-the-water-not-the-ship",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "Extensive empirical research leads me to argue that instead, a core goal of public policy should be to facilitate the development of institutions that bring out the best in humans.",
+  "quote_loc": "p. 435"
  },
  {
   "date": "2027-10-04",
@@ -376,12 +405,13 @@
   "title": "Ironies of Automation",
   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
   "cite": "Bainbridge, 1983",
-  "why": "Automating the routine work leaves people with the hardest parts and less practice at them.",
   "feature": "Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project",
   "pi_title": "Managing the Water, Not the Ship",
   "pi_url": "https://npcmemo.substack.com/p/managing-the-water-not-the-ship",
   "pi_cite": "NPC Memo, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
+  "quote_loc": "p. 775"
  },
  {
   "date": "2027-10-18",
@@ -392,12 +422,19 @@
   "title": "Assessing the Impact of Planned Social Change",
   "url": "https://jmde.com/index.php/jmde_1/article/view/297",
   "cite": "Campbell, 1976",
-  "why": "Campbell's law: the more a measure drives decisions, the more it gets distorted. Read with Hamel Husain's \"Your AI Product Needs Evals\" (hamel.dev) for the working answer.",
   "feature": "Case study progress",
   "pi_title": "Inventing New Nature",
   "pi_url": "https://protocolized.summerofprotocols.com/p/inventing-new-nature",
   "pi_cite": "Rao, 2026",
-  "first_in_topic": true
+  "first_in_topic": true,
+  "quote": "The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.",
+  "quote_loc": "p. 34",
+  "also_read": {
+   "title": "Your AI Product Needs Evals",
+   "url": "https://hamel.dev/blog/posts/evals/",
+   "cite": "Husain, 2024",
+   "quote": "I've found that unsuccessful products almost always share a common root cause: a failure to create robust evaluation systems."
+  }
  },
  {
   "date": "2027-11-01",
@@ -408,11 +445,12 @@
   "title": "Improving Our Ability to Improve",
   "url": "https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf",
   "cite": "Engelbart, 2003",
-  "why": "Bootstrapping: getting better at the process of getting better. Output: the group's draft thesis.",
   "feature": "Thesis session: drafting the AI-native, post-platform organization",
   "pi_title": "Inventing New Nature",
   "pi_url": "https://protocolized.summerofprotocols.com/p/inventing-new-nature",
   "pi_cite": "Rao, 2026",
-  "first_in_topic": false
+  "first_in_topic": false,
+  "quote": "When you are operating at the C-level, collaboration can produce much larger returns than competition.",
+  "quote_loc": "p. 8"
  }
 ]

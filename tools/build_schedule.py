@@ -42,10 +42,17 @@ for s in S:
         out.append(f'<p class="topic"><strong>{e(s["topic"])}.</strong> {e(s["topic_line"])} '
                    f'<span class="muted">Alongside: <a href="{ea(s["pi_url"])}">{e(s["pi_title"])}</a> ({e(s["pi_cite"])})</span></p>')
         out.append('<ul class="schedule">')
+    extra = ""
+    if s.get("also_read"):
+        a = s["also_read"]
+        extra = (f'<br>\n    <span class="kind">with</span> <a href="{ea(a["url"])}">{e(a["title"])}</a> <span class="muted">{e(a["cite"])}</span>')
+    quotes = f'<q>{e(s["quote"])}</q>'
+    if s.get("also_read"):
+        quotes += f' <q>{e(s["also_read"]["quote"])}</q>'
     out.append(f'  <li><time datetime="{s["date"]}">{label(s["date"])}</time>\n'
-               f'    <span class="what"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span><br>\n'
+               f'    <span class="what"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>{extra}<br>\n'
                f'    <span class="kind">feature</span> <span class="muted">{e(s["feature"])}</span></span>\n'
-               f'    <span class="also">{e(s["why"])}</span></li>')
+               f'    <span class="also quote">{quotes}</span></li>')
 out.append("</ul>")
 out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>')
 p = ROOT / "syllabus/index.html"
@@ -77,7 +84,7 @@ L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Protocol Institute//SIG P4B//E
      "X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG"]
 for s in S:
     d = s["date"].replace("-", "")
-    desc = (f"{s['topic']}: {s['topic_line']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n\n"
+    desc = (f"{s['topic']}: {s['topic_line']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n\u201c{s['quote']}\u201d\n\n"
             f"Alongside: {s['pi_title']} ({s['pi_cite']})\n{s['pi_url']}\n\nFeature: {s['feature']}\n\n"
             f"Join on the Protocol Institute Discord: {DISCORD}\nSyllabus: {SITE}syllabus/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
