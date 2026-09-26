@@ -17,10 +17,11 @@ body text, Instrument Serif for the page title, cobalt links.
 ```
 index.html               overview, research questions, session list, essays
 syllabus/index.html      year-long reading group: 26 sessions, each a core classic + a response (NPC Memo / Archival Time / Protocolized); 7 parts, each ending in a claim
-observations/index.html  protocol watching (the reps): open questions, Bicorder workflow, running inventory
+observations/index.html  protocol watching (the reps): how to see a protocol, bigger questions, recording (field-guide notation + Bicorder), sources, inventory
 observations/            per observation: Bicorder JSON export + short .md note (copy TEMPLATE.md)
 case-studies/index.html  the heavy lifts: every participant carries one case; worked examples; milestones; template
 case-studies/<name>/     participant case studies (copy case-studies/TEMPLATE.md)
+sources/                 local reference copies (field guide, Reader EPUB) — gitignored, never deployed; link out instead
 assets/                  cube linework watermark + link-preview image (from PI brand kit art 6)
 style.css                the only stylesheet
 favicon.svg              PI P-mark

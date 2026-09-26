@@ -7,8 +7,10 @@ Record each one with the [Protocol Bicorder](https://bicorder.ecologies.info/), 
 To file an observation, add two files to this folder:
 
 - `YYYY-MM-DD-short-name.json`: the Bicorder export
-- `YYYY-MM-DD-short-name.md`: three short notes, copied from `TEMPLATE.md`
+- `YYYY-MM-DD-short-name.md`: a log entry in the Protocol Field Guide's notation (name, health status, lifecycle stage, description, photo), copied from `TEMPLATE.md`
 
 Open a pull request, or bring it to the session and the facilitator will file it. Then add a line to the inventory in `observations/index.html`.
 
 Don't name private organizations or people. Use the Bicorder's public upload only for protocols that are already public.
+
+How to see protocols comes from the [Protocol Field Guide](https://docs.google.com/document/d/111EDpTAN-HJCwqMwQlGHojEA5b2A3Awg333HtJybjJg/edit) ("Protocol Watching" chapter) and [Introducing the Protocol Institute](https://protocolized.summerofprotocols.com/p/introducing-the-protocol-institute). Link to those sources; don't copy them into the repo.
