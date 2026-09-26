@@ -327,3 +327,5 @@ header .home { padding: 11px 0; margin: -11px 0; }
   /* Bottom sheet clears the home indicator. */
   .register { padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)); }
 }
+header .home .brand-sep { color: var(--muted); margin: 0 0.1rem; }
+header .home .brand-sub { color: var(--tint); }

@@ -55,7 +55,7 @@ def page(meta, body):
 <link rel="stylesheet" href="{rel}style.css">
 {extra_head}<body>
 <header>
-<a class="home" href="{rel or './'}"><img class="logo" src="{rel}favicon.svg" alt="">Protocol Institute</a>
+<a class="home" href="{rel or './'}" aria-label="Protocol Institute – Business, home"><img class="logo" src="{rel}favicon.svg" alt="">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>
 <nav aria-label="Main">
 {nav}
 </nav>
