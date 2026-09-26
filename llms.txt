@@ -6,7 +6,7 @@
 - [About](https://npc.here.now/protocolvision/about/): method (protocol vision), origins, facilitators, publications
 - [Sessions](https://npc.here.now/protocolvision/sessions/): joining details, session format, full syllabus with a quote from each reading, archive
 - [Research](https://npc.here.now/protocolvision/research/): 2027 focus (AI Native Data Operations), research questions, case studies, how to sponsor or partner
-- [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction bids from PDFs, the PI brand kit, the case template
+- [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol Play](https://npc.here.now/protocolvision/play/): protocol watching, workshops, simulation
 - [Protocol watching guide](https://npc.here.now/protocolvision/play/watching/): how to see and record a business protocol
 

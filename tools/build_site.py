@@ -106,7 +106,7 @@ def write_llms():
 - [About]({SITE}about/): method (protocol vision), origins, facilitators, publications
 - [Sessions]({SITE}sessions/): joining details, session format, full syllabus with a quote from each reading, archive
 - [Research]({SITE}research/): 2027 focus (AI Native Data Operations), research questions, case studies, how to sponsor or partner
-- [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, the case template
+- [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol Play]({SITE}play/): protocol watching, workshops, simulation
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 

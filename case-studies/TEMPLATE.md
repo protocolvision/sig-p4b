@@ -5,6 +5,8 @@ organization: industry and type (anonymize if needed)
 status: choose | brief | intervene | evidence | published
 ---
 
+<!-- Sample template: use it if a structure helps, or find your own way. -->
+
 # Name of the case
 
 ## 1. Context
