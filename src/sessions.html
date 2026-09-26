@@ -1,0 +1,842 @@
+<!-- {"title": "Sessions · Protocols for Business SIG", "desc": "Every other Monday, 15:30–16:30 UTC on the Protocol Institute Discord: one primary source read together. Joining details, how a session runs, the full syllabus with a quote from each reading, and the archive.", "path": "sessions/", "nav": "sessions", "card": "syllabus"} -->
+<h1>Sessions</h1>
+<p class="lede">Every other Monday we read one primary source together and talk it through. Drop-ins are welcome; the reading happens in the session.</p>
+<div class="next" data-next>
+<p><span class="kind">Next session</span> <span class="when">Monday, 2 November 2026 · 15:30 UTC</span></p>
+<p class="what"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/">The Hugging Face incident and the road ahead</a> <span class="muted small">OpenAI, 2026 · Kickoff</span></p>
+<div class="row"><button type="button" class="btn" data-register>Register</button><span class="small muted"><span class="register-status" aria-live="polite"></span> Drop-ins welcome · <a href="../sessions/#joining">Joining details</a></span></div>
+</div>
+<h2 id="joining">Joining</h2>
+<ul class="rows">
+  <li><span class="k">When</span><div class="v"><p>Every other Monday, 15:30–16:30 UTC, from 2 November 2026, with a break over New Year. <span class="muted">16:30 Berlin, 10:30 New York, 7:30 San Francisco in winter; an hour later locally from late March.</span></p></div></li>
+  <li><span class="k">Where</span><div class="v"><p>Protocol Institute <a href="https://discord.gg/zNJdK7caj">Discord</a>, <code>#protocols-for-business</code></p></div></li>
+  <li><span class="k">Calendar</span><div class="v"><p><a class="btn" href="https://calendar.google.com/calendar/render?cid=webcal%3A%2F%2Fnpc.here.now%2Fprotocolvision%2Fsig-p4b.ics">Subscribe in Google Calendar</a></p><p class="small muted">or <a href="../sig-p4b.ics">add the sessions to your own calendar</a> (.ics)</p></div></li>
+  <li><span class="k">Recorded</span><div class="v"><p>Yes. Recordings go in the <a href="#archive">archive</a>.</p></div></li>
+  <li><span class="k">Contact</span><div class="v"><p>Rafael Fernández, <code>@rafa_0x</code> on Discord</p></div></li>
+</ul>
+<h2 id="format">How a session runs</h2>
+<ol class="steps">
+  <li><strong>Silent reading</strong> of the core text or an excerpt.</li>
+  <li><strong>Round-robin</strong> on the reading: one reaction from each person.</li>
+  <li><strong>Show-and-tell</strong>: a tool someone is using, a member's case study progress, or a guest speaker.</li>
+</ol>
+<p class="small muted">Alongside the session, members post the protocols they've been <a href="../play/watching/">watching</a> in <code>#protocols-for-business</code>.</p>
+<h2 id="syllabus">Syllabus</h2>
+<p>The question for the year: <strong>how do organizations, teams, and people coordinate through what they emit, and what changes when agents read and write those signals too?</strong> Six movements run from what the labs reported about agent swarms in 2026, through swarms in nature and how systems, people, and organizations emit, to rereading the classics of business planning and tending the environment a swarm works in. The last session drafts the group's thesis.</p>
+<p class="small muted">We read primary sources: incident reports and research as published, specifications as written, the originators' own papers. Each topic has an optional companion essay from the writers around the Protocol Institute. To suggest a reading, open a pull request.</p>
+<!-- schedule:start -->
+<details class="mv" open><summary><span class="k">Nov 2026</span><span><strong>I. Framing: recent swarms</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>Recent swarms.</strong> What two frontier labs reported about agents coordinating, and failing to, in 2026. <span class="muted">Alongside: <a href="https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems">Securing Stigmergic Systems</a> (Patrick Nast, Protocolized, 2026)</span></p>
+<ul class="schedule">
+  <li id="s-2026-11-02"><time datetime="2026-11-02">2 November 2026</time>
+    <span class="what"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/">The Hugging Face incident and the road ahead</a> <span class="muted">OpenAI, 2026</span><br>
+    <span class="kind">with</span> <a href="https://huggingface.co/blog/security-incident-july-2026">Security incident disclosure — July 2026</a> <span class="muted">Hugging Face, 2026</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Kickoff: how the year runs, and choosing your case</span></span>
+    <span class="also quote"><q>The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another.</q> <q>To understand what a swarm of tens of thousands of automated actions did, we ran LLM-driven analysis agents over the full attacker action log, comprised of more than 17,000 recorded events.</q></span></li>
+  <li id="s-2026-11-16"><time datetime="2026-11-16">16 November 2026</time>
+    <span class="what"><a href="https://www.anthropic.com/research/multiagent-systems">Patterns and problems in multiagent systems</a> <span class="muted">Anthropic, 2026</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)</span></span>
+    <span class="also quote"><q>We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>Agent swarms are already here. In one incident, hundreds of instances coordinated through message boards they improvised. In another study, agents that couldn't see each other assumed hostility and sabotaged each other. The question is not whether swarms form, but what they coordinate through.</p>
+</div></details>
+<details class="mv"><summary><span class="k">Nov–Dec 2026</span><span><strong>II. Swarms are nature</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>Broadcast, trace, threshold.</strong> How colonies and cells coordinate with no one in charge. <span class="muted">Alongside: <a href="https://newsletter.squishy.computer/p/pond-brains-and-gpt-4">Pond brains and GPT-4</a> (Gordon Brander, Squishy Computer, 2023)</span></p>
+<ul class="schedule">
+  <li id="s-2026-11-30"><time datetime="2026-11-30">30 November 2026</time>
+    <span class="what"><a href="https://doi.org/10.1371/journal.pbio.1001805">The Ecology of Collective Behavior</a> <span class="muted">Gordon, 2014</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case pitches: one paragraph each</span></span>
+    <span class="also quote"><q>In most ant species studied so far it seems that the allocation of tasks, or functions, to ants, uses a distributed system; changes in conditions shift the rate of local interaction that regulates ant activity</q></span></li>
+  <li id="s-2026-12-14"><time datetime="2026-12-14">14 December 2026</time>
+    <span class="what"><a href="https://doi.org/10.1146/annurev.micro.55.1.165">Quorum Sensing in Bacteria</a> <span class="muted">Miller &amp; Bassler, 2001</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Distributed Robotics Group (Decentralized Robot Markets)</span></span>
+    <span class="also quote"><q>Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>Swarms are closer to ant colonies and bacteria than to civilizations. They coordinate through signals emitted into a shared environment, regulated by encounter rates, decay, and thresholds, not by intent or culture.</p>
+</div></details>
+<details class="mv"><summary><span class="k">Jan–Apr 2027</span><span><strong>III. How systems emit</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>From files to flows.</strong> The filing cabinet, and what replaced it when data went liquid. <span class="muted">Alongside: <a href="https://ribbonfarm.com/2015/07/21/inbox-zero-versus-flow-laminar/">Inbox Zero versus Flow Laminar</a> (Venkatesh Rao, Ribbonfarm, 2015)</span></p>
+<ul class="schedule">
+  <li id="s-2027-01-11"><time datetime="2027-01-11">11 January 2027</time>
+    <span class="what"><a href="https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/">The Filing Cabinet</a> <span class="muted">Robertson, 2021</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.</q></span></li>
+  <li id="s-2027-01-25"><time datetime="2027-01-25">25 January 2027</time>
+    <span class="what"><a href="https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">The Log: What every software engineer should know about real-time data's unifying abstraction</a> <span class="muted">Kreps, 2013</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Psychohistory SIG (Prophecy Protocols)</span></span>
+    <span class="also quote"><q>The log is the natural data structure for handling data flow between systems. The recipe is very simple: Take all the organization's data and put it into a central log for real-time subscription.</q></span></li>
+</ul>
+<p class="topic"><strong>Events and feeds.</strong> Two open ways to emit: contract events and syndication. <span class="muted">Alongside: <a href="https://newsletter.squishy.computer/p/natures-many-attempts-to-evolve-a">Nature's many attempts to evolve a Nostr</a> (Gordon Brander, Squishy Computer, 2024)</span></p>
+<ul class="schedule">
+  <li id="s-2027-02-08"><time datetime="2027-02-08">8 February 2027</time>
+    <span class="what"><a href="https://docs.soliditylang.org/en/latest/contracts.html">Contracts: Events</a> <span class="muted">Solidity documentation</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.</q></span></li>
+  <li id="s-2027-02-22"><time datetime="2027-02-22">22 February 2027</time>
+    <span class="what"><a href="https://www.rssboard.org/rss-specification">RSS 2.0 Specification</a> <span class="muted">RSS Advisory Board, 2003</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>ttl stands for time to live. It's a number of minutes that indicates how long a channel can be cached before refreshing from the source.</q></span></li>
+</ul>
+<p class="topic"><strong>Boards and notes.</strong> The intermediate traces: shared boards and crowd notes. <span class="muted">Alongside: <a href="https://summerofprotocols.com/research/module-four/unprotocolized-knowledge">Unprotocolized Knowledge</a> (Kara Kittel &amp; Toby Shorin, Summer of Protocols, 2024)</span></p>
+<ul class="schedule">
+  <li id="s-2027-03-08"><time datetime="2027-03-08">8 March 2027</time>
+    <span class="what"><a href="https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537">The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures</a> <span class="muted">Nii, 1986</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>Knowledge sources produce changes to the blackboard that lead incrementally to a solution to the problem. Communication and interaction among the knowledge sources take place solely through the blackboard.</q></span></li>
+  <li id="s-2027-03-22"><time datetime="2027-03-22">22 March 2027</time>
+    <span class="what"><a href="https://arxiv.org/abs/2210.15723">Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation</a> <span class="muted">Wojcik et al., 2022</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>It could help set better norms for crowd-based discussions of social media posts by rewarding content that is informative and appreciated by a wide range of people.</q></span></li>
+</ul>
+<p class="topic"><strong>Who's listening.</strong> Publish/subscribe, from the first information bus to agents. <span class="muted">Alongside: <a href="https://newsletter.squishy.computer/p/agents-are-actors">Agents are actors</a> (Gordon Brander, Squishy Computer, 2026)</span></p>
+<ul class="schedule">
+  <li id="s-2027-04-05"><time datetime="2027-04-05">5 April 2027</time>
+    <span class="what"><a href="https://doi.org/10.1145/168619.168624">The Information Bus: An Architecture for Extensible Distributed Systems</a> <span class="muted">Oki, Pfluegl, Siegel &amp; Skeen, 1993</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>To disseminate data objects, data producers generate them, label them with an appropriate subject, and publish them on the Information Bus. To receive such objects, data consumers subscribe to the same subject.</q></span></li>
+  <li id="s-2027-04-19"><time datetime="2027-04-19">19 April 2027</time>
+    <span class="what"><a href="https://modelcontextprotocol.io/specification/latest">Model Context Protocol Specification</a> <span class="muted">modelcontextprotocol.io, 2024–</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>Business information moved from files to flows, and then into an intermediate layer of logs, events, feeds, boards, and notes. That middle layer is where coordination now happens, and where agents read and write.</p>
+</div></details>
+<details class="mv"><summary><span class="k">May–Jul 2027</span><span><strong>IV. How people and organizations emit</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>Signals between people.</strong> Prices and costly signals. <span class="muted">Alongside: <a href="https://kneelingbus.substack.com/p/outsider-trading">Outsider Trading</a> (Drew Austin, Kneeling Bus, 2026)</span></p>
+<ul class="schedule">
+  <li id="s-2027-05-03"><time datetime="2027-05-03">3 May 2027</time>
+    <span class="what"><a href="https://www.econlib.org/library/Essays/hykKnw.html">The Use of Knowledge in Society</a> <span class="muted">Hayek, 1945</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>We must look at the price system as such a mechanism for communicating information if we want to understand its real function…</q></span></li>
+  <li id="s-2027-05-17"><time datetime="2027-05-17">17 May 2027</time>
+    <span class="what"><a href="https://doi.org/10.2307/1882010">Job Market Signaling</a> <span class="muted">Spence, 1973</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Personhood Research Group (Personhood Transformations)</span></span>
+    <span class="also quote"><q>It is not difficult to see that a signal will not effectively distinguish one applicant from another, unless the costs of signaling are negatively correlated with productive capability.</q></span></li>
+</ul>
+<p class="topic"><strong>Teams that sense together.</strong> How a crew or cockpit coordinates through what it makes visible. <span class="muted">Alongside: <a href="https://blundercheck.timberschroff.com/p/coordinate-leadership">Coordinate Leadership</a> (Timber Stinson-Schroff, Blundercheck, 2025)</span></p>
+<ul class="schedule">
+  <li id="s-2027-05-31"><time datetime="2027-05-31">31 May 2027</time>
+    <span class="what"><a href="https://doi.org/10.2307/2393372">Collective Mind in Organizations: Heedful Interrelating on Flight Decks</a> <span class="muted">Weick &amp; Roberts, 1993</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Memory Research Group (Organizational Memory Architecture)</span></span>
+    <span class="also quote"><q>Collective mind is conceptualized as a pattern of heedful interrelations of actions in a social system.</q></span></li>
+  <li id="s-2027-06-14"><time datetime="2027-06-14">14 June 2027</time>
+    <span class="what"><a href="https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1">How a Cockpit Remembers Its Speeds</a> <span class="muted">Hutchins, 1995</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>The cockpit system remembers its speeds, and the memory process emerges from the activity of the pilots. The memory of the cockpit, however, is not made primarily of pilot memory.</q></span></li>
+</ul>
+<p class="topic"><strong>Organizations that broadcast.</strong> How a firm absorbs variety inside, and the events it must disclose to everyone. <span class="muted">Alongside: <a href="https://summerlightning.substack.com/p/prophetic-soft-technologies">Prophetic Soft Technologies</a> (Sachin Benny, Summer Lightning, 2025)</span></p>
+<ul class="schedule">
+  <li id="s-2027-06-28"><time datetime="2027-06-28">28 June 2027</time>
+    <span class="what"><a href="https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf">Designing Freedom</a> <span class="muted">Beer, 1973</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>What is it that controls variety? The answer is dead simple: variety. Variety absorbs variety, and nothing else can.</q></span></li>
+  <li id="s-2027-07-12"><time datetime="2027-07-12">12 July 2027</time>
+    <span class="what"><a href="https://www.sec.gov/files/form8-k.pdf">Form 8-K: General Instructions</a> <span class="muted">U.S. Securities and Exchange Commission</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>People, teams, and organizations are emitters too: prices, costly signals, heedful attention, alarms, and mandated disclosures. Each already has conventions for what gets broadcast, and who is obliged to listen.</p>
+</div></details>
+<details class="mv"><summary><span class="k">Jul–Sep 2027</span><span><strong>V. Rereading business planning</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>The firm, re-seen.</strong> Why firms exist, read as a question about signals. <span class="muted">Alongside: <a href="https://summerlightning.substack.com/p/why-does-ai-development-look-like">Why Does AI Development Look Like 1980s Software Planning?</a> (Sachin Benny, Summer Lightning, 2025)</span></p>
+<ul class="schedule">
+  <li id="s-2027-07-26"><time datetime="2027-07-26">26 July 2027</time>
+    <span class="what"><a href="https://doi.org/10.1111/j.1468-0335.1937.tb00002.x">The Nature of the Firm</a> <span class="muted">Coase, 1937</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>The main reason why it is profitable to establish a firm would seem to be that there is a cost of using the price mechanism.</q></span></li>
+  <li id="s-2027-08-09"><time datetime="2027-08-09">9 August 2027</time>
+    <span class="what"><a href="https://doi.org/10.1287/inte.4.3.28">Organization Design: An Information Processing View</a> <span class="muted">Galbraith, 1974</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>Therefore the greater the task uncertainty, the greater the amount of information that must be processed among decision makers during task execution in order to achieve a given level of performance.</q></span></li>
+</ul>
+<p class="topic"><strong>Redesign and capture.</strong> Process redesign, and how platforms captured the feeds. <span class="muted">Alongside: <a href="https://contraptions.venkateshrao.com/p/coordination-headwinds">Coordination Headwinds</a> (Venkatesh Rao, Contraptions, 2021)</span></p>
+<ul class="schedule">
+  <li id="s-2027-08-23"><time datetime="2027-08-23">23 August 2027</time>
+    <span class="what"><a href="https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate">Reengineering Work: Don't Automate, Obliterate</a> <span class="muted">Hammer, 1990</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Show-and-tell: AI-native tooling</span></span>
+    <span class="also quote"><q>It is time to stop paving the cow paths. Instead of embedding outdated processes in silicon and software, we should obliterate them and start over.</q></span></li>
+  <li id="s-2027-09-06"><time datetime="2027-09-06">6 September 2027</time>
+    <span class="what"><a href="https://stratechery.com/2015/aggregation-theory/">Aggregation Theory</a> <span class="muted">Thompson, 2015</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Guest: Protocol Fiction SIG (Protocol Futurism)</span></span>
+    <span class="also quote"><q>Secondly, the Internet has made transaction costs zero, making it viable for a distributor to integrate forward with end users/consumers at scale.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>The firm and its redesigns look different once you see them as emitters. Boundaries fall where signals are cheap to share, and platforms won by capturing the open feeds.</p>
+</div></details>
+<details class="mv"><summary><span class="k">Sep–Nov 2027</span><span><strong>VI. Tending the environment</strong></span></summary>
+<div class="body">
+<p class="topic"><strong>Governing swarms.</strong> Polycentric rules, and what automation leaves to people. <span class="muted">Alongside: <a href="https://blundercheck.timberschroff.com/p/the-problem-with-perfect-rules">The Problem with Perfect Rules</a> (Timber Stinson-Schroff, Blundercheck, 2026)</span></p>
+<ul class="schedule">
+  <li id="s-2027-09-20"><time datetime="2027-09-20">20 September 2027</time>
+    <span class="what"><a href="https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf">Beyond Markets and States: Polycentric Governance of Complex Economic Systems</a> <span class="muted">Ostrom, 2009</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>Extensive empirical research leads me to argue that instead, a core goal of public policy should be to facilitate the development of institutions that bring out the best in humans.</q></span></li>
+  <li id="s-2027-10-04"><time datetime="2027-10-04">4 October 2027</time>
+    <span class="what"><a href="https://doi.org/10.1016/0005-1098(83)90046-8">Ironies of Automation</a> <span class="muted">Bainbridge, 1983</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project</span></span>
+    <span class="also quote"><q>The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.</q></span></li>
+</ul>
+<p class="topic"><strong>Measure, then bootstrap.</strong> Measuring a swarm honestly, then improving how we improve. <span class="muted">Alongside: <a href="https://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measurement-is-hard/">Goodhart's Law and Why Measurement is Hard</a> (David Manheim, Ribbonfarm, 2016)</span></p>
+<ul class="schedule">
+  <li id="s-2027-10-18"><time datetime="2027-10-18">18 October 2027</time>
+    <span class="what"><a href="https://jmde.com/index.php/jmde_1/article/view/297">Assessing the Impact of Planned Social Change</a> <span class="muted">Campbell, 1976</span><br>
+    <span class="kind">with</span> <a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a> <span class="muted">Husain, 2024</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Case study progress</span></span>
+    <span class="also quote"><q>The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.</q> <q>I've found that unsuccessful products almost always share a common root cause: a failure to create robust evaluation systems.</q></span></li>
+  <li id="s-2027-11-01"><time datetime="2027-11-01">1 November 2027</time>
+    <span class="what"><a href="https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf">Improving Our Ability to Improve</a> <span class="muted">Engelbart, 2003</span><br>
+    <span class="kind">show-and-tell</span> <span class="muted">Thesis session: drafting the AI-native, post-platform organization</span></span>
+    <span class="also quote"><q>When you are operating at the C-level, collaboration can produce much larger returns than competition.</q></span></li>
+</ul>
+<p class="claim"><span class="kind">What we now see</span><br>Governing a swarm means tending its environment: what is emitted, who can read it, how fast it decays, and what triggers action. It also means measuring without letting the measure become the target. From there, the group writes its thesis.</p>
+</div></details>
+<!-- schedule:end -->
+<h2 id="archive">Archive</h2>
+<p class="muted">Recordings and notes appear here after each session, starting 2 November 2026. Notes from the group's 39 earlier sessions are in the <a href="https://protocol-institute.org/sigs/sigpfb">Protocol Institute meeting archive</a>.</p>
+<!-- Add entries newest first:
+<ul class="schedule">
+  <li><time datetime="2026-11-02">2 November 2026</time><span class="what">The Hugging Face incident and the road ahead <span class="muted">· <a href="RECORDING_URL">recording</a> · <a href="NOTES_URL">notes</a></span></span></li>
+</ul>
+-->
+<!-- jsonld:start -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "EventSeries",
+ "name": "Protocols for Business SIG sessions",
+ "url": "https://npc.here.now/protocolvision/sessions/",
+ "startDate": "2026-11-02",
+ "endDate": "2027-11-01",
+ "subEvent": [
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Hugging Face incident and the road ahead",
+   "startDate": "2026-11-02T15:30:00Z",
+   "endDate": "2026-11-02T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Hugging Face incident and the road ahead",
+    "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+   },
+   "description": "Recent swarms: What two frontier labs reported about agents coordinating, and failing to, in 2026. Show-and-tell: Kickoff: how the year runs, and choosing your case.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Patterns and problems in multiagent systems",
+   "startDate": "2026-11-16T15:30:00Z",
+   "endDate": "2026-11-16T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Patterns and problems in multiagent systems",
+    "url": "https://www.anthropic.com/research/multiagent-systems"
+   },
+   "description": "Recent swarms: What two frontier labs reported about agents coordinating, and failing to, in 2026. Show-and-tell: Guest: Formal Protocol Theory SIG (Stigmergic AI Safety).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Ecology of Collective Behavior",
+   "startDate": "2026-11-30T15:30:00Z",
+   "endDate": "2026-11-30T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Ecology of Collective Behavior",
+    "url": "https://doi.org/10.1371/journal.pbio.1001805"
+   },
+   "description": "Broadcast, trace, threshold: How colonies and cells coordinate with no one in charge. Show-and-tell: Case pitches: one paragraph each.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Quorum Sensing in Bacteria",
+   "startDate": "2026-12-14T15:30:00Z",
+   "endDate": "2026-12-14T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Quorum Sensing in Bacteria",
+    "url": "https://doi.org/10.1146/annurev.micro.55.1.165"
+   },
+   "description": "Broadcast, trace, threshold: How colonies and cells coordinate with no one in charge. Show-and-tell: Guest: Distributed Robotics Group (Decentralized Robot Markets).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Filing Cabinet",
+   "startDate": "2027-01-11T15:30:00Z",
+   "endDate": "2027-01-11T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Filing Cabinet",
+    "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/"
+   },
+   "description": "From files to flows: The filing cabinet, and what replaced it when data went liquid. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Log: What every software engineer should know about real-time data's unifying abstraction",
+   "startDate": "2027-01-25T15:30:00Z",
+   "endDate": "2027-01-25T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Log: What every software engineer should know about real-time data's unifying abstraction",
+    "url": "https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying"
+   },
+   "description": "From files to flows: The filing cabinet, and what replaced it when data went liquid. Show-and-tell: Guest: Psychohistory SIG (Prophecy Protocols).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Contracts: Events",
+   "startDate": "2027-02-08T15:30:00Z",
+   "endDate": "2027-02-08T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Contracts: Events",
+    "url": "https://docs.soliditylang.org/en/latest/contracts.html"
+   },
+   "description": "Events and feeds: Two open ways to emit: contract events and syndication. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · RSS 2.0 Specification",
+   "startDate": "2027-02-22T15:30:00Z",
+   "endDate": "2027-02-22T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "RSS 2.0 Specification",
+    "url": "https://www.rssboard.org/rss-specification"
+   },
+   "description": "Events and feeds: Two open ways to emit: contract events and syndication. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
+   "startDate": "2027-03-08T15:30:00Z",
+   "endDate": "2027-03-08T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
+    "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537"
+   },
+   "description": "Boards and notes: The intermediate traces: shared boards and crowd notes. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation",
+   "startDate": "2027-03-22T15:30:00Z",
+   "endDate": "2027-03-22T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation",
+    "url": "https://arxiv.org/abs/2210.15723"
+   },
+   "description": "Boards and notes: The intermediate traces: shared boards and crowd notes. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Information Bus: An Architecture for Extensible Distributed Systems",
+   "startDate": "2027-04-05T15:30:00Z",
+   "endDate": "2027-04-05T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Information Bus: An Architecture for Extensible Distributed Systems",
+    "url": "https://doi.org/10.1145/168619.168624"
+   },
+   "description": "Who's listening: Publish/subscribe, from the first information bus to agents. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Model Context Protocol Specification",
+   "startDate": "2027-04-19T15:30:00Z",
+   "endDate": "2027-04-19T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Model Context Protocol Specification",
+    "url": "https://modelcontextprotocol.io/specification/latest"
+   },
+   "description": "Who's listening: Publish/subscribe, from the first information bus to agents. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Use of Knowledge in Society",
+   "startDate": "2027-05-03T15:30:00Z",
+   "endDate": "2027-05-03T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Use of Knowledge in Society",
+    "url": "https://www.econlib.org/library/Essays/hykKnw.html"
+   },
+   "description": "Signals between people: Prices and costly signals. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Job Market Signaling",
+   "startDate": "2027-05-17T15:30:00Z",
+   "endDate": "2027-05-17T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Job Market Signaling",
+    "url": "https://doi.org/10.2307/1882010"
+   },
+   "description": "Signals between people: Prices and costly signals. Show-and-tell: Guest: Personhood Research Group (Personhood Transformations).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Collective Mind in Organizations: Heedful Interrelating on Flight Decks",
+   "startDate": "2027-05-31T15:30:00Z",
+   "endDate": "2027-05-31T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Collective Mind in Organizations: Heedful Interrelating on Flight Decks",
+    "url": "https://doi.org/10.2307/2393372"
+   },
+   "description": "Teams that sense together: How a crew or cockpit coordinates through what it makes visible. Show-and-tell: Guest: Memory Research Group (Organizational Memory Architecture).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · How a Cockpit Remembers Its Speeds",
+   "startDate": "2027-06-14T15:30:00Z",
+   "endDate": "2027-06-14T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "How a Cockpit Remembers Its Speeds",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1"
+   },
+   "description": "Teams that sense together: How a crew or cockpit coordinates through what it makes visible. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Designing Freedom",
+   "startDate": "2027-06-28T15:30:00Z",
+   "endDate": "2027-06-28T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Designing Freedom",
+    "url": "https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf"
+   },
+   "description": "Organizations that broadcast: How a firm absorbs variety inside, and the events it must disclose to everyone. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Form 8-K: General Instructions",
+   "startDate": "2027-07-12T15:30:00Z",
+   "endDate": "2027-07-12T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Form 8-K: General Instructions",
+    "url": "https://www.sec.gov/files/form8-k.pdf"
+   },
+   "description": "Organizations that broadcast: How a firm absorbs variety inside, and the events it must disclose to everyone. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · The Nature of the Firm",
+   "startDate": "2027-07-26T15:30:00Z",
+   "endDate": "2027-07-26T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "The Nature of the Firm",
+    "url": "https://doi.org/10.1111/j.1468-0335.1937.tb00002.x"
+   },
+   "description": "The firm, re-seen: Why firms exist, read as a question about signals. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Organization Design: An Information Processing View",
+   "startDate": "2027-08-09T15:30:00Z",
+   "endDate": "2027-08-09T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Organization Design: An Information Processing View",
+    "url": "https://doi.org/10.1287/inte.4.3.28"
+   },
+   "description": "The firm, re-seen: Why firms exist, read as a question about signals. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Reengineering Work: Don't Automate, Obliterate",
+   "startDate": "2027-08-23T15:30:00Z",
+   "endDate": "2027-08-23T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Reengineering Work: Don't Automate, Obliterate",
+    "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate"
+   },
+   "description": "Redesign and capture: Process redesign, and how platforms captured the feeds. Show-and-tell: Show-and-tell: AI-native tooling.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Aggregation Theory",
+   "startDate": "2027-09-06T15:30:00Z",
+   "endDate": "2027-09-06T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Aggregation Theory",
+    "url": "https://stratechery.com/2015/aggregation-theory/"
+   },
+   "description": "Redesign and capture: Process redesign, and how platforms captured the feeds. Show-and-tell: Guest: Protocol Fiction SIG (Protocol Futurism).",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+   "startDate": "2027-09-20T15:30:00Z",
+   "endDate": "2027-09-20T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+    "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf"
+   },
+   "description": "Governing swarms: Polycentric rules, and what automation leaves to people. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Ironies of Automation",
+   "startDate": "2027-10-04T15:30:00Z",
+   "endDate": "2027-10-04T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Ironies of Automation",
+    "url": "https://doi.org/10.1016/0005-1098(83)90046-8"
+   },
+   "description": "Governing swarms: Polycentric rules, and what automation leaves to people. Show-and-tell: Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Assessing the Impact of Planned Social Change",
+   "startDate": "2027-10-18T15:30:00Z",
+   "endDate": "2027-10-18T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Assessing the Impact of Planned Social Change",
+    "url": "https://jmde.com/index.php/jmde_1/article/view/297"
+   },
+   "description": "Measure, then bootstrap: Measuring a swarm honestly, then improving how we improve. Show-and-tell: Case study progress.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  },
+  {
+   "@type": "Event",
+   "name": "SIG P4B · Improving Our Ability to Improve",
+   "startDate": "2027-11-01T15:30:00Z",
+   "endDate": "2027-11-01T16:30:00Z",
+   "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+   "eventStatus": "https://schema.org/EventScheduled",
+   "location": {
+    "@type": "VirtualLocation",
+    "url": "https://discord.gg/zNJdK7caj"
+   },
+   "about": {
+    "@type": "CreativeWork",
+    "name": "Improving Our Ability to Improve",
+    "url": "https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf"
+   },
+   "description": "Measure, then bootstrap: Measuring a swarm honestly, then improving how we improve. Show-and-tell: Thesis session: drafting the AI-native, post-platform organization.",
+   "organizer": {
+    "@type": "Organization",
+    "name": "Protocol Institute",
+    "url": "https://protocol-institute.org/"
+   },
+   "isAccessibleForFree": true
+  }
+ ]
+}
+</script>
+<!-- jsonld:end -->

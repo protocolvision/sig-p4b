@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build everything schedule-related from tools/sessions.json.
+"""Build everything schedule-related from tools/sessions.json (v2 layout).
 
 - syllabus/index.html: the movements, topics and sessions (between the schedule markers)
 - index.html: the homepage schedule list and the "Next session" data
@@ -30,13 +30,25 @@ def replace_between(text, name, body):
     assert pat.search(text), f"missing markers for {name}"
     return pat.sub(lambda m: m.group(1) + "\n" + body + "\n" + m.group(2), text)
 
-# --- syllabus ---
-out, movement = [], None
+# --- syllabus (src/sessions.html) ---
+MONTHS = {}
+for s in S:
+    MONTHS.setdefault(s["movement"], []).append(s["date"])
+def span(ds):
+    a, b = dt.date.fromisoformat(ds[0]), dt.date.fromisoformat(ds[-1])
+    fa, fb = a.strftime("%b"), b.strftime("%b")
+    yr = f" {b.year}"
+    return (fa if fa == fb else f"{fa}–{fb}") + yr
+out, movement, first = [], None, True
 for s in S:
     if s["movement"] != movement:
-        if movement: out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>')
+        if movement:
+            out.append("</ul>")
+            out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>\n</div></details>')
         movement = s["movement"]; prev_claim = s["movement_claim"]
-        out.append(f'<h3>{e(movement)}</h3>')
+        out.append(f'<details class="mv"{" open" if first else ""}><summary><span class="k">{span(MONTHS[movement])}</span>'
+                   f'<span><strong>{e(movement)}</strong></span></summary>\n<div class="body">')
+        first = False
     if s["first_in_topic"]:
         if out[-1].endswith("</li>"): out.append("</ul>")
         out.append(f'<p class="topic"><strong>{e(s["topic"])}.</strong> {e(s["topic_line"])} '
@@ -45,31 +57,48 @@ for s in S:
     extra = ""
     if s.get("also_read"):
         a = s["also_read"]
-        extra = (f'<br>\n    <span class="kind">with</span> <a href="{ea(a["url"])}">{e(a["title"])}</a> <span class="muted">{e(a["cite"])}</span>')
-    quotes = f'<q>{e(s["quote"])}</q>'
-    if s.get("also_read"):
-        quotes += f' <q>{e(s["also_read"]["quote"])}</q>'
-    out.append(f'  <li><time datetime="{s["date"]}">{label(s["date"])}</time>\n'
+        extra = f'<br>\n    <span class="kind">with</span> <a href="{ea(a["url"])}">{e(a["title"])}</a> <span class="muted">{e(a["cite"])}</span>'
+    quotes = f'<q>{e(s["quote"])}</q>' + (f' <q>{e(s["also_read"]["quote"])}</q>' if s.get("also_read") else "")
+    out.append(f'  <li id="s-{s["date"]}"><time datetime="{s["date"]}">{label(s["date"])}</time>\n'
                f'    <span class="what"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>{extra}<br>\n'
-               f'    <span class="kind">feature</span> <span class="muted">{e(s["feature"])}</span></span>\n'
+               f'    <span class="kind">show-and-tell</span> <span class="muted">{e(s["feature"])}</span></span>\n'
                f'    <span class="also quote">{quotes}</span></li>')
 out.append("</ul>")
-out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>')
-p = ROOT / "syllabus/index.html"
+out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>\n</div></details>')
+p = ROOT / "src/sessions.html"
 p.write_text(replace_between(p.read_text(), "schedule", "\n".join(out)))
 
-# --- homepage ---
-home = [f'  <li><time datetime="{s["date"]}">{label(s["date"])}</time><span class="what">'
-        f'<a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">· {e(short_feature(s["feature"]))}</span></span></li>'
-        for s in S]
+# --- structured data (schema.org) on the sessions page ---
+events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
+           "startDate": f"{s['date']}T15:30:00Z", "endDate": f"{s['date']}T16:30:00Z",
+           "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+           "eventStatus": "https://schema.org/EventScheduled",
+           "location": {"@type": "VirtualLocation", "url": DISCORD},
+           "about": {"@type": "CreativeWork", "name": s["title"], "url": s["url"]},
+           "description": f"{s['topic']}: {s['topic_line']} Show-and-tell: {s['feature']}.",
+           "organizer": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
+           "isAccessibleForFree": True} for s in S]
+series = {"@context": "https://schema.org", "@type": "EventSeries",
+          "name": "Protocols for Business SIG sessions", "url": SITE + "sessions/",
+          "startDate": S[0]["date"], "endDate": S[-1]["date"], "subEvent": events}
+p = ROOT / "src/sessions.html"
+p.write_text(replace_between(p.read_text(), "jsonld",
+    '<script type="application/ld+json">\n' + json.dumps(series, ensure_ascii=False, indent=1) + "\n</script>"))
+
+# --- public session data ---
+public = [{"date": s["date"], "start_utc": f"{s['date']}T15:30:00Z", "end_utc": f"{s['date']}T16:30:00Z",
+           "movement": s["movement"], "topic": s["topic"], "title": s["title"], "url": s["url"], "cite": s["cite"],
+           "quote": s["quote"], "companion": {"title": s["pi_title"], "url": s["pi_url"], "cite": s["pi_cite"]},
+           "feature": s["feature"], "feature_short": short_feature(s["feature"])} for s in S]
+(ROOT / "sessions.json").write_text(json.dumps(public, ensure_ascii=False, indent=1) + "\n")
+
+# --- homepage (v1 layouts only) ---
 p = ROOT / "index.html"
 t = p.read_text()
-if "<!-- schedule:start -->" in t:  # homepage list was removed in v1; kept for older layouts
-    t = replace_between(t, "schedule", '<ul class="schedule">\n' + "\n".join(home) + "\n</ul>")
-slim = [{k: s[k] for k in ("date", "title", "url", "cite", "feature")} for s in S]
-t = re.sub(r'(<script id="sessions" type="application/json">).*?(</script>)',
-           lambda m: m.group(1) + json.dumps(slim, ensure_ascii=False) + m.group(2), t, flags=re.S)
-p.write_text(t)
+if "<!-- schedule:start -->" in t:
+    home = [f'  <li><time datetime="{s["date"]}">{label(s["date"])}</time><span class="what">'
+            f'<a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">· {e(short_feature(s["feature"]))}</span></span></li>' for s in S]
+    p.write_text(replace_between(t, "schedule", '<ul class="schedule">\n' + "\n".join(home) + "\n</ul>"))
 
 # --- calendar ---
 def esc(s): return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
@@ -95,4 +124,4 @@ for s in S:
           fold("LOCATION:" + esc("Protocol Institute Discord · " + DISCORD)), f"URL:{SITE}", "END:VEVENT"]
 L.append("END:VCALENDAR")
 (ROOT / "sig-p4b.ics").write_text("\r\n".join(L) + "\r\n")
-print(f"{len(S)} sessions -> syllabus, homepage, sig-p4b.ics")
+print(f"{len(S)} sessions -> src/sessions.html, sessions.json, sig-p4b.ics")

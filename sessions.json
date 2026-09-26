@@ -1,0 +1,470 @@
+[
+ {
+  "date": "2026-11-02",
+  "start_utc": "2026-11-02T15:30:00Z",
+  "end_utc": "2026-11-02T16:30:00Z",
+  "movement": "I. Framing: recent swarms",
+  "topic": "Recent swarms",
+  "title": "The Hugging Face incident and the road ahead",
+  "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+  "cite": "OpenAI, 2026",
+  "quote": "The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another.",
+  "companion": {
+   "title": "Securing Stigmergic Systems",
+   "url": "https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems",
+   "cite": "Patrick Nast, Protocolized, 2026"
+  },
+  "feature": "Kickoff: how the year runs, and choosing your case",
+  "feature_short": "Kickoff"
+ },
+ {
+  "date": "2026-11-16",
+  "start_utc": "2026-11-16T15:30:00Z",
+  "end_utc": "2026-11-16T16:30:00Z",
+  "movement": "I. Framing: recent swarms",
+  "topic": "Recent swarms",
+  "title": "Patterns and problems in multiagent systems",
+  "url": "https://www.anthropic.com/research/multiagent-systems",
+  "cite": "Anthropic, 2026",
+  "quote": "We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.",
+  "companion": {
+   "title": "Securing Stigmergic Systems",
+   "url": "https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems",
+   "cite": "Patrick Nast, Protocolized, 2026"
+  },
+  "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)",
+  "feature_short": "Guest: Formal Protocol Theory SIG"
+ },
+ {
+  "date": "2026-11-30",
+  "start_utc": "2026-11-30T15:30:00Z",
+  "end_utc": "2026-11-30T16:30:00Z",
+  "movement": "II. Swarms are nature",
+  "topic": "Broadcast, trace, threshold",
+  "title": "The Ecology of Collective Behavior",
+  "url": "https://doi.org/10.1371/journal.pbio.1001805",
+  "cite": "Gordon, 2014",
+  "quote": "In most ant species studied so far it seems that the allocation of tasks, or functions, to ants, uses a distributed system; changes in conditions shift the rate of local interaction that regulates ant activity",
+  "companion": {
+   "title": "Pond brains and GPT-4",
+   "url": "https://newsletter.squishy.computer/p/pond-brains-and-gpt-4",
+   "cite": "Gordon Brander, Squishy Computer, 2023"
+  },
+  "feature": "Case pitches: one paragraph each",
+  "feature_short": "Case pitches"
+ },
+ {
+  "date": "2026-12-14",
+  "start_utc": "2026-12-14T15:30:00Z",
+  "end_utc": "2026-12-14T16:30:00Z",
+  "movement": "II. Swarms are nature",
+  "topic": "Broadcast, trace, threshold",
+  "title": "Quorum Sensing in Bacteria",
+  "url": "https://doi.org/10.1146/annurev.micro.55.1.165",
+  "cite": "Miller & Bassler, 2001",
+  "quote": "Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression.",
+  "companion": {
+   "title": "Pond brains and GPT-4",
+   "url": "https://newsletter.squishy.computer/p/pond-brains-and-gpt-4",
+   "cite": "Gordon Brander, Squishy Computer, 2023"
+  },
+  "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)",
+  "feature_short": "Guest: Distributed Robotics Group"
+ },
+ {
+  "date": "2027-01-11",
+  "start_utc": "2027-01-11T15:30:00Z",
+  "end_utc": "2027-01-11T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "From files to flows",
+  "title": "The Filing Cabinet",
+  "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
+  "cite": "Robertson, 2021",
+  "quote": "The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.",
+  "companion": {
+   "title": "Inbox Zero versus Flow Laminar",
+   "url": "https://ribbonfarm.com/2015/07/21/inbox-zero-versus-flow-laminar/",
+   "cite": "Venkatesh Rao, Ribbonfarm, 2015"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-01-25",
+  "start_utc": "2027-01-25T15:30:00Z",
+  "end_utc": "2027-01-25T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "From files to flows",
+  "title": "The Log: What every software engineer should know about real-time data's unifying abstraction",
+  "url": "https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
+  "cite": "Kreps, 2013",
+  "quote": "The log is the natural data structure for handling data flow between systems. The recipe is very simple: Take all the organization's data and put it into a central log for real-time subscription.",
+  "companion": {
+   "title": "Inbox Zero versus Flow Laminar",
+   "url": "https://ribbonfarm.com/2015/07/21/inbox-zero-versus-flow-laminar/",
+   "cite": "Venkatesh Rao, Ribbonfarm, 2015"
+  },
+  "feature": "Guest: Psychohistory SIG (Prophecy Protocols)",
+  "feature_short": "Guest: Psychohistory SIG"
+ },
+ {
+  "date": "2027-02-08",
+  "start_utc": "2027-02-08T15:30:00Z",
+  "end_utc": "2027-02-08T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Events and feeds",
+  "title": "Contracts: Events",
+  "url": "https://docs.soliditylang.org/en/latest/contracts.html",
+  "cite": "Solidity documentation",
+  "quote": "Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.",
+  "companion": {
+   "title": "Nature's many attempts to evolve a Nostr",
+   "url": "https://newsletter.squishy.computer/p/natures-many-attempts-to-evolve-a",
+   "cite": "Gordon Brander, Squishy Computer, 2024"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-02-22",
+  "start_utc": "2027-02-22T15:30:00Z",
+  "end_utc": "2027-02-22T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Events and feeds",
+  "title": "RSS 2.0 Specification",
+  "url": "https://www.rssboard.org/rss-specification",
+  "cite": "RSS Advisory Board, 2003",
+  "quote": "ttl stands for time to live. It's a number of minutes that indicates how long a channel can be cached before refreshing from the source.",
+  "companion": {
+   "title": "Nature's many attempts to evolve a Nostr",
+   "url": "https://newsletter.squishy.computer/p/natures-many-attempts-to-evolve-a",
+   "cite": "Gordon Brander, Squishy Computer, 2024"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-03-08",
+  "start_utc": "2027-03-08T15:30:00Z",
+  "end_utc": "2027-03-08T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Boards and notes",
+  "title": "The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
+  "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537",
+  "cite": "Nii, 1986",
+  "quote": "Knowledge sources produce changes to the blackboard that lead incrementally to a solution to the problem. Communication and interaction among the knowledge sources take place solely through the blackboard.",
+  "companion": {
+   "title": "Unprotocolized Knowledge",
+   "url": "https://summerofprotocols.com/research/module-four/unprotocolized-knowledge",
+   "cite": "Kara Kittel & Toby Shorin, Summer of Protocols, 2024"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-03-22",
+  "start_utc": "2027-03-22T15:30:00Z",
+  "end_utc": "2027-03-22T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Boards and notes",
+  "title": "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation",
+  "url": "https://arxiv.org/abs/2210.15723",
+  "cite": "Wojcik et al., 2022",
+  "quote": "It could help set better norms for crowd-based discussions of social media posts by rewarding content that is informative and appreciated by a wide range of people.",
+  "companion": {
+   "title": "Unprotocolized Knowledge",
+   "url": "https://summerofprotocols.com/research/module-four/unprotocolized-knowledge",
+   "cite": "Kara Kittel & Toby Shorin, Summer of Protocols, 2024"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-04-05",
+  "start_utc": "2027-04-05T15:30:00Z",
+  "end_utc": "2027-04-05T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Who's listening",
+  "title": "The Information Bus: An Architecture for Extensible Distributed Systems",
+  "url": "https://doi.org/10.1145/168619.168624",
+  "cite": "Oki, Pfluegl, Siegel & Skeen, 1993",
+  "quote": "To disseminate data objects, data producers generate them, label them with an appropriate subject, and publish them on the Information Bus. To receive such objects, data consumers subscribe to the same subject.",
+  "companion": {
+   "title": "Agents are actors",
+   "url": "https://newsletter.squishy.computer/p/agents-are-actors",
+   "cite": "Gordon Brander, Squishy Computer, 2026"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-04-19",
+  "start_utc": "2027-04-19T15:30:00Z",
+  "end_utc": "2027-04-19T16:30:00Z",
+  "movement": "III. How systems emit",
+  "topic": "Who's listening",
+  "title": "Model Context Protocol Specification",
+  "url": "https://modelcontextprotocol.io/specification/latest",
+  "cite": "modelcontextprotocol.io, 2024–",
+  "quote": "subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.",
+  "companion": {
+   "title": "Agents are actors",
+   "url": "https://newsletter.squishy.computer/p/agents-are-actors",
+   "cite": "Gordon Brander, Squishy Computer, 2026"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-05-03",
+  "start_utc": "2027-05-03T15:30:00Z",
+  "end_utc": "2027-05-03T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Signals between people",
+  "title": "The Use of Knowledge in Society",
+  "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+  "cite": "Hayek, 1945",
+  "quote": "We must look at the price system as such a mechanism for communicating information if we want to understand its real function…",
+  "companion": {
+   "title": "Outsider Trading",
+   "url": "https://kneelingbus.substack.com/p/outsider-trading",
+   "cite": "Drew Austin, Kneeling Bus, 2026"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-05-17",
+  "start_utc": "2027-05-17T15:30:00Z",
+  "end_utc": "2027-05-17T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Signals between people",
+  "title": "Job Market Signaling",
+  "url": "https://doi.org/10.2307/1882010",
+  "cite": "Spence, 1973",
+  "quote": "It is not difficult to see that a signal will not effectively distinguish one applicant from another, unless the costs of signaling are negatively correlated with productive capability.",
+  "companion": {
+   "title": "Outsider Trading",
+   "url": "https://kneelingbus.substack.com/p/outsider-trading",
+   "cite": "Drew Austin, Kneeling Bus, 2026"
+  },
+  "feature": "Guest: Personhood Research Group (Personhood Transformations)",
+  "feature_short": "Guest: Personhood Research Group"
+ },
+ {
+  "date": "2027-05-31",
+  "start_utc": "2027-05-31T15:30:00Z",
+  "end_utc": "2027-05-31T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Teams that sense together",
+  "title": "Collective Mind in Organizations: Heedful Interrelating on Flight Decks",
+  "url": "https://doi.org/10.2307/2393372",
+  "cite": "Weick & Roberts, 1993",
+  "quote": "Collective mind is conceptualized as a pattern of heedful interrelations of actions in a social system.",
+  "companion": {
+   "title": "Coordinate Leadership",
+   "url": "https://blundercheck.timberschroff.com/p/coordinate-leadership",
+   "cite": "Timber Stinson-Schroff, Blundercheck, 2025"
+  },
+  "feature": "Guest: Memory Research Group (Organizational Memory Architecture)",
+  "feature_short": "Guest: Memory Research Group"
+ },
+ {
+  "date": "2027-06-14",
+  "start_utc": "2027-06-14T15:30:00Z",
+  "end_utc": "2027-06-14T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Teams that sense together",
+  "title": "How a Cockpit Remembers Its Speeds",
+  "url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1",
+  "cite": "Hutchins, 1995",
+  "quote": "The cockpit system remembers its speeds, and the memory process emerges from the activity of the pilots. The memory of the cockpit, however, is not made primarily of pilot memory.",
+  "companion": {
+   "title": "Coordinate Leadership",
+   "url": "https://blundercheck.timberschroff.com/p/coordinate-leadership",
+   "cite": "Timber Stinson-Schroff, Blundercheck, 2025"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-06-28",
+  "start_utc": "2027-06-28T15:30:00Z",
+  "end_utc": "2027-06-28T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Organizations that broadcast",
+  "title": "Designing Freedom",
+  "url": "https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf",
+  "cite": "Beer, 1973",
+  "quote": "What is it that controls variety? The answer is dead simple: variety. Variety absorbs variety, and nothing else can.",
+  "companion": {
+   "title": "Prophetic Soft Technologies",
+   "url": "https://summerlightning.substack.com/p/prophetic-soft-technologies",
+   "cite": "Sachin Benny, Summer Lightning, 2025"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-07-12",
+  "start_utc": "2027-07-12T15:30:00Z",
+  "end_utc": "2027-07-12T16:30:00Z",
+  "movement": "IV. How people and organizations emit",
+  "topic": "Organizations that broadcast",
+  "title": "Form 8-K: General Instructions",
+  "url": "https://www.sec.gov/files/form8-k.pdf",
+  "cite": "U.S. Securities and Exchange Commission",
+  "quote": "A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident.",
+  "companion": {
+   "title": "Prophetic Soft Technologies",
+   "url": "https://summerlightning.substack.com/p/prophetic-soft-technologies",
+   "cite": "Sachin Benny, Summer Lightning, 2025"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-07-26",
+  "start_utc": "2027-07-26T15:30:00Z",
+  "end_utc": "2027-07-26T16:30:00Z",
+  "movement": "V. Rereading business planning",
+  "topic": "The firm, re-seen",
+  "title": "The Nature of the Firm",
+  "url": "https://doi.org/10.1111/j.1468-0335.1937.tb00002.x",
+  "cite": "Coase, 1937",
+  "quote": "The main reason why it is profitable to establish a firm would seem to be that there is a cost of using the price mechanism.",
+  "companion": {
+   "title": "Why Does AI Development Look Like 1980s Software Planning?",
+   "url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
+   "cite": "Sachin Benny, Summer Lightning, 2025"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-08-09",
+  "start_utc": "2027-08-09T15:30:00Z",
+  "end_utc": "2027-08-09T16:30:00Z",
+  "movement": "V. Rereading business planning",
+  "topic": "The firm, re-seen",
+  "title": "Organization Design: An Information Processing View",
+  "url": "https://doi.org/10.1287/inte.4.3.28",
+  "cite": "Galbraith, 1974",
+  "quote": "Therefore the greater the task uncertainty, the greater the amount of information that must be processed among decision makers during task execution in order to achieve a given level of performance.",
+  "companion": {
+   "title": "Why Does AI Development Look Like 1980s Software Planning?",
+   "url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
+   "cite": "Sachin Benny, Summer Lightning, 2025"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-08-23",
+  "start_utc": "2027-08-23T15:30:00Z",
+  "end_utc": "2027-08-23T16:30:00Z",
+  "movement": "V. Rereading business planning",
+  "topic": "Redesign and capture",
+  "title": "Reengineering Work: Don't Automate, Obliterate",
+  "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
+  "cite": "Hammer, 1990",
+  "quote": "It is time to stop paving the cow paths. Instead of embedding outdated processes in silicon and software, we should obliterate them and start over.",
+  "companion": {
+   "title": "Coordination Headwinds",
+   "url": "https://contraptions.venkateshrao.com/p/coordination-headwinds",
+   "cite": "Venkatesh Rao, Contraptions, 2021"
+  },
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
+ },
+ {
+  "date": "2027-09-06",
+  "start_utc": "2027-09-06T15:30:00Z",
+  "end_utc": "2027-09-06T16:30:00Z",
+  "movement": "V. Rereading business planning",
+  "topic": "Redesign and capture",
+  "title": "Aggregation Theory",
+  "url": "https://stratechery.com/2015/aggregation-theory/",
+  "cite": "Thompson, 2015",
+  "quote": "Secondly, the Internet has made transaction costs zero, making it viable for a distributor to integrate forward with end users/consumers at scale.",
+  "companion": {
+   "title": "Coordination Headwinds",
+   "url": "https://contraptions.venkateshrao.com/p/coordination-headwinds",
+   "cite": "Venkatesh Rao, Contraptions, 2021"
+  },
+  "feature": "Guest: Protocol Fiction SIG (Protocol Futurism)",
+  "feature_short": "Guest: Protocol Fiction SIG"
+ },
+ {
+  "date": "2027-09-20",
+  "start_utc": "2027-09-20T15:30:00Z",
+  "end_utc": "2027-09-20T16:30:00Z",
+  "movement": "VI. Tending the environment",
+  "topic": "Governing swarms",
+  "title": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+  "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
+  "cite": "Ostrom, 2009",
+  "quote": "Extensive empirical research leads me to argue that instead, a core goal of public policy should be to facilitate the development of institutions that bring out the best in humans.",
+  "companion": {
+   "title": "The Problem with Perfect Rules",
+   "url": "https://blundercheck.timberschroff.com/p/the-problem-with-perfect-rules",
+   "cite": "Timber Stinson-Schroff, Blundercheck, 2026"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-10-04",
+  "start_utc": "2027-10-04T15:30:00Z",
+  "end_utc": "2027-10-04T16:30:00Z",
+  "movement": "VI. Tending the environment",
+  "topic": "Governing swarms",
+  "title": "Ironies of Automation",
+  "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
+  "cite": "Bainbridge, 1983",
+  "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
+  "companion": {
+   "title": "The Problem with Perfect Rules",
+   "url": "https://blundercheck.timberschroff.com/p/the-problem-with-perfect-rules",
+   "cite": "Timber Stinson-Schroff, Blundercheck, 2026"
+  },
+  "feature": "Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project",
+  "feature_short": "Cognitive Ergonomics project"
+ },
+ {
+  "date": "2027-10-18",
+  "start_utc": "2027-10-18T15:30:00Z",
+  "end_utc": "2027-10-18T16:30:00Z",
+  "movement": "VI. Tending the environment",
+  "topic": "Measure, then bootstrap",
+  "title": "Assessing the Impact of Planned Social Change",
+  "url": "https://jmde.com/index.php/jmde_1/article/view/297",
+  "cite": "Campbell, 1976",
+  "quote": "The more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.",
+  "companion": {
+   "title": "Goodhart's Law and Why Measurement is Hard",
+   "url": "https://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measurement-is-hard/",
+   "cite": "David Manheim, Ribbonfarm, 2016"
+  },
+  "feature": "Case study progress",
+  "feature_short": "Case study progress"
+ },
+ {
+  "date": "2027-11-01",
+  "start_utc": "2027-11-01T15:30:00Z",
+  "end_utc": "2027-11-01T16:30:00Z",
+  "movement": "VI. Tending the environment",
+  "topic": "Measure, then bootstrap",
+  "title": "Improving Our Ability to Improve",
+  "url": "https://worrydream.com/refs/Engelbart_2003_-_Improving_Our_Ability_to_Improve.pdf",
+  "cite": "Engelbart, 2003",
+  "quote": "When you are operating at the C-level, collaboration can produce much larger returns than competition.",
+  "companion": {
+   "title": "Goodhart's Law and Why Measurement is Hard",
+   "url": "https://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measurement-is-hard/",
+   "cite": "David Manheim, Ribbonfarm, 2016"
+  },
+  "feature": "Thesis session: drafting the AI-native, post-platform organization",
+  "feature_short": "Thesis session"
+ }
+]

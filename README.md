@@ -59,3 +59,21 @@ The homepage Register button opens a dialog (a bottom drawer on phones) that pos
 The script rebuilds `sig-p4b.ics`, the subscribable calendar with times in UTC (15:30–16:30), and refreshes the homepage's "Next session" box, which picks the next upcoming session in the reader's browser. Run `./deploy.sh` afterwards.
 
 Recordings go in the homepage's "Past sessions" archive. A commented template entry is in `index.html`.
+
+## v2 layout (branch `v2`)
+
+Pages are built from `src/*.html` bodies:
+
+    python3 tools/build_schedule.py   # sessions.json -> src/sessions.html syllabus, schema.org data, sessions.json, sig-p4b.ics
+    python3 tools/build_site.py       # src/*.html -> page files, redirect stubs, llms.txt
+
+| Path | Page |
+|---|---|
+| `/` | Home: next session, what we do, highlights |
+| `about/` | Protocol vision, origins, people, work so far |
+| `sessions/` | Joining details, session format, syllabus, archive |
+| `research/`, `research/cases/` | 2027 focus, questions, case cards; full case briefs and template |
+| `play/`, `play/watching/` | Protocol watching, workshops, simulation; the watching guide |
+| `llms.txt`, `sessions.json` | Machine-readable summary and session data |
+
+The next-session card and the register dialog come from `assets/site.js`. Old URLs (`syllabus/`, `observations/`, `case-studies/`, `simulation/`) redirect to the new pages. v1 is tagged `v1`.
