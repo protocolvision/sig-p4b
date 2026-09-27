@@ -70,7 +70,7 @@ Keep construction client details anonymized. The client is not named anywhere in
 
 The homepage Register button opens a dialog (a bottom drawer on phones) that posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-signup` on rafaeldf2.workers.dev) that stores sign-ups in KV.
 
-- **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. Columns: name, email, affiliation, website, github, discord, role (member or pi-core), signed_up, source, unsubscribe_url. It reads the secret from `~/.config/sig-p4b/export_secret`.
+- **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. Columns: name, email, affiliation, website, github, discord, role (member or pi-core), signed_up, source, updated, unsubscribe_url. Registering again merges: new non-empty fields update the record, empty ones keep existing values, and the original signup date, source, and role are kept. It reads the secret from `~/.config/sig-p4b/export_secret`.
 - **Unsubscribe links:** each row has one. Include it in every session email.
 - **Redeploy the worker:** `cd worker && npx wrangler deploy`.
 

@@ -26,8 +26,9 @@ interface Signup {
   github: string;
   discord: string;
   role?: string;
-  ts: string;
-  source: string;
+  ts: string;        // first signed up (kept on re-registration)
+  source: string;    // where they first signed up (kept on re-registration)
+  updated?: string;  // latest registration that changed or confirmed the record
 }
 
 const SITE = "https://npc.here.now/protocolvision/";
@@ -112,18 +113,40 @@ async function signup(req: Request, env: Env): Promise<Response> {
   let website = clean(body.website, 200);
   if (website && !/^https?:\/\//i.test(website)) website = "https://" + website;
   if (website && !/^https?:\/\/[^\s]+\.[^\s]+$/i.test(website)) return done(false, "Please check the website address.");
-  const row: Signup = {
+  const now = new Date().toISOString();
+  const incoming: Signup = {
     name: clean(body.name, 100),
     email,
     affiliation: clean(body.affiliation, 150),
     website,
     github: clean(body.github, 60).replace(/^@/, "").replace(/^https?:\/\/github\.com\//i, "").replace(/\/$/, ""),
     discord: clean(body.discord, 60).replace(/^@/, ""),
-    ts: new Date().toISOString(),
+    ts: now,
     source: (body.source || "site").slice(0, 50),
   };
-  const prev = await env.SIGNUPS.get(`sub:${email}`);
-  if (prev) { try { row.role = (JSON.parse(prev) as Signup).role; } catch {} }
+  // Re-registration merges: non-empty new fields update the record, empty ones keep what's there,
+  // and the original signup date, source, and role are preserved. The response is the same either
+  // way, so the form never reveals whether an address was already on the list.
+  let row = incoming;
+  const prevRaw = await env.SIGNUPS.get(`sub:${email}`);
+  if (prevRaw) {
+    try {
+      const prev = JSON.parse(prevRaw) as Signup;
+      const pick = (a: string, b: string | undefined) => (a ? a : b ?? "");
+      row = {
+        name: pick(incoming.name, prev.name),
+        email,
+        affiliation: pick(incoming.affiliation, prev.affiliation),
+        website: pick(incoming.website, prev.website),
+        github: pick(incoming.github, prev.github),
+        discord: pick(incoming.discord, prev.discord),
+        role: prev.role,
+        ts: prev.ts || now,
+        source: prev.source || incoming.source,
+        updated: now,
+      };
+    } catch { /* unreadable old record: store the new one */ }
+  }
   await env.SIGNUPS.put(`sub:${email}`, JSON.stringify(row));
   return done(true);
 }
@@ -136,7 +159,7 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
   if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) {
     return new Response("Forbidden", { status: 403 });
   }
-  const rows: string[] = ["name,email,affiliation,website,github,discord,role,signed_up,source,unsubscribe_url"];
+  const rows: string[] = ["name,email,affiliation,website,github,discord,role,signed_up,source,updated,unsubscribe_url"];
   let cursor: string | undefined;
   do {
     const page = await env.SIGNUPS.list({ prefix: "sub:", cursor });
@@ -146,7 +169,7 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
       const r = JSON.parse(v) as Signup;
       const t = await token(r.email, env.EXPORT_SECRET);
       const unsub = `${origin}/unsubscribe?email=${encodeURIComponent(r.email)}&t=${t}`;
-      rows.push([r.name, r.email, r.affiliation, r.website ?? "", r.github ?? "", r.discord ?? "", r.role ?? "member", r.ts, r.source, unsub]
+      rows.push([r.name, r.email, r.affiliation, r.website ?? "", r.github ?? "", r.discord ?? "", r.role ?? "member", r.ts, r.source, r.updated ?? "", unsub]
         .map(csvCell).join(","));
     }
     cursor = page.list_complete ? undefined : page.cursor;
