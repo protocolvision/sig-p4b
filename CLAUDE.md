@@ -10,3 +10,4 @@
 - Schedule changes: edit `tools/sessions.json`, run `python3 tools/build_schedule.py`, then keep the syllabus page, the homepage schedule list, and the observation prompts in sync.
 - Sessions are fixed at 15:30 UTC (Berlin local time moves with DST). Sessions are recorded; say so wherever meeting details appear.
 - v2: edit `src/*.html` (never the generated page files), then run `tools/build_schedule.py` and `tools/build_site.py`. `src/sessions.html` contains generated regions between markers.
+- Blyg: sources in `blyg-src/` (commit = publish; never rename files). `./deploy.sh` builds and runs `tools/blyg_check.py` before publishing. Mark model-written text with `::: generated` fences.

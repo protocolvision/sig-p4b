@@ -50,6 +50,7 @@ def page(meta, body):
 <meta name="twitter:description" content="{a(desc)}">
 <meta name="twitter:image" content="{card}">
 <link rel="alternate" type="text/plain" title="Summary for language models" href="{rel}llms.txt">
+<link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="{rel}blyg/feed.xml">
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="{rel}style.css">
@@ -65,7 +66,7 @@ def page(meta, body):
 </main>
 <footer>
 <p><img class="mark" src="{rel}favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
-<nav>{foot_nav}<a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision/sig-p4b">Source</a><a href="{rel}llms.txt">llms.txt</a></nav>
+<nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision/sig-p4b">Source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" defer></script>
 </body>
@@ -109,6 +110,10 @@ def write_llms():
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol Play]({SITE}play/): protocol watching, workshops, simulation
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
+
+## Blyg (session notes and research log)
+- [Blyg]({SITE}blyg/): session notes and the running research log, published with the Blygger protocol 0.2 (https://blygger.org/)
+- [Feed]({SITE}blyg/feed.xml) · [Manifest]({SITE}blyg/blyg.json) · [Archive index]({SITE}blyg/items/index.json)
 
 ## Data
 - [sessions.json]({SITE}sessions.json): all 26 sessions with date, reading, quote, companion essay, and show-and-tell

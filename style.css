@@ -329,3 +329,9 @@ header .home { padding: 11px 0; margin: -11px 0; }
 }
 header .home .brand-sep { color: var(--muted); margin: 0 0.1rem; }
 header .home .brand-sub { color: var(--tint); }
+
+/* Blyg items */
+.blyg-item { margin-top: 1.5rem; }
+.blyg-item h1 { font: 400 2.2rem/1.15 "Instrument Serif", Georgia, serif; margin: 0 0 1rem; }
+blockquote.blyg-transclusion { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 0; border-radius: 12px; background: var(--fill, #f5f5f7); color: var(--fg); }
+blockquote.blyg-transclusion p { margin: 0.3rem 0; }

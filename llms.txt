@@ -10,6 +10,10 @@
 - [Protocol Play](https://npc.here.now/protocolvision/play/): protocol watching, workshops, simulation
 - [Protocol watching guide](https://npc.here.now/protocolvision/play/watching/): how to see and record a business protocol
 
+## Blyg (session notes and research log)
+- [Blyg](https://npc.here.now/protocolvision/blyg/): session notes and the running research log, published with the Blygger protocol 0.2 (https://blygger.org/)
+- [Feed](https://npc.here.now/protocolvision/blyg/feed.xml) · [Manifest](https://npc.here.now/protocolvision/blyg/blyg.json) · [Archive index](https://npc.here.now/protocolvision/blyg/items/index.json)
+
 ## Data
 - [sessions.json](https://npc.here.now/protocolvision/sessions.json): all 26 sessions with date, reading, quote, companion essay, and show-and-tell
 - [Calendar (.ics)](https://npc.here.now/protocolvision/sig-p4b.ics): subscribable; times in UTC
