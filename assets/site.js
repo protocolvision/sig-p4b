@@ -31,7 +31,7 @@
         var local = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
         when.textContent = day + ' · 15:30 UTC (' + local + ' your time)';
         what.textContent = '';
-        var a = document.createElement('a'); a.href = n.url; a.textContent = n.title; what.appendChild(a);
+        var a = document.createElement('a'); a.href = n.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = n.title; what.appendChild(a);
         var m = document.createElement('span'); m.className = 'muted small';
         m.textContent = ' ' + n.cite + ' · ' + n.feature_short; what.appendChild(m);
       });

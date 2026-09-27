@@ -20,6 +20,17 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;500&display=swap">')
 
+EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
+
+def external_links(doc):
+    """Open links to other sites in a new tab; links within this site navigate as usual."""
+    def fix(m):
+        attrs, url = m.group(1), m.group(2)
+        if url.startswith(SITE):
+            return m.group(0)
+        return f'<a {attrs} target="_blank" rel="noopener noreferrer">'
+    return EXTERNAL_A.sub(fix, doc)
+
 def page(meta, body):
     path = meta["path"]
     rel = "../" * path.count("/")
@@ -31,7 +42,7 @@ def page(meta, body):
         for k, label, p in NAV)
     foot_nav = "".join(f'<a href="{rel}{p}">{label}</a>' for k, label, p in NAV)
     extra_head = meta.get("head", "")
-    return f"""<!doctype html>
+    return external_links(f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +82,7 @@ def page(meta, body):
 <script src="{rel}assets/site.js" data-root="{rel or './'}" defer></script>
 </body>
 </html>
-"""
+""")
 
 def main():
     built = []
