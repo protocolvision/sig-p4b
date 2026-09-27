@@ -25,6 +25,7 @@ interface Signup {
   website: string;
   github: string;
   discord: string;
+  role?: string;
   ts: string;
   source: string;
 }
@@ -121,6 +122,8 @@ async function signup(req: Request, env: Env): Promise<Response> {
     ts: new Date().toISOString(),
     source: (body.source || "site").slice(0, 50),
   };
+  const prev = await env.SIGNUPS.get(`sub:${email}`);
+  if (prev) { try { row.role = (JSON.parse(prev) as Signup).role; } catch {} }
   await env.SIGNUPS.put(`sub:${email}`, JSON.stringify(row));
   return done(true);
 }
@@ -133,7 +136,7 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
   if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) {
     return new Response("Forbidden", { status: 403 });
   }
-  const rows: string[] = ["name,email,affiliation,website,github,discord,signed_up,source,unsubscribe_url"];
+  const rows: string[] = ["name,email,affiliation,website,github,discord,role,signed_up,source,unsubscribe_url"];
   let cursor: string | undefined;
   do {
     const page = await env.SIGNUPS.list({ prefix: "sub:", cursor });
@@ -143,7 +146,7 @@ async function exportCsv(req: Request, env: Env, origin: string): Promise<Respon
       const r = JSON.parse(v) as Signup;
       const t = await token(r.email, env.EXPORT_SECRET);
       const unsub = `${origin}/unsubscribe?email=${encodeURIComponent(r.email)}&t=${t}`;
-      rows.push([r.name, r.email, r.affiliation, r.website ?? "", r.github ?? "", r.discord ?? "", r.ts, r.source, unsub]
+      rows.push([r.name, r.email, r.affiliation, r.website ?? "", r.github ?? "", r.discord ?? "", r.role ?? "member", r.ts, r.source, unsub]
         .map(csvCell).join(","));
     }
     cursor = page.list_complete ? undefined : page.cursor;
