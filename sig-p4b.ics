@@ -7,7 +7,7 @@ X-WR-CALNAME:Protocols for Business SIG
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20261102T153000Z
 DTEND:20261102T163000Z
 SUMMARY:SIG P4B · The Hugging Face incident and the road ahead
@@ -28,7 +28,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:SIG P4B · Patterns and problems in multiagent systems
@@ -49,48 +49,48 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
-SUMMARY:SIG P4B · The Ecology of Collective Behavior
-DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
- te with no one in charge.\n\nReading: The Ecology of Collective Behavior 
- (Gordon\, 2014)\nhttps://doi.org/10.1371/journal.pbio.1001805\n“In most
-  ant species studied so far it seems that the allocation of tasks\, or fu
- nctions\, to ants\, uses a distributed system\; changes in conditions shi
- ft the rate of local interaction that regulates ant activity”\n\nAlongs
- ide: Pond brains and GPT-4 (Gordon Brander\, Squishy Computer\, 2023)\nht
- tps://newsletter.squishy.computer/p/pond-brains-and-gpt-4\n\nFeature: Cas
- e pitches: one paragraph each\n\nJoin on the Protocol Institute Discord: 
- https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvisi
- on/syllabus/\nSessions are recorded.
+SUMMARY:SIG P4B · The Principles of Collective Animal Behaviour
+DESCRIPTION:Broadcast\, trace\, threshold: How animal groups and cells coo
+ rdinate with no one in charge.\n\nReading: The Principles of Collective A
+ nimal Behaviour (Sumpter\, 2006)\nhttps://pmc.ncbi.nlm.nih.gov/articles/P
+ MC1626537/\n“I argue that the key to understanding collective behaviour
+  lies in identifying the principles of the behavioural algorithms followe
+ d by individual animals and of how information flows between the animals.
+ ”\n\nAlongside: Pond brains and GPT-4 (Gordon Brander\, Squishy Compute
+ r\, 2023)\nhttps://newsletter.squishy.computer/p/pond-brains-and-gpt-4\n\
+ nFeature: Case pitches: one paragraph each\n\nJoin on the Protocol Instit
+ ute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now
+ /protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:SIG P4B · Quorum Sensing in Bacteria
-DESCRIPTION:Broadcast\, trace\, threshold: How colonies and cells coordina
- te with no one in charge.\n\nReading: Quorum Sensing in Bacteria (Miller 
- & Bassler\, 2001)\nhttps://doi.org/10.1146/annurev.micro.55.1.165\n“Quo
- rum sensing bacteria produce and release chemical signal molecules called
-  autoinducers that increase in concentration as a function of cell densit
- y. The detection of a minimal threshold stimulatory concentration of an a
- utoinducer leads to an alteration in gene expression.”\n\nAlongside: Po
- nd brains and GPT-4 (Gordon Brander\, Squishy Computer\, 2023)\nhttps://n
- ewsletter.squishy.computer/p/pond-brains-and-gpt-4\n\nFeature: Guest: Dis
- tributed Robotics Group (Decentralized Robot Markets)\n\nJoin on the Prot
- ocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://n
- pc.here.now/protocolvision/syllabus/\nSessions are recorded.
+DESCRIPTION:Broadcast\, trace\, threshold: How animal groups and cells coo
+ rdinate with no one in charge.\n\nReading: Quorum Sensing in Bacteria (Mi
+ ller & Bassler\, 2001)\nhttps://doi.org/10.1146/annurev.micro.55.1.165\n
+ “Quorum sensing bacteria produce and release chemical signal molecules 
+ called autoinducers that increase in concentration as a function of cell 
+ density. The detection of a minimal threshold stimulatory concentration o
+ f an autoinducer leads to an alteration in gene expression.”\n\nAlongsi
+ de: Pond brains and GPT-4 (Gordon Brander\, Squishy Computer\, 2023)\nhtt
+ ps://newsletter.squishy.computer/p/pond-brains-and-gpt-4\n\nFeature: Gues
+ t: Distributed Robotics Group (Decentralized Robot Markets)\n\nJoin on th
+ e Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: htt
+ ps://npc.here.now/protocolvision/syllabus/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:SIG P4B · The Filing Cabinet
@@ -111,7 +111,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:SIG P4B · The Log: What every software engineer should know about
@@ -135,7 +135,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:SIG P4B · Contracts: Events
@@ -155,7 +155,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:SIG P4B · RSS 2.0 Specification
@@ -174,7 +174,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:SIG P4B · The Blackboard Model of Problem Solving and the Evoluti
@@ -196,7 +196,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
 SUMMARY:SIG P4B · Birdwatch: Crowd Wisdom and Bridging Algorithms can Inf
@@ -218,7 +218,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:SIG P4B · The Information Bus: An Architecture for Extensible Dis
@@ -239,7 +239,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:SIG P4B · Model Context Protocol Specification
@@ -259,7 +259,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:SIG P4B · The Use of Knowledge in Society
@@ -277,7 +277,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270517T153000Z
 DTEND:20270517T163000Z
 SUMMARY:SIG P4B · Job Market Signaling
@@ -296,7 +296,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270531T153000Z
 DTEND:20270531T163000Z
 SUMMARY:SIG P4B · Collective Mind in Organizations: Heedful Interrelating
@@ -317,7 +317,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270614T153000Z
 DTEND:20270614T163000Z
 SUMMARY:SIG P4B · How a Cockpit Remembers Its Speeds
@@ -337,7 +337,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270628T153000Z
 DTEND:20270628T163000Z
 SUMMARY:SIG P4B · Designing Freedom
@@ -357,7 +357,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:SIG P4B · Form 8-K: General Instructions
@@ -377,7 +377,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
 SUMMARY:SIG P4B · The Nature of the Firm
@@ -396,7 +396,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:SIG P4B · Organization Design: An Information Processing View
@@ -416,7 +416,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:SIG P4B · Reengineering Work: Don't Automate\, Obliterate
@@ -435,7 +435,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:SIG P4B · Aggregation Theory
@@ -454,7 +454,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:SIG P4B · Beyond Markets and States: Polycentric Governance of Co
@@ -475,7 +475,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:SIG P4B · Ironies of Automation
@@ -495,7 +495,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:SIG P4B · Assessing the Impact of Planned Social Change
@@ -516,7 +516,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20260926T160415Z
+DTSTAMP:20260927T051442Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:SIG P4B · Improving Our Ability to Improve
