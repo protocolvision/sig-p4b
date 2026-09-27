@@ -302,15 +302,15 @@ def write_pages(ordered, stems):
     from build_site import page
     alt = '<link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="{rel}blyg/feed.xml">\n'
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
-    groups = {"log": [], "sessions": [], "notes": []}
+    groups = {"log": [], "updates": [], "sessions": [], "notes": []}
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
         stem = stems.get(d["id"], "")
         m = re.match(r"session-(\d{4}-\d{2}-\d{2})", stem)
         shown = m.group(1) + "T00:00:00Z" if m else d["updated"]
-        key = "sessions" if m else ("log" if d["kind"] == "thread" else "notes")
-        kind_label = "session notes" if m else d["kind"]
+        key = "sessions" if m else ("log" if stem == "research-log" else "updates" if d["kind"] == "thread" else "notes")
+        kind_label = "session notes" if m else ("update" if key == "updates" else d["kind"])
         groups[key].append((shown, f'  <li><time datetime="{shown[:10]}">{date(shown)}</time><span class="what">'
             f'<a href="{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/">{html.escape(title_of(d, d["kind"]))}</a> '
             f'<span class="muted">· {kind_label} · v{d["version"]}</span></span></li>'))
@@ -333,7 +333,7 @@ def write_pages(ordered, stems):
              f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.2) · '
              f'<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n'
              + "".join(f'<h2>{label}</h2>\n<ul class="schedule">\n' + "\n".join(r for _, r in sorted(groups[k], reverse=True)) + "\n</ul>\n"
-                       for k, label in (("log", "Research log"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
+                       for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
     (OUT / "index.html").write_text(page(
         {"title": "Blyg · Protocols for Business SIG", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
          "card": "syllabus", "head": alt.format(rel="../")}, intro))
