@@ -22,4 +22,5 @@ We treat these as observations that could turn out partial or wrong.
 ::: generated
 - **27 September 2026.** Blyg started. Ten sessions from the past year imported from the Protocol Institute meeting archive as a baseline.
 - **27 September 2026.** First outside corroboration: Pat Grady's (Sequoia) 24 September talk to the Boston College investment committee frames this wave as a revolution in computation, not communication, which supports *abundant cognition*. It dates long-horizon agents to November 2025 (*distributed agency*) and describes AI-native firms moving toward a "network of agents" for internal information flow (*mediation*). It says nothing about coordination between many agents, which is where this project goes further.
+- **27 September 2026.** Imported the rest of the archive: all 39 sessions since February 2023 are now on the blyg, six of them with raw recording notes.
 :::
