@@ -85,7 +85,19 @@
   function close() { if (d.close) d.close(); else d.removeAttribute('open'); }
   triggers.forEach(function (b) { b.addEventListener('click', open); });
   d.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', close); });
-  d.addEventListener('click', function (e) { if (e.target === d) close(); });
+  // Close on a backdrop click only when the press and the release both land outside the dialog's box.
+  // (Dragging to select text inside a field and releasing past its edge reports a click on the
+  // dialog itself, which must not close it.)
+  var downOnBackdrop = false;
+  function outside(e) {
+    var r = d.getBoundingClientRect();
+    return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+  }
+  d.addEventListener('pointerdown', function (e) { downOnBackdrop = e.target === d && outside(e); });
+  d.addEventListener('click', function (e) {
+    if (downOnBackdrop && e.target === d && outside(e)) close();
+    downOnBackdrop = false;
+  });
   d.addEventListener('close', function () { if (email) say('Thanks, you’re registered.'); });
   if (/[?&]signup=ok/.test(location.search)) say('Thanks, you’re registered.');
   if (/[?&]signup=error/.test(location.search)) say('That didn’t work. Please try again.');
