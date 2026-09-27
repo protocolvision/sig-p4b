@@ -14,7 +14,7 @@
   window.addEventListener('hashchange', revealHash);
 
   var ROOT = (script && script.getAttribute('data-root')) || './';
-  var SIGNUP = 'https://sig-p4b-signup.rafaeldf2.workers.dev/signup';
+  var SIGNUP = ((script && script.getAttribute('data-signup')) || 'https://sig-p4b-signup.rafaeldf2.workers.dev') + '/signup';
 
   /* Next session: fill every [data-next] card from sessions.json. The static HTML
      already shows the first session, so the card reads correctly without script. */

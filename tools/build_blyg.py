@@ -35,7 +35,7 @@ import markdown
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "blyg-src"
 OUT = ROOT / "blyg"
-SITE = "https://npc.here.now/protocolvision/"
+SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
 ORIGIN = SITE + "blyg/"
 BLYG = "0.2"
 GENERATOR = "sig-p4b-blyg/0.1 (static, git-versioned)"

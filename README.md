@@ -73,6 +73,7 @@ The homepage Register button opens a dialog (a bottom drawer on phones) that pos
 - **Export the list before a session:** `worker/export.sh` writes `signups-YYYY-MM-DD.csv`, which is gitignored. Columns: name, email, affiliation, website, github, discord, role (member or pi-core), signed_up, source, updated, unsubscribe_url. Registering again merges: new non-empty fields update the record, empty ones keep existing values, and the original signup date, source, and role are kept. It reads the secret from `~/.config/sig-p4b/export_secret`.
 - **Unsubscribe links:** each row has one. Include it in every session email.
 - **Redeploy the worker:** `cd worker && npx wrangler deploy`.
+- **Move it to another Cloudflare account:** `worker/setup.sh`, then `./deploy.sh`, then `worker/import.py` with an export from the old worker. See [`worker/README.md`](worker/README.md). The Worker's address lives in one place, `config.json`, which the site build, `llms.txt`, and `export.sh` all read.
 
 ## Sessions and calendar
 

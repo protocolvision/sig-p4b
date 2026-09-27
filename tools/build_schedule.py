@@ -16,7 +16,7 @@ e = lambda s: html.escape(s, quote=False)
 ea = lambda s: html.escape(s, quote=True)
 label = lambda d: f"{int(d[8:])} {dt.date.fromisoformat(d).strftime('%B %Y')}"
 DISCORD = "https://discord.gg/zNJdK7caj"
-SITE = "https://npc.here.now/protocolvision/"
+SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
 
 def short_feature(f):
     m = re.match(r"Guest: (.*?) \(", f)

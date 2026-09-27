@@ -4,8 +4,13 @@
   "compatibility_date": "2026-09-01",
   "kv_namespaces": [
     // Sign-ups (sub:<email>) and per-IP rate-limit counters (rl:<ip>:<hour>).
+    // This id belongs to the current deployment's Cloudflare account; worker/setup.sh replaces it.
     { "binding": "SIGNUPS", "id": "78a345f4c750428890b6a12a9283326b" }
   ],
+  "vars": {
+    "SITE": "https://npc.here.now/protocolvision/",
+    "ALLOWED_ORIGINS": "https://npc.here.now,https://scarlet-rapids-8mbp.here.now,http://localhost:8000,http://127.0.0.1:8000"
+  },
   "observability": { "enabled": true }
   // Secret (set with `npx wrangler secret put EXPORT_SECRET`, never commit):
   //   EXPORT_SECRET — gates /export.csv and signs unsubscribe links

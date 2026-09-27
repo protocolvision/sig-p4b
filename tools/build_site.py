@@ -10,7 +10,9 @@ import html, json, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://npc.here.now/protocolvision/"
+CONFIG = json.loads((ROOT / "config.json").read_text())
+SITE = CONFIG["site"]
+SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
 NAV = [("about", "About", "about/"), ("sessions", "Sessions", "sessions/"),
        ("research", "Research", "research/"), ("play", "Play", "play/")]
@@ -79,7 +81,7 @@ def page(meta, body):
 <p><img class="mark" src="{rel}favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
 <nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision/sig-p4b">Source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
-<script src="{rel}assets/site.js" data-root="{rel or './'}" defer></script>
+<script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
 </body>
 </html>
 """)
@@ -134,7 +136,7 @@ def write_llms():
 {upcoming}
 
 ## Register for session emails
-POST https://sig-p4b-signup.rafaeldf2.workers.dev/signup with Content-Type: application/json.
+POST {SIGNUP_WORKER}/signup with Content-Type: application/json.
 Body fields: email (required), name, website, github, discord, affiliation. Returns {{"ok": true}}.
 Only register a person with their consent. Every email includes an unsubscribe link.
 

@@ -16,6 +16,8 @@
 interface Env {
   SIGNUPS: KVNamespace;
   EXPORT_SECRET: string;
+  SITE?: string;             // public site, used for redirects back after a no-JS form post
+  ALLOWED_ORIGINS?: string;  // comma-separated origins allowed to call /signup from a browser
 }
 
 interface Signup {
@@ -31,8 +33,9 @@ interface Signup {
   updated?: string;  // latest registration that changed or confirmed the record
 }
 
-const SITE = "https://npc.here.now/protocolvision/";
-const ALLOWED_ORIGINS = [
+// Defaults; a deployment overrides them with SITE and ALLOWED_ORIGINS in wrangler.jsonc "vars".
+let SITE = "https://npc.here.now/protocolvision/";
+let ALLOWED_ORIGINS = [
   "https://npc.here.now",
   "https://scarlet-rapids-8mbp.here.now",
   "http://localhost:8000",
@@ -196,6 +199,8 @@ async function unsubscribe(url: URL, env: Env): Promise<Response> {
 
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
+    if (env.SITE) SITE = env.SITE;
+    if (env.ALLOWED_ORIGINS) ALLOWED_ORIGINS = env.ALLOWED_ORIGINS.split(",").map((o) => o.trim()).filter(Boolean);
     const url = new URL(req.url);
     if (req.method === "OPTIONS") return new Response(null, { headers: cors(req) });
     if (req.method === "POST" && url.pathname === "/signup") return signup(req, env);
