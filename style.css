@@ -335,3 +335,6 @@ header .home .brand-sub { color: var(--tint); }
 .blyg-item h1 { font: 400 2.2rem/1.15 "Instrument Serif", Georgia, serif; margin: 0 0 1rem; }
 blockquote.blyg-transclusion { margin: 1rem 0; padding: 0.75rem 1rem; border-left: 0; border-radius: 12px; background: var(--fill, #f5f5f7); color: var(--fg); }
 blockquote.blyg-transclusion p { margin: 0.3rem 0; }
+.register .step[hidden] { display: none; }
+.register .done { margin: 4px 0 2px; font-weight: 600; color: var(--tint); }
+.register .step-1 .register-actions .btn { flex: 1; }
