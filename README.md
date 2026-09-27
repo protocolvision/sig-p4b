@@ -1,16 +1,40 @@
 # Protocols for Business SIG
 
-Site for the Protocol Institute's Special Interest Group in Protocols for Business (SIG P4B):
-the group's relation to Summer of Protocols and PI, the 2027 **AI Native Data Operations** project,
-the two pilot case studies (California water rates; construction bids from PDF solicitations),
-and the October 2026 – October 2027 syllabus.
+The central repository for the Protocol Institute's Special Interest Group in Protocols for Business
+(SIG P4B). Everything the group publishes, and the tooling around it, lives here and is built from here.
 
-**Live:** https://npc.here.now/protocolvision/
+**Live:** https://npc.here.now/protocolvision/ (a staging domain; a production domain comes later)
 
-Modeled on the Personhood Research Group site (personhoodresearchgroup.isthisa.com): plain HTML,
-one stylesheet, no build step. The Protocol Institute brand kit
-(https://npc.here.now/protocolinstitutebrandkit/) is applied lightly: paper and ink colors, Lora for
-body text, Instrument Serif for the page title, cobalt links.
+## What's in it
+
+| Part | Where | What it does |
+|---|---|---|
+| Website | `src/`, `tools/build_site.py` | About, Sessions, Research, Play. Built to static pages with `llms.txt` for language models |
+| Syllabus and calendar | `tools/sessions.json`, `tools/build_schedule.py` | 26 sessions from 2 November 2026: readings, quotes, companions, show-and-tell; `sessions.json`, schema.org events, and a subscribable `.ics` |
+| Blyg | `blyg-src/`, `tools/build_blyg.py` | Session notes and the research log, published with the Blygger protocol 0.2. Git commits are publishes; `tools/blyg_check.py` checks conformance |
+| Member sign-ups | `worker/` | Cloudflare Worker storing registrations (member / pi-core roles), CSV export, signed unsubscribe links |
+| Case studies, protocol watching | `src/research-cases.html`, `src/play-watching.html`, `case-studies/`, `observations/` | Templates and guides for participants' own cases and observations |
+| CI and deploy | `.github/workflows/site.yml`, `deploy.sh` | Build and check on every push and pull request; publish from `main` |
+
+The design is quiet and text-first, after the Personhood Research Group's site, with the
+[Protocol Institute brand kit](https://npc.here.now/protocolinstitutebrandkit/) applied lightly and
+Apple-style controls (44pt targets, sentence-case buttons).
+
+## Roadmap: building on the central repo
+
+The repo is meant to be the group's single source of truth, with more flows added on top of it:
+
+1. **Email to members.** Send each session's reading and prep notes to registered members from
+   `tools/sessions.json`, with each person's unsubscribe link. The member list and roles already live
+   in the sign-up worker. Candidates: Cloudflare Email Service from the worker, or an export to a
+   newsletter tool.
+2. **Meeting recordings.** Connect the Protocol Institute's recording pipeline (c3po's Discord
+   ingestion and the recording notes in PI's storage) so each session's recording and notes land
+   here automatically: a session-notes thread on the blyg and a link in the Sessions archive.
+3. **Production domain.** Move from the npc.here.now staging mount to a permanent domain. The blyg's
+   origin URL is its identity, so this should happen before the feed is announced widely.
+4. **Auto-publish from GitHub.** Add the here.now key as a repository secret so merges to `main`
+   publish without a local deploy.
 
 ## Layout
 

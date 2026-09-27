@@ -109,7 +109,11 @@ def fold(line):
         while (b[cut] & 0xC0) == 0x80: cut -= 1
         out.append(b[:cut].decode()); b = b" " + b[cut:]
     out.append(b.decode()); return "\r\n".join(out)
-stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+# DTSTAMP: last change to the schedule data, so rebuilding doesn't churn the calendar file.
+import subprocess
+_iso = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI", "--", "tools/sessions.json"],
+                      capture_output=True, text=True).stdout.strip()
+stamp = (dt.datetime.fromisoformat(_iso).astimezone(dt.timezone.utc) if _iso else dt.datetime(2026, 9, 27, tzinfo=dt.timezone.utc)).strftime("%Y%m%dT%H%M%SZ")
 L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Protocol Institute//SIG P4B//EN", "CALSCALE:GREGORIAN",
      "METHOD:PUBLISH", "X-WR-CALNAME:Protocols for Business SIG",
      "X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG"]
