@@ -3,3 +3,5 @@
 signups-*.csv
 sources/
 blyg/
+__pycache__/
+*.pyc
