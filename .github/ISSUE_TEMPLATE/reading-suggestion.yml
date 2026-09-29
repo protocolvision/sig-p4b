@@ -1,33 +1,47 @@
-name: Suggest a reading
-description: Add a reading to the SIG's reading map.
+name: Suggest or challenge a reading
+description: Add a reading to the map, or propose removing, swapping or moving one in the reading plan.
 title: "Reading: "
 labels: ["reading-suggestion"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for adding to the map. If an AI assistant filled this in, please open the source and check it exists and says what the assistant claims. Remove anything private about you, your employer or other people.
+        Thanks for shaping the reading plan. If an AI assistant filled this in, please open the sources and check they exist and say what the assistant claims. Remove anything private about you, your employer or other people.
+  - type: dropdown
+    id: change
+    attributes:
+      label: What kind of change?
+      options:
+        - Add a reading
+        - Remove a reading
+        - Swap one reading for another
+        - Move a reading to another theme
+    validations:
+      required: true
+  - type: input
+    id: current_reading
+    attributes:
+      label: Reading already on the map or in the plan
+      description: For remove, swap or move. Give its title as it appears on the map.
   - type: input
     id: reading_title
     attributes:
-      label: Title
-    validations:
-      required: true
+      label: New reading
+      description: For add or swap. The title of the reading you propose.
   - type: input
     id: url
     attributes:
-      label: Link
+      label: Link to the new reading
       description: A working link to the reading itself, not a summary of it.
-    validations:
-      required: true
   - type: input
     id: author
     attributes:
-      label: Author and year
+      label: Author and year of the new reading
   - type: dropdown
     id: theme
     attributes:
-      label: Theme it fits
+      label: Theme
+      description: Where the reading belongs, or where it should move to.
       options:
         - "I. What agents are, in practice"
         - "II. Natural coordination"
@@ -36,25 +50,23 @@ body:
         - "V. Designing the hard core"
         - "VI. Keeping the core alive, and the contrast"
         - "Somewhere else on the map"
-    validations:
-      required: true
   - type: textarea
     id: adds
     attributes:
-      label: What it adds to the map
-      description: One or two sentences.
+      label: Why make this change
+      description: What the change adds to the map or the plan, or what's wrong with the current reading. One to three sentences.
     validations:
       required: true
   - type: textarea
     id: experience
     attributes:
       label: Why it matters from your experience
-      description: Optional. One or two sentences on how it has shaped your work.
+      description: Optional. One or two sentences on how it relates to your own work.
   - type: checkboxes
     id: checks
     attributes:
       label: Checks
       options:
-        - label: I opened the source and it says what I describe.
+        - label: I opened the sources and they say what I describe.
           required: true
-        - label: It's a primary source (report, specification, regulation, original paper or first-hand account).
+        - label: Any new reading is a primary source (report, specification, regulation, original paper or first-hand account).

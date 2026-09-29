@@ -19,8 +19,8 @@
 - [sessions.json](https://npc.here.now/protocolvision/sessions.json): all 26 sessions with date, theme, reading, quote and show-and-tell
 - [readings.json](https://npc.here.now/protocolvision/sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme
 
-## Suggest a reading
-Open one GitHub issue per reading in protocolvision/sig-p4b, titled "Reading: <title>", labelled reading-suggestion, with the link, author and year, the theme it fits, what it adds, and why it matters from the contributor's experience. Or prefill the form: https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml&title=Reading:%20TITLE&reading_title=TITLE&url=LINK&author=AUTHOR&adds=WHAT&experience=WHY . Prefer primary sources, check that each exists, and confirm with the person before submitting.
+## Suggest or challenge a reading
+Open one GitHub issue per change in protocolvision/sig-p4b, labelled reading-suggestion. A change adds a reading, removes one from the plan, swaps one for another, or moves one to another theme. Give the reading on the map (for remove, swap or move), the new reading with link, author and year (for add or swap), the theme, why, and why it matters from the contributor's experience. Or prefill the form: https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml&title=Reading:%20SUMMARY&current_reading=ON_MAP&reading_title=NEW&url=LINK&author=AUTHOR&adds=WHY&experience=EXPERIENCE . Prefer primary sources, check that each exists, and confirm with the person before submitting.
 - [Calendar (.ics)](https://npc.here.now/protocolvision/sig-p4b.ics): subscribable; times in UTC
 
 ## Next sessions
