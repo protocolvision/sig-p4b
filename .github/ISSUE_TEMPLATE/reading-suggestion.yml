@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for adding to the map. If an AI assistant helped you find this, please open the source and check it exists and says what the assistant claims. Remove anything private about you, your employer or other people.
+        Thanks for adding to the map. If an AI assistant filled this in, please open the source and check it exists and says what the assistant claims. Remove anything private about you, your employer or other people.
   - type: input
-    id: title
+    id: reading_title
     attributes:
       label: Title
     validations:

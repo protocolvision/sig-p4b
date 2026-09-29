@@ -20,7 +20,7 @@
 - [readings.json](https://npc.here.now/protocolvision/sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme
 
 ## Suggest a reading
-Open https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml with the title, link, author and year, the theme it fits, and what it adds. Prefer primary sources, and check that the source exists.
+Open one GitHub issue per reading in protocolvision/sig-p4b, titled "Reading: <title>", labelled reading-suggestion, with the link, author and year, the theme it fits, what it adds, and why it matters from the contributor's experience. Or prefill the form: https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml&title=Reading:%20TITLE&reading_title=TITLE&url=LINK&author=AUTHOR&adds=WHAT&experience=WHY . Prefer primary sources, check that each exists, and confirm with the person before submitting.
 - [Calendar (.ics)](https://npc.here.now/protocolvision/sig-p4b.ics): subscribable; times in UTC
 
 ## Next sessions
