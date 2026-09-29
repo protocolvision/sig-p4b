@@ -43,6 +43,7 @@ def main():
             else:
                 session_of[rid] = k; k += 1
     areas = {a["id"]: a for a in L["areas"]}
+    area_ix = {a["id"]: k for k, a in enumerate(L["areas"])}
 
     dots, items = [], []
     order = sorted(range(len(L["readings"])), key=lambda i: L["readings"][i]["id"] in theme_of)  # syllabus drawn last, on top
@@ -53,18 +54,19 @@ def main():
         attrs = f' tabindex="0" role="button" aria-label="{e(r["title"])}"' if t else ""
         tip = f'<title>{e(r["title"])}</title>' if t else ""
         dots.append(f'<circle cx="{sx(r["x"]):.0f}" cy="{sy(r["y"]):.0f}" r="{5 if t else 3}" class="{cls}" data-i="{len(items)}"{attrs}>{tip}</circle>')
-        items.append({"t": r["title"], "u": r["url"], "c": r["cite"], "a": areas[r["area"]]["name"], "th": t,
+        items.append({"t": r["title"], "u": r["url"], "c": r["cite"], "a": areas[r["area"]]["name"], "ar": area_ix[r["area"]], "th": t,
                       "s": session_of.get(r["id"]), "co": r["id"] in companion, "rd": bool(r.get("read"))})
     # place area labels, nudging any that would overlap an earlier one
     placed, labels = [], []
-    for a in sorted(L["areas"], key=lambda a: a["y"]):
+    for k, a in sorted(enumerate(L["areas"]), key=lambda ka: ka[1]["y"]):
         x, y, w = sx(a["x"]), sy(a["y"]), len(a["name"]) * 9.5
         for _ in range(12):
             if not any(abs(x - px) < (w + pw) / 2 + 8 and abs(y - py) < 26 for px, py, pw in placed):
                 break
             y += 26
         placed.append((x, y, w))
-        labels.append(f'<text x="{x:.0f}" y="{y:.0f}" class="area">{e(a["name"])}</text>')
+        labels.append(f'<text x="{x:.0f}" y="{y:.0f}" class="area" data-a="{k}" tabindex="0" role="button" '
+                      f'aria-label="Area: {e(a["name"])}">{e(a["name"])}</text>')
     T = json.loads((ROOT / "tools/themes.json").read_text())["themes"]
     by_id = {r["id"]: r for r in L["readings"]}
     # Place each tag at the nearest spot to its theme's centre that covers no syllabus dot, no area name,
@@ -108,8 +110,8 @@ def main():
     svg = (f'<svg viewBox="0 0 {W} {H}" class="map" role="group" aria-labelledby="map-title map-desc" id="map">'
            f'<title id="map-title">Reading map</title><desc id="map-desc">{len(L["readings"])} readings placed by what they say. '
            f'Readings in this year’s plan are marked in blue.</desc>'
-           f'<g class="contours" aria-hidden="true">{"".join(contours)}</g>'
-           f'<g class="labels" aria-hidden="true">{"".join(labels)}</g><g class="spokes" aria-hidden="true"></g>'
+           f'<g class="hull" aria-hidden="true"></g><g class="contours" aria-hidden="true">{"".join(contours)}</g>'
+           f'<g class="labels">{"".join(labels)}</g><g class="spokes" aria-hidden="true"></g>'
            f'<g class="dots">{"".join(dots)}</g><g class="tags">{"".join(tags)}</g><g class="names" aria-hidden="true"></g></svg>')
 
     themes = [{"n": m["n"], "name": m["name"], "blurb": m["blurb"], "short": T[i].get("short", m["name"]),
@@ -122,12 +124,12 @@ def main():
             f'<li><a href="{e(r["url"])}">{e(r["title"])}</a></li>'
             for r in sorted((r for r in L["readings"] if r["area"] == a["id"]), key=lambda r: r["title"].lower())) + "</ul>"
         for a in L["areas"])
-    data = json.dumps({"items": items, "themes": themes, "slots": L["slots"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    data = json.dumps({"items": items, "themes": themes, "areas": [a["name"] for a in L["areas"]], "slots": L["slots"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
     body = f'''<!-- {{"title": "Reading map · Protocols for Business SIG", "desc": "{len(L["readings"])} readings placed by what they say, with this year’s reading plan marked.", "path": "sessions/map/", "nav": "sessions", "card": "syllabus"}} -->
 <p class="meta"><a href="../">Sessions</a></p>
 <h1>Reading map</h1>
-<p class="lede">This map shows {len(L["readings"])} readings. Readings about similar ideas sit close together. The blue dots are this year’s reading plan. Point at a theme to see its readings, and zoom in to read the titles.</p>
+<p class="lede">This map shows {len(L["readings"])} readings. Readings about similar ideas sit close together. The blue dots are this year’s reading plan. Point at a theme to see its readings. Select an area name, or click anywhere on the map, to look closer at that part.</p>
 <div class="map-wrap"><div class="map-zoom" role="group" aria-label="Zoom"><button type="button" data-z="in" aria-label="Zoom in">+</button><button type="button" data-z="out" aria-label="Zoom out">−</button><button type="button" data-z="reset">Reset</button></div>{svg}<div class="map-tip" hidden></div></div>
 <div id="map-info" class="map-info" aria-live="polite"><p class="muted">Select a blue dot, or choose a theme above.</p></div>
 <p class="small muted"><a href="3d/">Open the map in 3D</a> (best on a computer) · <a href="readings.json">All readings as data</a> · <a href="../#suggest">Suggest or challenge a reading</a></p>

@@ -171,7 +171,7 @@ blockquote.blyg-transclusion { border-left: 2px solid var(--rule); color: var(--
 svg.map { display: block; width: 100%; height: auto; }
 svg.map .contours path { fill: none; stroke: #d6d2ca; stroke-width: 1.2; }
 svg.map .contours .c7, svg.map .contours .c9 { stroke: #d0ccc3; }
-svg.map text.area { font: 16px Lora, Georgia, serif; fill: #9a978f; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
+svg.map text.area { font: calc(16px / var(--z, 1)) Lora, Georgia, serif; fill: #9a978f; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
 svg.map circle.o { fill: #a9a6a0; }
 svg.map circle.s { fill: var(--link); stroke: #fff; stroke-width: 1.5; cursor: pointer; }
 svg.map circle.on { stroke: var(--fg); stroke-width: 2.5; r: 8; }
@@ -183,7 +183,7 @@ svg.map[data-focus="4"] circle.t4, svg.map[data-focus="5"] circle.t5, svg.map[da
 .map-info h2 { margin: .5rem 0 .35rem; font-size: 1.15rem; }
 .map-info h2 a { text-decoration: none; }
 .map-info ol { font-size: .97rem; }
-@media (max-width: 40rem) { svg.map text.area { font-size: 28px; } }
+@media (max-width: 40rem) { svg.map text.area { font-size: calc(28px / var(--z, 1)); } }
 /* map: progressive detail */
 .map-wrap { position: relative; }
 .map-zoom { position: absolute; right: .5rem; top: .5rem; display: flex; gap: .25rem; z-index: 2; }
@@ -212,3 +212,18 @@ svg.map .names, svg.map .spokes, svg.map .labels, svg.map .contours { pointer-ev
 svg.map circle { transition: opacity .18s ease, r .18s ease; }
 svg.map .tag, svg.map .labels { transition: opacity .18s ease; }
 @media (prefers-reduced-motion: reduce) { svg.map circle, svg.map .tag, svg.map .labels { transition: none; } }
+
+/* areas: select a name (or click the map) to look closer */
+svg.map text.area { pointer-events: auto; cursor: pointer; transition: opacity .18s ease; }
+svg.map text.area:hover, svg.map text.area.on { fill: var(--fg); }
+svg.map text.area:focus { outline: none; }
+svg.map text.area:focus-visible { fill: var(--link); text-decoration: underline; }
+svg.map .hull { opacity: .8; }
+svg.map .hull circle { fill: #e3ebfa; }
+svg.map[data-area]:not([data-area=""]) text.area.on { opacity: 0; }   /* the panel heading names it */
+svg.map[data-area]:not([data-area=""]) circle:not(.in) { opacity: .15; }
+svg.map[data-area]:not([data-area=""]) circle.o.in { fill: #6b6a66; }
+svg.map[data-area]:not([data-area=""]) text.area:not(.on) { opacity: .3; }
+svg.map[data-area]:not([data-area=""]) .tag { opacity: .3; }
+.map-info ul { font-size: .97rem; }
+.map-info .btn-quiet { min-height: 0; font-size: inherit; }

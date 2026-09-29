@@ -7,8 +7,11 @@
   var tip = wrap.querySelector('.map-tip'), spokes = svg.querySelector('.spokes'), names = svg.querySelector('.names');
   var chips = document.querySelectorAll('.map-filters button');
   var VB = svg.viewBox.baseVal, W = VB.width, H = VB.height;
-  var view = { x: 0, y: 0, w: W, h: H }, pinned = 0, current = -1, leaveTimer = null;
-  var dots = {}; svg.querySelectorAll('circle[data-i]').forEach(function (c) { dots[c.dataset.i] = c; });
+  var view = { x: 0, y: 0, w: W, h: H }, pinned = 0, current = -1, leaveTimer = null, area = -1, anim = 0;
+  var hullG = svg.querySelector('.hull'), areaLabels = svg.querySelectorAll('text.area');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DEFAULT = '<p class="muted">Hover over a theme tag or a dot, or select one to pin it here. Select an area name, or click anywhere on the map, to look closer at that part.</p>';
+  var dots = {}; svg.querySelectorAll('.dots circle[data-i]').forEach(function (c) { dots[c.dataset.i] = c; });
   var esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var fmt = function (iso) { return new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
   var when = function (it) { return it.s == null ? '' : (it.co ? 'Read alongside session ' : 'Session ') + (it.s + 1) + ' · ' + fmt(D.slots[it.s]); };
@@ -42,6 +45,9 @@
     });
   }
   function themeIds(n) { return D.items.map(function (it, i) { return it.th === n ? i : -1; }).filter(function (i) { return i >= 0; }); }
+  function areaIds(k) { return D.items.map(function (it, i) { return it.ar === k ? i : -1; }).filter(function (i) { return i >= 0; }); }
+  /* in a busy area, name only this year's readings; the panel lists the rest */
+  function areaNameIds() { var ids = areaIds(area); return ids.length <= 24 ? ids : ids.filter(function (i) { return D.items[i].th; }); }
   function syllabusIds() { return D.items.map(function (it, i) { return it.th ? i : -1; }).filter(function (i) { return i >= 0; }); }
 
   /* show a theme: spokes from its tag, its reading names, everything else faded */
@@ -50,7 +56,7 @@
     clear(spokes);
     svg.setAttribute('data-focus', n ? String(n) : '');
     svg.querySelectorAll('.tag').forEach(function (g) { g.classList.toggle('on', +g.dataset.th === n); });
-    if (!n) { drawNames(zoom() >= 2 ? syllabusIds() : []); return; }
+    if (!n) { drawNames(area >= 0 ? areaNameIds() : zoom() >= 2 ? syllabusIds() : []); return; }
     var th = D.themes[n - 1], z = zoom();
     themeIds(n).forEach(function (i) {
       var c = dots[i];
@@ -59,10 +65,11 @@
     drawNames(themeIds(n));
   }
   function pinTheme(n) {
+    if (n && area >= 0) setArea(-1);
     pinned = n;
     chips.forEach(function (b) { b.setAttribute('aria-pressed', String(+b.dataset.th === n)); });
     show(n);
-    if (!n) { info.innerHTML = '<p class="muted">Hover over a theme tag or a dot, or select one to pin it here.</p>'; return; }
+    if (!n) { info.innerHTML = DEFAULT; return; }
     var th = D.themes[n - 1];
     var list = themeIds(n).sort(function (a, b) { return D.items[a].s - D.items[b].s; }).map(function (i) {
       var it = D.items[i];
@@ -89,13 +96,50 @@
   }
 
   /* zoom and pan by changing the viewBox */
-  function setView(v) {
+  /* an area: zoom to fit its readings, shade its outline, fade the rest, list it below */
+  function setArea(k) {
+    area = k;
+    svg.setAttribute('data-area', k < 0 ? '' : String(k));
+    clear(hullG);
+    areaLabels.forEach(function (t) { t.classList.toggle('on', +t.dataset.a === k); });
+    D.items.forEach(function (it, i) {
+      dots[i].classList.toggle('in', it.ar === k);
+      if (it.ar === k) el('circle', { cx: dots[i].getAttribute('cx'), cy: dots[i].getAttribute('cy'), r: 30 }, hullG);
+    });
+  }
+  function pinArea(k) {
+    if (pinned) pinTheme(0);
+    setArea(k);
+    if (k < 0) { info.innerHTML = DEFAULT; animateTo({ x: 0, y: 0, w: W, h: H }); return; }
+    var ids = areaIds(k), xs = ids.map(function (i) { return +dots[i].getAttribute('cx'); }), ys = ids.map(function (i) { return +dots[i].getAttribute('cy'); });
+    var x0 = Math.min.apply(null, xs) - 60, x1 = Math.max.apply(null, xs) + 260, y0 = Math.min.apply(null, ys) - 60, y1 = Math.max.apply(null, ys) + 60;
+    var z = Math.min(W / (x1 - x0), H / (y1 - y0), 4), w = W / z, h = H / z;
+    animateTo({ x: (x0 + x1) / 2 - w / 2, y: (y0 + y1) / 2 - h / 2, w: w, h: h });
+    ids.sort(function (a, b) { var A = D.items[a], B = D.items[b]; return (A.th ? 0 : 1) - (B.th ? 0 : 1) || (A.s || 0) - (B.s || 0) || A.t.localeCompare(B.t); });
+    var plan = ids.filter(function (i) { return D.items[i].th; }).length;
+    var li = function (i) { var it = D.items[i]; return '<li><a href="' + esc(it.u) + '">' + esc(it.t) + '</a> <span class="muted">' + esc(it.c) + (it.th ? ' · Theme ' + esc(D.themes[it.th - 1].n) : '') + '</span></li>'; };
+    info.innerHTML = '<h2>' + esc(D.areas[k]) + '</h2><p class="muted">' + ids.length + ' readings' + (plan ? ', ' + plan + ' of them in this year’s plan' : '') + '. <button type="button" class="btn-quiet" data-close>Show the whole map</button></p><ul>' + ids.map(li).join('') + '</ul>';
+    info.querySelector('[data-close]').addEventListener('click', function () { pinArea(-1); });
+  }
+  function animateTo(v) {
+    cancelAnimationFrame(anim);
+    if (reduced) { setView(v); return; }
+    var from = view, t0 = performance.now();
+    (function step(t) {
+      var p = Math.min((t - t0) / 380, 1), e = 1 - Math.pow(1 - p, 3), mix = function (a, b) { return a + (b - a) * e; };
+      setView({ x: mix(from.x, v.x), y: mix(from.y, v.y), w: mix(from.w, v.w), h: mix(from.h, v.h) }, p < 1);
+      if (p < 1) anim = requestAnimationFrame(step);
+    })(t0);
+  }
+  function setView(v, quiet) {
     var z = Math.min(Math.max(W / v.w, 1), 6), w = W / z, h = H / z;
     view = { x: Math.min(Math.max(v.x, 0), W - w), y: Math.min(Math.max(v.y, 0), H - h), w: w, h: h };
     svg.setAttribute('viewBox', [view.x, view.y, view.w, view.h].join(' '));
     svg.style.setProperty('--z', zoom());
     svg.classList.toggle('zoomed', zoom() > 1.01);
-    show(pinned);
+    var z = zoom();   // tags keep their screen size
+    svg.querySelectorAll('.tag').forEach(function (g) { var th = D.themes[g.dataset.th - 1]; g.setAttribute('transform', 'translate(' + th.x + ',' + th.y + ') scale(' + (1 / z).toFixed(4) + ')'); });
+    if (quiet) clear(names); else show(pinned);
   }
   function zoomAt(f, cx, cy) {
     var w = view.w / f, h = view.h / f;
@@ -105,12 +149,12 @@
   wrap.querySelectorAll('.map-zoom button').forEach(function (b) {
     b.addEventListener('click', function () {
       var cx = view.x + view.w / 2, cy = view.y + view.h / 2;
-      if (b.dataset.z === 'in') zoomAt(1.6, cx, cy); else if (b.dataset.z === 'out') zoomAt(1 / 1.6, cx, cy); else setView({ x: 0, y: 0, w: W, h: H });
+      if (b.dataset.z === 'in') zoomAt(1.6, cx, cy); else if (b.dataset.z === 'out') zoomAt(1 / 1.6, cx, cy); else if (area >= 0) pinArea(-1); else setView({ x: 0, y: 0, w: W, h: H });
     });
   });
   svg.addEventListener('dblclick', function (ev) { var p = toSvg(ev); zoomAt(1.8, p.x, p.y); });
-  var drag = null;
-  svg.addEventListener('pointerdown', function (ev) { if (zoom() > 1.01 && !ev.target.closest('circle,.tag')) { drag = { x: ev.clientX, y: ev.clientY, v: view }; svg.setPointerCapture(ev.pointerId); } });
+  var drag = null, down = null;
+  svg.addEventListener('pointerdown', function (ev) { down = { x: ev.clientX, y: ev.clientY }; if (zoom() > 1.01 && !ev.target.closest('circle,.tag')) { drag = { x: ev.clientX, y: ev.clientY, v: view }; svg.setPointerCapture(ev.pointerId); } });
   svg.addEventListener('pointermove', function (ev) {
     if (!drag) return;
     var r = svg.getBoundingClientRect();
@@ -132,14 +176,28 @@
   svg.addEventListener('mouseout', function (ev) { if (ev.target.closest('circle')) tip.hidden = true; });
   svg.addEventListener('focusin', function (ev) { var c = ev.target.closest('circle'); if (c) showTip(c); });
   svg.addEventListener('focusout', function () { tip.hidden = true; });
-  svg.addEventListener('click', function (ev) { var c = ev.target.closest('circle'); if (c) { tip.hidden = true; pinReading(+c.dataset.i); } });
+  svg.addEventListener('click', function (ev) {
+    if (down && Math.hypot(ev.clientX - down.x, ev.clientY - down.y) > 5) return;   // that was a drag
+    var c = ev.target.closest('circle[data-i]'), lab = ev.target.closest('text.area');
+    if (c) { tip.hidden = true; pinReading(+c.dataset.i); return; }
+    if (lab) { pinArea(+lab.dataset.a); return; }
+    if (ev.target.closest('.tag')) return;
+    var p = toSvg(ev), best = -1, bd = 45 / zoom();   // elsewhere: open the area of the nearest reading
+    D.items.forEach(function (it, i) { var d = Math.hypot(dots[i].getAttribute('cx') - p.x, dots[i].getAttribute('cy') - p.y); if (d < bd) { bd = d; best = i; } });
+    if (best >= 0 && D.items[best].ar !== area) pinArea(D.items[best].ar);
+  });
   svg.addEventListener('keydown', function (ev) {
     var c = ev.target.closest && ev.target.closest('circle');
     if (c && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pinReading(+c.dataset.i); }
+    var lab = ev.target.closest && ev.target.closest('text.area');
+    if (lab && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); pinArea(+lab.dataset.a); }
+    if (ev.key === 'Escape' && area >= 0) pinArea(-1);
   });
   chips.forEach(function (b) { b.addEventListener('click', function () { pinTheme(+b.dataset.th); }); });
 
-  info.innerHTML = '<p class="muted">Hover over a theme tag or a dot, or select one to pin it here.</p>';
+  info.innerHTML = DEFAULT;
   var m = location.hash.match(/^#m(\d)$/);
   if (m) pinTheme(+m[1]);
+  var ma = location.hash.match(/^#a(\d+)$/);
+  if (ma && D.areas[+ma[1]]) pinArea(+ma[1]);
 })();
