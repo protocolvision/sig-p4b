@@ -22,6 +22,11 @@
   function drawNames(ids) {
     clear(names);
     var z = zoom(), fs = 15 / z, lh = 19 / z, placed = [];
+    var tag = current && svg.querySelector('.tag[data-th="' + current + '"] rect');
+    if (tag) {   // the open theme tag counts as taken space, so names move clear of it
+      var th = D.themes[current - 1], tw = +tag.getAttribute('width');
+      placed.push({ x: th.x - tw / 2, y: th.y - 4, w: tw }, { x: th.x - tw / 2, y: th.y + 12, w: tw });
+    }
     ids.slice().sort(function (a, b) { return dots[a].getAttribute('cy') - dots[b].getAttribute('cy'); }).forEach(function (i) {
       var c = dots[i], cx = +c.getAttribute('cx'), cy = +c.getAttribute('cy'), label = short(D.items[i].t);
       var w = label.length * 7.2 / z, right = cx + 9 / z + w < view.x + view.w;
