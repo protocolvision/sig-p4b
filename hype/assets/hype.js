@@ -502,8 +502,17 @@
         [[A, '#ff2bd6'], [Pr, '#00e5ff']].forEach(function (L) { c.strokeStyle = L[1]; c.lineWidth = 3; c.beginPath(); L[0].forEach(function (q, i) { c[i ? 'lineTo' : 'moveTo'](q[0], q[1]); }); c.stroke(); });
         var e = A[A.length - 1], f = Pr[Pr.length - 1];
         robot(c, e[0], e[1] - 18, 22, 3, t, '#ff2bd6');
-        c.font = '700 13px "Space Grotesk"'; c.textAlign = 'right'; c.fillStyle = '#ff2bd6'; c.fillText('AGENTS DEPLOYED', e[0] - 20, e[1] - 8); c.fillStyle = '#00e5ff'; c.fillText('PROTOCOLS ANYONE CAN SEE', f[0] - 6, f[1] - 8);
-        if (p > .6) { c.fillStyle = '#ff3b30'; c.textAlign = 'center'; c.font = '18px Anton, Impact'; c.fillText('THE INCIDENT ZONE', w * .72, (A[Math.floor(A.length * .8)][1] + Pr[Math.floor(Pr.length * .8)][1]) / 2 + 30); }
+        // a fixed legend, so the labels never pile up at the start of the line
+        c.font = '700 13px "Space Grotesk"'; c.textAlign = 'left';
+        [['AGENTS DEPLOYED', '#ff2bd6', 22], ['PROTOCOLS ANYONE CAN SEE', '#00e5ff', 42]].forEach(function (L) { c.fillStyle = L[1]; c.fillRect(20, L[2] - 5, 18, 3); c.fillText(L[0], 44, L[2]); });
+        var gi = A.length - 1;
+        if (Pr[gi][1] - A[gi][1] > 150) {   // label the gap on a dark pill once it is wide enough to hold it
+          var lx = A[gi][0] - 60, j = 0;
+          while (j < A.length - 1 && A[j][0] < lx - 54) j++;   // keep the pill's top-left corner under the agents curve
+          var ly = Math.min(Pr[gi][1] - 32, Math.max(A[gi][1] + (Pr[gi][1] - A[gi][1]) * .6, A[j][1] + 36));
+          c.fillStyle = 'rgba(0,0,0,.85)'; rr(c, lx - 54, ly - 26, 108, 50, 12); c.fill(); c.strokeStyle = '#ff3b30'; c.lineWidth = 2; c.stroke();
+          c.fillStyle = '#fff'; c.textAlign = 'center'; c.font = '17px Anton, Impact'; c.fillText('⚠ INCIDENT', lx, ly - 4); c.fillText('ZONE', lx, ly + 16);
+        }
       }
     } };
   }
@@ -633,7 +642,8 @@
       '<p style="margin:1.5rem 0 0;font-weight:700;letter-spacing:.1em">YOUR FOMO LEVEL</p><div class="meter"><i></i></div><p class="fine" style="color:#ff3b30;font-weight:700">97% · CRITICAL · consult a primary source immediately</p></div></div></section>');
     main.appendChild(grow); addScene(grow.querySelector('canvas'), growth);
     var agentsN = 0, aEl = grow.querySelector('[data-agents]');
-    setInterval(function () { agentsN += Math.floor(1200 + rnd() * 4000 + agentsN * .01); aEl.textContent = agentsN.toLocaleString('en'); }, 120);
+    function compact(n) { return n < 1e6 ? Math.floor(n).toLocaleString('en') : n < 1e9 ? (n / 1e6).toFixed(1) + 'M' : (n / 1e9).toFixed(2) + 'B'; }
+    setInterval(function () { agentsN = Math.min(9.99e9, agentsN + 1200 + rnd() * 4000 + agentsN * .01); aEl.textContent = compact(agentsN) + (agentsN >= 9.99e9 ? '+' : ''); }, 120);
     onView(grow, function () { grow.querySelector('.meter i').style.width = '97%'; SFX.riser(2.4); setTimeout(function () { SFX.heart(); setTimeout(SFX.heart, 800); setTimeout(SFX.heart, 1500); }, 2400); });
 
     var play = $('<section class="hype-full hype-section"><div class="wrap"><h2>🎰 Play to win (a primary source)</h2><p class="lede">Every prize is a real reading from this year’s plan. The odds are excellent.</p><div class="two">' +
