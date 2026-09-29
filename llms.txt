@@ -1,10 +1,10 @@
 # Protocols for Business SIG
 
-> A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, on the Protocol Institute Discord (https://discord.gg/zNJdK7caj, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
+> A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, each a deep reading of one primary source, on the Protocol Institute Discord (https://discord.gg/zNJdK7caj, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 
 ## Pages
 - [About](https://npc.here.now/protocolvision/about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
-- [Sessions](https://npc.here.now/protocolvision/sessions/): joining details, session format, the year's six themes with sample readings, how to suggest a reading, archive
+- [Sessions](https://npc.here.now/protocolvision/sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map](https://npc.here.now/protocolvision/sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research](https://npc.here.now/protocolvision/research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template

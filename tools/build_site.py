@@ -114,11 +114,11 @@ def write_llms():
     upcoming = "\n".join(f"- {s['date']} 15:30–16:30 UTC: {s['title']} ({s['cite']}), {s['url']}" for s in S[:4])
     text = f"""# Protocols for Business SIG
 
-> A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
+> A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, each a deep reading of one primary source, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 
 ## Pages
 - [About]({SITE}about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
-- [Sessions]({SITE}sessions/): joining details, session format, the year's six themes with sample readings, how to suggest a reading, archive
+- [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research]({SITE}research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template

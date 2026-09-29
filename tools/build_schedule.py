@@ -53,11 +53,12 @@ for i, t in enumerate(T["themes"], 1):
     sample = "".join(f'<li><a href="{ea(t["readings"][j]["url"])}">{e(t["readings"][j]["title"])}</a> '
                      f'<span class="muted">{e(t["readings"][j]["cite"])}</span></li>' for j in t["sample"])
     out.append(f'<li class="theme-card" id="theme-{t["n"].lower()}">'
-               f'<p class="n" aria-hidden="true">{e(t["n"])}</p>'
-               f'<h3><span class="visually-hidden">Theme {e(t["n"])}: </span>{e(t["name"])}</h3>'
-               f'<p>{e(t["blurb"])}</p><p class="meta">{n} sessions</p>'
-               f'<details><summary>Sample readings</summary><ul class="sample">{sample}</ul></details>'
-               f'<a class="more" href="map/#m{i}">See on the map</a></li>')
+               f'<img src="../assets/themes/theme-{i}.svg" alt="" width="320" height="140" loading="lazy">'
+               f'<h3><span class="n">{e(t["n"])}</span> {e(t["name"])}</h3>'
+               f'<p>{e(t["blurb"])}</p>'
+               f'<details class="samples"><summary><span class="meta">{n} sessions</span>'
+               f'<span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="visually-hidden">, show sample readings</span></summary>'
+               f'<ul class="sample">{sample}</ul></details></li>')
 out.append("</ol>")
 out.append('<p class="map-cta"><a class="btn" href="map/">Explore every reading on the map</a> '
            '<span class="small muted">All 27 syllabus readings among 400 related works, with the full schedule by date.</span></p>')

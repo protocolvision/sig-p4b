@@ -1,6 +1,6 @@
 {
  "question": "How do organizations, teams, and people coordinate through what they emit, and what changes when agents read and write those signals too?",
- "summary": "The year runs through six themes, in this order. It starts with what agents are in practice and how nature coordinates without a manager. It then looks at what systems emit, how to see hardness in real incidents, and how to design the hard core. It ends with how industries keep that core alive, set against business process re-engineering.",
+ "summary": "It starts with what agents are in practice and how nature coordinates without a manager. It then looks at what systems emit, how to see hardness in real incidents, and how to design the hard core. It ends with how industries keep that core alive, set against business process re-engineering.",
  "themes": [
   {
    "n": "I",
