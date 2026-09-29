@@ -3,18 +3,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research · Protocols for Business SIG</title>
-<meta name="description" content="AI Native Data Operations, the group&#x27;s 2027 research focus: swarm coordination, evals and model operations, and AI-mediated work, tested in case studies.">
+<meta name="description" content="AI Native Data Operations, the group&#x27;s 2027 research focus, and how it matures Business Protocol Management: premises, the three phases we study, open questions, case studies, and how to contribute.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Protocol Institute">
 <meta property="og:title" content="Research · Protocols for Business SIG">
-<meta property="og:description" content="AI Native Data Operations, the group&#x27;s 2027 research focus: swarm coordination, evals and model operations, and AI-mediated work, tested in case studies.">
+<meta property="og:description" content="AI Native Data Operations, the group&#x27;s 2027 research focus, and how it matures Business Protocol Management: premises, the three phases we study, open questions, case studies, and how to contribute.">
 <meta property="og:url" content="https://npc.here.now/protocolvision/research/">
 <meta property="og:image" content="https://npc.here.now/protocolvision/assets/cards/case-studies.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research · Protocols for Business SIG">
-<meta name="twitter:description" content="AI Native Data Operations, the group&#x27;s 2027 research focus: swarm coordination, evals and model operations, and AI-mediated work, tested in case studies.">
+<meta name="twitter:description" content="AI Native Data Operations, the group&#x27;s 2027 research focus, and how it matures Business Protocol Management: premises, the three phases we study, open questions, case studies, and how to contribute.">
 <meta name="twitter:image" content="https://npc.here.now/protocolvision/assets/cards/case-studies.jpg">
 <link rel="alternate" type="text/plain" title="Summary for language models" href="../llms.txt">
 <link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="../blyg/feed.xml">
@@ -35,34 +35,40 @@
 </header>
 <main>
 <h1>Research</h1>
-<p class="lede">Our 2027 focus is AI Native Data Operations: how organizations coordinate when much of the work is done by people working through AI and by agents talking to agents.</p>
+<p class="lede">Our 2027 focus is AI Native Data Operations, meaning how organizations coordinate when much of the work is done by people working through AI and by agents talking to agents. We use it to mature <a href="https://claude.ai/artifact/6KH6nWLduGcKX38dy8DYoj" target="_blank" rel="noopener noreferrer">Business Protocol Management</a>, the SIG’s method for building a hard core of protocols into a company’s architecture and running people and agents inside it.</p>
 <h2 id="premises">Premises</h2>
 <p>The research rests on three premises. We treat them as observations that could turn out partial or wrong, and the sessions and cases test them.</p>
 <ul class="rows">
   <li><span class="k">Abundant cognition</span><div class="v"><p>Reading and writing both get cheap. Processing unstructured data (PDFs, rate sheets, forms) and producing software cost a fraction of what they did.</p><p class="small muted">Tested in the <a href="cases/#water">water</a> and <a href="cases/#construction">construction</a> cases</p></div></li>
-  <li><span class="k">Distributed agency</span><div class="v"><p>Models act, and they run as many instances at once. Swarms of agents show up wherever work is done.</p><p class="small muted">Read against <a href="../sessions/#s-2026-11-02">OpenAI's incident report</a> and <a href="../sessions/#s-2026-11-16">Anthropic's multi-agent study</a></p></div></li>
-  <li><span class="k">Mediation</span><div class="v"><p>Information increasingly flows through models: people and agents find, read, and exchange it by way of LLMs and the protocols that connect them.</p><p class="small muted">Read against <a href="../sessions/#s-2027-04-05">the Information Bus</a> and <a href="../sessions/#s-2027-04-19">the Model Context Protocol</a></p></div></li>
+  <li><span class="k">Distributed agency</span><div class="v"><p>Models act, and they run as many instances at once. Swarms of agents show up wherever work is done.</p><p class="small muted">Read against OpenAI’s incident report and Anthropic’s multi-agent study in <a href="../sessions/#theme-i">theme I</a></p></div></li>
+  <li><span class="k">Mediation</span><div class="v"><p>Information increasingly flows through models: people and agents find, read, and exchange it by way of LLMs and the protocols that connect them.</p><p class="small muted">Read against the Model Context Protocol in <a href="../sessions/#theme-i">theme I</a> and the Agent Payments Protocol in <a href="../sessions/#theme-v">theme V</a></p></div></li>
 </ul>
 <h2 id="focus">What we study</h2>
-<p>If those premises hold, data operations become a question of coordinating a swarm. We focus on three things:</p>
+<p>If those premises hold, running data operations means managing a swarm through its protocols. We study the three phases of Business Protocol Management.</p>
 <ul class="rows">
-  <li><span class="k">Emission</span><div class="v"><p>What an organization emits, where, who can read it, and how long it stays current.</p></div></li>
-  <li><span class="k">Evals &amp; model ops</span><div class="v"><p>Scoring what agents produce against real outcomes, and versioning models, prompts, and context.</p></div></li>
-  <li><span class="k">AI-mediated work</span><div class="v"><p>Delegating discretion to agents explicitly, checking it cheaply, and recording it where others can see.</p></div></li>
+  <li><span class="k">See</span><div class="v"><p>What an organization emits, where, who can read it, and how long it stays current. The work writes its own field log, with the reason for each change recorded at the moment it happens.</p><p class="small muted">Themes <a href="../sessions/#theme-iii">III</a> and <a href="../sessions/#theme-iv">IV</a></p></div></li>
+  <li><span class="k">Design</span><div class="v"><p>The hard core: permissions, data contracts, spending limits, and the checks every agent output must pass. That includes scoring agents against real outcomes, and versioning models, prompts and context.</p><p class="small muted">Theme <a href="../sessions/#theme-v">V</a></p></div></li>
+  <li><span class="k">Evolve</span><div class="v"><p>How discretion moves between people and agents, how it gets checked cheaply and recorded where others can see it, and how the hard core gets amended as the business grows.</p><p class="small muted">Theme <a href="../sessions/#theme-vi">VI</a></p></div></li>
 </ul>
-<h2 id="questions">Questions</h2>
-<ul>
-  <li>What is an AI-native, post-platform organization?</li>
-  <li>What should an organization emit, to whom, and how quickly should it decay?</li>
-  <li>When people work as centaurs and agents talk to agents, where does discretion sit, and who checks it?</li>
-</ul>
+<h2 id="questions">Open questions</h2>
+<p>These need research and partners. If you can help with one, get in touch.</p>
+<ol class="qs">
+  <li><strong>Which few protocols should a company make hard, and how much freedom can it allow inside them?</strong> <span class="small muted">Companies rebuilding part of their business around AI, software architects, organization researchers.</span></li>
+  <li><strong>How do we measure growth and prevented failures together?</strong> <span class="small muted">Reliability teams that track near-misses and delivery speed.</span></li>
+  <li><strong>Where should decisions sit between people and agents, and how do we check them cheaply?</strong> <span class="small muted">Teams that run agents in production.</span></li>
+  <li><strong>When should a free pattern become part of the hard core, and when should a hard rule soften?</strong> <span class="small muted">Platform teams, standards bodies, institutional designers.</span></li>
+  <li><strong>What should a company publish, to whom, and how long should it stay current?</strong> <span class="small muted">Public agencies, data publishers, companies that share operational data.</span></li>
+</ol>
 <h2 id="cases">Cases</h2>
 <div class="cards">
-  <div class="card"><span class="status">Worked example · paused</span><h3>California water rate data</h3><p>With the California Data Collaborative. Rates are published but hard to discover; the answer was a registry and llms.txt, not a new standard.</p><a class="more" href="cases/#water">Case brief</a></div>
-  <div class="card"><span class="status">Worked example · MVP built</span><h3>Construction bids from PDFs</h3><p>Led by Andre Comeau with an anonymized subcontractor. Code holds the spine, agents hold the judgment, and forecasts are scored against public bid results.</p><a class="more" href="cases/#construction">Case brief</a></div>
-  <div class="card"><span class="status">Small case</span><h3>Protocol Institute brand kit</h3><p>A written spec that agents build pages from, and what went wrong until the checks were automated.</p><a class="more" href="cases/#brand-kit">Case brief</a></div>
-  <div class="card"><span class="status">Open · one per participant</span><h3>Your case</h3><p>Pick a data operation that AI is changing and carry it for about a year from when you join, from brief to published write-up.</p><a class="more" href="cases/#yours">How it works</a></div>
+  <div class="card"><span class="status">Worked example · paused</span><h3>California water rate data</h3><p>With the California Data Collaborative. Rates are published but hard to discover; the answer was a registry and llms.txt, not a new standard.</p><p class="small muted">Tests See and Design</p><a class="more" href="cases/#water">Case brief</a></div>
+  <div class="card"><span class="status">Worked example · MVP built</span><h3>Construction bids from PDFs</h3><p>Led by Andre Comeau with an anonymized subcontractor. Code holds the spine, agents hold the judgment, and forecasts are scored against public bid results.</p><p class="small muted">Tests Design</p><a class="more" href="cases/#construction">Case brief</a></div>
+  <div class="card"><span class="status">Small case</span><h3>Protocol Institute brand kit</h3><p>A written spec that agents build pages from, and what went wrong until the checks were automated.</p><p class="small muted">Tests Design</p><a class="more" href="cases/#brand-kit">Case brief</a></div>
+  <div class="card"><span class="status">Open · one per participant</span><h3>Your case</h3><p>Pick a data operation that AI is changing and carry it for about a year from when you join, from brief to published write-up.</p><p class="small muted">Tests all three phases</p><a class="more" href="cases/#yours">How it works</a></div>
 </div>
+<h2 id="contribute">Contribute a reading</h2>
+<p>The <a href="../sessions/map/">reading map</a> places 400 readings by what they say, with the year’s syllabus marked. Ask your AI assistant to add what’s missing from your own experience. It checks with you, then adds each reading on GitHub.</p>
+<p><a class="btn" href="../sessions/#suggest">Suggest a reading</a> <a class="btn-quiet" href="../sessions/map/">Explore the map</a></p>
 <h2 id="partner">Sponsor or partner</h2>
 <p>The Protocol Institute is an independent research organization, supported by the Ethereum Foundation through 2026 and becoming a Canada-based nonprofit. It is raising support for its 2027 programs, including this project. To sponsor the work or bring us a research problem from your domain, see <a href="https://protocol-institute.org/support" target="_blank" rel="noopener noreferrer">how to support the Institute</a> or <a href="https://protocol-institute.org/contact" target="_blank" rel="noopener noreferrer">get in touch</a>.</p>
 </main>

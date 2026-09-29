@@ -45,17 +45,19 @@ def replace_between(text, name, body):
     return pat.sub(lambda m: m.group(1) + "\n" + body + "\n" + m.group(2), text)
 
 # --- syllabus summary (src/sessions.html): themes in order of exploration, with sample readings ---
-out = [f'<p>{e(T["summary"])}</p>', '<ol class="themes">']
+out = [f'<p>{e(T["summary"])}</p>', '<ol class="theme-grid" role="list">']
 k = 0
-for t in T["themes"]:
+for i, t in enumerate(T["themes"], 1):
     n = sum(1 for r in t["readings"] if not r.get("companion"))
-    first, last = S[k]["date"], S[k + n - 1]["date"]
     k += n
-    sample = "".join(f'<li><a href="{ea(t["readings"][i]["url"])}">{e(t["readings"][i]["title"])}</a> '
-                     f'<span class="muted">{e(t["readings"][i]["cite"])}</span></li>' for i in t["sample"])
-    out.append(f'<li id="theme-{t["n"].lower()}"><h3><span class="n">{e(t["n"])}</span> {e(t["name"])}</h3>'
-               f'<p>{e(t["blurb"])} <span class="muted small">{n} sessions</span></p>'
-               f'<p class="kind">Sample readings</p><ul class="sample">{sample}</ul></li>')
+    sample = "".join(f'<li><a href="{ea(t["readings"][j]["url"])}">{e(t["readings"][j]["title"])}</a> '
+                     f'<span class="muted">{e(t["readings"][j]["cite"])}</span></li>' for j in t["sample"])
+    out.append(f'<li class="theme-card" id="theme-{t["n"].lower()}">'
+               f'<p class="n" aria-hidden="true">{e(t["n"])}</p>'
+               f'<h3><span class="visually-hidden">Theme {e(t["n"])}: </span>{e(t["name"])}</h3>'
+               f'<p>{e(t["blurb"])}</p><p class="meta">{n} sessions</p>'
+               f'<details><summary>Sample readings</summary><ul class="sample">{sample}</ul></details>'
+               f'<a class="more" href="map/#m{i}">See on the map</a></li>')
 out.append("</ol>")
 out.append('<p class="map-cta"><a class="btn" href="map/">Explore every reading on the map</a> '
            '<span class="small muted">All 27 syllabus readings among 400 related works, with the full schedule by date.</span></p>')
