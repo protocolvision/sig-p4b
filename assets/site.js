@@ -44,9 +44,10 @@
         var when = box.querySelector('.when'), what = box.querySelector('.what');
         if (!n) { when.textContent = 'The year is complete.'; what.textContent = ''; return; }
         var d = new Date(n.date + 'T15:30:00Z');
-        var day = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+        // one time, in the reader's own zone; the UTC time stays in the tooltip
+        var day = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
         var local = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
-        when.textContent = day + ' · 15:30 UTC (' + local + ' your time)';
+        when.textContent = day + ' · ' + local; when.title = '15:30 UTC';
         what.textContent = '';
         var a = document.createElement('a'); a.href = n.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = n.title; what.appendChild(a);
         var m = document.createElement('span'); m.className = 'muted small';
