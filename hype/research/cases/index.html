@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Studies · Protocols for Business SIG</title>
+<meta name="description" content="Worked examples of AI-native data operations (California water rate data, construction bids from PDFs, the Protocol Institute brand kit) and a sample template for participants&#x27; own cases.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Protocol Institute">
+<meta property="og:title" content="Case Studies · Protocols for Business SIG">
+<meta property="og:description" content="Worked examples of AI-native data operations (California water rate data, construction bids from PDFs, the Protocol Institute brand kit) and a sample template for participants&#x27; own cases.">
+<meta property="og:url" content="https://npc.here.now/protocolvision/research/cases/">
+<meta property="og:image" content="https://npc.here.now/protocolvision/assets/cards/case-studies.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Case Studies · Protocols for Business SIG">
+<meta name="twitter:description" content="Worked examples of AI-native data operations (California water rate data, construction bids from PDFs, the Protocol Institute brand kit) and a sample template for participants&#x27; own cases.">
+<meta name="twitter:image" content="https://npc.here.now/protocolvision/assets/cards/case-studies.jpg">
+<link rel="alternate" type="text/plain" title="Summary for language models" href="../../../llms.txt">
+<link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="../../../blyg/feed.xml">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../assets/hype.css">
+<meta name="robots" content="noindex">
+<body>
+<header>
+<a class="home" href="../../" aria-label="Protocol Institute – Business, home"><img class="logo" src="../../favicon.svg" alt="">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>
+<nav aria-label="Main">
+<a href="../../sessions/">Sessions</a>
+<a href="../../research/" aria-current="page">Research</a>
+<a href="../../about/">About</a>
+</nav>
+</header>
+<main>
+<h1>Case studies</h1>
+<p class="meta"><a href="../">Research</a> · worked examples and a sample template</p>
+<p>Members are encouraged to carry one case study through the year, starting whenever they join. These are the worked examples so far.</p>
+
+<h2 id="water">California water rate data</h2>
+<p class="meta">Leads: <a class="quiet" href="https://www.linkedin.com/in/patrick-atwater-8a92339/" target="_blank" rel="noopener noreferrer">Patrick Atwater</a> and <a class="quiet" href="https://www.linkedin.com/in/maxwell-titsworth-81802870/" target="_blank" rel="noopener noreferrer">Maxwell Titsworth</a> · with the California Data Collaborative · ongoing, now in implementation</p>
+<p>California's water rates are public but scattered across hundreds of utility sites and PDFs. Machines can now read any rate sheet; finding the current one is the hard part. So the work focused on discoverability (a registry of each utility's rate page and an <code>llms.txt</code> pattern) rather than a new data standard.</p>
+<p class="small"><a href="https://npc.here.now/waterdatastrategy/" target="_blank" rel="noopener noreferrer">Strategy report</a> · <a href="https://npc.here.now/waterdatadiscoverycases/" target="_blank" rel="noopener noreferrer">Seven precedents</a> · <a href="https://npc.here.now/waterdataexploration/" target="_blank" rel="noopener noreferrer">Five cases in data coordination</a></p>
+
+<h2 id="construction">Construction bids from PDF solicitations</h2>
+<p class="meta">Lead: <a class="quiet" href="https://www.linkedin.com/in/andre-comeau/" target="_blank" rel="noopener noreferrer">Andre Comeau</a> · with a heavy-civil subcontractor (anonymized) · MVP built</p>
+<p>Every public bid arrives as a PDF with its own pay items, caps, and requirements. The pipeline keeps a fixed spine in code (intake, schemas, audit rules, gates) and leaves each job's judgment to agents. Forecasts are scored against published bid results, so the estimate improves with every letting.</p>
+
+<h2 id="brand-kit">Protocol Institute brand kit</h2>
+<p class="meta">Marketing · small case</p>
+<p>A written brand spec that agents build pages from. It kept producing the same bugs until the kit gained shared components and automated checks. <a href="https://npc.here.now/protocolinstitutebrandkit/" target="_blank" rel="noopener noreferrer">Brand kit</a></p>
+
+<h2 id="yours">Your case study</h2>
+<p>Pick an organization you can see into: your own, a client's, or one whose records are public. Pick a data operation in it that AI is changing, or should change, and carry it for about a year from whenever you join, sharing progress in a session's show-and-tell.</p>
+<ul class="schedule">
+  <li><time>Month 1</time><span class="what"><strong>Choose.</strong> One paragraph on the organization and where the work gets stuck.</span></li>
+  <li><time>Months 2–3</time><span class="what"><strong>Brief.</strong> One page on the context, the bottleneck, and how the work is done today.</span></li>
+  <li><time>Months 4–6</time><span class="what"><strong>Intervene.</strong> Decide what becomes code, what is left to agents, and what stays with people, and what you will measure.</span></li>
+  <li><time>Months 7–11</time><span class="what"><strong>Evidence.</strong> Run it, measure it, and note what surprised you.</span></li>
+  <li><time>Month 12</time><span class="what"><strong>Publish.</strong> An open write-up, which feeds into the group's thesis.</span></li>
+</ul>
+
+<h2 id="template">Sample template</h2>
+<p>If a structure helps, the worked examples answer these questions. Find your own way if another shape fits your case better.</p>
+<ol>
+<li><strong>Context:</strong> the organization and what the data is for.</li>
+<li><strong>Bottleneck:</strong> where the work is actually stuck.</li>
+<li><strong>Before:</strong> how data was found, checked, and trusted.</li>
+<li><strong>Intervention:</strong> what became code, what went to agents, what stayed with people.</li>
+<li><strong>Evidence:</strong> what you measured, and where the model was wrong.</li>
+<li><strong>What transfers:</strong> what another domain could reuse.</li>
+</ol>
+<p class="small muted">To start, copy <a href="https://github.com/protocolvision/sig-p4b/blob/main/case-studies/TEMPLATE.md" target="_blank" rel="noopener noreferrer">the sample template</a> into <code>case-studies/your-name/</code>, or post your case in <code>#protocols-for-business</code>. You can keep a client anonymous.</p>
+</main>
+<footer>
+<p><img class="mark" src="../../favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/" target="_blank" rel="noopener noreferrer">Protocol Institute</a></p>
+<nav><a href="../../sessions/">Sessions</a><a href="../../research/">Research</a><a href="../../about/">About</a><a href="../../../blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj" target="_blank" rel="noopener noreferrer">Discord</a><a href="https://github.com/protocolvision/sig-p4b" target="_blank" rel="noopener noreferrer">Source</a><a href="../../../llms.txt">llms.txt</a></nav>
+</footer>
+<script src="../../assets/site.js" data-root="../../" data-signup="https://sig-p4b-signup.rafaeldf2.workers.dev" defer></script>
+<script src="../../assets/hype.js" data-root="../../" defer></script>
+</body>
+</html>
