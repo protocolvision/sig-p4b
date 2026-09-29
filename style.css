@@ -93,7 +93,9 @@ a.more-ic { display: inline-flex; align-items: center; justify-content: center; 
 @media (max-width: 34rem) { .rows li { grid-template-columns: 1fr; } }
 
 /* people and cases: plain lists, no cards */
-.people { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.people { display: block; }
+.people > div { padding: .75rem 0; border-top: 1px solid var(--rule); }
+.people > div:last-child { border-bottom: 1px solid var(--rule); }
 .people strong { display: block; }
 .people p { margin: .2rem 0 0; font-size: .95rem; color: var(--muted); }
 .cards { display: block; }
@@ -103,7 +105,7 @@ a.more-ic { display: inline-flex; align-items: center; justify-content: center; 
 .card p { margin: 0 0 .35rem; color: var(--muted); }
 .card .status { display: block; font-style: normal; }
 .card a.more::after { content: " →"; }
-@media (max-width: 34rem) { .people { grid-template-columns: 1fr; } }
+
 
 /* sessions */
 .page-nav { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin: .5rem 0 0; font-size: .95rem; }
