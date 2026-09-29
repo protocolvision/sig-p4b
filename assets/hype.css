@@ -319,3 +319,12 @@ body.rave { animation: rave .5s linear infinite; }
 .trailer .quote small { margin-top: 1rem; color: var(--acid); font: 700 1rem "Space Grotesk"; letter-spacing: .08em; }
 .trailer .end { background: radial-gradient(circle, rgba(0, 0, 0, .55), #000); }
 .trailer .unmute { animation: nag 1.6s ease-in-out infinite; }
+.trailer .thread { position: absolute; left: 1.25rem; top: calc(11vh + 24px); z-index: 6; padding: .25rem .6rem; border-radius: 999px; background: rgba(0, 0, 0, .6); border: 1px solid rgba(255, 255, 255, .4); color: #fff; font: 700 .9rem "Space Grotesk"; }
+.trailer .thread:empty { display: none; }
+.trailer .thread.pop { animation: wordpop .3s cubic-bezier(.2, 1.8, .4, 1); }
+.trailer .stories i b { animation: none; }
+.trailer .stat { position: absolute; left: 6%; right: 6%; top: 24%; z-index: 4; text-align: center; opacity: 0; pointer-events: none; }
+.trailer .stat.on { opacity: 1; animation: statslam .35s cubic-bezier(.2, 1.7, .4, 1); }
+.trailer .stat b { display: block; font: clamp(3.5rem, 15vw, 11rem)/.9 Anton, Impact, sans-serif; color: #fff; -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 0 0 40px rgba(255, 43, 214, .8), 0 6px 0 #000; }
+.trailer .stat small { display: inline-block; margin-top: .8rem; padding: .35rem .8rem; border-radius: 8px; background: var(--acid); color: #000; font: 800 clamp(.9rem, 2.2vw, 1.4rem) "Space Grotesk"; }
+@keyframes statslam { 0% { transform: scale(2.2) rotate(-6deg); opacity: 0; filter: blur(8px); } 100% { transform: none; opacity: 1; filter: none; } }

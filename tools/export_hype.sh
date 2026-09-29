@@ -11,4 +11,7 @@ rsync -a --delete --exclude '.git' --exclude '.herenow*' --exclude 'README.md' -
   --exclude 'blyg' --exclude 'llms.txt' --exclude 'sig-p4b.ics' --exclude 'config.json' ./ "$DEST/"
 # hype/ sits one level deeper, so point blyg and llms.txt links at the main site's copies
 find "$DEST" -name '*.html' -exec perl -pi -e 's#href="((?:\.\./)*)(blyg/|llms\.txt)#href="$1../$2#g' {} +
+# the main deploy only cache-busts style.css and site.js, so stamp the hype files here
+V=$(date +%s)
+find "$DEST" -name '*.html' -exec perl -pi -e "s#assets/hype\.(css|js)\"#assets/hype.\$1?v=$V\"#g" {} +
 echo "Exported to $DEST"
