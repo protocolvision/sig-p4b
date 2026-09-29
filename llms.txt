@@ -3,8 +3,9 @@
 > A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, on the Protocol Institute Discord (https://discord.gg/zNJdK7caj, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 
 ## Pages
-- [About](https://npc.here.now/protocolvision/about/): method (protocol vision), origins, facilitators, publications
-- [Sessions](https://npc.here.now/protocolvision/sessions/): joining details, session format, full syllabus with a quote from each reading, archive
+- [About](https://npc.here.now/protocolvision/about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
+- [Sessions](https://npc.here.now/protocolvision/sessions/): joining details, session format, the year's six themes with sample readings, how to suggest a reading, archive
+- [Reading map](https://npc.here.now/protocolvision/sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research](https://npc.here.now/protocolvision/research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol Play](https://npc.here.now/protocolvision/play/): protocol watching, workshops, simulation
@@ -15,14 +16,18 @@
 - [Feed](https://npc.here.now/protocolvision/blyg/feed.xml) · [Manifest](https://npc.here.now/protocolvision/blyg/blyg.json) · [Archive index](https://npc.here.now/protocolvision/blyg/items/index.json)
 
 ## Data
-- [sessions.json](https://npc.here.now/protocolvision/sessions.json): all 26 sessions with date, reading, quote, companion essay, and show-and-tell
+- [sessions.json](https://npc.here.now/protocolvision/sessions.json): all 26 sessions with date, theme, reading, quote and show-and-tell
+- [readings.json](https://npc.here.now/protocolvision/sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme
+
+## Suggest a reading
+Open https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml with the title, link, author and year, the theme it fits, and what it adds. Prefer primary sources, and check that the source exists.
 - [Calendar (.ics)](https://npc.here.now/protocolvision/sig-p4b.ics): subscribable; times in UTC
 
 ## Next sessions
 - 2026-11-02 15:30–16:30 UTC: The Hugging Face incident and the road ahead (OpenAI, 2026), https://openai.com/index/hugging-face-incident-and-the-road-ahead/
 - 2026-11-16 15:30–16:30 UTC: Patterns and problems in multiagent systems (Anthropic, 2026), https://www.anthropic.com/research/multiagent-systems
-- 2026-11-30 15:30–16:30 UTC: The Principles of Collective Animal Behaviour (Sumpter, 2006), https://pmc.ncbi.nlm.nih.gov/articles/PMC1626537/
-- 2026-12-14 15:30–16:30 UTC: Quorum Sensing in Bacteria (Miller & Bassler, 2001), https://doi.org/10.1146/annurev.micro.55.1.165
+- 2026-11-30 15:30–16:30 UTC: Model Context Protocol Specification (modelcontextprotocol.io, 2024–), https://modelcontextprotocol.io/specification/latest
+- 2026-12-14 15:30–16:30 UTC: Ironies of Automation (Bainbridge, 1983), https://doi.org/10.1016/0005-1098(83)90046-8
 
 ## Register for session emails
 POST https://sig-p4b-signup.rafaeldf2.workers.dev/signup with Content-Type: application/json.

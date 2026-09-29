@@ -117,8 +117,9 @@ def write_llms():
 > A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 
 ## Pages
-- [About]({SITE}about/): method (protocol vision), origins, facilitators, publications
-- [Sessions]({SITE}sessions/): joining details, session format, full syllabus with a quote from each reading, archive
+- [About]({SITE}about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
+- [Sessions]({SITE}sessions/): joining details, session format, the year's six themes with sample readings, how to suggest a reading, archive
+- [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research]({SITE}research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol Play]({SITE}play/): protocol watching, workshops, simulation
@@ -129,7 +130,11 @@ def write_llms():
 - [Feed]({SITE}blyg/feed.xml) · [Manifest]({SITE}blyg/blyg.json) · [Archive index]({SITE}blyg/items/index.json)
 
 ## Data
-- [sessions.json]({SITE}sessions.json): all 26 sessions with date, reading, quote, companion essay, and show-and-tell
+- [sessions.json]({SITE}sessions.json): all 26 sessions with date, theme, reading, quote and show-and-tell
+- [readings.json]({SITE}sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme
+
+## Suggest a reading
+Open https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml with the title, link, author and year, the theme it fits, and what it adds. Prefer primary sources, and check that the source exists.
 - [Calendar (.ics)]({SITE}sig-p4b.ics): subscribable; times in UTC
 
 ## Next sessions

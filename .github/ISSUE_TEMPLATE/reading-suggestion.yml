@@ -1,0 +1,60 @@
+name: Suggest a reading
+description: Add a reading to the SIG's reading map.
+title: "Reading: "
+labels: ["reading-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for adding to the map. If an AI assistant helped you find this, please open the source and check it exists and says what the assistant claims. Remove anything private about you, your employer or other people.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: A working link to the reading itself, not a summary of it.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author and year
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme it fits
+      options:
+        - "I. What agents are, in practice"
+        - "II. Natural coordination"
+        - "III. Emissions"
+        - "IV. Seeing hardness in incidents"
+        - "V. Designing the hard core"
+        - "VI. Keeping the core alive, and the contrast"
+        - "Somewhere else on the map"
+    validations:
+      required: true
+  - type: textarea
+    id: adds
+    attributes:
+      label: What it adds to the map
+      description: One or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Why it matters from your experience
+      description: Optional. One or two sentences on how it has shaped your work.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I opened the source and it says what I describe.
+          required: true
+        - label: It's a primary source (report, specification, regulation, original paper or first-hand account).

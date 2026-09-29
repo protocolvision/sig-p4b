@@ -16,6 +16,23 @@
   var ROOT = (script && script.getAttribute('data-root')) || './';
   var SIGNUP = ((script && script.getAttribute('data-signup')) || 'https://sig-p4b-signup.rafaeldf2.workers.dev') + '/signup';
 
+  /* Copy buttons: [data-copy="id"] copies that element's text. */
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var src = document.getElementById(b.getAttribute('data-copy'));
+      var status = b.parentNode.querySelector('[data-copy-status]');
+      var done = function (msg) { if (status) status.textContent = msg; };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(src.textContent).then(function () { done('Copied.'); }, function () { select(); });
+      } else { select(); }
+      function select() {
+        var r = document.createRange(); r.selectNodeContents(src);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        done('Selected. Press Cmd+C or Ctrl+C to copy.');
+      }
+    });
+  });
+
   /* Next session: fill every [data-next] card from sessions.json. The static HTML
      already shows the first session, so the card reads correctly without script. */
   var cards = document.querySelectorAll('[data-next]');

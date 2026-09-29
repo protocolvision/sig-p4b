@@ -10,7 +10,7 @@ The central repository for the Protocol Institute's Special Interest Group in Pr
 | Part | Where | What it does |
 |---|---|---|
 | Website | `src/`, `tools/build_site.py` | About, Sessions, Research, Play. Built to static pages with `llms.txt` for language models |
-| Syllabus and calendar | `tools/sessions.json`, `tools/build_schedule.py` | 26 sessions from 2 November 2026: readings, quotes, companions, show-and-tell; `sessions.json`, schema.org events, and a subscribable `.ics` |
+| Syllabus and calendar | `tools/themes.json and tools/slots.json`, `tools/build_schedule.py` | 26 sessions from 2 November 2026: readings, quotes, companions, show-and-tell; `sessions.json`, schema.org events, and a subscribable `.ics` |
 | Blyg | `blyg-src/`, `tools/build_blyg.py` | Session notes and the research log, published with the Blygger protocol 0.2. Git commits are publishes; `tools/blyg_check.py` checks conformance |
 | Member sign-ups | `worker/` | Cloudflare Worker storing registrations (member / pi-core roles), CSV export, signed unsubscribe links |
 | Case studies, protocol watching | `src/research-cases.html`, `src/play-watching.html`, `case-studies/`, `observations/` | Templates and guides for participants' own cases and observations |
@@ -25,7 +25,7 @@ Apple-style controls (44pt targets, sentence-case buttons).
 The repo is meant to be the group's single source of truth, with more flows added on top of it:
 
 1. **Email to members.** Send each session's reading and prep notes to registered members from
-   `tools/sessions.json`, with each person's unsubscribe link. The member list and roles already live
+   `tools/themes.json and tools/slots.json`, with each person's unsubscribe link. The member list and roles already live
    in the sign-up worker. Candidates: Cloudflare Email Service from the worker, or an export to a
    newsletter tool.
 2. **Meeting recordings.** Connect the Protocol Institute's recording pipeline (c3po's Discord
@@ -77,7 +77,7 @@ The homepage Register button opens a dialog (a bottom drawer on phones) that pos
 
 ## Sessions and calendar
 
-`tools/sessions.json` is the source of truth for the 26 sessions: date, reading, companion piece, and feature. After editing it, run:
+`tools/themes.json` (the six themes and their readings) and `tools/slots.json` (the 26 dates and show-and-tell slots) are the source of truth for the syllabus. After editing it, run:
 
     python3 tools/build_schedule.py
 

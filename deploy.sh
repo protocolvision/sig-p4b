@@ -10,7 +10,7 @@ python3 tools/build_site.py
 python3 tools/build_blyg.py
 python3 tools/blyg_check.py
 OUT=$(mktemp -d)
-rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'sources' --exclude 'src' --exclude 'blyg-src' --exclude '.github' ./ "$OUT/"
+rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'sources' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' ./ "$OUT/"
 # Bust the CDN/browser cache for the stylesheet on every deploy.
 V=$(date +%s)
 find "$OUT" -name '*.html' -exec perl -pi -e "s|style\.css\"|style.css?v=$V\"|; s|site\.js\"|site.js?v=$V\"|" {} +

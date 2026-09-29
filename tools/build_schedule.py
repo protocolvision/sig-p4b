@@ -1,17 +1,31 @@
 #!/usr/bin/env python3
-"""Build everything schedule-related from tools/sessions.json (v2 layout).
+"""Build everything schedule-related from tools/themes.json and tools/slots.json.
 
-- syllabus/index.html: the movements, topics and sessions (between the schedule markers)
-- index.html: the homepage schedule list and the "Next session" data
-- sig-p4b.ics: subscribable calendar, sessions fixed at 15:30-16:30 UTC
+- tools/themes.json: the syllabus as six themes, each with its readings in order of exploration
+  (a reading marked "companion" is read alongside the one before it, not in its own session)
+- tools/slots.json: the 26 session dates, each with its show-and-tell or guest
+- src/sessions.html: a summary of the themes with sample readings (between the schedule markers)
+- sessions.json: public per-session data; sig-p4b.ics: the subscribable calendar (15:30-16:30 UTC)
 
-Edit sessions.json, run this script, then ./deploy.sh.
+Edit themes.json or slots.json, run this script, then ./deploy.sh.
 """
 import html, json, re, datetime as dt
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-S = json.loads((ROOT / "tools/sessions.json").read_text())
+T = json.loads((ROOT / "tools/themes.json").read_text())
+SLOTS = json.loads((ROOT / "tools/slots.json").read_text())
+S = []
+for t in T["themes"]:
+    for r in t["readings"]:
+        if r.get("companion") and S:
+            S[-1]["also_read"] = r
+            continue
+        S.append({"theme": f'{t["n"]}. {t["name"]}', "theme_blurb": t["blurb"], "title": r["title"], "url": r["url"],
+                  "cite": r["cite"], "quote": r.get("quote", "")})
+assert len(S) == len(SLOTS), f"{len(S)} sessions but {len(SLOTS)} dates in slots.json"
+for s, slot in zip(S, SLOTS):
+    s.update(slot)
 e = lambda s: html.escape(s, quote=False)
 ea = lambda s: html.escape(s, quote=True)
 label = lambda d: f"{int(d[8:])} {dt.date.fromisoformat(d).strftime('%B %Y')}"
@@ -30,41 +44,21 @@ def replace_between(text, name, body):
     assert pat.search(text), f"missing markers for {name}"
     return pat.sub(lambda m: m.group(1) + "\n" + body + "\n" + m.group(2), text)
 
-# --- syllabus (src/sessions.html) ---
-MONTHS = {}
-for s in S:
-    MONTHS.setdefault(s["movement"], []).append(s["date"])
-def span(ds):
-    a, b = dt.date.fromisoformat(ds[0]), dt.date.fromisoformat(ds[-1])
-    fa, fb = a.strftime("%b"), b.strftime("%b")
-    yr = f" {b.year}"
-    return (fa if fa == fb else f"{fa}–{fb}") + yr
-out, movement, first = [], None, True
-for s in S:
-    if s["movement"] != movement:
-        if movement:
-            out.append("</ul>")
-            out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>\n</div></details>')
-        movement = s["movement"]; prev_claim = s["movement_claim"]
-        out.append(f'<details class="mv"{" open" if first else ""}><summary><span class="k">{span(MONTHS[movement])}</span>'
-                   f'<span><strong>{e(movement)}</strong></span></summary>\n<div class="body">')
-        first = False
-    if s["first_in_topic"]:
-        if out[-1].endswith("</li>"): out.append("</ul>")
-        out.append(f'<p class="topic"><strong>{e(s["topic"])}.</strong> {e(s["topic_line"])} '
-                   f'<span class="muted">Alongside: <a href="{ea(s["pi_url"])}">{e(s["pi_title"])}</a> ({e(s["pi_cite"])})</span></p>')
-        out.append('<ul class="schedule">')
-    extra = ""
-    if s.get("also_read"):
-        a = s["also_read"]
-        extra = f'<br>\n    <span class="kind">with</span> <a href="{ea(a["url"])}">{e(a["title"])}</a> <span class="muted">{e(a["cite"])}</span>'
-    quotes = f'<q>{e(s["quote"])}</q>' + (f' <q>{e(s["also_read"]["quote"])}</q>' if s.get("also_read") else "")
-    out.append(f'  <li id="s-{s["date"]}"><time datetime="{s["date"]}">{label(s["date"])}</time>\n'
-               f'    <span class="what"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>{extra}<br>\n'
-               f'    <span class="kind">show-and-tell</span> <span class="muted">{e(s["feature"])}</span></span>\n'
-               f'    <span class="also quote">{quotes}</span></li>')
-out.append("</ul>")
-out.append(f'<p class="claim"><span class="kind">What we now see</span><br>{e(prev_claim)}</p>\n</div></details>')
+# --- syllabus summary (src/sessions.html): themes in order of exploration, with sample readings ---
+out = [f'<p>{e(T["summary"])}</p>', '<ol class="themes">']
+k = 0
+for t in T["themes"]:
+    n = sum(1 for r in t["readings"] if not r.get("companion"))
+    first, last = S[k]["date"], S[k + n - 1]["date"]
+    k += n
+    sample = "".join(f'<li><a href="{ea(t["readings"][i]["url"])}">{e(t["readings"][i]["title"])}</a> '
+                     f'<span class="muted">{e(t["readings"][i]["cite"])}</span></li>' for i in t["sample"])
+    out.append(f'<li id="theme-{t["n"].lower()}"><h3><span class="n">{e(t["n"])}</span> {e(t["name"])}</h3>'
+               f'<p>{e(t["blurb"])} <span class="muted small">{n} sessions</span></p>'
+               f'<p class="kind">Sample readings</p><ul class="sample">{sample}</ul></li>')
+out.append("</ol>")
+out.append('<p class="map-cta"><a class="btn" href="map/">Explore every reading on the map</a> '
+           '<span class="small muted">All 27 syllabus readings among 400 related works, with the full schedule by date.</span></p>')
 p = ROOT / "src/sessions.html"
 p.write_text(replace_between(p.read_text(), "schedule", "\n".join(out)))
 
@@ -75,7 +69,7 @@ events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
            "eventStatus": "https://schema.org/EventScheduled",
            "location": {"@type": "VirtualLocation", "url": DISCORD},
            "about": {"@type": "CreativeWork", "name": s["title"], "url": s["url"]},
-           "description": f"{s['topic']}: {s['topic_line']} Show-and-tell: {s['feature']}.",
+           "description": f"Theme {s['theme']}. {s['theme_blurb']} Show-and-tell: {s['feature']}.",
            "organizer": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
            "isAccessibleForFree": True} for s in S]
 series = {"@context": "https://schema.org", "@type": "EventSeries",
@@ -87,8 +81,8 @@ p.write_text(replace_between(p.read_text(), "jsonld",
 
 # --- public session data ---
 public = [{"date": s["date"], "start_utc": f"{s['date']}T15:30:00Z", "end_utc": f"{s['date']}T16:30:00Z",
-           "movement": s["movement"], "topic": s["topic"], "title": s["title"], "url": s["url"], "cite": s["cite"],
-           "quote": s["quote"], "companion": {"title": s["pi_title"], "url": s["pi_url"], "cite": s["pi_cite"]},
+           "theme": s["theme"], "title": s["title"], "url": s["url"], "cite": s["cite"], "quote": s["quote"],
+           **({"also_read": {k: s["also_read"][k] for k in ("title", "url", "cite")}} if s.get("also_read") else {}),
            "feature": s["feature"], "feature_short": short_feature(s["feature"])} for s in S]
 (ROOT / "sessions.json").write_text(json.dumps(public, ensure_ascii=False, indent=1) + "\n")
 
@@ -113,19 +107,23 @@ def fold(line):
 import subprocess
 _iso = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI", "--", "tools/sessions.json"],
                       capture_output=True, text=True).stdout.strip()
+_iso = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI", "--", "tools/themes.json", "tools/slots.json"],
+                      capture_output=True, text=True).stdout.strip() or _iso
 stamp = (dt.datetime.fromisoformat(_iso).astimezone(dt.timezone.utc) if _iso else dt.datetime(2026, 9, 27, tzinfo=dt.timezone.utc)).strftime("%Y%m%dT%H%M%SZ")
 L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Protocol Institute//SIG P4B//EN", "CALSCALE:GREGORIAN",
      "METHOD:PUBLISH", "X-WR-CALNAME:Protocols for Business SIG",
      "X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG"]
 for s in S:
     d = s["date"].replace("-", "")
-    desc = (f"{s['topic']}: {s['topic_line']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n\u201c{s['quote']}\u201d\n\n"
-            f"Alongside: {s['pi_title']} ({s['pi_cite']})\n{s['pi_url']}\n\nFeature: {s['feature']}\n\n"
-            f"Join on the Protocol Institute Discord: {DISCORD}\nSyllabus: {SITE}syllabus/\nSessions are recorded.")
+    desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
+            + (f"\u201c{s['quote']}\u201d\n" if s["quote"] else "")
+            + (f"\nAlongside: {s['also_read']['title']} ({s['also_read']['cite']})\n{s['also_read']['url']}\n" if s.get("also_read") else "")
+            + f"\nFeature: {s['feature']}\n\nJoin on the Protocol Institute Discord: {DISCORD}\n"
+            f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
           f"DTSTART:{d}T153000Z", f"DTEND:{d}T163000Z",
           fold("SUMMARY:" + esc(f"SIG P4B · {s['title']}")), fold("DESCRIPTION:" + esc(desc)),
           fold("LOCATION:" + esc("Protocol Institute Discord · " + DISCORD)), f"URL:{SITE}", "END:VEVENT"]
 L.append("END:VCALENDAR")
 (ROOT / "sig-p4b.ics").write_text("\r\n".join(L) + "\r\n")
-print(f"{len(S)} sessions -> src/sessions.html, sessions.json, sig-p4b.ics")
+print(f"{len(T['themes'])} themes, {len(S)} sessions -> src/sessions.html, sessions.json, sig-p4b.ics")

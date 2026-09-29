@@ -338,3 +338,16 @@ blockquote.blyg-transclusion p { margin: 0.3rem 0; }
 .register .step[hidden] { display: none; }
 .register .done { margin: 4px 0 2px; font-weight: 600; color: var(--tint); }
 .register .step-1 .register-actions .btn { flex: 1; }
+
+/* Syllabus themes (sessions page) */
+ol.themes { list-style: none; padding: 0; margin: 1.25rem 0; counter-reset: none; }
+ol.themes > li { border-top: 1px solid var(--rule); padding: 1rem 0 .5rem; }
+ol.themes h3 { margin: 0 0 .35rem; font-size: 1.1rem; display: flex; align-items: baseline; gap: .6rem; }
+ol.themes h3 .n { flex: none; min-width: 2.2rem; font: 500 .85rem Outfit, system-ui, sans-serif; letter-spacing: .06em; color: var(--link); }
+ol.themes p { margin: 0 0 .5rem; }
+ol.themes .kind { margin-top: .5rem; }
+ul.sample { margin: 0 0 .5rem; padding-left: 1.1rem; }
+ul.sample li { margin-bottom: .25rem; }
+.map-cta { margin: 1.5rem 0 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+.prompt { background: var(--fill, #f5f5f7); border-radius: 14px; padding: 1rem 1.1rem .4rem; margin: 1rem 0 2rem; }
+.prompt pre { white-space: pre-wrap; font: .92rem/1.55 Lora, Georgia, serif; margin: 0 0 .75rem; }
