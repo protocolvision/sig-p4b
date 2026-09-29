@@ -126,7 +126,7 @@ def write_llms():
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 
 ## Blyg (session notes and research log)
-- [Blyg]({SITE}blyg/): session notes and the running research log, published with the Blygger protocol 0.2 (https://blygger.org/)
+- [Blyg]({SITE}blyg/): session notes and the running research log, published with the Blygger protocol 0.3 (https://blygger.org/)
 - [Feed]({SITE}blyg/feed.xml) · [Manifest]({SITE}blyg/blyg.json) · [Archive index]({SITE}blyg/items/index.json)
 
 ## Data

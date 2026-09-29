@@ -11,5 +11,5 @@
 - Reading map: pipeline in `drafts/landscape/` (see its README); `drafts/landscape/.venv/bin/python drafts/landscape/publish.py` copies it to `sessions/map/`. Re-run `paths.py` then `publish.py` after editing themes.json.
 - Sessions are fixed at 15:30 UTC (Berlin local time moves with DST). Sessions are recorded; say so wherever meeting details appear.
 - v2: edit `src/*.html` (never the generated page files), then run `tools/build_schedule.py` and `tools/build_site.py`. `src/sessions.html` contains generated regions between markers.
-- Blyg: sources in `blyg-src/` (commit = publish; never rename files). `./deploy.sh` builds and runs `tools/blyg_check.py` before publishing. Mark model-written text with `::: generated` fences.
+- Blyg (Blygger 0.3): sources in `blyg-src/` (commit = publish; never rename files). `./deploy.sh` builds and runs `tools/blyg_check.py` before publishing. Mark model-written text with `::: generated` fences.
 - Sign-up Worker URL and site URL live in `config.json` (read by the builders and `worker/export.sh`); the Worker's own `SITE`/`ALLOWED_ORIGINS` are `vars` in `worker/wrangler.jsonc`. Redeploy-on-another-account steps: `worker/README.md`. Never write sign-up exports into the repo.

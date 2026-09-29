@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the SIG's blyg (Blygger protocol 0.2, Level 1) from blyg-src/.
+"""Build the SIG's blyg (Blygger protocol 0.3, Level 1) from blyg-src/.
 
 Sources
   blyg-src/fragments/*.md   short items (SHOULD stay under 2,000 characters)
@@ -37,7 +37,8 @@ SRC = ROOT / "blyg-src"
 OUT = ROOT / "blyg"
 SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
 ORIGIN = SITE + "blyg/"
-BLYG = "0.2"
+BLYG = "0.3"
+GENERATOR_URL = "https://github.com/protocolvision/sig-p4b"
 GENERATOR = "sig-p4b-blyg/0.1 (static, git-versioned)"
 TITLE = "Protocols for Business SIG"
 DESCRIPTION = ("Session notes and the running research log of the Protocol Institute's "
@@ -140,7 +141,8 @@ def fragment_version_at(frag, when):
 def build_item(item, items):
     vs, iid, kind = item["versions"], item["id"], item["kind"]
     latest = vs[-1]
-    doc = {"blyg": BLYG, "id": iid, "kind": "withdrawn" if latest["withdrawn"] else kind, "origin": ORIGIN}
+    doc = {"blyg": BLYG, "id": iid, "kind": "withdrawn" if latest["withdrawn"] else kind, "origin": ORIGIN,
+           "page": f'{"f" if kind == "fragment" else "t"}/{iid}/'}  # 0.3 §5.8: the item's permalink, origin-relative
     author = latest["meta"].get("author")
     if author:
         doc["author"] = {"name": author}
@@ -250,7 +252,7 @@ def main():
     index = {"updated": updated, "items": [{"id": d["id"], "kind": d["kind"], "created": d["created"],
                                              "updated": d["updated"], "version": d["version"]} for d in ordered]}
     (OUT / "items" / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1) + "\n")
-    manifest = {"blyg": BLYG, "level": 1, "generator": GENERATOR, "site": ORIGIN, "title": TITLE,
+    manifest = {"blyg": BLYG, "level": 1, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
                 "author": {"name": TITLE, "bio": DESCRIPTION,
                            "links": [{"label": "Home", "url": SITE}, {"label": "Protocol Institute", "url": "https://protocol-institute.org/"}]},
                 "feed": "feed.xml", "items": "items/index.json", "updated": updated}
@@ -330,7 +332,7 @@ def write_pages(ordered, stems):
              "card": "syllabus", "head": alt.format(rel="../../../")}, body))
     intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
              f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
-             f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.2) · '
+             f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.3) · '
              f'<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n'
              + "".join(f'<h2>{label}</h2>\n<ul class="schedule">\n' + "\n".join(r for _, r in sorted(groups[k], reverse=True)) + "\n</ul>\n"
                        for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))

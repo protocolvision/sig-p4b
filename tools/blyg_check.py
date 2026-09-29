@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check blyg/ (or a live origin) against the Blygger 0.2 Level 1 publish-side rules.
+"""Check blyg/ (or a live origin) against the Blygger 0.3 Level 1 publish-side rules.
 
   python3 tools/blyg_check.py                      # the local build in blyg/
   python3 tools/blyg_check.py https://…/blyg/      # a deployed origin
