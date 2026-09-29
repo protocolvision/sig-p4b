@@ -14,13 +14,12 @@ CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
-NAV = [("about", "About", "about/"), ("sessions", "Sessions", "sessions/"),
-       ("research", "Research", "research/"), ("play", "Play", "play/")]
+NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
-             "case-studies/": "research/cases/", "simulation/": "play/"}
+             "case-studies/": "research/cases/", "simulation/": "research/#practice", "play/": "research/#practice"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;500&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">')
 
 EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
 
@@ -120,9 +119,8 @@ def write_llms():
 - [About]({SITE}about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
 - [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
-- [Research]({SITE}research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
+- [Research]({SITE}research/): includes Practice (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
-- [Protocol Play]({SITE}play/): protocol watching, workshops, simulation
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 
 ## Blyg (session notes and research log)
