@@ -11,12 +11,12 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "assets" / "themes"
 W, H = 320, 140
-INK = "#004fcc"
+INK = "#0f6e56"
 
 
 def svg(body, label):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" aria-label="{label}">'
-            f'<rect width="{W}" height="{H}" rx="10" fill="#f2f6fd"/>{body}</svg>\n')
+            f'<rect width="{W}" height="{H}" rx="10" fill="#ecf6f2"/>{body}</svg>\n')
 
 
 def dot(x, y, r, o):
@@ -118,7 +118,7 @@ def bowtie():
         y2 = 12 + ((i * 7) % 24) * (116 / 23)
         out.append(f'<path d="M{cx + 16},{cy} C210,{cy} 225,{y2:.1f} 300,{y2:.1f}" fill="none" stroke="{INK}" stroke-opacity="{rng.uniform(0.2, 0.5):.2f}" stroke-width="1.1"/>')
     out.append(f'<rect x="{cx - 17}" y="{cy - 17}" width="34" height="34" rx="6" fill="{INK}"/>')
-    out.append(f'<rect x="{cx - 9}" y="{cy - 9}" width="18" height="18" rx="3" fill="#f2f6fd" fill-opacity="0.35"/>')
+    out.append(f'<rect x="{cx - 9}" y="{cy - 9}" width="18" height="18" rx="3" fill="#ecf6f2" fill-opacity="0.35"/>')
     return svg("".join(out), "Many inputs converging on a small hard core and fanning out again")
 
 

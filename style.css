@@ -391,3 +391,18 @@ ol.qs li .small { display: block; margin-top: .2rem; }
 .theme-card .chev { transition: transform .15s; }
 @media (prefers-reduced-motion: reduce) { .theme-card .chev { transition: none; } }
 .theme-card h3 { display: block; }
+
+/* Colour roles (PI brand kit): cobalt = things you click; forest = information (labels, numerals,
+   status, illustrations); rust = the one featured item (never as text: it fails contrast at small sizes). */
+:root { --accent: #0f6e56; --accent-strong: #085041; --accent-soft: #e1f5ee; --feature: #d85a30; --feature-soft: #faece7; }
+.claim .kind, .status { color: var(--accent-strong); }
+.next { border-left: 4px solid var(--feature); }
+.next .kind { color: var(--fg); }
+.next .kind::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--feature); margin-right: .45rem; vertical-align: .08em; }
+.theme-card h3 .n, ol.themes h3 .n, .theme-card .n { color: var(--accent); }
+.theme-card .ic-wrap { color: var(--accent-strong); }
+.theme-card details.samples summary:hover .ic-wrap, .theme-card details[open] .ic-wrap { background: var(--accent-soft); border-color: #b9e0d2; }
+.prompt-details summary { color: var(--accent-strong); }
+.page-nav a { color: var(--fg); }
+.page-nav a:hover { color: var(--link); }
+.theme-card img { border-bottom-color: #cfe7de; }
