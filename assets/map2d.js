@@ -7,7 +7,7 @@
   var tip = wrap.querySelector('.map-tip'), spokes = svg.querySelector('.spokes'), names = svg.querySelector('.names');
   var chips = document.querySelectorAll('.map-filters button');
   var VB = svg.viewBox.baseVal, W = VB.width, H = VB.height;
-  var view = { x: 0, y: 0, w: W, h: H }, pinned = 0;
+  var view = { x: 0, y: 0, w: W, h: H }, pinned = 0, current = -1, leaveTimer = null;
   var dots = {}; svg.querySelectorAll('circle[data-i]').forEach(function (c) { dots[c.dataset.i] = c; });
   var esc = function (s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var fmt = function (iso) { return new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
@@ -41,6 +41,7 @@
 
   /* show a theme: spokes from its tag, its reading names, everything else faded */
   function show(n) {
+    current = n;
     clear(spokes);
     svg.setAttribute('data-focus', n ? String(n) : '');
     svg.querySelectorAll('.tag').forEach(function (g) { g.classList.toggle('on', +g.dataset.th === n); });
@@ -115,8 +116,8 @@
   /* wiring: tags preview on hover or focus, pin on click; dots show a card, pin on click */
   svg.querySelectorAll('.tag').forEach(function (g) {
     var n = +g.dataset.th;
-    g.addEventListener('mouseenter', function () { show(n); });
-    g.addEventListener('mouseleave', function () { show(pinned); });
+    g.addEventListener('mouseenter', function () { clearTimeout(leaveTimer); if (current !== n) show(n); });
+    g.addEventListener('mouseleave', function () { clearTimeout(leaveTimer); leaveTimer = setTimeout(function () { show(pinned); }, 150); });
     g.addEventListener('focus', function () { show(n); });
     g.addEventListener('blur', function () { show(pinned); });
     g.addEventListener('click', function () { pinTheme(pinned === n ? 0 : n); });

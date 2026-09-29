@@ -207,3 +207,8 @@ svg.map .names line.leader { stroke: #9a978f; }
 .map-tip strong { display: block; font-weight: 600; }
 .map-tip span { color: var(--muted); font-size: .88rem; }
 @media (max-width: 40rem) { svg.map .tag text { font-size: 24px; } svg.map .tag rect { height: 40px; y: -20; } }
+/* map: steady hover (only tags and dots take the pointer; changes fade instead of jumping) */
+svg.map .names, svg.map .spokes, svg.map .labels, svg.map .contours { pointer-events: none; }
+svg.map circle { transition: opacity .18s ease, r .18s ease; }
+svg.map .tag, svg.map .labels { transition: opacity .18s ease; }
+@media (prefers-reduced-motion: reduce) { svg.map circle, svg.map .tag, svg.map .labels { transition: none; } }
