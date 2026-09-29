@@ -61,8 +61,8 @@ li { margin: .3rem 0; }
 /* next session: the one box on the site */
 .next { background: var(--fill); border-radius: 10px; padding: 1rem 1.25rem 1.1rem; margin: 1.75rem 0 1rem; }
 .next p { margin: 0; }
-.next .kind { display: block; margin-bottom: .2rem; }
-.next .when { display: block; color: var(--muted); font-size: .95rem; }
+.next .kind::after { content: " · "; }
+.next .when { color: var(--muted); font-size: .95rem; }
 .next .what { margin-top: .25rem; font-size: 1.1rem; }
 .next .what a { font-weight: 600; text-decoration: none; }
 .next .what .muted { font-size: .95rem; }
