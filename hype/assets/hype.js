@@ -24,33 +24,46 @@
   /* ===================== audio: all synthesized, off until the visitor asks ===================== */
   var soundOn = ls('hype-sound') === '1';
   var SFX = (function () {
-    var ctx = null, master = null, noise = null;
+    var ctx = null, master = null, noise = null, bus = null, dist = null;
+    function curve(k) { var n = 1024, c = new Float32Array(n); for (var i = 0; i < n; i++) { var x = i * 2 / n - 1; c[i] = (1 + k) * x / (1 + k * Math.abs(x)); } return c; }
     function a() {
       if (!soundOn) return null;
       if (!ctx) {
         try { ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
         var comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.ratio.value = 6;
-        master = ctx.createGain(); master.gain.value = .8; master.connect(comp); comp.connect(ctx.destination);
+        master = ctx.createGain(); master.gain.value = .85; master.connect(comp); comp.connect(ctx.destination);
+        bus = ctx.createGain(); bus.connect(master);   // everything but the kick, ducked by the kick
+        dist = ctx.createWaveShaper(); dist.curve = curve(28); dist.oversample = '2x'; var dg = ctx.createGain(); dg.gain.value = .55; dist.connect(dg); dg.connect(bus);
         noise = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate); var d = noise.getChannelData(0); for (var i = 0; i < d.length; i++) d[i] = rnd() * 2 - 1;
       }
       if (ctx.state === 'suspended') ctx.resume();
       return ctx;
     }
     function env(g, t, peak, att, dec) { g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + att); g.gain.exponentialRampToValueAtTime(.0001, t + att + dec); }
-    function osc(type, hz, t, dur, peak, to, filt) {
+    function osc(type, hz, t, dur, peak, to, filt, out) {
       var c = a(); if (!c) return; t = t || c.currentTime; var o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.setValueAtTime(hz, t);
       if (to) o.frequency.exponentialRampToValueAtTime(to, t + dur); env(g, t, peak, .005, dur);
       if (filt) { var f = c.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = filt; o.connect(f); f.connect(g); } else o.connect(g);
-      g.connect(master); o.start(t); o.stop(t + dur + .05);
+      g.connect(out || bus); o.start(t); o.stop(t + dur + .05);
     }
     function nz(t, dur, peak, type, freq, q, rate) {
       var c = a(); if (!c) return null; t = t || c.currentTime; var s = c.createBufferSource(), f = c.createBiquadFilter(), g = c.createGain();
       s.buffer = noise; f.type = type || 'highpass'; f.frequency.setValueAtTime(freq || 6000, t); f.Q.value = q || 1; env(g, t, peak, .003, dur);
-      s.connect(f); f.connect(g); g.connect(master); s.start(t, rnd()); s.stop(t + dur + .05); return { s: s, f: f, g: g };
+      s.connect(f); f.connect(g); g.connect(bus); s.start(t, rnd()); s.stop(t + dur + .05); return { s: s, f: f, g: g };
     }
     var api = {
       now: function () { var c = a(); return c ? c.currentTime : 0; },
-      kick: function (t) { osc('sine', 160, t, .32, 1, 42); },
+      kick: function (t) {   // distorted hardstyle-ish kick, plus sidechain duck on the bus
+        var c = a(); if (!c) return; t = t || c.currentTime;
+        osc('sine', 190, t, .34, 1, 40, null, master); osc('sine', 95, t, .3, .5, 38, null, dist); nz(t, .012, .5, 'highpass', 3000);
+        bus.gain.cancelScheduledValues(t); bus.gain.setValueAtTime(.25, t); bus.gain.linearRampToValueAtTime(1, t + .22);
+      },
+      reese: function (t, hz, dur) { var c = a(); if (!c) return; t = t || c.currentTime; dur = dur || .4; [-.35, 0, .35].forEach(function (d) { var o = c.createOscillator(), g = c.createGain(); o.type = 'sawtooth'; o.frequency.setValueAtTime(hz * (1 + d / 50), t); env(g, t, .12, .005, dur); o.connect(g); g.connect(dist); o.start(t); o.stop(t + dur + .05); }); osc('sine', hz, t, dur, .45, null, null, master); },
+      glide808: function (t, hz, to, dur) { var c = a(); if (!c) return; var o = c.createOscillator(), g = c.createGain(); o.type = 'sine'; o.frequency.setValueAtTime(hz, t); o.frequency.exponentialRampToValueAtTime(to, t + dur * .6); env(g, t, .7, .005, dur); o.connect(g); g.connect(dist); o.start(t); o.stop(t + dur + .05); },
+      saw: function (t, hz, dur, peak) { var c = a(); if (!c) return; t = t || c.currentTime; var f = c.createBiquadFilter(), g = c.createGain(); f.type = 'lowpass'; f.frequency.setValueAtTime(6000, t); f.frequency.exponentialRampToValueAtTime(1400, t + dur); env(g, t, peak || .07, .004, dur); f.connect(g); g.connect(bus);
+        [-24, -12, -5, 0, 5, 12, 24].forEach(function (d) { var o = c.createOscillator(); o.type = 'sawtooth'; o.frequency.value = hz; o.detune.value = d; o.connect(f); o.start(t); o.stop(t + dur + .05); }); },
+      cowbell: function (t, hz) { [1, 1.48].forEach(function (m) { osc('square', (hz || 560) * m, t, .16, .07, null, 3200); }); },
+      crash: function (t) { nz(t, 1.6, .22, 'highpass', 5000); },
       snare: function (t) { nz(t, .16, .5, 'bandpass', 1900, .8); osc('triangle', 190, t, .09, .3, 120); },
       clap: function (t) { [0, .012, .024].forEach(function (d) { nz((t || api.now()) + d, .09, .35, 'bandpass', 1300, 1.5); }); },
       hat: function (t, open) { nz(t, open ? .18 : .035, .14, 'highpass', 8000); },
@@ -65,27 +78,49 @@
       tick: function (t) { nz(t, .015, .12, 'highpass', 4000); },
       pop: function (t) { osc('sine', 520, t, .08, .25, 1200); },
       heart: function (t) { t = t || api.now(); osc('sine', 70, t, .18, .8, 40); osc('sine', 60, t + .22, .2, .6, 38); },
-      drop: function (t) { t = t || api.now(); api.boom(t); api.braam(2.2, t); api.clap(t); }
+      drop: function (t) { t = t || api.now(); api.boom(t); api.braam(2.2, t); api.clap(t); api.crash(t); api.saw(t, 164.8, 1.4, .09); api.saw(t, 246.9, 1.4, .07); }
     };
-    /* a 128 bpm sequencer; modes change with the edit */
-    var BPM = 128, step16 = 60 / BPM / 4, mode = 'off', next = 0, k = 0, timer = null, NOTES = [41.2, 41.2, 49, 55, 41.2, 61.7, 55, 49];
+    /* a 128 bpm sequencer. Modes change with the edit:
+       hats (filtered intro), half (half-time trap), full (four on the floor + cowbell + 808),
+       drop (everything: supersaw arps, reese bass, stabs), roll (snare roll that speeds up into the drop) */
+    var BPM = 128, step16 = 60 / BPM / 4, mode = 'off', next = 0, k = 0, rollK = 0, timer = null;
+    var ROOTS = [41.2, 32.7, 36.7, 30.9];   // E, C, D, B: an epic minor loop
+    var ARP = [[329.6, 392, 493.9, 659.3], [261.6, 329.6, 392, 523.3], [293.7, 370, 440, 587.3], [246.9, 293.7, 370, 493.9]];
+    var BELL = [0, 3, 6, 8, 10, 11, 14];
     api.BEAT = 60 / BPM;
-    api.mode = function (m) { mode = m; if (m === 'off') return; if (!timer && a()) { next = api.now() + .05; k = 0; timer = setInterval(sched, 25); } };
+    api.mode = function (m) { if (m !== mode && (m === 'drop' || m === 'full')) api.crash(); if (m === 'roll') rollK = 0; mode = m; if (m === 'off') return; if (!timer && a()) { next = api.now() + .05; k = 0; timer = setInterval(sched, 25); } };
     api.stop = function () { mode = 'off'; clearInterval(timer); timer = null; };
     function sched() {
       var c = a(); if (!c) { api.stop(); return; }
       while (next < c.currentTime + .12) {
-        var s = k % 16, bar = Math.floor(k / 16);
-        if (mode === 'hats') { if (s % 2 === 0) api.hat(next); if (s === 0) api.kick(next); }
-        if (mode === 'half') { if (s === 0) api.kick(next); if (s === 8) api.snare(next); if (s % 4 === 0) api.hat(next); if (s === 0) api.bass(next, NOTES[bar % 8], .8); }
-        if (mode === 'full' || mode === 'drop') {
-          if (s % 4 === 0) api.kick(next); if (mode === 'drop' && s === 14) api.kick(next);
-          if (s === 4 || s === 12) { api.snare(next); api.clap(next); }
-          if (s % 2 === 0) api.hat(next, s === 6 || s === 14);
-          if ([0, 3, 6, 10].indexOf(s) >= 0) api.bass(next, NOTES[(bar * 2 + (s > 6 ? 1 : 0)) % 8] * (mode === 'drop' && s === 10 ? 2 : 1), .18);
-          if (mode === 'drop' && (s === 0 || s === 7)) api.stab(next, 220 * (bar % 2 ? 1.12 : 1));
+        var s = k % 16, bar = Math.floor(k / 16), ch = bar % 4, root = ROOTS[ch];
+        if (mode === 'hats') { if (s % 2 === 0) api.hat(next); if (s === 0 || s === 8) api.kick(next); if (s % 4 === 2) api.saw(next, ARP[ch][s % 4], .08, .025); }
+        if (mode === 'half') {
+          if (s === 0 || s === 10) api.kick(next); if (s === 8) { api.snare(next); api.clap(next); }
+          if (s % 2 === 0 || s === 13 || s === 15) api.hat(next);
+          if (s === 0) api.glide808(next, root * 2, root, .9); if (s === 10) api.glide808(next, root * 1.5, root, .5);
+          if (s % 4 === 0) api.saw(next, ARP[ch][(s / 4) % 4] / 2, .3, .04);
         }
-        if (mode === 'roll') { api.snare(next); if (s % 2) api.hat(next); }
+        if (mode === 'full' || mode === 'drop') {
+          if (s % 4 === 0) api.kick(next); if (mode === 'drop' && (s === 14 || s === 15)) api.kick(next);
+          if (s === 4 || s === 12) { api.snare(next); api.clap(next); }
+          api.hat(next, s % 4 === 2);
+          if (bar % 2 === 1 && s >= 12) api.hat(next + step16 / 2);   // 32nd-note hat rolls
+          if (BELL.indexOf(s) >= 0) api.cowbell(next, [560, 560, 630, 500, 560, 750, 630][BELL.indexOf(s)] * (ch === 1 ? .84 : 1));
+          if (s % 4 === 2) api.reese(next, root * 2, .22);
+          if (s === 0) api.glide808(next, root * 2, root * 2, .35);
+          if (mode === 'drop') {
+            api.saw(next, ARP[ch][s % 4] * (s >= 8 ? 2 : 1), .12, .05);
+            if (s === 0) { api.saw(next, ARP[ch][0] / 2, 1.2, .08); api.saw(next, ARP[ch][2] / 2, 1.2, .06); }
+            if (s === 0 && ch === 0) api.crash(next);
+          }
+        }
+        if (mode === 'roll') {   // 8ths, then 16ths, then 32nds, pitching up
+          rollK++; var dens = rollK < 16 ? 2 : 1;
+          if (s % dens === 0) { api.snare(next); if (rollK > 24) api.snare(next + step16 / 2); }
+          api.saw(next, 220 * Math.pow(2, rollK / 32), .1, .02 + rollK * .001);
+          if (s % 4 === 0) api.kick(next);
+        }
         next += step16; k++;
       }
     }
