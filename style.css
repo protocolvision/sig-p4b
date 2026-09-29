@@ -410,3 +410,13 @@ ol.qs li .small { display: block; margin-top: .2rem; }
 .theme-card .guest .kind { display: inline-block; margin-right: .35rem; font: 600 .72rem Outfit, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-strong); background: var(--accent-soft); border-radius: 999px; padding: .1rem .5rem; vertical-align: .1em; }
 .theme-card ol.sample { margin: .25rem 0 0; padding-left: 1.3rem; font-size: .95rem; }
 .theme-card ol.sample li { margin-bottom: .35rem; }
+/* Align card parts across each row: image, title, description, guest, readings */
+.theme-card .guest { margin-top: auto; }
+.theme-card details.samples { margin-top: 0; }
+@supports (grid-template-rows: subgrid) {
+  ol.theme-grid { row-gap: 1rem; }
+  .theme-card { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; }
+  .theme-card .guest { margin-top: 0; align-self: start; }
+  .theme-card > p:not(.guest) { align-self: start; }
+  .theme-card h3 { align-self: end; }
+}
