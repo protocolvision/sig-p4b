@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Landscape · Protocols for Business SIG</title>
+<meta name="description" content="Draft: the SIG's readings as a landscape of topics, with the year's syllabus moving through six areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;500;600&display=swap">
+<meta name="landscape-data" content="landscape.json">
+<link rel="stylesheet" href="explorer.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<a class="skip" href="#syllabus-title">Skip to the syllabus</a>
+<header class="bar">
+  <a class="back" href="../../">← Sessions</a>
+  <h1>Reading landscape</h1>
+  <p class="draft"><span id="count">…</span> readings</p>
+</header>
+
+<section class="stage" aria-labelledby="map-title">
+  <h2 id="map-title" class="visually-hidden">Map of the readings</h2>
+  <div id="scene" tabindex="0" role="application" aria-roledescription="3D map"
+       aria-label="Map of the readings. Use the arrow keys to turn the view, plus and minus to zoom, N and P to move between the six themes, and Escape to return to the overview."
+       aria-describedby="map-summary"></div>
+  <p id="map-summary" class="visually-hidden"></p>
+  <div id="labels"></div>
+  <div class="nogl" id="nogl" hidden>
+    <p><strong>This browser can’t show the 3D map.</strong> The syllabus and every reading are listed beside the map, grouped by theme and by area.</p>
+  </div>
+  <button type="button" class="explore" id="explore" hidden>Explore the map</button>
+  <div class="controls" role="toolbar" aria-label="Themes">
+    <button type="button" id="prev">Previous<span class="visually-hidden"> theme</span></button>
+    <button type="button" id="play" class="primary">Play the year</button>
+    <button type="button" id="next">Next<span class="visually-hidden"> theme</span></button>
+    <button type="button" id="reset">Overview</button>
+  </div>
+  <div class="legend">
+    <h3 class="legend-title">Areas</h3>
+    <ol id="legend"></ol>
+    <p class="key"><span class="sw route"></span>The year’s readings <span class="sw read"></span>Already read</p>
+  </div>
+  <p class="hint" id="hint">Drag to turn · scroll to zoom · select a theme or a reading</p>
+</section>
+
+<aside id="panel" class="panel" aria-label="Details">
+  <p id="status" class="visually-hidden" role="status"></p>
+  <section id="detail" aria-labelledby="detail-title"></section>
+  <section class="route" aria-labelledby="syllabus-title">
+    <h2 id="syllabus-title" tabindex="-1">The year’s syllabus</h2>
+    <p class="why" id="path-why"></p>
+    <ol id="route"></ol>
+  </section>
+  <section class="suggest" aria-labelledby="suggest-title">
+    <h2 id="suggest-title">Suggest or challenge a reading</h2>
+    <p>Your AI assistant knows what you’ve read, worked on and talked through. Ask it to suggest readings to add, or readings in the plan to remove, swap or move. Check each change before you confirm it.</p>
+    <pre id="llm-prompt">I’m part of the Protocols for Business SIG at the Protocol Institute. We’re building a shared map of readings on how businesses coordinate through protocols between people, software and machines. The year’s reading plan has six themes: what agents are in practice; natural coordination; emissions, meaning what systems publish for others to act on; seeing hardness in incidents; designing the hard core; and keeping the core alive, set against business process re-engineering.
+
+Every reading on the map is listed here, and the ones in this year’s plan carry their theme: https://npc.here.now/protocolvision/sessions/map/readings.json
+
+Use what you know about me: your memory of me, our past conversations, my projects and work, and anything I’ve read, saved or written about. From that context, suggest up to five changes. A change can add a reading the map is missing, remove a reading from the plan, swap a plan reading for a better one, or move a reading to another theme. Prefer primary sources: incident and accident reports, specifications, regulations, original research papers, and first-hand accounts from people who ran systems at scale. Only include sources you’re confident exist, and leave out anything private about me, my employer or other people.
+
+For each change, say what kind it is, the reading already on the map (for a removal, swap or move), the new reading’s title, author, year and a working link (for an addition or swap), the theme, one to three sentences on why, and one sentence on why it matters from my own experience. Show me the list and wait for me to confirm or edit it.
+
+Then send the confirmed changes to GitHub, one issue per change, in the repository protocolvision/sig-p4b:
+- If you can create GitHub issues for me, open them directly. Use a title such as “Reading: add …” or “Reading: swap … for …”, add the label reading-suggestion, and put the details above in the body.
+- If you can’t, give me one link per change that opens a filled-in form, with each value URL-encoded:
+https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml&amp;title=Reading:%20SUMMARY&amp;current_reading=READING%20ON%20THE%20MAP&amp;reading_title=NEW%20READING&amp;url=LINK&amp;author=AUTHOR%20AND%20YEAR&amp;adds=WHY&amp;experience=WHY%20IT%20MATTERS%20TO%20ME</pre>
+    <p><button type="button" class="list-btn copy" data-copy="llm-prompt">Copy the prompt</button><span id="copy-status" class="muted small" aria-live="polite"></span></p>
+    <p class="small">Your assistant sends each change to GitHub as an issue, or gives you a link to a filled-in form. You can also use the <a href="https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml" target="_blank" rel="noopener noreferrer">form</a> yourself, and talk it through in <code>#protocols-for-business</code> on <a href="https://discord.gg/zNJdK7caj" target="_blank" rel="noopener noreferrer">Discord</a>.</p>
+  </section>
+  <details class="all">
+    <summary>All readings by area</summary>
+    <div id="all"></div>
+  </details>
+</aside>
+
+<script type="module" src="explorer.js"></script>
+</body>
+</html>

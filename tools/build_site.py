@@ -14,13 +14,12 @@ CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
-NAV = [("about", "About", "about/"), ("sessions", "Sessions", "sessions/"),
-       ("research", "Research", "research/"), ("play", "Play", "play/")]
+NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
-             "case-studies/": "research/cases/", "simulation/": "play/"}
+             "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;500&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">')
 
 EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
 
@@ -117,12 +116,11 @@ def write_llms():
 > A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, each a deep reading of one primary source, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 
 ## Pages
-- [About]({SITE}about/): method (protocol vision and Business Protocol Management), origins, facilitators, publications
+- [About]({SITE}about/): protocol vision (the capability) and Business Protocol Management (the practice), origins, facilitators, publications
 - [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
-- [Research]({SITE}research/): 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
+- [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
-- [Protocol Play]({SITE}play/): protocol watching, workshops, simulation
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 
 ## Blyg (session notes and research log)
