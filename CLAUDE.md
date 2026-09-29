@@ -14,3 +14,4 @@
 - Blyg (Blygger 0.3): sources in `blyg-src/` (commit = publish; never rename files). `./deploy.sh` builds and runs `tools/blyg_check.py` before publishing. Mark model-written text with `::: generated` fences.
 - Sign-up Worker URL and site URL live in `config.json` (read by the builders and `worker/export.sh`); the Worker's own `SITE`/`ALLOWED_ORIGINS` are `vars` in `worker/wrangler.jsonc`. Redeploy-on-another-account steps: `worker/README.md`. Never write sign-up exports into the repo.
 - Vocabulary: protocol vision is the *capability* (seeing the protocols a business runs on); Business Protocol Management is the *practice* (See, Design, Evolve). Don't call either one "the method". Watching, workshops and simulations are *training* for the capability.
+- `hype/` is a generated parody snapshot (noindex), exported from the local `hype` branch/worktree with `tools/export_hype.sh` there. Never edit it by hand; re-export, then `./deploy.sh`.
