@@ -420,3 +420,5 @@ ol.qs li .small { display: block; margin-top: .2rem; }
   .theme-card > p:not(.guest) { align-self: start; }
   .theme-card h3 { align-self: end; }
 }
+a.more-ic { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -12px -8px -12px -6px; vertical-align: middle; color: var(--link); border-radius: 50%; text-decoration: none; }
+a.more-ic:hover { background: var(--tint-soft); }

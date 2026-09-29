@@ -65,8 +65,7 @@ for i, t in enumerate(T["themes"], 1):
                f'<span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="visually-hidden">, show the readings</span></summary>'
                f'<ol class="sample">{readings}</ol></details></li>')
 out.append("</ol>")
-out.append('<p class="map-cta"><a class="btn" href="map/">Explore every reading on the map</a> '
-           '<span class="small muted">All 27 syllabus readings among 400 related works, with the full schedule by date.</span></p>')
+out.append('<p class="map-cta"><a class="btn-quiet" href="map/">Explore every reading on the map</a></p>')
 p = ROOT / "src/sessions.html"
 p.write_text(replace_between(p.read_text(), "schedule", "\n".join(out)))
 
