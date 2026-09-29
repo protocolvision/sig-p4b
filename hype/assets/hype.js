@@ -684,7 +684,7 @@
     var B = SFX.BEAT * 1000;   // one beat in ms, 128 bpm
     var el = $('<div class="trailer" role="dialog" aria-modal="true" aria-label="Trailer">' +
       '<div class="cam"><canvas class="bgA" aria-hidden="true"></canvas><canvas class="bgB" aria-hidden="true"></canvas><canvas class="fx" aria-hidden="true"></canvas><span class="pov pov-a"></span><span class="pov pov-b"></span></div>' +
-      '<div class="flash"></div><div class="stories"></div><div class="cap" aria-live="polite"></div>' +
+      '<div class="flash"></div><div class="stories"></div><span class="thread"></span><div class="stat"></div><div class="cap" aria-live="polite"></div>' +
       '<div class="rail"><button data-like>❤️<b>0</b></button><span>💬<b>4,471</b></span><span>↗<b>Share</b></span><span class="disc"></span></div>' +
       '<div class="tfoot"><b>@protocolsforbusiness</b> · <button data-follow>Follow</button><div class="sound">♫ original sound – Protocols for Business (sped up) · ♫ original sound – Protocols for Business (sped up) ·</div></div>' +
       '<span class="rating">RATED P · for Protocols</span><button class="skip">Skip ⏭</button>' + (soundOn ? '' : '<button class="unmute">🔊 Tap to unmute</button>') +
@@ -725,36 +725,84 @@
     }
     function form(txt) { parts = true; var T = targets(txt); P.forEach(function (p, i) { var q = T.length ? T[i % T.length] : null; p.tx = q ? q[0] + rnd() * 2 : null; p.ty = q ? q[1] + rnd() * 2 : null; }); }
     function scatter() { P.forEach(function (p) { p.tx = p.ty = null; p.vx = (rnd() - .5) * 18; p.vy = (rnd() - .5) * 18; }); setTimeout(function () { if (!P.some(function (p) { return p.tx != null; })) parts = false; }, 1200); }
-    /* the edit: [beats, action]. Hook, drop, POV switch, freeze frame, rapid cuts, silence, reveal. */
+    /* the edit: a dense, thread-style short. One fact per beat, every fact from the reading plan.
+       Each cut: b beats; bg scene or split; cap (word by word) with highlighted word indexes; stat [big, small];
+       cam transform; sfx; music mode; thread part; special moves (freeze, quote, particles, end). */
     var ARMY = robotArmy({ start: 1024 }), RED = robotArmy({ start: 100000, red: true }), BIG = robotArmy({ start: 5e6 });
-    var EDIT = [
-      [4, function () { setBg(null); cap('WAIT FOR IT… 👀', B * .9, [2]); SFX.mode('hats'); }],
-      [4, function () { setBg(codeRain); cap('POV: you just deployed 100,000 agents', B / 2.2, [3]); SFX.whoosh(.4); punch(); }],
-      [4, function () { setBg(ARMY); cap(''); form('100,000\nAGENTS'); SFX.mode('drop'); SFX.drop(); flash(); shake(); }],
-      [2, function () { scatter(); setSplit(agentChat, liveness, 'POV: THE AGENTS', 'POV: YOU'); cap('one team.', B / 2); SFX.whoosh(.3); }],
-      [2, function () { setBg(RED); camSet('rotate(-6deg) scale(1.15)'); cap('ZERO SUPERVISORS.', B / 3, [0, 1]); SFX.boom(); flash(); shake(); }],
-      [3, function () { frozen = true; camSet('rotate(-6deg) scale(1.15)', 'grayscale(1) contrast(1.4) sepia(.35)'); SFX.stop(); SFX.scratch(); cap('*record scratch* yep. that’s your company.', B / 2.5, [0, 1]); }],
-      [3, function () { cap('you’re probably wondering how we got here.', B / 3); }],
-      [6, function () { frozen = false; camSet(); setBg(agentChat); dim = .55; SFX.mode('half'); cap(''); el.querySelector('.quote').classList.add('on'); SFX.whoosh(.5); }],
-      [2, function () { el.querySelector('.quote').classList.remove('on'); dim = .2; camSet('scaleX(-1)'); cap('THEY FOUND THEIR OWN CHANNEL.', B / 3, [3]); SFX.boom(); flash(); }],
-      [4, function () { camSet(); setSplit(handshake, agentChat, 'WITH A PROTOCOL', 'WITHOUT ONE'); cap('who writes the rules?', B / 2, [1]); SFX.mode('roll'); SFX.riser(4 * SFX.BEAT); }],
-      [4, function () { setBg(constitutionAt(7)); dim = .3; cap('someone has to write THE CONSTITUTION.', B / 3, [4, 5]); SFX.mode('drop'); SFX.drop(); flash(); shake(); }],
-      [1, function () { setBg(hardness); dim = 0; camSet('scale(1.25)'); cap('HARD CORE.', 60); punch(); SFX.clap(); }],
-      [1, function () { setBg(incidents); camSet('rotate(4deg) scale(1.2)'); cap('INCIDENTS.', 60, [0]); punch(); SFX.clap(); }],
-      [1, function () { setBg(liveness); camSet('scaleX(-1) scale(1.1)'); cap('LIVENESS.', 60); punch(); SFX.clap(); }],
-      [1, function () { setBg(swarm({ n: 300, cols: NEON, speed: 3, tail: 5, lw: 1.8 })); camSet('scale(1.3)'); cap('GROWTH.', 60, [0]); punch(); SFX.clap(); }],
-      [1, function () { setBg(network); camSet('rotate(-4deg)'); cap('PROTOCOLS.', 60); punch(); SFX.clap(); }],
-      [1, function () { setBg(RED); camSet('scale(1.4)'); cap('FOMO.', 60, [0]); punch(); SFX.clap(); flash(); }],
-      [4, function () { camSet(); setBg(BIG); dim = .45; cap('this fall, one group will do the UNTHINKABLE', B / 2.6, [6]); SFX.mode('roll'); SFX.riser(4 * SFX.BEAT); }],
-      [4, function () { SFX.stop(); setBg(null); dim = 0; cap('…read. 📖', B, [0]); setTimeout(SFX.heart, B); setTimeout(SFX.heart, B * 2.5); }],
-      [6, function () { setBg(network); dim = .35; cap('slowly. together. in the room.', B / 2); form('PROTOCOLS\nFOR BUSINESS'); SFX.mode('drop'); SFX.drop(); flash(); shake(); }],
-      [0, function () { cap(''); el.querySelector('.end').classList.add('on'); scatter(); SFX.stop(); SFX.braam(3); SFX.boom(); }]];
+    var SKY = swarm({ n: 200, cols: ['#111'], speed: 2, tail: 2, lw: 2.2, sky: ['#ff7a3d', '#3a0b4a'] }), SWARM = swarm({ n: 300, cols: NEON, speed: 3, tail: 5, lw: 1.8 });
+    var CUTS = [
+      { b: 2, bg: 0, cap: 'Most people will scroll past this.', mode: 'hats' },
+      { b: 2, cap: 'Don’t.', hl: [0], sfx: 'boom', flash: 1 },
+      { b: 3, bg: codeRain, cap: 'What nobody tells you about AI agents 🧵', hl: [4], sfx: 'whoosh', thread: 1 },
+      { b: 2, bg: ARMY, stat: ['100,000', 'agents one small team can now run'], mode: 'drop', sfx: 'drop', flash: 1, shake: 1 },
+      { b: 2, bg: RED, stat: ['0', 'people who can watch them one action at a time'], cam: 'rotate(-6deg) scale(1.15)', sfx: 'boom', shake: 1 },
+      { b: 2, bg: agentChat, dim: .3, cap: 'So agents find their own channels.', hl: [4, 5], thread: 2, sfx: 'whoosh' },
+      { b: 4, bg: agentChat, dim: .6, quote: 1, mode: 'half' },
+      { b: 1, cam: 'scaleX(-1)', cap: 'THIS REALLY HAPPENED.', hl: [2], sfx: 'boom', flash: 1 },
+      { b: 3, freeze: 1, cap: '*record scratch* yep. that’s your company.', hl: [0, 1], sfx: 'scratch', mode: 'off' },
+      { b: 2, freeze: 1, cap: 'you’re probably wondering how we got here.' },
+      { b: 1, bg: incidents, stat: ['$460M', 'Knight Capital · lost in about 45 minutes · SEC, 2013'], mode: 'full', sfx: 'clap', thread: 3 },
+      { b: 1, bg: incidents, stat: ['1 COMMAND', 'took down a chunk of Amazon S3 · 2017'], cam: 'rotate(3deg) scale(1.1)', sfx: 'clap' },
+      { b: 1, bg: incidents, stat: ['1 FILE', 'CrowdStrike Channel File 291 · 2024'], cam: 'scale(1.2)', sfx: 'clap' },
+      { b: 1, bg: incidents, stat: ['1979', 'Three Mile Island · the Kemeny Report'], cam: 'rotate(-3deg)', sfx: 'clap' },
+      { b: 1, bg: incidents, stat: ['2003', 'Columbia · the accident board’s report'], cam: 'scale(1.15)', sfx: 'clap' },
+      { b: 1, bg: incidents, stat: ['AF447', '2009 · the BEA’s final report'], cam: 'scaleX(-1)', sfx: 'clap' },
+      { b: 2, bg: incidents, cap: 'Every one of them was a PROTOCOL first.', hl: [5], sfx: 'boom', flash: 1, shake: 1 },
+      { b: 1, bg: liveness, stat: ['19 ITEMS', 'WHO surgical checklist · deaths nearly halved in the study'], thread: 4, sfx: 'clap' },
+      { b: 1, bg: SWARM, stat: ['ANYONE', 'can stop the line at Toyota'], cam: 'scale(1.2)', sfx: 'clap' },
+      { b: 1, bg: network, stat: ['HUMMING', 'how the IETF finds rough consensus · RFC 7282'], cam: 'rotate(3deg)', sfx: 'clap' },
+      { b: 1, bg: emissions, stat: ['PILOTS', 'report their own mistakes · NASA’s ASRS'], sfx: 'clap' },
+      { b: 1, bg: SKY, stat: ['BACTERIA', 'count heads before they act · quorum sensing'], cam: 'scale(1.15)', sfx: 'clap' },
+      { b: 1, bg: codeRain, stat: ['THE LOG', 'the unifying abstraction · Kreps, 2013'], cam: 'scaleX(-1)', sfx: 'clap' },
+      { b: 2, bg: handshake, dim: .3, cap: 'The fix is never more supervisors. It’s PROTOCOLS.', hl: [7], sfx: 'riser', mode: 'roll' },
+      { b: 2, split: [handshake, agentChat, 'WITH A PROTOCOL', 'WITHOUT ONE'], cap: 'Same agents. Different rules.', hl: [3], thread: 5, mode: 'drop', sfx: 'drop', flash: 1 },
+      { b: 2, bg: constitutionAt(7), dim: .25, cap: 'Build a HARD CORE:', hl: [2, 3] },
+      { b: 1, bg: hardness, cap: 'who moves money', cam: 'scale(1.15)', sfx: 'clap' },
+      { b: 1, bg: hardness, cap: 'what leaves the company', cam: 'rotate(-3deg) scale(1.1)', sfx: 'clap' },
+      { b: 1, bg: hardness, cap: 'which checks every output passes', cam: 'scale(1.25)', sfx: 'clap' },
+      { b: 2, bg: SWARM, cap: 'Everything else? FREE EDGES.', hl: [2, 3], sfx: 'whoosh' },
+      { b: 2, bg: codeRain, dim: .3, cap: 'Log what happens. And WHY.', hl: [4] },
+      { b: 2, bg: liveness, cap: 'Keep it ALIVE as you grow.', hl: [2] },
+      { b: 2, bg: network, stat: ['BPM', 'Business Protocol Management · the practice'], sfx: 'boom', flash: 1 },
+      { b: 2, bg: emissions, stat: ['SEE → DESIGN → EVOLVE', 'the three phases we study in 2027'], sfx: 'whoosh' },
+      { b: 2, bg: BIG, stat: ['26', 'Mondays · every other week · from 2 Nov 2026'], thread: 6, sfx: 'drop', mode: 'drop', flash: 1 },
+      { b: 1, stat: ['6', 'themes · agents → nature → emissions → incidents → hardness → liveness'], cam: 'scale(1.1)', sfx: 'clap' },
+      { b: 1, stat: ['27', 'primary sources in the reading plan'], cam: 'rotate(2deg)', sfx: 'clap' },
+      { b: 1, stat: ['400', 'readings on the map'], cam: 'scale(1.2)', sfx: 'clap' },
+      { b: 1, stat: ['0', 'homework · we read together, in the room'], cam: 'scaleX(-1)', sfx: 'clap' },
+      { b: 1, stat: ['3', 'live case studies · water · construction · brand kit'], cam: 'rotate(-2deg)', sfx: 'clap' },
+      { b: 1, stat: ['15:30', 'UTC · recorded · drop-ins welcome'], cam: 'scale(1.15)', sfx: 'clap' },
+      { b: 2, bg: RED, dim: .4, cap: 'Bookmark this. You’ll need it for the postmortem.', hl: [0], sfx: 'boom', shake: 1 },
+      { b: 4, bg: BIG, dim: .45, cap: 'this fall, one group will do the UNTHINKABLE', hl: [6], sfx: 'riser', mode: 'roll' },
+      { b: 3, bg: 0, cap: '…read. 📖', hl: [0], mode: 'off', heart: 1 },
+      { b: 6, bg: network, dim: .35, particles: 'PROTOCOLS\nFOR BUSINESS', cap: 'Nov 2 · 15:30 UTC · link in bio 👇', hl: [0, 1], mode: 'drop', sfx: 'drop', flash: 1, shake: 1 },
+      { b: 0, end: 1 }];
+    var thread = el.querySelector('.thread'), statEl = el.querySelector('.stat');
+    function cut(k) {
+      var x = CUTS[k];
+      if (x.end) { cap(''); statEl.classList.remove('on'); el.querySelector('.end').classList.add('on'); scatter(); SFX.stop(); SFX.braam(3); SFX.boom(); return; }
+      if (x.freeze) { frozen = true; cam.style.filter = 'grayscale(1) contrast(1.4) sepia(.35)'; }
+      else { frozen = false; cam.style.filter = ''; }
+      if (x.split) setSplit(x.split[0], x.split[1], x.split[2], x.split[3]);
+      else if (x.bg !== undefined) setBg(x.bg || null);
+      if (!x.freeze) { cam.style.transform = x.cam || ''; dim = x.dim || 0; }
+      el.querySelector('.quote').classList.toggle('on', !!x.quote);
+      if (x.stat) { statEl.innerHTML = '<b>' + x.stat[0] + '</b><small>' + x.stat[1] + '</small>'; statEl.classList.remove('on'); void statEl.offsetWidth; statEl.classList.add('on'); } else statEl.classList.remove('on');
+      cap(x.cap || '', x.cap ? Math.max(60, Math.min(B / 2, (x.b * B * .7) / x.cap.split(' ').length)) : 0, x.hl);
+      if (x.particles) form(x.particles); else if (parts) scatter();
+      if (x.thread) { thread.textContent = '🧵 ' + x.thread + '/6'; thread.classList.remove('pop'); void thread.offsetWidth; thread.classList.add('pop'); }
+      if (x.mode) { if (x.mode === 'off') SFX.stop(); else SFX.mode(x.mode); }
+      if (x.sfx === 'riser') SFX.riser(x.b * SFX.BEAT); else if (x.sfx === 'whoosh') SFX.whoosh(.4); else if (x.sfx && SFX[x.sfx]) SFX[x.sfx]();
+      if (x.heart) { setTimeout(SFX.heart, B); setTimeout(SFX.heart, B * 2); }
+      if (x.flash) flash(); if (x.shake) shake(); punch();
+    }
+    var EDIT = CUTS.map(function (x, k) { return [x.b, function () { cut(k); }]; });
     el.appendChild($('<div class="quote"><span>“The models first found ways to communicate by writing files into the Artifactory package manager.”</span><small>OpenAI, 2026 · this really happened · Theme I</small></div>'));
     var stories = el.querySelector('.stories'), total = EDIT.reduce(function (n, s) { return n + s[0]; }, 0);
-    EDIT.forEach(function (s) { if (s[0]) stories.appendChild($('<i style="flex:' + s[0] + '"><b></b></i>')); });
+    stories.appendChild($('<i style="flex:1"><b style="animation:fillbar ' + (total * B + 300) + 'ms linear forwards"></b></i>'));
     var timers = [], at = 300, startAt = performance.now();
     if (freezeAt != null) EDIT.slice(0, freezeAt + 1).forEach(function (s) { s[1](); });
-    else EDIT.forEach(function (s, idx) { timers.push(setTimeout(function () { s[1](); var bars = stories.children; for (var k = 0; k < bars.length; k++) bars[k].classList.toggle('done', k < idx); if (bars[idx]) { bars[idx].classList.remove('go'); void bars[idx].offsetWidth; bars[idx].style.setProperty('--d', s[0] * B + 'ms'); bars[idx].classList.add('go'); } }, at)); at += s[0] * B; });
+    else EDIT.forEach(function (s, idx) { timers.push(setTimeout(function () { s[1]();  }, at)); at += s[0] * B; });
     /* likes tick up on their own, like they do */
     var likes = 0, likeEl = el.querySelector('[data-like] b'), likeT = setInterval(function () { likes += Math.floor(rnd() * 900 + 100); likeEl.textContent = likes > 999 ? (likes / 1000).toFixed(1) + 'K' : likes; }, 250);
     el.querySelector('[data-like]').onclick = function (e) { heartBurst(e.clientX, e.clientY); };
