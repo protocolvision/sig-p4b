@@ -13,15 +13,15 @@
  },
  {
   "date": "2026-12-14",
-  "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)"
- },
- {
-  "date": "2027-01-11",
   "feature": "Show-and-tell: AI-native tooling"
  },
  {
+  "date": "2027-01-11",
+  "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)"
+ },
+ {
   "date": "2027-01-25",
-  "feature": "Guest: Psychohistory SIG (Prophecy Protocols)"
+  "feature": "Show-and-tell: AI-native tooling"
  },
  {
   "date": "2027-02-08",
@@ -33,7 +33,7 @@
  },
  {
   "date": "2027-03-08",
-  "feature": "Case study progress"
+  "feature": "Guest: Memory Research Group (Organizational Memory Architecture)"
  },
  {
   "date": "2027-03-22",
@@ -57,7 +57,7 @@
  },
  {
   "date": "2027-05-31",
-  "feature": "Guest: Memory Research Group (Organizational Memory Architecture)"
+  "feature": "Show-and-tell: AI-native tooling"
  },
  {
   "date": "2027-06-14",
@@ -97,7 +97,7 @@
  },
  {
   "date": "2027-10-18",
-  "feature": "Case study progress"
+  "feature": "Guest: Psychohistory SIG (Prophecy Protocols)"
  },
  {
   "date": "2027-11-01",

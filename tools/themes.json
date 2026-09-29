@@ -6,10 +6,6 @@
    "n": "I",
    "name": "What agents are, in practice",
    "blurb": "Recent incidents and specifications show what agents can see and do, and what changes for the people working beside them.",
-   "sample": [
-    0,
-    1
-   ],
    "readings": [
     {
      "title": "The Hugging Face incident and the road ahead",
@@ -41,10 +37,6 @@
    "n": "II",
    "name": "Natural coordination",
    "blurb": "Cells coordinate through thresholds, feedback and a small conserved core with wide variety at the edges.",
-   "sample": [
-    0,
-    2
-   ],
    "readings": [
     {
      "title": "Quorum Sensing in Bacteria",
@@ -70,10 +62,6 @@
    "n": "III",
    "name": "Emissions",
    "blurb": "What systems publish for others to act on: files, logs, events, confidential reports and required disclosures.",
-   "sample": [
-    1,
-    3
-   ],
    "readings": [
     {
      "title": "The Filing Cabinet",
@@ -111,11 +99,6 @@
    "n": "IV",
    "name": "Seeing hardness in incidents",
    "blurb": "Investigations show where hardness held, where it was missing, and where it cracked.",
-   "sample": [
-    0,
-    2,
-    4
-   ],
    "readings": [
     {
      "title": "Report of the President’s Commission on the Accident at Three Mile Island",
@@ -153,11 +136,6 @@
    "n": "V",
    "name": "Designing the hard core",
    "blurb": "Guardrails built into the architecture, from end-to-end design to staged rollouts, checklists and signed mandates for agents.",
-   "sample": [
-    1,
-    2,
-    5
-   ],
    "readings": [
     {
      "title": "End-to-End Arguments in System Design",
@@ -201,10 +179,6 @@
    "n": "VI",
    "name": "Keeping the core alive, and the contrast",
    "blurb": "How industries keep amending their protocols, read against re-engineering’s clean slate.",
-   "sample": [
-    0,
-    2
-   ],
    "readings": [
     {
      "title": "Reengineering Work: Don’t Automate, Obliterate",

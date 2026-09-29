@@ -406,3 +406,7 @@ ol.qs li .small { display: block; margin-top: .2rem; }
 .page-nav a { color: var(--fg); }
 .page-nav a:hover { color: var(--link); }
 .theme-card img { border-bottom-color: #cfe7de; }
+.theme-card .guest { font-size: .95rem; }
+.theme-card .guest .kind { display: inline-block; margin-right: .35rem; font: 600 .72rem Outfit, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-strong); background: var(--accent-soft); border-radius: 999px; padding: .1rem .5rem; vertical-align: .1em; }
+.theme-card ol.sample { margin: .25rem 0 0; padding-left: 1.3rem; font-size: .95rem; }
+.theme-card ol.sample li { margin-bottom: .35rem; }

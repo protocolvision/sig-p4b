@@ -44,8 +44,8 @@
   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
   "cite": "Bainbridge, 1983",
   "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
-  "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)",
-  "feature_short": "Guest: Distributed Robotics Group"
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
  },
  {
   "date": "2027-01-11",
@@ -56,8 +56,8 @@
   "url": "https://doi.org/10.1146/annurev.micro.55.1.165",
   "cite": "Miller & Bassler, 2001",
   "quote": "Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)",
+  "feature_short": "Guest: Distributed Robotics Group"
  },
  {
   "date": "2027-01-25",
@@ -68,8 +68,8 @@
   "url": "https://doi.org/10.1038/16483",
   "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
   "quote": "",
-  "feature": "Guest: Psychohistory SIG (Prophecy Protocols)",
-  "feature_short": "Guest: Psychohistory SIG"
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
  },
  {
   "date": "2027-02-08",
@@ -104,8 +104,8 @@
   "url": "https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
   "cite": "Kreps, 2013",
   "quote": "The log is the natural data structure for handling data flow between systems. The recipe is very simple: Take all the organization's data and put it into a central log for real-time subscription.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Guest: Memory Research Group (Organizational Memory Architecture)",
+  "feature_short": "Guest: Memory Research Group"
  },
  {
   "date": "2027-03-22",
@@ -176,8 +176,8 @@
   "url": "https://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf",
   "cite": "BEA, 2012",
   "quote": "",
-  "feature": "Guest: Memory Research Group (Organizational Memory Architecture)",
-  "feature_short": "Guest: Memory Research Group"
+  "feature": "Show-and-tell: AI-native tooling",
+  "feature_short": "Show-and-tell"
  },
  {
   "date": "2027-06-14",
@@ -301,8 +301,8 @@
   "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-5",
   "cite": "FAA, 2015, expanded 2024",
   "quote": "the formal, top-down, organization-wide approach to managing safety risk and assuring the effectiveness of safety risk controls.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Guest: Psychohistory SIG (Prophecy Protocols)",
+  "feature_short": "Guest: Psychohistory SIG"
  },
  {
   "date": "2027-11-01",

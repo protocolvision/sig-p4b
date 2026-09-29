@@ -49,16 +49,22 @@ out = [f'<p>{e(T["summary"])}</p>', '<ol class="theme-grid" role="list">']
 k = 0
 for i, t in enumerate(T["themes"], 1):
     n = sum(1 for r in t["readings"] if not r.get("companion"))
+    sessions = S[k:k + n]
     k += n
-    sample = "".join(f'<li><a href="{ea(t["readings"][j]["url"])}">{e(t["readings"][j]["title"])}</a> '
-                     f'<span class="muted">{e(t["readings"][j]["cite"])}</span></li>' for j in t["sample"])
+    guests = [re.match(r"Guest: (.*?) \((.*)\)", s["feature"]) for s in sessions]
+    guests = [g for g in guests if g]
+    guest = (f'<p class="guest"><span class="kind">Guest</span> {e(guests[0].group(1))}, '
+             f'<em>{e(guests[0].group(2))}</em></p>') if guests else ""
+    readings = "".join(f'<li><a href="{ea(r["url"])}">{e(r["title"])}</a> <span class="muted">{e(r["cite"])}'
+                       + (" · read alongside the previous reading" if r.get("companion") else "") + "</span></li>"
+                       for r in t["readings"])
     out.append(f'<li class="theme-card" id="theme-{t["n"].lower()}">'
                f'<img src="../assets/themes/theme-{i}.svg" alt="" width="320" height="140" loading="lazy">'
                f'<h3><span class="n">{e(t["n"])}</span> {e(t["name"])}</h3>'
-               f'<p>{e(t["blurb"])}</p>'
+               f'<p>{e(t["blurb"])}</p>{guest}'
                f'<details class="samples"><summary><span class="meta">{n} sessions</span>'
-               f'<span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="visually-hidden">, show sample readings</span></summary>'
-               f'<ul class="sample">{sample}</ul></details></li>')
+               f'<span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="visually-hidden">, show the readings</span></summary>'
+               f'<ol class="sample">{readings}</ol></details></li>')
 out.append("</ol>")
 out.append('<p class="map-cta"><a class="btn" href="map/">Explore every reading on the map</a> '
            '<span class="small muted">All 27 syllabus readings among 400 related works, with the full schedule by date.</span></p>')
