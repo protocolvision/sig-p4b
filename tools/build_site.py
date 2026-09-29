@@ -19,7 +19,7 @@ REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
              "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap">')
 
 EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
 
@@ -66,6 +66,7 @@ def page(meta, body):
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="{rel}style.css">
+<link rel="stylesheet" href="{rel}assets/hype.css">
 {extra_head}<body>
 <header>
 <a class="home" href="{rel or './'}" aria-label="Protocol Institute – Business, home"><img class="logo" src="{rel}favicon.svg" alt="">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>
@@ -81,6 +82,7 @@ def page(meta, body):
 <nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision/sig-p4b">Source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
+<script src="{rel}assets/hype.js" data-root="{rel or './'}" defer></script>
 </body>
 </html>
 """)

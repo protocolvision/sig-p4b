@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# hype branch: a local parody, never published
+echo "This is the local hype copy; it is never deployed." >&2; exit 1
 # Publish the site to here.now and mount it at npc.here.now/protocolvision.
 set -euo pipefail
 cd "$(dirname "$0")"
