@@ -15,6 +15,18 @@ Cloudflare account.
 Storage is one KV namespace (`SIGNUPS`): `sub:<email>` holds a member, `rl:<ip>:<hour>` holds rate-limit
 counters (10 requests per hour per IP). Roles are `member` or `pi-core`.
 
+## Discord note on new sign-ups
+
+When someone new registers (not when a member updates their details), the Worker posts a short
+note to the SIG's Discord channel: "New sign-up for Protocols for Business session emails. N people
+are now registered." It carries no names or emails, since registrants haven't agreed to be
+announced. Addresses on example.com are skipped, so tests stay quiet. A failed post never affects
+the sign-up.
+
+The channel's webhook URL is a secret. To set or change it, create a webhook in the Discord
+channel's settings, then run `npx wrangler secret put DISCORD_WEBHOOK` and paste it. Remove the
+secret to turn the note off.
+
 ## Everyday use
 
     ./export.sh                    # writes signups-YYYY-MM-DD.csv (gitignored)

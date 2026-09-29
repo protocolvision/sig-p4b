@@ -18,6 +18,7 @@ interface Env {
   EXPORT_SECRET: string;
   SITE?: string;             // public site, used for redirects back after a no-JS form post
   ALLOWED_ORIGINS?: string;  // comma-separated origins allowed to call /signup from a browser
+  DISCORD_WEBHOOK?: string;  // secret: a Discord channel webhook; new sign-ups post a short note there
 }
 
 interface Signup {
@@ -92,7 +93,31 @@ function clean(v: unknown, max: number): string {
   return String(v ?? "").replace(/[\u0000-\u001f\u007f]/g, "").trim().slice(0, max);
 }
 
-async function signup(req: Request, env: Env): Promise<Response> {
+// A short note to the SIG's Discord channel when someone new registers. It carries no personal
+// details (registrants haven't agreed to be announced), only that someone joined and the new total.
+// Test addresses on example.com are skipped. Failures never affect the sign-up.
+async function notifyDiscord(env: Env): Promise<void> {
+  if (!env.DISCORD_WEBHOOK) return;
+  let count = 0, cursor: string | undefined;
+  do {
+    const page = await env.SIGNUPS.list({ prefix: "sub:", cursor });
+    count += page.keys.length;
+    cursor = page.list_complete ? undefined : page.cursor;
+  } while (cursor);
+  try {
+    await fetch(env.DISCORD_WEBHOOK, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: "SIG sign-ups",
+        content: `New sign-up for Protocols for Business session emails. ${count} people are now registered.`,
+        allowed_mentions: { parse: [] },
+      }),
+    });
+  } catch { /* ignore: the note is a courtesy */ }
+}
+
+async function signup(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
   const done = (ok: boolean, error?: string) =>
     isForm
@@ -151,6 +176,7 @@ async function signup(req: Request, env: Env): Promise<Response> {
     } catch { /* unreadable old record: store the new one */ }
   }
   await env.SIGNUPS.put(`sub:${email}`, JSON.stringify(row));
+  if (!prevRaw && !email.endsWith("@example.com")) ctx.waitUntil(notifyDiscord(env));
   return done(true);
 }
 
@@ -198,12 +224,12 @@ async function unsubscribe(url: URL, env: Env): Promise<Response> {
 }
 
 export default {
-  async fetch(req: Request, env: Env): Promise<Response> {
+  async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     if (env.SITE) SITE = env.SITE;
     if (env.ALLOWED_ORIGINS) ALLOWED_ORIGINS = env.ALLOWED_ORIGINS.split(",").map((o) => o.trim()).filter(Boolean);
     const url = new URL(req.url);
     if (req.method === "OPTIONS") return new Response(null, { headers: cors(req) });
-    if (req.method === "POST" && url.pathname === "/signup") return signup(req, env);
+    if (req.method === "POST" && url.pathname === "/signup") return signup(req, env, ctx);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     return new Response("Not found", { status: 404 });
