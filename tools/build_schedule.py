@@ -53,8 +53,7 @@ for i, t in enumerate(T["themes"], 1):
     k += n
     guests = [re.match(r"Guest: (.*?) \((.*)\)", s["feature"]) for s in sessions]
     guests = [g for g in guests if g]
-    guest = (f'<p class="guest"><span class="kind">Guest</span> {e(guests[0].group(1))}, '
-             f'<em>{e(guests[0].group(2))}</em></p>') if guests else ""
+    guest = f'<p class="guest"><span class="kind">Guest</span> {e(guests[0].group(1))}</p>' if guests else ""
     readings = "".join(f'<li><a href="{ea(r["url"])}">{e(r["title"])}</a> <span class="muted">{e(r["cite"])}'
                        + (" · read alongside the previous reading" if r.get("companion") else "") + "</span></li>"
                        for r in t["readings"])
