@@ -317,15 +317,15 @@ DTSTAMP:20260929T143831Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:SIG P4B · End-to-End Arguments in System Design
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: End-to-End Argume
- nts in System Design (Saltzer\, Reed & Clark\, ACM TOCS 2(4)\, 1984)\nhtt
- ps://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The f
- unction in question can completely and correctly be implemented only with
-  the knowledge and help of the application standing at the end points of 
- the communication system.”\n\nFeature: Case study progress\n\nJoin on t
- he Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: ht
- tps://npc.here.now/protocolvision/sessions/\nReading map: https://npc.her
- e.now/protocolvision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: End-to-End Arguments
+  in System Design (Saltzer\, Reed & Clark\, ACM TOCS 2(4)\, 1984)\nhttps:
+ //web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The func
+ tion in question can completely and correctly be implemented only with th
+ e knowledge and help of the application standing at the end points of the
+  communication system.”\n\nFeature: Case study progress\n\nJoin on the 
+ Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https
+ ://npc.here.now/protocolvision/sessions/\nReading map: https://npc.here.n
+ ow/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -336,13 +336,13 @@ DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
 SUMMARY:SIG P4B · Summary of the Amazon S3 Service Disruption in the Nort
  hern Virginia (US-EAST-1) Region
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: Summary of the Am
- azon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region (A
- mazon Web Services\, 2017)\nhttps://aws.amazon.com/message/41926/\n\nFeat
- ure: Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institute D
- iscord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/prot
- ocolvision/sessions/\nReading map: https://npc.here.now/protocolvision/se
- ssions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: Summary of the Amazo
+ n S3 Service Disruption in the Northern Virginia (US-EAST-1) Region (Amaz
+ on Web Services\, 2017)\nhttps://aws.amazon.com/message/41926/\n\nFeature
+ : Show-and-tell: AI-native tooling\n\nJoin on the Protocol Institute Disc
+ ord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protoco
+ lvision/sessions/\nReading map: https://npc.here.now/protocolvision/sessi
+ ons/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -353,13 +353,13 @@ DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:SIG P4B · External Technical Root Cause Analysis: Channel File 29
  1
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: External Technica
- l Root Cause Analysis: Channel File 291 (CrowdStrike\, 2024)\nhttps://www
- .crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Roo
- t-Cause-Analysis-08.06.2024.pdf\n\nFeature: Case study progress\n\nJoin o
- n the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus:
-  https://npc.here.now/protocolvision/sessions/\nReading map: https://npc.
- here.now/protocolvision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: External Technical R
+ oot Cause Analysis: Channel File 291 (CrowdStrike\, 2024)\nhttps://www.cr
+ owdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-C
+ ause-Analysis-08.06.2024.pdf\n\nFeature: Case study progress\n\nJoin on t
+ he Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: ht
+ tps://npc.here.now/protocolvision/sessions/\nReading map: https://npc.her
+ e.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -370,13 +370,13 @@ DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:SIG P4B · In the Matter of Knight Capital Americas LLC (SEC order
  )
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: In the Matter of 
- Knight Capital Americas LLC (SEC order) (U.S. Securities and Exchange Com
- mission\, 2013)\nhttps://www.sec.gov/files/litigation/admin/2013/34-70694
- .pdf\n\nFeature: Show-and-tell: AI-native tooling\n\nJoin on the Protocol
-  Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.h
- ere.now/protocolvision/sessions/\nReading map: https://npc.here.now/proto
- colvision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: In the Matter of Kni
+ ght Capital Americas LLC (SEC order) (U.S. Securities and Exchange Commis
+ sion\, 2013)\nhttps://www.sec.gov/files/litigation/admin/2013/34-70694.pd
+ f\n\nFeature: Show-and-tell: AI-native tooling\n\nJoin on the Protocol In
+ stitute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here
+ .now/protocolvision/sessions/\nReading map: https://npc.here.now/protocol
+ vision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -386,16 +386,16 @@ DTSTAMP:20260929T143831Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:SIG P4B · WHO Surgical Safety Checklist
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: WHO Surgical Safe
- ty Checklist (WHO: https://www.who.int/teams/integrated-health-services/p
- atient-safety/research/safe-surgery/tool-and-resources)\nhttps://www.who.
- int/teams/integrated-health-services/patient-safety/research/safe-surgery
- /tool-and-resources\n“The rate of death was 1.5% before the checklist w
- as introduced and declined to 0.8% afterward (P=0.003).”\n\nFeature: Gu
- est: Protocol Fiction SIG (Protocol Futurism)\n\nJoin on the Protocol Ins
- titute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.
- now/protocolvision/sessions/\nReading map: https://npc.here.now/protocolv
- ision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: WHO Surgical Safety 
+ Checklist (WHO: https://www.who.int/teams/integrated-health-services/pati
+ ent-safety/research/safe-surgery/tool-and-resources)\nhttps://www.who.int
+ /teams/integrated-health-services/patient-safety/research/safe-surgery/to
+ ol-and-resources\n“The rate of death was 1.5% before the checklist was 
+ introduced and declined to 0.8% afterward (P=0.003).”\n\nFeature: Guest
+ : Protocol Fiction SIG (Protocol Futurism)\n\nJoin on the Protocol Instit
+ ute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now
+ /protocolvision/sessions/\nReading map: https://npc.here.now/protocolvisi
+ on/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -405,15 +405,15 @@ DTSTAMP:20260929T143831Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:SIG P4B · Agent Payments Protocol (AP2)
-DESCRIPTION:Theme V. Designing the hard core\n\nReading: Agent Payments Pr
- otocol (AP2) (Google Cloud\, 16 Sep 2025)\nhttps://cloud.google.com/blog/
- products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol\n
- “AP2 builds trust by using Mandates—tamper-proof\, cryptographically-
- signed digital contracts that serve as verifiable proof of a user's instr
- uctions.”\n\nFeature: Case study progress\n\nJoin on the Protocol Insti
- tute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.no
- w/protocolvision/sessions/\nReading map: https://npc.here.now/protocolvis
- ion/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: Agent Payments Proto
+ col (AP2) (Google Cloud\, 16 Sep 2025)\nhttps://cloud.google.com/blog/pro
+ ducts/ai-machine-learning/announcing-agents-to-payments-ap2-protocol\n“
+ AP2 builds trust by using Mandates—tamper-proof\, cryptographically-sig
+ ned digital contracts that serve as verifiable proof of a user's instruct
+ ions.”\n\nFeature: Case study progress\n\nJoin on the Protocol Institut
+ e Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/p
+ rotocolvision/sessions/\nReading map: https://npc.here.now/protocolvision
+ /sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT

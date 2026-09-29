@@ -852,7 +852,7 @@
    "cite": "Google Cloud, 16 Sep 2025",
    "year": 2025,
    "area": "Firms, measurement and governance",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "Agentic Commerce Protocol",
@@ -945,7 +945,7 @@
    "cite": "U.S. Securities and Exchange Commission, 2013",
    "year": 2013,
    "area": "Firms, measurement and governance",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "Job Market Signaling",
@@ -2072,7 +2072,7 @@
    "cite": "WHO: https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery/tool-and-resources",
    "year": null,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "Working in Practice but Not in Theory: Theoretical Challenges of \"High-Reliability Organizations\"",
@@ -2770,7 +2770,7 @@
    "cite": "Saltzer, Reed & Clark, ACM TOCS 2(4), 1984",
    "year": 1984,
    "area": "Systems, logs and failures",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "External Technical Root Cause Analysis: Channel File 291",
@@ -2778,7 +2778,7 @@
    "cite": "CrowdStrike, 2024",
    "year": 2024,
    "area": "Systems, logs and failures",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "Hints for Computer System Design",
@@ -2800,7 +2800,7 @@
    "cite": "Amazon Web Services, 2017",
    "year": 2017,
    "area": "Systems, logs and failures",
-   "syllabus_theme": "V. Designing the hard core"
+   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "The Design Philosophy of the DARPA Internet Protocols",

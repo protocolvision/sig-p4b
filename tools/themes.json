@@ -1,6 +1,6 @@
 {
  "question": "How do organizations, teams, and people coordinate through what they emit, and what changes when agents read and write those signals too?",
- "summary": "It starts with what agents are in practice and how nature coordinates without a manager. It then looks at what systems emit, how to see hardness in real incidents, and how to design the hard core. It ends with how industries keep that core alive, set against business process re-engineering.",
+ "summary": "It starts with what agents are in practice and how nature coordinates without a manager. It then looks at what systems emit, how to see hardness in real incidents, and how to engineer it. It ends with how industries keep that hardness alive, set against business process re-engineering.",
  "themes": [
   {
    "n": "I",
@@ -138,7 +138,7 @@
   },
   {
    "n": "V",
-   "name": "Designing the hard core",
+   "name": "Engineering hardness",
    "blurb": "Guardrails built into the architecture, from end-to-end design to staged rollouts, checklists and signed mandates for agents.",
    "readings": [
     {
@@ -178,7 +178,7 @@
      "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions."
     }
    ],
-   "short": "Hard core"
+   "short": "Hardness"
   },
   {
    "n": "VI",
