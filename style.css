@@ -171,7 +171,7 @@ blockquote.blyg-transclusion { border-left: 2px solid var(--rule); color: var(--
 svg.map { display: block; width: 100%; height: auto; }
 svg.map .contours path { fill: none; stroke: #d6d2ca; stroke-width: 1.2; }
 svg.map .contours .c7, svg.map .contours .c9 { stroke: #d0ccc3; }
-svg.map text.area { font: 19px Lora, Georgia, serif; fill: #6b6a66; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
+svg.map text.area { font: 16px Lora, Georgia, serif; fill: #9a978f; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
 svg.map circle.o { fill: #a9a6a0; }
 svg.map circle.s { fill: var(--link); stroke: #fff; stroke-width: 1.5; cursor: pointer; }
 svg.map circle.on { stroke: var(--fg); stroke-width: 2.5; r: 8; }
@@ -184,3 +184,26 @@ svg.map[data-focus="4"] circle.t4, svg.map[data-focus="5"] circle.t5, svg.map[da
 .map-info h2 a { text-decoration: none; }
 .map-info ol { font-size: .97rem; }
 @media (max-width: 40rem) { svg.map text.area { font-size: 28px; } }
+/* map: progressive detail */
+.map-wrap { position: relative; }
+.map-zoom { position: absolute; right: .5rem; top: .5rem; display: flex; gap: .25rem; z-index: 2; }
+.map-zoom button { min-width: 44px; min-height: 44px; padding: 0 .6rem; border: 1px solid var(--rule); border-radius: 8px; background: rgba(255,255,255,.92); font: 1rem Lora, Georgia, serif; color: var(--fg); cursor: pointer; }
+.map-zoom button:hover { color: var(--link); }
+svg.map { touch-action: manipulation; }
+svg.map.zoomed { cursor: grab; touch-action: none; }
+svg.map .tag { cursor: pointer; }
+svg.map .tag rect { fill: #fff; stroke: var(--link); stroke-width: 1.5; }
+svg.map .tag text { font: 600 16px Lora, Georgia, serif; fill: var(--link); text-anchor: middle; }
+svg.map .tag.on rect, svg.map .tag:focus-visible rect { fill: var(--link); }
+svg.map .tag.on text, svg.map .tag:focus-visible text { fill: #fff; }
+svg.map .tag:focus { outline: none; }
+svg.map .spokes line { stroke: var(--link); stroke-opacity: .35; }
+svg.map .names text { font-family: Lora, Georgia, serif; fill: var(--fg); paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-opacity: .9; }
+svg.map[data-focus]:not([data-focus=""]) .labels { opacity: .35; }
+svg.map[data-focus]:not([data-focus=""]) .tag:not(.on) { opacity: .15; }
+svg.map[data-focus]:not([data-focus=""]) .labels { opacity: .2; }
+svg.map .names line.leader { stroke: #9a978f; }
+.map-tip { position: absolute; z-index: 3; max-width: 18rem; padding: .45rem .65rem; background: #fff; border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,.08); font-size: .92rem; line-height: 1.35; pointer-events: none; }
+.map-tip strong { display: block; font-weight: 600; }
+.map-tip span { color: var(--muted); font-size: .88rem; }
+@media (max-width: 40rem) { svg.map .tag text { font-size: 24px; } svg.map .tag rect { height: 40px; y: -20; } }

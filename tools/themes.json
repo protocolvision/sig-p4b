@@ -31,7 +31,8 @@
      "cite": "Bainbridge, 1983",
      "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate."
     }
-   ]
+   ],
+   "short": "Agents"
   },
   {
    "n": "II",
@@ -56,7 +57,8 @@
      "cite": "Csete & Doyle, Science, 2002",
      "quote": ""
     }
-   ]
+   ],
+   "short": "Nature"
   },
   {
    "n": "III",
@@ -93,7 +95,8 @@
      "cite": "U.S. Securities and Exchange Commission",
      "quote": "A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident."
     }
-   ]
+   ],
+   "short": "Emissions"
   },
   {
    "n": "IV",
@@ -130,7 +133,8 @@
      "cite": "Google SRE book, ch. 15",
      "quote": "it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior."
     }
-   ]
+   ],
+   "short": "Incidents"
   },
   {
    "n": "V",
@@ -173,7 +177,8 @@
      "cite": "Google Cloud, 16 Sep 2025",
      "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions."
     }
-   ]
+   ],
+   "short": "Hard core"
   },
   {
    "n": "VI",
@@ -205,7 +210,8 @@
      "cite": "P. Resnick, June 2014",
      "quote": "We reject: kings, presidents and voting. We believe in: rough consensus and running code."
     }
-   ]
+   ],
+   "short": "Keeping it alive"
   }
  ]
 }

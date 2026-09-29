@@ -65,13 +65,33 @@ def main():
             y += 26
         placed.append((x, y, w))
         labels.append(f'<text x="{x:.0f}" y="{y:.0f}" class="area">{e(a["name"])}</text>')
+    # theme tags: one per theme, placed near its readings, nudged apart from each other
+    T = json.loads((ROOT / "tools/themes.json").read_text())["themes"]
+    by_id = {r["id"]: r for r in L["readings"]}
+    tags, tag_pos = [], []
+    for i, m in enumerate(syl["movements"], 1):
+        pts = [(sx(by_id[rid]["x"]), sy(by_id[rid]["y"])) for rid in m["stops"]]
+        x, y = sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts) - 28
+        label = f'{m["n"]} · {T[i - 1].get("short", m["name"])}'
+        w = len(label) * 10 + 22
+        x = min(max(x, w / 2 + 6), W - w / 2 - 6)
+        for _ in range(14):
+            if not any(abs(x - px) < (w + pw) / 2 + 6 and abs(y - py) < 34 for px, py, pw in tag_pos):
+                break
+            y -= 34
+        tag_pos.append((x, y, w))
+        tags.append(f'<g class="tag" data-th="{i}" tabindex="0" role="button" aria-label="Theme {e(m["n"])}: {e(m["name"])}" '
+                    f'transform="translate({x:.0f},{y:.0f})"><rect x="{-w / 2:.0f}" y="-15" width="{w:.0f}" height="30" rx="15"/>'
+                    f'<text y="5">{e(label)}</text></g>')
     svg = (f'<svg viewBox="0 0 {W} {H}" class="map" role="group" aria-labelledby="map-title map-desc" id="map">'
            f'<title id="map-title">Reading map</title><desc id="map-desc">{len(L["readings"])} readings placed by what they say. '
            f'Readings in this year’s plan are marked in blue.</desc>'
            f'<g class="contours" aria-hidden="true">{"".join(contours)}</g>'
-           f'<g class="labels" aria-hidden="true">{"".join(labels)}</g><g class="dots">{"".join(dots)}</g></svg>')
+           f'<g class="labels" aria-hidden="true">{"".join(labels)}</g><g class="spokes" aria-hidden="true"></g>'
+           f'<g class="dots">{"".join(dots)}</g><g class="tags">{"".join(tags)}</g><g class="names" aria-hidden="true"></g></svg>')
 
-    themes = [{"n": m["n"], "name": m["name"], "blurb": m["blurb"]} for m in syl["movements"]]
+    themes = [{"n": m["n"], "name": m["name"], "blurb": m["blurb"], "short": T[i].get("short", m["name"]),
+               "x": round(tag_pos[i][0]), "y": round(tag_pos[i][1])} for i, m in enumerate(syl["movements"])]
     chips = '<button type="button" data-th="0" aria-pressed="true">All</button>' + "".join(
         f'<button type="button" data-th="{i}" aria-pressed="false">{e(m["n"])}. {e(m["name"])}</button>'
         for i, m in enumerate(syl["movements"], 1))
@@ -85,9 +105,8 @@ def main():
     body = f'''<!-- {{"title": "Reading map · Protocols for Business SIG", "desc": "{len(L["readings"])} readings placed by what they say, with this year’s reading plan marked.", "path": "sessions/map/", "nav": "sessions", "card": "syllabus"}} -->
 <p class="meta"><a href="../">Sessions</a></p>
 <h1>Reading map</h1>
-<p class="lede">{len(L["readings"])} readings, placed by what they say. Readings that say similar things sit close together. This year’s plan is marked in blue. Choose a theme to see where its readings sit.</p>
-<div class="map-filters" role="group" aria-label="Themes">{chips}</div>
-<div class="map-wrap">{svg}</div>
+<p class="lede">{len(L["readings"])} readings, placed by what they say. Readings that say similar things sit close together, and this year’s plan is marked in blue. Hover over or select a theme tag to see its readings, and zoom in for more detail.</p>
+<div class="map-wrap"><div class="map-zoom" role="group" aria-label="Zoom"><button type="button" data-z="in" aria-label="Zoom in">+</button><button type="button" data-z="out" aria-label="Zoom out">−</button><button type="button" data-z="reset">Reset</button></div>{svg}<div class="map-tip" hidden></div></div>
 <div id="map-info" class="map-info" aria-live="polite"><p class="muted">Select a blue dot, or choose a theme above.</p></div>
 <p class="small muted"><a href="3d/">Open the map in 3D</a> (best on a computer) · <a href="readings.json">All readings as data</a> · <a href="../#suggest">Suggest or challenge a reading</a></p>
 <details><summary>All readings by area</summary>{by_area}</details>
