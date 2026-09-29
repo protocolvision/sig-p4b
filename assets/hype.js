@@ -81,7 +81,7 @@
   var t0 = performance.now();
   function loop(now) {
     var t = (now - t0) / 1000;
-    scenes.forEach(function (s) { if (s.visible) s.st.draw(t); });
+    scenes.forEach(function (s) { if (s.w < 2) s.reset(); if (s.visible) s.st.draw(t); });
     if (!reduced) requestAnimationFrame(loop);
   }
 
@@ -142,10 +142,10 @@
   /* emissions: rings that light up whoever reads them */
   function emissions(sc) {
     var N = [], R = [];
-    for (var i = 0; i < 22; i++) N.push({ x: rnd() * sc.w, y: rnd() * sc.h, lit: 0 });
+    for (var i = 0; i < 34; i++) N.push({ x: rnd() * sc.w, y: rnd() * sc.h, lit: 0 });
     return { draw: function (t) {
       var c = sc.c; c.fillStyle = 'rgba(0,0,0,.3)'; c.fillRect(0, 0, sc.w, sc.h);
-      if (rnd() < .04) { var s = N[Math.floor(rnd() * N.length)]; R.push({ x: s.x, y: s.y, r: 0 }); }
+      if (rnd() < .07) { var s = N[Math.floor(rnd() * N.length)]; R.push({ x: s.x, y: s.y, r: 0 }); }
       R = R.filter(function (r) {
         r.r += 1.6; c.strokeStyle = 'rgba(255,212,0,' + Math.max(0, 1 - r.r / 180) + ')'; c.lineWidth = 2;
         c.beginPath(); c.arc(r.x, r.y, r.r, 0, TAU); c.stroke();
@@ -155,24 +155,33 @@
       N.forEach(function (n) { n.lit *= .95; c.fillStyle = n.lit > .1 ? 'rgba(255,212,0,' + n.lit + ')' : '#333'; c.fillRect(n.x - 3, n.y - 3, 6, 6); });
     } };
   }
-  /* incidents: a crack runs, then the alarm */
+  /* incidents: all systems normal, until a crack runs through them */
   function incidents(sc) {
-    var tips, segs, flash, age;
-    function start() { tips = [{ x: sc.w * (.2 + rnd() * .6), y: 0, a: Math.PI / 2 }]; segs = []; flash = 0; age = 0; }
+    var tips, segs, flash, hold;
+    function start() { tips = [{ x: sc.w * (.25 + rnd() * .5), y: 0, a: Math.PI / 2 }]; segs = []; flash = 0; hold = 0; }
     start();
     return { draw: function () {
-      var c = sc.c; age++;
-      c.fillStyle = flash > 0 ? 'rgba(255,59,48,' + flash + ')' : 'rgba(10,0,0,.12)'; c.fillRect(0, 0, sc.w, sc.h); flash *= .85;
+      var c = sc.c, w = sc.w, h = sc.h;
+      c.fillStyle = '#0a0304'; c.fillRect(0, 0, w, h);
+      c.strokeStyle = 'rgba(255,255,255,.06)'; c.lineWidth = 1;   // the systems: a quiet grid of boxes
+      for (var gx = 12; gx < w; gx += 34) for (var gy = 12; gy < h; gy += 34) c.strokeRect(gx, gy, 24, 24);
       var next = [];
       tips.forEach(function (p) {
-        var a = p.a + (rnd() - .5) * .9, x = p.x + Math.cos(a) * 6, y = p.y + Math.sin(a) * 6;
+        var a = p.a + (rnd() - .5) * .9, x = p.x + Math.cos(a) * 5, y = p.y + Math.sin(a) * 5;
         segs.push([p.x, p.y, x, y]);
-        if (y < sc.h && x > 0 && x < sc.w) { next.push({ x: x, y: y, a: a * .7 + Math.PI / 2 * .3 }); if (rnd() < .04 && tips.length < 14) next.push({ x: x, y: y, a: a + (rnd() < .5 ? -.8 : .8) }); }
+        if (y < h && x > 0 && x < w) { next.push({ x: x, y: y, a: a * .7 + Math.PI / 2 * .3 }); if (rnd() < .05 && tips.length < 16) next.push({ x: x, y: y, a: a + (rnd() < .5 ? -.9 : .9) }); }
       });
       tips = next;
-      c.strokeStyle = '#ff3b30'; c.lineWidth = 2; c.shadowColor = '#ff3b30'; c.shadowBlur = 12;
-      c.beginPath(); segs.slice(-40).forEach(function (s) { c.moveTo(s[0], s[1]); c.lineTo(s[2], s[3]); }); c.stroke(); c.shadowBlur = 0;
-      if (!tips.length && flash < .05) { flash = .9; c.fillStyle = '#fff'; c.font = '700 26px Anton, Impact'; c.textAlign = 'center'; c.fillText('INCIDENT', sc.w / 2, sc.h / 2); setTimeout(start, 900); tips = [{ x: -99, y: sc.h * 2, a: 0 }]; }
+      c.strokeStyle = '#ff3b30'; c.lineWidth = 2; c.shadowColor = '#ff3b30'; c.shadowBlur = 10;
+      c.beginPath(); segs.forEach(function (q) { c.moveTo(q[0], q[1]); c.lineTo(q[2], q[3]); }); c.stroke(); c.shadowBlur = 0;
+      c.font = '700 13px "Space Grotesk"'; c.textAlign = 'left';
+      if (tips.length) { c.fillStyle = '#34c759'; c.fillText('● ALL SYSTEMS NORMAL', 12, h - 12); }
+      else {
+        if (!hold) flash = 1; hold++;
+        c.fillStyle = 'rgba(255,59,48,' + flash * .7 + ')'; c.fillRect(0, 0, w, h); flash *= .9;
+        c.fillStyle = hold % 20 < 12 ? '#ff3b30' : '#fff'; c.font = '28px Anton, Impact'; c.textAlign = 'center'; c.fillText('INCIDENT', w / 2, h / 2 + 10);
+        if (hold > 90) start();
+      }
     } };
   }
   /* hardness: a rigid core, free agents bouncing off it */
@@ -200,17 +209,20 @@
   }
   /* liveness: the heartbeat */
   function liveness(sc) {
-    var pts = [], x = 0;
+    var pts = [], x = 0, beatAt = 0;
     return { draw: function (t) {
-      var c = sc.c; c.fillStyle = 'rgba(0,0,0,.08)'; c.fillRect(0, 0, sc.w, sc.h);
-      var ph = (t * 1.25) % 1, y = sc.h / 2;
-      if (ph > .1 && ph < .13) y -= 60; else if (ph >= .13 && ph < .16) y += 45; else if (ph >= .16 && ph < .19) y -= 15; else y += Math.sin(t * 9) * 1.5;
-      pts.push([x, y]); x += 2.2; if (x > sc.w) { x = 0; pts = []; c.fillStyle = '#000'; c.fillRect(0, 0, sc.w, sc.h); }
-      c.strokeStyle = '#c6ff00'; c.lineWidth = 2.5; c.shadowColor = '#c6ff00'; c.shadowBlur = 10; c.beginPath();
-      pts.slice(-3).forEach(function (p, i) { c[i ? 'lineTo' : 'moveTo'](p[0], p[1]); }); c.stroke(); c.shadowBlur = 0;
-      var beat = ph < .2 ? 1 - ph * 5 : 0;
-      c.fillStyle = '#000'; c.fillRect(sc.w - 92, 8, 84, 26);
-      c.fillStyle = 'rgba(255,59,48,' + (.4 + beat * .6) + ')'; c.font = '700 14px "Space Grotesk"'; c.textAlign = 'right'; c.fillText('♥ 75 BPM', sc.w - 12, 26);
+      var c = sc.c, w = sc.w, h = sc.h, y = h / 2 + 10, ph = (t * 1.25) % 1;
+      if (ph > .1 && ph < .13) y -= 70; else if (ph >= .13 && ph < .16) y += 45; else if (ph >= .16 && ph < .19) y -= 18; else y += Math.sin(t * 9) * 1.5;
+      pts.push([x, y]); x += 2.4; if (x > w) { x = 0; pts = []; }
+      c.fillStyle = '#000'; c.fillRect(0, 0, w, h);
+      c.strokeStyle = 'rgba(198,255,0,.08)'; c.lineWidth = 1;
+      for (var gx = 0; gx < w; gx += 20) { c.beginPath(); c.moveTo(gx, 0); c.lineTo(gx, h); c.stroke(); }
+      for (var gy = 0; gy < h; gy += 20) { c.beginPath(); c.moveTo(0, gy); c.lineTo(w, gy); c.stroke(); }
+      c.strokeStyle = '#c6ff00'; c.lineWidth = 2.5; c.shadowColor = '#c6ff00'; c.shadowBlur = 12; c.beginPath();
+      pts.forEach(function (q, i) { c[i ? 'lineTo' : 'moveTo'](q[0], q[1]); }); c.stroke(); c.shadowBlur = 0;
+      if (pts.length) { var e = pts[pts.length - 1]; c.fillStyle = '#fff'; c.beginPath(); c.arc(e[0], e[1], 3.5, 0, TAU); c.fill(); }
+      var beat = ph < .25 ? 1 - ph * 4 : 0;
+      c.fillStyle = 'rgba(255,59,48,' + (.45 + beat * .55) + ')'; c.font = '700 15px "Space Grotesk"'; c.textAlign = 'left'; c.fillText('♥ 75 BPM · ALIVE', 12, h - 12);
     } };
   }
   /* growth: agents explode, protocols flatline, the gap is where incidents live */
@@ -281,7 +293,8 @@
       ['V', 'Hardness', 'Hard core. Free edges. No excuses.', hardness, 'LEGENDARY', ['6 sessions', 'Knight Capital', 'S3', 'AP2']],
       ['VI', 'Liveness', 'A dead protocol is just a PDF. Keep the pulse.', liveness, 'MYTHIC', ['3 sessions', 'Toyota', 'IETF', 'aviation']]];
     var drops = $('<section class="hype-full hype-section"><div class="wrap"><h2>Season 1. Six episodes. Zero filler.</h2><p class="lede">Collect all six themes. Each one is a primary source you’ll wish you’d read last year.</p><div class="hype-grid"></div></div></section>');
-    var grid = drops.querySelector('.hype-grid');
+    var grid = drops.querySelector('.hype-grid'); grid.classList.add('drops');
+    alarm.after(drops);   // on the page first, so each canvas has a size
     DROPS.forEach(function (d) {
       var card = $('<a class="drop" href="' + ROOT + 'sessions/#theme-' + d[0].toLowerCase() + '" style="text-decoration:none;color:inherit"><span class="rare">' + d[4] + '</span><canvas aria-hidden="true"></canvas><div class="body"><span class="ep">Episode ' + d[0] + '</span><h3>' + d[1] + '</h3><p>' + d[2] + '</p><div class="tags">' + d[5].map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div></div></a>');
       grid.appendChild(card);
@@ -289,7 +302,6 @@
       card.addEventListener('pointerleave', function () { card.style.transform = ''; });
       addScene(card.querySelector('canvas'), d[3]);
     });
-    alarm.after(drops);
 
     /* growth + FOMO */
     var grow = $('<section class="hype-full hype-section" style="background:radial-gradient(circle at 20% 20%,rgba(255,43,214,.15),transparent 60%)"><div class="wrap growth"><canvas aria-label="Chart: agents deployed rise exponentially while protocols anyone can see stay flat"></canvas><div>' +

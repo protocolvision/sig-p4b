@@ -67,6 +67,7 @@ def page(meta, body):
 {FONTS}
 <link rel="stylesheet" href="{rel}style.css">
 <link rel="stylesheet" href="{rel}assets/hype.css">
+<meta name="robots" content="noindex">
 {extra_head}<body>
 <header>
 <a class="home" href="{rel or './'}" aria-label="Protocol Institute – Business, home"><img class="logo" src="{rel}favicon.svg" alt="">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>

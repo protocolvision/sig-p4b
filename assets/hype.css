@@ -174,3 +174,9 @@ footer { border-color: var(--rule); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* theme cards: two rows of three on desktop */
+.hype-grid.drops { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 60rem) { .hype-grid.drops { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 38rem) { .hype-grid.drops { grid-template-columns: 1fr; } }
+.drop canvas { height: 220px; }
