@@ -182,7 +182,7 @@
   },
   {
    "n": "VI",
-   "name": "Keeping the core alive, and the contrast",
+   "name": "Operational liveness",
    "blurb": "How industries keep amending their protocols, read against re-engineering’s clean slate.",
    "readings": [
     {
@@ -211,7 +211,7 @@
      "quote": "We reject: kings, presidents and voting. We believe in: rough consensus and running code."
     }
    ],
-   "short": "Keeping it alive"
+   "short": "Liveness"
   }
  ]
 }

@@ -48,7 +48,7 @@ body:
         - "III. Emissions"
         - "IV. Seeing hardness in incidents"
         - "V. Engineering hardness"
-        - "VI. Keeping the core alive, and the contrast"
+        - "VI. Operational liveness"
         - "Somewhere else on the map"
   - type: textarea
     id: adds

@@ -7,7 +7,7 @@ X-WR-CALNAME:Protocols for Business SIG
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20261102T153000Z
 DTEND:20261102T163000Z
 SUMMARY:SIG P4B · The Hugging Face incident and the road ahead
@@ -26,7 +26,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:SIG P4B · Patterns and problems in multiagent systems
@@ -45,7 +45,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
 SUMMARY:SIG P4B · Model Context Protocol Specification
@@ -63,7 +63,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:SIG P4B · Ironies of Automation
@@ -80,7 +80,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:SIG P4B · Quorum Sensing in Bacteria
@@ -99,7 +99,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:SIG P4B · Robustness in bacterial chemotaxis
@@ -114,7 +114,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:SIG P4B · Reverse Engineering of Biological Complexity
@@ -129,7 +129,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:SIG P4B · The Filing Cabinet
@@ -148,7 +148,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:SIG P4B · The Log: What every software engineer should know about
@@ -170,7 +170,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
 SUMMARY:SIG P4B · Contracts: Events
@@ -188,7 +188,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:SIG P4B · Aviation Safety Reporting System: program summary
@@ -206,7 +206,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:SIG P4B · Form 8-K: General Instructions
@@ -224,7 +224,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:SIG P4B · Report of the President’s Commission on the Accident 
@@ -243,7 +243,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270517T153000Z
 DTEND:20270517T163000Z
 SUMMARY:SIG P4B · An Investigation of the Therac-25 Accidents
@@ -261,7 +261,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270531T153000Z
 DTEND:20270531T163000Z
 SUMMARY:SIG P4B · Final Report on the accident on 1st June 2009 to the Ai
@@ -278,7 +278,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270614T153000Z
 DTEND:20270614T163000Z
 SUMMARY:SIG P4B · Columbia Accident Investigation Board Report\, Volume O
@@ -295,7 +295,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270628T153000Z
 DTEND:20270628T163000Z
 SUMMARY:SIG P4B · Postmortem Culture: Learning from Failure
@@ -313,7 +313,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:SIG P4B · End-to-End Arguments in System Design
@@ -331,7 +331,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
 SUMMARY:SIG P4B · Summary of the Amazon S3 Service Disruption in the Nort
@@ -348,7 +348,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:SIG P4B · External Technical Root Cause Analysis: Channel File 29
@@ -365,7 +365,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:SIG P4B · In the Matter of Knight Capital Americas LLC (SEC order
@@ -382,7 +382,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:SIG P4B · WHO Surgical Safety Checklist
@@ -401,7 +401,7 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:SIG P4B · Agent Payments Protocol (AP2)
@@ -419,57 +419,57 @@ URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:SIG P4B · Reengineering Work: Don’t Automate\, Obliterate
-DESCRIPTION:Theme VI. Keeping the core alive\, and the contrast\n\nReading
- : Reengineering Work: Don’t Automate\, Obliterate (Hammer\, 1990)\nhttp
- s://hbr.org/1990/07/reengineering-work-dont-automate-obliterate\n“It is
-  time to stop paving the cow paths. Instead of embedding outdated process
- es in silicon and software\, we should obliterate them and start over.”
- \n\nAlongside: Toyota Production System (Toyota Motor Corporation)\nhttps
- ://global.toyota/en/company/vision-and-philosophy/production-system/\n\nF
- eature: Cognitive Ergonomics project (Timber Stinson-Schroff): a progress
-  update from our sister project\n\nJoin on the Protocol Institute Discord
- : https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvi
- sion/sessions/\nReading map: https://npc.here.now/protocolvision/sessions
- /map/\nSessions are recorded.
+DESCRIPTION:Theme VI. Operational liveness\n\nReading: Reengineering Work:
+  Don’t Automate\, Obliterate (Hammer\, 1990)\nhttps://hbr.org/1990/07/r
+ eengineering-work-dont-automate-obliterate\n“It is time to stop paving 
+ the cow paths. Instead of embedding outdated processes in silicon and sof
+ tware\, we should obliterate them and start over.”\n\nAlongside: Toyota
+  Production System (Toyota Motor Corporation)\nhttps://global.toyota/en/c
+ ompany/vision-and-philosophy/production-system/\n\nFeature: Cognitive Erg
+ onomics project (Timber Stinson-Schroff): a progress update from our sist
+ er project\n\nJoin on the Protocol Institute Discord: https://discord.gg/
+ zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/sessions/\nReadi
+ ng map: https://npc.here.now/protocolvision/sessions/map/\nSessions are r
+ ecorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:SIG P4B · 14 CFR Part 5\, Safety Management Systems
-DESCRIPTION:Theme VI. Keeping the core alive\, and the contrast\n\nReading
- : 14 CFR Part 5\, Safety Management Systems (FAA\, 2015\, expanded 2024)\
- nhttps://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-5\n“
- the formal\, top-down\, organization-wide approach to managing safety ris
- k and assuring the effectiveness of safety risk controls.”\n\nFeature: 
- Guest: Psychohistory SIG (Prophecy Protocols)\n\nJoin on the Protocol Ins
- titute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.
- now/protocolvision/sessions/\nReading map: https://npc.here.now/protocolv
- ision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme VI. Operational liveness\n\nReading: 14 CFR Part 5\, Saf
+ ety Management Systems (FAA\, 2015\, expanded 2024)\nhttps://www.ecfr.gov
+ /current/title-14/chapter-I/subchapter-A/part-5\n“the formal\, top-down
+ \, organization-wide approach to managing safety risk and assuring the ef
+ fectiveness of safety risk controls.”\n\nFeature: Guest: Psychohistory 
+ SIG (Prophecy Protocols)\n\nJoin on the Protocol Institute Discord: https
+ ://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvision/se
+ ssions/\nReading map: https://npc.here.now/protocolvision/sessions/map/\n
+ Sessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20260929T143831Z
+DTSTAMP:20260929T150959Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:SIG P4B · On Consensus and Humming in the IETF (RFC 7282)
-DESCRIPTION:Theme VI. Keeping the core alive\, and the contrast\n\nReading
- : On Consensus and Humming in the IETF (RFC 7282) (P. Resnick\, June 2014
- )\nhttps://www.rfc-editor.org/rfc/rfc7282\n“We reject: kings\, presiden
- ts and voting. We believe in: rough consensus and running code.”\n\nFea
- ture: Thesis session: drafting the AI-native\, post-platform organization
- \n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\
- nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading map: ht
- tps://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme VI. Operational liveness\n\nReading: On Consensus and Hu
+ mming in the IETF (RFC 7282) (P. Resnick\, June 2014)\nhttps://www.rfc-ed
+ itor.org/rfc/rfc7282\n“We reject: kings\, presidents and voting. We bel
+ ieve in: rough consensus and running code.”\n\nFeature: Thesis session:
+  drafting the AI-native\, post-platform organization\n\nJoin on the Proto
+ col Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://np
+ c.here.now/protocolvision/sessions/\nReading map: https://npc.here.now/pr
+ otocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
