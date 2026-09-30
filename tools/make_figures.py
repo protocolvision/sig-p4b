@@ -202,7 +202,7 @@ def gather(w, h, seed, n=70):
     return svg(w, h, "".join(out), "Strokes converging from all sides on a single point")
 
 
-def activities(w, h, seed):
+def activities(w, h, seed, labels=True):
     """What we do, in three panels drawn in the same strokes: sessions, research, training."""
     r = random.Random(seed)
     pw, out = w / 3, []
@@ -210,6 +210,7 @@ def activities(w, h, seed):
         L = L or 2.4 + r.random() * 1.6
         out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{col}" stroke-width="1.2" opacity="{op:.2f}"/>')
     def label(i, text):
+        if not labels: return
         out.append(f'<text x="{f(pw * i + pw / 2)}" y="{h - 8}" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="1.5" fill="{INK}">{text}</text>')
     # 1. sessions: a flock circling one open document
     cx, cy = pw * .5, h * .45
@@ -245,9 +246,18 @@ def activities(w, h, seed):
     out.append(f'<path d="M{f(lx + lr * .7)} {f(ly + lr * .7)}l30 30" stroke="{INK}" stroke-width="5"/>')
     label(2, "TRAINING")
     # hairlines between the panels
-    for i in (1, 2):
+    for i in ((1, 2) if labels else ()):
         out.append(f'<path d="M{f(pw * i)} 16V{h - 30}" stroke="{FAINT}" stroke-width="1" stroke-dasharray="2 4"/>')
     return svg(w, h, "".join(out), "Three panels: a flock circling one document for sessions; a stream through data blocks for research; a lens over a flock for training")
+
+
+def activity_panels(seed):
+    """The three activity panels as separate images, cropped from one drawing so they match."""
+    full = activities(1200, 300, seed, labels=False)
+    body = full[full.index("<g "):full.rindex("</svg>")]
+    names = [("sessions", "A flock circling one document"), ("research", "A stream of agents flowing through blocks of data"), ("training", "A lens over a flock, making its pattern visible")]
+    for i, (name, label) in enumerate(names):
+        (OUT / f"act-{name}.svg").write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{i * 400 + 20} 10 360 270" width="360" height="270" role="img" aria-label="{label}">{body}</svg>\n')
 
 
 FIGS = {
@@ -270,4 +280,5 @@ if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for name, (fn, w, h, seed) in FIGS.items():
         (OUT / f"{name}.svg").write_text(fn(w, h, seed))
-    print(f"{len(FIGS)} figures in {OUT}")
+    activity_panels(13)
+    print(f"{len(FIGS) + 3} figures in {OUT}")

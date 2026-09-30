@@ -246,3 +246,10 @@ ol.plan .fig-theme { margin: .2rem 0 .7rem; }
 .next .fig-next { position: absolute; right: 0; top: 50%; width: 52%; height: auto; transform: translateY(-50%); pointer-events: none;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 45%); mask-image: linear-gradient(90deg, transparent, #000 45%); opacity: .6; }
 @media (max-width: 34rem) { .next .fig-next { width: 90%; opacity: .35; } }
+
+/* What we do: each row carries its own small drawing above the label */
+.rows.acts li { grid-template-columns: 10rem 1fr; gap: .25rem 1.25rem; align-items: start; }
+.rows.acts .k { display: block; }
+.rows.acts .act { display: block; width: 100%; height: auto; margin: 0; }
+.rows.acts .act-k { margin: .1rem 0 .2rem; font-size: 1rem; }
+@media (max-width: 34rem) { .rows.acts li { grid-template-columns: 7rem 1fr; gap: .25rem .9rem; } }
