@@ -7,6 +7,7 @@
  * Routes:
  *   POST /signup       — JSON (fetch) or form-encoded (no-JS fallback, redirects back)
  *   POST /talk         — an offer to speak at a session; posted to the SIG's Discord channel (nothing stored)
+ *   POST /advisory     — a request for advisory services; posted to the SIG's Discord channel (nothing stored)
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   OPTIONS *          — CORS preflight
@@ -227,6 +228,45 @@ async function talk(req: Request, env: Env): Promise<Response> {
   return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
 }
 
+// Advisory requests go to the same channel, the same way: nothing stored, mentions never ping.
+async function advisory(req: Request, env: Env): Promise<Response> {
+  const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
+  const done = (ok: boolean, error?: string) =>
+    isForm
+      ? Response.redirect(`${SITE}?advisory=${ok ? "ok" : "error"}`, 303)
+      : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
+  let body: Record<string, string>;
+  try {
+    body = await readBody(req);
+  } catch {
+    return done(false, "Could not read the form.");
+  }
+  if (body._hp) return done(true);
+  const name = clean(body.name, 100), contact = clean(body.contact, 150), org = clean(body.org, 150);
+  const need = clean(String(body.need ?? "").replace(/\r?\n/g, " "), 1500), when = clean(body.when, 80);
+  if (!name || !contact || !need) return done(false, "Please add your name, a way to reach you, and what you need.");
+  const ip = req.headers.get("CF-Connecting-IP") || "unknown";
+  if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
+  if (!env.DISCORD_WEBHOOK) return done(false, "Requests are not set up yet. Message @rafa_0x on Discord.");
+  const fields = [
+    { name: "From", value: name, inline: true },
+    { name: "Contact", value: contact, inline: true },
+    ...(org ? [{ name: "Organization", value: org, inline: true }] : []),
+    ...(when ? [{ name: "Timing", value: when, inline: true }] : []),
+  ];
+  const r = await fetch(env.DISCORD_WEBHOOK, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "SIG advisory requests",
+      content: "New request for advisory services:",
+      embeds: [{ title: org ? `Advisory request from ${org}`.slice(0, 250) : "Advisory request", description: need, fields, color: 0x0f6e56 }],
+      allowed_mentions: { parse: [] },
+    }),
+  });
+  return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
+}
+
 function csvCell(s: string): string {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
@@ -278,6 +318,7 @@ export default {
     if (req.method === "OPTIONS") return new Response(null, { headers: cors(req) });
     if (req.method === "POST" && url.pathname === "/signup") return signup(req, env, ctx);
     if (req.method === "POST" && url.pathname === "/talk") return talk(req, env);
+    if (req.method === "POST" && url.pathname === "/advisory") return advisory(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     return new Response("Not found", { status: 404 });

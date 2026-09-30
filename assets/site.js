@@ -56,52 +56,69 @@
     }).catch(function () {});
   }
 
-  /* Offer a talk: a short form that goes to the SIG's Discord channel. Opened by any [data-talk] control. */
-  var talkBtns = document.querySelectorAll('[data-talk]');
-  if (talkBtns.length) {
-    var TALK = SIGNUP.replace(/\/signup$/, '/talk');
-    var td = document.createElement('dialog');
-    td.id = 'talk'; td.className = 'register'; td.setAttribute('aria-labelledby', 'talk-title');
-    td.innerHTML =
-      '<div class="register-head"><h2 id="talk-title">Offer a talk</h2><button type="button" class="close" data-tclose aria-label="Close">×</button></div>' +
-      '<form method="post" action="' + TALK + '">' +
-        '<p class="small muted">Guests speak first, at the start of a session. What you send here, including how to reach you, is posted to the SIG’s Discord channel so we can reply.</p>' +
-        '<label for="t-name">Name</label><input id="t-name" name="name" type="text" autocomplete="name" required maxlength="100">' +
-        '<label for="t-contact">Discord handle or email</label><input id="t-contact" name="contact" type="text" required maxlength="150" autocapitalize="off" spellcheck="false">' +
-        '<label for="t-title">Talk title</label><input id="t-title" name="title" type="text" required maxlength="200">' +
-        '<label for="t-theme">Closest theme</label><select id="t-theme" name="theme"><option>Agents</option><option>Nature</option><option>Emissions</option><option>Incidents</option><option>Hardness</option><option>Liveness</option><option selected>Not sure</option></select>' +
-        '<label for="t-about">A few lines about it <span class="req">optional</span></label><textarea id="t-about" name="about" rows="3" maxlength="1200"></textarea>' +
-        '<label for="t-link">Link to your work <span class="req">optional</span></label><input id="t-link" name="link" type="text" inputmode="url" placeholder="paper, site or repo" maxlength="300">' +
-        '<label for="t-when">Preferred month <span class="req">optional</span></label><input id="t-when" name="when" type="text" placeholder="e.g. March 2027" maxlength="80">' +
-        '<input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">' +
-        '<p class="form-status" aria-live="polite"></p>' +
-        '<div class="register-actions"><button type="submit" class="btn">Send offer</button><button type="button" class="btn-quiet" data-tclose>Cancel</button></div>' +
-        '<p class="small muted">Sessions are recorded.</p>' +
-      '</form>';
-    document.body.appendChild(td);
-    var tf = td.querySelector('form'), ts = td.querySelector('.form-status');
-    var topen = function (e) { if (e) e.preventDefault(); ts.textContent = ''; tf.hidden = false; if (td.showModal) td.showModal(); else td.setAttribute('open', ''); td.querySelector('#t-name').focus(); };
-    var tclose = function () { if (td.close) td.close(); else td.removeAttribute('open'); };
-    talkBtns.forEach(function (b) { b.addEventListener('click', topen); });
-    td.querySelectorAll('[data-tclose]').forEach(function (b) { b.addEventListener('click', tclose); });
-    td.addEventListener('click', function (e) { if (e.target === td) tclose(); });
-    tf.addEventListener('submit', function (e) {
+  /* Short forms that go to the SIG's Discord channel: offer a talk ([data-talk]) and request advisory
+     services ([data-advisory]). Both reuse the register dialog's look; the worker posts them and stores nothing. */
+  var BASE = SIGNUP.replace(/\/signup$/, '');
+  function field(id, label, input, optional) {
+    return '<label for="' + id + '">' + label + (optional ? ' <span class="req">optional</span>' : '') + '</label>' + input;
+  }
+  function inquiry(cfg) {
+    var btns = document.querySelectorAll('[' + cfg.trigger + ']');
+    if (!btns.length) return;
+    var dlg = document.createElement('dialog');
+    dlg.id = cfg.id; dlg.className = 'register'; dlg.setAttribute('aria-labelledby', cfg.id + '-title');
+    dlg.innerHTML =
+      '<div class="register-head"><h2 id="' + cfg.id + '-title">' + cfg.title + '</h2><button type="button" class="close" data-x aria-label="Close">×</button></div>' +
+      '<form method="post" action="' + BASE + cfg.route + '"><p class="small muted">' + cfg.intro + '</p>' + cfg.fields +
+      '<input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+      '<p class="form-status" aria-live="polite"></p>' +
+      '<div class="register-actions"><button type="submit" class="btn">' + cfg.submit + '</button><button type="button" class="btn-quiet" data-x>Cancel</button></div></form>';
+    document.body.appendChild(dlg);
+    var form = dlg.querySelector('form'), status = dlg.querySelector('.form-status');
+    var open = function (e) { if (e) e.preventDefault(); status.textContent = ''; if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); dlg.querySelector('input, textarea').focus(); };
+    var close = function () { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); };
+    btns.forEach(function (b) { b.addEventListener('click', open); });
+    dlg.querySelectorAll('[data-x]').forEach(function (b) { b.addEventListener('click', close); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+    form.addEventListener('submit', function (e) {
       if (!window.fetch) return;   // no-JS fallback: the form posts and the worker redirects back
       e.preventDefault();
-      if (!tf.reportValidity()) return;
-      var data = {}; new FormData(tf).forEach(function (v, k) { data[k] = v; });
-      var btn = tf.querySelector('[type=submit]'); btn.disabled = true; ts.textContent = 'Sending…';
-      fetch(tf.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+      if (!form.reportValidity()) return;
+      var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
+      var btn = form.querySelector('[type=submit]'); btn.disabled = true; status.textContent = 'Sending…';
+      fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
         .then(function (x) {
           btn.disabled = false;
-          if (!x.ok) { ts.textContent = x.j.error || 'Something went wrong. Message @rafa_0x on Discord.'; return; }
-          tf.reset(); ts.textContent = 'Thanks! Your offer is in the SIG’s Discord channel. We’ll reply there or by email.';
+          if (!x.ok) { status.textContent = x.j.error || 'Something went wrong. Message @rafa_0x on Discord.'; return; }
+          form.reset(); status.textContent = cfg.thanks;
         })
-        .catch(function () { btn.disabled = false; ts.textContent = 'Could not send. Message @rafa_0x on Discord.'; });
+        .catch(function () { btn.disabled = false; status.textContent = 'Could not send. Message @rafa_0x on Discord.'; });
     });
-    if (/[?&]talk=ok/.test(location.search)) { topen(); ts.textContent = 'Thanks! Your offer is in the SIG’s Discord channel.'; tf.hidden = true; }
+    if (new RegExp('[?&]' + cfg.id + '=ok').test(location.search)) { open(); status.textContent = cfg.thanks; }
   }
+  inquiry({
+    trigger: 'data-talk', id: 'talk', route: '/talk', title: 'Offer a talk', submit: 'Send offer',
+    intro: 'Guests speak first, at the start of a session. What you send here, including how to reach you, is posted to the SIG’s Discord channel so we can reply. Sessions are recorded.',
+    fields: field('t-name', 'Name', '<input id="t-name" name="name" type="text" autocomplete="name" required maxlength="100">') +
+      field('t-contact', 'Discord handle or email', '<input id="t-contact" name="contact" type="text" required maxlength="150" autocapitalize="off" spellcheck="false">') +
+      field('t-title', 'Talk title', '<input id="t-title" name="title" type="text" required maxlength="200">') +
+      field('t-theme', 'Closest theme', '<select id="t-theme" name="theme"><option>Agents</option><option>Nature</option><option>Emissions</option><option>Incidents</option><option>Hardness</option><option>Liveness</option><option selected>Not sure</option></select>') +
+      field('t-about', 'A few lines about it', '<textarea id="t-about" name="about" rows="3" maxlength="1200"></textarea>', true) +
+      field('t-link', 'Link to your work', '<input id="t-link" name="link" type="text" inputmode="url" placeholder="paper, site or repo" maxlength="300">', true) +
+      field('t-when', 'Preferred month', '<input id="t-when" name="when" type="text" placeholder="e.g. March 2027" maxlength="80">', true),
+    thanks: 'Thanks! Your offer is in the SIG’s Discord channel. We’ll reply there or by email.'
+  });
+  inquiry({
+    trigger: 'data-advisory', id: 'advisory', route: '/advisory', title: 'Request advisory services', submit: 'Send request',
+    intro: 'Tell us what you’re working on and where you’d like help. Your request, including how to reach you, is posted to the SIG’s Discord channel so the facilitators can reply.',
+    fields: field('a-name', 'Name', '<input id="a-name" name="name" type="text" autocomplete="name" required maxlength="100">') +
+      field('a-contact', 'Email or Discord handle', '<input id="a-contact" name="contact" type="text" autocomplete="email" required maxlength="150" autocapitalize="off" spellcheck="false">') +
+      field('a-org', 'Organization', '<input id="a-org" name="org" type="text" autocomplete="organization" maxlength="150">', true) +
+      field('a-need', 'What would you like help with?', '<textarea id="a-need" name="need" rows="4" required maxlength="1500" placeholder="For example: where agents should sit in a process, which protocols to harden, or how to log what they do"></textarea>') +
+      field('a-when', 'Timing', '<input id="a-when" name="when" type="text" placeholder="e.g. this quarter" maxlength="80">', true),
+    thanks: 'Thanks! Your request is in the SIG’s Discord channel. We’ll get back to you.'
+  });
 
   /* Register dialog, in two steps: email first (enough to get session emails), then optional
      details for people who plan to come regularly. The worker merges the second submission into
