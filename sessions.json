@@ -32,8 +32,12 @@
   "url": "https://modelcontextprotocol.io/specification/latest",
   "cite": "modelcontextprotocol.io, 2024–",
   "quote": "subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.",
-  "feature": "Case pitches: one paragraph each",
-  "feature_short": "Case pitches"
+  "feature": "Guest: Will Binns (Mru: a fault-tolerant operating system for thousand-year autonomous operation)",
+  "feature_short": "Guest: Will Binns",
+  "links": {
+   "Will Binns": "https://wbnns.com/",
+   "Mru": "https://zenodo.org/records/20579438"
+  }
  },
  {
   "date": "2026-12-14",
@@ -44,8 +48,8 @@
   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
   "cite": "Bainbridge, 1983",
   "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Case pitches: one paragraph each",
+  "feature_short": "Case pitches"
  },
  {
   "date": "2027-01-11",
@@ -68,8 +72,8 @@
   "url": "https://doi.org/10.1038/16483",
   "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
   "quote": "",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-02-08",
@@ -80,8 +84,8 @@
   "url": "https://doi.org/10.1126/science.1069981",
   "cite": "Csete & Doyle, Science, 2002",
   "quote": "",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Open guest slot: offer a talk",
+  "feature_short": "Open guest slot"
  },
  {
   "date": "2027-02-22",
@@ -92,8 +96,8 @@
   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
   "cite": "Robertson, 2021",
   "quote": "The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-03-08",
@@ -116,8 +120,8 @@
   "url": "https://docs.soliditylang.org/en/latest/contracts.html",
   "cite": "Solidity documentation",
   "quote": "Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Open guest slot: offer a talk",
+  "feature_short": "Open guest slot"
  },
  {
   "date": "2027-04-05",
@@ -128,8 +132,8 @@
   "url": "https://asrs.arc.nasa.gov/overview/summary.html",
   "cite": "NASA Ames for the FAA; established April 1976",
   "quote": "The ASRS collects, analyzes, and responds to voluntarily submitted aviation safety incident reports in order to lessen the likelihood of aviation accidents.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-04-19",
@@ -140,8 +144,8 @@
   "url": "https://www.sec.gov/files/form8-k.pdf",
   "cite": "U.S. Securities and Exchange Commission",
   "quote": "A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Open guest slot: offer a talk",
+  "feature_short": "Open guest slot"
  },
  {
   "date": "2027-05-03",
@@ -152,8 +156,8 @@
   "url": "http://www.pddoc.com/tmi2/kemeny/attitudes_and_practices.htm",
   "cite": "October 1979, \"Attitudes and Practices\"",
   "quote": "it became clear that the fundamental problems are people-related problems and not equipment problems.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Case study presentation: member work",
+  "feature_short": "Case study presentation"
  },
  {
   "date": "2027-05-17",
@@ -176,8 +180,8 @@
   "url": "https://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf",
   "cite": "BEA, 2012",
   "quote": "",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-06-14",
@@ -188,8 +192,8 @@
   "url": "https://ntrs.nasa.gov/citations/20030093634",
   "cite": "Columbia Accident Investigation Board, 2003",
   "quote": "",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Case study presentation: member work",
+  "feature_short": "Case study presentation"
  },
  {
   "date": "2027-06-28",
@@ -200,8 +204,8 @@
   "url": "https://sre.google/sre-book/postmortem-culture/",
   "cite": "Google SRE book, ch. 15",
   "quote": "it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior.",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Open guest slot: offer a talk",
+  "feature_short": "Open guest slot"
  },
  {
   "date": "2027-07-12",
@@ -212,8 +216,8 @@
   "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
   "cite": "Saltzer, Reed & Clark, ACM TOCS 2(4), 1984",
   "quote": "The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the end points of the communication system.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Case study presentation: member work",
+  "feature_short": "Case study presentation"
  },
  {
   "date": "2027-07-26",
@@ -224,8 +228,8 @@
   "url": "https://aws.amazon.com/message/41926/",
   "cite": "Amazon Web Services, 2017",
   "quote": "",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-08-09",
@@ -236,8 +240,8 @@
   "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
   "cite": "CrowdStrike, 2024",
   "quote": "",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Case study presentation: member work",
+  "feature_short": "Case study presentation"
  },
  {
   "date": "2027-08-23",
@@ -248,8 +252,8 @@
   "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
   "cite": "U.S. Securities and Exchange Commission, 2013",
   "quote": "",
-  "feature": "Show-and-tell: AI-native tooling",
-  "feature_short": "Show-and-tell"
+  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Show-and-tell: hardness tech"
  },
  {
   "date": "2027-09-06",
@@ -272,8 +276,8 @@
   "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
   "cite": "Google Cloud, 16 Sep 2025",
   "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions.",
-  "feature": "Case study progress",
-  "feature_short": "Case study progress"
+  "feature": "Case study presentation: member work",
+  "feature_short": "Case study presentation"
  },
  {
   "date": "2027-10-04",

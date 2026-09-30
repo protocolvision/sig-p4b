@@ -35,6 +35,7 @@ SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_
 def short_feature(f):
     m = re.match(r"Guest: (.*?) \(", f)
     if m: return "Guest: " + m.group(1)
+    if f.startswith("Show-and-tell: hardness"): return "Show-and-tell: hardness tech"
     if f.startswith("Show-and-tell"): return "Show-and-tell"
     if f.startswith("Cognitive Ergonomics"): return "Cognitive Ergonomics project"
     return f.split(":")[0]
@@ -51,8 +52,13 @@ for i, t in enumerate(T["themes"], 1):
     n = sum(1 for r in t["readings"] if not r.get("companion"))
     sessions = S[k:k + n]
     k += n
-    guests = [m.group(1) for m in (re.match(r"Guest: (.*?) \(", s["feature"]) for s in sessions) if m]
-    meta = f"{n} sessions" + (f" · Guest: {e(guests[0])}" if guests else "")
+    guests = []
+    for s in sessions:
+        m = re.match(r"Guest: (.*?) \(", s["feature"])
+        if m:
+            url = s.get("links", {}).get(m.group(1))
+            guests.append(f'<a class="quiet" href="{ea(url)}">{e(m.group(1))}</a>' if url else e(m.group(1)))
+    meta = f"{n} sessions" + (f" · Guest{'s' if len(guests) > 1 else ''}: {', '.join(guests)}" if guests else "")
     readings = "".join(f'<li><a href="{ea(r["url"])}">{e(r["title"])}</a> <span class="muted">{e(r["cite"])}'
                        + (" · read alongside the previous reading" if r.get("companion") else "") + "</span></li>"
                        for r in t["readings"])
@@ -85,7 +91,8 @@ p.write_text(replace_between(p.read_text(), "jsonld",
 public = [{"date": s["date"], "start_utc": f"{s['date']}T15:30:00Z", "end_utc": f"{s['date']}T16:30:00Z",
            "theme": s["theme"], "title": s["title"], "url": s["url"], "cite": s["cite"], "quote": s["quote"],
            **({"also_read": {k: s["also_read"][k] for k in ("title", "url", "cite")}} if s.get("also_read") else {}),
-           "feature": s["feature"], "feature_short": short_feature(s["feature"])} for s in S]
+           "feature": s["feature"], "feature_short": short_feature(s["feature"]),
+           **({"links": s["links"]} if s.get("links") else {})} for s in S]
 (ROOT / "sessions.json").write_text(json.dumps(public, ensure_ascii=False, indent=1) + "\n")
 
 # --- homepage (v1 layouts only) ---
@@ -120,7 +127,7 @@ for s in S:
     desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
             + (f"\u201c{s['quote']}\u201d\n" if s["quote"] else "")
             + (f"\nAlongside: {s['also_read']['title']} ({s['also_read']['cite']})\n{s['also_read']['url']}\n" if s.get("also_read") else "")
-            + f"\nFeature: {s['feature']}\n\nJoin on the Protocol Institute Discord: {DISCORD}\n"
+            + f"\nFeature: {s['feature']}\n" + "".join(f"{k}: {v}\n" for k, v in s.get("links", {}).items()) + f"\nJoin on the Protocol Institute Discord: {DISCORD}\n"
             f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
           f"DTSTART:{d}T153000Z", f"DTEND:{d}T163000Z",
