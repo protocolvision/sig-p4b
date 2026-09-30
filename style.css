@@ -258,3 +258,11 @@ ol.plan .fig-theme { margin: .2rem 0 .7rem; }
 .register select, .register textarea { display: block; width: 100%; padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); font: 1rem Lora, Georgia, serif; color: var(--fg); }
 .register select { min-height: 44px; }
 .register textarea { resize: vertical; }
+
+/* theme drop-down: one line per session, with its date, reading and what else happens */
+ol.plan ol.sessions { list-style: none; padding: 0; margin: .5rem 0 .3rem; }
+ol.plan ol.sessions > li { display: grid; grid-template-columns: 6.2rem 1fr; gap: .1rem 1rem; margin: 0; padding: .6rem 0; border-top: 1px solid var(--rule); }
+ol.plan ol.sessions time { grid-row: span 2; color: var(--muted); font-size: .92rem; }
+ol.plan ol.sessions .ft { font-size: .92rem; color: var(--muted); }
+ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
+@media (max-width: 34rem) { ol.plan ol.sessions > li { grid-template-columns: 1fr; } ol.plan ol.sessions time { grid-row: auto; } }

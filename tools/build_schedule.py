@@ -35,10 +35,27 @@ SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_
 def short_feature(f):
     m = re.match(r"Guest: (.*?) \(", f)
     if m: return "Guest: " + m.group(1)
-    if f.startswith("Show-and-tell: hardness"): return "Show-and-tell: hardness tech"
+    if f.startswith("Tooling demo"): return "Tooling demo"
     if f.startswith("Show-and-tell"): return "Show-and-tell"
     if f.startswith("Cognitive Ergonomics"): return "Cognitive Ergonomics project"
     return f.split(":")[0]
+
+def feature_html(s):
+    """The session's other item, labelled by kind: SIG guest, guest speaker, tooling demo, case study, open slot."""
+    f, links = s["feature"], s.get("links", {})
+    link = lambda name: f'<a class="quiet" href="{ea(links[name])}">{e(name)}</a>' if name in links else e(name)
+    m = re.match(r"Guest: (.*?) \((.*)\)$", f)
+    if m:
+        who, what = m.group(1), m.group(2)
+        kind = "SIG guest" if re.search(r"\b(SIG|Group)$", who) else "Guest speaker"
+        what = re.sub(r"^(\w+)", lambda x: link(x.group(1)) if x.group(1) in links else e(x.group(1)), what, count=1) if links else e(what)
+        return f'<b>{kind}</b> {link(who)}: {what}'
+    if f.startswith("Cognitive Ergonomics"):
+        return '<b>Guest speaker</b> Timber Stinson-Schroff: Cognitive Ergonomics project update'
+    if f.startswith("Open guest slot"):
+        return '<b>Open guest slot</b> <a class="quiet" href="../research/#speak">offer a talk</a>'
+    kind, _, rest = f.partition(": ")
+    return f'<b>{e(kind)}</b> {e(rest)}' if rest else f'<b>{e(kind)}</b>'
 
 def replace_between(text, name, body):
     pat = re.compile(rf"(<!-- {name}:start -->).*?(<!-- {name}:end -->)", re.S)
@@ -59,12 +76,16 @@ for i, t in enumerate(T["themes"], 1):
             url = s.get("links", {}).get(m.group(1))
             guests.append(f'<a class="quiet" href="{ea(url)}">{e(m.group(1))}</a>' if url else e(m.group(1)))
     meta = f"{n} sessions" + (f" · Guest{'s' if len(guests) > 1 else ''}: {', '.join(guests)}" if guests else "")
-    readings = "".join(f'<li><a href="{ea(r["url"])}">{e(r["title"])}</a> <span class="muted">{e(r["cite"])}'
-                       + (" · read alongside the previous reading" if r.get("companion") else "") + "</span></li>"
-                       for r in t["readings"])
+    rows = []
+    for s in sessions:
+        also = s.get("also_read")
+        rows.append(f'<li><time datetime="{s["date"]}">{int(s["date"][8:])} {dt.date.fromisoformat(s["date"]).strftime("%b %Y")}</time>'
+                    f'<span class="rd"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>'
+                    + (f'<br><span class="muted">Alongside: <a href="{ea(also["url"])}">{e(also["title"])}</a>, {e(also["cite"])}</span>' if also else "")
+                    + f'</span><span class="ft">{feature_html(s)}</span></li>')
     out.append(f'<li id="theme-{t["n"].lower()}"><img class="fig-theme" src="../assets/fig/theme-{i}.svg" alt="" width="640" height="120" loading="lazy"><h3><span class="n">{e(t["n"])}.</span>{e(t["name"])}</h3>'
                f'<p>{e(t["blurb"])}</p><p class="meta">{meta}</p>'
-               f'<details><summary>Readings</summary><ol>{readings}</ol></details></li>')
+               f'<details><summary>Readings and sessions</summary><ol class="sessions">{"".join(rows)}</ol></details></li>')
 out.append("</ol>")
 out.append('<p><a href="map/">Explore every reading on the map</a></p>')
 p = ROOT / "src/sessions.html"

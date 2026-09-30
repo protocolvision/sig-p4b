@@ -32,7 +32,7 @@
   "url": "https://modelcontextprotocol.io/specification/latest",
   "cite": "modelcontextprotocol.io, 2024–",
   "quote": "subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.",
-  "feature": "Guest: Will Binns (Mru: a fault-tolerant operating system for thousand-year autonomous operation)",
+  "feature": "Guest: Will Binns (Mru, a fault-tolerant operating system for thousand-year autonomous operation)",
   "feature_short": "Guest: Will Binns",
   "links": {
    "Will Binns": "https://wbnns.com/",
@@ -72,8 +72,8 @@
   "url": "https://doi.org/10.1038/16483",
   "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
   "quote": "",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-02-08",
@@ -96,8 +96,8 @@
   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
   "cite": "Robertson, 2021",
   "quote": "The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-03-08",
@@ -132,8 +132,8 @@
   "url": "https://asrs.arc.nasa.gov/overview/summary.html",
   "cite": "NASA Ames for the FAA; established April 1976",
   "quote": "The ASRS collects, analyzes, and responds to voluntarily submitted aviation safety incident reports in order to lessen the likelihood of aviation accidents.",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-04-19",
@@ -156,8 +156,8 @@
   "url": "http://www.pddoc.com/tmi2/kemeny/attitudes_and_practices.htm",
   "cite": "October 1979, \"Attitudes and Practices\"",
   "quote": "it became clear that the fundamental problems are people-related problems and not equipment problems.",
-  "feature": "Case study presentation: member work",
-  "feature_short": "Case study presentation"
+  "feature": "Case study catch-up: member work",
+  "feature_short": "Case study catch-up"
  },
  {
   "date": "2027-05-17",
@@ -180,8 +180,8 @@
   "url": "https://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf",
   "cite": "BEA, 2012",
   "quote": "",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-06-14",
@@ -192,8 +192,8 @@
   "url": "https://ntrs.nasa.gov/citations/20030093634",
   "cite": "Columbia Accident Investigation Board, 2003",
   "quote": "",
-  "feature": "Case study presentation: member work",
-  "feature_short": "Case study presentation"
+  "feature": "Case study catch-up: member work",
+  "feature_short": "Case study catch-up"
  },
  {
   "date": "2027-06-28",
@@ -216,8 +216,8 @@
   "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
   "cite": "Saltzer, Reed & Clark, ACM TOCS 2(4), 1984",
   "quote": "The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the end points of the communication system.",
-  "feature": "Case study presentation: member work",
-  "feature_short": "Case study presentation"
+  "feature": "Case study catch-up: member work",
+  "feature_short": "Case study catch-up"
  },
  {
   "date": "2027-07-26",
@@ -228,8 +228,8 @@
   "url": "https://aws.amazon.com/message/41926/",
   "cite": "Amazon Web Services, 2017",
   "quote": "",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-08-09",
@@ -240,8 +240,8 @@
   "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
   "cite": "CrowdStrike, 2024",
   "quote": "",
-  "feature": "Case study presentation: member work",
-  "feature_short": "Case study presentation"
+  "feature": "Case study catch-up: member work",
+  "feature_short": "Case study catch-up"
  },
  {
   "date": "2027-08-23",
@@ -252,8 +252,8 @@
   "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
   "cite": "U.S. Securities and Exchange Commission, 2013",
   "quote": "",
-  "feature": "Show-and-tell: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Show-and-tell: hardness tech"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-09-06",
@@ -276,8 +276,8 @@
   "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
   "cite": "Google Cloud, 16 Sep 2025",
   "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions.",
-  "feature": "Case study presentation: member work",
-  "feature_short": "Case study presentation"
+  "feature": "Case study catch-up: member work",
+  "feature_short": "Case study catch-up"
  },
  {
   "date": "2027-10-04",

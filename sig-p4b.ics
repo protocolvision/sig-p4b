@@ -54,12 +54,12 @@ DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Model Conte
  delcontextprotocol.io/specification/latest\n“subscriptions/listen opens
   a long-lived notification stream from the server to the client. Unlike o
  ne-off requests\, the stream stays open and delivers notifications until 
- the client cancels it.”\n\nFeature: Guest: Will Binns (Mru: a fault-tol
- erant operating system for thousand-year autonomous operation)\nWill Binn
- s: https://wbnns.com/\nMru: https://zenodo.org/records/20579438\n\nJoin o
- n the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus:
-  https://npc.here.now/protocolvision/sessions/\nReading map: https://npc.
- here.now/protocolvision/sessions/map/\nSessions are recorded.
+ the client cancels it.”\n\nFeature: Guest: Will Binns (Mru\, a fault-to
+ lerant operating system for thousand-year autonomous operation)\nWill Bin
+ ns: https://wbnns.com/\nMru: https://zenodo.org/records/20579438\n\nJoin 
+ on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus
+ : https://npc.here.now/protocolvision/sessions/\nReading map: https://npc
+ .here.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -107,11 +107,11 @@ DTEND:20270125T163000Z
 SUMMARY:SIG P4B · Robustness in bacterial chemotaxis
 DESCRIPTION:Theme II. Natural coordination\n\nReading: Robustness in bacte
  rial chemotaxis (Alon\, Surette\, Barkai & Leibler\, Nature\, 1999)\nhttp
- s://doi.org/10.1038/16483\n\nFeature: Show-and-tell: hardness tech and sw
- arm orchestration infrastructure\n\nJoin on the Protocol Institute Discor
- d: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolv
- ision/sessions/\nReading map: https://npc.here.now/protocolvision/session
- s/map/\nSessions are recorded.
+ s://doi.org/10.1038/16483\n\nFeature: Tooling demo: hardness tech and swa
+ rm orchestration infrastructure\n\nJoin on the Protocol Institute Discord
+ : https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvi
+ sion/sessions/\nReading map: https://npc.here.now/protocolvision/sessions
+ /map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -141,11 +141,11 @@ DESCRIPTION:Theme III. Emissions\n\nReading: The Filing Cabinet (Robertson
  entury-information-infrastructure/\n“The filing cabinet does not just s
  tore paper\; it stores information\; and because the modern world depends
   upon and is indeed defined by information\, the filing cabinet must be r
- ecognized as critical to the expansion of modernity.”\n\nFeature: Show-
- and-tell: hardness tech and swarm orchestration infrastructure\n\nJoin on
-  the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: 
- https://npc.here.now/protocolvision/sessions/\nReading map: https://npc.h
- ere.now/protocolvision/sessions/map/\nSessions are recorded.
+ ecognized as critical to the expansion of modernity.”\n\nFeature: Tooli
+ ng demo: hardness tech and swarm orchestration infrastructure\n\nJoin on 
+ the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: h
+ ttps://npc.here.now/protocolvision/sessions/\nReading map: https://npc.he
+ re.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -200,10 +200,10 @@ DESCRIPTION:Theme III. Emissions\n\nReading: Aviation Safety Reporting Sys
  tps://asrs.arc.nasa.gov/overview/summary.html\n“The ASRS collects\, ana
  lyzes\, and responds to voluntarily submitted aviation safety incident re
  ports in order to lessen the likelihood of aviation accidents.”\n\nFeat
- ure: Show-and-tell: hardness tech and swarm orchestration infrastructure\
- n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\n
- Syllabus: https://npc.here.now/protocolvision/sessions/\nReading map: htt
- ps://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
+ ure: Tooling demo: hardness tech and swarm orchestration infrastructure\n
+ \nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nS
+ yllabus: https://npc.here.now/protocolvision/sessions/\nReading map: http
+ s://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -236,10 +236,10 @@ DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Report of t
   1979\, "Attitudes and Practices")\nhttp://www.pddoc.com/tmi2/kemeny/atti
  tudes_and_practices.htm\n“it became clear that the fundamental problems
   are people-related problems and not equipment problems.”\n\nFeature: C
- ase study presentation: member work\n\nJoin on the Protocol Institute Dis
- cord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protoc
- olvision/sessions/\nReading map: https://npc.here.now/protocolvision/sess
- ions/map/\nSessions are recorded.
+ ase study catch-up: member work\n\nJoin on the Protocol Institute Discord
+ : https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolvi
+ sion/sessions/\nReading map: https://npc.here.now/protocolvision/sessions
+ /map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -271,11 +271,11 @@ SUMMARY:SIG P4B · Final Report on the accident on 1st June 2009 to the Ai
 DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Final Repor
  t on the accident on 1st June 2009 to the Airbus A330-203\, flight AF 447
   (BEA\, 2012)\nhttps://bea.aero/fileadmin/documents/docspa/2009/f-cp09060
- 1.en/pdf/f-cp090601.en.pdf\n\nFeature: Show-and-tell: hardness tech and s
- warm orchestration infrastructure\n\nJoin on the Protocol Institute Disco
- rd: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocol
- vision/sessions/\nReading map: https://npc.here.now/protocolvision/sessio
- ns/map/\nSessions are recorded.
+ 1.en/pdf/f-cp090601.en.pdf\n\nFeature: Tooling demo: hardness tech and sw
+ arm orchestration infrastructure\n\nJoin on the Protocol Institute Discor
+ d: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/protocolv
+ ision/sessions/\nReading map: https://npc.here.now/protocolvision/session
+ s/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -289,10 +289,10 @@ SUMMARY:SIG P4B · Columbia Accident Investigation Board Report\, Volume O
 DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Columbia Ac
  cident Investigation Board Report\, Volume One (Columbia Accident Investi
  gation Board\, 2003)\nhttps://ntrs.nasa.gov/citations/20030093634\n\nFeat
- ure: Case study presentation: member work\n\nJoin on the Protocol Institu
- te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/
- protocolvision/sessions/\nReading map: https://npc.here.now/protocolvisio
- n/sessions/map/\nSessions are recorded.
+ ure: Case study catch-up: member work\n\nJoin on the Protocol Institute D
+ iscord: https://discord.gg/zNJdK7caj\nSyllabus: https://npc.here.now/prot
+ ocolvision/sessions/\nReading map: https://npc.here.now/protocolvision/se
+ ssions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -325,10 +325,10 @@ DESCRIPTION:Theme V. Engineering hardness\n\nReading: End-to-End Arguments
  //web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The func
  tion in question can completely and correctly be implemented only with th
  e knowledge and help of the application standing at the end points of the
-  communication system.”\n\nFeature: Case study presentation: member wor
- k\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj
- \nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading map: h
- ttps://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
+  communication system.”\n\nFeature: Case study catch-up: member work\n\
+ nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
+ llabus: https://npc.here.now/protocolvision/sessions/\nReading map: https
+ ://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -342,10 +342,10 @@ SUMMARY:SIG P4B · Summary of the Amazon S3 Service Disruption in the Nort
 DESCRIPTION:Theme V. Engineering hardness\n\nReading: Summary of the Amazo
  n S3 Service Disruption in the Northern Virginia (US-EAST-1) Region (Amaz
  on Web Services\, 2017)\nhttps://aws.amazon.com/message/41926/\n\nFeature
- : Show-and-tell: hardness tech and swarm orchestration infrastructure\n\n
- Join on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyl
- labus: https://npc.here.now/protocolvision/sessions/\nReading map: https:
- //npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
+ : Tooling demo: hardness tech and swarm orchestration infrastructure\n\nJ
+ oin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyll
+ abus: https://npc.here.now/protocolvision/sessions/\nReading map: https:/
+ /npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -359,11 +359,10 @@ SUMMARY:SIG P4B · External Technical Root Cause Analysis: Channel File 29
 DESCRIPTION:Theme V. Engineering hardness\n\nReading: External Technical R
  oot Cause Analysis: Channel File 291 (CrowdStrike\, 2024)\nhttps://www.cr
  owdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-C
- ause-Analysis-08.06.2024.pdf\n\nFeature: Case study presentation: member 
- work\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7
- caj\nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading map
- : https://npc.here.now/protocolvision/sessions/map/\nSessions are recorde
- d.
+ ause-Analysis-08.06.2024.pdf\n\nFeature: Case study catch-up: member work
+ \n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\
+ nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading map: ht
+ tps://npc.here.now/protocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -377,11 +376,11 @@ SUMMARY:SIG P4B · In the Matter of Knight Capital Americas LLC (SEC order
 DESCRIPTION:Theme V. Engineering hardness\n\nReading: In the Matter of Kni
  ght Capital Americas LLC (SEC order) (U.S. Securities and Exchange Commis
  sion\, 2013)\nhttps://www.sec.gov/files/litigation/admin/2013/34-70694.pd
- f\n\nFeature: Show-and-tell: hardness tech and swarm orchestration infras
- tructure\n\nJoin on the Protocol Institute Discord: https://discord.gg/zN
- JdK7caj\nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading
-  map: https://npc.here.now/protocolvision/sessions/map/\nSessions are rec
- orded.
+ f\n\nFeature: Tooling demo: hardness tech and swarm orchestration infrast
+ ructure\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJ
+ dK7caj\nSyllabus: https://npc.here.now/protocolvision/sessions/\nReading 
+ map: https://npc.here.now/protocolvision/sessions/map/\nSessions are reco
+ rded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
@@ -415,10 +414,10 @@ DESCRIPTION:Theme V. Engineering hardness\n\nReading: Agent Payments Proto
  ducts/ai-machine-learning/announcing-agents-to-payments-ap2-protocol\n“
  AP2 builds trust by using Mandates—tamper-proof\, cryptographically-sig
  ned digital contracts that serve as verifiable proof of a user's instruct
- ions.”\n\nFeature: Case study presentation: member work\n\nJoin on the 
- Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https
- ://npc.here.now/protocolvision/sessions/\nReading map: https://npc.here.n
- ow/protocolvision/sessions/map/\nSessions are recorded.
+ ions.”\n\nFeature: Case study catch-up: member work\n\nJoin on the Prot
+ ocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://n
+ pc.here.now/protocolvision/sessions/\nReading map: https://npc.here.now/p
+ rotocolvision/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://npc.here.now/protocolvision/
 END:VEVENT
