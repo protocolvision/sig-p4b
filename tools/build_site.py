@@ -119,7 +119,7 @@ def write_llms():
 - [About]({SITE}about/): protocol vision (the capability) and Business Protocol Management (the practice), origins, facilitators, publications
 - [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
-- [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), research questions, case studies, how to sponsor or partner
+- [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
 - [Case studies]({SITE}research/cases/): water rate data, construction bids from PDFs, the PI brand kit, a sample template
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 
