@@ -26,6 +26,9 @@ for t in T["themes"]:
 assert len(S) == len(SLOTS), f"{len(S)} sessions but {len(SLOTS)} dates in slots.json"
 for s, slot in zip(S, SLOTS):
     s.update(slot)
+    # every session starts 15:30 UTC for an hour unless its slot says otherwise ("start"/"end", HH:MM UTC)
+    s["start_utc"] = f'{s["date"]}T{slot.get("start", "15:30")}:00Z'
+    s["end_utc"] = f'{s["date"]}T{slot.get("end", "16:30")}:00Z'
 e = lambda s: html.escape(s, quote=False)
 ea = lambda s: html.escape(s, quote=True)
 label = lambda d: f"{int(d[8:])} {dt.date.fromisoformat(d).strftime('%B %Y')}"
@@ -106,9 +109,22 @@ else:
 p = ROOT / "src/research.html"
 p.write_text(replace_between(p.read_text(), "openslots", body))
 
+# --- next-session box: the text shown before the script runs (the script then picks the next one live) ---
+now = dt.datetime.now(dt.timezone.utc).isoformat()
+nxt = next((s for s in S if s["end_utc"] > now[:19] + "Z"), None)
+for page, rel in (("src/index.html", ""), ("src/sessions.html", "../")):
+    if nxt:
+        day = dt.date.fromisoformat(nxt["date"])
+        body = (f'<p><span class="kind">Next session</span> <span class="when">{day.strftime("%A")} {day.day} {day.strftime("%B")} · {nxt["start_utc"][11:16]} UTC</span></p>\n'
+                f'<p class="what"><a href="{ea(nxt["url"])}">{e(nxt["title"])}</a> <span class="muted small">{e(nxt["cite"])} · {e(short_feature(nxt["feature"]))}</span></p>')
+    else:
+        body = '<p><span class="kind">Next session</span> <span class="when">The year is complete.</span></p>'
+    pth = ROOT / page
+    pth.write_text(replace_between(pth.read_text(), "next", body))
+
 # --- structured data (schema.org) on the sessions page ---
 events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
-           "startDate": f"{s['date']}T15:30:00Z", "endDate": f"{s['date']}T16:30:00Z",
+           "startDate": s["start_utc"], "endDate": s["end_utc"],
            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
            "eventStatus": "https://schema.org/EventScheduled",
            "location": {"@type": "VirtualLocation", "url": DISCORD},
@@ -124,7 +140,7 @@ p.write_text(replace_between(p.read_text(), "jsonld",
     '<script type="application/ld+json">\n' + json.dumps(series, ensure_ascii=False, indent=1) + "\n</script>"))
 
 # --- public session data ---
-public = [{"date": s["date"], "start_utc": f"{s['date']}T15:30:00Z", "end_utc": f"{s['date']}T16:30:00Z",
+public = [{"date": s["date"], "start_utc": s["start_utc"], "end_utc": s["end_utc"],
            "theme": s["theme"], "title": s["title"], "url": s["url"], "cite": s["cite"], "quote": s["quote"],
            **({"also_read": {k: s["also_read"][k] for k in ("title", "url", "cite")}} if s.get("also_read") else {}),
            "feature": s["feature"], "feature_short": short_feature(s["feature"]),
@@ -166,7 +182,7 @@ for s in S:
             + f"\nFeature: {s['feature']}\n" + "".join(f"{k}: {v}\n" for k, v in s.get("links", {}).items()) + f"\nJoin on the Protocol Institute Discord: {DISCORD}\n"
             f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
-          f"DTSTART:{d}T153000Z", f"DTEND:{d}T163000Z",
+          "DTSTART:" + s["start_utc"].replace("-", "").replace(":", ""), "DTEND:" + s["end_utc"].replace("-", "").replace(":", ""),
           fold("SUMMARY:" + esc(f"SIG P4B · {s['title']}")), fold("DESCRIPTION:" + esc(desc)),
           fold("LOCATION:" + esc("Protocol Institute Discord · " + DISCORD)), f"URL:{SITE}", "END:VEVENT"]
 L.append("END:VCALENDAR")

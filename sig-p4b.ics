@@ -9,7 +9,7 @@ BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
 DTSTAMP:20260930T074410Z
 DTSTART:20261102T153000Z
-DTEND:20261102T163000Z
+DTEND:20261102T173000Z
 SUMMARY:SIG P4B · The Hugging Face incident and the road ahead
 DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: The Hugging
   Face incident and the road ahead (OpenAI\, 2026)\nhttps://openai.com/ind

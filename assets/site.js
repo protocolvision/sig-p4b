@@ -39,15 +39,15 @@
   if (cards.length && window.fetch) {
     fetch(ROOT + 'sessions.json').then(function (r) { return r.json(); }).then(function (S) {
       var now = Date.now(), n = null;
-      for (var i = 0; i < S.length; i++) { if (Date.parse(S[i].date + 'T16:30:00Z') > now) { n = S[i]; break; } }
+      for (var i = 0; i < S.length; i++) { if (Date.parse(S[i].end_utc) > now) { n = S[i]; break; } }
       cards.forEach(function (box) {
         var when = box.querySelector('.when'), what = box.querySelector('.what');
         if (!n) { when.textContent = 'The year is complete.'; what.textContent = ''; return; }
-        var d = new Date(n.date + 'T15:30:00Z');
-        // one time, in the reader's own zone; the UTC time stays in the tooltip
+        // the reader's own time, with UTC beside it; both come from the schedule
+        var d = new Date(n.start_utc), utc = n.start_utc.slice(11, 16) + ' UTC';
         var day = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
         var local = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
-        when.textContent = day + ' · ' + local; when.title = '15:30 UTC';
+        when.textContent = day + ' · ' + (d.getTimezoneOffset() === 0 ? utc : local + ' · ' + utc);
         what.textContent = '';
         var a = document.createElement('a'); a.href = n.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = n.title; what.appendChild(a);
         var m = document.createElement('span'); m.className = 'muted small';
