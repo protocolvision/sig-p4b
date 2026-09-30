@@ -33,6 +33,7 @@ def external_links(doc):
     return EXTERNAL_A.sub(fix, doc)
 
 def page(meta, body):
+    body = body.replace("{{signup_worker}}", SIGNUP_WORKER)   # forms that post to the Worker without JS
     path = meta["path"]
     rel = "../" * path.count("/")
     a = lambda s: html.escape(s, quote=True)

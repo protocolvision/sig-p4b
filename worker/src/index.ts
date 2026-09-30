@@ -10,6 +10,7 @@
  *   POST /advisory     — a request for advisory services; posted to the SIG's Discord channel (nothing stored)
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
+ *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
  *   OPTIONS *          — CORS preflight
  *
  * Defenses: honeypot (_hp), 10 requests / hour / IP, length caps, origin allow-list.
@@ -310,6 +311,29 @@ async function unsubscribe(url: URL, env: Env): Promise<Response> {
   return page("You're unsubscribed from session emails.");
 }
 
+// The site's general unsubscribe page: enter an email, it's removed. The answer is the same whether or
+// not the address was on the list, so the form can't be used to check who signed up.
+async function unsubscribeForm(req: Request, env: Env): Promise<Response> {
+  const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
+  const done = (ok: boolean, error?: string) =>
+    isForm
+      ? Response.redirect(`${SITE}unsubscribe/?${ok ? "done=1" : "error=1"}`, 303)
+      : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
+  let body: Record<string, string>;
+  try {
+    body = await readBody(req);
+  } catch {
+    return done(false, "Could not read the form.");
+  }
+  if (body._hp) return done(true);
+  const email = (body.email || "").trim().toLowerCase().slice(0, 200);
+  if (!EMAIL_RE.test(email)) return done(false, "Please enter a valid email.");
+  const ip = req.headers.get("CF-Connecting-IP") || "unknown";
+  if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
+  await env.SIGNUPS.delete(`sub:${email}`);
+  return done(true);
+}
+
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     if (env.SITE) SITE = env.SITE;
@@ -321,6 +345,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/advisory") return advisory(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
+    if (req.method === "POST" && url.pathname === "/unsubscribe") return unsubscribeForm(req, env);
     return new Response("Not found", { status: 404 });
   },
 } satisfies ExportedHandler<Env>;

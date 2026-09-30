@@ -1,0 +1,11 @@
+<!-- {"title": "Unsubscribe · Protocols for Business SIG", "desc": "Stop getting Protocols for Business session emails.", "path": "unsubscribe/", "nav": "", "card": "home"} -->
+<h1>Unsubscribe</h1>
+<p class="lede">Enter the email you signed up with and we’ll stop sending you session emails.</p>
+<form class="unsub" method="post" action="{{signup_worker}}/unsubscribe" data-unsub novalidate>
+<label for="u-email">Email</label>
+<input id="u-email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="you@example.com">
+<input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p><button type="submit" class="btn">Unsubscribe</button></p>
+<p class="form-status" aria-live="polite"></p>
+</form>
+<p class="small muted">Changed your mind? You can <a href="../">sign up again</a> any time. The sessions stay open to everyone on <a href="https://discord.gg/zNJdK7caj">Discord</a>.</p>

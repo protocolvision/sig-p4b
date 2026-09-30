@@ -273,3 +273,10 @@ ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 .next.ask .what { font-weight: 600; }
 .next.ask .small { margin-top: .25rem; max-width: 58%; }
 .next.ask .fig-next { width: 46%; }
+
+/* unsubscribe page */
+.unsub { max-width: 26rem; }
+.unsub label { display: block; margin: 1rem 0 .3rem; }
+.unsub input[type=email] { display: block; width: 100%; min-height: 44px; padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); font: 1rem Lora, Georgia, serif; color: var(--fg); }
+.unsub .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.unsub .form-status { color: var(--link); }

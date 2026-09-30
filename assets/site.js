@@ -120,6 +120,25 @@
     thanks: 'Thanks! Your request is in the SIG’s Discord channel. We’ll get back to you.'
   });
 
+  /* Unsubscribe page: removes the address, and says the same thing whether or not it was on the list. */
+  var unsub = document.querySelector('form[data-unsub]');
+  if (unsub) {
+    unsub.action = BASE + '/unsubscribe';
+    var us = unsub.querySelector('.form-status'), DONE = 'Done. If that address was on the list, it’s off now, and you won’t get session emails.';
+    if (/[?&]done=1/.test(location.search)) us.textContent = DONE;
+    unsub.addEventListener('submit', function (e) {
+      if (!window.fetch) return;
+      e.preventDefault();
+      if (!unsub.reportValidity()) return;
+      var data = {}; new FormData(unsub).forEach(function (v, k) { data[k] = v; });
+      var btn = unsub.querySelector('[type=submit]'); btn.disabled = true; us.textContent = 'One moment…';
+      fetch(unsub.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (x) { btn.disabled = false; us.textContent = x.ok ? DONE : (x.j.error || 'Something went wrong. Message @rafa_0x on Discord.'); if (x.ok) unsub.reset(); })
+        .catch(function () { btn.disabled = false; us.textContent = 'Could not reach the server. Try again, or message @rafa_0x on Discord.'; });
+    });
+  }
+
   /* Register dialog, in two steps: email first (enough to get session emails), then optional
      details for people who plan to come regularly. The worker merges the second submission into
      the first, so skipping step two loses nothing. Opened by any [data-register] control or #register. */
