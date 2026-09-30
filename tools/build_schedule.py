@@ -91,6 +91,21 @@ out.append('<p><a href="map/">Explore every reading on the map</a></p>')
 p = ROOT / "src/sessions.html"
 p.write_text(replace_between(p.read_text(), "schedule", "\n".join(out)))
 
+# --- open guest slots on the Research page, so the call for speakers always matches the schedule ---
+WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]
+open_slots = [s for s in S if s["feature"].startswith("Open guest slot")]
+def dlist(ds):
+    ds = [f"{int(d[8:])} {dt.date.fromisoformat(d).strftime('%B %Y')}" for d in ds]
+    return ds[0] if len(ds) == 1 else ", ".join(ds[:-1]) + " and " + ds[-1]
+if open_slots:
+    n = len(open_slots)
+    body = (f'<p>{WORDS[n] if n < len(WORDS) else n} guest slot{"s are" if n > 1 else " is"} still open this year: '
+            f'{dlist([s["date"] for s in open_slots])}. The <a href="../sessions/#syllabus">reading plan</a> shows which theme runs when.</p>')
+else:
+    body = '<p>This year’s guest slots are full, but we keep a list for next year. The <a href="../sessions/#syllabus">reading plan</a> shows which theme runs when.</p>'
+p = ROOT / "src/research.html"
+p.write_text(replace_between(p.read_text(), "openslots", body))
+
 # --- structured data (schema.org) on the sessions page ---
 events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
            "startDate": f"{s['date']}T15:30:00Z", "endDate": f"{s['date']}T16:30:00Z",
