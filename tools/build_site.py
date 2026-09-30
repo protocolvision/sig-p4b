@@ -6,7 +6,7 @@ Each source file starts with a JSON front-matter comment:
 The body is wrapped in the shared head, header and footer and written to <path>index.html.
 Old v1 URLs get redirect stubs. Run tools/build_schedule.py first (it fills src/sessions.html).
 """
-import html, json, re
+import datetime, html, json, re, subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -14,12 +14,17 @@ CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
+try:
+    BUILD = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip() or "local"
+except OSError:
+    BUILD = "local"
+REVISED = datetime.date.today().isoformat()
 NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
              "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">')
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">')
 
 EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
 
@@ -43,6 +48,9 @@ def page(meta, body):
         for k, label, p in NAV)
     foot_nav = "".join(f'<a href="{rel}{p}">{label}</a>' for k, label, p in NAV)
     extra_head = meta.get("head", "")
+    doc_id = "P4B/" + (path.strip("/").upper().replace("/", "/") or "INDEX")
+    docmeta = (f'<div class="docmeta"><span>{doc_id}</span><span>Status: active</span>'
+               f'<span>Revised <time datetime="{REVISED}">{REVISED}</time></span><span>Build {BUILD}</span></div>')
     return external_links(f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
@@ -73,6 +81,7 @@ def page(meta, body):
 {nav}
 </nav>
 </header>
+{docmeta}
 <main>
 {body.strip()}
 </main>
