@@ -9,6 +9,7 @@ Cloudflare account.
 | Route | Purpose |
 |---|---|
 | `POST /signup` | Register or update a member (JSON from the site's dialog, or a plain form post). Email is required; name, website, GitHub, Discord, and affiliation are optional. Registering again merges: new non-empty fields update the record, empty ones keep what's there, and the original signup date, source, and role are kept. |
+| `POST /talk` | An offer to speak at a session, from the Research page's "Offer a talk" form: name, contact, title, theme, and optional notes, link and month. Posted to the SIG's Discord channel through the same webhook; nothing is stored. Same honeypot, rate limit and length caps as sign-ups; mentions never ping. |
 | `GET /export.csv` | The full list as CSV, with a signed unsubscribe link per person. Requires the `X-Export-Secret` header. |
 | `GET /unsubscribe?email=…&t=…` | One-click unsubscribe (the link from the export). |
 

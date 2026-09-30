@@ -56,6 +56,53 @@
     }).catch(function () {});
   }
 
+  /* Offer a talk: a short form that goes to the SIG's Discord channel. Opened by any [data-talk] control. */
+  var talkBtns = document.querySelectorAll('[data-talk]');
+  if (talkBtns.length) {
+    var TALK = SIGNUP.replace(/\/signup$/, '/talk');
+    var td = document.createElement('dialog');
+    td.id = 'talk'; td.className = 'register'; td.setAttribute('aria-labelledby', 'talk-title');
+    td.innerHTML =
+      '<div class="register-head"><h2 id="talk-title">Offer a talk</h2><button type="button" class="close" data-tclose aria-label="Close">×</button></div>' +
+      '<form method="post" action="' + TALK + '">' +
+        '<p class="small muted">Guests speak first, at the start of a session. What you send here, including how to reach you, is posted to the SIG’s Discord channel so we can reply.</p>' +
+        '<label for="t-name">Name</label><input id="t-name" name="name" type="text" autocomplete="name" required maxlength="100">' +
+        '<label for="t-contact">Discord handle or email</label><input id="t-contact" name="contact" type="text" required maxlength="150" autocapitalize="off" spellcheck="false">' +
+        '<label for="t-title">Talk title</label><input id="t-title" name="title" type="text" required maxlength="200">' +
+        '<label for="t-theme">Closest theme</label><select id="t-theme" name="theme"><option>Agents</option><option>Nature</option><option>Emissions</option><option>Incidents</option><option>Hardness</option><option>Liveness</option><option selected>Not sure</option></select>' +
+        '<label for="t-about">A few lines about it <span class="req">optional</span></label><textarea id="t-about" name="about" rows="3" maxlength="1200"></textarea>' +
+        '<label for="t-link">Link to your work <span class="req">optional</span></label><input id="t-link" name="link" type="text" inputmode="url" placeholder="paper, site or repo" maxlength="300">' +
+        '<label for="t-when">Preferred month <span class="req">optional</span></label><input id="t-when" name="when" type="text" placeholder="e.g. March 2027" maxlength="80">' +
+        '<input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+        '<p class="form-status" aria-live="polite"></p>' +
+        '<div class="register-actions"><button type="submit" class="btn">Send offer</button><button type="button" class="btn-quiet" data-tclose>Cancel</button></div>' +
+        '<p class="small muted">Sessions are recorded.</p>' +
+      '</form>';
+    document.body.appendChild(td);
+    var tf = td.querySelector('form'), ts = td.querySelector('.form-status');
+    var topen = function (e) { if (e) e.preventDefault(); ts.textContent = ''; tf.hidden = false; if (td.showModal) td.showModal(); else td.setAttribute('open', ''); td.querySelector('#t-name').focus(); };
+    var tclose = function () { if (td.close) td.close(); else td.removeAttribute('open'); };
+    talkBtns.forEach(function (b) { b.addEventListener('click', topen); });
+    td.querySelectorAll('[data-tclose]').forEach(function (b) { b.addEventListener('click', tclose); });
+    td.addEventListener('click', function (e) { if (e.target === td) tclose(); });
+    tf.addEventListener('submit', function (e) {
+      if (!window.fetch) return;   // no-JS fallback: the form posts and the worker redirects back
+      e.preventDefault();
+      if (!tf.reportValidity()) return;
+      var data = {}; new FormData(tf).forEach(function (v, k) { data[k] = v; });
+      var btn = tf.querySelector('[type=submit]'); btn.disabled = true; ts.textContent = 'Sending…';
+      fetch(tf.action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (x) {
+          btn.disabled = false;
+          if (!x.ok) { ts.textContent = x.j.error || 'Something went wrong. Message @rafa_0x on Discord.'; return; }
+          tf.reset(); ts.textContent = 'Thanks! Your offer is in the SIG’s Discord channel. We’ll reply there or by email.';
+        })
+        .catch(function () { btn.disabled = false; ts.textContent = 'Could not send. Message @rafa_0x on Discord.'; });
+    });
+    if (/[?&]talk=ok/.test(location.search)) { topen(); ts.textContent = 'Thanks! Your offer is in the SIG’s Discord channel.'; tf.hidden = true; }
+  }
+
   /* Register dialog, in two steps: email first (enough to get session emails), then optional
      details for people who plan to come regularly. The worker merges the second submission into
      the first, so skipping step two loses nothing. Opened by any [data-register] control or #register. */

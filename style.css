@@ -253,3 +253,8 @@ ol.plan .fig-theme { margin: .2rem 0 .7rem; }
 .rows.acts .act { display: block; width: 100%; height: auto; margin: 0; }
 .rows.acts .act-k { margin: .1rem 0 .2rem; font-size: 1rem; }
 @media (max-width: 34rem) { .rows.acts li { grid-template-columns: 7rem 1fr; gap: .25rem .9rem; } }
+
+/* talk form: reuses the register dialog; adds a select and a textarea */
+.register select, .register textarea { display: block; width: 100%; padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); font: 1rem Lora, Georgia, serif; color: var(--fg); }
+.register select { min-height: 44px; }
+.register textarea { resize: vertical; }

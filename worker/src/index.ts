@@ -6,6 +6,7 @@
  *
  * Routes:
  *   POST /signup       — JSON (fetch) or form-encoded (no-JS fallback, redirects back)
+ *   POST /talk         — an offer to speak at a session; posted to the SIG's Discord channel (nothing stored)
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   OPTIONS *          — CORS preflight
@@ -180,6 +181,52 @@ async function signup(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   return done(true);
 }
 
+// Talk offers go straight to the SIG's Discord channel so the facilitators can reply. The form tells
+// the speaker that what they send, including their contact, is posted there. Nothing is stored.
+const THEMES = ["Agents", "Nature", "Emissions", "Incidents", "Hardness", "Liveness", "Not sure"];
+async function talk(req: Request, env: Env): Promise<Response> {
+  const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
+  const done = (ok: boolean, error?: string) =>
+    isForm
+      ? Response.redirect(`${SITE}research/?talk=${ok ? "ok" : "error"}#speak`, 303)
+      : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
+  let body: Record<string, string>;
+  try {
+    body = await readBody(req);
+  } catch {
+    return done(false, "Could not read the form.");
+  }
+  if (body._hp) return done(true);
+  const name = clean(body.name, 100), contact = clean(body.contact, 150), title = clean(body.title, 200);
+  const theme = THEMES.includes(body.theme) ? body.theme : "Not sure";
+  const about = clean(String(body.about ?? "").replace(/\r?\n/g, " "), 1200), when = clean(body.when, 80);
+  let link = clean(body.link, 300);
+  if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
+  if (link && !/^https?:\/\/[^\s]+\.[^\s]+$/i.test(link)) return done(false, "Please check the link.");
+  if (!name || !contact || !title) return done(false, "Please add your name, a way to reach you, and a title.");
+  const ip = req.headers.get("CF-Connecting-IP") || "unknown";
+  if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
+  if (!env.DISCORD_WEBHOOK) return done(false, "Talk offers are not set up yet. Message @rafa_0x on Discord.");
+  const fields = [
+    { name: "From", value: name, inline: true },
+    { name: "Contact", value: contact, inline: true },
+    { name: "Theme", value: theme, inline: true },
+    ...(when ? [{ name: "Preferred timing", value: when, inline: true }] : []),
+    ...(link ? [{ name: "Link", value: link }] : []),
+  ];
+  const r = await fetch(env.DISCORD_WEBHOOK, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "SIG talk offers",
+      content: "New offer to speak at a Protocols for Business session:",
+      embeds: [{ title: title.slice(0, 250), description: about || undefined, fields, color: 0x004fcc }],
+      allowed_mentions: { parse: [] },   // nobody gets pinged, whatever the text says
+    }),
+  });
+  return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
+}
+
 function csvCell(s: string): string {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
@@ -230,6 +277,7 @@ export default {
     const url = new URL(req.url);
     if (req.method === "OPTIONS") return new Response(null, { headers: cors(req) });
     if (req.method === "POST" && url.pathname === "/signup") return signup(req, env, ctx);
+    if (req.method === "POST" && url.pathname === "/talk") return talk(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     return new Response("Not found", { status: 404 });
