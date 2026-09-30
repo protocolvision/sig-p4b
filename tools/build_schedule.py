@@ -56,7 +56,7 @@ for i, t in enumerate(T["themes"], 1):
     readings = "".join(f'<li><a href="{ea(r["url"])}">{e(r["title"])}</a> <span class="muted">{e(r["cite"])}'
                        + (" · read alongside the previous reading" if r.get("companion") else "") + "</span></li>"
                        for r in t["readings"])
-    out.append(f'<li id="theme-{t["n"].lower()}"><h3><span class="n">{e(t["n"])}.</span>{e(t["name"])}</h3>'
+    out.append(f'<li id="theme-{t["n"].lower()}"><img class="fig-theme" src="../assets/fig/theme-{i}.svg" alt="" width="640" height="120" loading="lazy"><h3><span class="n">{e(t["n"])}.</span>{e(t["name"])}</h3>'
                f'<p>{e(t["blurb"])}</p><p class="meta">{meta}</p>'
                f'<details><summary>Readings</summary><ol>{readings}</ol></details></li>')
 out.append("</ol>")
