@@ -180,6 +180,28 @@ def ledger(w, h, seed):
     return svg(w, h, "".join(out), "An append-only log: numbered lines, one of them highlighted")
 
 
+def gather(w, h, seed, n=70):
+    """People converging on one meeting: strokes streaming along curves into a single cobalt point."""
+    r = random.Random(seed)
+    tx, ty = w * .86, h * .74   # low and right: the empty corner beside the Register button
+    out = []
+    for _ in range(n):
+        side = r.random()
+        sx, sy = (r.random() * w * .5, -10) if side < .3 else (r.random() * w * .5, h + 10) if side < .6 else (-10, r.random() * h)
+        cx, cy = sx + (tx - sx) * .5 + r.gauss(0, h * .35), sy + (ty - sy) * .5 + r.gauss(0, h * .35)
+        for k in range(12):
+            t = (k + r.random() * .6) / 12
+            if t > .96: break
+            x = (1 - t) ** 2 * sx + 2 * (1 - t) * t * cx + t * t * tx; y = (1 - t) ** 2 * sy + 2 * (1 - t) * t * cy + t * t * ty
+            dx = 2 * (1 - t) * (cx - sx) + 2 * t * (tx - cx); dy = 2 * (1 - t) * (cy - sy) + 2 * t * (ty - cy)
+            a = math.atan2(dy, dx); L = 2.5 + t * 2
+            out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{INK}" stroke-width="1.2" opacity="{.2 + t * .7:.2f}"/>')
+    for k in (1, 2, 3):
+        out.append(f'<circle cx="{f(tx)}" cy="{f(ty)}" r="{6 + k * 9}" stroke="{COBALT}" stroke-width="1" opacity="{.6 - k * .15:.2f}"/>')
+    out.append(f'<rect x="{f(tx - 5)}" y="{f(ty - 5)}" width="10" height="10" fill="{COBALT}" stroke="none"/>')
+    return svg(w, h, "".join(out), "Strokes converging from all sides on a single point")
+
+
 FIGS = {
     "murmuration": (murmuration, 1200, 300, 7),
     "network": (network, 1200, 260, 11),
@@ -192,6 +214,7 @@ FIGS = {
     "theme-1": (network, 640, 120, 21), "theme-2": (murmuration, 640, 120, 22), "theme-3": (emissions, 640, 120, 23),
     "theme-4": (faults, 640, 120, 24), "theme-5": (hardcore, 640, 120, 25), "theme-6": (heartbeat, 640, 120, 26),
     "quorum": (quorum, 1200, 220, 8),
+    "gather": (gather, 480, 200, 12),
 }
 
 if __name__ == "__main__":
