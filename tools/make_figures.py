@@ -202,6 +202,54 @@ def gather(w, h, seed, n=70):
     return svg(w, h, "".join(out), "Strokes converging from all sides on a single point")
 
 
+def activities(w, h, seed):
+    """What we do, in three panels drawn in the same strokes: sessions, research, training."""
+    r = random.Random(seed)
+    pw, out = w / 3, []
+    def bird(x, y, a, op, col=INK, L=None):
+        L = L or 2.4 + r.random() * 1.6
+        out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{col}" stroke-width="1.2" opacity="{op:.2f}"/>')
+    def label(i, text):
+        out.append(f'<text x="{f(pw * i + pw / 2)}" y="{h - 8}" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="1.5" fill="{INK}">{text}</text>')
+    # 1. sessions: a flock circling one open document
+    cx, cy = pw * .5, h * .45
+    out.append(f'<rect x="{f(cx - 34)}" y="{f(cy - 44)}" width="68" height="88" stroke="{INK}" stroke-width="1.6" fill="#fff"/>')
+    for k in range(7):
+        out.append(f'<path d="M{f(cx - 24)} {f(cy - 30 + k * 11)}h{f(48 - (18 if k == 6 else r.random() * 10))}" stroke="{COBALT if k == 2 else FAINT}" stroke-width="{1.8 if k == 2 else 1.2}"/>')
+    for _ in range(520):
+        ang = r.random() * math.tau; rad = 70 + abs(r.gauss(0, 1)) * 34 + 8 * math.sin(ang * 3)
+        x, y = cx + math.cos(ang) * rad, cy + math.sin(ang) * rad * .78
+        if abs(y - cy) > h * .44: continue
+        bird(x, y, ang + math.pi / 2 + r.gauss(0, .2), .3 + .6 * math.exp(-(rad - 70) / 40))
+    label(0, "SESSIONS")
+    # 2. research: a stream flowing through a grid of data blocks, lighting what it touches
+    x0 = pw
+    blocks = [(x0 + 30 + i * 26, 34 + j * 26) for i in range(int((pw - 60) / 26)) for j in range(int((h - 80) / 26))]
+    path_y = lambda x: h * .45 + math.sin((x - x0) / pw * math.tau * 1.1 + 1) * h * .18
+    for bx, by in blocks:
+        hit = abs(by + 9 - path_y(bx + 9)) < 22
+        out.append(f'<rect x="{f(bx)}" y="{f(by)}" width="18" height="18" stroke="{COBALT if hit else FAINT}" stroke-width="{1.4 if hit else 1}"/>')
+    for _ in range(420):
+        x = x0 + 10 + r.random() * (pw - 20); y = path_y(x) + r.gauss(0, 13)
+        dy = path_y(x + 2) - path_y(x - 2)
+        bird(x, y, math.atan2(dy, 4) + r.gauss(0, .15), .45 + .5 * r.random())
+    label(1, "RESEARCH")
+    # 3. training: a free flock, and a lens that makes its protocol visible
+    x0 = pw * 2; lx, ly, lr = x0 + pw * .56, h * .44, 58
+    for _ in range(700):
+        t = r.random(); x = x0 + 24 + t * (pw - 48); y = h * .45 + math.sin(t * 5 + 2) * h * .16 + r.gauss(0, 18 * (1 + math.sin(t * math.pi)))
+        heading = math.atan2(math.cos(t * 5 + 2) * h * .16 * 5 / (pw - 48), 1) + r.gauss(0, .18)
+        inside = math.hypot(x - lx, y - ly) < lr - 4
+        bird(x, y, heading, .75 if inside else .35 + .35 * r.random(), COBALT if inside else INK, 3.6 if inside else None)
+    out.append(f'<circle cx="{f(lx)}" cy="{f(ly)}" r="{lr}" stroke="{INK}" stroke-width="2" fill="none"/>')
+    out.append(f'<path d="M{f(lx + lr * .7)} {f(ly + lr * .7)}l30 30" stroke="{INK}" stroke-width="5"/>')
+    label(2, "TRAINING")
+    # hairlines between the panels
+    for i in (1, 2):
+        out.append(f'<path d="M{f(pw * i)} 16V{h - 30}" stroke="{FAINT}" stroke-width="1" stroke-dasharray="2 4"/>')
+    return svg(w, h, "".join(out), "Three panels: a flock circling one document for sessions; a stream through data blocks for research; a lens over a flock for training")
+
+
 FIGS = {
     "murmuration": (murmuration, 1200, 300, 7),
     "network": (network, 1200, 260, 11),
@@ -215,6 +263,7 @@ FIGS = {
     "theme-4": (faults, 640, 120, 24), "theme-5": (hardcore, 640, 120, 25), "theme-6": (heartbeat, 640, 120, 26),
     "quorum": (quorum, 1200, 220, 8),
     "gather": (gather, 480, 200, 12),
+    "activities": (activities, 1200, 300, 13),
 }
 
 if __name__ == "__main__":
