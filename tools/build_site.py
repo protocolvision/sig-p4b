@@ -78,7 +78,7 @@ def page(meta, body):
 </main>
 <footer>
 <p><img class="mark" src="{rel}favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
-<nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision/sig-p4b">Source</a><a href="{rel}llms.txt">llms.txt</a></nav>
+<nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision">GitHub</a><a href="https://github.com/protocolvision/sig-p4b">Site source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
 </body>

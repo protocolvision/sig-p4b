@@ -266,3 +266,10 @@ ol.plan ol.sessions time { grid-row: span 2; color: var(--muted); font-size: .92
 ol.plan ol.sessions .ft { font-size: .92rem; color: var(--muted); }
 ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 @media (max-width: 34rem) { ol.plan ol.sessions > li { grid-template-columns: 1fr; } ol.plan ol.sessions time { grid-row: auto; } }
+
+/* the advisory block on the home page: same box as the next session */
+.next.ask { margin-top: 1.5rem; }
+.next.ask .kind::after { content: none; }
+.next.ask .what { font-weight: 600; }
+.next.ask .small { margin-top: .25rem; max-width: 58%; }
+.next.ask .fig-next { width: 46%; }
