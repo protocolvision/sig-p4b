@@ -280,3 +280,12 @@ ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 .unsub input[type=email] { display: block; width: 100%; min-height: 44px; padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); font: 1rem Lora, Georgia, serif; color: var(--fg); }
 .unsub .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
 .unsub .form-status { color: var(--link); }
+
+/* Plain tables (practice guide): rules only, scroll inside their own box on phones. */
+.table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; }
+.table-wrap table { width: 100%; min-width: 32rem; border-collapse: collapse; font-size: .95rem; }
+.table-wrap th, .table-wrap td { text-align: left; vertical-align: top; padding: .55rem .75rem .55rem 0; border-top: 1px solid var(--rule); }
+.table-wrap tr:last-child th, .table-wrap tr:last-child td { border-bottom: 1px solid var(--rule); }
+.table-wrap thead th { color: var(--muted); font-weight: 400; font-size: .92rem; border-top: 0; }
+.table-wrap tbody th { font-weight: 600; }
+.table-wrap .nowrap { white-space: nowrap; }

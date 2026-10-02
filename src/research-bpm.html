@@ -1,0 +1,231 @@
+<!-- {"title": "Business Protocol Management · Protocols for Business SIG", "desc": "A practice guide to Business Protocol Management: key terms, principles, roles, the See, Design and Evolve phases with inputs, steps and outputs, a hardness map template, measures, and a worked example from California water rate data.", "path": "research/bpm/", "nav": "research", "card": "home"} -->
+<h1>Business Protocol Management</h1>
+<p class="meta"><a href="../">Research</a> · practice guide · version 4, October 2026</p>
+<p class="lede">Companies that work well with AI build a few strict rules into their systems and give people and agents wide freedom inside them. Business Protocol Management (BPM) is the practice of finding those rules, building them, and changing them as the business grows.</p>
+
+<nav class="page-nav" aria-label="On this page">
+<a href="#guide">1. This guide</a>
+<a href="#terms">2. Key terms</a>
+<a href="#case-for-change">3. Case for change</a>
+<a href="#principles">4. Principles</a>
+<a href="#roles">5. Roles</a>
+<a href="#phases">6. Phases</a>
+<a href="#measures">7. Measures</a>
+<a href="#example">8. Worked example</a>
+<a href="#approaches">9. Earlier approaches</a>
+<a href="#programme">10. The 2027 programme</a>
+<a href="#sources">11. Sources</a>
+</nav>
+
+<h2 id="guide">1. About this guide</h2>
+<div class="table-wrap" role="region" aria-label="How to use this guide" tabindex="0">
+<table>
+<tbody>
+<tr><th scope="row">Purpose</th><td>Explain what BPM is, why it matters now, and how a team applies it, step by step.</td></tr>
+<tr><th scope="row">Audience</th><td>Operations leads, managers, architects and analysts who are bringing AI agents into day-to-day work.</td></tr>
+<tr><th scope="row">Scope</th><td>One problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”. BPM is not a company-wide redesign.</td></tr>
+<tr><th scope="row">Status</th><td>Working draft. The SIG tests it during the 2027 programme and revises it from what members find.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="terms">2. Key terms</h2>
+<ul class="rows">
+<li><span class="k">Protocol</span><div class="v"><p>A recurring way work moves, a decision gets made, or data is found and trusted. Protocols run between people, software and machines: handoffs, checklists, approvals, APIs, permissions, alarms.</p></div></li>
+<li><span class="k">Hard</span><div class="v"><p>A protocol the system enforces every time, such as a payment limit or a required check before release.</p></div></li>
+<li><span class="k">Soft</span><div class="v"><p>A protocol held by norms and habits, such as how a team runs its weekly planning.</p></div></li>
+<li><span class="k">Free</span><div class="v"><p>Anything left to the people or agents doing the work.</p></div></li>
+<li><span class="k">Hard core</span><div class="v"><p>The small set of hard protocols that everything else relies on.</p></div></li>
+<li><span class="k">Hardness map</span><div class="v"><p>A table that sorts a business’s protocols into hard, soft and free, and names who may change each one.</p></div></li>
+<li><span class="k">Field log</span><div class="v"><p>One shared record that systems, people and agents write as they work, including the reason for each action.</p></div></li>
+<li><span class="k">Non-event</span><div class="v"><p>A problem that did not happen because a protocol worked: the error caught, the dispute that never started.</p></div></li>
+<li><span class="k">Agent</span><div class="v"><p>AI software that takes actions on its own, such as sending a message, changing a record or calling another system.</p></div></li>
+<li><span class="k">Protocol vision</span><div class="v"><p>The capability to see the protocols a business actually runs on. BPM depends on it, and the SIG trains it through protocol watching, workshops and simulations.</p></div></li>
+</ul>
+
+<h2 id="case-for-change">3. The case for change</h2>
+<h3>The problem</h3>
+<p>Management grew up around the span of control: one manager directing a handful to a few dozen people and approving decisions one at a time. A small team can now run hundreds of thousands of agents, working at machine speed and around the clock. No manager can supervise that many, and no approval queue keeps up.</p>
+<p>Agents also coordinate through whatever they can read and write, whether or not anyone designed it. Two 2026 reports show this:</p>
+<blockquote><p>“The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another.”</p><p class="small">OpenAI, <a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/">The Hugging Face incident and the road ahead</a></p></blockquote>
+<blockquote><p>“We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.”</p><p class="small">Anthropic, <a href="https://www.anthropic.com/research/multiagent-systems">Patterns and problems in multiagent systems</a></p></blockquote>
+
+<h3>The response</h3>
+<p>At this scale, a manager’s reach comes from the environment the agents work in, not from supervising each one. One well-built rule governs every agent that passes through it, whether there are ten or a million. Like guardrails on a mountain road, strict rules in the right places let the business move faster: a team can let an agent act without approving each step, and a partner can connect through an agreed interface instead of a long integration project.</p>
+<p>Amazon shows the pattern. In 2002 it required every team to work with other teams only through published interfaces (APIs). The interfaces became hard, and each team stayed free to build whatever it liked behind them. The rule slowed teams down at first, then made the company faster and laid the groundwork for Amazon Web Services.</p>
+
+<h3>Assumptions to test</h3>
+<p>The SIG’s research rests on three assumptions. Each could turn out partial or wrong, and the sessions and case studies test them.</p>
+<ol>
+<li><strong>Reading and writing get cheap.</strong> Processing documents, forms and rate sheets, and producing software, cost a fraction of what they did.</li>
+<li><strong>Agents act, in large numbers.</strong> Models take actions, and many copies run at once wherever work is done.</li>
+<li><strong>Information flows through models.</strong> People and agents increasingly find, read and exchange information by way of AI models and the protocols that connect them.</li>
+</ol>
+
+<h2 id="principles">4. Principles</h2>
+<ol class="qs">
+<li><strong>Keep the hard core small.</strong> <span class="small">Every hard rule costs flexibility. Make hard only what everything else relies on.</span></li>
+<li><strong>Put strict rules where teams meet.</strong> <span class="small">Interfaces between teams, agents and partners are where reliability matters most: who may move money, what data leaves the company, which checks every output must pass.</span></li>
+<li><strong>Leave the inside of each team free.</strong> <span class="small">People and agents doing the work know things designers don’t. Freedom inside the core is where better ways of working are found.</span></li>
+<li><strong>Record the reason at the moment of action.</strong> <span class="small">A change can’t ship without its reason, and an agent records the instruction it acted on.</span></li>
+<li><strong>Don’t blame people for what the record shows.</strong> <span class="small">Blame produces empty reasons and workarounds. Give credit for surfacing what works as much as for flagging what broke.</span></li>
+<li><strong>Manage tensions; don’t try to settle them.</strong> <span class="small">Speed pulls against reliability, sales against finance. A good protocol turns the pull from each side into progress on both.</span></li>
+<li><strong>Change the core by a written rule.</strong> <span class="small">Each hard protocol names who may change it, how, and who may stop the work.</span></li>
+<li><strong>Count what didn’t go wrong.</strong> <span class="small">Good protocols produce non-events. Measure them next to speed and growth.</span></li>
+</ol>
+
+<h2 id="roles">5. Roles and responsibilities</h2>
+<p>Suggested roles. A small company may give several to one person.</p>
+<div class="table-wrap" role="region" aria-label="Roles and responsibilities" tabindex="0">
+<table>
+<thead><tr><th scope="col">Role</th><th scope="col">Responsible for</th></tr></thead>
+<tbody>
+<tr><th scope="row">Sponsor</th><td>Chooses the problem or opportunity, backs the hard core, and protects the no-blame record.</td></tr>
+<tr><th scope="row">Protocol owner</th><td>Owns one hard protocol (for example the finance lead for payment limits), and applies its amendment rule.</td></tr>
+<tr><th scope="row">Platform team</th><td>Builds the field log and the checks into the systems, so the rules run without anyone deciding each time.</td></tr>
+<tr><th scope="row">Teams and agents</th><td>Do the work freely inside the core, and record why they act.</td></tr>
+<tr><th scope="row">Anyone</th><td>May stop the work when a hard protocol is about to be broken.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="phases">6. The three phases</h2>
+<div class="table-wrap" role="region" aria-label="Phase overview" tabindex="0">
+<table>
+<thead><tr><th scope="col">Phase</th><th scope="col">Question</th><th scope="col">Main output</th><th scope="col">Read in themes</th></tr></thead>
+<tbody>
+<tr><th scope="row">See</th><td>What actually happens?</td><td>Field log and a list of protocols in play</td><td>II, III, IV</td></tr>
+<tr><th scope="row">Design</th><td>What must be strict, and what can stay free?</td><td>Hardness map and amendment rules</td><td>I, V</td></tr>
+<tr><th scope="row">Evolve</th><td>What is working, and what should change?</td><td>Measures, promoted and demoted rules, shared write-ups</td><td>VI</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="see">Phase 1: See</h3>
+<p><strong>Purpose.</strong> Find the protocols the work actually runs on, written and unwritten. The org chart shows authority, a strategy shows intent, a software stack shows tools; protocols show what actually recurs.</p>
+<p><strong>Inputs.</strong> Access to the work: systems, records, people and agents. A problem or opportunity statement.</p>
+<p><strong>Steps.</strong></p>
+<ol>
+<li>Build the field log into the work. Every release, handoff, agent action, override and alert writes an entry to one shared log, readable by people and agents by default. The system flags results that beat or miss their usual range.</li>
+<li>Keep the log free of blame, so entries stay honest.</li>
+<li>Watch the work across people, software and machines. List the protocols in play. For each, ask what would go wrong if it disappeared tomorrow, and who would notice first.</li>
+<li>Note what the organization publishes and who can read it. That shows where its protocols live.</li>
+</ol>
+<p><strong>Outputs.</strong> A running field log. A list of protocols, each with what it prevents.</p>
+<p><strong>Done when.</strong> The team can name the few protocols that, if they failed, would hurt the business most.</p>
+
+<h3 id="design">Phase 2: Design</h3>
+<p><strong>Purpose.</strong> Decide what becomes strict, what stays a norm, and what is left free.</p>
+<p><strong>Inputs.</strong> The protocol list and field log from Phase 1.</p>
+<p><strong>Steps.</strong></p>
+<ol start="5">
+<li>Name the tensions that matter for growth. Write each as “X vs. Y” and note where the balance sits now.</li>
+<li>Draw a hardness map. Sort protocols into hard, soft and free, and keep the hard group small.</li>
+<li>Make the interfaces hard and keep the insides free: what agents can see and do, data agreements, permissions, spending limits, the checks every output must pass, and the field log. Score agents against real results, and keep versions of their models, instructions and inputs.</li>
+<li>Write the amendment rule for each hard protocol: who may change it, how, and who may stop the work.</li>
+</ol>
+<p><strong>Outputs.</strong> A hardness map and amendment rules, built into systems where possible.</p>
+<p><strong>Done when.</strong> Every hard protocol has an owner, a place it lives, and a written way to change it.</p>
+
+<p><strong>Template: hardness map.</strong> Example for a company adopting AI agents.</p>
+<div class="table-wrap" role="region" aria-label="Example hardness map" tabindex="0">
+<table>
+<thead><tr><th scope="col">Protocol</th><th scope="col">Tension</th><th scope="col">Type</th><th scope="col">Where it lives</th><th scope="col">Who can change it</th></tr></thead>
+<tbody>
+<tr><th scope="row">Who may move money</th><td>Speed vs. control</td><td>Hard</td><td>Payment permissions and limits</td><td>Finance lead</td></tr>
+<tr><th scope="row">What data leaves the company</th><td>Openness vs. confidentiality</td><td>Hard</td><td>Access permissions and outbound checks</td><td>Security lead</td></tr>
+<tr><th scope="row">Checks on every agent output</th><td>Speed vs. quality</td><td>Hard</td><td>Evaluation pipeline</td><td>Product owner</td></tr>
+<tr><th scope="row">The shared field log</th><td>Visibility vs. privacy</td><td>Hard</td><td>Written by every system and agent</td><td>Platform team</td></tr>
+<tr><th scope="row">Weekly planning</th><td>Alignment vs. focus</td><td>Soft</td><td>Meeting norms</td><td>Each team</td></tr>
+<tr><th scope="row">How a team does its own work</th><td>Freedom vs. consistency</td><td>Free</td><td>Inside the team’s own space</td><td>The team or agent</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 id="evolve">Phase 3: Evolve</h3>
+<p><strong>Purpose.</strong> Run the design, learn from it, and amend the core as the business grows.</p>
+<p><strong>Inputs.</strong> The hardness map, the field log, and the measures in section 7.</p>
+<p><strong>Steps.</strong></p>
+<ol start="9">
+<li>Measure growth and non-events together.</li>
+<li>Decide where judgment sits between people and agents, check it cheaply, and record it where others can see it.</li>
+<li>Promote and demote. Make a free pattern hard when it keeps paying off. Soften a hard rule when it blocks good work.</li>
+<li>Write up what worked and what failed, and share it beyond the company.</li>
+</ol>
+<p><strong>Outputs.</strong> An amended hardness map and a published write-up.</p>
+<p><strong>Done when.</strong> The cycle repeats on a set schedule, and changes to the core follow the amendment rules.</p>
+
+<h2 id="measures">7. Measures</h2>
+<div class="table-wrap" role="region" aria-label="Measures" tabindex="0">
+<table>
+<thead><tr><th scope="col">Measure</th><th scope="col">What it tells you</th></tr></thead>
+<tbody>
+<tr><th scope="row">Speed</th><td>Time from request to result, before and after.</td></tr>
+<tr><th scope="row">Autonomy granted</th><td>Which decisions agents and teams now make without approval.</td></tr>
+<tr><th scope="row">Time to connect</th><td>How long it takes to add a new agent or partner.</td></tr>
+<tr><th scope="row">Non-events</th><td>Problems that stopped happening, and near-misses caught.</td></tr>
+<tr><th scope="row">Gamed targets</th><td>Measures that people or agents have learned to hit without the result they stand for.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="example">8. Worked example: California water rate data</h2>
+<p class="meta">Led by Patrick Atwater and Maxwell Titsworth with the California Data Collaborative · ongoing, now in implementation</p>
+<ul class="rows">
+<li><span class="k">Situation</span><div class="v"><p>Every rate cycle, a water utility’s board asks how its rates compare with its neighbours’, and answering can cost a six-figure consulting study. California’s rates are public but scattered across hundreds of utility sites and PDFs.</p></div></li>
+<li><span class="k">See</span><div class="v"><p>Utilities publish rates inside ordinances and fee schedules, and the state’s annual report records no link to the source. Machines can now read any rate sheet; finding the current one is the hard part. One engineer’s site, <a href="https://whatwatercosts.org/">whatwatercosts.org</a>, uses a language model to read rate documents in any format, and it matched hand-collected tables across 99 utilities.</p></div></li>
+<li><span class="k">Design</span><div class="v"><p>The tension is local control against comparability. Since a model reads any format for under five cents, the team made only one thing hard: a published address for each rate schedule, with its adoption and effective dates, in a registry and an <code>llms.txt</code> file. Each utility stays free to write rates its own way, and anyone can submit a correction.</p></div></li>
+<li><span class="k">Evolve</span><div class="v"><p>Automated search found 47% of utilities. With the address, coverage rises to nearly all. The team proposed adding the address to the state’s annual report.</p></div></li>
+<li><span class="k">Sources</span><div class="v"><p><a href="https://npc.here.now/waterdatastrategy/">Strategy report</a> · <a href="https://npc.here.now/waterdatadiscoverycases/">Seven precedents</a> · <a href="https://npc.here.now/waterdataexploration/">Five cases in data coordination</a></p></div></li>
+</ul>
+<p>Other cases: <a href="../cases/#construction">construction procurement protocols</a>, working smarter with AI (whose hazards collection separates hard walls, which block an action, from soft walls, which flag it for review), and the Protocol Institute brand kit. All are on the <a href="../cases/">case studies</a> page.</p>
+
+<h2 id="approaches">9. How BPM relates to earlier approaches</h2>
+<div class="table-wrap" role="region" aria-label="Earlier approaches" tabindex="0">
+<table>
+<thead><tr><th scope="col">Approach</th><th scope="col">BPM keeps</th><th scope="col">BPM changes</th></tr></thead>
+<tbody>
+<tr><th scope="row">Scientific management (Taylor, 1910s)</th><td>Looking at the actual work.</td><td>Experts don’t design one best way; the people and agents doing the work know things designers don’t.</td></tr>
+<tr><th scope="row">Bureaucracy and the org chart (Weber)</th><td>Written rules make work reliable.</td><td>Unwritten rules often matter more than the org chart.</td></tr>
+<tr><th scope="row">Quality and lean (Deming, Toyota)</th><td>Build quality into the process, let anyone stop the line, keep improving.</td><td>Applies these beyond the factory, to information work, agents and partners.</td></tr>
+<tr><th scope="row">Business process re-engineering (Hammer, 1990s)</th><td>New technology can call for reinvention.</td><td>Re-engineering redesigned every process from the top, once. BPM rebuilds around a few hard protocols, leaves freedom inside them, and keeps changing.</td></tr>
+<tr><th scope="row">KPIs and scorecards (Kaplan and Norton)</th><td>Measuring results.</td><td>Also counts what didn’t happen, and watches for gamed targets.</td></tr>
+<tr><th scope="row">Agile, DevOps, site reliability</th><td>Small iterations, no-blame reviews, automated checks.</td><td>Applies the same thinking to the whole company, not only software delivery.</td></tr>
+<tr><th scope="row">Paradox management (Smith and Lewis)</th><td>Some tensions are managed, never solved.</td><td>Puts the managing into protocols that run without anyone deciding each time.</td></tr>
+<tr><th scope="row">Safety-critical industries (aviation, nuclear)</th><td>The whole loop: reporting, no-blame investigation, checklists, the right to stop.</td><td>Applies it at business stakes, to agents as well as people, and to finding opportunities, not only preventing harm.</td></tr>
+<tr><th scope="row">Platforms</th><td>Coordinating large numbers of people and businesses.</td><td>Coordination through shared rules anyone can use, not through one owner.</td></tr>
+<tr><th scope="row">AI “alignment”</th><td>Caring how AI behaves at work.</td><td>Shapes the agent’s environment rather than its values.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Safety-critical industries are the closest model. Airlines and nuclear plants accept that they can’t fully predict their systems, so they manage safety through protocols: confidential self-reporting, investigations that look for causes rather than culprits, checklists, and the right to stop the work. US airlines must now run formal safety management systems (14 CFR Part 5). Changing a protocol changes results in both directions: the WHO surgical checklist cut deaths in its pilot study from 1.5% to 0.8%, and removing the hardware interlocks from the Therac-25 radiation machine led to massive overdoses. Business can adopt the loop without copying its weight. Most business mistakes don’t kill anyone, so companies can learn by trying things inside their free areas.</p>
+
+<h2 id="programme">10. The 2027 programme</h2>
+<p>The SIG tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026 and are recorded. Each reads one primary source closely.</p>
+<div class="table-wrap" role="region" aria-label="Themes and dates" tabindex="0">
+<table>
+<thead><tr><th scope="col">Theme</th><th scope="col">Phase</th><th scope="col">Dates</th></tr></thead>
+<tbody>
+<tr><th scope="row">I. What agents are, in practice</th><td>Design</td><td class="nowrap">2 Nov – 14 Dec 2026</td></tr>
+<tr><th scope="row">II. Natural coordination</th><td>See</td><td class="nowrap">11 Jan – 8 Feb 2027</td></tr>
+<tr><th scope="row">III. Emissions</th><td>See</td><td class="nowrap">22 Feb – 19 Apr 2027</td></tr>
+<tr><th scope="row">IV. Seeing hardness in incidents</th><td>See</td><td class="nowrap">3 May – 28 Jun 2027</td></tr>
+<tr><th scope="row">V. Engineering hardness</th><td>Design</td><td class="nowrap">12 Jul – 20 Sep 2027</td></tr>
+<tr><th scope="row">VI. Operational liveness</th><td>Evolve</td><td class="nowrap">4 Oct – 1 Nov 2027</td></tr>
+</tbody>
+</table>
+</div>
+<p>Ways to take part: <a href="../#speak">offer a talk</a>, carry a <a href="../cases/">case study</a> through the year, log protocols with the <a href="../../play/watching/">protocol watching guide</a>, or <a href="../../sessions/#suggest">suggest or challenge a reading</a>. The full plan is on <a href="../../sessions/">Sessions</a>.</p>
+
+<h2 id="sources">11. Sources</h2>
+<ul class="small">
+<li>Haynes, Alex B., et al. “A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population.” <cite>New England Journal of Medicine</cite> 360, no. 5 (2009): 491–99.</li>
+<li>Hammer, Michael. “<a href="https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate">Reengineering Work: Don’t Automate, Obliterate</a>.” <cite>Harvard Business Review</cite>, July 1990.</li>
+<li>Leveson, Nancy G., and Clark S. Turner. “<a href="https://dl.acm.org/doi/10.1109/MC.1993.274940">An Investigation of the Therac-25 Accidents</a>.” <cite>IEEE Computer</cite> 26, no. 7 (1993).</li>
+<li>Perrow, Charles. <cite>Normal Accidents: Living with High-Risk Technologies</cite>. Princeton University Press, 1984.</li>
+<li>Rao, Venkatesh. “<a href="https://contraptions.venkateshrao.com/p/in-search-of-hardness">In Search of Hardness</a>” and “<a href="https://contraptions.venkateshrao.com/p/massed-muddler-intelligence">Massed Muddler Intelligence</a>.” <cite>Contraptions</cite>.</li>
+<li>Smith, Wendy K., and Marianne W. Lewis. “<a href="https://doi.org/10.5465/amr.2009.0223">Toward a Theory of Paradox</a>.” <cite>Academy of Management Review</cite> 36, no. 2 (2011).</li>
+<li>Stinson-Schroff, Timber. “<a href="https://protocolized.summerofprotocols.com/p/one-tension-to-rule-them-all">One Tension to Rule Them All</a>.” <cite>Protocolized</cite>. Source of the Amazon example.</li>
+<li>U.S. Federal Aviation Administration. “<a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-5">14 CFR Part 5, Safety Management Systems</a>.” 2015, expanded 2024.</li>
+</ul>
+<p class="small muted">Adapted from the SIG’s introduction to BPM (version 4, October 2026), drafted with Claude.</p>
