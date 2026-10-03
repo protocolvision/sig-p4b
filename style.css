@@ -86,14 +86,14 @@ li { margin: .3rem 0; }
 
 /* rows: label and value, ruled */
 .rows { list-style: none; margin: 0; padding: 0; }
-.rows li { display: grid; grid-template-columns: 7.5rem 1fr; gap: .15rem 1rem; margin: 0; padding: .75rem 0; border-top: 1px solid var(--rule); }
-.rows li:last-child { border-bottom: 1px solid var(--rule); }
+.rows > li { display: grid; grid-template-columns: 7.5rem 1fr; gap: .15rem 1rem; margin: 0; padding: .75rem 0; border-top: 1px solid var(--rule); }
+.rows > li:last-child { border-bottom: 1px solid var(--rule); }
 .rows .k { color: var(--muted); font-size: .95rem; }
 .rows .v p { margin: 0; }
 .rows .v p + p { margin-top: .35rem; }
 .rows .v .muted { font-size: .92rem; }
 a.more-ic { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -12px -10px -12px -6px; vertical-align: middle; color: var(--link); }
-@media (max-width: 34rem) { .rows li { grid-template-columns: 1fr; } }
+@media (max-width: 34rem) { .rows > li { grid-template-columns: 1fr; } }
 
 /* people and cases: plain lists, no cards */
 .people { display: block; }
@@ -248,11 +248,11 @@ ol.plan .fig-theme { margin: .2rem 0 .7rem; }
 @media (max-width: 34rem) { .next .fig-next { width: 90%; opacity: .35; } }
 
 /* What we do: each row carries its own small drawing above the label */
-.rows.acts li { grid-template-columns: 10rem 1fr; gap: .25rem 1.25rem; align-items: start; }
+.rows.acts > li { grid-template-columns: 10rem 1fr; gap: .25rem 1.25rem; align-items: start; }
 .rows.acts .k { display: block; }
 .rows.acts .act { display: block; width: 100%; height: auto; margin: 0; }
 .rows.acts .act-k { margin: .1rem 0 .2rem; font-size: 1rem; }
-@media (max-width: 34rem) { .rows.acts li { grid-template-columns: 1fr; gap: .4rem; } .rows.acts .act { width: 100%; max-width: 13rem; margin: 0 auto .1rem; } }
+@media (max-width: 34rem) { .rows.acts > li { grid-template-columns: 1fr; gap: .4rem; } .rows.acts .act { width: 100%; max-width: 13rem; margin: 0 auto .1rem; } }
 
 /* talk form: reuses the register dialog; adds a select and a textarea */
 .register select, .register textarea { display: block; width: 100%; padding: .55rem .7rem; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); font: 1rem Lora, Georgia, serif; color: var(--fg); }
@@ -289,3 +289,13 @@ ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 .table-wrap thead th { color: var(--muted); font-weight: 400; font-size: .92rem; border-top: 0; }
 .table-wrap tbody th { font-weight: 600; }
 .table-wrap .nowrap { white-space: nowrap; }
+
+/* practice guide: a phase drawing under each phase heading */
+.fig-phase { display: block; width: 100%; height: auto; margin: .3rem 0 .8rem; }
+
+/* practice guide: more air between sections and inside phase rows */
+.rows.phase .v ol { margin: .2rem 0 0; padding-left: 1.2rem; }
+.rows.phase .v ol li { margin: .35rem 0; }
+.rows .v ul.plain { list-style: none; padding: 0; margin: .3rem 0 0; }
+.rows .v ul.plain li { margin: 0 0 .5rem; }
+.md-only { display: none; }   /* content kept for the Markdown copy only */

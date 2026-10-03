@@ -7,7 +7,7 @@
 - [Sessions](https://npc.here.now/protocolvision/sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map](https://npc.here.now/protocolvision/sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research](https://npc.here.now/protocolvision/research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
-- [Business Protocol Management](https://npc.here.now/protocolvision/research/bpm/): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
+- [Business Protocol Management](https://npc.here.now/protocolvision/research/bpm/) (Markdown for agents: https://npc.here.now/protocolvision/research/bpm/index.md): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
 - [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template
 - [Protocol watching guide](https://npc.here.now/protocolvision/play/watching/): how to see and record a business protocol
 
@@ -24,7 +24,7 @@ Open one GitHub issue per change in protocolvision/sig-p4b, labelled reading-sug
 - [Calendar (.ics)](https://npc.here.now/protocolvision/sig-p4b.ics): subscribable; times in UTC
 
 ## Next sessions
-- 2026-11-02 15:30–16:30 UTC: The Hugging Face incident and the road ahead (OpenAI, 2026), https://openai.com/index/hugging-face-incident-and-the-road-ahead/
+- 2026-11-02 15:30–17:30 UTC: The Hugging Face incident and the road ahead (OpenAI, 2026), https://openai.com/index/hugging-face-incident-and-the-road-ahead/
 - 2026-11-16 15:30–16:30 UTC: Patterns and problems in multiagent systems (Anthropic, 2026), https://www.anthropic.com/research/multiagent-systems
 - 2026-11-30 15:30–16:30 UTC: Model Context Protocol Specification (modelcontextprotocol.io, 2024–), https://modelcontextprotocol.io/specification/latest
 - 2026-12-14 15:30–16:30 UTC: Ironies of Automation (Bainbridge, 1983), https://doi.org/10.1016/0005-1098(83)90046-8

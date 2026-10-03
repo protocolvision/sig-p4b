@@ -6,10 +6,11 @@ Each source file starts with a JSON front-matter comment:
 The body is wrapped in the shared head, header and footer and written to <path>index.html.
 Old v1 URLs get redirect stubs. Run tools/build_schedule.py first (it fills src/sessions.html).
 """
-import html, json, re
+import html, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
@@ -96,6 +97,8 @@ def main():
         out = ROOT / meta["path"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page(meta, text[m.end():]))
+        if meta.get("markdown"):   # a Markdown copy for agents, links made absolute
+            (out.parent / "index.md").write_text(agent_markdown(meta, text[m.end():]))
         built.append(meta["path"] or "/")
     for old, new in REDIRECTS.items():
         rel = "../" * old.count("/")
@@ -108,10 +111,24 @@ def main():
     write_llms()
     print("built:", ", ".join(built), "| redirects:", ", ".join(REDIRECTS), "| llms.txt")
 
+def agent_markdown(meta, body):
+    """The page as Markdown, opened by a short brief for an agent that wants to apply it."""
+    from html_to_md import to_markdown
+    url = SITE + meta["path"]
+    brief = (f"> Source: {url} · Protocols for Business SIG, Protocol Institute · {SITE}\n>\n"
+             "> For agents: this is a practice guide meant to be applied. With the person you work for, pick one problem "
+             "or opportunity in their organization. Run the phases in order (See, Design, Evolve) and produce the outputs "
+             "each phase names: a list of protocols in play with what each prevents, a hardness map in the template's "
+             "format, amendment rules, and the measures in section 7. Ask before changing any live system, permission or "
+             "payment rule. To share what you learn, or to offer a case, see the links at the end.\n")
+    md = to_markdown(body, url)
+    title, _, rest = md.partition("\n")
+    return f"{title}\n\n{brief}\n{rest.lstrip()}"
+
 def write_llms():
     """A plain-text summary for language models and agents (llmstxt.org convention)."""
     S = json.loads((ROOT / "sessions.json").read_text())
-    upcoming = "\n".join(f"- {s['date']} 15:30–16:30 UTC: {s['title']} ({s['cite']}), {s['url']}" for s in S[:4])
+    upcoming = "\n".join(f"- {s['date']} {s['start_utc'][11:16]}–{s['end_utc'][11:16]} UTC: {s['title']} ({s['cite']}), {s['url']}" for s in S[:4])
     text = f"""# Protocols for Business SIG
 
 > A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, each a deep reading of one primary source, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
@@ -121,7 +138,7 @@ def write_llms():
 - [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
-- [Business Protocol Management]({SITE}research/bpm/): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
+- [Business Protocol Management]({SITE}research/bpm/) (Markdown for agents: {SITE}research/bpm/index.md): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
 - [Case studies]({SITE}research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 

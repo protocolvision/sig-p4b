@@ -260,6 +260,64 @@ def activity_panels(seed):
         (OUT / f"act-{name}.svg").write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{i * 400 + 20} 10 360 270" width="360" height="270" role="img" aria-label="{label}">{body}</svg>\n')
 
 
+def label(x, y, text, size=13, col=None, anchor="middle", weight=400):
+    return (f'<text x="{f(x)}" y="{f(y)}" text-anchor="{anchor}" font-family="ui-monospace, Menlo, monospace" '
+            f'font-size="{size}" font-weight="{weight}" fill="{col or INK}" stroke="none">{text}</text>')
+
+
+def cycle(w, h, seed):
+    """See, Design, Evolve as a loop: three stations on a circle, arrows between them, and a small
+    drawing at each one (rings for See, a hexagon for Design, a pulse for Evolve)."""
+    r = random.Random(seed)
+    cx, cy, R = w / 2, h / 2 + 16, min(w, h) * .3
+    angs = [-math.pi / 2, math.pi / 6, 5 * math.pi / 6]
+    pts = [(cx + R * math.cos(a), cy + R * math.sin(a)) for a in angs]
+    out = []
+    for i in range(3):   # arcs between the stations, with arrowheads
+        a0, a1 = angs[i] + .42, angs[(i + 1) % 3] - .42 + (2 * math.pi if i == 2 else 0)
+        steps = 24
+        d = "M" + "L".join(f"{f(cx + R * math.cos(a0 + (a1 - a0) * k / steps))} {f(cy + R * math.sin(a0 + (a1 - a0) * k / steps))}" for k in range(steps + 1))
+        out.append(f'<path d="{d}" stroke="{FAINT}" stroke-width="1.6"/>')
+        ex, ey = cx + R * math.cos(a1), cy + R * math.sin(a1); ta = a1 + math.pi / 2
+        out.append(f'<path d="M{f(ex - 9 * math.cos(ta) - 5 * math.cos(ta + math.pi / 2))} {f(ey - 9 * math.sin(ta) - 5 * math.sin(ta + math.pi / 2))}L{f(ex)} {f(ey)}L{f(ex - 9 * math.cos(ta) + 5 * math.cos(ta + math.pi / 2))} {f(ey - 9 * math.sin(ta) + 5 * math.sin(ta + math.pi / 2))}" stroke="{INK}" stroke-width="1.6"/>')
+    (sx, sy), (dx, dy), (vx, vy) = pts
+    for k in (1, 2, 3):   # See: rings
+        out.append(f'<circle cx="{f(sx)}" cy="{f(sy)}" r="{8 + k * 9}" stroke="{COBALT if k == 1 else INK}" stroke-width="1.2" opacity="{1 - k * .22:.2f}"/>')
+    out.append(f'<rect x="{f(sx - 4)}" y="{f(sy - 4)}" width="8" height="8" fill="{INK}" stroke="none"/>')
+    hexp = lambda rad: "M" + "L".join(f"{f(dx + rad * math.cos(i * math.pi / 3))} {f(dy + rad * math.sin(i * math.pi / 3))}" for i in range(6)) + "Z"
+    out += [f'<path d="{hexp(30)}" stroke="{INK}" stroke-width="2.2"/>', f'<path d="{hexp(17)}" stroke="{COBALT}" stroke-width="1.4"/>']
+    for _ in range(14):
+        a = -math.pi * r.random(); rr = 38 + r.random() * 12   # only above the hexagon, clear of its label
+        out.append(f'<circle cx="{f(dx + math.cos(a) * rr)}" cy="{f(dy + math.sin(a) * rr)}" r="1.8" fill="{INK}" stroke="none"/>')
+    pulse = [(vx - 46, vy), (vx - 14, vy), (vx - 8, vy - 26), (vx, vy + 18), (vx + 6, vy - 6), (vx + 12, vy), (vx + 46, vy)]
+    out.append(f'<path d="M' + "L".join(f"{f(x)} {f(y)}" for x, y in pulse) + f'" stroke="{INK}" stroke-width="1.8"/>')
+    out.append(f'<circle cx="{f(vx + 46)}" cy="{f(vy)}" r="3.5" fill="{COBALT}" stroke="none"/>')
+    out += [label(sx, sy - 52, "SEE", 18, weight=600), label(dx + 6, dy + 64, "DESIGN", 18, weight=600), label(vx - 6, vy + 64, "EVOLVE", 18, weight=600)]
+    out += [label(sx, sy + 54, "what actually happens", 14, "#6b6a66"),
+            label(dx + 6, dy + 84, "what must be strict", 14, "#6b6a66"), label(vx - 6, vy + 84, "what should change", 14, "#6b6a66")]
+    return svg(w, h, "".join(out), "A loop of three phases: See, then Design, then Evolve, and back to See")
+
+
+def rings(w, h, seed):
+    """The hardness map as rings: the hard core at the centre, soft norms around it, free work outside,
+    with the example protocols placed in their ring."""
+    r = random.Random(seed)
+    cx, cy = w / 2, h / 2
+    out = []
+    for rad, rx, col, sw, dash in ((h * .47, h * .47 * 2.1, FAINT, 1, "3 5"), (h * .36, h * .36 * 1.95, INK, 1.2, ""), (h * .22, h * .22 * 2.5, INK, 2.6, "")):
+        out.append(f'<ellipse cx="{f(cx)}" cy="{f(cy)}" rx="{f(rx)}" ry="{f(rad)}" stroke="{col}" stroke-width="{sw}"' + (f' stroke-dasharray="{dash}"' if dash else "") + "/>")
+    for _ in range(70):   # free agents in the outer ring
+        a = r.random() * math.tau; k = .4 + r.random() * .06
+        out.append(f'<circle cx="{f(cx + math.cos(a) * h * k * 2.06)}" cy="{f(cy + math.sin(a) * h * k)}" r="1.6" fill="{INK}" stroke="none" opacity=".55"/>')
+    out += [label(cx, cy - h * .1, "HARD CORE", 12, COBALT, weight=600),
+            label(cx - h * .26, cy - h * .01, "who may move money", 11), label(cx + h * .26, cy - h * .01, "what data leaves", 11),
+            label(cx - h * .26, cy + h * .07, "checks on every output", 11), label(cx + h * .26, cy + h * .07, "the shared field log", 11),
+            label(cx, cy - h * .28, "SOFT · weekly planning", 11, "#5d5b55", weight=600),
+            label(cx, cy + h * .3, "SOFT · norms the team keeps", 11, "#8a877f"),
+            label(cx, cy + h * .44, "FREE · how each team or agent does its own work", 11, "#5d5b55", weight=600)]
+    return svg(w, h, "".join(out), "Three rings: a small hard core in the middle, soft norms around it, and free work outside")
+
+
 FIGS = {
     "murmuration": (murmuration, 1200, 300, 7),
     "network": (network, 1200, 260, 11),
@@ -274,6 +332,8 @@ FIGS = {
     "quorum": (quorum, 1200, 220, 8),
     "gather": (gather, 480, 200, 12),
     "activities": (activities, 1200, 300, 13),
+    "cycle": (cycle, 900, 340, 14),
+    "rings": (rings, 1000, 340, 15),
 }
 
 if __name__ == "__main__":
