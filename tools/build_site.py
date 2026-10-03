@@ -135,7 +135,7 @@ def write_llms():
 
 ## Pages
 - [About]({SITE}about/): protocol vision (the capability) and Business Protocol Management (the practice), origins, facilitators, publications
-- [Sessions]({SITE}sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
+- [Sessions]({SITE}sessions/): the reading plan (six themes, each with its sessions), which participants shape as the year goes; how sessions work; how to suggest or challenge a reading; archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
 - [Business Protocol Management]({SITE}research/bpm/) (Markdown for agents: {SITE}research/bpm/index.md?raw=1): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches

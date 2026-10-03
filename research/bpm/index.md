@@ -170,7 +170,7 @@ Safety-critical industries are the closest model. Airlines and nuclear plants ac
 
 ## 10. The 2027 program
 
-The SIG tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026 and are recorded. Each reads one primary source closely.
+The SIG tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026 and are recorded. Each reads one primary source closely. The themes below are where the program starts; participants shape the readings, guests and cases as it goes.
 
 - **2 Nov – 14 Dec 2026:** I. What agents are, in practice · Design
 - **11 Jan – 8 Feb 2027:** II. Natural coordination · See
