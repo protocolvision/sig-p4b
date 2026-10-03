@@ -7,6 +7,7 @@
 - [Sessions](https://npc.here.now/protocolvision/sessions/): the initial reading plan (six themes with sample readings), how sessions work, how to suggest a reading, archive
 - [Reading map](https://npc.here.now/protocolvision/sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research](https://npc.here.now/protocolvision/research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
+- [Business Protocol Management](https://npc.here.now/protocolvision/research/bpm/): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
 - [Case studies](https://npc.here.now/protocolvision/research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template
 - [Protocol watching guide](https://npc.here.now/protocolvision/play/watching/): how to see and record a business protocol
 

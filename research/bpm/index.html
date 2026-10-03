@@ -34,7 +34,7 @@
 </header>
 <main>
 <h1>Business Protocol Management</h1>
-<p class="meta"><a href="../">Research</a> · practice guide · version 4, October 2026</p>
+<p class="meta"><a href="../">Research</a> · practice guide</p>
 <p class="lede">Companies that work well with AI build a few strict rules into their systems and give people and agents wide freedom inside them. Business Protocol Management (BPM) is the practice of finding those rules, building them, and changing them as the business grows.</p>
 
 <nav class="page-nav" aria-label="On this page">
@@ -58,7 +58,7 @@
 <tr><th scope="row">Purpose</th><td>Explain what BPM is, why it matters now, and how a team applies it, step by step.</td></tr>
 <tr><th scope="row">Audience</th><td>Operations leads, managers, architects and analysts who are bringing AI agents into day-to-day work.</td></tr>
 <tr><th scope="row">Scope</th><td>One problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”. BPM is not a company-wide redesign.</td></tr>
-<tr><th scope="row">Status</th><td>Working draft. The SIG tests it during the 2027 programme and revises it from what members find.</td></tr>
+<tr><th scope="row">Revisions</th><td>The SIG tests the guide in its sessions and case studies, and revises it from what members find.</td></tr>
 </tbody>
 </table>
 </div>
@@ -204,11 +204,11 @@
 </div>
 
 <h2 id="example">8. Worked example: California water rate data</h2>
-<p class="meta">Led by Patrick Atwater and Maxwell Titsworth with the California Data Collaborative · ongoing, now in implementation</p>
+<p class="meta">Led by Patrick Atwater and Maxwell Titsworth with the California Data Collaborative</p>
 <ul class="rows">
-<li><span class="k">Situation</span><div class="v"><p>Every rate cycle, a water utility’s board asks how its rates compare with its neighbours’, and answering can cost a six-figure consulting study. California’s rates are public but scattered across hundreds of utility sites and PDFs.</p></div></li>
+<li><span class="k">Situation</span><div class="v"><p>Every rate cycle, a water utility’s board asks how its rates compare with its neighbours’, and answering takes staff time and consulting fees that add up across utilities. California’s rates are public but scattered across hundreds of utility sites and PDFs.</p></div></li>
 <li><span class="k">See</span><div class="v"><p>Utilities publish rates inside ordinances and fee schedules, and the state’s annual report records no link to the source. Machines can now read any rate sheet; finding the current one is the hard part. One engineer’s site, <a href="https://whatwatercosts.org/" target="_blank" rel="noopener noreferrer">whatwatercosts.org</a>, uses a language model to read rate documents in any format, and it matched hand-collected tables across 99 utilities.</p></div></li>
-<li><span class="k">Design</span><div class="v"><p>The tension is local control against comparability. Since a model reads any format for under five cents, the team made only one thing hard: a published address for each rate schedule, with its adoption and effective dates, in a registry and an <code>llms.txt</code> file. Each utility stays free to write rates its own way, and anyone can submit a correction.</p></div></li>
+<li><span class="k">Design</span><div class="v"><p>The tension is local control against comparability. Since a model now reads any format cheaply, the team made only one thing hard: a published address for each rate schedule, with its adoption and effective dates, in a registry and an <code>llms.txt</code> file. Each utility stays free to write rates its own way.</p></div></li>
 <li><span class="k">Evolve</span><div class="v"><p>Automated search found 47% of utilities. With the address, coverage rises to nearly all. The team proposed adding the address to the state’s annual report.</p></div></li>
 <li><span class="k">Sources</span><div class="v"><p><a href="https://npc.here.now/waterdatastrategy/" target="_blank" rel="noopener noreferrer">Strategy report</a> · <a href="https://npc.here.now/waterdatadiscoverycases/" target="_blank" rel="noopener noreferrer">Seven precedents</a> · <a href="https://npc.here.now/waterdataexploration/" target="_blank" rel="noopener noreferrer">Five cases in data coordination</a></p></div></li>
 </ul>
@@ -262,7 +262,6 @@
 <li>Stinson-Schroff, Timber. “<a href="https://protocolized.summerofprotocols.com/p/one-tension-to-rule-them-all" target="_blank" rel="noopener noreferrer">One Tension to Rule Them All</a>.” <cite>Protocolized</cite>. Source of the Amazon example.</li>
 <li>U.S. Federal Aviation Administration. “<a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-5" target="_blank" rel="noopener noreferrer">14 CFR Part 5, Safety Management Systems</a>.” 2015, expanded 2024.</li>
 </ul>
-<p class="small muted">Adapted from the SIG’s introduction to BPM (version 4, October 2026), drafted with Claude.</p>
 </main>
 <footer>
 <p><img class="mark" src="../../favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/" target="_blank" rel="noopener noreferrer">Protocol Institute</a></p>
