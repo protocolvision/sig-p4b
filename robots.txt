@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://npc.here.now/protocolvision/sitemap.xml
+Sitemap: https://protocolsforbusiness.com/sitemap.xml

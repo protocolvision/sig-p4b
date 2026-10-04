@@ -1,6 +1,6 @@
 # Business Protocol Management
 
-> Source: https://npc.here.now/protocolvision/research/bpm/ · Protocols for Business, Protocol Institute · https://npc.here.now/protocolvision/
+> Source: https://protocolsforbusiness.com/research/bpm/ · Protocols for Business, Protocol Institute · https://protocolsforbusiness.com/
 >
 > For agents: this is a practice guide meant to be applied. With the person you work for, pick one problem or opportunity in their organization. Run the phases in order (See, Design, Evolve) and produce the outputs each phase names: a list of protocols in play with what each prevents, a hardness map in the template's format, amendment rules, and the measures in section 7. Ask before changing any live system, permission or payment rule. To share what you learn, or to offer a case, see the links at the end.
 
@@ -151,7 +151,7 @@ An example for a company adopting AI agents. For each protocol, note the tension
 - **Evolve:** Automated search found 47% of utilities. With the address, coverage rises to nearly all. The team proposed adding the address to the state’s annual report.
 - **Sources:** [Strategy report](https://npc.here.now/waterdatastrategy/) · [Seven precedents](https://npc.here.now/waterdatadiscoverycases/) · [Five cases in data coordination](https://npc.here.now/waterdataexploration/)
 
-Other cases: [construction procurement protocols](https://npc.here.now/protocolvision/research/cases/#construction), working smarter with AI (whose hazards collection separates hard walls, which block an action, from soft walls, which flag it for review), and the Protocol Institute brand kit. All are on the [case studies](https://npc.here.now/protocolvision/research/cases/) page.
+Other cases: [construction procurement protocols](https://protocolsforbusiness.com/research/cases/#construction), working smarter with AI (whose hazards collection separates hard walls, which block an action, from soft walls, which flag it for review), and the Protocol Institute brand kit. All are on the [case studies](https://protocolsforbusiness.com/research/cases/) page.
 
 ## 9. How BPM relates to earlier approaches
 
@@ -179,7 +179,7 @@ The group tests BPM through its 2027 focus, AI-native data operations. Sessions 
 - **12 Jul – 20 Sep 2027:** V. Engineering hardness · Design
 - **4 Oct – 1 Nov 2027:** VI. Operational liveness · Evolve
 
-Ways to take part: [offer a talk](https://npc.here.now/protocolvision/research/#speak), carry a [case study](https://npc.here.now/protocolvision/research/cases/) through the year, log protocols with the [protocol watching guide](https://npc.here.now/protocolvision/play/watching/), or [suggest or challenge a reading](https://npc.here.now/protocolvision/sessions/#suggest). The full plan is on [Sessions](https://npc.here.now/protocolvision/sessions/).
+Ways to take part: [offer a talk](https://protocolsforbusiness.com/research/#speak), carry a [case study](https://protocolsforbusiness.com/research/cases/) through the year, log protocols with the [protocol watching guide](https://protocolsforbusiness.com/play/watching/), or [suggest or challenge a reading](https://protocolsforbusiness.com/sessions/#suggest). The full plan is on [Sessions](https://protocolsforbusiness.com/sessions/).
 
 ## 11. Sources
 
