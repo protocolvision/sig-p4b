@@ -2,7 +2,7 @@
 
 - Quiet, text-first site in the style of personhoodresearchgroup.isthisa.com. Don't add hero sections, cards, JS, or heavy branding.
 - PI brand kit is applied *lightly* through the tokens in `style.css`. Change the tokens rather than adding colors inline.
-- All links must be relative (served at npc.here.now/protocolvision/).
+- All links must be relative (served at protocolsforbusiness.com/).
 - Never name the construction client or give its bid figures. Water case links point to public reports only.
 - After editing, run `./deploy.sh`, then commit and push.
 - Three tracks: readings (perspectives), observations (reps, ~100/yr), case studies (heavy lifts, encouraged for every member). Keep all three pages in sync when changing dates or parts.
@@ -17,5 +17,5 @@
 - `hype/` is a generated parody snapshot (noindex), exported from the local `hype` branch/worktree with `tools/export_hype.sh` there. Never edit it by hand; re-export, then `./deploy.sh`.
 - Speakers and rescheduling: `tools/slots.json` is the only place to edit. Each date has a `feature` (`Guest: Name (talk title)` for a guest, `Open guest slot: offer a talk`, `Tooling demo: …`, `Case study catch-up: …`) and optional `links` (`{"Name": url, "first word of title": url}`). To schedule a speaker, replace an open slot; to reschedule, swap two features. Readings stay on their dates (they follow themes.json order). Then run `tools/build_schedule.py` and `./deploy.sh`: the theme drop-downs, guest lines, next-session box (sessions.json), calendar, JSON-LD and the open-slot count on Research all update together. `hype/` is a separate snapshot and only changes when re-exported.
 - Forms that post to the group's Discord channel (via the Worker's `DISCORD_WEBHOOK` secret, nothing stored): "Offer a talk" (`[data-talk]`, `/talk`) and "Request advisory services" (`[data-advisory]`, `/advisory`). Both are defined in `assets/site.js` with the `inquiry()` helper; add a new one there plus a route in `worker/src/index.ts`, then `npx wrangler deploy` in `worker/`.
-- Session emails: send from Gmail with recipients in BCC, and link the general unsubscribe page https://npc.here.now/protocolvision/unsubscribe/ in the footer. It posts to the Worker's `POST /unsubscribe`. Drafts live in `sources/emails/` (not committed).
+- Session emails: send from Gmail with recipients in BCC, and link the general unsubscribe page https://protocolsforbusiness.com/unsubscribe/ in the footer. It posts to the Worker's `POST /unsubscribe`. Drafts live in `sources/emails/` (not committed).
 - SEO: `tools/build_site.py` adds canonical, breadcrumbs JSON-LD and (with `"noindex": true` in front matter) a robots noindex; `tools/build_sitemap.py` writes `sitemap.xml` and `robots.txt` from `config.json`. Every page needs one H1 and its own `desc`. Domain move steps: README, "Search and the move to a new domain".

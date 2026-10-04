@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Publish the site to here.now and mount it at npc.here.now/protocolvision.
+# Build the site, publish it to Cloudflare at protocolsforbusiness.com, and keep the old here.now address redirecting.
 set -euo pipefail
 cd "$(dirname "$0")"
 SLUG_FILE=.herenow-slug
@@ -10,19 +10,24 @@ python3 tools/build_site.py
 python3 tools/build_blyg.py
 python3 tools/build_sitemap.py
 python3 tools/blyg_check.py
-OUT=$(mktemp -d)
-rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'sources' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' ./ "$OUT/"
-# Bust the CDN/browser cache for the stylesheet on every deploy.
+# 1) The site, built into dist/ and served by Cloudflare at protocolsforbusiness.com (site/wrangler.jsonc).
+SITE=$(python3 -c "import json;print(json.load(open('config.json'))['site'])")
+rm -rf dist && mkdir dist
+rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'site' --exclude 'dist' --exclude 'sources' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' --exclude 'node_modules' ./ dist/
+# Bust the CDN/browser cache for the stylesheet and script on every deploy.
 V=$(date +%s)
-find "$OUT" -name '*.html' -exec perl -pi -e "s|style\.css\"|style.css?v=$V\"|; s|site\.js\"|site.js?v=$V\"|" {} +
+find dist -name '*.html' -exec perl -pi -e "s|style\.css\"|style.css?v=$V\"|; s|site\.js\"|site.js?v=$V\"|" {} +
+(cd site && npx wrangler deploy)
+
+# 2) The old address, npc.here.now/protocolvision: every page redirects to the same page on the new
+#    domain; calendar, feeds, data and Markdown files stay as they are so subscriptions keep working.
+OUT=$(mktemp -d)
+rsync -a --exclude '*.html' dist/ "$OUT/"
+find dist -name '*.html' | while read -r f; do
+  rel=${f#dist/}; path=${rel%index.html}; mkdir -p "$OUT/$(dirname "$rel")"
+  printf '<!doctype html><meta charset="utf-8"><title>Moved</title>\n<meta http-equiv="refresh" content="0; url=%s%s">\n<link rel="canonical" href="%s%s">\n<p>This page moved to <a href="%s%s">%s%s</a>.</p>\n' "$SITE" "$path" "$SITE" "$path" "$SITE" "$path" "$SITE" "$path" > "$OUT/$rel"
+done
 if [[ -f $SLUG_FILE ]]; then
   "$PUBLISH" "$OUT" --slug "$(cat $SLUG_FILE)" --client claude-code
-else
-  URL=$("$PUBLISH" "$OUT" --client claude-code | tail -1)
-  SLUG=$(echo "$URL" | sed -E 's#https://([^.]+)\.here\.now/?#\1#')
-  echo "$SLUG" > $SLUG_FILE
-  curl -sS https://here.now/api/v1/links -H "Authorization: Bearer $(cat ~/.herenow/credentials)" \
-    -H "Content-Type: application/json" -d "{\"location\":\"protocolvision\",\"slug\":\"$SLUG\"}"
-  echo
 fi
-echo "Live: https://npc.here.now/protocolvision/"
+echo "Live: $SITE (old address redirects: https://npc.here.now/protocolvision/)"

@@ -8,8 +8,8 @@
     { "binding": "SIGNUPS", "id": "78a345f4c750428890b6a12a9283326b" }
   ],
   "vars": {
-    "SITE": "https://npc.here.now/protocolvision/",
-    "ALLOWED_ORIGINS": "https://npc.here.now,https://scarlet-rapids-8mbp.here.now,http://localhost:8000,http://127.0.0.1:8000"
+    "SITE": "https://protocolsforbusiness.com/",
+    "ALLOWED_ORIGINS": "https://protocolsforbusiness.com,https://www.protocolsforbusiness.com,https://npc.here.now,https://scarlet-rapids-8mbp.here.now,http://localhost:8000,http://127.0.0.1:8000"
   },
   "observability": { "enabled": true }
   // Secret (set with `npx wrangler secret put EXPORT_SECRET`, never commit):

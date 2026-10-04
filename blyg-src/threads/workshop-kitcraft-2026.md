@@ -20,7 +20,7 @@ Over four one-hour sessions, participants worked through **Kit → Factory → B
 
 **What didn't.** Discord and GitHub were gates for people who don't already live in them. Expertise ranged from first-time GitHub users to experienced programmers. Four sessions in two days, in a crowded symposium week, was too compressed. The first session carried too much theory, which left too little time for choosing a project. The first exercise had a bug: assistants surveyed participants instead of reading their own history. And recording depended on manual commands, so only two of the four plenaries were captured.
 
-**The bridge stayed open, and that is the finding.** Individual tooling is getting easy, and getting several people's setups to work together is where the difficulty is. That is the same question our [research](https://npc.here.now/protocolvision/research/) asks about agents in organizations.
+**The bridge stayed open, and that is the finding.** Individual tooling is getting easy, and getting several people's setups to work together is where the difficulty is. That is the same question our [research](https://protocolsforbusiness.com/research/) asks about agents in organizations.
 
 **Next time.** Show-and-tell first, then theory, then more show-and-tell. Inventory, then choose a project, then build it, at one session a day over a calmer week. Plan on about three facilitators for ten attendees, because learning AI is closer to an apprenticeship than a course. Grow through an apprenticeship ladder: come to one workshop, then help facilitate the next. The full [facilitator retrospective](https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/feedback/2026-09-facilitator-retro.md) is in the repo.
 :::

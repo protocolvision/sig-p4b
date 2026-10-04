@@ -1,5 +1,5 @@
 /**
- * sig-p4b-signup — session sign-ups for npc.here.now/protocolvision
+ * sig-p4b-signup — session sign-ups for protocolsforbusiness.com
  *
  * Stores name, email, affiliation, website, GitHub and Discord handles in KV so the facilitators can export
  * the list and send reading prep before each session.
@@ -38,8 +38,10 @@ interface Signup {
 }
 
 // Defaults; a deployment overrides them with SITE and ALLOWED_ORIGINS in wrangler.jsonc "vars".
-let SITE = "https://npc.here.now/protocolvision/";
+let SITE = "https://protocolsforbusiness.com/";
 let ALLOWED_ORIGINS = [
+  "https://protocolsforbusiness.com",
+  "https://www.protocolsforbusiness.com",
   "https://npc.here.now",
   "https://scarlet-rapids-8mbp.here.now",
   "http://localhost:8000",

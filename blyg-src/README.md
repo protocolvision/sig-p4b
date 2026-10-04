@@ -1,7 +1,7 @@
 # Contributing to the blyg
 
 The blyg holds the group's session notes and running research log. It is published at
-https://npc.here.now/protocolvision/blyg/ with the [Blygger protocol](https://blygger.org/) 0.3:
+https://protocolsforbusiness.com/blyg/ with the [Blygger protocol](https://blygger.org/) 0.3:
 plain files plus an RSS feed that anyone can follow.
 
 Anyone with write access to this repo can publish. **A commit is a publish.**
