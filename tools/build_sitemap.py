@@ -10,7 +10,7 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = json.loads((ROOT / "config.json").read_text())["site"]
-SKIP_DIRS = {".git", "drafts", "src", "tools", "worker", "sources", "blyg-src", "hype", "node_modules"}
+SKIP_DIRS = {".git", "drafts", "src", "tools", "worker", "site", "dist", "sources", "blyg-src", "hype", "node_modules"}
 
 def indexable(f):
     head = f.read_text(errors="ignore")[:6000]

@@ -137,7 +137,7 @@ def main():
         m = re.match(r"\s*<!--\s*(\{.*?\})\s*-->\s*", text, re.S)
         assert m, f"{src.name}: missing front matter"
         meta = json.loads(m.group(1))
-        out = ROOT / meta["path"] / "index.html"
+        out = ROOT / meta["output"] if meta.get("output") else ROOT / meta["path"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page(meta, text[m.end():]))
         if meta.get("markdown"):   # a Markdown copy for agents, links made absolute
