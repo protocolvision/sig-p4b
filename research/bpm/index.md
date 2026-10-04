@@ -21,6 +21,7 @@ Companies that work well with AI build a few strict rules into their systems and
 - **Free:** Anything left to the people or agents doing the work.
 - **Hard core:** The small set of hard protocols that everything else relies on.
 - **Hardness map:** A table that sorts a business’s protocols into hard, soft and free, and names who may change each one.
+- **Amendment rule:** The written way a hard protocol may be changed: who may propose a change, the criteria it must meet, who decides, and who may stop the work.
 - **Field log:** One shared record that systems, people and agents write as they work, including the reason for each action.
 - **Non-event:** A problem that did not happen because a protocol worked: the error caught, the dispute that never started.
 - **Agent:** AI software that takes actions on its own, such as sending a message, changing a record or calling another system.
@@ -64,15 +65,20 @@ The group’s research rests on three assumptions. Each could turn out partial o
 4. **Record the reason at the moment of action.** A change can’t ship without its reason, and an agent records the instruction it acted on.
 5. **Don’t blame people for what the record shows.** Blame produces empty reasons and workarounds. Give credit for surfacing what works as much as for flagging what broke.
 6. **Manage tensions; don’t try to settle them.** Speed pulls against reliability, sales against finance. A good protocol turns the pull from each side into progress on both.
-7. **Change the core by a written rule.** Each hard protocol names who may change it, how, and who may stop the work.
+7. **Change the core by a written rule.** Each hard protocol names who may change it, how, and who may stop the work. Publish the criteria a change must meet before anyone proposes one, and look hardest at changes that move value toward whoever proposes them.
 8. **Count what didn’t go wrong.** Good protocols produce non-events. Measure them next to speed and growth.
+9. **Design the core as a protocol, not a product.** Inside a team, aim at outcomes. At the hard core, specify what others may rely on and leave what they build unspecified. A core rule succeeds when others do useful things nobody planned.
+10. **Don’t charge tolls at the core.** An extra sign-off, an internal fee or a claim on credit, added to a hard protocol, taxes every team and agent that uses it. Judge a protocol’s owner by how much others build on it.
+11. **Write the purpose into the rule.** Agents, and in time people, do whatever a rule permits. A norm doesn’t bind an agent. If a use would defeat a rule’s purpose, the rule has to forbid it in its own terms.
+
+Principles 9 to 11 draw on a note on protocol thinking that puts it plainly: “Every outcome specified is a move taken off the board for someone else,” and “If the spirit isn’t encoded in the letter, it doesn’t exist.”
 
 ## 5. Roles and responsibilities
 
 Suggested roles. A small company may give several to one person.
 
 - **Sponsor:** Chooses the problem or opportunity, backs the hard core, and protects the no-blame record.
-- **Protocol owner:** Owns one hard protocol (for example the finance lead for payment limits), and applies its amendment rule.
+- **Protocol owner:** Owns one hard protocol (for example the finance lead for payment limits), and applies its amendment rule. Judged by how much others build on the protocol, not by credit for what they build.
 - **Platform team:** Builds the field log and the checks into the systems, so the rules run without anyone deciding each time.
 - **Teams and agents:** Do the work freely inside the core, and record why they act.
 - **Anyone:** May stop the work when a hard protocol is about to be broken.
@@ -101,9 +107,9 @@ Suggested roles. A small company may give several to one person.
 - **Inputs:** The protocol list and field log from Phase 1.
 - **Steps:** 
    5. Name the tensions that matter for growth. Write each as “X vs. Y” and note where the balance sits now.
-   6. Draw a hardness map. Sort protocols into hard, soft and free, and keep the hard group small.
-   7. Make the interfaces hard and keep the insides free: what agents can see and do, data agreements, permissions, spending limits, the checks every output must pass, and the field log. Score agents against real results, and keep versions of their models, instructions and inputs.
-   8. Write the amendment rule for each hard protocol: who may change it, how, and who may stop the work.
+   6. Draw a hardness map. Sort protocols into hard, soft and free, and keep the hard group small. For agents, a soft protocol works like a free one: an agent follows what the system enforces, not the norm. If a soft rule matters for agents, make it hard.
+   7. Make the interfaces hard and keep the insides free: what agents can see and do, data agreements, permissions, spending limits, the checks every output must pass, and the field log. Score agents against real results, and keep versions of their models, instructions and inputs. Specify what others may rely on, not what they should build.
+   8. Write the amendment rule for each hard protocol: who may change it, how, and who may stop the work. Include the criteria a change must meet, published before anyone proposes one. The more parties rely on a rule, the higher the bar.
 - **Outputs:** A hardness map and amendment rules, built into systems where possible.
 - **Done when:** Every hard protocol has an owner, a place it lives, and a written way to change it.
 
@@ -126,7 +132,7 @@ An example for a company adopting AI agents. For each protocol, note the tension
 - **Purpose:** Run the design, learn from it, and amend the core as the business grows.
 - **Inputs:** The hardness map, the field log, and the measures in section 7.
 - **Steps:** 
-   9. Measure growth and non-events together.
+   9. Measure growth and non-events together, and log every use that fits a rule’s letter but not its purpose. Each one is an amendment to make, not a person to blame.
    10. Decide where judgment sits between people and agents, check it cheaply, and record it where others can see it.
    11. Promote and demote. Make a free pattern hard when it keeps paying off. Soften a hard rule when it blocks good work.
    12. Write up what worked and what failed, and share it beyond the company.
@@ -139,6 +145,8 @@ An example for a company adopting AI agents. For each protocol, note the tension
 - **Autonomy granted:** Which decisions agents and teams now make without approval.
 - **Time to connect:** How long it takes to add a new agent or partner.
 - **Non-events:** Problems that stopped happening, and near-misses caught.
+- **Unplanned uses:** Things teams, agents or partners built on a hard protocol that nobody specified. The best evidence that the core widens what others can do.
+- **Exploits:** Uses that fit a rule’s letter but not its purpose. Each should lead to an amendment.
 - **Gamed targets:** Measures that people or agents have learned to hit without the result they stand for.
 
 ## 8. Worked example: California water rate data
@@ -163,6 +171,7 @@ Other cases: [construction procurement protocols](https://protocolsforbusiness.c
 - **Agile, DevOps, site reliability:** Keeps: Small iterations, no-blame reviews, automated checks. Changes: Applies the same thinking to the whole company, not only software delivery.
 - **Paradox management (Smith and Lewis):** Keeps: Some tensions are managed, never solved. Changes: Puts the managing into protocols that run without anyone deciding each time.
 - **Safety-critical industries (aviation, nuclear):** Keeps: The whole loop: reporting, no-blame investigation, checklists, the right to stop. Changes: Applies it at business stakes, to agents as well as people, and to finding opportunities, not only preventing harm.
+- **Product management:** Keeps: Clear goals and fast iteration inside each team. Changes: Product thinking picks a target state and steers toward it. At the hard core, BPM leaves what gets built unspecified, so others can do things no one could name in advance.
 - **Platforms:** Keeps: Coordinating large numbers of people and businesses. Changes: Coordination through shared rules anyone can use, not through one owner.
 - **AI “alignment”:** Keeps: Caring how AI behaves at work. Changes: Shapes the agent’s environment rather than its values.
 
@@ -186,6 +195,7 @@ Ways to take part: [offer a talk](https://protocolsforbusiness.com/research/#spe
 - Haynes, Alex B., et al. “A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population.” *New England Journal of Medicine* 360, no. 5 (2009): 491–99.
 - Hammer, Michael. “[Reengineering Work: Don’t Automate, Obliterate](https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate).” *Harvard Business Review*, July 1990.
 - Leveson, Nancy G., and Clark S. Turner. “[An Investigation of the Therac-25 Accidents](https://dl.acm.org/doi/10.1109/MC.1993.274940).” *IEEE Computer* 26, no. 7 (1993).
+- msweet.net. “[Notes, 106](https://msweet.net/notes/106-cream-pikes),” version 2, 4 October 2026. On protocol thinking against product thinking.
 - Perrow, Charles. *Normal Accidents: Living with High-Risk Technologies*. Princeton University Press, 1984.
 - Rao, Venkatesh. “[In Search of Hardness](https://contraptions.venkateshrao.com/p/in-search-of-hardness)” and “[Massed Muddler Intelligence](https://contraptions.venkateshrao.com/p/massed-muddler-intelligence).” *Contraptions*.
 - Smith, Wendy K., and Marianne W. Lewis. “[Toward a Theory of Paradox](https://doi.org/10.5465/amr.2009.0223).” *Academy of Management Review* 36, no. 2 (2011).

@@ -116,6 +116,7 @@
 <li><span class="k">Free</span><div class="v"><p>Anything left to the people or agents doing the work.</p></div></li>
 <li><span class="k">Hard core</span><div class="v"><p>The small set of hard protocols that everything else relies on.</p></div></li>
 <li><span class="k">Hardness map</span><div class="v"><p>A table that sorts a business’s protocols into hard, soft and free, and names who may change each one.</p></div></li>
+<li><span class="k">Amendment rule</span><div class="v"><p>The written way a hard protocol may be changed: who may propose a change, the criteria it must meet, who decides, and who may stop the work.</p></div></li>
 <li><span class="k">Field log</span><div class="v"><p>One shared record that systems, people and agents write as they work, including the reason for each action.</p></div></li>
 <li><span class="k">Non-event</span><div class="v"><p>A problem that did not happen because a protocol worked: the error caught, the dispute that never started.</p></div></li>
 <li><span class="k">Agent</span><div class="v"><p>AI software that takes actions on its own, such as sending a message, changing a record or calling another system.</p></div></li>
@@ -151,15 +152,19 @@
 <li><strong>Record the reason at the moment of action.</strong> <span class="small">A change can’t ship without its reason, and an agent records the instruction it acted on.</span></li>
 <li><strong>Don’t blame people for what the record shows.</strong> <span class="small">Blame produces empty reasons and workarounds. Give credit for surfacing what works as much as for flagging what broke.</span></li>
 <li><strong>Manage tensions; don’t try to settle them.</strong> <span class="small">Speed pulls against reliability, sales against finance. A good protocol turns the pull from each side into progress on both.</span></li>
-<li><strong>Change the core by a written rule.</strong> <span class="small">Each hard protocol names who may change it, how, and who may stop the work.</span></li>
+<li><strong>Change the core by a written rule.</strong> <span class="small">Each hard protocol names who may change it, how, and who may stop the work. Publish the criteria a change must meet before anyone proposes one, and look hardest at changes that move value toward whoever proposes them.</span></li>
 <li><strong>Count what didn’t go wrong.</strong> <span class="small">Good protocols produce non-events. Measure them next to speed and growth.</span></li>
+<li><strong>Design the core as a protocol, not a product.</strong> <span class="small">Inside a team, aim at outcomes. At the hard core, specify what others may rely on and leave what they build unspecified. A core rule succeeds when others do useful things nobody planned.</span></li>
+<li><strong>Don’t charge tolls at the core.</strong> <span class="small">An extra sign-off, an internal fee or a claim on credit, added to a hard protocol, taxes every team and agent that uses it. Judge a protocol’s owner by how much others build on it.</span></li>
+<li><strong>Write the purpose into the rule.</strong> <span class="small">Agents, and in time people, do whatever a rule permits. A norm doesn’t bind an agent. If a use would defeat a rule’s purpose, the rule has to forbid it in its own terms.</span></li>
 </ol>
+<p class="small muted">Principles 9 to 11 draw on a note on protocol thinking that puts it plainly: “Every outcome specified is a move taken off the board for someone else,” and “If the spirit isn’t encoded in the letter, it doesn’t exist.”</p>
 
 <h2 id="roles">5. Roles and responsibilities</h2>
 <p>Suggested roles. A small company may give several to one person.</p>
 <ul class="rows">
 <li><span class="k">Sponsor</span><div class="v"><p>Chooses the problem or opportunity, backs the hard core, and protects the no-blame record.</p></div></li>
-<li><span class="k">Protocol owner</span><div class="v"><p>Owns one hard protocol (for example the finance lead for payment limits), and applies its amendment rule.</p></div></li>
+<li><span class="k">Protocol owner</span><div class="v"><p>Owns one hard protocol (for example the finance lead for payment limits), and applies its amendment rule. Judged by how much others build on the protocol, not by credit for what they build.</p></div></li>
 <li><span class="k">Platform team</span><div class="v"><p>Builds the field log and the checks into the systems, so the rules run without anyone deciding each time.</p></div></li>
 <li><span class="k">Teams and agents</span><div class="v"><p>Do the work freely inside the core, and record why they act.</p></div></li>
 <li><span class="k">Anyone</span><div class="v"><p>May stop the work when a hard protocol is about to be broken.</p></div></li>
@@ -195,9 +200,9 @@
 <li><span class="k">Inputs</span><div class="v"><p>The protocol list and field log from Phase 1.</p></div></li>
 <li><span class="k">Steps</span><div class="v"><ol start="5">
 <li>Name the tensions that matter for growth. Write each as “X vs. Y” and note where the balance sits now.</li>
-<li>Draw a hardness map. Sort protocols into hard, soft and free, and keep the hard group small.</li>
-<li>Make the interfaces hard and keep the insides free: what agents can see and do, data agreements, permissions, spending limits, the checks every output must pass, and the field log. Score agents against real results, and keep versions of their models, instructions and inputs.</li>
-<li>Write the amendment rule for each hard protocol: who may change it, how, and who may stop the work.</li>
+<li>Draw a hardness map. Sort protocols into hard, soft and free, and keep the hard group small. For agents, a soft protocol works like a free one: an agent follows what the system enforces, not the norm. If a soft rule matters for agents, make it hard.</li>
+<li>Make the interfaces hard and keep the insides free: what agents can see and do, data agreements, permissions, spending limits, the checks every output must pass, and the field log. Score agents against real results, and keep versions of their models, instructions and inputs. Specify what others may rely on, not what they should build.</li>
+<li>Write the amendment rule for each hard protocol: who may change it, how, and who may stop the work. Include the criteria a change must meet, published before anyone proposes one. The more parties rely on a rule, the higher the bar.</li>
 </ol></div></li>
 <li><span class="k">Outputs</span><div class="v"><p>A hardness map and amendment rules, built into systems where possible.</p></div></li>
 <li><span class="k">Done when</span><div class="v"><p>Every hard protocol has an owner, a place it lives, and a written way to change it.</p></div></li>
@@ -219,7 +224,7 @@
 <li><span class="k">Purpose</span><div class="v"><p>Run the design, learn from it, and amend the core as the business grows.</p></div></li>
 <li><span class="k">Inputs</span><div class="v"><p>The hardness map, the field log, and the measures in section 7.</p></div></li>
 <li><span class="k">Steps</span><div class="v"><ol start="9">
-<li>Measure growth and non-events together.</li>
+<li>Measure growth and non-events together, and log every use that fits a rule’s letter but not its purpose. Each one is an amendment to make, not a person to blame.</li>
 <li>Decide where judgment sits between people and agents, check it cheaply, and record it where others can see it.</li>
 <li>Promote and demote. Make a free pattern hard when it keeps paying off. Soften a hard rule when it blocks good work.</li>
 <li>Write up what worked and what failed, and share it beyond the company.</li>
@@ -235,6 +240,8 @@
 <li><span class="k">Autonomy granted</span><div class="v"><p>Which decisions agents and teams now make without approval.</p></div></li>
 <li><span class="k">Time to connect</span><div class="v"><p>How long it takes to add a new agent or partner.</p></div></li>
 <li><span class="k">Non-events</span><div class="v"><p>Problems that stopped happening, and near-misses caught.</p></div></li>
+<li><span class="k">Unplanned uses</span><div class="v"><p>Things teams, agents or partners built on a hard protocol that nobody specified. The best evidence that the core widens what others can do.</p></div></li>
+<li><span class="k">Exploits</span><div class="v"><p>Uses that fit a rule’s letter but not its purpose. Each should lead to an amendment.</p></div></li>
 <li><span class="k">Gamed targets</span><div class="v"><p>Measures that people or agents have learned to hit without the result they stand for.</p></div></li>
 </ul>
 
@@ -261,6 +268,7 @@
 <li><span class="k">Agile, DevOps, site reliability</span><div class="v"><p><span class="muted">Keeps:</span> Small iterations, no-blame reviews, automated checks.</p><p><span class="muted">Changes:</span> Applies the same thinking to the whole company, not only software delivery.</p></div></li>
 <li><span class="k">Paradox management (Smith and Lewis)</span><div class="v"><p><span class="muted">Keeps:</span> Some tensions are managed, never solved.</p><p><span class="muted">Changes:</span> Puts the managing into protocols that run without anyone deciding each time.</p></div></li>
 <li><span class="k">Safety-critical industries (aviation, nuclear)</span><div class="v"><p><span class="muted">Keeps:</span> The whole loop: reporting, no-blame investigation, checklists, the right to stop.</p><p><span class="muted">Changes:</span> Applies it at business stakes, to agents as well as people, and to finding opportunities, not only preventing harm.</p></div></li>
+<li><span class="k">Product management</span><div class="v"><p><span class="muted">Keeps:</span> Clear goals and fast iteration inside each team.</p><p><span class="muted">Changes:</span> Product thinking picks a target state and steers toward it. At the hard core, BPM leaves what gets built unspecified, so others can do things no one could name in advance.</p></div></li>
 <li><span class="k">Platforms</span><div class="v"><p><span class="muted">Keeps:</span> Coordinating large numbers of people and businesses.</p><p><span class="muted">Changes:</span> Coordination through shared rules anyone can use, not through one owner.</p></div></li>
 <li><span class="k">AI “alignment”</span><div class="v"><p><span class="muted">Keeps:</span> Caring how AI behaves at work.</p><p><span class="muted">Changes:</span> Shapes the agent’s environment rather than its values.</p></div></li>
 </ul>
@@ -283,6 +291,7 @@
 <li>Haynes, Alex B., et al. “A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population.” <cite>New England Journal of Medicine</cite> 360, no. 5 (2009): 491–99.</li>
 <li>Hammer, Michael. “<a href="https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate" target="_blank" rel="noopener noreferrer">Reengineering Work: Don’t Automate, Obliterate</a>.” <cite>Harvard Business Review</cite>, July 1990.</li>
 <li>Leveson, Nancy G., and Clark S. Turner. “<a href="https://dl.acm.org/doi/10.1109/MC.1993.274940" target="_blank" rel="noopener noreferrer">An Investigation of the Therac-25 Accidents</a>.” <cite>IEEE Computer</cite> 26, no. 7 (1993).</li>
+<li>msweet.net. “<a href="https://msweet.net/notes/106-cream-pikes" target="_blank" rel="noopener noreferrer">Notes, 106</a>,” version 2, 4 October 2026. On protocol thinking against product thinking.</li>
 <li>Perrow, Charles. <cite>Normal Accidents: Living with High-Risk Technologies</cite>. Princeton University Press, 1984.</li>
 <li>Rao, Venkatesh. “<a href="https://contraptions.venkateshrao.com/p/in-search-of-hardness" target="_blank" rel="noopener noreferrer">In Search of Hardness</a>” and “<a href="https://contraptions.venkateshrao.com/p/massed-muddler-intelligence" target="_blank" rel="noopener noreferrer">Massed Muddler Intelligence</a>.” <cite>Contraptions</cite>.</li>
 <li>Smith, Wendy K., and Marianne W. Lewis. “<a href="https://doi.org/10.5465/amr.2009.0223" target="_blank" rel="noopener noreferrer">Toward a Theory of Paradox</a>.” <cite>Academy of Management Review</cite> 36, no. 2 (2011).</li>
