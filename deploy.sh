@@ -27,7 +27,11 @@ find dist -name '*.html' | while read -r f; do
   rel=${f#dist/}; path=${rel%index.html}; mkdir -p "$OUT/$(dirname "$rel")"
   printf '<!doctype html><meta charset="utf-8"><title>Moved</title>\n<meta http-equiv="refresh" content="0; url=%s%s">\n<link rel="canonical" href="%s%s">\n<p>This page moved to <a href="%s%s">%s%s</a>.</p>\n' "$SITE" "$path" "$SITE" "$path" "$SITE" "$path" "$SITE" "$path" > "$OUT/$rel"
 done
-if [[ -f $SLUG_FILE ]]; then
+# Only with a here.now key (local credentials file or HERENOW_API_KEY); without one, skip rather than
+# publish anonymously.
+if [[ -f $SLUG_FILE ]] && { [[ -n "${HERENOW_API_KEY:-}" ]] || [[ -f "$HOME/.herenow/credentials" ]]; }; then
   "$PUBLISH" "$OUT" --slug "$(cat $SLUG_FILE)" --client claude-code
+else
+  echo "No here.now key; the old address was not updated."
 fi
 echo "Live: $SITE (old address redirects: https://npc.here.now/protocolvision/)"

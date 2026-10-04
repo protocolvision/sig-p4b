@@ -33,8 +33,10 @@ The repo is meant to be the group's single source of truth, with more flows adde
    here automatically: a session-notes thread on the blyg and a link in the Sessions archive.
 3. **Production domain.** Move from the npc.here.now staging mount to a permanent domain. The blyg's
    origin URL is its identity, so this should happen before the feed is announced widely.
-4. **Auto-publish from GitHub.** Add the here.now key as a repository secret so merges to `main`
-   publish without a local deploy.
+4. **Auto-publish from GitHub.** Done: every push to `main` builds, checks and publishes. The workflow
+   needs three repository secrets: `CLOUDFLARE_API_TOKEN` (a token from the "Edit Cloudflare Workers"
+   template, limited to this account and the protocolsforbusiness.com zone), `CLOUDFLARE_ACCOUNT_ID`, and
+   `HERENOW_API_KEY` (for the redirects at the old address).
 
 ## Layout
 
