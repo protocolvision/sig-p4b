@@ -10,11 +10,14 @@ import html, json, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+import datetime as _dt
+YEAR = _dt.date.today().year
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
+CALENDAR = "https://calendar.google.com/calendar/u/0/r?cid=hello@summerofprotocols.com&amp;cid=c_9ba26af3b621a8cc31de65c2e87988ea2b4a90837d042320a9eb39e1dd9a2949@group.calendar.google.com"
 NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
              "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training"}
@@ -121,9 +124,19 @@ def page(meta, body):
 <main>
 {body.strip()}
 </main>
-<footer>
-<p><img class="mark" src="{rel}favicon.svg" alt="" width="20" height="20">Protocols for Business, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
-<nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision">GitHub</a><a href="https://github.com/protocolvision/sig-p4b">Site source</a><a href="{rel}llms.txt">llms.txt</a></nav>
+<footer aria-label="Site footer">
+<div class="foot-cols">
+<nav aria-labelledby="f-site"><h2 id="f-site">Site</h2><ul>
+<li><a href="{rel}sessions/">Sessions</a></li><li><a href="{rel}research/">Research</a></li><li><a href="{rel}research/bpm/">Practice guide</a></li><li><a href="{rel}about/">About</a></li><li><a href="{rel}blyg/">Blyg</a></li>
+</ul></nav>
+<nav aria-labelledby="f-join"><h2 id="f-join">Take part</h2><ul>
+<li><button type="button" class="link" data-register>Get session emails</button></li><li><a href="{CALENDAR}">Add the calendar</a></li><li><a href="{rel}research/#speak">Offer a talk</a></li><li><a href="{DISCORD}">Discord</a></li><li><a href="{rel}unsubscribe/">Unsubscribe</a></li>
+</ul></nav>
+<nav aria-labelledby="f-open"><h2 id="f-open">Open</h2><ul>
+<li><a href="{rel}blyg/feed.xml">RSS feed</a></li><li><a href="{rel}sig-p4b.ics">Calendar file (.ics)</a></li><li><a href="https://github.com/protocolvision">GitHub</a></li><li><a href="https://github.com/protocolvision/sig-p4b">Site source</a></li><li><a href="{rel}llms.txt">llms.txt for AI agents</a></li>
+</ul></nav>
+</div>
+<p class="foot-line"><span>Protocols for Business, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></span> <span>© {YEAR}</span> <a href="{rel}privacy/">Privacy</a></p>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
 </body>

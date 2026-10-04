@@ -299,3 +299,24 @@ ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 .rows .v ul.plain { list-style: none; padding: 0; margin: .3rem 0 0; }
 .rows .v ul.plain li { margin: 0 0 .5rem; }
 .md-only { display: none; }   /* content kept for the Markdown copy only */
+
+/* footer: grouped columns, a closing line, comfortable tap targets */
+footer { margin-top: 5rem; padding-top: 1.5rem; }
+footer .foot-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem 1.5rem; }
+footer nav { display: block; }
+footer h2 { margin: 0 0 .4rem; font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--fg); }
+footer ul { list-style: none; margin: 0; padding: 0; }
+footer li { margin: 0; }
+footer nav a, footer button.link { display: inline-block; padding: .4rem 0; color: var(--muted); font: inherit; }
+footer button.link { border: 0; background: none; cursor: pointer; text-align: left; }
+footer nav a:hover, footer button.link:hover { color: var(--fg); }
+footer .foot-line { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin: 1.5rem 0 0; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: .85rem; }
+footer .foot-line a { color: inherit; }
+@media (max-width: 34rem) { footer .foot-cols { grid-template-columns: 1fr 1fr; } }
+
+/* advisory box on phones: the drawing sits under the text */
+@media (max-width: 34rem) {
+  .next.ask { display: flex; flex-direction: column; }
+  .next.ask .fig-next { position: static; order: 9; transform: none; width: 100%; max-width: 20rem; margin: 1rem auto 0; opacity: 1; -webkit-mask-image: none; mask-image: none; }
+  .next.ask .small { max-width: none; }
+}
