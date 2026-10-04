@@ -272,7 +272,7 @@ ol.plan ol.sessions .ft b { font-weight: 600; color: var(--fg); }
 .next.ask .kind::after { content: none; }
 .next.ask .what { font-weight: 600; }
 .next.ask .small { margin-top: .25rem; max-width: 58%; }
-.next.ask .fig-next { width: 46%; }
+.next.ask .fig-next { width: 48%; opacity: 1; -webkit-mask-image: linear-gradient(90deg, transparent, #000 30%); mask-image: linear-gradient(90deg, transparent, #000 30%); }
 
 /* unsubscribe page */
 .unsub { max-width: 26rem; }

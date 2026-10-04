@@ -1,344 +1,536 @@
 #!/usr/bin/env python3
-"""Generate the site's line figures into assets/fig/*.svg.
+"""Generate the site's figures into assets/fig/*.svg, as hairline technical drawings.
 
-Quiet, static line drawings in the site's ink and cobalt: a murmuration, a protocol network,
-emissions, fault lines, a hard core with free edges, a heartbeat, quorum sensing. Each one is
-drawn from a fixed seed, so rebuilding gives the same pictures. No scripts, no animation.
+Every figure uses the drafting kit in tools/drafting.py: hairline weights, centre and construction
+lines, dimension lines with architectural ticks, numbered callouts, section hatching, axonometric
+projection and a small title block. Ink and cobalt only. Each figure is drawn from a fixed seed, so
+rebuilding gives the same pictures. No scripts, no animation.
 """
 import math, random
 from pathlib import Path
+from drafting import Sheet, iso, INK, COBALT, MUTED, FAINT, PAPER, HAIR, FINE, MEDIUM, HEAVY
 
 OUT = Path(__file__).resolve().parent.parent / "assets/fig"
-INK, COBALT, FAINT = "#262624", "#004fcc", "#c9c7c0"
+STRIP = 150   # figures this short are strips: no title block, just corner ticks and a label
 
 
-def svg(w, h, body, label):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{label}">'
-            f'<g fill="none" stroke-linecap="round" stroke-linejoin="round">{body}</g></svg>\n')
+def finish(s, n, title, strip_label=None):
+    if s.h <= STRIP and strip_label:
+        for cx, cy, sx, sy in ((4, 4, 1, 1), (s.w - 4, 4, -1, 1), (4, s.h - 4, 1, -1), (s.w - 4, s.h - 4, -1, -1)):
+            s.line(cx, cy, cx + 8 * sx, cy, INK, FINE); s.line(cx, cy, cx, cy + 8 * sy, INK, FINE)
+        s.text(12, s.h - 9, strip_label, 7.5, MUTED, spacing=1)
+    elif s.h > STRIP:
+        s.frame(n, title)
+    return s.svg()
 
 
-def f(x):
-    return f"{x:.1f}"
-
-
-def murmuration(w, h, seed, n=2400):
-    """A flock with a dense, folded core and sharp edges: birds sampled from a density field built along two
-    overlapping curved spines, each bird a short stroke aligned with the local heading."""
+# --- murmuration: a flock of hairline ticks, with its spine and one bird's seven neighbours ----------
+def murmuration(w, h, seed, n=1500, label=None):
     r = random.Random(seed)
-    ph, ph2 = r.random() * 6, r.random() * 6
-    spines = []
-    for k, (x0, x1, amp, wid, phase) in enumerate([(.1, .92, .22, .2, ph), (.3, .78, .16, .12, ph2)]):
-        pts = []
-        for i in range(60):
-            t = i / 59
-            x = w * (x0 + (x1 - x0) * t); y = h * (.5 + amp * math.sin(2.1 * math.pi * t + phase))
-            pts.append((x, y, h * (.03 + wid * math.sin(math.pi * t) ** .8)))
-        spines.append(pts)
+    s = Sheet(w, h, "A murmuration of starlings, with one bird's seven nearest neighbours marked")
+    ph = r.random() * 6
+    spine = []
+    for i in range(70):
+        t = i / 69
+        spine.append((w * (.08 + .84 * t), h * (.48 + .22 * math.sin(2.1 * math.pi * t + ph)), h * (.04 + .17 * math.sin(math.pi * t) ** .8)))
     def field(x, y):
         best, head = 0.0, 0.0
-        for pts in spines:
-            for i, (sx, sy, sw) in enumerate(pts):
-                d2 = (x - sx) ** 2 + ((y - sy) * 1.3) ** 2
-                v = math.exp(-d2 / (2 * sw * sw))
-                if v > best:
-                    j = min(i + 1, len(pts) - 1); k = max(i - 1, 0)
-                    best, head = v, math.atan2(pts[j][1] - pts[k][1], pts[j][0] - pts[k][0])
+        for i, (sx, sy, sw) in enumerate(spine):
+            v = math.exp(-((x - sx) ** 2 + ((y - sy) * 1.3) ** 2) / (2 * sw * sw))
+            if v > best:
+                j, k = min(i + 1, 69), max(i - 1, 0)
+                best, head = v, math.atan2(spine[j][1] - spine[k][1], spine[j][0] - spine[k][0])
         return best, head
-    out, tries = [], 0
-    while len(out) < n and tries < n * 40:
+    birds, tries = [], 0
+    while len(birds) < n and tries < n * 40:
         tries += 1
-        x, y = r.random() * w, r.random() * h
+        x, y = r.random() * w, r.random() * h * .92
         v, head = field(x, y)
-        if r.random() > 1 / (1 + math.exp(-(v - .45) * 14)):   # a sigmoid gives the flock a crisp edge
-            continue
-        a = head + r.gauss(0, .18); L = 2.2 + r.random() * 1.8
-        col = COBALT if r.random() < .015 else INK
-        out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{col}" stroke-width="1.25" opacity="{min(1, .45 + v * .6):.2f}"/>')
-    return svg(w, h, "".join(out), "A murmuration of starlings, drawn as small aligned strokes")
+        if r.random() < 1 / (1 + math.exp(-(v - .45) * 14)):
+            birds.append((x, y, head + r.gauss(0, .16), v))
+    for i in range(0, 69, 1):   # the flock's spine as a centre line
+        pass
+    s.path([(x, y) for x, y, _ in spine[::3]], MUTED, HAIR, "14 3 2 3")
+    for x, y, a, v in birds:
+        L = 2.2 + v * 2
+        s.line(x, y, x + math.cos(a) * L, y + math.sin(a) * L, INK, .7, op=round(.35 + .6 * v, 2))
+    if h > STRIP and birds:
+        bx, by, _, _ = max(birds, key=lambda b: b[3] - abs(b[0] - w * .45) / w)
+        near = sorted(birds, key=lambda b: (b[0] - bx) ** 2 + (b[1] - by) ** 2)[1:8]
+        rad = max(math.hypot(b[0] - bx, b[1] - by) for b in near)
+        s.circle(bx, by, rad + 3, COBALT, HAIR, dash="2 2")
+        for b in near:
+            s.line(bx, by, b[0], b[1], COBALT, HAIR)
+        s.dot(bx, by, 2.2, COBALT)
+        s.callout(bx + rad * .7, by - rad * .7, 1, bx + 60, by - 70, INK, "EACH BIRD TRACKS ~7 NEIGHBOURS")
+        s.dim(spine[5][0], h * .9, spine[64][0], h * .9, "ONE FLOCK · NO LEADER", -8)
+    return finish(s, 1, "Murmuration", label)
 
 
-def network(w, h, seed, n=22):
+# --- network: agents as numbered nodes, messages as arrows on the edges -------------------------------
+def network(w, h, seed, n=20, label=None):
     r = random.Random(seed)
-    pts = [(24 + r.random() * (w - 48), 18 + r.random() * (h - 36)) for _ in range(n)]
+    s = Sheet(w, h, "Agents as numbered nodes, with messages moving along the connections between them")
+    pad = 30
+    pts = []
+    while len(pts) < n:
+        p = (pad + r.random() * (w - 2 * pad), pad * .7 + r.random() * (h - 2.4 * pad))
+        if all(math.hypot(p[0] - q[0], p[1] - q[1]) > 46 for q in pts):
+            pts.append(p)
     edges = set()
     for i, (x, y) in enumerate(pts):
-        near = sorted(range(n), key=lambda j: (pts[j][0] - x) ** 2 + (pts[j][1] - y) ** 2)[1:4]
-        for j in near: edges.add(tuple(sorted((i, j))))
-    out = []
-    for i, j in sorted(edges):
+        for j in sorted(range(n), key=lambda j: (pts[j][0] - x) ** 2 + (pts[j][1] - y) ** 2)[1:4]:
+            edges.add(tuple(sorted((i, j))))
+    edges = sorted(edges)
+    for i, j in edges:
+        s.line(*pts[i], *pts[j], INK, HAIR)
+    for i, j in r.sample(edges, min(8, len(edges))):
         (x1, y1), (x2, y2) = pts[i], pts[j]
-        out.append(f'<path d="M{f(x1)} {f(y1)}L{f(x2)} {f(y2)}" stroke="{FAINT}" stroke-width="1"/>')
-    for i, j in r.sample(sorted(edges), min(7, len(edges))):   # messages in flight
-        (x1, y1), (x2, y2) = pts[i], pts[j]; u = .3 + r.random() * .4
-        out.append(f'<path d="M{f(x1)} {f(y1)}L{f(x1 + (x2 - x1) * u)} {f(y1 + (y2 - y1) * u)}" stroke="{COBALT}" stroke-width="1.6"/>')
-        out.append(f'<rect x="{f(x1 + (x2 - x1) * u - 2.5)}" y="{f(y1 + (y2 - y1) * u - 2.5)}" width="5" height="5" fill="{COBALT}" stroke="none"/>')
-    for x, y in pts:
-        out.append(f'<rect x="{f(x - 4)}" y="{f(y - 4)}" width="8" height="8" stroke="{INK}" stroke-width="1.3" fill="#fff"/>')
-    return svg(w, h, "".join(out), "Agents as nodes, with messages moving along the connections between them")
+        u = .35 + r.random() * .3; mx, my = x1 + (x2 - x1) * u, y1 + (y2 - y1) * u
+        s.line(x1, y1, mx, my, COBALT, FINE); s.arrow(mx, my, math.atan2(y2 - y1, x2 - x1), 6, COBALT)
+    for k, (x, y) in enumerate(pts):
+        s.rect(x - 4.5, y - 4.5, 9, 9, INK, FINE, fill=PAPER)
+        if h > STRIP:
+            s.text(x + 8, y - 6, f"A{k + 1:02d}", 7, MUTED, spacing=.4)
+    if h > STRIP:
+        a, b = edges[0]
+        s.callout(*pts[a], 1, pts[a][0] + 30, pts[a][1] + 40, INK, "AGENT")
+        i, j = edges[len(edges) // 2]
+        mx, my = (pts[i][0] + pts[j][0]) / 2, (pts[i][1] + pts[j][1]) / 2
+        s.callout(mx, my, 2, mx + 40, my + 34, INK, "CONNECTION · WHAT THEY CAN READ AND WRITE")
+    return finish(s, 2, "Agent network", label)
 
 
-def emissions(w, h, seed):
+# --- emissions: sources, rings dimensioned by time, the readers they reach ----------------------------
+def emissions(w, h, seed, label=None):
     r = random.Random(seed)
-    out, dots = [], [(r.random() * w, r.random() * h) for _ in range(260)]
-    srcs = [(w * (.2 + .6 * r.random()), h * (.25 + .5 * r.random())) for _ in range(3)]
+    s = Sheet(w, h, "Signals spreading in rings from a few sources; the readers they reach are marked")
+    srcs = [(w * (.18 + .64 * k / 2 + r.uniform(-.04, .04)), h * (.42 + r.uniform(-.08, .08))) for k in range(3)]
     rings = []
-    for sx, sy in srcs:
-        for k in range(1, 5):
-            rad = k * h * .16
+    for k, (sx, sy) in enumerate(srcs):
+        s.centerline(sx - h * .55, sy, sx + h * .55, sy) if h > STRIP else None
+        for t in range(1, 5):
+            rad = t * h * .14
             rings.append((sx, sy, rad))
-            out.append(f'<circle cx="{f(sx)}" cy="{f(sy)}" r="{f(rad)}" stroke="{INK}" stroke-width="1" opacity="{1 - k * .2:.2f}"/>')
-        out.append(f'<rect x="{f(sx - 4)}" y="{f(sy - 4)}" width="8" height="8" fill="{INK}" stroke="none"/>')
-    for x, y in dots:
-        hit = any(abs(math.hypot(x - sx, y - sy) - rad) < 3 for sx, sy, rad in rings)
-        out.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="{2.2 if hit else 1.2}" fill="{COBALT if hit else FAINT}" stroke="none"/>')
-    return svg(w, h, "".join(out), "Signals spreading in rings from a few sources; the readers they reach light up")
+            s.circle(sx, sy, rad, INK, HAIR, dash=None if t % 2 else "3 3", op=round(1 - t * .16, 2))
+        s.rect(sx - 4, sy - 4, 8, 8, INK, FINE, fill=INK)
+    for _ in range(220):
+        x, y = r.random() * w, r.random() * h * .9
+        hit = any(abs(math.hypot(x - sx, y - sy) - rad) < 2.5 for sx, sy, rad in rings)
+        if hit:
+            s.circle(x, y, 2.6, COBALT, FINE); s.dot(x, y, 1, COBALT)
+        else:
+            s.dot(x, y, .9, MUTED, .7)
+    if h > STRIP:
+        sx, sy = srcs[0]
+        s.dim(sx, sy, sx + 3 * h * .14, sy, "t = 3", -h * .3)
+        s.callout(sx, sy, 1, sx - 50, sy - 70, INK, "SOURCE")
+        s.callout(*srcs[1], 2, srcs[1][0] + 60, srcs[1][1] - 74, INK, "WHAT IT EMITS")
+    return finish(s, 3, "Emissions", label)
 
 
-def faults(w, h, seed):
-    """An orderly grid of blocks, and a crack that runs across it, tapering and branching as it goes."""
+# --- faults: an orderly grid, a crack through it, a section line A-A ----------------------------------
+def faults(w, h, seed, label=None):
     r = random.Random(seed)
-    out = []
-    for gx in range(0, int(w), 28):
-        for gy in range(0, int(h), 28):
-            out.append(f'<rect x="{gx + 4}" y="{gy + 4}" width="20" height="20" stroke="{FAINT}" stroke-width="1"/>')
-    y0 = h * (.35 + .3 * r.random())
-    tips, segs, branches = [(0.0, y0, 0.0, 2.8, 10 ** 6)], [], 0   # (x, y, heading, width, steps left)
+    s = Sheet(w, h, "A crack running across an orderly grid of blocks, with a section line through it")
+    step = 26
+    for gx in range(14, int(w) - 10, step):
+        for gy in range(14, int(h) - 26, step):
+            s.rect(gx, gy, step - 6, step - 6, FAINT, HAIR)
+    y0 = h * (.35 + .25 * r.random())
+    tips, segs, branches = [(14.0, y0, 0.0, 2.2, 10 ** 6)], [], 0
     while tips:
         x, y, a, sw, life = tips.pop()
         main = life > 10 ** 5
-        while life > 0 and 0 <= x < w and 0 < y < h:
-            a2 = a + r.gauss(0, .42); x2, y2 = x + math.cos(a2) * 6, y + math.sin(a2) * 6
+        while life > 0 and 0 <= x < w - 14 and 12 < y < h - 28:
+            a2 = a + r.gauss(0, .42); x2, y2 = x + math.cos(a2) * 5, y + math.sin(a2) * 5
             segs.append((x, y, x2, y2, sw)); x, y, life = x2, y2, life - 1
-            pull = (h / 2 - y) / h * .8 if main else 0   # the main crack drifts right and stays in frame
-            a = a2 * .8 + pull
-            if not main: sw *= .97
+            a = a2 * .8 + ((h / 2 - y) / h * .8 if main else 0)
+            if not main: sw *= .96
             if main and r.random() < .025 and branches < 7:
                 branches += 1; tips.append((x, y, a + r.choice([-1.0, 1.0]) * (.6 + r.random() * .5), sw * .5, r.randint(8, 22)))
     for x, y, x2, y2, sw in segs:
-        out.append(f'<path d="M{f(x)} {f(y)}L{f(x2)} {f(y2)}" stroke="{INK}" stroke-width="{sw:.2f}"/>')
-    out.append(f'<circle cx="6" cy="{f(y0)}" r="5" fill="{COBALT}" stroke="none"/>')
-    return svg(w, h, "".join(out), "A crack running across an orderly grid of blocks and branching as it goes")
+        s.line(x, y, x2, y2, INK, round(sw * .7, 2))
+    if h > STRIP:
+        # the blocks the crack passes through are cut: hatch them like a section
+        cut = set()
+        for x, y, *_ in segs[::3]:
+            cut.add((int((x - 14) // step), int((y - 14) // step)))
+        hatch = s.hatch(4, 45, INK, .4)
+        for cx, cy in cut:
+            gx, gy = 14 + cx * step, 14 + cy * step
+            if gx < w - 20 and gy < h - 30:
+                s.rect(gx, gy, step - 6, step - 6, INK, HAIR, fill=hatch)
+        sxl = w * .62
+        s.centerline(sxl, 10, sxl, h - 30, INK)
+        for yy, lab in ((16, "A"), (h - 36, "A")):
+            s.arrow(sxl - 10, yy, math.pi, 6, INK); s.line(sxl, yy, sxl - 10, yy, INK, FINE)
+            s.text(sxl + 6, yy + 3, lab, 9, INK, weight=500)
+        s.callout(segs[0][0] + 4, segs[0][1], 1, 60, y0 - 40 if y0 > 60 else y0 + 40, COBALT, "ORIGIN")
+    else:
+        s.dot(segs[0][0] + 2, segs[0][1], 3, COBALT)
+    return finish(s, 4, "Fault line", label)
 
 
-def hardcore(w, h, seed):
+# --- hard core: an axonometric building, a hatched core and free floor plates around it ----------------
+def hardcore(w, h, seed, label=None, survey=False):
     r = random.Random(seed)
-    cx, cy, R = w / 2, h / 2, min(w, h) * .27
-    hexp = lambda rad, rot=0: "M" + "L".join(f"{f(cx + rad * math.cos(i * math.pi / 3 + rot))} {f(cy + rad * math.sin(i * math.pi / 3 + rot))}" for i in range(6)) + "Z"
-    out = [f'<path d="{hexp(R)}" stroke="{INK}" stroke-width="2.6"/>', f'<path d="{hexp(R * .78)}" stroke="{INK}" stroke-width="1"/>',
-           f'<path d="{hexp(R * .56)}" stroke="{COBALT}" stroke-width="1.4"/>']
-    for _ in range(70):   # free agents outside, some bouncing off the core
-        a = r.random() * math.tau; d = R * 1.12 + r.random() * max(w, h) * .45
-        x, y = cx + math.cos(a) * d, cy + math.sin(a) * d * .7
-        if not (6 < x < w - 6 and 6 < y < h - 6): continue
-        if r.random() < .3:
-            bx, by = cx + math.cos(a) * R * 1.02, cy + math.sin(a) * R * 1.02
-            out.append(f'<path d="M{f(x)} {f(y)}L{f(bx)} {f(by)}L{f(bx + math.cos(a + 1.1) * 30)} {f(by + math.sin(a + 1.1) * 30)}" stroke="{FAINT}" stroke-width="1" stroke-dasharray="2 3"/>')
-        out.append(f'<circle cx="{f(x)}" cy="{f(y)}" r="2.4" fill="{INK}" stroke="none"/>')
-    return svg(w, h, "".join(out), "A hexagonal hard core, with free agents moving around it and bouncing off its edge")
+    s = Sheet(w, h, "An axonometric drawing: a hatched hard core rising through free floor plates")
+    sc = min(w / 760, h / 470) * (1.45 if survey else 1)
+    ox, oy = w * (.46 if not survey else .62), h * (.64 if not survey else .74)
+    core, plate, levels = 34, 120, 4
+    hatch = s.hatch(3.5, 60, INK, .45)
+    for lv in range(levels):   # floor plates: thin slabs at each level
+        z = lv * 40
+        top = [iso(-plate, -plate, z, ox, oy, sc), iso(plate, -plate, z, ox, oy, sc), iso(plate, plate, z, ox, oy, sc), iso(-plate, plate, z, ox, oy, sc)]
+        s.path(top, INK, HAIR, close=True, fill=PAPER if lv else "none")
+        edge = [iso(plate, -plate, z, ox, oy, sc), iso(plate, plate, z, ox, oy, sc), iso(plate, plate, z - 4, ox, oy, sc), iso(plate, -plate, z - 4, ox, oy, sc)]
+        s.path(edge, INK, HAIR, close=True)
+        edge2 = [iso(-plate, plate, z, ox, oy, sc), iso(plate, plate, z, ox, oy, sc), iso(plate, plate, z - 4, ox, oy, sc), iso(-plate, plate, z - 4, ox, oy, sc)]
+        s.path(edge2, INK, HAIR, close=True)
+        for _ in range(10 if not survey else 7):   # people and agents, free on each floor
+            px, py = r.uniform(-plate + 10, plate - 10), r.uniform(-plate + 10, plate - 10)
+            if abs(px) < core + 14 and abs(py) < core + 14:
+                continue
+            x, y = iso(px, py, z, ox, oy, sc)
+            s.dot(x, y, 1.6 * sc, INK, .8)
+    ztop = levels * 40 + 18
+    for face in ([(core, -core), (core, core)], [(-core, core), (core, core)]):   # the core: two hatched faces
+        (ax, ay), (bx, by) = face
+        quad = [iso(ax, ay, -6, ox, oy, sc), iso(bx, by, -6, ox, oy, sc), iso(bx, by, ztop, ox, oy, sc), iso(ax, ay, ztop, ox, oy, sc)]
+        s.path(quad, INK, MEDIUM, close=True, fill=hatch)
+    roof = [iso(-core, -core, ztop, ox, oy, sc), iso(core, -core, ztop, ox, oy, sc), iso(core, core, ztop, ox, oy, sc), iso(-core, core, ztop, ox, oy, sc)]
+    s.path(roof, COBALT, MEDIUM, close=True, fill=PAPER)
+    # centre line of the core
+    x1, y1 = iso(0, 0, -20, ox, oy, sc); x2, y2 = iso(0, 0, ztop + 30, ox, oy, sc)
+    s.centerline(x1, y1, x2, y2, MUTED)
+    if h > STRIP:
+        a, b = iso(core, core, -6, ox, oy, sc), iso(core, core, ztop, ox, oy, sc)
+        s.dim(a[0], a[1], b[0], b[1], "HARD CORE", -18 * sc)
+        pa = iso(plate, -plate, 120, ox, oy, sc)
+        rx = iso(-plate, plate, 40, ox, oy, sc)
+        if survey:
+            pass   # the box beside it carries the words; the drawing stays clean
+        else:
+            s.callout(*iso(0, 0, ztop, ox, oy, sc), 1, w * .74, h * .14, INK, "HARD CORE · ENFORCED EVERY TIME")
+            s.callout(*pa, 2, w * .74, h * .36, INK, "FLOOR PLATE · SOFT NORMS")
+            s.callout(*rx, 3, w * .2, h * .78, INK, "FREE EDGES · PEOPLE AND AGENTS")
+    return s.svg() if survey else finish(s, 5, "Hard core, free edges", label)
 
 
-def heartbeat(w, h, seed):
+def advisory(w, h, seed):
+    """The hard core drawing for a small box: same geometry, heavier pen, so it reads at a glance."""
+    svg = hardcore(w, h, seed, survey=True)
+    for a, b in (('stroke-width="0.5"', 'stroke-width="1.1"'), ('stroke-width="0.75"', 'stroke-width="1.5"'),
+                 ('stroke-width="1.1"', 'stroke-width="1.6"'), ('stroke-width="0.45"', 'stroke-width="0.8"')):
+        svg = svg.replace(a, b)
+    return svg
+
+
+# --- heartbeat: an ECG trace on graph paper, with axes ---------------------------------------------
+def heartbeat(w, h, seed, label=None):
     r = random.Random(seed)
-    out = []
-    for gx in range(0, int(w), 16): out.append(f'<path d="M{gx} 0V{h}" stroke="{FAINT}" stroke-width="{.8 if gx % 80 else 1.2}" opacity=".6"/>')
-    for gy in range(0, int(h), 16): out.append(f'<path d="M0 {gy}H{w}" stroke="{FAINT}" stroke-width="{.8 if gy % 80 else 1.2}" opacity=".6"/>')
-    mid, x, d = h * .58, 0.0, [f"M0 {f(h * .58)}"]
+    s = Sheet(w, h, "A heartbeat trace on graph paper")
+    for gx in range(0, int(w), 10):
+        s.line(gx, 0, gx, h, FAINT, .25 if gx % 50 else .5)
+    for gy in range(0, int(h), 10):
+        s.line(0, gy, w, gy, FAINT, .25 if gy % 50 else .5)
+    mid = h * .58
+    s.centerline(0, mid, w, mid, MUTED)
+    x, pts, beats = 0.0, [(0, mid)], []
     while x < w:
-        period = 110 + r.random() * 30
-        d.append(f"L{f(x + period * .45)} {f(mid + r.gauss(0, 1))}")
-        d.append(f"L{f(x + period * .5)} {f(mid - h * .38)}L{f(x + period * .55)} {f(mid + h * .22)}L{f(x + period * .6)} {f(mid - h * .06)}L{f(x + period * .65)} {f(mid)}")
-        x += period
-    out.append(f'<path d="{"".join(d)}" stroke="{INK}" stroke-width="1.8"/>')
-    out.append(f'<circle cx="{f(w - 10)}" cy="{f(mid)}" r="4" fill="{COBALT}" stroke="none"/>')
-    return svg(w, h, "".join(out), "A heartbeat trace running across graph paper")
+        p = 110 + r.random() * 25
+        pts += [(x + p * .45, mid + r.gauss(0, .6)), (x + p * .5, mid - h * .4), (x + p * .55, mid + h * .2), (x + p * .6, mid - h * .06), (x + p * .66, mid)]
+        beats.append(x + p * .5); x += p
+    s.path(pts, INK, FINE)
+    s.dot(w - 10, mid, 3, COBALT)
+    if h > STRIP:
+        s.dim(beats[2], h - 26, beats[3], h - 26, "1 BEAT", 0)
+    return finish(s, 6, "Liveness", label)
 
 
-def quorum(w, h, seed):
+# --- ledger: an append-only field log, columns ruled ------------------------------------------------
+def ledger(w, h, seed, label=None):
     r = random.Random(seed)
-    out, cells = [], []
-    for _ in range(90):
-        x, y = r.random() * w, r.random() * h
-        dens = math.exp(-((x - w * .65) ** 2) / (2 * (w * .18) ** 2))
-        if r.random() > .25 + dens: continue
-        cells.append((x, y, dens))
-    for x, y, dens in cells:
-        on = dens > .55
-        out.append(f'<rect x="{f(x - 7)}" y="{f(y - 3.5)}" width="14" height="7" rx="3.5" stroke="{COBALT if on else INK}" stroke-width="1.2" transform="rotate({r.randint(0, 179)} {f(x)} {f(y)})"/>')
+    s = Sheet(w, h, "An append-only field log: numbered entries with the reason for each, one highlighted")
+    cols = [("#", 16), ("TIME", 60), ("WHO", 140), ("ACTION", 260), ("WHY", 560)]
+    top = 20
+    for name, x in cols:
+        s.text(x, top, name, 7.5, MUTED, spacing=1)
+        s.line(x - 6, top - 10, x - 6, h - 28, FAINT, HAIR)
+    s.line(10, top + 6, w - 10, top + 6, INK, FINE)
+    y, i = top + 20, 0
+    while y < h - 32:
+        hot = i == 4
+        col = COBALT if hot else INK
+        s.text(16, y + 3, f"{i:03d}", 7.5, col, spacing=.4)
+        s.text(60, y + 3, f"{9 + i // 3:02d}:{(i * 17) % 60:02d}", 7.5, MUTED, spacing=.4)
+        s.line(140, y, 140 + 40 + r.random() * 50, y, col, FINE if hot else HAIR)
+        s.line(260, y, 260 + 80 + r.random() * 160, y, col, FINE if hot else HAIR)
+        s.line(560, y, 560 + 120 + r.random() * (w - 720), y, col, FINE if hot else HAIR)
+        s.line(10, y + 8, w - 10, y + 8, FAINT, .3)
+        y += 16; i += 1
+    if h > STRIP:
+        s.callout(560, top + 20 + 4 * 16, 1, w - 120, top + 2, COBALT, "THE REASON")
+    return finish(s, 7, "Field log", label)
+
+
+# --- quorum: cells and a threshold where they switch on together -----------------------------------
+def quorum(w, h, seed, label=None):
+    r = random.Random(seed)
+    s = Sheet(w, h, "Bacteria along a gradient of signal; past the quorum threshold they switch on together")
+    th = w * .58
+    hatch = s.hatch(3, 45, COBALT, .5)
+    for _ in range(150):
+        x, y = 20 + r.random() * (w - 40), 16 + r.random() * (h - 54)
+        dens = x / w
+        if r.random() > .2 + dens * .9:
+            continue
+        on = x > th
+        a = r.randint(0, 179)
+        rx, ry = 8, 3.6
+        s.out.append(f'<ellipse cx="{x:.1f}" cy="{y:.1f}" rx="{rx}" ry="{ry}" transform="rotate({a} {x:.1f} {y:.1f})" '
+                     f'stroke="{COBALT if on else INK}" stroke-width="{FINE if on else HAIR}" fill="{hatch if on else "none"}"/>')
         for _ in range(3 if on else 1):
-            out.append(f'<circle cx="{f(x + r.gauss(0, 10))}" cy="{f(y + r.gauss(0, 10))}" r="1.1" fill="{COBALT if on else FAINT}" stroke="none"/>')
-    return svg(w, h, "".join(out), "Bacteria releasing signal molecules; where they are dense enough, they switch on together")
+            s.dot(x + r.gauss(0, 9), y + r.gauss(0, 9), .8, COBALT if on else MUTED)
+    s.centerline(th, 8, th, h - 30, INK)
+    s.text(th + 6, 18, "QUORUM", 8, INK, weight=500, spacing=1)
+    s.dim(30, h - 22, th - 10, h - 22, "SIGNAL RISES WITH DENSITY", 0)
+    return finish(s, 8, "Quorum sensing", label)
 
 
-def ledger(w, h, seed):
+# --- gather: flow lines converging on one session -------------------------------------------------------
+def gather(w, h, seed, n=46):
     r = random.Random(seed)
-    out = []
-    for i, y in enumerate(range(14, int(h) - 6, 14)):
-        L = w * (.35 + .6 * r.random())
-        out.append(f'<text x="0" y="{y + 4}" font-family="ui-monospace, Menlo, monospace" font-size="9" fill="{FAINT}">{i:04d}</text>')
-        out.append(f'<path d="M34 {y}H{f(34 + L * .8)}" stroke="{INK if i != 7 else COBALT}" stroke-width="{1.2 if i != 7 else 2}"/>')
-        if r.random() < .3: out.append(f'<path d="M{f(40 + L * .8)} {y}h{f(r.random() * 60)}" stroke="{FAINT}" stroke-width="1"/>')
-    return svg(w, h, "".join(out), "An append-only log: numbered lines, one of them highlighted")
-
-
-def gather(w, h, seed, n=70):
-    """People converging on one meeting: strokes streaming along curves into a single cobalt point."""
-    r = random.Random(seed)
-    tx, ty = w * .86, h * .74   # low and right: the empty corner beside the Register button
-    out = []
+    s = Sheet(w, h, "Lines converging from all sides on a single point")
+    tx, ty = w * .86, h * .74
     for _ in range(n):
         side = r.random()
-        sx, sy = (r.random() * w * .5, -10) if side < .3 else (r.random() * w * .5, h + 10) if side < .6 else (-10, r.random() * h)
-        cx, cy = sx + (tx - sx) * .5 + r.gauss(0, h * .35), sy + (ty - sy) * .5 + r.gauss(0, h * .35)
-        for k in range(12):
-            t = (k + r.random() * .6) / 12
-            if t > .96: break
-            x = (1 - t) ** 2 * sx + 2 * (1 - t) * t * cx + t * t * tx; y = (1 - t) ** 2 * sy + 2 * (1 - t) * t * cy + t * t * ty
-            dx = 2 * (1 - t) * (cx - sx) + 2 * t * (tx - cx); dy = 2 * (1 - t) * (cy - sy) + 2 * t * (ty - cy)
-            a = math.atan2(dy, dx); L = 2.5 + t * 2
-            out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{INK}" stroke-width="1.2" opacity="{.2 + t * .7:.2f}"/>')
+        sx, sy = (r.random() * w * .55, -10) if side < .3 else (r.random() * w * .55, h + 10) if side < .6 else (-10, r.random() * h)
+        cx, cy = sx + (tx - sx) * .5 + r.gauss(0, h * .16), sy + (ty - sy) * .5 + r.gauss(0, h * .16)
+        pts = []
+        for k in range(28):
+            t = k / 27 * .93
+            pts.append(((1 - t) ** 2 * sx + 2 * (1 - t) * t * cx + t * t * tx, (1 - t) ** 2 * sy + 2 * (1 - t) * t * cy + t * t * ty))
+        s.path(pts, INK, HAIR, op=.75)
+        (x1, y1), (x2, y2) = pts[-2], pts[-1]
+        s.arrow(x2, y2, math.atan2(y2 - y1, x2 - x1), 4, INK, HAIR)
     for k in (1, 2, 3):
-        out.append(f'<circle cx="{f(tx)}" cy="{f(ty)}" r="{6 + k * 9}" stroke="{COBALT}" stroke-width="1" opacity="{.6 - k * .15:.2f}"/>')
-    out.append(f'<rect x="{f(tx - 5)}" y="{f(ty - 5)}" width="10" height="10" fill="{COBALT}" stroke="none"/>')
-    return svg(w, h, "".join(out), "Strokes converging from all sides on a single point")
+        s.circle(tx, ty, 6 + k * 9, COBALT, HAIR, dash=None if k == 1 else "2 2")
+    s.rect(tx - 4, ty - 4, 8, 8, COBALT, FINE, fill=COBALT)
+    return s.svg()
 
 
+# --- braitenberg vehicles: wiring alone produces fear, aggression and love ----------------------------
+def vehicle(s, x, y, a, scale, crossed, inhibitory, col=INK):
+    """A Braitenberg vehicle in plan view: body, two wheels (motors), two sensors, and the wires between."""
+    c, sn = math.cos(a), math.sin(a)
+    P = lambda u, v: (x + (u * c - v * sn) * scale, y + (u * sn + v * c) * scale)
+    body = [P(-12, -9), P(10, -9), P(10, 9), P(-12, 9)]
+    s.path(body, col, FINE, close=True, fill=PAPER)
+    for v in (-11, 11):   # wheels
+        s.path([P(-12, v - 2), P(-4, v - 2), P(-4, v + 2), P(-12, v + 2)], col, FINE, close=True, fill=col)
+    for v in (-6, 6):   # sensors
+        s.circle(*P(13, v), 2.4 * scale, col, FINE, fill=PAPER)
+    for v in (-6, 6):   # wires: sensor to the motor on the same side, or crossed
+        tv = -v if crossed else v
+        s.path([P(11, v), P(-8, tv * 1.4)], COBALT if inhibitory else col, HAIR, dash="2 1.5" if inhibitory else None)
+
+
+def simulate(x, y, a, kind, lx, ly, steps=420):
+    pts = []
+    for _ in range(steps):
+        def light(px, py):
+            return 1 / (1 + ((px - lx) ** 2 + (py - ly) ** 2) / 9000)
+        sl = light(x + math.cos(a - .5) * 12, y + math.sin(a - .5) * 12)
+        sr = light(x + math.cos(a + .5) * 12, y + math.sin(a + .5) * 12)
+        if kind == "2a":
+            vl, vr = sl, sr
+        elif kind == "2b":
+            vl, vr = sr, sl
+        else:   # 3a: inhibitory, uncrossed
+            vl, vr = max(0, 1 - 1.4 * sl), max(0, 1 - 1.4 * sr)
+        v = (vl + vr) / 2 * 3.2 + (0 if kind == "3a" else .5)
+        a += (vl - vr) * .9
+        x += math.cos(a) * v; y += math.sin(a) * v
+        pts.append((x, y))
+        if kind == "3a" and v < .08:
+            break
+    return pts, a
+
+
+def braitenberg(w, h, seed, label=None):
+    s = Sheet(w, h, "Three Braitenberg vehicles around a light: one turns away, one charges it, one comes to rest facing it")
+    lx, ly = w * .5, h * .46
+    for k in range(10):   # the light
+        ang = k / 10 * math.tau
+        s.line(lx + math.cos(ang) * 10, ly + math.sin(ang) * 10, lx + math.cos(ang) * 17, ly + math.sin(ang) * 17, INK, HAIR)
+    s.circle(lx, ly, 7, INK, FINE, fill=PAPER); s.dot(lx, ly, 2.5, COBALT)
+    for k in (1, 2, 3):
+        s.circle(lx, ly, k * h * .14, FAINT, HAIR, dash="1 3")
+    small = h <= STRIP
+    sc = .9 if small else 1.5
+    specs = [("2a", w * .2, h * .3, .25, False, False, "2a · FEAR", "same-side wires, excitatory"),
+             ("2b", w * .28, h * .8, -.55, True, False, "2b · AGGRESSION", "crossed wires, excitatory"),
+             ("3a", w * .82, h * .2, 2.6, False, True, "3a · LOVE", "same-side wires, inhibitory")]
+    if small:
+        specs = specs[:2] + [("3a", w * .8, h * .3, 2.7, False, True, "3a · LOVE", "")]
+    for kind, x, y, a, crossed, inhib, name, wiring in specs:
+        pts, a_end = simulate(x, y, a, kind, lx, ly, 260 if small else 420)
+        pts = [(px, py) for px, py in pts if 8 < px < w - 8 and 8 < py < h - 24]
+        s.path([(x, y)] + pts, COBALT if kind == "2b" else INK, HAIR, dash="4 3")
+        vehicle(s, x, y, a, sc, crossed, inhib)
+        if pts:
+            ex, ey = pts[-1]
+            s.dot(ex, ey, 1.6, INK)
+        if not small:
+            s.text(x - 46, y - 36, name, 8.5, INK, weight=500, spacing=1)
+            s.text(x - 46, y - 26, wiring.upper(), 7, MUTED, spacing=.6)
+    if not small:
+        s.callout(lx, ly, 1, lx + 70, ly - 60, INK, "LIGHT SOURCE")
+    return finish(s, 9, "Braitenberg vehicles", label)
+
+
+# --- activities: what we do, in three panels ----------------------------------------------------------
 def activities(w, h, seed, labels=True):
-    """What we do, in three panels drawn in the same strokes: sessions, research, training."""
     r = random.Random(seed)
-    pw, out = w / 3, []
-    def bird(x, y, a, op, col=INK, L=None):
-        L = L or 2.4 + r.random() * 1.6
-        out.append(f'<path d="M{f(x)} {f(y)}l{f(math.cos(a) * L)} {f(math.sin(a) * L)}" stroke="{col}" stroke-width="1.2" opacity="{op:.2f}"/>')
-    def label(i, text):
-        if not labels: return
-        out.append(f'<text x="{f(pw * i + pw / 2)}" y="{h - 8}" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="1.5" fill="{INK}">{text}</text>')
-    # 1. sessions: a flock circling one open document
+    s = Sheet(w, h, "Three panels: readers around one document; a path through blocks of data; a lens over a flock")
+    pw = w / 3
+    # 1. sessions: one document, readers around it with lines of sight
     cx, cy = pw * .5, h * .45
-    out.append(f'<rect x="{f(cx - 34)}" y="{f(cy - 44)}" width="68" height="88" stroke="{INK}" stroke-width="1.6" fill="#fff"/>')
+    s.rect(cx - 30, cy - 40, 60, 80, INK, FINE, fill=PAPER)
+    s.path([(cx + 18, cy - 40), (cx + 30, cy - 28)], INK, HAIR)
     for k in range(7):
-        out.append(f'<path d="M{f(cx - 24)} {f(cy - 30 + k * 11)}h{f(48 - (18 if k == 6 else r.random() * 10))}" stroke="{COBALT if k == 2 else FAINT}" stroke-width="{1.8 if k == 2 else 1.2}"/>')
-    for _ in range(520):
-        ang = r.random() * math.tau; rad = 70 + abs(r.gauss(0, 1)) * 34 + 8 * math.sin(ang * 3)
-        x, y = cx + math.cos(ang) * rad, cy + math.sin(ang) * rad * .78
-        if abs(y - cy) > h * .44: continue
-        bird(x, y, ang + math.pi / 2 + r.gauss(0, .2), .3 + .6 * math.exp(-(rad - 70) / 40))
-    label(0, "SESSIONS")
-    # 2. research: a stream flowing through a grid of data blocks, lighting what it touches
+        s.line(cx - 20, cy - 26 + k * 10, cx + 20 - (14 if k == 6 else r.random() * 8), cy - 26 + k * 10, COBALT if k == 2 else FAINT, FINE if k == 2 else HAIR)
+    for k in range(9):
+        ang = -math.pi * .9 + k / 8 * math.pi * 1.8 + math.pi / 2 * 0
+        rx, ry = cx + math.cos(ang) * 92, cy + math.sin(ang) * 66
+        s.construction(rx, ry, cx + math.cos(ang) * 32, cy + math.sin(ang) * 40)
+        s.circle(rx, ry, 5, INK, FINE, fill=PAPER); s.dot(rx, ry, 1.3, INK)
+    # 2. research: blocks of data and the path an agent takes through them
     x0 = pw
-    blocks = [(x0 + 30 + i * 26, 34 + j * 26) for i in range(int((pw - 60) / 26)) for j in range(int((h - 80) / 26))]
-    path_y = lambda x: h * .45 + math.sin((x - x0) / pw * math.tau * 1.1 + 1) * h * .18
-    for bx, by in blocks:
-        hit = abs(by + 9 - path_y(bx + 9)) < 22
-        out.append(f'<rect x="{f(bx)}" y="{f(by)}" width="18" height="18" stroke="{COBALT if hit else FAINT}" stroke-width="{1.4 if hit else 1}"/>')
-    for _ in range(420):
-        x = x0 + 10 + r.random() * (pw - 20); y = path_y(x) + r.gauss(0, 13)
-        dy = path_y(x + 2) - path_y(x - 2)
-        bird(x, y, math.atan2(dy, 4) + r.gauss(0, .15), .45 + .5 * r.random())
-    label(1, "RESEARCH")
-    # 3. training: a free flock, and a lens that makes its protocol visible
-    x0 = pw * 2; lx, ly, lr = x0 + pw * .56, h * .44, 58
-    for _ in range(700):
-        t = r.random(); x = x0 + 24 + t * (pw - 48); y = h * .45 + math.sin(t * 5 + 2) * h * .16 + r.gauss(0, 18 * (1 + math.sin(t * math.pi)))
-        heading = math.atan2(math.cos(t * 5 + 2) * h * .16 * 5 / (pw - 48), 1) + r.gauss(0, .18)
-        inside = math.hypot(x - lx, y - ly) < lr - 4
-        bird(x, y, heading, .75 if inside else .35 + .35 * r.random(), COBALT if inside else INK, 3.6 if inside else None)
-    out.append(f'<circle cx="{f(lx)}" cy="{f(ly)}" r="{lr}" stroke="{INK}" stroke-width="2" fill="none"/>')
-    out.append(f'<path d="M{f(lx + lr * .7)} {f(ly + lr * .7)}l30 30" stroke="{INK}" stroke-width="5"/>')
-    label(2, "TRAINING")
-    # hairlines between the panels
-    for i in ((1, 2) if labels else ()):
-        out.append(f'<path d="M{f(pw * i)} 16V{h - 30}" stroke="{FAINT}" stroke-width="1" stroke-dasharray="2 4"/>')
-    return svg(w, h, "".join(out), "Three panels: a flock circling one document for sessions; a stream through data blocks for research; a lens over a flock for training")
+    hatch = s.hatch(3, 45, COBALT, .45)
+    py = lambda x: h * .45 + math.sin((x - x0) / pw * math.tau * 1.1 + 1) * h * .18
+    for i in range(int((pw - 60) / 24)):
+        for j in range(int((h - 80) / 24)):
+            bx, by = x0 + 30 + i * 24, 34 + j * 24
+            hit = abs(by + 8 - py(bx + 8)) < 16
+            s.rect(bx, by, 16, 16, COBALT if hit else FAINT, FINE if hit else HAIR, fill=hatch if hit else "none")
+    s.path([(x0 + 24 + k * 4, py(x0 + 24 + k * 4)) for k in range(int((pw - 48) / 4))], INK, FINE)
+    s.arrow(x0 + pw - 26, py(x0 + pw - 26), 0, 6, INK)
+    # 3. training: a lens over a flock, and inside it the pattern is clear
+    x0 = 2 * pw; lx, ly, lr = x0 + pw * .55, h * .44, 54
+    for _ in range(520):
+        t = r.random(); x = x0 + 24 + t * (pw - 48); y = h * .45 + math.sin(t * 5 + 2) * h * .15 + r.gauss(0, 16 * (1 + math.sin(t * math.pi)))
+        head = math.atan2(math.cos(t * 5 + 2) * h * .15 * 5 / (pw - 48), 1) + r.gauss(0, .2)
+        inside = math.hypot(x - lx, y - ly) < lr - 3
+        L = 3.4 if inside else 2.4
+        s.line(x, y, x + math.cos(head) * L, y + math.sin(head) * L, COBALT if inside else INK, .8 if inside else .6, op=1 if inside else .55)
+    s.circle(lx, ly, lr, INK, MEDIUM); s.circle(lx, ly, lr + 4, INK, HAIR)
+    s.line(lx + lr * .72, ly + lr * .72, lx + lr * .72 + 30, ly + lr * .72 + 30, INK, 4)
+    s.centerline(lx - lr - 10, ly, lx + lr + 10, ly); s.centerline(lx, ly - lr - 10, lx, ly + lr + 10)
+    if labels:
+        for i, t in enumerate(("SESSIONS", "RESEARCH", "TRAINING")):
+            s.text(pw * i + pw / 2, h - 10, t, 9, INK, "middle", 500, 1.5)
+        for i in (1, 2):
+            s.line(pw * i, 16, pw * i, h - 30, FAINT, HAIR, "2 4")
+    return s.svg()
 
 
 def activity_panels(seed):
-    """The three activity panels as separate images, cropped from one drawing so they match."""
     full = activities(1200, 300, seed, labels=False)
-    body = full[full.index("<g "):full.rindex("</svg>")]
-    names = [("sessions", "A flock circling one document"), ("research", "A stream of agents flowing through blocks of data"), ("training", "A lens over a flock, making its pattern visible")]
+    head, body = full[:full.index(">") + 1], full[full.index(">") + 1:]
+    names = [("sessions", "Readers around one document"), ("research", "A path through blocks of data"), ("training", "A lens over a flock, making its pattern clear")]
+    defs = body[:body.index("</defs>") + 7] if body.startswith("<defs>") else ""
+    rest = body[len(defs):]
     for i, (name, label) in enumerate(names):
-        (OUT / f"act-{name}.svg").write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{i * 400 + 20} 10 360 270" width="360" height="270" role="img" aria-label="{label}">{body}</svg>\n')
+        (OUT / f"act-{name}.svg").write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{i * 400 + 20} 10 360 270" width="360" height="270" role="img" aria-label="{label}">{defs}{rest}\n')
 
 
-def label(x, y, text, size=13, col=None, anchor="middle", weight=400):
-    return (f'<text x="{f(x)}" y="{f(y)}" text-anchor="{anchor}" font-family="ui-monospace, Menlo, monospace" '
-            f'font-size="{size}" font-weight="{weight}" fill="{col or INK}" stroke="none">{text}</text>')
-
-
-def cycle(w, h, seed):
-    """See, Design, Evolve as a loop: three stations on a circle, arrows between them, and a small
-    drawing at each one (rings for See, a hexagon for Design, a pulse for Evolve)."""
+# --- cycle: See, Design, Evolve ----------------------------------------------------------------------
+def cycle(w, h, seed, label=None):
     r = random.Random(seed)
-    cx, cy, R = w / 2, h / 2 + 16, min(w, h) * .3
+    s = Sheet(w, h, "A loop of three phases: See, then Design, then Evolve, and back to See")
+    cx, cy, R = w / 2, h / 2 + 4, min(w, h) * .3
     angs = [-math.pi / 2, math.pi / 6, 5 * math.pi / 6]
     pts = [(cx + R * math.cos(a), cy + R * math.sin(a)) for a in angs]
-    out = []
-    for i in range(3):   # arcs between the stations, with arrowheads
-        a0, a1 = angs[i] + .42, angs[(i + 1) % 3] - .42 + (2 * math.pi if i == 2 else 0)
-        steps = 24
-        d = "M" + "L".join(f"{f(cx + R * math.cos(a0 + (a1 - a0) * k / steps))} {f(cy + R * math.sin(a0 + (a1 - a0) * k / steps))}" for k in range(steps + 1))
-        out.append(f'<path d="{d}" stroke="{FAINT}" stroke-width="1.6"/>')
-        ex, ey = cx + R * math.cos(a1), cy + R * math.sin(a1); ta = a1 + math.pi / 2
-        out.append(f'<path d="M{f(ex - 9 * math.cos(ta) - 5 * math.cos(ta + math.pi / 2))} {f(ey - 9 * math.sin(ta) - 5 * math.sin(ta + math.pi / 2))}L{f(ex)} {f(ey)}L{f(ex - 9 * math.cos(ta) + 5 * math.cos(ta + math.pi / 2))} {f(ey - 9 * math.sin(ta) + 5 * math.sin(ta + math.pi / 2))}" stroke="{INK}" stroke-width="1.6"/>')
+    s.circle(cx, cy, R, FAINT, HAIR, dash="1 3")
+    s.centerline(cx - R - 30, cy, cx + R + 30, cy); s.centerline(cx, cy - R - 30, cx, cy + R + 30)
+    for i in range(3):
+        a0, a1 = angs[i] + .4, angs[(i + 1) % 3] - .4 + (math.tau if i == 2 else 0)
+        arc = [(cx + R * math.cos(a0 + (a1 - a0) * k / 30), cy + R * math.sin(a0 + (a1 - a0) * k / 30)) for k in range(31)]
+        s.path(arc, INK, FINE)
+        (x1, y1), (x2, y2) = arc[-2], arc[-1]
+        s.arrow(x2, y2, math.atan2(y2 - y1, x2 - x1), 7, INK)
     (sx, sy), (dx, dy), (vx, vy) = pts
-    for k in (1, 2, 3):   # See: rings
-        out.append(f'<circle cx="{f(sx)}" cy="{f(sy)}" r="{8 + k * 9}" stroke="{COBALT if k == 1 else INK}" stroke-width="1.2" opacity="{1 - k * .22:.2f}"/>')
-    out.append(f'<rect x="{f(sx - 4)}" y="{f(sy - 4)}" width="8" height="8" fill="{INK}" stroke="none"/>')
-    hexp = lambda rad: "M" + "L".join(f"{f(dx + rad * math.cos(i * math.pi / 3))} {f(dy + rad * math.sin(i * math.pi / 3))}" for i in range(6)) + "Z"
-    out += [f'<path d="{hexp(30)}" stroke="{INK}" stroke-width="2.2"/>', f'<path d="{hexp(17)}" stroke="{COBALT}" stroke-width="1.4"/>']
-    for _ in range(14):
-        a = -math.pi * r.random(); rr = 38 + r.random() * 12   # only above the hexagon, clear of its label
-        out.append(f'<circle cx="{f(dx + math.cos(a) * rr)}" cy="{f(dy + math.sin(a) * rr)}" r="1.8" fill="{INK}" stroke="none"/>')
-    pulse = [(vx - 46, vy), (vx - 14, vy), (vx - 8, vy - 26), (vx, vy + 18), (vx + 6, vy - 6), (vx + 12, vy), (vx + 46, vy)]
-    out.append(f'<path d="M' + "L".join(f"{f(x)} {f(y)}" for x, y in pulse) + f'" stroke="{INK}" stroke-width="1.8"/>')
-    out.append(f'<circle cx="{f(vx + 46)}" cy="{f(vy)}" r="3.5" fill="{COBALT}" stroke="none"/>')
-    out += [label(sx, sy - 52, "SEE", 18, weight=600), label(dx + 6, dy + 64, "DESIGN", 18, weight=600), label(vx - 6, vy + 64, "EVOLVE", 18, weight=600)]
-    out += [label(sx, sy + 54, "what actually happens", 14, "#6b6a66"),
-            label(dx + 6, dy + 84, "what must be strict", 14, "#6b6a66"), label(vx - 6, vy + 84, "what should change", 14, "#6b6a66")]
-    return svg(w, h, "".join(out), "A loop of three phases: See, then Design, then Evolve, and back to See")
+    for k in (1, 2, 3):
+        s.circle(sx, sy, 7 + k * 8, COBALT if k == 1 else INK, HAIR, dash=None if k < 3 else "2 2")
+    s.rect(sx - 3.5, sy - 3.5, 7, 7, INK, FINE, fill=INK)
+    hatch = s.hatch(3, 45, INK, .45)
+    hexp = lambda rad: [(dx + rad * math.cos(i * math.pi / 3), dy + rad * math.sin(i * math.pi / 3)) for i in range(6)]
+    s.path(hexp(26), INK, MEDIUM, close=True); s.path(hexp(15), INK, HAIR, close=True, fill=hatch)
+    pulse = [(vx - 40, vy), (vx - 12, vy), (vx - 7, vy - 22), (vx, vy + 15), (vx + 5, vy - 5), (vx + 10, vy), (vx + 40, vy)]
+    s.path(pulse, INK, FINE); s.dot(vx + 40, vy, 2.5, COBALT)
+    for (x, y), name, q, dyy in (((sx, sy), "SEE", "WHAT ACTUALLY HAPPENS", -46), ((dx, dy), "DESIGN", "WHAT MUST BE STRICT", 52), ((vx, vy), "EVOLVE", "WHAT SHOULD CHANGE", 52)):
+        s.text(x, y + dyy, name, 12, INK, "middle", 600, 2)
+        s.text(x, y + dyy + 14, q, 7.5, MUTED, "middle", spacing=1)
+    return finish(s, 10, "See · Design · Evolve", label)
 
 
-def rings(w, h, seed):
-    """The hardness map as rings: the hard core at the centre, soft norms around it, free work outside,
-    with the example protocols placed in their ring."""
+# --- rings: the hardness map in plan, the core cut and hatched ---------------------------------------
+def rings(w, h, seed, label=None):
     r = random.Random(seed)
-    cx, cy = w / 2, h / 2
-    out = []
-    for rad, rx, col, sw, dash in ((h * .47, h * .47 * 2.1, FAINT, 1, "3 5"), (h * .36, h * .36 * 1.95, INK, 1.2, ""), (h * .22, h * .22 * 2.5, INK, 2.6, "")):
-        out.append(f'<ellipse cx="{f(cx)}" cy="{f(cy)}" rx="{f(rx)}" ry="{f(rad)}" stroke="{col}" stroke-width="{sw}"' + (f' stroke-dasharray="{dash}"' if dash else "") + "/>")
-    for _ in range(70):   # free agents in the outer ring
-        a = r.random() * math.tau; k = .4 + r.random() * .06
-        out.append(f'<circle cx="{f(cx + math.cos(a) * h * k * 2.06)}" cy="{f(cy + math.sin(a) * h * k)}" r="1.6" fill="{INK}" stroke="none" opacity=".55"/>')
-    out += [label(cx, cy - h * .1, "HARD CORE", 12, COBALT, weight=600),
-            label(cx - h * .26, cy - h * .01, "who may move money", 11), label(cx + h * .26, cy - h * .01, "what data leaves", 11),
-            label(cx - h * .26, cy + h * .07, "checks on every output", 11), label(cx + h * .26, cy + h * .07, "the shared field log", 11),
-            label(cx, cy - h * .28, "SOFT · weekly planning", 11, "#5d5b55", weight=600),
-            label(cx, cy + h * .3, "SOFT · norms the team keeps", 11, "#8a877f"),
-            label(cx, cy + h * .44, "FREE · how each team or agent does its own work", 11, "#5d5b55", weight=600)]
-    return svg(w, h, "".join(out), "Three rings: a small hard core in the middle, soft norms around it, and free work outside")
+    s = Sheet(w, h, "The hardness map in plan: a hatched hard core, a ring of soft norms, free work outside")
+    cx, cy = w / 2, h / 2 - 6
+    hatch = s.hatch(4, 45, INK, .35)
+    bands = ((h * .44, h * .44 * 2.1, FAINT, HAIR, "2 4", "none"), (h * .33, h * .33 * 1.95, INK, FINE, None, "none"), (h * .2, h * .2 * 2.5, INK, HEAVY, None, PAPER))
+    for ry, rx, col, sw, dash, fill in bands:
+        ds = f' stroke-dasharray="{dash}"' if dash else ""
+        s.out.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" stroke="{col}" stroke-width="{sw}" fill="{fill}"{ds}/>')
+    s.out.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{h * .2 * 2.5 - 6:.1f}" ry="{h * .2 - 6:.1f}" stroke="none" fill="{hatch}" opacity=".35"/>')
+    s.centerline(cx - h * .44 * 2.1 - 16, cy, cx + h * .44 * 2.1 + 16, cy)
+    s.centerline(cx, cy - h * .44 - 10, cx, cy + h * .44 + 10)
+    for _ in range(80):
+        a = r.random() * math.tau; k = .37 + r.random() * .06
+        s.dot(cx + math.cos(a) * h * k * 2.05, cy + math.sin(a) * h * k, 1.3, INK, .6)
+    s.text(cx, cy - h * .09, "HARD CORE", 10, COBALT, "middle", 600, 2)
+    for (x, y, t) in ((-h * .27, -h * .005, "WHO MAY MOVE MONEY"), (h * .27, -h * .005, "WHAT DATA LEAVES"),
+                      (-h * .27, h * .06, "CHECKS ON EVERY OUTPUT"), (h * .27, h * .06, "THE SHARED FIELD LOG")):
+        s.text(cx + x, cy + y, t, 7.5, INK, "middle", spacing=.8)
+    s.text(cx, cy - h * .265, "SOFT · WEEKLY PLANNING", 8, MUTED, "middle", 500, 1)
+    s.text(cx, cy + h * .4, "FREE · HOW EACH TEAM OR AGENT DOES ITS OWN WORK", 8, MUTED, "middle", 500, 1)
+    s.dim(cx + h * .2 * 2.5, cy, cx + h * .33 * 1.95, cy, "SOFT", -h * .14)
+    s.dim(cx + h * .33 * 1.95, cy, cx + h * .44 * 2.1, cy, "FREE", -h * .14)
+    return finish(s, 11, "Hardness map", label)
 
 
 FIGS = {
     "murmuration": (murmuration, 1200, 300, 7),
     "network": (network, 1200, 260, 11),
-    "faults": (faults, 1200, 240, 5),
-    "hardcore": (hardcore, 1200, 300, 3),
-    "emissions": (emissions, 1200, 260, 2),
-    "heartbeat": (heartbeat, 1200, 180, 4),
-    "ledger": (ledger, 1200, 180, 9),
-    # one small strip per theme, in the order of the year
-    "theme-1": (network, 640, 120, 21), "theme-2": (murmuration, 640, 120, 22), "theme-3": (emissions, 640, 120, 23),
-    "theme-4": (faults, 640, 120, 24), "theme-5": (hardcore, 640, 120, 25), "theme-6": (heartbeat, 640, 120, 26),
-    "quorum": (quorum, 1200, 220, 8),
+    "faults": (faults, 1200, 260, 5),
+    "hardcore": (hardcore, 1200, 320, 3),
+    "emissions": (emissions, 1200, 280, 2),
+    "heartbeat": (heartbeat, 1200, 200, 4),
+    "ledger": (ledger, 1200, 210, 9),
+    "quorum": (quorum, 1200, 240, 8),
     "gather": (gather, 480, 200, 12),
     "activities": (activities, 1200, 300, 13),
-    "cycle": (cycle, 900, 340, 14),
-    "rings": (rings, 1000, 340, 15),
+    "cycle": (cycle, 900, 360, 14),
+    "rings": (rings, 1000, 360, 15),
+    "braitenberg": (braitenberg, 1200, 320, 16),
+    "advisory": (advisory, 560, 260, 17),
+}
+STRIPS = {   # one strip per theme, in the order of the year
+    "theme-1": (braitenberg, 21, "THEME I · AGENTS"), "theme-2": (murmuration, 22, "THEME II · NATURE"),
+    "theme-3": (emissions, 23, "THEME III · EMISSIONS"), "theme-4": (faults, 24, "THEME IV · INCIDENTS"),
+    "theme-5": (hardcore, 25, "THEME V · HARDNESS"), "theme-6": (heartbeat, 26, "THEME VI · LIVENESS"),
 }
 
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for name, (fn, w, h, seed) in FIGS.items():
         (OUT / f"{name}.svg").write_text(fn(w, h, seed))
+    for name, (fn, seed, lab) in STRIPS.items():
+        (OUT / f"{name}.svg").write_text(fn(640, 120, seed, label=lab))
     activity_panels(13)
-    print(f"{len(FIGS) + 3} figures in {OUT}")
+    print(f"{len(FIGS) + len(STRIPS) + 3} figures in {OUT}")
