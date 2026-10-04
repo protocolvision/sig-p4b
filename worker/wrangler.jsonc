@@ -11,6 +11,7 @@
     "SITE": "https://protocolsforbusiness.com/",
     "ALLOWED_ORIGINS": "https://protocolsforbusiness.com,https://www.protocolsforbusiness.com,https://npc.here.now,https://scarlet-rapids-8mbp.here.now,http://localhost:8000,http://127.0.0.1:8000"
   },
+  "triggers": { "crons": ["0 16 * * 5"] },   // Fridays 16:00 UTC: the weekly blyg digest
   "observability": { "enabled": true }
   // Secret (set with `npx wrangler secret put EXPORT_SECRET`, never commit):
   //   EXPORT_SECRET — gates /export.csv and signs unsubscribe links

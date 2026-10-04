@@ -11,6 +11,8 @@
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
+ *   GET  /digest       — preview this week's blyg digest (requires X-Export-Secret); nothing is posted
+ *   cron (Fridays)     — post the week's blyg digest to the group's Discord channel, if anything changed
  *   OPTIONS *          — CORS preflight
  *
  * Defenses: honeypot (_hp), 10 requests / hour / IP, length caps, origin allow-list.
@@ -336,6 +338,54 @@ async function unsubscribeForm(req: Request, env: Env): Promise<Response> {
   return done(true);
 }
 
+// Weekly blyg digest: one Discord message listing what was published or updated on the blyg in the
+// past seven days, read from the site's public blyg index. Nothing is sent in a quiet week.
+interface BlygIndexItem { id: string; kind: string; created: string; updated: string; version: number }
+
+function titleOf(md: string): string {
+  const lines = md.split("\n").map((l) => l.trim()).filter(Boolean);
+  const h = lines.find((l) => l.startsWith("# "));
+  const t = (h ? h.slice(2) : (lines[0] || "Untitled")).replace(/[*_`]/g, "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1");
+  return t.length > 90 ? t.slice(0, 87).trimEnd() + "…" : t;
+}
+
+async function buildDigest(now = Date.now()): Promise<string | null> {
+  const base = SITE + "blyg/";
+  const res = await fetch(base + "items/index.json", { cf: { cacheTtl: 0 } } as RequestInit);
+  if (!res.ok) return null;
+  const index = (await res.json()) as { items: BlygIndexItem[] };
+  const since = now - 7 * 24 * 3600 * 1000;
+  const recent = index.items.filter((i) => Date.parse(i.updated) >= since);
+  if (!recent.length) return null;
+  const fresh: string[] = [], changed: string[] = [];
+  for (const i of recent.sort((a, b) => Date.parse(b.updated) - Date.parse(a.updated))) {
+    const r = await fetch(base + `items/${i.id}.json`);
+    if (!r.ok) continue;
+    const item = (await r.json()) as { page: string; content_md: string };
+    const line = `• [${titleOf(item.content_md)}](${base}${item.page})`;
+    (Date.parse(i.created) >= since ? fresh : changed).push(line);
+  }
+  const fmt = (t: number) => new Date(t).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+  const parts = [`**This week on the Protocols for Business blyg** (${fmt(since)} – ${fmt(now)})`];
+  if (fresh.length) parts.push(`**New**\n` + fresh.join("\n"));
+  if (changed.length) parts.push(`**Updated**\n` + changed.slice(0, 8).join("\n") + (changed.length > 8 ? `\n…and ${changed.length - 8} more` : ""));
+  parts.push(`All posts: ${base} · feed: ${base}feed.xml`);
+  let msg = parts.join("\n\n");
+  if (msg.length > 1900) msg = msg.slice(0, 1890) + "…";
+  return msg;
+}
+
+async function postDigest(env: Env): Promise<void> {
+  if (!env.DISCORD_WEBHOOK) return;
+  const content = await buildDigest();
+  if (!content) return;
+  await fetch(env.DISCORD_WEBHOOK, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: "Protocols for Business blyg", content, allowed_mentions: { parse: [] }, flags: 4 }),   // 4: no link previews
+  });
+}
+
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     if (env.SITE) SITE = env.SITE;
@@ -347,7 +397,15 @@ export default {
     if (req.method === "POST" && url.pathname === "/advisory") return advisory(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
+    if (req.method === "GET" && url.pathname === "/digest") {
+      if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });
+      return new Response((await buildDigest()) ?? "(nothing new this week; no message would be sent)", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+    }
     if (req.method === "POST" && url.pathname === "/unsubscribe") return unsubscribeForm(req, env);
     return new Response("Not found", { status: 404 });
+  },
+  async scheduled(_event: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
+    if (env.SITE) SITE = env.SITE;
+    ctx.waitUntil(postDigest(env));
   },
 } satisfies ExportedHandler<Env>;
