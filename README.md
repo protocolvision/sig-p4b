@@ -66,6 +66,19 @@ Keep construction client details anonymized. The client is not named anywhere in
 
 `./deploy.sh` (needs a here.now API key in `~/.herenow/credentials`).
 
+## Search and the move to a new domain
+
+Every page gets a canonical URL, a meta description, one H1 and breadcrumb structured data from `tools/build_site.py`; the home page also carries Organization and WebSite data, the sessions page an EventSeries. `tools/build_sitemap.py` (run by `deploy.sh`) writes `sitemap.xml` and `robots.txt` from `config.json`. Pages opt out of search with `"noindex": true` in their front matter (the unsubscribe page does); `hype/` and the draft 3D map carry their own noindex.
+
+robots.txt only counts at a domain's root, so it takes effect once the site has its own domain. To move:
+
+1. Set `"site"` in `config.json` to the new URL (with a trailing slash). Optionally add `"google_site_verification": "<token>"` to put Google's verification tag on the home page.
+2. Run `tools/build_schedule.py`, `tools/build_site.py`, then `./deploy.sh` (it rebuilds the blyg, sitemap and robots.txt). Re-run `drafts/landscape/publish.py` so `sessions/map/readings.json` carries the new map URL.
+3. Worker: update `SITE` and `ALLOWED_ORIGINS` in `worker/wrangler.jsonc` and the fallback `SITE` in `worker/src/index.ts`, then `npx wrangler deploy` in `worker/`.
+4. Keep the old address answering with redirects to the new one for at least a year (on here.now, a page per path with a refresh and a canonical tag, like the stubs in `REDIRECTS`).
+5. Update the hard-coded addresses that aren't generated: the unsubscribe link in email drafts, the share-card footers in `tools/cards/` (re-render the cards), CLAUDE.md and this README. Re-export `hype/`.
+6. In Google Search Console, add the domain property, verify it, and submit `sitemap.xml`. Point the Protocol Institute, Protocolized and GitHub profile links at the new address.
+
 ## Session sign-ups
 
 The homepage Register button opens a dialog (a bottom drawer on phones) that posts to a Cloudflare Worker (`worker/`, deployed as `sig-p4b-signup` on rafaeldf2.workers.dev) that stores sign-ups in KV.

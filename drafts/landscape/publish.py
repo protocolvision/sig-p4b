@@ -34,7 +34,7 @@ def main():
                        for r in L["readings"]), key=lambda r: (r["area"], r["title"].lower()))
     (DATA / "readings.json").write_text(json.dumps(
         {"about": "Readings on the Protocols for Business SIG reading map, grouped by area. Readings in the year's syllabus carry their theme.",
-         "map": "https://npc.here.now/protocolvision/sessions/map/",
+         "map": json.loads((ROOT / "config.json").read_text())["site"] + "sessions/map/",
          "suggest": "https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml",
          "readings": readings}, ensure_ascii=False, indent=1) + "\n")
     print(f"published sessions/map/3d/ and sessions/map/readings.json ({len(readings)} readings)")

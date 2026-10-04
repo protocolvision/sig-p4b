@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://npc.here.now/protocolvision/sitemap.xml

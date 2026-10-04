@@ -33,8 +33,45 @@ def external_links(doc):
         return f'<a {attrs} target="_blank" rel="noopener noreferrer">'
     return EXTERNAL_A.sub(fix, doc)
 
+SECTIONS = {"sessions/": "Sessions", "research/": "Research", "about/": "About", "blyg/": "Blyg"}
+ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Protocols for Business SIG", "url": SITE,
+       "logo": SITE + "favicon.svg",
+       "parentOrganization": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
+       "sameAs": ["https://github.com/protocolvision", "https://protocolized.summerofprotocols.com/t/sigbiz"],
+       "member": [{"@type": "Person", "name": n, "url": u} for n, u in (
+           ("Rafael Fernández", "https://rafael.fyi/"), ("Sachin Benny", "https://sachinbenny.xyz/"),
+           ("Timber Stinson-Schroff", "https://www.timberschroff.com/"))]}
+
+def structured_data(meta):
+    """JSON-LD: the organization and site on the home page, breadcrumbs on every page below a section."""
+    path, short = meta["path"], meta["title"].split(" · ")[0]
+    graph = []
+    if not path:
+        graph = [ORG, {"@type": "WebSite", "@id": SITE + "#site", "name": "Protocols for Business SIG", "url": SITE,
+                       "publisher": {"@id": SITE + "#org"}}]
+    elif path.count("/") > 1:
+        crumbs = [("Home", SITE)]
+        section = path.split("/")[0] + "/"
+        if section in SECTIONS:
+            crumbs.append((SECTIONS[section], SITE + section))
+        elif "crumb" in meta:   # e.g. play/watching/ sits under Research
+            crumbs.append((meta["crumb"][0], SITE + meta["crumb"][1]))
+        crumbs.append((short, SITE + path))
+        graph = [{"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": n, "item": u} for i, (n, u) in enumerate(crumbs, 1)]}]
+    if meta.get("article"):
+        graph.append({"@type": "Article", "headline": short, "description": meta["desc"], "url": SITE + path,
+                      "author": {"@type": "Person", "name": meta["article"], "url": SITE + "about/#people"},
+                      "publisher": {"@id": SITE + "#org"}, "isPartOf": SITE})
+    if not graph:
+        return ""
+    return ('<script type="application/ld+json">\n'
+            + json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1)
+            + "\n</script>\n")
+
 def page(meta, body):
     body = body.replace("{{signup_worker}}", SIGNUP_WORKER)   # forms that post to the Worker without JS
+    body = body.replace("{{site}}", SITE)   # absolute site URL in text meant to be copied elsewhere
     path = meta["path"]
     rel = "../" * path.count("/")
     a = lambda s: html.escape(s, quote=True)
@@ -45,13 +82,19 @@ def page(meta, body):
         for k, label, p in NAV)
     foot_nav = "".join(f'<a href="{rel}{p}">{label}</a>' for k, label, p in NAV)
     extra_head = meta.get("head", "")
+    seo = f'<link rel="canonical" href="{SITE}{path}">\n'
+    if meta.get("noindex"):
+        seo += '<meta name="robots" content="noindex">\n'
+    if CONFIG.get("google_site_verification") and not path:
+        seo += f'<meta name="google-site-verification" content="{a(CONFIG["google_site_verification"])}">\n'
+    seo += structured_data(meta)
     return external_links(f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{a(desc)}">
-<meta property="og:type" content="website">
+{seo}<meta property="og:type" content="website">
 <meta property="og:site_name" content="Protocol Institute">
 <meta property="og:title" content="{a(title)}">
 <meta property="og:description" content="{a(desc)}">
@@ -70,7 +113,7 @@ def page(meta, body):
 <link rel="stylesheet" href="{rel}style.css">
 {extra_head}<body>
 <header>
-<a class="home" href="{rel or './'}" aria-label="Protocol Institute – Business, home"><img class="logo" src="{rel}favicon.svg" alt="">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>
+<a class="home" href="{rel or './'}" aria-label="Protocol Institute – Business, home"><img class="logo" src="{rel}favicon.svg" alt="" width="20" height="20">Protocol Institute<span class="brand-sep" aria-hidden="true">–</span><span class="brand-sub">Business</span></a>
 <nav aria-label="Main">
 {nav}
 </nav>
@@ -79,7 +122,7 @@ def page(meta, body):
 {body.strip()}
 </main>
 <footer>
-<p><img class="mark" src="{rel}favicon.svg" alt="">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
+<p><img class="mark" src="{rel}favicon.svg" alt="" width="20" height="20">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
 <nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision">GitHub</a><a href="https://github.com/protocolvision/sig-p4b">Site source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
@@ -104,7 +147,7 @@ def main():
         rel = "../" * old.count("/")
         stub = (f'<!doctype html><meta charset="utf-8"><title>Moved</title>\n'
                 f'<meta http-equiv="refresh" content="0; url={rel}{new}">\n'
-                f'<link rel="canonical" href="{SITE}{new}">\n'
+                f'<link rel="canonical" href="{SITE}{new.split("#")[0]}">\n'
                 f'<p>This page moved to <a href="{rel}{new}">{SITE}{new}</a>.</p>\n')
         (ROOT / old).mkdir(parents=True, exist_ok=True)
         (ROOT / old / "index.html").write_text(stub)

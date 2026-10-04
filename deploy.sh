@@ -8,6 +8,7 @@ PUBLISH=${HERENOW_PUBLISH:-$HOME/.claude/skills/here-now/scripts/publish.sh}
 python3 tools/build_schedule.py
 python3 tools/build_site.py
 python3 tools/build_blyg.py
+python3 tools/build_sitemap.py
 python3 tools/blyg_check.py
 OUT=$(mktemp -d)
 rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'sources' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' ./ "$OUT/"

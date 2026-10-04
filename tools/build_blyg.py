@@ -299,6 +299,13 @@ def write_feed(events, updated):
 """
     (OUT / "feed.xml").write_text(xml)
 
+def summary(content_html, limit=155):
+    """A page's own meta description: its first lines of text, cut at a word."""
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<h1.*?</h1>|<p>(?:(?!</p>).)*?Participants:.*?</p>|<[^>]+>", " ", content_html, flags=re.S))).strip()
+    if len(text) <= limit:
+        return text or DESCRIPTION
+    return text[:limit].rsplit(" ", 1)[0].rstrip(",;:·") + "…"
+
 def write_pages(ordered, stems):
     sys.path.insert(0, str(ROOT / "tools"))
     from build_site import page
@@ -320,15 +327,18 @@ def write_pages(ordered, stems):
         if d["kind"] == "withdrawn":
             continue
         kind = "Thread" if d["kind"] == "thread" else "Fragment"
+        content = d["content_html"]
+        if "<h1" not in content:   # one H1 per page: fragments often open without a heading
+            content = f'<h1>{html.escape(title_of(d, kind))}</h1>\n' + content
         body = (f'<p class="meta"><a href="../../">Blyg</a> · {kind.lower()} · version {d["version"]} · '
-                f'updated {date(d["updated"])}</p>\n<article class="blyg-item">\n{d["content_html"]}\n</article>\n'
+                f'updated {date(d["updated"])}</p>\n<article class="blyg-item">\n{content}\n</article>\n'
                 f'<p class="small muted">Machine-readable: <a href="../../items/{d["id"]}.json">item JSON</a> · '
                 f'changelog {len(d["changelog"])} version{"s" if len(d["changelog"]) != 1 else ""}</p>')
         folder = OUT / ("t" if d["kind"] == "thread" else "f") / d["id"]
         folder.mkdir(parents=True, exist_ok=True)
         path = f'blyg/{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
         folder.joinpath("index.html").write_text(page(
-            {"title": f"{title_of(d, kind)} · SIG P4B blyg", "desc": DESCRIPTION, "path": path, "nav": "sessions",
+            {"title": f"{title_of(d, kind)} · SIG P4B blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
              "card": "syllabus", "head": alt.format(rel="../../../")}, body))
     intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
              f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
