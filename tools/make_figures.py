@@ -176,8 +176,8 @@ def faults(w, h, seed, label=None):
 def hardcore(w, h, seed, label=None, survey=False):
     r = random.Random(seed)
     s = Sheet(w, h, "An axonometric drawing: a hatched hard core rising through free floor plates")
-    sc = min(w / 760, h / 470) * (1.45 if survey else 1)
-    ox, oy = w * (.46 if not survey else .62), h * (.64 if not survey else .74)
+    sc = min(w / 760, h / 470) * (1.15 if survey else 1)   # sized so the whole building fits its frame
+    ox, oy = w * (.46 if not survey else .62), h * (.64 if not survey else .66)
     core, plate, levels = 34, 120, 4
     hatch = s.hatch(3.5, 60, INK, .45)
     for lv in range(levels):   # floor plates: thin slabs at each level
