@@ -12,6 +12,7 @@
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
  *   GET  /digest       — preview this week's blyg digest (requires X-Export-Secret); nothing is posted
+ *   POST /digest       — send the digest now (requires X-Export-Secret)
  *   cron (Fridays)     — post the week's blyg digest to the group's Discord channel, if anything changed
  *   OPTIONS *          — CORS preflight
  *
@@ -356,7 +357,8 @@ async function buildDigest(now = Date.now()): Promise<string | null> {
   const index = (await res.json()) as { items: BlygIndexItem[] };
   const since = now - 7 * 24 * 3600 * 1000;
   const recent = index.items.filter((i) => Date.parse(i.updated) >= since);
-  if (!recent.length) return null;
+  const upcoming = await nextSession(now);
+  if (!recent.length && !upcoming) return null;
   const fresh: string[] = [], changed: string[] = [];
   for (const i of recent.sort((a, b) => Date.parse(b.updated) - Date.parse(a.updated))) {
     const r = await fetch(base + `items/${i.id}.json`);
@@ -369,10 +371,24 @@ async function buildDigest(now = Date.now()): Promise<string | null> {
   const parts = [`**This week on the Protocols for Business blyg** (${fmt(since)} – ${fmt(now)})`];
   if (fresh.length) parts.push(`**New**\n` + fresh.join("\n"));
   if (changed.length) parts.push(`**Updated**\n` + changed.slice(0, 8).join("\n") + (changed.length > 8 ? `\n…and ${changed.length - 8} more` : ""));
+  if (upcoming) parts.push(upcoming);
   parts.push(`All posts: ${base} · feed: ${base}feed.xml`);
   let msg = parts.join("\n\n");
   if (msg.length > 1900) msg = msg.slice(0, 1890) + "…";
   return msg;
+}
+
+// The next session, from the site's public schedule: date, time in UTC, the reading, what else happens.
+async function nextSession(now: number): Promise<string | null> {
+  const r = await fetch(SITE + "sessions.json");
+  if (!r.ok) return null;
+  const S = (await r.json()) as { start_utc: string; end_utc: string; title: string; url: string; cite: string; feature_short: string }[];
+  const n = S.find((x) => Date.parse(x.end_utc) > now);
+  if (!n) return null;
+  const d = new Date(n.start_utc);
+  const day = d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" });
+  return `**Next session** · ${day}, ${n.start_utc.slice(11, 16)}–${n.end_utc.slice(11, 16)} UTC · ${n.feature_short}\n` +
+    `Reading: [${n.title}](${n.url}) (${n.cite}) · nothing to prepare, we read together\nGet session emails: ${SITE}`;
 }
 
 async function postDigest(env: Env): Promise<void> {
@@ -400,6 +416,11 @@ export default {
     if (req.method === "GET" && url.pathname === "/digest") {
       if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });
       return new Response((await buildDigest()) ?? "(nothing new this week; no message would be sent)", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+    }
+    if (req.method === "POST" && url.pathname === "/digest") {   // send it now (same secret), e.g. the first one
+      if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });
+      await postDigest(env);
+      return new Response("sent (if there was anything to say)\n", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
     }
     if (req.method === "POST" && url.pathname === "/unsubscribe") return unsubscribeForm(req, env);
     return new Response("Not found", { status: 404 });
