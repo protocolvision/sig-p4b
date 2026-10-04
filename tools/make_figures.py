@@ -204,7 +204,7 @@ def hardcore(w, h, seed, label=None, survey=False):
     # centre line of the core
     x1, y1 = iso(0, 0, -20, ox, oy, sc); x2, y2 = iso(0, 0, ztop + 30, ox, oy, sc)
     s.centerline(x1, y1, x2, y2, MUTED)
-    if h > STRIP:
+    if h > STRIP and not survey:   # the advisory version is the plain drawing, no words
         a, b = iso(core, core, -6, ox, oy, sc), iso(core, core, ztop, ox, oy, sc)
         s.dim(a[0], a[1], b[0], b[1], "HARD CORE", -18 * sc)
         pa = iso(plate, -plate, 120, ox, oy, sc)
