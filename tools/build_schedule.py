@@ -44,13 +44,13 @@ def short_feature(f):
     return f.split(":")[0]
 
 def feature_html(s):
-    """The session's other item, labelled by kind: SIG guest, guest speaker, tooling demo, case study, open slot."""
+    """The session's other item, labelled by kind: research group guest, guest speaker, tooling demo, case study, open slot."""
     f, links = s["feature"], s.get("links", {})
     link = lambda name: f'<a class="quiet" href="{ea(links[name])}">{e(name)}</a>' if name in links else e(name)
     m = re.match(r"Guest: (.*?) \((.*)\)$", f)
     if m:
         who, what = m.group(1), m.group(2)
-        kind = "SIG guest" if re.search(r"\b(SIG|Group)$", who) else "Guest speaker"
+        kind = "Research group guest" if re.search(r"\b(SIG|Group)$", who) else "Guest speaker"
         what = re.sub(r"^(\w+)", lambda x: link(x.group(1)) if x.group(1) in links else e(x.group(1)), what, count=1) if links else e(what)
         return f'<b>{kind}</b> {link(who)}: {what}'
     if f.startswith("Cognitive Ergonomics"):
@@ -123,7 +123,7 @@ for page, rel in (("src/index.html", ""), ("src/sessions.html", "../")):
     pth.write_text(replace_between(pth.read_text(), "next", body))
 
 # --- structured data (schema.org) on the sessions page ---
-events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
+events = [{"@type": "Event", "name": f"Protocols for Business · {s['title']}",
            "startDate": s["start_utc"], "endDate": s["end_utc"],
            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
            "eventStatus": "https://schema.org/EventScheduled",
@@ -133,7 +133,7 @@ events = [{"@type": "Event", "name": f"SIG P4B · {s['title']}",
            "organizer": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
            "isAccessibleForFree": True} for s in S]
 series = {"@context": "https://schema.org", "@type": "EventSeries",
-          "name": "Protocols for Business SIG sessions", "url": SITE + "sessions/",
+          "name": "Protocols for Business sessions", "url": SITE + "sessions/",
           "startDate": S[0]["date"], "endDate": S[-1]["date"], "subEvent": events}
 p = ROOT / "src/sessions.html"
 p.write_text(replace_between(p.read_text(), "jsonld",
@@ -172,8 +172,8 @@ _iso = subprocess.run(["git", "-C", str(ROOT), "log", "-1", "--format=%cI", "--"
                       capture_output=True, text=True).stdout.strip() or _iso
 stamp = (dt.datetime.fromisoformat(_iso).astimezone(dt.timezone.utc) if _iso else dt.datetime(2026, 9, 27, tzinfo=dt.timezone.utc)).strftime("%Y%m%dT%H%M%SZ")
 L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Protocol Institute//SIG P4B//EN", "CALSCALE:GREGORIAN",
-     "METHOD:PUBLISH", "X-WR-CALNAME:Protocols for Business SIG",
-     "X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business SIG"]
+     "METHOD:PUBLISH", "X-WR-CALNAME:Protocols for Business",
+     "X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business research group"]
 for s in S:
     d = s["date"].replace("-", "")
     desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
@@ -183,7 +183,7 @@ for s in S:
             f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
           "DTSTART:" + s["start_utc"].replace("-", "").replace(":", ""), "DTEND:" + s["end_utc"].replace("-", "").replace(":", ""),
-          fold("SUMMARY:" + esc(f"SIG P4B · {s['title']}")), fold("DESCRIPTION:" + esc(desc)),
+          fold("SUMMARY:" + esc(f"Protocols for Business · {s['title']}")), fold("DESCRIPTION:" + esc(desc)),
           fold("LOCATION:" + esc("Protocol Institute Discord · " + DISCORD)), f"URL:{SITE}", "END:VEVENT"]
 L.append("END:VCALENDAR")
 (ROOT / "sig-p4b.ics").write_text("\r\n".join(L) + "\r\n")

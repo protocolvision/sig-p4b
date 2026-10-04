@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the SIG's blyg (Blygger protocol 0.3, Level 1) from blyg-src/.
+"""Build the group's blyg (Blygger protocol 0.3, Level 1) from blyg-src/.
 
 Sources
   blyg-src/fragments/*.md   short items (SHOULD stay under 2,000 characters)
@@ -40,9 +40,9 @@ ORIGIN = SITE + "blyg/"
 BLYG = "0.3"
 GENERATOR_URL = "https://github.com/protocolvision/sig-p4b"
 GENERATOR = "sig-p4b-blyg/0.1 (static, git-versioned)"
-TITLE = "Protocols for Business SIG"
+TITLE = "Protocols for Business"
 DESCRIPTION = ("Session notes and the running research log of the Protocol Institute's "
-               "Protocols for Business SIG.")
+               "Protocols for Business.")
 FEED_WINDOW = 50
 ID_RE = re.compile(r"^[0-9abcdefghjkmnpqrstvwxyz]{26}$")
 TRANSCLUDE_RE = re.compile(r"^\s*!\[\[([0-9a-z]{26})\]\]\s*$")
@@ -309,7 +309,7 @@ def summary(content_html, limit=155):
 def write_pages(ordered, stems):
     sys.path.insert(0, str(ROOT / "tools"))
     from build_site import page
-    alt = '<link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="{rel}blyg/feed.xml">\n'
+    alt = '<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
     groups = {"log": [], "updates": [], "sessions": [], "notes": []}
     for d in ordered:
@@ -338,7 +338,7 @@ def write_pages(ordered, stems):
         folder.mkdir(parents=True, exist_ok=True)
         path = f'blyg/{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
         folder.joinpath("index.html").write_text(page(
-            {"title": f"{title_of(d, kind)} · SIG P4B blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
+            {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
              "card": "syllabus", "head": alt.format(rel="../../../")}, body))
     intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
              f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
@@ -347,7 +347,7 @@ def write_pages(ordered, stems):
              + "".join(f'<h2>{label}</h2>\n<ul class="schedule">\n' + "\n".join(r for _, r in sorted(groups[k], reverse=True)) + "\n</ul>\n"
                        for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
     (OUT / "index.html").write_text(page(
-        {"title": "Blyg · Protocols for Business SIG", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
+        {"title": "Blyg · Protocols for Business", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
          "card": "syllabus", "head": alt.format(rel="../")}, intro))
 
 if __name__ == "__main__":

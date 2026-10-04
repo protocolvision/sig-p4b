@@ -6,8 +6,8 @@
  *
  * Routes:
  *   POST /signup       — JSON (fetch) or form-encoded (no-JS fallback, redirects back)
- *   POST /talk         — an offer to speak at a session; posted to the SIG's Discord channel (nothing stored)
- *   POST /advisory     — a request for advisory services; posted to the SIG's Discord channel (nothing stored)
+ *   POST /talk         — an offer to speak at a session; posted to the group's Discord channel (nothing stored)
+ *   POST /advisory     — a request for advisory services; posted to the group's Discord channel (nothing stored)
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
@@ -96,7 +96,7 @@ function clean(v: unknown, max: number): string {
   return String(v ?? "").replace(/[\u0000-\u001f\u007f]/g, "").trim().slice(0, max);
 }
 
-// A short note to the SIG's Discord channel when someone new registers. It carries no personal
+// A short note to the group's Discord channel when someone new registers. It carries no personal
 // details (registrants haven't agreed to be announced), only that someone joined and the new total.
 // Test addresses on example.com are skipped. Failures never affect the sign-up.
 async function notifyDiscord(env: Env): Promise<void> {
@@ -112,7 +112,7 @@ async function notifyDiscord(env: Env): Promise<void> {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: "SIG sign-ups",
+        username: "Protocols for Business sign-ups",
         content: `New sign-up for Protocols for Business session emails. ${count} people are now registered.`,
         allowed_mentions: { parse: [] },
       }),
@@ -183,7 +183,7 @@ async function signup(req: Request, env: Env, ctx: ExecutionContext): Promise<Re
   return done(true);
 }
 
-// Talk offers go straight to the SIG's Discord channel so the facilitators can reply. The form tells
+// Talk offers go straight to the group's Discord channel so the facilitators can reply. The form tells
 // the speaker that what they send, including their contact, is posted there. Nothing is stored.
 const THEMES = ["Agents", "Nature", "Emissions", "Incidents", "Hardness", "Liveness", "Not sure"];
 async function talk(req: Request, env: Env): Promise<Response> {
@@ -220,7 +220,7 @@ async function talk(req: Request, env: Env): Promise<Response> {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      username: "SIG talk offers",
+      username: "Protocols for Business talk offers",
       content: "New offer to speak at a Protocols for Business session:",
       embeds: [{ title: title.slice(0, 250), description: about || undefined, fields, color: 0x004fcc }],
       allowed_mentions: { parse: [] },   // nobody gets pinged, whatever the text says
@@ -259,7 +259,7 @@ async function advisory(req: Request, env: Env): Promise<Response> {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      username: "SIG advisory requests",
+      username: "Protocols for Business advisory requests",
       content: "New request for advisory services:",
       embeds: [{ title: org ? `Advisory request from ${org}`.slice(0, 250) : "Advisory request", description: need, fields, color: 0x0f6e56 }],
       allowed_mentions: { parse: [] },
@@ -301,7 +301,7 @@ async function unsubscribe(url: URL, env: Env): Promise<Response> {
   const t = url.searchParams.get("t") || "";
   const page = (msg: string) =>
     new Response(
-      `<!doctype html><meta charset="utf-8"><title>Protocols for Business SIG</title>` +
+      `<!doctype html><meta charset="utf-8"><title>Protocols for Business</title>` +
         `<body style="font:17px/1.6 Georgia,serif;max-width:36rem;margin:4rem auto;padding:0 1rem">` +
         `<p>${msg}</p><p><a href="${SITE}">Back to the site</a></p>`,
       { headers: { "Content-Type": "text/html; charset=utf-8" } },

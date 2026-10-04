@@ -1,12 +1,12 @@
 ---
 id: 3efd9prsmabbqqnppqgbt8qnz7
-author: Protocols for Business SIG
+author: Protocols for Business
 generated_model: claude-opus-5-5
 ---
-# New website for the SIG
+# New website for the group
 
 ::: generated
-The Protocols for Business SIG has a new home at [npc.here.now/protocolvision](https://npc.here.now/protocolvision/). It has four sections:
+Protocols for Business has a new home at [npc.here.now/protocolvision](https://npc.here.now/protocolvision/). It has four sections:
 
 - **[About](https://npc.here.now/protocolvision/about/):** our method, protocol vision, which means looking at an organization through its protocols rather than its org chart. Also where the group came from, who facilitates it, and our work so far.
 - **[Sessions](https://npc.here.now/protocolvision/sessions/):** a new syllabus of 26 primary sources, every other Monday at 15:30 UTC from 2 November 2026, with a quote from each reading. It opens with what OpenAI and Anthropic reported about agent swarms this year. Joining details and a calendar you can subscribe to are there too.

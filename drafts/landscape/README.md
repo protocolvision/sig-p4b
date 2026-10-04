@@ -1,6 +1,6 @@
 # Reading landscape (draft)
 
-A 3D map of the SIG's readings. Each point is a passage of a reading, placed by what it says; the terrain
+A 3D map of the group's readings. Each point is a passage of a reading, placed by what it says; the terrain
 rises where readings cluster; the year's route runs through it. Preview (with the repo's local server
 running): http://localhost:8000/drafts/landscape/explorer/
 

@@ -1,4 +1,4 @@
-/* Shared behaviour for the SIG site: the next-session card and the register dialog.
+/* Shared behaviour for the site: the next-session card and the register dialog.
    Loaded with <script src="…/assets/site.js" data-root="…/" defer>. No dependencies. */
 (function () {
   var script = document.currentScript || document.querySelector('script[data-root]');
@@ -56,7 +56,7 @@
     }).catch(function () {});
   }
 
-  /* Short forms that go to the SIG's Discord channel: offer a talk ([data-talk]) and request advisory
+  /* Short forms that go to the group's Discord channel: offer a talk ([data-talk]) and request advisory
      services ([data-advisory]). Both reuse the register dialog's look; the worker posts them and stores nothing. */
   var BASE = SIGNUP.replace(/\/signup$/, '');
   function field(id, label, input, optional) {
@@ -99,7 +99,7 @@
   }
   inquiry({
     trigger: 'data-talk', id: 'talk', route: '/talk', title: 'Offer a talk', submit: 'Send offer',
-    intro: 'Guests speak first, at the start of a session. What you send here, including how to reach you, is posted to the SIG’s Discord channel so we can reply. Sessions are recorded.',
+    intro: 'Guests speak first, at the start of a session. What you send here, including how to reach you, is posted to the group’s Discord channel so we can reply. Sessions are recorded.',
     fields: field('t-name', 'Name', '<input id="t-name" name="name" type="text" autocomplete="name" required maxlength="100">') +
       field('t-contact', 'Discord handle or email', '<input id="t-contact" name="contact" type="text" required maxlength="150" autocapitalize="off" spellcheck="false">') +
       field('t-title', 'Talk title', '<input id="t-title" name="title" type="text" required maxlength="200">') +
@@ -107,17 +107,17 @@
       field('t-about', 'A few lines about it', '<textarea id="t-about" name="about" rows="3" maxlength="1200"></textarea>', true) +
       field('t-link', 'Link to your work', '<input id="t-link" name="link" type="text" inputmode="url" placeholder="paper, site or repo" maxlength="300">', true) +
       field('t-when', 'Preferred month', '<input id="t-when" name="when" type="text" placeholder="e.g. March 2027" maxlength="80">', true),
-    thanks: 'Thanks! Your offer is in the SIG’s Discord channel. We’ll reply there or by email.'
+    thanks: 'Thanks! Your offer is in the group’s Discord channel. We’ll reply there or by email.'
   });
   inquiry({
     trigger: 'data-advisory', id: 'advisory', route: '/advisory', title: 'Request advisory services', submit: 'Send request',
-    intro: 'Tell us what you’re working on and where you’d like help. Your request, including how to reach you, is posted to the SIG’s Discord channel so the facilitators can reply.',
+    intro: 'Tell us what you’re working on and where you’d like help. Your request, including how to reach you, is posted to the group’s Discord channel so the facilitators can reply.',
     fields: field('a-name', 'Name', '<input id="a-name" name="name" type="text" autocomplete="name" required maxlength="100">') +
       field('a-contact', 'Email or Discord handle', '<input id="a-contact" name="contact" type="text" autocomplete="email" required maxlength="150" autocapitalize="off" spellcheck="false">') +
       field('a-org', 'Organization', '<input id="a-org" name="org" type="text" autocomplete="organization" maxlength="150">', true) +
       field('a-need', 'What would you like help with?', '<textarea id="a-need" name="need" rows="4" required maxlength="1500" placeholder="For example: where agents should sit in a process, which protocols to harden, or how to log what they do"></textarea>') +
       field('a-when', 'Timing', '<input id="a-when" name="when" type="text" placeholder="e.g. this quarter" maxlength="80">', true),
-    thanks: 'Thanks! Your request is in the SIG’s Discord channel. We’ll get back to you.'
+    thanks: 'Thanks! Your request is in the group’s Discord channel. We’ll get back to you.'
   });
 
   /* Unsubscribe page: removes the address, and says the same thing whether or not it was on the list. */

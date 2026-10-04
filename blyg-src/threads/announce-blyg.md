@@ -1,12 +1,12 @@
 ---
 id: 2txmsk12amtvq11jeqgkvdkqmw
-author: Protocols for Business SIG
+author: Protocols for Business
 generated_model: claude-opus-5-5
 ---
 # Session notes now live on a blyg
 
 ::: generated
-From now on, the SIG's session notes and research log are published here, on a blyg: a small publication built on the [Blygger protocol](https://blygger.org/), developed at the Protocol Institute. It is plain files and an RSS feed on our own site. There is no platform in the middle, and you can [follow it](https://npc.here.now/protocolvision/blyg/feed.xml) with any feed reader.
+From now on, the group's session notes and research log are published here, on a blyg: a small publication built on the [Blygger protocol](https://blygger.org/), developed at the Protocol Institute. It is plain files and an RSS feed on our own site. There is no platform in the middle, and you can [follow it](https://npc.here.now/protocolvision/blyg/feed.xml) with any feed reader.
 
 What's here to start:
 

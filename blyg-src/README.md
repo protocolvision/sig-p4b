@@ -1,6 +1,6 @@
 # Contributing to the blyg
 
-The blyg holds the SIG's session notes and running research log. It is published at
+The blyg holds the group's session notes and running research log. It is published at
 https://npc.here.now/protocolvision/blyg/ with the [Blygger protocol](https://blygger.org/) 0.3:
 plain files plus an RSS feed that anyone can follow.
 

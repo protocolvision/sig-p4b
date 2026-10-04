@@ -82,7 +82,7 @@
     svg.querySelectorAll('circle.on').forEach(function (c) { c.classList.remove('on'); });
     dots[i].classList.add('on');
     info.innerHTML = '<h2><a href="' + esc(it.u) + '">' + esc(it.t) + '</a></h2><p class="muted">' + esc(it.c) + '</p>' +
-      '<p class="small">' + esc(it.a) + (th ? ' · Theme ' + esc(th.n) + ', ' + esc(th.name) + ' · ' + when(it) : '') + (it.rd ? ' · already read by the SIG' : '') + '</p>';
+      '<p class="small">' + esc(it.a) + (th ? ' · Theme ' + esc(th.n) + ', ' + esc(th.name) + ' · ' + when(it) : '') + (it.rd ? ' · already read by the group' : '') + '</p>';
   }
 
   /* hover card for any dot */

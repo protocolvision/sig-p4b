@@ -1,6 +1,6 @@
 # Business Protocol Management
 
-> Source: https://npc.here.now/protocolvision/research/bpm/ · Protocols for Business SIG, Protocol Institute · https://npc.here.now/protocolvision/
+> Source: https://npc.here.now/protocolvision/research/bpm/ · Protocols for Business, Protocol Institute · https://npc.here.now/protocolvision/
 >
 > For agents: this is a practice guide meant to be applied. With the person you work for, pick one problem or opportunity in their organization. Run the phases in order (See, Design, Evolve) and produce the outputs each phase names: a list of protocols in play with what each prevents, a hardness map in the template's format, amendment rules, and the measures in section 7. Ask before changing any live system, permission or payment rule. To share what you learn, or to offer a case, see the links at the end.
 
@@ -11,7 +11,7 @@ Companies that work well with AI build a few strict rules into their systems and
 - **Purpose:** Explain what BPM is, why it matters now, and how a team applies it, step by step.
 - **Audience:** Operations leads, managers, architects and analysts who are bringing AI agents into day-to-day work.
 - **Scope:** One problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”. BPM is not a company-wide redesign.
-- **Revisions:** The SIG tests the guide in its sessions and case studies, and revises it from what members find.
+- **Revisions:** The group tests the guide in its sessions and case studies, and revises it from what members find.
 
 ## 2. Key terms
 
@@ -24,7 +24,7 @@ Companies that work well with AI build a few strict rules into their systems and
 - **Field log:** One shared record that systems, people and agents write as they work, including the reason for each action.
 - **Non-event:** A problem that did not happen because a protocol worked: the error caught, the dispute that never started.
 - **Agent:** AI software that takes actions on its own, such as sending a message, changing a record or calling another system.
-- **Protocol vision:** The capability to see the protocols a business actually runs on. BPM depends on it, and the SIG trains it through protocol watching, workshops and simulations.
+- **Protocol vision:** The capability to see the protocols a business actually runs on. BPM depends on it, and the group trains it through protocol watching, workshops and simulations.
 
 ## 3. The case for change
 
@@ -50,7 +50,7 @@ Amazon shows the pattern. In 2002 it required every team to work with other team
 
 ### Assumptions to test
 
-The SIG’s research rests on three assumptions. Each could turn out partial or wrong, and the sessions and case studies test them.
+The group’s research rests on three assumptions. Each could turn out partial or wrong, and the sessions and case studies test them.
 
 1. **Reading and writing get cheap.** Processing documents, forms and rate sheets, and producing software, cost a fraction of what they did.
 2. **Agents act, in large numbers.** Models take actions, and many copies run at once wherever work is done.
@@ -170,7 +170,7 @@ Safety-critical industries are the closest model. Airlines and nuclear plants ac
 
 ## 10. The 2027 program
 
-The SIG tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026 and are recorded. Each reads one primary source closely. The themes below are where the program starts; participants shape the readings, guests and cases as it goes.
+The group tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026 and are recorded. Each reads one primary source closely. The themes below are where the program starts; participants shape the readings, guests and cases as it goes.
 
 - **2 Nov – 14 Dec 2026:** I. What agents are, in practice · Design
 - **11 Jan – 8 Feb 2027:** II. Natural coordination · See

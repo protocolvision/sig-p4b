@@ -76,7 +76,7 @@ function renderMovement(m) {
 function renderReading(r) {
   const a = areaById[r.area], s = sessionOf[r.id];
   detail.innerHTML = `<span class="tag" style="background:${a.color};color:${a.ink}">Area ${a.num}: ${esc(a.name)}</span>
-    ${r.read ? ' <span class="tag" style="background:#eceae4;color:#3d3c39">Already read by the SIG</span>' : ''}
+    ${r.read ? ' <span class="tag" style="background:#eceae4;color:#3d3c39">Already read by the group</span>' : ''}
     <h2 id="detail-title" tabindex="-1"><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h2>
     <p class="muted small">${esc(r.cite)}${s !== undefined ? ` · ${sessionText(r.id).toLowerCase()}` : ''}</p>
     ${r.quote ? `<blockquote>“${esc(r.quote)}”</blockquote>` : ''}

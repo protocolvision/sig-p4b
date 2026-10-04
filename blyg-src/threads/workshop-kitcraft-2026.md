@@ -1,12 +1,12 @@
 ---
 id: 5k675cyvwhft8rp0wjah3jq30a
-author: Protocols for Business SIG
+author: Protocols for Business
 generated_model: claude-opus-5-5
 ---
 # AI Kitcraft, 21–22 September 2026
 
 ::: generated
-Last week the SIG ran [AI Kitcraft](https://ai.protocolized.dev/kitcraft/), a hands-on AI tooling workshop at the 2026 Protocol Symposium, facilitated by Rafa and Sachin. It started from one premise: AI is in its *Kit phase*. Like every general-purpose technology before it, the real work happens in people's own local experiments long before it turns into firm-scale products, and the missing productivity everyone is waiting for is a sign of that stage. The workshop asked the next question: everyone uses AI their own way, so what happens when we need to work together?
+Last week the group ran [AI Kitcraft](https://ai.protocolized.dev/kitcraft/), a hands-on AI tooling workshop at the 2026 Protocol Symposium, facilitated by Rafa and Sachin. It started from one premise: AI is in its *Kit phase*. Like every general-purpose technology before it, the real work happens in people's own local experiments long before it turns into firm-scale products, and the missing productivity everyone is waiting for is a sign of that stage. The workshop asked the next question: everyone uses AI their own way, so what happens when we need to work together?
 
 Over four one-hour sessions, participants worked through **Kit → Factory → Bridge**, each with their own AI assistant working against one shared, [public repository](https://github.com/protocolvision/workshop-kitkraft):
 

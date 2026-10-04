@@ -33,7 +33,7 @@ def main():
                         **({"already_read": True} if r.get("read") else {})}
                        for r in L["readings"]), key=lambda r: (r["area"], r["title"].lower()))
     (DATA / "readings.json").write_text(json.dumps(
-        {"about": "Readings on the Protocols for Business SIG reading map, grouped by area. Readings in the year's syllabus carry their theme.",
+        {"about": "Readings on the Protocols for Business reading map, grouped by area. Readings in the year's syllabus carry their theme.",
          "map": json.loads((ROOT / "config.json").read_text())["site"] + "sessions/map/",
          "suggest": "https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml",
          "readings": readings}, ensure_ascii=False, indent=1) + "\n")

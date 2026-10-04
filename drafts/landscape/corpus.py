@@ -22,7 +22,7 @@ SEED = {1: "swarms", 2: "swarms", 3: "nature", 4: "nature", 5: "records", 6: "re
         15: "people", 16: "people", 17: "people", 18: "people", 19: "firm", 20: "firm", 21: "firm",
         22: "firm", 23: "tending", 24: "tending", 25: "tending", 26: "tending"}
 UNPUBLISHED = {29}  # inventory numbers not to be shown publicly
-# Readings the SIG has already read: on the map, never in a syllabus path.
+# Readings the group has already read: on the map, never in a syllabus path.
 ALREADY_READ = [
     {"title": "Atoms, Institutions, Blockchains", "url": "https://paragraph.com/@josh-stark/atoms-institutions-blockchains",
      "cite": "Josh Stark, 2022 (Summer of Protocols edition, 2023)", "year": 2022, "quote": "",

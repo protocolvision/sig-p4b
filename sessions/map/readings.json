@@ -1,5 +1,5 @@
 {
- "about": "Readings on the Protocols for Business SIG reading map, grouped by area. Readings in the year's syllabus carry their theme.",
+ "about": "Readings on the Protocols for Business reading map, grouped by area. Readings in the year's syllabus carry their theme.",
  "map": "https://npc.here.now/protocolvision/sessions/map/",
  "suggest": "https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml",
  "readings": [

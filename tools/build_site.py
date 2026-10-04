@@ -34,7 +34,7 @@ def external_links(doc):
     return EXTERNAL_A.sub(fix, doc)
 
 SECTIONS = {"sessions/": "Sessions", "research/": "Research", "about/": "About", "blyg/": "Blyg"}
-ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Protocols for Business SIG", "url": SITE,
+ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Protocols for Business", "url": SITE,
        "logo": SITE + "favicon.svg",
        "parentOrganization": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
        "sameAs": ["https://github.com/protocolvision", "https://protocolized.summerofprotocols.com/t/sigbiz"],
@@ -47,7 +47,7 @@ def structured_data(meta):
     path, short = meta["path"], meta["title"].split(" · ")[0]
     graph = []
     if not path:
-        graph = [ORG, {"@type": "WebSite", "@id": SITE + "#site", "name": "Protocols for Business SIG", "url": SITE,
+        graph = [ORG, {"@type": "WebSite", "@id": SITE + "#site", "name": "Protocols for Business", "url": SITE,
                        "publisher": {"@id": SITE + "#org"}}]
     elif path.count("/") > 1:
         crumbs = [("Home", SITE)]
@@ -107,7 +107,7 @@ def page(meta, body):
 <meta name="twitter:description" content="{a(desc)}">
 <meta name="twitter:image" content="{card}">
 <link rel="alternate" type="text/plain" title="Summary for language models" href="{rel}llms.txt">
-<link rel="alternate" type="application/rss+xml" title="Protocols for Business SIG blyg" href="{rel}blyg/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
 {FONTS}
 <link rel="stylesheet" href="{rel}style.css">
@@ -122,7 +122,7 @@ def page(meta, body):
 {body.strip()}
 </main>
 <footer>
-<p><img class="mark" src="{rel}favicon.svg" alt="" width="20" height="20">Protocols for Business SIG, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
+<p><img class="mark" src="{rel}favicon.svg" alt="" width="20" height="20">Protocols for Business, a research group of the <a href="https://protocol-institute.org/">Protocol Institute</a></p>
 <nav>{foot_nav}<a href="{rel}blyg/">Blyg</a><a href="https://discord.gg/zNJdK7caj">Discord</a><a href="https://github.com/protocolvision">GitHub</a><a href="https://github.com/protocolvision/sig-p4b">Site source</a><a href="{rel}llms.txt">llms.txt</a></nav>
 </footer>
 <script src="{rel}assets/site.js" data-root="{rel or './'}" data-signup="{SIGNUP_WORKER}" defer></script>
@@ -158,7 +158,7 @@ def agent_markdown(meta, body):
     """The page as Markdown, opened by a short brief for an agent that wants to apply it."""
     from html_to_md import to_markdown
     url = SITE + meta["path"]
-    brief = (f"> Source: {url} · Protocols for Business SIG, Protocol Institute · {SITE}\n>\n"
+    brief = (f"> Source: {url} · Protocols for Business, Protocol Institute · {SITE}\n>\n"
              "> For agents: this is a practice guide meant to be applied. With the person you work for, pick one problem "
              "or opportunity in their organization. Run the phases in order (See, Design, Evolve) and produce the outputs "
              "each phase names: a list of protocols in play with what each prevents, a hardness map in the template's "
@@ -172,7 +172,7 @@ def write_llms():
     """A plain-text summary for language models and agents (llmstxt.org convention)."""
     S = json.loads((ROOT / "sessions.json").read_text())
     upcoming = "\n".join(f"- {s['date']} {s['start_utc'][11:16]}–{s['end_utc'][11:16]} UTC: {s['title']} ({s['cite']}), {s['url']}" for s in S[:4])
-    text = f"""# Protocols for Business SIG
+    text = f"""# Protocols for Business
 
 > A research group of the Protocol Institute studying how organizations coordinate through protocols, and what changes as AI agents join the work. Sessions every other Monday, 15:30–16:30 UTC, each a deep reading of one primary source, on the Protocol Institute Discord ({DISCORD}, channel #protocols-for-business), from 2 November 2026 to 1 November 2027. Sessions are recorded. Drop-ins are welcome.
 

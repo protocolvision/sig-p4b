@@ -1,7 +1,7 @@
-# Protocols for Business SIG
+# Protocols for Business
 
-The central repository for the Protocol Institute's Special Interest Group in Protocols for Business
-(SIG P4B). Everything the group publishes, and the tooling around it, lives here and is built from here.
+The central repository for Protocols for Business, a research group of the Protocol Institute.
+Everything the group publishes, and the tooling around it, lives here and is built from here.
 
 **Live:** https://npc.here.now/protocolvision/ (a staging domain; a production domain comes later)
 
@@ -118,7 +118,7 @@ The next-session card and the register dialog come from `assets/site.js`. Old UR
 
 ## Blyg (session notes and research log)
 
-`blyg-src/` holds the SIG's session notes and research log. `tools/build_blyg.py` publishes them to
+`blyg-src/` holds the group's session notes and research log. `tools/build_blyg.py` publishes them to
 `/blyg/` with the [Blygger protocol](https://blygger.org/) 0.3 (Level 1), and `tools/blyg_check.py`
 checks conformance. Versions come from git: each commit that changes an item is one published version.
 See `blyg-src/README.md` for how to contribute. The first ten session notes were imported from the

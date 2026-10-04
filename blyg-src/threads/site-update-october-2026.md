@@ -1,6 +1,6 @@
 ---
 id: 4dm70rhgkbj7w25a9q53nz8ajd
-author: Protocols for Business SIG
+author: Protocols for Business
 generated_model: claude-opus-5-5
 ---
 # What changed on the site before kickoff
@@ -12,7 +12,7 @@ The [site](https://npc.here.now/protocolvision/) got simpler and clearer ahead o
 
 **A quieter design, with drawings.** The site has three pages, Sessions, Research and About, in one typeface. Line drawings made in code now run through it: a murmuration, agents passing messages, signals spreading, a fault line, a hard core with free edges, and a heartbeat. Each theme has its own.
 
-**A fuller session plan.** On the [Sessions page](https://npc.here.now/protocolvision/sessions/), each theme's drop-down lists its sessions with the date, the reading and what else happens that day. Across the 26 sessions, six host other SIGs, six are case study sessions (monthly from May), six are tooling demos of hardness tech and swarm orchestration infrastructure, and six are guest talks. Guests always go first on the agenda. Two themes were renamed: V is now Engineering hardness and VI is Operational liveness.
+**A fuller session plan.** On the [Sessions page](https://npc.here.now/protocolvision/sessions/), each theme's drop-down lists its sessions with the date, the reading and what else happens that day. Across the 26 sessions, six host other research groups, six are case study sessions (monthly from May), six are tooling demos of hardness tech and swarm orchestration infrastructure, and six are guest talks. Guests always go first on the agenda. Two themes were renamed: V is now Engineering hardness and VI is Operational liveness.
 
 **Ways to take part.** You can [offer a talk](https://npc.here.now/protocolvision/research/#speak): four guest slots are open, and the first guest talk, on 30 November, is about software designed to run for a thousand years without human help. From the home page you can also ask for advisory help. Both forms post to our Discord channel. You can still [suggest or challenge a reading](https://npc.here.now/protocolvision/sessions/#suggest), and the [reading map](https://npc.here.now/protocolvision/sessions/map/) now lets you zoom into any area.
 

@@ -126,7 +126,7 @@ def main():
         for a in L["areas"])
     data = json.dumps({"items": items, "themes": themes, "areas": [a["name"] for a in L["areas"]], "slots": L["slots"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
-    body = f'''<!-- {{"title": "Reading map · Protocols for Business SIG", "desc": "{len(L["readings"])} readings placed by what they say, with this year’s reading plan marked.", "path": "sessions/map/", "nav": "sessions", "card": "syllabus"}} -->
+    body = f'''<!-- {{"title": "Reading map · Protocols for Business", "desc": "{len(L["readings"])} readings placed by what they say, with this year’s reading plan marked.", "path": "sessions/map/", "nav": "sessions", "card": "syllabus"}} -->
 <p class="meta"><a href="../">Sessions</a></p>
 <h1>Reading map</h1>
 <p class="lede">This map shows {len(L["readings"])} readings. Readings about similar ideas sit close together. The blue dots are this year’s reading plan. Point at a theme to see its readings. Select an area name, or click anywhere on the map, to look closer at that part.</p>

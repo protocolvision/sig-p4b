@@ -1,6 +1,6 @@
 # Sign-up Worker
 
-A small Cloudflare Worker that stores session sign-ups for the SIG and exports them for emailing.
+A small Cloudflare Worker that stores session sign-ups for the group and exports them for emailing.
 It is self-contained: this folder plus `../config.json` is everything needed to run it on any
 Cloudflare account.
 
@@ -9,8 +9,8 @@ Cloudflare account.
 | Route | Purpose |
 |---|---|
 | `POST /signup` | Register or update a member (JSON from the site's dialog, or a plain form post). Email is required; name, website, GitHub, Discord, and affiliation are optional. Registering again merges: new non-empty fields update the record, empty ones keep what's there, and the original signup date, source, and role are kept. |
-| `POST /talk` | An offer to speak at a session, from the Research page's "Offer a talk" form: name, contact, title, theme, and optional notes, link and month. Posted to the SIG's Discord channel through the same webhook; nothing is stored. Same honeypot, rate limit and length caps as sign-ups; mentions never ping. |
-| `POST /advisory` | A request for advisory services, from the home page's "Request advisory services" link: name, contact, what they need, and optional organization and timing. Posted to the SIG's Discord channel through the same webhook; nothing is stored. Same defenses as `/talk`. |
+| `POST /talk` | An offer to speak at a session, from the Research page's "Offer a talk" form: name, contact, title, theme, and optional notes, link and month. Posted to the group's Discord channel through the same webhook; nothing is stored. Same honeypot, rate limit and length caps as sign-ups; mentions never ping. |
+| `POST /advisory` | A request for advisory services, from the home page's "Request advisory services" link: name, contact, what they need, and optional organization and timing. Posted to the group's Discord channel through the same webhook; nothing is stored. Same defenses as `/talk`. |
 | `POST /unsubscribe` | The site's general unsubscribe page (`/unsubscribe/`): an email address, removed if present. The answer is the same either way, so it can't be used to check who signed up. Rate-limited. The per-person `GET /unsubscribe?email=…&t=…` links in the export still work. |
 | `GET /export.csv` | The full list as CSV, with a signed unsubscribe link per person. Requires the `X-Export-Secret` header. |
 | `GET /unsubscribe?email=…&t=…` | One-click unsubscribe (the link from the export). |
@@ -21,7 +21,7 @@ counters (10 requests per hour per IP). Roles are `member` or `pi-core`.
 ## Discord note on new sign-ups
 
 When someone new registers (not when a member updates their details), the Worker posts a short
-note to the SIG's Discord channel: "New sign-up for Protocols for Business session emails. N people
+note to the group's Discord channel: "New sign-up for Protocols for Business session emails. N people
 are now registered." It carries no names or emails, since registrants haven't agreed to be
 announced. Addresses on example.com are skipped, so tests stay quiet. A failed post never affects
 the sign-up.
