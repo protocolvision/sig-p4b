@@ -29,6 +29,17 @@ Uncommitted changes are drafts and are never published.
 Put `![[<fragment id>]]` on its own line. At publish time the fragment's current text is copied into the
 thread, with a record of which version was quoted. The research log quotes the premises this way.
 
+## Respond to someone else's post (a stub)
+
+A thread can declare the one thing it responds to (Blygger 0.3 §10.6). The page then shows a small
+"In response to" line linking back, and readers that understand stubs see the link too. Add one line of
+JSON to the front matter. For a post on another blyg, use its origin, id and the version you read
+(from its `items/{id}.json`), plus a dated citation:
+
+    stub_of: {"origin": "https://www.msweet.net/notes/", "id": "5vt4cvsxvs6h2m5yqzk2hn4d4v", "version": 2, "cited": {"author": "Matthew McDowell-Sweet", "url": "https://www.msweet.net/notes/106-cream-pikes", "retrieved": "2026-10-05T12:00:00Z"}}
+
+For a plain web page, use `{"url": "https://…"}`. One target per thread; a stub is a response, so write one.
+
 ## Mark machine-written text
 
 If a model wrote a passage, fence it and name the model in the front matter:

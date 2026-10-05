@@ -322,5 +322,5 @@ footer .foot-line a { color: inherit; }
 }
 
 /* blyg: a stub's link back to what it responds to */
-.stub-of { display: flex; align-items: center; gap: .4rem; margin: .25rem 0 1rem; font-size: .92rem; color: var(--muted); }
-.stub-of .stub-icon { flex: none; color: var(--link); }
+.stub-of { margin: .25rem 0 1rem; font-size: .92rem; color: var(--muted); }
+.stub-of .stub-icon { vertical-align: -2px; margin-right: .3rem; color: var(--link); }

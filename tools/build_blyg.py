@@ -327,7 +327,7 @@ def stub_line(d):
     url = c.get("url") or st.get("url") or (st.get("origin", "") + "items/" + st.get("id", "") + ".json")
     who = c.get("author")
     label = f"a note by {html.escape(who)}" if who else html.escape(c.get("source") or url)
-    where = f' <span class="muted">· {html.escape(c["source"])}</span>' if c.get("source") and who else ""
+    where = ""   # the author's name already says whose it is
     return f'<p class="stub-of">{RETURN_ICON} In response to <a href="{html.escape(url, quote=True)}">{label}</a>{where}</p>\n'
 
 def write_pages(ordered, stems):
