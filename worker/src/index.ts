@@ -46,8 +46,6 @@ let SITE = "https://protocolsforbusiness.com/";
 let ALLOWED_ORIGINS = [
   "https://protocolsforbusiness.com",
   "https://www.protocolsforbusiness.com",
-  "https://npc.here.now",
-  "https://scarlet-rapids-8mbp.here.now",
   "http://localhost:8000",
   "http://127.0.0.1:8000",
 ];

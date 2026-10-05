@@ -3,7 +3,7 @@
 The central repository for Protocols for Business, a research group of the Protocol Institute.
 Everything the group publishes, and the tooling around it, lives here and is built from here.
 
-**Live:** https://npc.here.now/protocolvision/ (a staging domain; a production domain comes later)
+**Live:** https://protocolsforbusiness.com (Cloudflare). How the group runs day to day: [`ops/`](ops/).
 
 ## What's in it
 
@@ -31,8 +31,7 @@ The repo is meant to be the group's single source of truth, with more flows adde
 2. **Meeting recordings.** Connect the Protocol Institute's recording pipeline (c3po's Discord
    ingestion and the recording notes in PI's storage) so each session's recording and notes land
    here automatically: a session-notes thread on the blyg and a link in the Sessions archive.
-3. **Production domain.** Move from the npc.here.now staging mount to a permanent domain. The blyg's
-   origin URL is its identity, so this should happen before the feed is announced widely.
+3. **Production domain.** Done: https://protocolsforbusiness.com since October 2026 (see "The old address" below).
 4. **Auto-publish from GitHub.** Done: every push to `main` builds, checks and publishes. The workflow
    needs three repository secrets: `CLOUDFLARE_API_TOKEN` (a token from the "Edit Cloudflare Workers"
    template, limited to this account and the protocolsforbusiness.com zone), `CLOUDFLARE_ACCOUNT_ID`, and
@@ -53,20 +52,24 @@ sources/                 local reference copies (field guide, Reader EPUB) — g
 assets/                  cube linework watermark + link-preview image (from PI brand kit art 6)
 style.css                the only stylesheet
 favicon.svg              PI P-mark
-deploy.sh                publish to here.now and mount at npc.here.now/protocolvision
+deploy.sh                build, publish to Cloudflare (site/), refresh the redirects at the old address
+site/                    the Cloudflare Worker that serves the site and the blyg's Webmention endpoint
+ops/                     runbooks and email drafts (in the repo, never on the site)
 ```
 
 ## Contributing
 
 Open a pull request. To add a session's notes, create `meetings/YYYY-MM-DD-slug/index.html` and link it
-from the session's line in `index.html` and `syllabus/index.html`. Keep relative links; the site is
-served under `/protocolvision/`.
+from the session's line in `index.html` and `syllabus/index.html`. Keep links relative, so the site works
+at any address.
 
 Keep construction client details anonymized. The client is not named anywhere in this repo.
 
 ## Deploy
 
-`./deploy.sh` (needs a here.now API key in `~/.herenow/credentials`).
+Pushing to `main` publishes (see Continuous integration). `./deploy.sh` does the same from a laptop: it
+needs Wrangler logged in to Cloudflare, and a here.now key in `~/.herenow/credentials` to refresh the old
+address (without one it skips that step).
 
 ## Search and the move to a new domain
 
@@ -130,4 +133,18 @@ and recordings), with provenance links on each item.
 ## Continuous integration
 
 `.github/workflows/site.yml` builds everything and runs the blyg check on every push and pull request.
-On `main` it also publishes to here.now, if the repo has a `HERENOW_API_KEY` secret.
+On `main` it also publishes: to Cloudflare with the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+secrets, and to the old address with `HERENOW_API_KEY`.
+
+## The old address (archived)
+
+Until October 2026 the site lived on here.now at https://npc.here.now/protocolvision/ (here.now site
+`scarlet-rapids-8mbp`, recorded in `.herenow-slug`, mounted on the `npc` handle at `protocolvision`).
+It now holds only a redirect copy: every page forwards to the same page on protocolsforbusiness.com,
+while the feed, calendar and data files stay as files so old subscriptions keep receiving updates. here.now
+can't send HTTP redirects, so pages use a refresh plus a canonical tag.
+
+Keep it running until at least October 2027; `deploy.sh` refreshes it on every publish. To retire it after
+that: delete the `protocolvision` link on the npc handle, delete the here.now site, remove step 2 from
+`deploy.sh`, the `HERENOW_API_KEY` secret, and `.herenow-slug`. Other npc.here.now sites linked from the
+case studies (water, brand kit) are separate projects and stay where they are.
