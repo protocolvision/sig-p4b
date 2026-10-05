@@ -2,6 +2,7 @@
 id: 03k800kerdjkv2b55bbca4b2jc
 author: Protocols for Business
 generated_model: claude-opus-5-5
+stub_of: {"origin": "https://www.msweet.net/notes/", "id": "5vt4cvsxvs6h2m5yqzk2hn4d4v", "version": 2, "cited": {"source": "Notes | Matthew McDowell-Sweet", "author": "Matthew McDowell-Sweet", "excerpt": "Protocol thinking is way more distinct from product thinking than I appreciated.", "url": "https://www.msweet.net/notes/106-cream-pikes", "retrieved": "2026-10-05T05:20:08Z"}}
 ---
 # Protocols aren't products
 

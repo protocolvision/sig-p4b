@@ -12,6 +12,8 @@ Each source file starts with front matter:
   withdrawn: true                    # optional; publishes a withdrawal endcap
   pin: [1]                           # optional; versions promised forever (items/{id}/v{n}.json)
   generated_model: c3po              # optional; model for ::: generated blocks
+  stub_of: {"origin": ..., "id": ..., "version": n, "cited": {...}}   # optional, threads only (0.3 §10.6):
+                                     # one-line JSON naming what this thread responds to; or {"url": ...} for a plain web page
   ---
 
 Versions come from git: every commit that changes an item's content is one publish event,
@@ -44,6 +46,7 @@ TITLE = "Protocols for Business"
 DESCRIPTION = ("Session notes and the running research log of the Protocol Institute's "
                "Protocols for Business.")
 FEED_WINDOW = 50
+LEVEL = 2   # informative (0.3 §3.2): L1 plus the page field and stubs, both emitted per §5.8 and §10.6
 ID_RE = re.compile(r"^[0-9abcdefghjkmnpqrstvwxyz]{26}$")
 TRANSCLUDE_RE = re.compile(r"^\s*!\[\[([0-9a-z]{26})\]\]\s*$")
 GEN_OPEN, GEN_CLOSE = re.compile(r"^\s*:::\s*generated\s*$"), re.compile(r"^\s*:::\s*$")
@@ -65,8 +68,10 @@ def split_front(text):
     for line in m.group(1).splitlines():
         if ":" in line and not line.lstrip().startswith("#"):
             k, v = line.split(":", 1)
-            v = v.split(" #")[0].strip()
-            if v.startswith("[") and v.endswith("]"):
+            v = v.strip() if v.strip().startswith("{") else v.split(" #")[0].strip()
+            if v.startswith("{") and v.endswith("}"):
+                v = json.loads(v)   # an inline JSON object, e.g. stub_of
+            elif v.startswith("[") and v.endswith("]"):
                 v = [int(x) for x in re.findall(r"\d+", v)]
             elif v.lower() in ("true", "false"):
                 v = v.lower() == "true"
@@ -99,7 +104,7 @@ def versions_of(path):
     """Committed content versions of one source file, oldest first."""
     rel = path.relative_to(ROOT).as_posix()
     log = git("log", "--format=%H%x09%cI%x09%s", "--", rel).strip().splitlines()
-    out, last_body, last_withdrawn = [], None, False
+    out, last_body, last_withdrawn, last_stub = [], None, False, "null"
     for line in reversed(log):
         sha, when, subject = line.split("\t", 2)
         try:
@@ -108,11 +113,12 @@ def versions_of(path):
             continue
         meta, body = split_front(text)
         withdrawn = bool(meta.get("withdrawn"))
-        if body == last_body and withdrawn == last_withdrawn:
-            continue  # front-matter-only change: not a publish event
+        stub = json.dumps(meta.get("stub_of"), sort_keys=True)
+        if body == last_body and withdrawn == last_withdrawn and stub == last_stub:
+            continue  # front-matter-only change (other than stub_of): not a publish event
         out.append({"sha": sha, "at": utc(when), "note": subject[:140], "meta": meta, "body": body,
                     "withdrawn": withdrawn})
-        last_body, last_withdrawn = body, withdrawn
+        last_body, last_withdrawn, last_stub = body, withdrawn, stub
     return out
 
 def load_items():
@@ -155,6 +161,8 @@ def build_item(item, items):
     doc["media"] = []
     if kind == "thread":
         doc["transclusions"] = snapshots[len(vs)]["transclusions"]
+        if isinstance(latest["meta"].get("stub_of"), dict) and not latest["withdrawn"]:
+            doc["stub_of"] = latest["meta"]["stub_of"]   # 0.3 §10.6: the one thing this thread responds to
     if snapshots[len(vs)]["generated"]:
         doc["generated"] = snapshots[len(vs)]["generated"]
     doc["changelog"] = []
@@ -252,7 +260,7 @@ def main():
     index = {"updated": updated, "items": [{"id": d["id"], "kind": d["kind"], "created": d["created"],
                                              "updated": d["updated"], "version": d["version"]} for d in ordered]}
     (OUT / "items" / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1) + "\n")
-    manifest = {"blyg": BLYG, "level": 1, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
+    manifest = {"blyg": BLYG, "level": LEVEL, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
                 "author": {"name": TITLE, "bio": DESCRIPTION,
                            "links": [{"label": "Home", "url": SITE}, {"label": "Protocol Institute", "url": "https://protocol-institute.org/"}]},
                 "feed": "feed.xml", "items": "items/index.json", "updated": updated}
@@ -291,7 +299,7 @@ def write_feed(events, updated):
     <link>{ORIGIN}</link>
     <description>{e(DESCRIPTION)}</description>
     <lastBuildDate>{rfc822(updated)}</lastBuildDate>
-    <blyg:level>1</blyg:level>
+    <blyg:level>{LEVEL}</blyg:level>
     <blyg:manifest>{ORIGIN}blyg.json</blyg:manifest>
 {chr(10).join(rows)}
   </channel>
@@ -305,6 +313,22 @@ def summary(content_html, limit=155):
     if len(text) <= limit:
         return text or DESCRIPTION
     return text[:limit].rsplit(" ", 1)[0].rstrip(",;:·") + "…"
+
+RETURN_ICON = ('<svg class="stub-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">'
+               '<path d="M6 3 2 7l4 4M2.5 7H10a4 4 0 0 1 0 8H8" fill="none" stroke="currentColor" stroke-width="1.4" '
+               'stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+def stub_line(d):
+    """For a stub, a small line above the post linking back to what it responds to (from stub_of.cited)."""
+    st = d.get("stub_of")
+    if not st:
+        return ""
+    c = st.get("cited", {})
+    url = c.get("url") or st.get("url") or (st.get("origin", "") + "items/" + st.get("id", "") + ".json")
+    who = c.get("author")
+    label = f"a note by {html.escape(who)}" if who else html.escape(c.get("source") or url)
+    where = f' <span class="muted">· {html.escape(c["source"])}</span>' if c.get("source") and who else ""
+    return f'<p class="stub-of">{RETURN_ICON} In response to <a href="{html.escape(url, quote=True)}">{label}</a>{where}</p>\n'
 
 def write_pages(ordered, stems):
     sys.path.insert(0, str(ROOT / "tools"))
@@ -320,6 +344,8 @@ def write_pages(ordered, stems):
         shown = m.group(1) + "T00:00:00Z" if m else d["updated"]
         key = "sessions" if m else ("log" if stem == "research-log" else "updates" if d["kind"] == "thread" else "notes")
         kind_label = "session notes" if m else ("update" if key == "updates" else d["kind"])
+        if d.get("stub_of"):
+            kind_label += " · response"
         groups[key].append((shown, f'  <li><time datetime="{shown[:10]}">{date(shown)}</time><span class="what">'
             f'<a href="{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/">{html.escape(title_of(d, d["kind"]))}</a> '
             f'<span class="muted">· {kind_label} · v{d["version"]}</span></span></li>'))
@@ -331,7 +357,7 @@ def write_pages(ordered, stems):
         if "<h1" not in content:   # one H1 per page: fragments often open without a heading
             content = f'<h1>{html.escape(title_of(d, kind))}</h1>\n' + content
         body = (f'<p class="meta"><a href="../../">Blyg</a> · {kind.lower()} · version {d["version"]} · '
-                f'updated {date(d["updated"])}</p>\n<article class="blyg-item">\n{content}\n</article>\n'
+                f'updated {date(d["updated"])}</p>\n{stub_line(d)}<article class="blyg-item">\n{content}\n</article>\n'
                 f'<p class="small muted">Machine-readable: <a href="../../items/{d["id"]}.json">item JSON</a> · '
                 f'changelog {len(d["changelog"])} version{"s" if len(d["changelog"]) != 1 else ""}</p>')
         folder = OUT / ("t" if d["kind"] == "thread" else "f") / d["id"]

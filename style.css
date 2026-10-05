@@ -320,3 +320,7 @@ footer .foot-line a { color: inherit; }
   .next.ask .fig-next { position: static; order: 9; transform: none; width: 100%; max-width: 20rem; margin: 1rem auto 0; opacity: 1; -webkit-mask-image: none; mask-image: none; }
   .next.ask .small { max-width: none; }
 }
+
+/* blyg: a stub's link back to what it responds to */
+.stub-of { display: flex; align-items: center; gap: .4rem; margin: .25rem 0 1rem; font-size: .92rem; color: var(--muted); }
+.stub-of .stub-icon { flex: none; color: var(--link); }

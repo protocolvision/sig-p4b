@@ -84,6 +84,23 @@ def main():
             directives = re.findall(r"^\s*!\[\[([0-9a-z]{26})\]\]\s*$", doc["content_md"], re.M)
             if directives != [t["id"] for t in doc.get("transclusions", [])]:
                 fail(f"{where}: transclusion directives in content_md do not match transclusions")
+        st = doc.get("stub_of")
+        if st is not None:   # 0.3 §10.6 and §5.9: threads only, one target, a reference or a URL, dated citations
+            if doc["kind"] != "thread":
+                fail(f"{where}: stub_of is for threads only")
+            ref = {k for k in st if k != "cited"}
+            if ref not in ({"url"}, {"origin", "id", "version"}):
+                fail(f"{where}: stub_of must be {{url}} or {{origin, id, version}} (plus optional cited)")
+            if "origin" in st and not str(st["origin"]).endswith("/"):
+                fail(f"{where}: stub_of.origin must be an origin URL ending in /")
+            if "cited" in st:
+                c = st["cited"]
+                if not TS_RE.match(str(c.get("retrieved", ""))):
+                    fail(f"{where}: stub_of.cited needs a retrieved timestamp")
+                if set(c) - {"source", "author", "excerpt", "url", "retrieved"}:
+                    fail(f"{where}: stub_of.cited has unknown members")
+                if len(c.get("excerpt", "")) > 240:
+                    fail(f"{where}: stub_of.cited.excerpt should stay near 200 characters")
         gens = doc.get("generated")
         own_html = re.sub(r'<blockquote class="blyg-transclusion".*?</blockquote>', "", doc["content_html"], flags=re.S)
         wrapped = len(re.findall(r'class="blyg-tk-gen"', own_html))  # transcluded fragments carry their own
