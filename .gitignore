@@ -2,7 +2,7 @@
 .DS_Store
 signups-*.csv
 sources/
-blyg/
+/blyg/
 __pycache__/
 *.pyc
 dist/
