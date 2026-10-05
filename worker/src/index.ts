@@ -25,6 +25,7 @@ interface Env {
   SITE?: string;             // public site, used for redirects back after a no-JS form post
   ALLOWED_ORIGINS?: string;  // comma-separated origins allowed to call /signup from a browser
   DISCORD_WEBHOOK?: string;  // secret: a Discord channel webhook; new sign-ups post a short note there
+  MENTIONS?: KVNamespace;    // the blyg's Webmentions, written by site/worker.js; read here for the weekly digest
 }
 
 interface Signup {
@@ -350,7 +351,7 @@ function titleOf(md: string): string {
   return t.length > 90 ? t.slice(0, 87).trimEnd() + "…" : t;
 }
 
-async function buildDigest(now = Date.now()): Promise<string | null> {
+async function buildDigest(env: Env, now = Date.now()): Promise<string | null> {
   const base = SITE + "blyg/";
   const res = await fetch(base + "items/index.json", { cf: { cacheTtl: 0 } } as RequestInit);
   if (!res.ok) return null;
@@ -358,7 +359,8 @@ async function buildDigest(now = Date.now()): Promise<string | null> {
   const since = now - 7 * 24 * 3600 * 1000;
   const recent = index.items.filter((i) => Date.parse(i.updated) >= since);
   const upcoming = await nextSession(now);
-  if (!recent.length && !upcoming) return null;
+  const responses = await recentResponses(env, since);
+  if (!recent.length && !upcoming && !responses.length) return null;
   const fresh: string[] = [], changed: string[] = [];
   for (const i of recent.sort((a, b) => Date.parse(b.updated) - Date.parse(a.updated))) {
     const r = await fetch(base + `items/${i.id}.json`);
@@ -371,11 +373,30 @@ async function buildDigest(now = Date.now()): Promise<string | null> {
   const parts = [`**This week on the Protocols for Business blyg** (${fmt(since)} – ${fmt(now)})`];
   if (fresh.length) parts.push(`**New**\n` + fresh.join("\n"));
   if (changed.length) parts.push(`**Updated**\n` + changed.slice(0, 8).join("\n") + (changed.length > 8 ? `\n…and ${changed.length - 8} more` : ""));
+  if (responses.length) parts.push(`**Responses from other blygs**\n` + responses.join("\n"));
   if (upcoming) parts.push(upcoming);
   parts.push(`All posts: ${base} · feed: ${base}feed.xml`);
   let msg = parts.join("\n\n");
   if (msg.length > 1900) msg = msg.slice(0, 1890) + "…";
   return msg;
+}
+
+// Webmentions verified in the past week: who responded to which of our posts.
+async function recentResponses(env: Env, since: number): Promise<string[]> {
+  if (!env.MENTIONS) return [];
+  const out: string[] = [];
+  let cursor: string | undefined;
+  do {
+    const page = await env.MENTIONS.list({ prefix: "m:", cursor });
+    for (const k of page.keys) {
+      const m = JSON.parse((await env.MENTIONS.get(k.name)) || "null");
+      if (!m || m.status !== "verified" || Date.parse(m.checked || "") < since) continue;
+      const verb = ({ stub: "responded to", transclusion: "quoted", fork: "forked" } as Record<string, string>)[m.relation] || "mentioned";
+      out.push(`• [${m.author || new URL(m.page).host} ${verb} our post](${m.page})`);
+    }
+    cursor = page.list_complete ? undefined : page.cursor;
+  } while (cursor);
+  return out.slice(0, 8);
 }
 
 // The next session, from the site's public schedule: date, time in UTC, the reading, what else happens.
@@ -393,7 +414,7 @@ async function nextSession(now: number): Promise<string | null> {
 
 async function postDigest(env: Env): Promise<void> {
   if (!env.DISCORD_WEBHOOK) return;
-  const content = await buildDigest();
+  const content = await buildDigest(env);
   if (!content) return;
   await fetch(env.DISCORD_WEBHOOK, {
     method: "POST",
@@ -415,7 +436,7 @@ export default {
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     if (req.method === "GET" && url.pathname === "/digest") {
       if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });
-      return new Response((await buildDigest()) ?? "(nothing new this week; no message would be sent)", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+      return new Response((await buildDigest(env)) ?? "(nothing new this week; no message would be sent)", { headers: { "Content-Type": "text/plain; charset=utf-8" } });
     }
     if (req.method === "POST" && url.pathname === "/digest") {   // send it now (same secret), e.g. the first one
       if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });

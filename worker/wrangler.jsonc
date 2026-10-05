@@ -5,7 +5,8 @@
   "kv_namespaces": [
     // Sign-ups (sub:<email>) and per-IP rate-limit counters (rl:<ip>:<hour>).
     // This id belongs to the current deployment's Cloudflare account; worker/setup.sh replaces it.
-    { "binding": "SIGNUPS", "id": "78a345f4c750428890b6a12a9283326b" }
+    { "binding": "SIGNUPS", "id": "78a345f4c750428890b6a12a9283326b" },
+    { "binding": "MENTIONS", "id": "9214a86adf814e4e896b69a2c72cd5e7" }   // shared with site/: the blyg's Webmentions
   ],
   "vars": {
     "SITE": "https://protocolsforbusiness.com/",

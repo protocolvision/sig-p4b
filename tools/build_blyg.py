@@ -263,7 +263,7 @@ def main():
     manifest = {"blyg": BLYG, "level": LEVEL, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
                 "author": {"name": TITLE, "bio": DESCRIPTION,
                            "links": [{"label": "Home", "url": SITE}, {"label": "Protocol Institute", "url": "https://protocol-institute.org/"}]},
-                "feed": "feed.xml", "items": "items/index.json", "updated": updated}
+                "feed": "feed.xml", "items": "items/index.json", "webmention": "webmention", "updated": updated}   # §15.1: served by site/worker.js
     (OUT / "blyg.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n")
     write_feed(sorted(events, key=lambda e: e[0], reverse=True)[:FEED_WINDOW], updated)
     write_pages(ordered, {iid: it["path"].stem for iid, (_, it) in docs.items()})
@@ -333,7 +333,8 @@ def stub_line(d):
 def write_pages(ordered, stems):
     sys.path.insert(0, str(ROOT / "tools"))
     from build_site import page
-    alt = '<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
+    alt = ('<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
+           f'<link rel="webmention" href="{ORIGIN}webmention">\n')
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
     groups = {"log": [], "updates": [], "sessions": [], "notes": []}
     for d in ordered:
@@ -358,6 +359,7 @@ def write_pages(ordered, stems):
             content = f'<h1>{html.escape(title_of(d, kind))}</h1>\n' + content
         body = (f'<p class="meta"><a href="../../">Blyg</a> · {kind.lower()} · version {d["version"]} · '
                 f'updated {date(d["updated"])}</p>\n{stub_line(d)}<article class="blyg-item">\n{content}\n</article>\n'
+                f'<section class="responses" data-responses="{d["id"]}" hidden><h2>Responses</h2><ul></ul></section>\n'
                 f'<p class="small muted">Machine-readable: <a href="../../items/{d["id"]}.json">item JSON</a> · '
                 f'changelog {len(d["changelog"])} version{"s" if len(d["changelog"]) != 1 else ""}</p>')
         folder = OUT / ("t" if d["kind"] == "thread" else "f") / d["id"]
@@ -365,7 +367,7 @@ def write_pages(ordered, stems):
         path = f'blyg/{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
         folder.joinpath("index.html").write_text(page(
             {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
-             "card": "syllabus", "head": alt.format(rel="../../../")}, body))
+             "card": "syllabus", "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
     intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
              f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
              f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.3) · '

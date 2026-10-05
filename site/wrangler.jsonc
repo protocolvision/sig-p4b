@@ -14,5 +14,8 @@
     { "pattern": "protocolsforbusiness.com", "custom_domain": true },
     { "pattern": "www.protocolsforbusiness.com", "custom_domain": true }
   ],
+  "kv_namespaces": [
+    { "binding": "MENTIONS", "id": "9214a86adf814e4e896b69a2c72cd5e7" }   // blyg Webmentions: pointers and rate counters
+  ],
   "observability": { "enabled": true }
 }

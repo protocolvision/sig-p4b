@@ -56,6 +56,27 @@
     }).catch(function () {});
   }
 
+  /* Blyg responses: verified Webmentions (stubs, quotes, forks from other blygs) listed under a post. */
+  var resp = document.querySelector('[data-responses]');
+  if (resp && window.fetch) {
+    var VERB = { stub: 'responded to this', transclusion: 'quoted this', fork: 'forked this' };
+    fetch(ROOT + 'blyg/webmention/responses?id=' + resp.getAttribute('data-responses'))
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (list) {
+        if (!list.length) return;
+        var ul = resp.querySelector('ul');
+        list.forEach(function (m) {
+          var li = document.createElement('li'), a = document.createElement('a');
+          var host = ''; try { host = new URL(m.origin || m.page).host; } catch (e) {}
+          a.href = m.page; a.textContent = (m.author || host) + ' ' + (VERB[m.relation] || 'mentioned this');
+          li.appendChild(a);
+          if (host) { var s = document.createElement('span'); s.className = 'muted small'; s.textContent = ' · ' + host; li.appendChild(s); }
+          ul.appendChild(li);
+        });
+        resp.hidden = false;
+      }).catch(function () {});
+  }
+
   /* Short forms that go to the group's Discord channel: offer a talk ([data-talk]) and request advisory
      services ([data-advisory]). Both reuse the register dialog's look; the worker posts them and stores nothing. */
   var BASE = SIGNUP.replace(/\/signup$/, '');
