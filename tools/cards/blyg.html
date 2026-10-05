@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8">
+<!-- Share card for blyg posts. Filled from the URL hash: #title=…&kind=…&date=… (tools/cards/render_blyg.py). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Lora&family=Outfit:wght@400;500&display=block">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#fff}
+body{position:relative;border-top:8px solid #004fcc;box-sizing:border-box;font-family:Lora,Georgia,serif;color:#2c2c2a}
+.art{position:absolute;right:-150px;top:30px;width:600px;height:600px;background:url(../../assets/cube-lines.png) no-repeat center/contain;opacity:.18}
+.wrap{position:absolute;left:84px;top:78px;width:900px}
+.brand{display:flex;align-items:center;gap:18px;font:500 24px Outfit,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.brand img{width:48px;height:48px;border-radius:6px}
+.kind{font:400 22px Outfit,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5f5e5a;margin:52px 0 0}
+h1{font:400 84px/1.04 "Instrument Serif",serif;margin:14px 0 0;letter-spacing:-.5px}
+h1.long{font-size:66px}
+.foot{position:absolute;left:84px;bottom:44px;font:400 19px Outfit,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5f5e5a}
+.foot b{color:#004fcc;font-weight:500}
+</style></head><body>
+<div class="art"></div>
+<div class="wrap"><div class="brand"><img src="../../favicon.svg" alt="">Protocols for Business</div>
+<p class="kind" id="kind"></p><h1 id="title"></h1></div>
+<div class="foot"><b>Blyg</b> &nbsp;·&nbsp; protocolsforbusiness.com/blyg</div>
+<script>
+const q = new URLSearchParams(location.hash.slice(1));
+const t = q.get("title") || "Blyg";
+document.getElementById("title").textContent = t;
+if (t.length > 48) document.getElementById("title").className = "long";
+document.getElementById("kind").textContent = [q.get("kind"), q.get("date")].filter(Boolean).join(" · ");
+</script>
+</body></html>

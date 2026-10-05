@@ -62,6 +62,10 @@ def structured_data(meta):
         crumbs.append((short, SITE + path))
         graph = [{"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": i, "name": n, "item": u} for i, (n, u) in enumerate(crumbs, 1)]}]
+    if meta.get("posting"):   # a blyg post: BlogPosting with dates, author and its share card
+        graph.append({"@type": "BlogPosting", "headline": short, "description": meta["desc"], "url": SITE + path,
+                      "mainEntityOfPage": SITE + path, "isPartOf": SITE + "blyg/", "publisher": {"@id": SITE + "#org"},
+                      **meta["posting"]})
     if meta.get("article"):
         graph.append({"@type": "Article", "headline": short, "description": meta["desc"], "url": SITE + path,
                       "author": {"@type": "Person", "name": meta["article"], "url": SITE + "about/#people"},
@@ -79,7 +83,7 @@ def page(meta, body):
     rel = "../" * path.count("/")
     a = lambda s: html.escape(s, quote=True)
     title, desc = meta["title"], meta["desc"]
-    card = f'{SITE}assets/cards/{meta.get("card", "home")}.jpg'
+    card = meta.get("card_url") or f'{SITE}assets/cards/{meta.get("card", "home")}.jpg'
     nav = "\n".join(
         f'<a href="{rel}{p}"' + (' aria-current="page"' if meta.get("nav") == k else "") + f'>{label}</a>'
         for k, label, p in NAV)
@@ -91,14 +95,15 @@ def page(meta, body):
     if CONFIG.get("google_site_verification") and not path:
         seo += f'<meta name="google-site-verification" content="{a(CONFIG["google_site_verification"])}">\n'
     seo += structured_data(meta)
+    og_extra = "".join(f'<meta property="{k}" content="{a(v)}">\n' for k, v in meta.get("og_extra", []))
     return external_links(f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{a(desc)}">
-{seo}<meta property="og:type" content="website">
-<meta property="og:site_name" content="Protocol Institute">
+{seo}<meta property="og:type" content="{meta.get("og_type", "website")}">
+{og_extra}<meta property="og:site_name" content="Protocols for Business">
 <meta property="og:title" content="{a(title)}">
 <meta property="og:description" content="{a(desc)}">
 <meta property="og:url" content="{SITE}{path}">

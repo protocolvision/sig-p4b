@@ -399,9 +399,16 @@ def write_pages(ordered, stems):
         folder = OUT / ("t" if d["kind"] == "thread" else "f") / d["id"]
         folder.mkdir(parents=True, exist_ok=True)
         path = f'blyg/{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
+        card = ROOT / "assets/cards/blyg" / f'{d["id"]}.jpg'   # tools/cards/render_blyg.py; else the blyg card
+        card_url = f'{SITE}assets/cards/blyg/{d["id"]}.jpg' if card.exists() else f"{SITE}assets/cards/blyg.jpg"
+        author = (d.get("author") or {}).get("name") or "Protocols for Business"
         folder.joinpath("index.html").write_text(page(
             {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
-             "card": "syllabus", "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
+             "card_url": card_url, "og_type": "article",
+             "og_extra": [("article:published_time", d["created"]), ("article:modified_time", d["updated"]), ("article:author", author)],
+             "posting": {"datePublished": d["created"], "dateModified": d["updated"], "image": card_url,
+                         "author": {"@type": "Organization" if author == "Protocols for Business" else "Person", "name": author}},
+             "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
     intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
              f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
              f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.3) · '
@@ -410,7 +417,7 @@ def write_pages(ordered, stems):
                        for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
     (OUT / "index.html").write_text(page(
         {"title": "Blyg · Protocols for Business", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
-         "card": "syllabus", "head": alt.format(rel="../")}, intro))
+         "card": "blyg", "head": alt.format(rel="../")}, intro))
 
 if __name__ == "__main__":
     main()
