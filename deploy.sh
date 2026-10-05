@@ -13,7 +13,7 @@ python3 tools/blyg_check.py
 # 1) The site, built into dist/ and served by Cloudflare at protocolsforbusiness.com (site/wrangler.jsonc).
 SITE=$(python3 -c "import json;print(json.load(open('config.json'))['site'])")
 rm -rf dist && mkdir dist
-rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'site' --exclude 'dist' --exclude 'sources' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' --exclude 'node_modules' ./ dist/
+rsync -a --exclude '.git' --exclude '.herenow*' --exclude 'README.md' --exclude 'CLAUDE.md' --exclude 'deploy.sh' --exclude 'tools' --exclude 'worker' --exclude 'site' --exclude 'dist' --exclude 'sources' --exclude 'ops' --exclude 'drafts' --exclude 'src' --exclude 'blyg-src' --exclude '.github' --exclude 'node_modules' ./ dist/
 # Bust the CDN/browser cache for the stylesheet and script on every deploy.
 V=$(date +%s)
 find dist -name '*.html' -exec perl -pi -e "s|style\.css\"|style.css?v=$V\"|; s|site\.js\"|site.js?v=$V\"|" {} +
