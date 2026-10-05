@@ -7,7 +7,10 @@
  },
  {
   "date": "2026-11-16",
-  "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)"
+  "feature": "Guest: Navid Nouhi (Credoble, making a business's reputation readable to AI agents)",
+  "links": {
+   "Credoble": "https://credoble.com/"
+  }
  },
  {
   "date": "2026-11-30",
@@ -19,7 +22,7 @@
  },
  {
   "date": "2026-12-14",
-  "feature": "Case pitches: one paragraph each"
+  "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety, presented by Patrick Nast)"
  },
  {
   "date": "2027-01-11",
@@ -27,11 +30,11 @@
  },
  {
   "date": "2027-01-25",
-  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure"
+  "feature": "Case pitches: one paragraph each"
  },
  {
   "date": "2027-02-08",
-  "feature": "Open guest slot: offer a talk"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure"
  },
  {
   "date": "2027-02-22",

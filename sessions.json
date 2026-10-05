@@ -20,8 +20,11 @@
   "url": "https://www.anthropic.com/research/multiagent-systems",
   "cite": "Anthropic, 2026",
   "quote": "We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.",
-  "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety)",
-  "feature_short": "Guest: Formal Protocol Theory SIG"
+  "feature": "Guest: Navid Nouhi (Credoble, making a business's reputation readable to AI agents)",
+  "feature_short": "Guest: Navid Nouhi",
+  "links": {
+   "Credoble": "https://credoble.com/"
+  }
  },
  {
   "date": "2026-11-30",
@@ -48,8 +51,8 @@
   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
   "cite": "Bainbridge, 1983",
   "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
-  "feature": "Case pitches: one paragraph each",
-  "feature_short": "Case pitches"
+  "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety, presented by Patrick Nast)",
+  "feature_short": "Guest: Formal Protocol Theory SIG"
  },
  {
   "date": "2027-01-11",
@@ -72,8 +75,8 @@
   "url": "https://doi.org/10.1038/16483",
   "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
   "quote": "",
-  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
-  "feature_short": "Tooling demo"
+  "feature": "Case pitches: one paragraph each",
+  "feature_short": "Case pitches"
  },
  {
   "date": "2027-02-08",
@@ -84,8 +87,8 @@
   "url": "https://doi.org/10.1126/science.1069981",
   "cite": "Csete & Doyle, Science, 2002",
   "quote": "",
-  "feature": "Open guest slot: offer a talk",
-  "feature_short": "Open guest slot"
+  "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
+  "feature_short": "Tooling demo"
  },
  {
   "date": "2027-02-22",
