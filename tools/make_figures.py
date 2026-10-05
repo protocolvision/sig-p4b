@@ -510,6 +510,7 @@ def process_protocol(w, h, seed, label=None):
     r = random.Random(seed)
     s = Sheet(w, h, "Left, a process swimlane where every step and handoff is specified. Right, three teams "
                     "working freely inside their own areas, joined by three hard interfaces.")
+    s.ts = 1.3
     mid = w / 2
     s.centerline(mid, 18, mid, h - 30)
     # left: the process
@@ -586,6 +587,7 @@ def steps_rules(w, h, seed, label=None):
     """What you have to specify as the number of agents grows: steps climb, hard rules stay flat."""
     s = Sheet(w, h, "A chart sketch: as agents grow from one to a hundred thousand, the steps a process must "
                     "specify climb past what any manager can approve, while the protocol's hard rules stay flat.")
+    s.ts = 1.3
     x0, x1, y0, y1 = 86, w - 40, h - 62, 40
     s.line(x0, y0, x1, y0, INK, FINE); s.line(x0, y0, x0, y1, INK, FINE)
     s.arrow(x1, y0, 0, 6, INK, FINE); s.arrow(x0, y1, -math.pi / 2, 6, INK, FINE)

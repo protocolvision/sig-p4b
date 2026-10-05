@@ -23,29 +23,29 @@ That is Business Protocol Management. It doesn't specify the work. It specifies 
 The practice starts with different questions. Here are six pairs, and where to read more on each.
 
 1. **The work**
-   - Process: *What are the steps, and who performs each one?*
-   - Protocol: *Which few rules must hold every time, and where do they live?*
-   - Read: [Hammer, "Reengineering Work: Don't Automate, Obliterate"](https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate) · [BPM guide: key terms](https://protocolsforbusiness.com/research/bpm/#terms)
+    - Process: *What are the steps, and who performs each one?*
+    - Protocol: *Which few rules must hold every time, and where do they live?*
+    - Read: [Hammer, "Reengineering Work: Don't Automate, Obliterate"](https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate) · [BPM guide: key terms](https://protocolsforbusiness.com/research/bpm/#terms)
 2. **Speed**
-   - Process: *How do we make this step faster?*
-   - Protocol: *Which strict rule would let everyone move without asking?*
-   - Read: [Davenport, *Process Innovation*](https://books.google.com/books/about/Process_Innovation.html?id=kLlIOMGaKnsC) · [Saltzer, Reed and Clark, "End-to-End Arguments in System Design"](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) (Theme V)
+    - Process: *How do we make this step faster?*
+    - Protocol: *Which strict rule would let everyone move without asking?*
+    - Read: [Davenport, *Process Innovation*](https://books.google.com/books/about/Process_Innovation.html?id=kLlIOMGaKnsC) · [Saltzer, Reed and Clark, "End-to-End Arguments in System Design"](https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf) (Theme V)
 3. **Ownership**
-   - Process: *Who owns the process?*
-   - Protocol: *Who may change this rule, and who may stop the work?*
-   - Read: [Toyota Production System](https://global.toyota/en/company/vision-and-philosophy/production-system/) (Theme VI) · [BPM guide: roles](https://protocolsforbusiness.com/research/bpm/#roles)
+    - Process: *Who owns the process?*
+    - Protocol: *Who may change this rule, and who may stop the work?*
+    - Read: [Toyota Production System](https://global.toyota/en/company/vision-and-philosophy/production-system/) (Theme VI) · [BPM guide: roles](https://protocolsforbusiness.com/research/bpm/#roles)
 4. **Compliance**
-   - Process: *Is everyone following the procedure?*
-   - Protocol: *What could anyone, person or agent, do within this rule's letter that defeats its purpose?*
-   - Read: [OpenAI, "The Hugging Face incident and the road ahead"](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) (Theme I) · [BPM guide: protocols are not products](https://protocolsforbusiness.com/research/bpm/#not-products)
+    - Process: *Is everyone following the procedure?*
+    - Protocol: *What could anyone, person or agent, do within this rule's letter that defeats its purpose?*
+    - Read: [OpenAI, "The Hugging Face incident and the road ahead"](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) (Theme I) · [BPM guide: protocols are not products](https://protocolsforbusiness.com/research/bpm/#not-products)
 5. **Results**
-   - Process: *Did we hit the target?*
-   - Protocol: *What didn't go wrong, and which targets are being gamed?*
-   - Read: [Google SRE, "Postmortem Culture: Learning from Failure"](https://sre.google/sre-book/postmortem-culture/) (Theme IV) · [BPM guide: measures](https://protocolsforbusiness.com/research/bpm/#measures)
+    - Process: *Did we hit the target?*
+    - Protocol: *What didn't go wrong, and which targets are being gamed?*
+    - Read: [Google SRE, "Postmortem Culture: Learning from Failure"](https://sre.google/sre-book/postmortem-culture/) (Theme IV) · [BPM guide: measures](https://protocolsforbusiness.com/research/bpm/#measures)
 6. **The future**
-   - Process: *What is the to-be process?*
-   - Protocol: *What could others build on this that nobody planned?*
-   - Read: [McDowell-Sweet on protocol and product thinking](https://msweet.net/notes/106-cream-pikes) · [BPM guide: earlier approaches](https://protocolsforbusiness.com/research/bpm/#approaches)
+    - Process: *What is the to-be process?*
+    - Protocol: *What could others build on this that nobody planned?*
+    - Read: [McDowell-Sweet on protocol and product thinking](https://msweet.net/notes/106-cream-pikes) · [BPM guide: earlier approaches](https://protocolsforbusiness.com/research/bpm/#approaches)
 
 The lesson of re-engineering still stands: new technology calls for reinvention, not automation. What has changed is what you reinvent. Stop redrawing the process. Find the few rules everything relies on, make them hard, and leave the rest free.
 

@@ -17,6 +17,7 @@ class Sheet:
     def __init__(self, w, h, label):
         self.w, self.h, self.label, self.out, self.defs = w, h, label, [], []
         self._hatch_ids = {}
+        self.ts = 1.0   # text scale, for figures shown small (such as in the blyg's narrow column)
 
     # --- primitives ---------------------------------------------------------------------------
     def line(self, x1, y1, x2, y2, col=INK, sw=HAIR, dash=None, op=1):
@@ -46,6 +47,8 @@ class Sheet:
         self.out.append(f'<rect x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(h)}" stroke="{col}" stroke-width="{sw}" fill="{fill}"{ds}/>')
 
     def text(self, x, y, s, size=9, col=INK, anchor="start", weight=400, spacing=.6):
+        if self.ts != 1:
+            size = round(size * self.ts, 2)
         self.out.append(f'<text x="{f(x)}" y="{f(y)}" font-family="{MONO}" font-size="{size}" font-weight="{weight}" '
                         f'letter-spacing="{spacing}" fill="{col}" text-anchor="{anchor}" stroke="none">{s}</text>')
 
@@ -102,6 +105,7 @@ class Sheet:
     def frame(self, number, title, scale="NTS"):
         """A hairline border with corner ticks and a small title block, bottom right."""
         w, h, m = self.w, self.h, 6
+        self.ts = 1.0
         self.rect(m, m, w - 2 * m, h - 2 * m, FAINT, HAIR)
         for cx, cy, sx, sy in ((m, m, 1, 1), (w - m, m, -1, 1), (m, h - m, 1, -1), (w - m, h - m, -1, -1)):
             self.line(cx, cy, cx + 10 * sx, cy, INK, FINE); self.line(cx, cy, cx, cy + 10 * sy, INK, FINE)
