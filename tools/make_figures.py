@@ -8,7 +8,7 @@ rebuilding gives the same pictures. No scripts, no animation.
 """
 import math, random
 from pathlib import Path
-from drafting import Sheet, iso, INK, COBALT, MUTED, FAINT, PAPER, HAIR, FINE, MEDIUM, HEAVY
+from drafting import Sheet, iso, MONO, INK, COBALT, MUTED, FAINT, PAPER, HAIR, FINE, MEDIUM, HEAVY
 
 OUT = Path(__file__).resolve().parent.parent / "assets/fig"
 STRIP = 150   # figures this short are strips: no title block, just corner ticks and a label
@@ -504,6 +504,124 @@ def rings(w, h, seed, label=None):
     return finish(s, 11, "Hardness map", label)
 
 
+# --- blyg figures: process vs protocol --------------------------------------------------------------
+def process_protocol(w, h, seed, label=None):
+    """Left: a swimlane, every step and handoff drawn. Right: three free areas joined by hard interfaces."""
+    r = random.Random(seed)
+    s = Sheet(w, h, "Left, a process swimlane where every step and handoff is specified. Right, three teams "
+                    "working freely inside their own areas, joined by three hard interfaces.")
+    s.ts = 1.3
+    mid = w / 2
+    s.centerline(mid, 18, mid, h - 30)
+    # left: the process
+    s.text(24, 32, "PROCESS", 10, INK, weight=600, spacing=1.6)
+    s.text(24, 46, "every step and handoff specified", 9, MUTED, spacing=.2)
+    top, lane = 60, 80
+    for i in range(4):
+        s.line(24, top + i * lane, mid - 14, top + i * lane, INK if i in (0, 3) else FAINT, HAIR)
+    for i, name in enumerate(("SALES", "OPS", "FINANCE")):
+        s.text(28, top + i * lane + 14, name, 7.5, MUTED, spacing=1)
+    bw, bh = 34, 22
+    steps = [(98, 0), (142, 1), (188, 1, "d"), (234, 2), (280, 1), (322, 0)]
+    pts = []
+    for n, st in enumerate(steps, 1):
+        x, ln = st[0], st[1]
+        y = top + ln * lane + lane / 2 + 6
+        if len(st) == 3:
+            s.path([(x, y - 15), (x + 17, y), (x, y + 15), (x - 17, y)], INK, FINE, close=True, fill=PAPER)
+            s.text(x, y + 3, "?", 9, INK, "middle", 600, 0)
+            pts.append((x, y, 17))
+        else:
+            s.rect(x - bw / 2, y - bh / 2, bw, bh, INK, FINE, fill=PAPER)
+            s.text(x, y + 3, f"{n:02d}", 8, INK, "middle", 500, .4)
+            pts.append((x, y, bw / 2))
+    for (x1, y1, r1), (x2, y2, r2) in zip(pts, pts[1:]):   # orthogonal connectors with arrowheads
+        xm = (x1 + r1 + x2 - r2) / 2
+        s.path([(x1 + r1, y1), (xm, y1), (xm, y2), (x2 - r2, y2)], INK, HAIR)
+        s.arrow(x2 - r2, y2, 0, 4.5, INK, HAIR)
+    (dx, dy, dr), (bx2, by2, _) = pts[2], pts[1]   # rework loop from the decision back to step 02
+    s.path([(dx, dy - 15), (dx, dy - 28), (bx2, dy - 28), (bx2, by2 - bh / 2)], MUTED, HAIR, dash="3 3")
+    s.arrow(bx2, by2 - bh / 2, math.pi / 2, 4.5, MUTED, HAIR)
+    s.text((dx + bx2) / 2, dy - 32, "REWORK", 6.5, MUTED, "middle", spacing=1)
+    s.dim(pts[0][0] - bw / 2, top + 3 * lane, pts[-1][0] + bw / 2, top + 3 * lane, "6 STEPS · 5 HANDOFFS · 1 LOOP", 16)
+    # right: the protocol
+    x0 = mid + 16
+    s.text(x0, 32, "PROTOCOL", 10, COBALT, weight=600, spacing=1.6)
+    s.text(x0, 46, "hard at the seams, free inside", 9, MUTED, spacing=.2)
+    areas = [(x0 + 4, 64, 132, 100, "TEAM A"), (w - 28 - 132, 64, 132, 100, "TEAM B"), ((x0 + w - 28) / 2 - 66, 206, 132, 96, "AGENTS")]
+    for ax, ay, aw, ah, name in areas:
+        s.rect(ax, ay, aw, ah, FAINT, HAIR, dash="2 3")
+        s.text(ax + 6, ay + 12, name, 7, MUTED, spacing=1)
+        for _ in range(4):   # free work: wandering hairlines, each ending at a person or agent
+            px, py = r.uniform(ax + 16, ax + aw - 16), r.uniform(ay + 22, ay + ah - 12)
+            path = [(px, py)]
+            a = r.random() * math.tau
+            for _ in range(9):
+                a += r.uniform(-1, 1)
+                px = min(max(px + math.cos(a) * 9, ax + 8), ax + aw - 8)
+                py = min(max(py + math.sin(a) * 9, ay + 18), ay + ah - 6)
+                path.append((px, py))
+            s.path(path, INK, HAIR, op=.55)
+            s.dot(px, py, 1.6, INK)
+    (a1x, a1y, a1w, a1h, _), (b1x, b1y, b1w, b1h, _), (c1x, c1y, c1w, c1h, _) = areas
+    hatch = s.hatch(3, 45, INK, .5)
+    seams = [((a1x + a1w + b1x) / 2, a1y + a1h / 2, 1), ((a1x + a1w / 2 + c1x + 20) / 2, (a1y + a1h + c1y) / 2, 2),
+             ((b1x + b1w / 2 + c1x + c1w - 20) / 2, (b1y + b1h + c1y) / 2, 3)]
+    joins = [((a1x + a1w, a1y + a1h / 2), (b1x, b1y + b1h / 2)), ((a1x + a1w / 2, a1y + a1h), (c1x + 20, c1y)),
+             ((b1x + b1w / 2, b1y + b1h), (c1x + c1w - 20, c1y))]
+    for (sx, sy, n), (pa, pb) in zip(seams, joins):
+        s.line(pa[0], pa[1], pb[0], pb[1], INK, FINE)
+        s.rect(sx - 9, sy - 9, 18, 18, INK, HEAVY, fill=hatch)
+        s.callout(sx + 9, sy - 9, n, sx + 22, sy - 20, COBALT)
+    for i, t in enumerate(("WHO MAY MOVE MONEY", "WHAT DATA LEAVES", "CHECKS ON EVERY OUTPUT")):
+        y = 334 + i * 14
+        s.circle(x0 + 8, y - 3, 5.5, COBALT, FINE, fill=PAPER)
+        s.text(x0 + 8, y, str(i + 1), 7, COBALT, "middle", 500, 0)
+        s.text(x0 + 20, y, t, 7.5, INK, spacing=.8)
+    s.text(24, 352, "Owners approve each step.", 9, MUTED, spacing=.2)
+    s.text(24, 366, "Change means redrawing the map.", 9, MUTED, spacing=.2)
+    return finish(s, 31, "Process and protocol", label)
+
+
+def steps_rules(w, h, seed, label=None):
+    """What you have to specify as the number of agents grows: steps climb, hard rules stay flat."""
+    s = Sheet(w, h, "A chart sketch: as agents grow from one to a hundred thousand, the steps a process must "
+                    "specify climb past what any manager can approve, while the protocol's hard rules stay flat.")
+    s.ts = 1.3
+    x0, x1, y0, y1 = 86, w - 40, h - 62, 40
+    s.line(x0, y0, x1, y0, INK, FINE); s.line(x0, y0, x0, y1, INK, FINE)
+    s.arrow(x1, y0, 0, 6, INK, FINE); s.arrow(x0, y1, -math.pi / 2, 6, INK, FINE)
+    for i, t in enumerate(("1", "10", "100", "1K", "10K", "100K")):
+        x = x0 + 20 + i * (x1 - x0 - 50) / 5
+        s.line(x, y0, x, y0 + 5, INK, HAIR)
+        s.construction(x, y0, x, y1 + 10)
+        s.text(x, y0 + 17, t, 8, MUTED, "middle")
+    s.text((x0 + x1) / 2, y0 + 34, "AGENTS AT WORK", 8, INK, "middle", 500, 1.2)
+    s.out.append(f'<text x="34" y="{(y0 + y1) / 2:.1f}" font-family="{MONO}" font-size="8" font-weight="500" letter-spacing="1.2" '
+                 f'fill="{INK}" text-anchor="middle" stroke="none" transform="rotate(-90 34 {(y0 + y1) / 2:.1f})">TO SPECIFY</text>')
+    span = x1 - x0 - 50
+    steps = [(x0 + 20 + t * span, y0 - 14 - (y0 - y1 - 20) * (math.exp(3.2 * t) - 1) / (math.exp(3.2) - 1)) for t in [i / 60 for i in range(61)]]
+    s.path(steps, INK, MEDIUM)
+    rules = [(x0 + 20 + t * span, y0 - 30 - 6 * t) for t in [i / 10 for i in range(11)]]
+    s.path(rules, COBALT, MEDIUM)
+    cap = y0 - (y0 - y1) * .42
+    s.line(x0, cap, x1 - 10, cap, MUTED, HAIR, "6 4")
+    s.text(x0 + 8, cap - 6, "WHAT ANY MANAGER CAN APPROVE", 7.5, MUTED, spacing=1)
+    cross = min(steps, key=lambda p: abs(p[1] - cap))
+    s.circle(cross[0], cross[1], 5, INK, FINE)
+    s.callout(cross[0], cross[1], 1, cross[0] - 70, cross[1] - 44, INK, "THE APPROVAL QUEUE BREAKS")
+    end = steps[-1]
+    s.text(end[0] - 8, end[1] + 4, "PROCESS · STEPS", 8, INK, "end", 600, 1)
+    s.text(rules[-1][0], rules[-1][1] - 9, "PROTOCOL · HARD RULES", 8, COBALT, "end", 600, 1)
+    return finish(s, 32, "Steps and rules", label)
+
+
+BLYG_FIGS = {   # drawn into blyg-src/media/ (committed with the post that uses them)
+    "process-protocol": (process_protocol, 720, 400, 31),
+    "steps-rules": (steps_rules, 720, 300, 32),
+}
+
+
 FIGS = {
     "murmuration": (murmuration, 1200, 300, 7),
     "network": (network, 1200, 260, 11),
@@ -533,4 +651,8 @@ if __name__ == "__main__":
     for name, (fn, seed, lab) in STRIPS.items():
         (OUT / f"{name}.svg").write_text(fn(640, 120, seed, label=lab))
     activity_panels(13)
+    media = OUT.parent.parent / "blyg-src/media"
+    media.mkdir(exist_ok=True)
+    for name, (fn, w, h, seed) in BLYG_FIGS.items():
+        (media / f"{name}.svg").write_text(fn(w, h, seed))
     print(f"{len(FIGS) + len(STRIPS) + 3} figures in {OUT}")

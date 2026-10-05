@@ -16,6 +16,11 @@ Each source file starts with front matter:
                                      # one-line JSON naming what this thread responds to; or {"url": ...} for a plain web page
   ---
 
+Images: put the file in blyg-src/media/ and write ![alt text](media/name.svg). Each version uses the
+file as committed with it, published once at blyg/media/{sha256-prefix}.{ext} so a media URL always
+serves the same bytes (0.3 §5.4). The link becomes absolute in content_md and content_html (§5.2), and
+the item's media array lists it with its alt text.
+
 Versions come from git: every commit that changes an item's content is one publish event,
 dated by the commit and noted with the commit subject. Uncommitted edits are drafts and
 are not published. Machine-generated passages are fenced as
@@ -28,7 +33,7 @@ block is wrapped in <div class="blyg-tk-gen"> with a matching `generated` entry 
 Output: blyg/ — blyg.json, feed.xml, items/index.json, items/{id}.json, pinned
 items/{id}/v{n}.json, and human-readable pages (index, f/{id}/, t/{id}/).
 """
-import email.utils, hashlib, html, json, re, shutil, subprocess, sys
+import email.utils, hashlib, html, json, os, re, shutil, subprocess, sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -37,7 +42,8 @@ import markdown
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "blyg-src"
 OUT = ROOT / "blyg"
-SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
+# BLYG_SITE=http://localhost:8011/ previews absolute links (such as images) against a local server
+SITE = os.environ.get("BLYG_SITE") or json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
 ORIGIN = SITE + "blyg/"
 BLYG = "0.3"
 GENERATOR_URL = "https://github.com/protocolvision/sig-p4b"
@@ -49,6 +55,9 @@ FEED_WINDOW = 50
 LEVEL = 2   # informative (0.3 §3.2): L1 plus the page field and stubs, both emitted per §5.8 and §10.6
 ID_RE = re.compile(r"^[0-9abcdefghjkmnpqrstvwxyz]{26}$")
 TRANSCLUDE_RE = re.compile(r"^\s*!\[\[([0-9a-z]{26})\]\]\s*$")
+MEDIA_RE = re.compile(r"!\[([^\]]*)\]\(media/([A-Za-z0-9._-]+)\)")
+MIME = {".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".gif": "image/gif"}
+MEDIA = {}   # published path -> bytes, collected while building every version
 GEN_OPEN, GEN_CLOSE = re.compile(r"^\s*:::\s*generated\s*$"), re.compile(r"^\s*:::\s*$")
 
 def git(*args):
@@ -158,7 +167,7 @@ def build_item(item, items):
     for n, v in enumerate(vs, 1):
         snapshots[n] = snapshot(item, v, items)
     doc.update({k: snapshots[len(vs)][k] for k in ("content_md", "content_html", "content_hash")})
-    doc["media"] = []
+    doc["media"] = snapshots[len(vs)]["media"]
     if kind == "thread":
         doc["transclusions"] = snapshots[len(vs)]["transclusions"]
         if isinstance(latest["meta"].get("stub_of"), dict) and not latest["withdrawn"]:
@@ -175,9 +184,10 @@ def build_item(item, items):
 
 def snapshot(item, v, items):
     if v["withdrawn"]:
-        s = {"content_md": "", "content_html": "", "generated": None, "transclusions": []}
+        s = {"content_md": "", "content_html": "", "generated": None, "transclusions": [], "media": []}
     else:
-        body, trans, html_parts, md_parts = v["body"], [], [], []
+        body, media = with_media(item, v, v["body"])
+        trans, html_parts, md_parts = [], [], []
         if item["kind"] == "thread":
             chunk = []
             for line in body.splitlines():
@@ -209,9 +219,30 @@ def snapshot(item, v, items):
         if n_gen:
             model = str(v["meta"].get("generated_model") or "unspecified")
             gen = [{"sources": [], "model": model, "at": v["at"]} for _ in range(n_gen)]
-        s = {"content_md": content_md, "content_html": content_html, "generated": gen, "transclusions": trans}
+        s = {"content_md": content_md, "content_html": content_html, "generated": gen, "transclusions": trans,
+             "media": media}
     s["content_hash"] = "sha256:" + hashlib.sha256(s["content_md"].encode("utf-8")).hexdigest()
     return s
+
+def with_media(item, v, body):
+    """Point ![alt](media/name) at the immutable, content-addressed copy of the file committed with this version."""
+    found = []
+    def sub(m):
+        alt, name = m.group(1), m.group(2)
+        ext = Path(name).suffix.lower()
+        if ext not in MIME:
+            sys.exit(f"{item['path']}: media/{name} is not a supported image type")
+        try:
+            data = subprocess.run(["git", "-C", str(ROOT), "show", f"{v['sha']}:blyg-src/media/{name}"],
+                                  check=True, capture_output=True).stdout
+        except subprocess.CalledProcessError:
+            sys.exit(f"{item['path']}: media/{name} was not committed with version at {v['at']}")
+        rel = f"media/{hashlib.sha256(data).hexdigest()[:16]}{ext}"
+        MEDIA[rel] = data
+        if rel not in [f["url"] for f in found]:
+            found.append({"url": rel, "mime": MIME[ext], "alt": alt})
+        return f"![{alt}]({ORIGIN}{rel})"
+    return MEDIA_RE.sub(sub, body), found
 
 def permalink(doc_kind, iid):
     return f"{ORIGIN}{'t' if doc_kind == 'thread' else 'f'}/{iid}/"
@@ -260,6 +291,9 @@ def main():
     index = {"updated": updated, "items": [{"id": d["id"], "kind": d["kind"], "created": d["created"],
                                              "updated": d["updated"], "version": d["version"]} for d in ordered]}
     (OUT / "items" / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1) + "\n")
+    for rel, data in MEDIA.items():   # every version's media, so older and pinned versions keep working
+        (OUT / rel).parent.mkdir(exist_ok=True)
+        (OUT / rel).write_bytes(data)
     manifest = {"blyg": BLYG, "level": LEVEL, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
                 "author": {"name": TITLE, "bio": DESCRIPTION,
                            "links": [{"label": "Home", "url": SITE}, {"label": "Protocol Institute", "url": "https://protocol-institute.org/"}]},

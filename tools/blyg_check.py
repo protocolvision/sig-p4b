@@ -31,6 +31,16 @@ def loader(base):
     root = Path(base)
     return lambda rel: ((root / rel).read_text(), {})
 
+def media_ok(base, url):
+    if url.startswith("http") or base.startswith("http"):
+        full = url if url.startswith("http") else (base if base.endswith("/") else base + "/") + url
+        try:
+            with urllib.request.urlopen(urllib.request.Request(full, method="HEAD", headers={"User-Agent": "sig-p4b-blyg-check"})) as r:
+                return r.status == 200
+        except Exception:
+            return False
+    return (Path(base) / url).is_file()
+
 def main():
     base = sys.argv[1] if len(sys.argv) > 1 else str(Path(__file__).resolve().parent.parent / "blyg")
     get = loader(base)
@@ -71,6 +81,16 @@ def main():
             fail(f"{where}: content_hash does not match content_md")
         if re.search(r"^\s*:::", doc["content_md"], re.M):
             fail(f"{where}: authoring fence leaked into content_md")
+        for m in doc.get("media") or []:   # §5.4: url, mime, alt; and the bytes must be served
+            if not (m.get("url") and m.get("mime")) or "alt" not in m:
+                fail(f"{where}: media entries need url, mime and alt")
+                continue
+            if not media_ok(base, m["url"]):
+                fail(f"{where}: media {m['url']} is not served")
+            if m["url"].rsplit("/", 1)[-1] not in doc["content_md"]:
+                fail(f"{where}: media {m['url']} is listed but not used in content_md")
+        if re.search(r'(src|href)="(?!https?:|#|mailto:)', doc["content_html"]):
+            fail(f"{where}: relative URL in content_html (§5.2)")
         if e["version"] != doc["version"] or e["updated"] != doc["updated"] or e["kind"] != doc["kind"]:
             fail(f"index entry for {iid} disagrees with its item document")
         if doc["kind"] == "fragment" and "transclusions" in doc:
