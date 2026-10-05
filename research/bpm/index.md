@@ -56,6 +56,16 @@ The group’s research rests on three assumptions. Each could turn out partial o
 2. **Agents act, in large numbers.** Models take actions, and many copies run at once wherever work is done.
 3. **Information flows through models.** People and agents increasingly find, read and exchange information by way of AI models and the protocols that connect them.
 
+### An open question: protocols are not products
+
+Most management tools come from product thinking: pick an outcome, steer toward it, measure how close you got. [Matthew McDowell-Sweet argues](https://msweet.net/notes/106-cream-pikes) that protocols work differently, not by degree but in kind. We don’t yet know how far that holds for a business’s hard core, so the group is exploring it through the year. Three questions to keep in view while applying this guide:
+
+- **Widen or steer?** A product aims at a target state. A protocol does its job by widening what others can do: “Every outcome specified is a move taken off the board for someone else.” Does a core rule leave room for teams, agents and partners to build things nobody planned? What have they built on it that nobody asked for?
+- **Who takes a cut?** A product earns its keep by capturing value. For a protocol, “every toll taken is a tax on the very moves the protocol was meant to make available.” An extra sign-off, an internal fee or a claim on credit, added at the core, taxes everyone who passes through. A business still has to capture value somewhere. Where is that worth it, and where does a toll at the core cost more than it earns?
+- **Is the purpose in the letter?** Anything a rule permits will eventually be done. “If the spirit isn’t encoded in the letter, it doesn’t exist.” Agents don’t follow norms, so for them a soft protocol works much like a free one. The year’s first reading shows it: agents used whatever Artifactory allowed. Which of your soft rules matter enough to make hard, and what could someone do within a rule’s letter that defeats its purpose?
+
+We bring these questions to the sessions, especially themes I and V, and to the [protocol watching guide](https://protocolsforbusiness.com/play/watching/), and we’ll revise this guide with what members find.
+
 ## 4. Principles
 
 1. **Keep the hard core small.** Every hard rule costs flexibility. Make hard only what everything else relies on.
@@ -186,6 +196,7 @@ Ways to take part: [offer a talk](https://protocolsforbusiness.com/research/#spe
 - Haynes, Alex B., et al. “A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population.” *New England Journal of Medicine* 360, no. 5 (2009): 491–99.
 - Hammer, Michael. “[Reengineering Work: Don’t Automate, Obliterate](https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate).” *Harvard Business Review*, July 1990.
 - Leveson, Nancy G., and Clark S. Turner. “[An Investigation of the Therac-25 Accidents](https://dl.acm.org/doi/10.1109/MC.1993.274940).” *IEEE Computer* 26, no. 7 (1993).
+- McDowell-Sweet, Matthew. “[Notes, 106](https://msweet.net/notes/106-cream-pikes).” msweet.net, 2026. On protocol thinking against product thinking.
 - Perrow, Charles. *Normal Accidents: Living with High-Risk Technologies*. Princeton University Press, 1984.
 - Rao, Venkatesh. “[In Search of Hardness](https://contraptions.venkateshrao.com/p/in-search-of-hardness)” and “[Massed Muddler Intelligence](https://contraptions.venkateshrao.com/p/massed-muddler-intelligence).” *Contraptions*.
 - Smith, Wendy K., and Marianne W. Lewis. “[Toward a Theory of Paradox](https://doi.org/10.5465/amr.2009.0223).” *Academy of Management Review* 36, no. 2 (2011).

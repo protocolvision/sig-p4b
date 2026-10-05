@@ -118,7 +118,9 @@ def to_markdown(body, base):
                                 j += 1
                         else:
                             paras.append(text(k))
-                    out.append(f"- **{text(key)}:** {' '.join(p for p in paras if p)}\n" + "".join(x + "\n" for x in subs))
+                    k = text(key)
+                    k = k if k.endswith(("?", ":")) else k + ":"
+                    out.append(f"- **{k}** {' '.join(p for p in paras if p)}\n" + "".join(x + "\n" for x in subs))
                 else:
                     out.append(("  " * depth) + (f"{i}. " if tag == "ol" else "- ") + text(li) + "\n")
                 i += 1
