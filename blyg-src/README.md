@@ -40,6 +40,12 @@ JSON to the front matter. For a post on another blyg, use its origin, id and the
 
 For a plain web page, use `{"url": "https://…"}`. One target per thread; a stub is a response, so write one.
 
+## Responses from other blygs
+
+The blyg accepts Webmentions at https://protocolsforbusiness.com/blyg/webmention. When another blyg stubs,
+quotes or forks one of our items, it can notify us; the site checks that their item really names ours, and if
+so lists it under "Responses" on our item's page and in Friday's Discord digest. Plain web links are not shown.
+
 ## Mark machine-written text
 
 If a model wrote a passage, fence it and name the model in the front matter:
