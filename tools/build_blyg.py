@@ -450,7 +450,7 @@ def outside_hash(mentions, posts):
     state = [mentions, [[p["link"], p["at"], p["title"]] for p in posts]]
     return hashlib.sha256(json.dumps(state, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
 
-def vehicle_svg(seed, small=False, hue=None):
+def vehicle_svg(seed, small=False, hue=None, bare=False):
     """A Braitenberg vehicle for one member, drawn in the site's line style: a body, two wheels, two
     sensors and the wires between them, straight or crossed, excitatory (+, solid) or inhibitory
     (-, dashed), sometimes with the light it turns toward or away from. Seeded by the blyg's address,
@@ -503,6 +503,8 @@ def vehicle_svg(seed, small=False, hue=None):
     detail = "" if small else wires + sign
     if hue is None:
         hue = preferred_hue(seed)
+    if bare:   # just the vehicle, facing up around (20, 22), for the ant farm to place and move
+        return f'{wheels}{body}{sensors}{wires}{sign}'
     return (f'<svg class="bv c{hue}" viewBox="{"5 4 30 32" if small else "3 1 34 36"}" aria-hidden="true">{light}'
             f'<g transform="rotate({f(tilt)} 20 22)">{wheels}{body}{sensors}{detail}</g></svg>')
 
@@ -673,11 +675,11 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
              f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg or blog</button> '
              f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>, or a blog with an RSS feed? Ask to join the community below.</span></p>\n')
     if community:
-        intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n'
-                  '  <li><label for="show-ours" title="Show only Protocols for Business posts"><span class="avatar lg logo">'
-                  '<img class="mark" src="../favicon.svg" alt="" width="24" height="24"></span><span>This group</span></label></li>\n' + "\n".join(
-            f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
-            f'{avatar_html(c, "lg")}<span>{html.escape(c["short"])}</span></a></li>' for c in community) + "\n</ul>\n")
+        intro += ('<h2 class="feed-h">Community</h2>\n<div class="farm-wrap">' + ant_farm(community) + '</div>\n'
+                  '<p class="farm-caption small muted"><label for="show-ours" title="Show only Protocols for Business posts">'
+                  '<span class="avatar sm logo"><img class="mark" src="../favicon.svg" alt="" width="16" height="16"></span>'
+                  'This group: show only our posts</label> · Hover a vehicle for its name; click to visit. '
+                  '<a href="blogroll.opml">Follow them all (OPML)</a></p>\n')
     # Everyone: the latest FEED_SHOWN posts. Ours only: every post of ours. A CSS-only toggle (style.css, :has()).
     ordered_entries = sorted(entries, key=lambda e: e[0], reverse=True)
     n_ours = sum(1 for e in entries if e[1] == "ours")
@@ -699,6 +701,67 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
 
 OUR_MARK = ('<span class="avatar sm logo"><img class="mark" src="../favicon.svg" alt="Protocols for Business" '
             'title="Protocols for Business" width="16" height="16"></span>')   # class "mark": the image viewer skips it
+
+def ant_farm(community):
+    """The Community as an ant farm: each member's Braitenberg vehicle crawls up and down a tunnel it
+    dug, under its name on the surface; hovering brightens it and its tunnel, clicking goes to their
+    blyg or blog. SVG and CSS only (SMIL for the crawl); a still copy replaces it for reduced motion.
+    The layout is seeded by the member list, so it holds still between changes."""
+    import random
+    n = len(community)
+    W, H, SURFACE = 480, 190, 34
+    r = random.Random(hashlib.sha256("|".join(c["site"] for c in community).encode()).hexdigest())
+    f = lambda x: f"{x:.1f}".rstrip("0").rstrip(".")
+    step = (W - 70) / max(n - 1, 1)
+    xs = [35 + i * step for i in range(n)] if n > 1 else [W / 2]
+    clamp = lambda x: min(max(x, 18), W - 18)
+    tunnels, chambers = [], []
+    for i, x in enumerate(xs):
+        depth = r.uniform(95, H - 22)
+        pts = [(x, SURFACE)]
+        for k, frac in enumerate((.3, .62, 1)):
+            pts.append((clamp(x + r.uniform(-step * .45, step * .45)), SURFACE + (depth - SURFACE) * frac))
+        d = f"M{f(pts[0][0])} {f(pts[0][1])}"
+        for (ax, ay), (bx, by) in zip(pts, pts[1:]):
+            d += f" C{f(ax)} {f(ay + (by - ay) * .5)} {f(bx)} {f(by - (by - ay) * .5)} {f(bx)} {f(by)}"
+        tunnels.append(d)
+        chambers.append(pts[-1])
+    passages = []
+    for i in range(n - 1):   # side passages between neighbouring chambers, not travelled
+        if r.random() < .65:
+            (ax, ay), (bx, by) = chambers[i], chambers[i + 1]
+            mx, my = (ax + bx) / 2, max(ay, by) + r.uniform(-30, 14)
+            passages.append(f"M{f(ax)} {f(ay)} Q{f(mx)} {f(min(my, H - 14))} {f(bx)} {f(by)}")
+    def dig(d, k, cls="tun"):
+        return (f'<path class="{cls}-edge" d="{d}" pathLength="1" style="--k:{k}"/>'
+                f'<path class="{cls}" d="{d}" pathLength="1" style="--k:{k}"/>')
+    out = [f'<svg class="farm" viewBox="0 0 {W} {H}" role="group" aria-label="Community: members\' blygs and blogs">',
+           '<defs><pattern id="sand" width="7" height="7" patternUnits="userSpaceOnUse">'
+           '<circle class="grain" cx="1.5" cy="2" r=".7"/><circle class="grain" cx="5" cy="5.5" r=".55"/></pattern></defs>',
+           f'<rect class="glass" x=".75" y=".75" width="{W - 1.5}" height="{H - 1.5}" rx="8"/>',
+           f'<rect class="sand" x="1.5" y="{SURFACE}" width="{W - 3}" height="{H - SURFACE - 1.5}" rx="7"/>',
+           f'<path class="surface" d="M1.5 {SURFACE} H{W - 1.5}"/>']
+    out += [dig(d, n + j, "pass") for j, d in enumerate(passages)]
+    for (cx, cy) in chambers:
+        out.append(f'<ellipse class="chamber" cx="{f(cx)}" cy="{f(cy)}" rx="13" ry="7.5"/>')
+    for i, (c, d) in enumerate(zip(community, tunnels)):
+        hue = c.get("hue", 0)
+        body = vehicle_svg(c["site"], hue=hue, bare=True)
+        place = 'transform="rotate(90) scale(.85) translate(-20 -22)"'
+        dur, begin = r.uniform(18, 30), 1.2 + i * .45 + r.uniform(0, 1.5)
+        ex, ey = chambers[i]
+        label_y = 14 if i % 2 == 0 or n < 7 else 25
+        out.append(
+            f'<a href="{html.escape(c["site"], quote=True)}" class="mem c{hue}" aria-label="{html.escape(c["name"], quote=True)}: {html.escape(c["title"], quote=True)}">'
+            f'<title>{html.escape(c["name"])}</title>{dig(d, i)}'
+            f'<text class="name" x="{f(xs[i])}" y="{label_y}" text-anchor="middle">{html.escape(c["short"])}</text>'
+            f'<g class="bv c{hue} moving" aria-hidden="true"><g {place}>{body}</g>'
+            f'<animateMotion dur="{f(dur)}s" begin="{f(begin)}s" repeatCount="indefinite" rotate="auto" '
+            f'keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" path="{d}"/></g>'
+            f'<g class="bv c{hue} still" aria-hidden="true" transform="translate({f(ex)} {f(ey - 4)}) rotate(-90)"><g {place}>{body}</g></g>'
+            '</a>')
+    out.append("</svg>")
+    return "\n".join(out)
 
 def avatar_html(c, size):
     return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm", hue=c.get("hue"))}</span>'
