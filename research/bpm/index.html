@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Business Protocol Management · Protocols for Business</title>
-<meta name="description" content="A practice guide to Business Protocol Management: key terms, principles, roles, the See, Design and Evolve phases, a hardness map template and a worked example.">
+<meta name="description" content="A practice guide to Business Protocol Management: five questions, key terms, the See, Design and Evolve phases, a common hard core and a worked example.">
 <link rel="canonical" href="https://protocolsforbusiness.com/research/bpm/">
 <script type="application/ld+json">
 {
@@ -35,7 +35,7 @@
   {
    "@type": "Article",
    "headline": "Business Protocol Management",
-   "description": "A practice guide to Business Protocol Management: key terms, principles, roles, the See, Design and Evolve phases, a hardness map template and a worked example.",
+   "description": "A practice guide to Business Protocol Management: five questions, key terms, the See, Design and Evolve phases, a common hard core and a worked example.",
    "url": "https://protocolsforbusiness.com/research/bpm/",
    "author": {
     "@type": "Person",
@@ -53,14 +53,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Protocols for Business">
 <meta property="og:title" content="Business Protocol Management · Protocols for Business">
-<meta property="og:description" content="A practice guide to Business Protocol Management: key terms, principles, roles, the See, Design and Evolve phases, a hardness map template and a worked example.">
+<meta property="og:description" content="A practice guide to Business Protocol Management: five questions, key terms, the See, Design and Evolve phases, a common hard core and a worked example.">
 <meta property="og:url" content="https://protocolsforbusiness.com/research/bpm/">
 <meta property="og:image" content="https://protocolsforbusiness.com/assets/cards/home.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Business Protocol Management · Protocols for Business">
-<meta name="twitter:description" content="A practice guide to Business Protocol Management: key terms, principles, roles, the See, Design and Evolve phases, a hardness map template and a worked example.">
+<meta name="twitter:description" content="A practice guide to Business Protocol Management: five questions, key terms, the See, Design and Evolve phases, a common hard core and a worked example.">
 <meta name="twitter:image" content="https://protocolsforbusiness.com/assets/cards/home.jpg">
 <link rel="alternate" type="text/plain" title="Summary for language models" href="../../llms.txt">
 <link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="../../blyg/feed.xml">
@@ -86,7 +86,18 @@
 
 <figure class="fig wide"><img src="../../assets/fig/hardcore.svg" alt="A hexagonal hard core, with free agents moving around it" width="1200" height="300" loading="lazy"></figure>
 
+<h2 id="questions">Five questions to carry</h2>
+<p>The whole practice in five questions. Each stands on its own; take one back to work.</p>
+<ol class="qs">
+<li><strong>Which handoffs, approvals and permissions does your work actually depend on?</strong> <span class="small"><a href="#see">See</a></span></li>
+<li><strong>Which rules must hold every time, no matter who does the work?</strong> <span class="small"><a href="#design">Design</a> · <a href="#common-core">a common hard core</a></span></li>
+<li><strong>What could an agent do that your rules allow but nobody intended?</strong> <span class="small"><a href="#risk-opportunity">Risk</a></span></li>
+<li><strong>What could teams, partners or agents build on your protocols that nobody has planned?</strong> <span class="small"><a href="#risk-opportunity">Opportunity</a> · <a href="#not-products">protocols are not products</a></span></li>
+<li><strong>Who can change your most important rules, and who can stop the work when one is broken?</strong> <span class="small"><a href="#evolve">Evolve</a></span></li>
+</ol>
+
 <nav class="page-nav" aria-label="On this page">
+<a href="#questions">Five questions</a>
 <a href="#guide">1. This guide</a>
 <a href="#terms">2. Key terms</a>
 <a href="#case-for-change">3. Case for change</a>
@@ -105,6 +116,7 @@
 <li><span class="k">Purpose</span><div class="v"><p>Explain what BPM is, why it matters now, and how a team applies it, step by step.</p></div></li>
 <li><span class="k">Audience</span><div class="v"><p>Operations leads, managers, architects and analysts who are bringing AI agents into day-to-day work.</p></div></li>
 <li><span class="k">Scope</span><div class="v"><p>One problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”. BPM is not a company-wide redesign.</p></div></li>
+<li><span class="k">Try it</span><div class="v"><p>Give this guide to an AI assistant that can read links, and ask it to apply the guide to your own work. Your conversation stays between you and the assistant.</p><pre><code>Read https://protocolsforbusiness.com/research/bpm/index.md and draw a hardness map of my team's work: list our protocols, mark each hard, soft or free, name the three that form our hard core, and say who should own each. Ask me about our work first.</code></pre></div></li>
 <li><span class="k">Revisions</span><div class="v"><p>The group tests the guide in its sessions and case studies, and revises it from what members find.</p></div></li>
 </ul>
 
@@ -134,6 +146,20 @@
 <p>At this scale, a manager’s reach comes from the environment the agents work in, not from supervising each one. One well-built rule governs every agent that passes through it, whether there are ten or a million. Like guardrails on a mountain road, strict rules in the right places let the business move faster: a team can let an agent act without approving each step, and a partner can connect through an agreed interface instead of a long integration project.</p>
 <figure class="fig wide"><img src="../../assets/fig/braitenberg.svg" alt="Three Braitenberg vehicles around a light: wired one way a vehicle turns away, wired crossed it charges the light, wired to slow down it comes to rest facing it" width="1200" height="320" loading="lazy"></figure>
 <p>Amazon shows the pattern. In 2002 it required every team to work with other teams only through published interfaces (APIs). The interfaces became hard, and each team stayed free to build whatever it liked behind them. The rule slowed teams down at first, then made the company faster and laid the groundwork for Amazon Web Services.</p>
+
+<h3 id="processes">Protocols, not processes</h3>
+<p>Process management maps the steps and gives each one an owner. Protocols are the few rules every step runs through. The two ask different questions:</p>
+<ul class="rows">
+<li><span class="k">The work</span><div class="v"><p>Process: <em>What are the steps, and who performs each one?</em><br>Protocol: <em>Which few rules must hold every time, and where do they live?</em></p></div></li>
+<li><span class="k">Ownership</span><div class="v"><p>Process: <em>Who owns the process?</em><br>Protocol: <em>Who may change this rule, and who may stop the work?</em></p></div></li>
+<li><span class="k">Compliance</span><div class="v"><p>Process: <em>Is everyone following the procedure?</em><br>Protocol: <em>What could anyone, person or agent, do within this rule’s letter that defeats its purpose?</em></p></div></li>
+<li><span class="k">Results</span><div class="v"><p>Process: <em>Did we hit the target?</em><br>Protocol: <em>What didn’t go wrong, and which targets are being gamed?</em></p></div></li>
+</ul>
+<p>More pairs, with readings for each, in the blyg post <a href="../../blyg/t/0cncz177ac6r4aqrvtcjemzq0d/">Process management is over. Manage protocols.</a> Section 9 compares BPM with other earlier approaches.</p>
+
+<h3 id="risk-opportunity">Risk and opportunity live in the same place</h3>
+<p>The seams where strict rules belong are where both show up. A gap in the hard core is where an agent gets through: agents in the OpenAI incident used a package manager as a message board because nothing said they couldn’t. A well-made interface is where others build: Amazon’s rule became the groundwork for a business nobody had planned. So the same hardness map answers both questions, and a rule that is only soft is a risk and a missed opportunity at once.</p>
+<figure class="fig"><img src="../../assets/fig/approval-queue.svg" alt="Left, agents crowd at a single approval step and most slip around it. Right, the same agents move freely inside one hard boundary with gates" width="680" height="340" loading="lazy"></figure>
 
 <h3>Assumptions to test</h3>
 <p>The group’s research rests on three assumptions. Each could turn out partial or wrong, and the sessions and case studies test them.</p>
@@ -221,6 +247,21 @@
 <li><span class="k">Free</span><div class="v"><p class="small muted">Left to the people or agents doing the work.</p><ul class="plain"><li><strong>How a team does its own work</strong><br><span class="small muted">Freedom vs. consistency · lives in the team’s own space · changed by the team or agent</span></li></ul></div></li>
 </ul>
 <table class="md-only"><thead><tr><th>Protocol</th><th>Tension</th><th>Type</th><th>Where it lives</th><th>Who can change it</th></tr></thead><tbody><tr><td>Who may move money</td><td>Speed vs. control</td><td>Hard</td><td>Payment permissions and limits</td><td>Finance lead</td></tr><tr><td>What data leaves the company</td><td>Openness vs. confidentiality</td><td>Hard</td><td>Access permissions and outbound checks</td><td>Security lead</td></tr><tr><td>Checks on every agent output</td><td>Speed vs. quality</td><td>Hard</td><td>Evaluation pipeline</td><td>Product owner</td></tr><tr><td>The shared field log</td><td>Visibility vs. privacy</td><td>Hard</td><td>Written by every system and agent</td><td>Platform team</td></tr><tr><td>Weekly planning</td><td>Alignment vs. focus</td><td>Soft</td><td>Meeting norms</td><td>Each team</td></tr><tr><td>How a team does its own work</td><td>Freedom vs. consistency</td><td>Free</td><td>Inside the team’s own space</td><td>The team or agent</td></tr><tr><td>(your protocol)</td><td>(X vs. Y)</td><td>Hard, Soft or Free</td><td>(system, norm or space)</td><td>(owner)</td></tr></tbody></table>
+
+<h3 id="common-core">Starting point: a common hard core</h3>
+<p>Most companies seem to share the same few hard protocols, enforced to different degrees. Use this list to start a hardness map, then add what your work needs and cross out what it doesn’t. It is a proposal the group is testing, not a finding; tell us in a session what your sector adds.</p>
+<figure class="fig"><img src="../../assets/fig/common-core.svg" alt="A network of protocols zooms in to its centre, the hard core, which resolves into eight protocols most companies share" width="680" height="400" loading="lazy"></figure>
+<ol class="qs">
+<li><strong>Signing authority</strong> <span class="small">Who can commit the company to a contract or a promise.</span></li>
+<li><strong>Spending limits</strong> <span class="small">How much can be spent, and by whom, before someone else must agree.</span></li>
+<li><strong>Payment approval</strong> <span class="small">Who may move money, and what must be checked first.</span></li>
+<li><strong>Access rights</strong> <span class="small">Which people and agents can see and change which systems and records.</span></li>
+<li><strong>Change control</strong> <span class="small">Nothing ships unreviewed: versions, reviews and releases for code, models, instructions and policies.</span></li>
+<li><strong>Data out</strong> <span class="small">What may leave the company, to whom, and through which channels.</span></li>
+<li><strong>Output checks</strong> <span class="small">The tests every result must pass before it reaches a customer or another system.</span></li>
+<li><strong>Audit trail</strong> <span class="small">Every action recorded with its reason: the field log.</span></li>
+</ol>
+<p>For each one, ask where it lives today (a system, a document, or someone’s head) and whether an agent could get around it.</p>
 
 <h3 id="evolve">Phase 3: Evolve</h3>
 <img class="fig-phase" src="../../assets/fig/theme-6.svg" alt="" width="640" height="120" loading="lazy">

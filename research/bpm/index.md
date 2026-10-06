@@ -6,11 +6,22 @@
 
 Companies that work well with AI build a few strict rules into their systems and give people and agents wide freedom inside them. Business Protocol Management (BPM) is the practice of finding those rules, building them, and changing them as the business grows.
 
+## Five questions to carry
+
+The whole practice in five questions. Each stands on its own; take one back to work.
+
+1. **Which handoffs, approvals and permissions does your work actually depend on?** See
+2. **Which rules must hold every time, no matter who does the work?** Design · a common hard core
+3. **What could an agent do that your rules allow but nobody intended?** Risk
+4. **What could teams, partners or agents build on your protocols that nobody has planned?** Opportunity · protocols are not products
+5. **Who can change your most important rules, and who can stop the work when one is broken?** Evolve
+
 ## 1. About this guide
 
 - **Purpose:** Explain what BPM is, why it matters now, and how a team applies it, step by step.
 - **Audience:** Operations leads, managers, architects and analysts who are bringing AI agents into day-to-day work.
 - **Scope:** One problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”. BPM is not a company-wide redesign.
+- **Try it:** Give this guide to an AI assistant that can read links, and ask it to apply the guide to your own work. Your conversation stays between you and the assistant. `Read https://protocolsforbusiness.com/research/bpm/index.md and draw a hardness map of my team's work: list our protocols, mark each hard, soft or free, name the three that form our hard core, and say who should own each. Ask me about our work first.`
 - **Revisions:** The group tests the guide in its sessions and case studies, and revises it from what members find.
 
 ## 2. Key terms
@@ -47,6 +58,21 @@ Agents also coordinate through whatever they can read and write, whether or not 
 At this scale, a manager’s reach comes from the environment the agents work in, not from supervising each one. One well-built rule governs every agent that passes through it, whether there are ten or a million. Like guardrails on a mountain road, strict rules in the right places let the business move faster: a team can let an agent act without approving each step, and a partner can connect through an agreed interface instead of a long integration project.
 
 Amazon shows the pattern. In 2002 it required every team to work with other teams only through published interfaces (APIs). The interfaces became hard, and each team stayed free to build whatever it liked behind them. The rule slowed teams down at first, then made the company faster and laid the groundwork for Amazon Web Services.
+
+### Protocols, not processes
+
+Process management maps the steps and gives each one an owner. Protocols are the few rules every step runs through. The two ask different questions:
+
+- **The work:** Process: *What are the steps, and who performs each one?* Protocol: *Which few rules must hold every time, and where do they live?*
+- **Ownership:** Process: *Who owns the process?* Protocol: *Who may change this rule, and who may stop the work?*
+- **Compliance:** Process: *Is everyone following the procedure?* Protocol: *What could anyone, person or agent, do within this rule’s letter that defeats its purpose?*
+- **Results:** Process: *Did we hit the target?* Protocol: *What didn’t go wrong, and which targets are being gamed?*
+
+More pairs, with readings for each, in the blyg post [Process management is over. Manage protocols.](https://protocolsforbusiness.com/blyg/t/0cncz177ac6r4aqrvtcjemzq0d/) Section 9 compares BPM with other earlier approaches.
+
+### Risk and opportunity live in the same place
+
+The seams where strict rules belong are where both show up. A gap in the hard core is where an agent gets through: agents in the OpenAI incident used a package manager as a message board because nothing said they couldn’t. A well-made interface is where others build: Amazon’s rule became the groundwork for a business nobody had planned. So the same hardness map answers both questions, and a rule that is only soft is a risk and a missed opportunity at once.
 
 ### Assumptions to test
 
@@ -130,6 +156,21 @@ An example for a company adopting AI agents. For each protocol, note the tension
 | Weekly planning | Alignment vs. focus | Soft | Meeting norms | Each team |
 | How a team does its own work | Freedom vs. consistency | Free | Inside the team’s own space | The team or agent |
 | (your protocol) | (X vs. Y) | Hard, Soft or Free | (system, norm or space) | (owner) |
+
+### Starting point: a common hard core
+
+Most companies seem to share the same few hard protocols, enforced to different degrees. Use this list to start a hardness map, then add what your work needs and cross out what it doesn’t. It is a proposal the group is testing, not a finding; tell us in a session what your sector adds.
+
+1. **Signing authority** Who can commit the company to a contract or a promise.
+2. **Spending limits** How much can be spent, and by whom, before someone else must agree.
+3. **Payment approval** Who may move money, and what must be checked first.
+4. **Access rights** Which people and agents can see and change which systems and records.
+5. **Change control** Nothing ships unreviewed: versions, reviews and releases for code, models, instructions and policies.
+6. **Data out** What may leave the company, to whom, and through which channels.
+7. **Output checks** The tests every result must pass before it reaches a customer or another system.
+8. **Audit trail** Every action recorded with its reason: the field log.
+
+For each one, ask where it lives today (a system, a document, or someone’s head) and whether an agent could get around it.
 
 ### Phase 3: Evolve
 

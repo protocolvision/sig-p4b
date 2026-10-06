@@ -330,3 +330,6 @@ footer .foot-line a { color: inherit; }
 .responses { margin: 2rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
 .responses h2 { margin: 0 0 .5rem; font-size: 1rem; }
 .responses ul { margin: 0; padding-left: 1.1rem; }
+
+/* code samples inside rows (the guide's "Try it" prompt) wrap instead of widening the page */
+.v pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--fill); padding: .75rem 1rem; font-size: .85rem; margin: .5rem 0 0; }
