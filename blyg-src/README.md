@@ -75,3 +75,10 @@ Imported session summaries from the Protocol Institute archive are marked this w
 GitHub Actions builds the site and the blyg, runs `tools/blyg_check.py` (the protocol conformance check),
 and publishes if the check passes. Pull requests get the same build and check, without publishing.
 To try it locally: `python3 tools/build_blyg.py && python3 tools/blyg_check.py`.
+
+## Members' blygs
+
+If you write your own blyg, it can be listed under "Members' blygs" on the blyg page and in
+`blyg/blogroll.opml`, so readers can follow every member at once. Ask in the group's Discord, or add
+yourself to `members.json` in a pull request. Posts on your blyg that respond to, quote or fork one of
+ours appear among the Updates on our blyg page, linking back to your post, within about an hour.

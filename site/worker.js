@@ -1,6 +1,6 @@
 // protocolsforbusiness.com: serve the built site from ../dist, send www and http to the bare https domain,
 // and run the blyg's Webmention endpoint (Blygger 0.3 §15) at /blyg/webmention.
-import { receive, listFor } from "./mentions.js";
+import { receive, listFor, listRecent } from "./mentions.js";
 
 const ORIGIN = "https://protocolsforbusiness.com/blyg/";
 const ENDPOINT = ORIGIN + "webmention";
@@ -30,6 +30,10 @@ export default {
       const id = url.searchParams.get("id") || "";
       if (!/^[0-9a-z]{26}$/.test(id)) return new Response("[]", { headers: { "Content-Type": "application/json" } });
       return new Response(JSON.stringify(await listFor(env, id)), {
+        headers: { "Content-Type": "application/json", "Cache-Control": "max-age=300" } });
+    }
+    if (url.pathname === "/blyg/webmention/recent") {   // verified mentions of every item, for the blyg page
+      return new Response(JSON.stringify(await listRecent(env)), {
         headers: { "Content-Type": "application/json", "Cache-Control": "max-age=300" } });
     }
     const res = await env.ASSETS.fetch(request);

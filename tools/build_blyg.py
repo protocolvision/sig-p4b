@@ -30,10 +30,19 @@ are not published. Machine-generated passages are fenced as
 The fences never reach the wire: content_md drops them, and the rendered HTML of each
 block is wrapped in <div class="blyg-tk-gen"> with a matching `generated` entry (spec §5.7).
 
+Members: blyg-src/members.json lists members' blygs (title, author, site, feed). It becomes
+blogroll.opml (0.3 §11) and a list on the blyg page. Adding someone is a publishing act: ask first.
+
+Responses: verified Webmentions from other blygs (site/mentions.js) are listed among the Updates on
+the blyg page, linking to the source. They never enter feed.xml or the item files (§13.5, §15.5).
+The build reads them from the live endpoint, and fetches each source item for its title at build
+time (§15.4: pointers are stored, content is fetched when displayed). BLYG_MENTIONS=0 skips this
+(offline builds). The site workflow rebuilds hourly when the list changes (--mentions-hash).
+
 Output: blyg/ — blyg.json, feed.xml, items/index.json, items/{id}.json, pinned
-items/{id}/v{n}.json, and human-readable pages (index, f/{id}/, t/{id}/).
+items/{id}/v{n}.json, blogroll.opml, and human-readable pages (index, f/{id}/, t/{id}/).
 """
-import email.utils, hashlib, html, json, os, re, shutil, subprocess, sys
+import email.utils, hashlib, html, json, os, re, shutil, subprocess, sys, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -294,14 +303,86 @@ def main():
     for rel, data in MEDIA.items():   # every version's media, so older and pinned versions keep working
         (OUT / rel).parent.mkdir(exist_ok=True)
         (OUT / rel).write_bytes(data)
+    members = load_members()
     manifest = {"blyg": BLYG, "level": LEVEL, "generator": GENERATOR, "generator_url": GENERATOR_URL, "site": ORIGIN, "title": TITLE,
                 "author": {"name": TITLE, "bio": DESCRIPTION,
                            "links": [{"label": "Home", "url": SITE}, {"label": "Protocol Institute", "url": "https://protocol-institute.org/"}]},
                 "feed": "feed.xml", "items": "items/index.json", "webmention": "webmention", "updated": updated}   # §15.1: served by site/worker.js
+    if members:
+        manifest["blogroll"] = "blogroll.opml"   # §6.1: only when the blogroll is non-empty
+        write_blogroll(members)
     (OUT / "blyg.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n")
     write_feed(sorted(events, key=lambda e: e[0], reverse=True)[:FEED_WINDOW], updated)
-    write_pages(ordered, {iid: it["path"].stem for iid, (_, it) in docs.items()})
-    print(f"blyg: {len(docs)} items, {len(events)} publish events -> {OUT.relative_to(ROOT)}/")
+    mentions, mhash = fetch_mentions()
+    write_pages(ordered, {iid: it["path"].stem for iid, (_, it) in docs.items()}, members, mentions, mhash)
+    print(f"blyg: {len(docs)} items, {len(events)} publish events, {len(members)} members, "
+          f"{len(mentions)} responses from other blygs -> {OUT.relative_to(ROOT)}/")
+
+def load_members():
+    path = SRC / "members.json"
+    members = json.loads(path.read_text()) if path.exists() else []
+    for m in members:
+        for k in ("title", "site", "feed"):
+            if not str(m.get(k, "")).strip():
+                sys.exit(f"{path}: every member needs {k}")
+        if not all(str(m[k]).startswith("https://") for k in ("site", "feed")):
+            sys.exit(f"{path}: {m['title']}: site and feed must be https URLs")
+    return members
+
+def write_blogroll(members):
+    """0.3 §11: plain OPML 2.0, one rss outline per member blyg, no extensions."""
+    a = lambda s: html.escape(str(s), quote=True)
+    rows = "\n".join(f'    <outline type="rss" text="{a(m["title"])}" title="{a(m["title"])}" '
+                     f'xmlUrl="{a(m["feed"])}" htmlUrl="{a(m["site"])}"/>' for m in members)
+    (OUT / "blogroll.opml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>{a(TITLE)} — members' blygs</title>
+  </head>
+  <body>
+{rows}
+  </body>
+</opml>
+""")
+
+def get_json(url, timeout=5, limit=1_000_000):
+    req = urllib.request.Request(url, headers={"User-Agent": "sig-p4b-blyg", "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read(limit + 1)[:limit])
+
+def recent_mentions():
+    """Verified mentions from the live endpoint, or [] when offline or switched off (BLYG_MENTIONS=0)."""
+    if os.environ.get("BLYG_MENTIONS") == "0":
+        return []
+    try:
+        got = get_json(ORIGIN + "webmention/recent", timeout=10)
+        return got if isinstance(got, list) else []
+    except Exception as ex:
+        print(f"blyg: responses from other blygs not loaded ({ex.__class__.__name__}); building without them", file=sys.stderr)
+        return []
+
+def mentions_hash(mentions):
+    return hashlib.sha256(json.dumps(mentions, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
+
+def fetch_mentions():
+    """Each verified mention, with the source item's title fetched now from its origin (nothing is stored)."""
+    raw = recent_mentions()
+    out = []
+    for m in raw[:30]:
+        page, origin, sid = str(m.get("page") or ""), str(m.get("origin") or ""), str(m.get("source_id") or "")
+        if not page.startswith(("https://", "http://")) or not ID_RE.match(str(m.get("target_id") or "")):
+            continue
+        title = ""
+        if origin.startswith(("https://", "http://")) and ID_RE.match(sid):
+            try:
+                doc = get_json(origin.rstrip("/") + f"/items/{sid}.json")
+                if doc.get("kind") == "withdrawn":
+                    continue
+                title = title_of(doc, "")
+            except Exception:
+                pass
+        out.append({**m, "title": title})
+    return out, mentions_hash(raw)
 
 def write_feed(events, updated):
     e = lambda s: html.escape(s, quote=False)
@@ -364,13 +445,34 @@ def stub_line(d):
     where = ""   # the author's name already says whose it is
     return f'<p class="stub-of">{RETURN_ICON} In response to <a href="{html.escape(url, quote=True)}">{label}</a>{where}</p>\n'
 
-def write_pages(ordered, stems):
+VERB = {"stub": "responded", "transclusion": "quoted this", "fork": "forked this"}
+
+def responses_here(ms):
+    """An icon after one of our posts on the blyg page, opening the list of responses on other blygs (§15.5)."""
+    if not ms:
+        return ""
+    rows = []
+    for m in ms:
+        host = re.sub(r"^https?://([^/]+).*$", r"\1", m["page"])
+        who = m.get("author") or host
+        rows.append(f'<li><a href="{html.escape(m["page"], quote=True)}">{html.escape(m["title"] or "A post by " + who)}</a> '
+                    f'<span class="muted">· {html.escape(who)} {VERB.get(m.get("relation"), "mentioned this")}'
+                    f'{" · " + html.escape(host) if m.get("author") else ""}</span></li>')
+    n = len(ms)
+    label = f"{n} response{'s' if n != 1 else ''} on other blygs"
+    return (f'<details class="blyg-responses"><summary title="{label}" aria-label="{label}">{RETURN_ICON}{n}</summary>'
+            f'<ul>{"".join(rows)}</ul></details>')
+
+def write_pages(ordered, stems, members, mentions, mhash):
     sys.path.insert(0, str(ROOT / "tools"))
     from build_site import page
     alt = ('<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
            f'<link rel="webmention" href="{ORIGIN}webmention">\n')
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
     groups = {"log": [], "updates": [], "sessions": [], "notes": []}
+    by_target = {}
+    for m in mentions:
+        by_target.setdefault(m["target_id"], []).append(m)
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
@@ -383,7 +485,7 @@ def write_pages(ordered, stems):
             kind_label += " · response"
         groups[key].append((shown, f'  <li><time datetime="{shown[:10]}">{date(shown)}</time><span class="what">'
             f'<a href="{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/">{html.escape(title_of(d, d["kind"]))}</a> '
-            f'<span class="muted">· {kind_label} · v{d["version"]}</span></span></li>'))
+            f'<span class="muted">· {kind_label} · v{d["version"]}</span>{responses_here(by_target.get(d["id"], []))}</span></li>'))
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
@@ -415,9 +517,24 @@ def write_pages(ordered, stems):
              f'<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n'
              + "".join(f'<h2>{label}</h2>\n<ul class="schedule">\n' + "\n".join(r for _, r in sorted(groups[k], reverse=True)) + "\n</ul>\n"
                        for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
+    if mentions:
+        intro += (f'<p class="small muted">{RETURN_ICON} marks a post that someone answered on their own blyg '
+                  '(a response, quote or fork); open it to read theirs.</p>\n')
+    if members:
+        intro += ('<h2>Members\' blygs</h2>\n<ul class="schedule">\n' + "\n".join(
+            f'  <li><span class="what"><a href="{html.escape(m["site"], quote=True)}">{html.escape(m["title"])}</a>'
+            + (f' <span class="muted">· {html.escape(m["author"])}</span>' if m.get("author") and m["author"] != m["title"] else "")
+            + '</span></li>' for m in members)
+            + '\n</ul>\n<p class="small muted">Follow them all at once: <a href="blogroll.opml">blogroll.opml</a>. '
+              'Members who write a blyg can ask to be listed.</p>\n')
+    intro += f"<!-- responses:{mhash} -->\n"   # the hourly workflow compares this with the live list
+    head = alt.format(rel="../") + ('<link rel="blogroll" href="blogroll.opml">\n' if members else "")
     (OUT / "index.html").write_text(page(
         {"title": "Blyg · Protocols for Business", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
-         "card": "blyg", "head": alt.format(rel="../")}, intro))
+         "card": "blyg", "head": head}, intro))
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["--mentions-hash"]:   # for the hourly check in .github/workflows/site.yml
+        print(mentions_hash(recent_mentions()))
+    else:
+        main()

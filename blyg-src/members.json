@@ -1,0 +1,32 @@
+[
+ {
+  "title": "AMMDI Blyg",
+  "author": "AMMDI",
+  "site": "https://ammdi.hyperphor.com/blyg/",
+  "feed": "https://ammdi.hyperphor.com/blyg/feed.xml"
+ },
+ {
+  "title": "And Yet Here We Are 🚀",
+  "author": "Aneesh Sathe",
+  "site": "https://blyg.aneeshsathe.com/",
+  "feed": "https://blyg.aneeshsathe.com/feed.xml"
+ },
+ {
+  "title": "Rafael Fernández",
+  "author": "Rafael Fernández",
+  "site": "https://rafael.fyi/blyg/",
+  "feed": "https://rafael.fyi/blyg/feed.xml"
+ },
+ {
+  "title": "Summer Lightning",
+  "author": "Sachin Benny",
+  "site": "https://blyg.sachinbenny.xyz/",
+  "feed": "https://blyg.sachinbenny.xyz/feed.xml"
+ },
+ {
+  "title": "Venkatesh Rao's Blyg",
+  "author": "Venkatesh Rao",
+  "site": "https://venkateshrao.com/blyg/",
+  "feed": "https://venkateshrao.com/blyg/feed.xml"
+ }
+]

@@ -110,7 +110,7 @@ export async function verifyDoc(source, id, origin, pinned = () => false) {
   if (!relation) return { status: "failed", reason: "document does not reference this item" };
   return {
     status: "verified", relation, source_id: doc.id, source_origin: doc.origin, source_version: doc.version,
-    source_kind: doc.kind, author: doc.author?.name || null,
+    source_kind: doc.kind, source_updated: doc.updated || null, author: doc.author?.name || null,
     page: doc.page ? new URL(doc.page, doc.origin).toString() : source,
   };
 }
@@ -123,17 +123,32 @@ async function verify(env, key, source, id, origin, pinned) {
   await env.MENTIONS.put(key, JSON.stringify({ ...prev, ...result, status, checked: new Date().toISOString() }));
 }
 
-// Verified mentions of one item, for its page.
-export async function listFor(env, id) {
+async function verified(env, prefix) {
   const out = [];
   let cursor;
   do {
-    const page = await env.MENTIONS.list({ prefix: `m:${id}:`, cursor });
+    const page = await env.MENTIONS.list({ prefix, cursor });
     for (const k of page.keys) {
       const m = JSON.parse((await env.MENTIONS.get(k.name)) || "null");
-      if (m && m.status === "verified") out.push({ author: m.author, page: m.page, relation: m.relation, origin: m.source_origin, checked: m.checked });
+      if (m && m.status === "verified") out.push(m);
     }
     cursor = page.list_complete ? undefined : page.cursor;
   } while (cursor);
   return out;
+}
+
+// Verified mentions of one item, for its page.
+export async function listFor(env, id) {
+  return (await verified(env, `m:${id}:`))
+    .map((m) => ({ author: m.author, page: m.page, relation: m.relation, origin: m.source_origin, checked: m.checked }));
+}
+
+// Verified mentions of every item, newest first: pointers for the blyg page, built hourly (tools/build_blyg.py).
+export async function listRecent(env, limit = 50) {
+  return (await verified(env, "m:"))
+    .map((m) => ({ target_id: m.target_id, author: m.author, page: m.page, relation: m.relation, origin: m.source_origin,
+      source_id: m.source_id, source_version: m.source_version, source_kind: m.source_kind,
+      at: m.source_updated || m.checked }))
+    .sort((a, b) => String(b.at).localeCompare(String(a.at)))
+    .slice(0, limit);
 }

@@ -1,7 +1,7 @@
 // node --test site/mentions.test.mjs : checks Webmention target parsing and structural verification with a fake web.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { targetId, verifyDoc } from "./mentions.js";
+import { targetId, verifyDoc, listRecent } from "./mentions.js";
 
 const O = "https://protocolsforbusiness.com/blyg/", ID = "03k800kerdjkv2b55bbca4b2jc";
 const web = new Map();
@@ -59,4 +59,21 @@ test("a fork verifies only against a pinned version", async () => {
   web.set("https://other.example/blyg/items/f.json", { body: item({ forked_from: { origin: O, id: ID, version: 1 } }) });
   assert.equal((await verifyDoc("https://other.example/blyg/items/f.json", ID, O, () => false)).status, "failed");
   assert.equal((await verifyDoc("https://other.example/blyg/items/f.json", ID, O, (v) => v === 1)).relation, "fork");
+});
+
+test("the recent list holds verified mentions of every item, newest first, and nothing else", async () => {
+  const store = new Map([
+    ["m:" + ID + ":a", { status: "verified", target_id: ID, author: "Ada", page: "https://a.example/t/1/", relation: "stub", source_updated: "2026-10-01T00:00:00Z" }],
+    ["m:bbbbbbbbbbbbbbbbbbbbbbbbbb:b", { status: "verified", target_id: "bbbbbbbbbbbbbbbbbbbbbbbbbb", author: "Bo", page: "https://b.example/t/2/", relation: "transclusion", source_updated: "2026-10-03T00:00:00Z" }],
+    ["m:" + ID + ":c", { status: "pending", target_id: ID }],
+    ["m:" + ID + ":d", { status: "gone", target_id: ID }],
+    ["rl:g:2026-10-06T10", 3],
+  ].map(([k, v]) => [k, JSON.stringify(v)]));
+  const env = { MENTIONS: {
+    get: async (k) => store.get(k) ?? null,
+    list: async ({ prefix }) => ({ keys: [...store.keys()].filter((k) => k.startsWith(prefix)).map((name) => ({ name })), list_complete: true }),
+  } };
+  const r = await listRecent(env);
+  assert.deepEqual(r.map((m) => m.author), ["Bo", "Ada"]);
+  assert.equal(r[0].target_id, "bbbbbbbbbbbbbbbbbbbbbbbbbb"); assert.equal(r[0].at, "2026-10-03T00:00:00Z");
 });

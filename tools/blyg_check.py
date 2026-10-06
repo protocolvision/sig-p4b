@@ -6,7 +6,7 @@
 
 Exits non-zero on any failure. Checks the rules a reader relies on: ids, hashes,
 versions/changelogs, the archive index, per-version feed GUIDs, the manifest hook,
-transclusion baking, and generation disclosure.
+transclusion baking, generation disclosure, and the blogroll.
 """
 import hashlib, json, re, sys, urllib.request
 import xml.etree.ElementTree as ET
@@ -164,6 +164,17 @@ def main():
             desc = it.findtext("description") or ""
             if re.search(r'(src|href)="(?!https?:|#|mailto:)', desc):
                 fail(f"feed.xml: relative URL in description for {iid}")
+    if manifest.get("blogroll"):   # §11: plain OPML 2.0, one rss outline per entry with xmlUrl and htmlUrl
+        try:
+            opml = ET.fromstring(get(manifest["blogroll"])[0])
+            outlines = opml.findall("./body/outline")
+            if opml.tag != "opml" or opml.get("version") != "2.0" or not outlines:
+                fail("blogroll.opml: not a non-empty OPML 2.0 file")
+            for o in outlines:
+                if o.get("type") != "rss" or not o.get("xmlUrl") or not o.get("htmlUrl") or not o.get("text"):
+                    fail(f"blogroll.opml: outline {o.get('text')!r} needs type=rss, text, xmlUrl and htmlUrl")
+        except Exception as ex:
+            fail(f"blogroll.opml: not readable ({ex})")
     if headers and base.startswith("http"):
         if headers.get("Access-Control-Allow-Origin") != "*":
             print("note: feed.xml is not served with Access-Control-Allow-Origin: * (SHOULD, §4)")
