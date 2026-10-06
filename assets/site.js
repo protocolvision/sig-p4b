@@ -248,3 +248,87 @@
     send(f2, { email: email }).then(function () { close(); }, function () {});
   });
 })();
+
+/* Image viewer: any image in the page content opens larger on click (or Enter/Space when focused).
+   The viewer can show it at full size, download it, or copy it to the clipboard as a PNG. Esc closes. */
+(function () {
+  var imgs = Array.prototype.filter.call(document.querySelectorAll('main img'), function (img) {
+    /* skip links, the logo, and decorative art that sits behind controls (the next-session card) */
+    return !img.closest('a') && !img.classList.contains('logo') && !img.classList.contains('mark') && !img.classList.contains('fig-next');
+  });
+  if (!imgs.length || typeof HTMLDialogElement === 'undefined') return;
+
+  var dlg = document.createElement('dialog');
+  dlg.className = 'lightbox';
+  dlg.setAttribute('aria-label', 'Image, enlarged');
+  dlg.innerHTML =
+    '<div class="lb-bar">' +
+      '<a class="lb-open" target="_blank" rel="noopener">Open full size</a>' +
+      '<a class="lb-download" download>Download</a>' +
+      '<button type="button" class="lb-copy">Copy image</button>' +
+      '<span class="lb-status" role="status"></span>' +
+      '<button type="button" class="lb-close" aria-label="Close">Close ✕</button>' +
+    '</div>' +
+    '<div class="lb-stage"><img alt=""></div>' +
+    '<p class="lb-caption"></p>';
+  document.body.appendChild(dlg);
+  var big = dlg.querySelector('.lb-stage img'), cap = dlg.querySelector('.lb-caption'), status = dlg.querySelector('.lb-status');
+  var current = null;
+
+  function open(img) {
+    current = img;
+    var src = img.currentSrc || img.src;
+    big.src = src; big.alt = img.alt || '';
+    big.classList.remove('lb-zoomed');
+    cap.textContent = img.alt || '';
+    cap.hidden = !img.alt;
+    dlg.querySelector('.lb-open').href = src;
+    var dl = dlg.querySelector('.lb-download');
+    dl.href = src; dl.setAttribute('download', src.split('/').pop().split('?')[0]);
+    status.textContent = '';
+    dlg.showModal();
+  }
+
+  imgs.forEach(function (img) {
+    img.classList.add('zoomable');
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'Enlarge image' + (img.alt ? ': ' + img.alt : ''));
+    img.addEventListener('click', function () { open(img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); }
+    });
+  });
+
+  /* Click the image to switch between fitting the screen and its full drawn size. */
+  big.addEventListener('click', function () { big.classList.toggle('lb-zoomed'); });
+  dlg.querySelector('.lb-close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg || e.target.classList.contains('lb-stage')) dlg.close(); });
+  dlg.addEventListener('close', function () { if (current) current.focus(); });
+
+  /* Copy as PNG: draw the image on a canvas at twice its size (SVGs stay sharp), then write it to the clipboard. */
+  function png() {
+    return new Promise(function (resolve, reject) {
+      var im = new Image();
+      im.onload = function () {
+        var w = (im.naturalWidth || 1200) * 2, h = (im.naturalHeight || 600) * 2;
+        var c = document.createElement('canvas'); c.width = w; c.height = h;
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, h);
+        ctx.drawImage(im, 0, 0, w, h);
+        c.toBlob(function (b) { b ? resolve(b) : reject(new Error('no image')); }, 'image/png');
+      };
+      im.onerror = reject;
+      im.src = big.src;
+    });
+  }
+  dlg.querySelector('.lb-copy').addEventListener('click', function () {
+    if (!navigator.clipboard || typeof ClipboardItem === 'undefined') {
+      status.textContent = 'Copying isn’t supported in this browser. Use Download.'; return;
+    }
+    status.textContent = 'Copying…';
+    navigator.clipboard.write([new ClipboardItem({ 'image/png': png() })])
+      .then(function () { status.textContent = 'Copied.'; },
+            function () { status.textContent = 'Couldn’t copy. Use Download instead.'; });
+  });
+})();
