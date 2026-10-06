@@ -37,12 +37,13 @@ Responses: verified Webmentions from other blygs (site/mentions.js) are listed a
 the blyg page, linking to the source. They never enter feed.xml or the item files (§13.5, §15.5).
 The build reads them from the live endpoint, and fetches each source item for its title at build
 time (§15.4: pointers are stored, content is fetched when displayed). BLYG_MENTIONS=0 skips this
-(offline builds). The site workflow rebuilds hourly when the list changes (--mentions-hash).
+(offline builds). Members' recent posts are read from their feeds the same way and shown as links to
+them. The site workflow rebuilds hourly when any of this changes (--outside-hash).
 
 Output: blyg/ — blyg.json, feed.xml, items/index.json, items/{id}.json, pinned
 items/{id}/v{n}.json, blogroll.opml, and human-readable pages (index, f/{id}/, t/{id}/).
 """
-import email.utils, hashlib, html, json, os, re, shutil, subprocess, sys, urllib.request
+import email.utils, hashlib, html, json, os, re, shutil, subprocess, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -313,9 +314,11 @@ def main():
         write_blogroll(members)
     (OUT / "blyg.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n")
     write_feed(sorted(events, key=lambda e: e[0], reverse=True)[:FEED_WINDOW], updated)
-    mentions, mhash = fetch_mentions()
-    write_pages(ordered, {iid: it["path"].stem for iid, (_, it) in docs.items()}, members, mentions, mhash)
-    print(f"blyg: {len(docs)} items, {len(events)} publish events, {len(members)} members, "
+    raw, posts = recent_mentions(), member_posts(members)
+    mentions, community = with_titles(raw), community_of(members)
+    write_pages(ordered, {iid: it["path"].stem for iid, (_, it) in docs.items()}, community, mentions, posts,
+                outside_hash(raw, posts))
+    print(f"blyg: {len(docs)} items, {len(events)} publish events, {len(members)} members ({len(posts)} of their posts), "
           f"{len(mentions)} responses from other blygs -> {OUT.relative_to(ROOT)}/")
 
 def load_members():
@@ -345,10 +348,16 @@ def write_blogroll(members):
 </opml>
 """)
 
-def get_json(url, timeout=5, limit=1_000_000):
-    req = urllib.request.Request(url, headers={"User-Agent": "sig-p4b-blyg", "Accept": "application/json"})
+def fetch(url, timeout=8, limit=2_000_000, accept="*/*"):
+    req = urllib.request.Request(url, headers={"User-Agent": "sig-p4b-blyg", "Accept": accept})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read(limit + 1)[:limit])
+        data = r.read(limit + 1)
+        if len(data) > limit:
+            raise ValueError("too large")
+        return data, r.headers.get("Content-Type", ""), r.geturl()
+
+def get_json(url, timeout=5):
+    return json.loads(fetch(url, timeout, 1_000_000, "application/json")[0])
 
 def recent_mentions():
     """Verified mentions from the live endpoint, or [] when offline or switched off (BLYG_MENTIONS=0)."""
@@ -361,12 +370,8 @@ def recent_mentions():
         print(f"blyg: responses from other blygs not loaded ({ex.__class__.__name__}); building without them", file=sys.stderr)
         return []
 
-def mentions_hash(mentions):
-    return hashlib.sha256(json.dumps(mentions, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
-
-def fetch_mentions():
+def with_titles(raw):
     """Each verified mention, with the source item's title fetched now from its origin (nothing is stored)."""
-    raw = recent_mentions()
     out = []
     for m in raw[:30]:
         page, origin, sid = str(m.get("page") or ""), str(m.get("origin") or ""), str(m.get("source_id") or "")
@@ -382,7 +387,113 @@ def fetch_mentions():
             except Exception:
                 pass
         out.append({**m, "title": title})
-    return out, mentions_hash(raw)
+    return out
+
+def text_of(fragment, limit=220):
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<(script|style)\b.*?</\1>|<[^>]+>", " ", fragment or "", flags=re.S))).strip()
+    return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0].rstrip(",;:·") + "…"
+
+PER_MEMBER = 3   # newest posts shown from each member's feed
+
+def member_posts(members):
+    """Recent posts from members' feeds, shown on the blyg page as links to their blygs (0.3 §13.5: displayed
+    with attribution, never re-emitted). BLYG_MENTIONS=0 skips this too."""
+    if os.environ.get("BLYG_MENTIONS") == "0":
+        return []
+    import xml.etree.ElementTree as ET
+    NS = "{https://blygger.org/ns/0.1}"
+    out = []
+    for m in members:
+        try:
+            rss = ET.fromstring(fetch(m["feed"], accept="application/rss+xml, application/xml")[0])
+        except Exception as ex:
+            print(f"blyg: {m['feed']} not loaded ({ex.__class__.__name__})", file=sys.stderr)
+            continue
+        seen, n = set(), 0
+        for it in rss.iter("item"):
+            link = (it.findtext("link") or "").strip()
+            key = it.findtext(NS + "id") or link
+            if key in seen or not link.startswith(("https://", "http://")):
+                continue
+            seen.add(key)
+            if (it.findtext(NS + "kind") or "") == "withdrawn":
+                continue
+            try:
+                at = email.utils.parsedate_to_datetime(it.findtext("pubDate") or "").astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            except Exception:
+                continue
+            preview = text_of(it.findtext("description") or "")
+            title = text_of(it.findtext("title") or "", 120) or preview[:80] or "A post"
+            out.append({"member": m["site"], "link": link, "at": at, "title": title, "preview": preview})
+            n += 1
+            if n >= PER_MEMBER:
+                break
+    return out
+
+def outside_hash(mentions, posts):
+    """What the blyg page shows from other blygs; the hourly workflow rebuilds when it changes."""
+    state = [mentions, [[p["link"], p["at"], p["title"]] for p in posts]]
+    return hashlib.sha256(json.dumps(state, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
+
+IMG_EXT = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif", "image/webp": ".webp", "image/svg+xml": ".svg",
+           "image/x-icon": ".ico", "image/vnd.microsoft.icon": ".ico"}
+
+def icon_candidates(page_url):
+    """Icons a page names for itself, best first: apple-touch-icon, then the largest icon."""
+    try:
+        data, ctype, final = fetch(page_url, limit=800_000, accept="text/html")
+    except Exception:
+        return []
+    page = data.decode("utf-8", "replace")
+    found = []
+    for tag in re.findall(r"<link\b[^>]*>", page, re.I):
+        rel = (re.search(r'\brel=["\']?([^"\'>]+)', tag, re.I) or [None, ""])[1].lower()
+        href = (re.search(r'\bhref=["\']?([^"\'\s>]+)', tag, re.I) or [None, ""])[1]
+        if not href or "icon" not in rel or "mask" in rel:
+            continue
+        size = max([int(x) for x in re.findall(r"(\d+)x\d+", tag)] or [0])
+        rank = 1000 if "apple-touch-icon" in rel else size or (500 if href.endswith(".svg") else 1)
+        found.append((rank, urllib.parse.urljoin(final, html.unescape(href))))
+    return [u for _, u in sorted(found, reverse=True)]
+
+def avatar_for(m, slug):
+    """A member's picture, copied into blyg/community/ so readers' browsers never call their sites:
+    members.json "avatar", else the blyg manifest's author.avatar, else the icon their site names for itself."""
+    urls = [m["avatar"]] if m.get("avatar") else []
+    try:
+        man = get_json(m["site"] + "blyg.json")
+        if (man.get("author") or {}).get("avatar"):
+            urls.append(urllib.parse.urljoin(m["site"], man["author"]["avatar"]))
+        homes = [l.get("url", "") for l in (man.get("author") or {}).get("links") or []]
+    except Exception:
+        homes = []
+    root = re.sub(r"^(https://[^/]+).*$", r"\1/", m["site"])
+    same = lambda u: re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", u).split(".")[-2:] == re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", root).split(".")[-2:]
+    apex = "https://" + ".".join(re.sub(r"^https://([^/]+).*$", r"\1", root).split(".")[-2:]) + "/"   # blyg.example.com -> example.com
+    for page_url in dict.fromkeys([m["site"], root, apex] + [h for h in homes if h.startswith("https://") and same(h)]):
+        urls += icon_candidates(page_url)
+    urls.append(root + "favicon.ico")
+    for u in dict.fromkeys(urls):
+        try:
+            data, ctype, _ = fetch(u, limit=400_000, accept="image/*")
+        except Exception:
+            continue
+        ext = IMG_EXT.get(ctype.split(";")[0].strip().lower())
+        if ext and len(data) > 100:
+            (OUT / "community").mkdir(exist_ok=True)
+            (OUT / "community" / f"{slug}{ext}").write_bytes(data)
+            return f"community/{slug}{ext}"
+    return None
+
+def community_of(members):
+    out = []
+    for m in members:
+        name = m.get("author") or m["title"]
+        slug = re.sub(r"[^a-z0-9]+", "-", re.sub(r"^https://", "", m["site"]).lower()).strip("-")
+        img = None if os.environ.get("BLYG_MENTIONS") == "0" else avatar_for(m, slug)
+        initials = "".join(w[0] for w in re.findall(r"[^\W\d_]+", name)[:2]).upper() or "?"
+        out.append({**m, "name": name, "short": m.get("short") or name.split()[0], "img": img, "initials": initials})
+    return out
 
 def write_feed(events, updated):
     e = lambda s: html.escape(s, quote=False)
@@ -463,29 +574,46 @@ def responses_here(ms):
     return (f'<details class="blyg-responses"><summary title="{label}" aria-label="{label}">{RETURN_ICON}{n}</summary>'
             f'<ul>{"".join(rows)}</ul></details>')
 
-def write_pages(ordered, stems, members, mentions, mhash):
+def write_pages(ordered, stems, community, mentions, posts, ohash):
     sys.path.insert(0, str(ROOT / "tools"))
     from build_site import page
     alt = ('<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
            f'<link rel="webmention" href="{ORIGIN}webmention">\n')
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
-    groups = {"log": [], "updates": [], "sessions": [], "notes": []}
+    def day(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %b %Y")
     by_target = {}
     for m in mentions:
         by_target.setdefault(m["target_id"], []).append(m)
+    who = {c["site"]: c for c in community}
+    entries = []   # (date shown, html): our posts and members' posts in one dated list
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
         stem = stems.get(d["id"], "")
         m = re.match(r"session-(\d{4}-\d{2}-\d{2})", stem)
         shown = m.group(1) + "T00:00:00Z" if m else d["updated"]
-        key = "sessions" if m else ("log" if stem == "research-log" else "updates" if d["kind"] == "thread" else "notes")
-        kind_label = "session notes" if m else ("update" if key == "updates" else d["kind"])
+        label = ("session notes" if m else "research log" if stem == "research-log"
+                 else "update" if d["kind"] == "thread" else "fragment")
         if d.get("stub_of"):
-            kind_label += " · response"
-        groups[key].append((shown, f'  <li><time datetime="{shown[:10]}">{date(shown)}</time><span class="what">'
-            f'<a href="{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/">{html.escape(title_of(d, d["kind"]))}</a> '
-            f'<span class="muted">· {kind_label} · v{d["version"]}</span>{responses_here(by_target.get(d["id"], []))}</span></li>'))
+            label += " · response"
+        if d["version"] > 1:
+            label += f' · v{d["version"]}'
+        href = f'{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
+        entries.append((shown, f'<li><div class="feed-meta"><time datetime="{shown[:10]}">{day(shown)}</time> · {label}'
+            f'{responses_here(by_target.get(d["id"], []))}</div>\n'
+            f'<p class="feed-title"><a href="{href}">{html.escape(title_of(d, d["kind"]))}</a></p>\n'
+            f'<p class="feed-preview">{html.escape(summary(d["content_html"], 200))}</p></li>'))
+    for p in posts:
+        c = who.get(p["member"])
+        if not c:
+            continue
+        host = re.sub(r"^https?://([^/]+).*$", r"\1", p["link"])
+        entries.append((p["at"], f'<li class="from-member"><div class="feed-meta">{avatar_html(c, "sm")}'
+            f'<a href="{html.escape(c["site"], quote=True)}">{html.escape(c["name"])}</a> · '
+            f'<time datetime="{p["at"][:10]}">{day(p["at"])}</time> · on {html.escape(host)}</div>\n'
+            f'<p class="feed-title"><a href="{html.escape(p["link"], quote=True)}">{html.escape(p["title"])}</a></p>\n'
+            + (f'<p class="feed-preview">{html.escape(p["preview"])}</p>' if p["preview"] and p["preview"] != p["title"] else "")
+            + '</li>'))
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
@@ -493,7 +621,7 @@ def write_pages(ordered, stems, members, mentions, mhash):
         content = d["content_html"]
         if "<h1" not in content:   # one H1 per page: fragments often open without a heading
             content = f'<h1>{html.escape(title_of(d, kind))}</h1>\n' + content
-        body = (f'<p class="meta"><a href="../../">Blyg</a> · {kind.lower()} · version {d["version"]} · '
+        body = (f'<p class="meta"><a href="../../">Feed</a> · {kind.lower()} · version {d["version"]} · '
                 f'updated {date(d["updated"])}</p>\n{stub_line(d)}<article class="blyg-item">\n{content}\n</article>\n'
                 f'<section class="responses" data-responses="{d["id"]}" hidden><h2>Responses</h2><ul></ul></section>\n'
                 f'<p class="small muted">Machine-readable: <a href="../../items/{d["id"]}.json">item JSON</a> · '
@@ -505,36 +633,40 @@ def write_pages(ordered, stems, members, mentions, mhash):
         card_url = f'{SITE}assets/cards/blyg/{d["id"]}.jpg' if card.exists() else f"{SITE}assets/cards/blyg.jpg"
         author = (d.get("author") or {}).get("name") or "Protocols for Business"
         folder.joinpath("index.html").write_text(page(
-            {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "sessions",
+            {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "feed",
              "card_url": card_url, "og_type": "article",
              "og_extra": [("article:published_time", d["created"]), ("article:modified_time", d["updated"]), ("article:author", author)],
              "posting": {"datePublished": d["created"], "dateModified": d["updated"], "image": card_url,
                          "author": {"@type": "Organization" if author == "Protocols for Business" else "Person", "name": author}},
              "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
-    intro = (f'<h1>Blyg</h1>\n<p class="lede">{html.escape(DESCRIPTION)} Items are versioned: edits show up as new '
-             f'versions rather than new posts.</p>\n<p class="small muted">Follow with any RSS reader: '
-             f'<a href="feed.xml">feed.xml</a> · Built on the <a href="https://blygger.org/">Blygger protocol</a> (0.3) · '
-             f'<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n'
-             + "".join(f'<h2>{label}</h2>\n<ul class="schedule">\n' + "\n".join(r for _, r in sorted(groups[k], reverse=True)) + "\n</ul>\n"
-                       for k, label in (("log", "Research log"), ("updates", "Updates"), ("sessions", "Session notes"), ("notes", "Fragments")) if groups[k]))
-    if mentions:
-        intro += (f'<p class="small muted">{RETURN_ICON} marks a post that someone answered on their own blyg '
-                  '(a response, quote or fork); open it to read theirs.</p>\n')
-    if members:
-        intro += ('<h2>Members\' blygs</h2>\n<ul class="schedule">\n' + "\n".join(
-            f'  <li><span class="what"><a href="{html.escape(m["site"], quote=True)}">{html.escape(m["title"])}</a>'
-            + (f' <span class="muted">· {html.escape(m["author"])}</span>' if m.get("author") and m["author"] != m["title"] else "")
-            + '</span></li>' for m in members)
-            + '\n</ul>\n<p class="small muted">Follow them all at once: <a href="blogroll.opml">blogroll.opml</a>. '
-              'Members who write a blyg can ask to be listed.</p>\n')
-    intro += f"<!-- responses:{mhash} -->\n"   # the hourly workflow compares this with the live list
-    head = alt.format(rel="../") + ('<link rel="blogroll" href="blogroll.opml">\n' if members else "")
+    intro = (f'<h1>Feed</h1>\n<p class="lede">Session notes, the research log and updates from Protocols for Business, '
+             f'with new posts from members\' own blygs. Our posts are versioned: edits show up as new versions, not new posts.</p>\n'
+             f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg</button> '
+             f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>? Ask to join the community below.</span></p>\n')
+    if community:
+        intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n' + "\n".join(
+            f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
+            f'{avatar_html(c, "lg")}<span>{html.escape(c["short"])}</span></a></li>' for c in community) + "\n</ul>\n")
+    intro += ('<h2 class="feed-h">Latest</h2>\n<ol class="feed">\n' + "\n".join(h for _, h in sorted(entries, key=lambda e: e[0], reverse=True))
+              + '\n</ol>\n')
+    intro += (f'<p class="small muted">Members\' posts link to their own blygs. {RETURN_ICON} marks one of ours that someone '
+              'answered on their blyg. Follow with any RSS reader: <a href="feed.xml">our feed</a> · '
+              '<a href="blogroll.opml">all members (OPML)</a> · built on the <a href="https://blygger.org/">Blygger protocol</a> 0.3 · '
+              '<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n')
+    intro += f"<!-- outside:{ohash} -->\n"   # the hourly workflow rebuilds when this changes (--outside-hash)
+    head = alt.format(rel="../") + ('<link rel="blogroll" href="blogroll.opml">\n' if community else "")
     (OUT / "index.html").write_text(page(
-        {"title": "Blyg · Protocols for Business", "desc": DESCRIPTION, "path": "blyg/", "nav": "sessions",
-         "card": "blyg", "head": head}, intro))
+        {"title": "Feed · Protocols for Business", "desc": "Session notes, the research log and updates from Protocols for Business, "
+         "with new posts from members' own blygs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
+
+def avatar_html(c, size):
+    if c.get("img"):
+        return f'<img class="avatar {size}" src="{c["img"]}" alt="" width="{40 if size == "lg" else 18}" height="{40 if size == "lg" else 18}" loading="lazy">'
+    return f'<span class="avatar {size} initials" aria-hidden="true">{html.escape(c["initials"])}</span>'
 
 if __name__ == "__main__":
-    if sys.argv[1:] == ["--mentions-hash"]:   # for the hourly check in .github/workflows/site.yml
-        print(mentions_hash(recent_mentions()))
+    if sys.argv[1:] == ["--outside-hash"]:   # for the hourly check in .github/workflows/site.yml
+        members = load_members()
+        print(outside_hash(recent_mentions(), member_posts(members)))
     else:
         main()

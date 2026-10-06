@@ -1,6 +1,6 @@
 # Build, check, and publish the site and the blyg.
 # - Every push and pull request: build everything and run the blyg conformance check.
-# - Hourly: rebuild and publish only if the responses from other blygs (verified Webmentions) changed.
+# - Hourly: rebuild and publish only if responses from other blygs or members' recent posts changed.
 # - Pushes to main: also publish to protocolsforbusiness.com on Cloudflare (needs the CLOUDFLARE_API_TOKEN
 #   and CLOUDFLARE_ACCOUNT_ID secrets) and refresh the redirects at the old here.now address (HERENOW_API_KEY).
 name: Build and publish
@@ -39,14 +39,14 @@ jobs:
       - name: Install dependencies
         run: pip install "markdown>=3.5"
 
-      - name: Check for new responses from other blygs
+      - name: Check for new responses and members' posts
         id: responses
         if: github.event_name == 'schedule'
         run: |
-          now=$(python3 tools/build_blyg.py --mentions-hash)
+          now=$(python3 tools/build_blyg.py --outside-hash)
           site=$(python3 -c "import json;print(json.load(open('config.json'))['site'])")
-          live=$(curl -sf "${site}blyg/" | grep -o 'responses:[0-9a-f]*' | cut -d: -f2 || true)
-          if [ "$now" = "$live" ]; then echo "unchanged=true" >> "$GITHUB_OUTPUT"; echo "No new responses; nothing to publish."; fi
+          live=$(curl -sf "${site}blyg/" | grep -o 'outside:[0-9a-f]*' | cut -d: -f2 || true)
+          if [ "$now" = "$live" ]; then echo "unchanged=true" >> "$GITHUB_OUTPUT"; echo "Nothing new from other blygs; nothing to publish."; fi
 
       - name: Build and check
         if: steps.responses.outputs.unchanged != 'true'

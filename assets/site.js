@@ -140,6 +140,15 @@
       field('a-when', 'Timing', '<input id="a-when" name="when" type="text" placeholder="e.g. this quarter" maxlength="80">', true),
     thanks: 'Thanks! Your request is in the group’s Discord channel. We’ll get back to you.'
   });
+  inquiry({
+    trigger: 'data-listing', id: 'listing', route: '/listing', title: 'Add your blyg', submit: 'Send request',
+    intro: 'Members who write a blyg can be listed in the community here and in our blogroll. We check that the address serves a blyg, then post your request, including how to reach you, to the group’s Discord channel.',
+    fields: field('l-name', 'Name', '<input id="l-name" name="name" type="text" autocomplete="name" required maxlength="100">') +
+      field('l-contact', 'Discord handle or email', '<input id="l-contact" name="contact" type="text" required maxlength="150" autocapitalize="off" spellcheck="false">') +
+      field('l-link', 'Your blyg’s address', '<input id="l-link" name="link" type="text" inputmode="url" required placeholder="https://example.com/blyg/" maxlength="300" autocapitalize="off" spellcheck="false">') +
+      field('l-note', 'Anything we should know', '<textarea id="l-note" name="note" rows="2" maxlength="600"></textarea>', true),
+    thanks: 'Thanks! Your request is in the group’s Discord channel. Your blyg will appear here once it’s added.'
+  });
 
   /* Unsubscribe page: removes the address, and says the same thing whether or not it was on the list. */
   var unsub = document.querySelector('form[data-unsub]');

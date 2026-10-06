@@ -18,7 +18,7 @@ SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
 DISCORD = "https://discord.gg/zNJdK7caj"
 CALENDAR = "https://calendar.google.com/calendar/u/0/r?cid=hello@summerofprotocols.com&amp;cid=c_9ba26af3b621a8cc31de65c2e87988ea2b4a90837d042320a9eb39e1dd9a2949@group.calendar.google.com"
-NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("about", "About", "about/")]
+NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("feed", "Feed", "blyg/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
              "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training"}
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -36,7 +36,7 @@ def external_links(doc):
         return f'<a {attrs} target="_blank" rel="noopener noreferrer">'
     return EXTERNAL_A.sub(fix, doc)
 
-SECTIONS = {"sessions/": "Sessions", "research/": "Research", "about/": "About", "blyg/": "Blyg"}
+SECTIONS = {"sessions/": "Sessions", "research/": "Research", "about/": "About", "blyg/": "Feed"}
 ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Protocols for Business", "url": SITE,
        "logo": SITE + "favicon.svg",
        "parentOrganization": {"@type": "Organization", "name": "Protocol Institute", "url": "https://protocol-institute.org/"},
@@ -132,7 +132,7 @@ def page(meta, body):
 <footer aria-label="Site footer">
 <div class="foot-cols">
 <nav aria-labelledby="f-site"><h2 id="f-site">Site</h2><ul>
-<li><a href="{rel}sessions/">Sessions</a></li><li><a href="{rel}research/">Research</a></li><li><a href="{rel}research/bpm/">Practice guide</a></li><li><a href="{rel}about/">About</a></li><li><a href="{rel}blyg/">Blyg</a></li>
+<li><a href="{rel}sessions/">Sessions</a></li><li><a href="{rel}research/">Research</a></li><li><a href="{rel}research/bpm/">Practice guide</a></li><li><a href="{rel}blyg/">Feed</a></li><li><a href="{rel}about/">About</a></li>
 </ul></nav>
 <nav aria-labelledby="f-join"><h2 id="f-join">Take part</h2><ul>
 <li><button type="button" class="link" data-register>Get session emails</button></li><li><a href="{CALENDAR}">Add the calendar</a></li><li><a href="{rel}research/#speak">Offer a talk</a></li><li><a href="{DISCORD}">Discord</a></li><li><a href="{rel}unsubscribe/">Unsubscribe</a></li>

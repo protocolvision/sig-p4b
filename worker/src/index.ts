@@ -234,6 +234,65 @@ async function talk(req: Request, env: Env): Promise<Response> {
 }
 
 // Advisory requests go to the same channel, the same way: nothing stored, mentions never ping.
+// Find the blyg manifest at an address someone gave us: the URL itself, or blyg.json under it.
+async function findBlyg(link: string): Promise<{ site: string; title: string; author: string } | null> {
+  const base = link.endsWith("/") || link.endsWith(".json") ? link : link + "/";
+  for (const u of base.endsWith(".json") ? [base] : [base + "blyg.json", base + "blyg/blyg.json"]) {
+    try {
+      const r = await fetch(u, { headers: { Accept: "application/json" }, signal: AbortSignal.timeout(5000) });
+      if (!r.ok) continue;
+      const m = (await r.json()) as { blyg?: string; title?: string; author?: { name?: string } };
+      if (m && typeof m.blyg === "string") return { site: u.replace(/blyg\.json$/, ""), title: clean(m.title, 150), author: clean(m.author?.name, 100) };
+    } catch { /* not this one */ }
+  }
+  return null;
+}
+
+// "Add your blyg" on the blyg page: check the address serves a blyg, then post the request to Discord.
+async function listing(req: Request, env: Env): Promise<Response> {
+  const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
+  const done = (ok: boolean, error?: string) =>
+    isForm
+      ? Response.redirect(`${SITE}blyg/?listing=${ok ? "ok" : "error"}`, 303)
+      : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
+  let body: Record<string, string>;
+  try {
+    body = await readBody(req);
+  } catch {
+    return done(false, "Could not read the form.");
+  }
+  if (body._hp) return done(true);
+  const name = clean(body.name, 100), contact = clean(body.contact, 150);
+  const note = clean(String(body.note ?? "").replace(/\r?\n/g, " "), 600);
+  let link = clean(body.link, 300);
+  if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
+  if (!name || !contact || !link) return done(false, "Please add your name, a way to reach you, and your blyg’s address.");
+  if (!/^https:\/\/[^\s/]+\.[^\s]+$/i.test(link)) return done(false, "Please check the address; it should start with https://.");
+  const ip = req.headers.get("CF-Connecting-IP") || "unknown";
+  if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
+  const blyg = await findBlyg(link);
+  if (!blyg) return done(false, "We couldn’t find a blyg at that address (no blyg.json). Check the link, or ask on Discord.");
+  if (!env.DISCORD_WEBHOOK) return done(false, "Requests are not set up yet. Message @rafa_0x on Discord.");
+  const r = await fetch(env.DISCORD_WEBHOOK, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "Protocols for Business blyg",
+      content: "Request to list a blyg under Members’ blygs (add it to blyg-src/members.json):",
+      embeds: [{
+        title: (blyg.title || blyg.site).slice(0, 250), url: blyg.site, description: note || undefined, color: 0x004fcc,
+        fields: [
+          { name: "From", value: name, inline: true },
+          { name: "Contact", value: contact, inline: true },
+          ...(blyg.author ? [{ name: "Blyg author", value: blyg.author, inline: true }] : []),
+        ],
+      }],
+      allowed_mentions: { parse: [] },
+    }),
+  });
+  return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
+}
+
 async function advisory(req: Request, env: Env): Promise<Response> {
   const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
   const done = (ok: boolean, error?: string) =>
@@ -430,6 +489,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/signup") return signup(req, env, ctx);
     if (req.method === "POST" && url.pathname === "/talk") return talk(req, env);
     if (req.method === "POST" && url.pathname === "/advisory") return advisory(req, env);
+    if (req.method === "POST" && url.pathname === "/listing") return listing(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     if (req.method === "GET" && url.pathname === "/digest") {

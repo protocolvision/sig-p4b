@@ -34,8 +34,9 @@ header a, footer a { text-decoration: none; }
 header .home { display: inline-flex; align-items: center; gap: .5rem; color: var(--fg); font-weight: 600; }
 header .logo { width: 20px; height: 20px; border-radius: 3px; }
 header .brand-sep, header .brand-sub { color: var(--muted); font-weight: 400; }
-header nav { display: flex; gap: 1.25rem; }
+header nav { display: flex; gap: 1.1rem; font-size: .97rem; }
 header nav a { color: var(--muted); padding: .6rem 0; }
+@media (max-width: 34rem) { header nav { gap: .95rem; font-size: .92rem; } }
 header nav a:hover, header nav a[aria-current] { color: var(--fg); }
 header nav a[aria-current] { text-decoration: underline; text-underline-offset: .35em; }
 footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
@@ -359,3 +360,30 @@ details.blyg-responses summary:hover { color: var(--link-hover); }
 details.blyg-responses ul { list-style: none; margin: .4rem 0 0; padding: .1rem 0 .1rem .8rem; border-left: 2px solid var(--rule); font-size: .95rem; }
 details.blyg-responses li { display: block; border: 0; padding: .15rem 0; }
 p .stub-icon { vertical-align: -2px; color: var(--link); }
+
+/* The feed (blyg/): one dated list of our posts and members' posts, with the community above it. */
+.feed-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 1.25rem 0 2rem; }
+h2.feed-h { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 2rem 0 .75rem; }
+.community { list-style: none; padding: 0; margin: 0 0 .5rem; display: flex; flex-wrap: wrap; gap: .9rem 1.1rem; }
+.community a { display: flex; flex-direction: column; align-items: center; gap: .3rem; width: 4.25rem; color: var(--fg); text-decoration: none; font-size: .85rem; line-height: 1.25; text-align: center; }
+.community a span { overflow-wrap: anywhere; }
+.community a:hover span { color: var(--link); }
+.avatar { border-radius: 50%; object-fit: cover; background: var(--fill); flex: none; }
+.avatar.lg { width: 40px; height: 40px; box-shadow: 0 0 0 1px var(--rule); }
+.avatar.sm { width: 18px; height: 18px; vertical-align: -4px; margin-right: .35rem; }
+.avatar.initials { display: inline-flex; align-items: center; justify-content: center; color: var(--muted); font: 600 .8rem/1 Lora, Georgia, serif; }
+.avatar.sm.initials { font-size: .55rem; }
+ol.feed { list-style: none; padding: 0; margin: 0 0 2rem; }
+ol.feed > li { padding: .9rem 0 1rem; border-top: 1px solid var(--rule); }
+ol.feed > li:last-child { border-bottom: 1px solid var(--rule); }
+.feed-meta { font-size: .85rem; color: var(--muted); }
+.feed-meta a { color: var(--muted); }
+.feed-meta a:hover { color: var(--fg); }
+.feed-title { margin: .15rem 0 0; font-size: 1.02rem; line-height: 1.4; }
+.feed-preview { margin: .25rem 0 0; font-size: .92rem; line-height: 1.5; color: var(--muted);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.feed-meta details.blyg-responses ul { font-size: .92rem; }
+@media (max-width: 34rem) {
+  .community { gap: .75rem .45rem; }
+  .community a { width: 3.6rem; font-size: .78rem; }
+}

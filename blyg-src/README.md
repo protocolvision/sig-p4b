@@ -78,7 +78,7 @@ To try it locally: `python3 tools/build_blyg.py && python3 tools/blyg_check.py`.
 
 ## Members' blygs
 
-If you write your own blyg, it can be listed under "Members' blygs" on the blyg page and in
-`blyg/blogroll.opml`, so readers can follow every member at once. Ask in the group's Discord, or add
+If you write your own blyg, it can be listed in the Community on the Feed page (/blyg/) and in
+`blyg/blogroll.opml`, so readers can follow every member at once. Use "Add your blyg" on the Feed page, or add
 yourself to `members.json` in a pull request. Posts on your blyg that respond to, quote or fork one of
-ours appear among the Updates on our blyg page, linking back to your post, within about an hour.
+ours are marked on our post, linking back to yours. Your recent posts also appear in the Feed, linking to your blyg.
