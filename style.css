@@ -9,6 +9,13 @@
   --fill: #f6f5f2;
   --link: #004fcc;
   --link-hover: #003a96;
+  /* Braitenberg vehicles on the Feed: one wire colour and a pale body tint each (.bv.c0–.c5). */
+  --bv-0: #004fcc; --bv-0-tint: #eaf1fc;
+  --bv-1: #0f7b6c; --bv-1-tint: #e7f4f1;
+  --bv-2: #b4690e; --bv-2-tint: #fbf1e3;
+  --bv-3: #b83280; --bv-3-tint: #fbebf4;
+  --bv-4: #6b46c1; --bv-4-tint: #f0ebfa;
+  --bv-5: #c0392b; --bv-5-tint: #fbeceb;
 }
 
 * { box-sizing: border-box; }
@@ -373,12 +380,19 @@ h2.feed-h { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-tran
 /* Each member's Braitenberg vehicle (tools/build_blyg.py vehicle_svg): hairlines that stay hairlines at any size. */
 .bv { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
 .bv * { vector-effect: non-scaling-stroke; }
-.bv rect, .bv path:not(.w), .bv circle { fill: var(--bg); }
+.bv rect, .bv path:not(.w), .bv circle { fill: var(--bv-tint, var(--bg)); }
 .bv path[d^="M"]:not(.w) { fill: none; }
-.bv .w { stroke: var(--link); stroke-width: 1; fill: none; }
+.bv .w { stroke: var(--bv-ink, var(--link)); stroke-width: 1; fill: none; }
 .bv .l { stroke: var(--muted); }
 .bv .l circle { fill: none; }
 .avatar.sm .bv { stroke-width: 1; }
+.bv.c0 { --bv-ink: var(--bv-0); --bv-tint: var(--bv-0-tint); }
+.bv.c1 { --bv-ink: var(--bv-1); --bv-tint: var(--bv-1-tint); }
+.bv.c2 { --bv-ink: var(--bv-2); --bv-tint: var(--bv-2-tint); }
+.bv.c3 { --bv-ink: var(--bv-3); --bv-tint: var(--bv-3-tint); }
+.bv.c4 { --bv-ink: var(--bv-4); --bv-tint: var(--bv-4-tint); }
+.bv.c5 { --bv-ink: var(--bv-5); --bv-tint: var(--bv-5-tint); }
+.bv.c0 .l, .bv.c1 .l, .bv.c2 .l, .bv.c3 .l, .bv.c4 .l, .bv.c5 .l { stroke: var(--bv-ink); }
 ol.feed { list-style: none; padding: 0; margin: 0 0 2rem; }
 ol.feed > li { padding: .9rem 0 1rem; border-top: 1px solid var(--rule); }
 ol.feed { border-bottom: 1px solid var(--rule); }

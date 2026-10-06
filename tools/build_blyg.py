@@ -450,7 +450,7 @@ def outside_hash(mentions, posts):
     state = [mentions, [[p["link"], p["at"], p["title"]] for p in posts]]
     return hashlib.sha256(json.dumps(state, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
 
-def vehicle_svg(seed, small=False):
+def vehicle_svg(seed, small=False, hue=None):
     """A Braitenberg vehicle for one member, drawn in the site's line style: a body, two wheels, two
     sensors and the wires between them, straight or crossed, excitatory (+, solid) or inhibitory
     (-, dashed), sometimes with the light it turns toward or away from. Seeded by the blyg's address,
@@ -501,14 +501,28 @@ def vehicle_svg(seed, small=False):
                        for t in [k * math.pi / 4 for k in range(8)])
         light = f'<g class="l"><circle cx="{f(lx)}" cy="{f(ly)}" r="1.4"/><path d="{rays.strip()}"/></g>'
     detail = "" if small else wires + sign
-    return (f'<svg class="bv" viewBox="{"5 4 30 32" if small else "3 1 34 36"}" aria-hidden="true">{light}'
+    if hue is None:
+        hue = preferred_hue(seed)
+    return (f'<svg class="bv c{hue}" viewBox="{"5 4 30 32" if small else "3 1 34 36"}" aria-hidden="true">{light}'
             f'<g transform="rotate({f(tilt)} 20 22)">{wheels}{body}{sensors}{detail}</g></svg>')
 
+HUES = 6   # .bv.c0–.c5 in style.css
+
+def preferred_hue(seed):
+    return int(hashlib.sha256(("colour:" + seed).encode()).hexdigest(), 16) % HUES   # its own seed: shapes stay as they were
+
 def community_of(members):
-    out = []
+    """Members with display names and a vehicle colour: each keeps its seeded colour unless an earlier
+    member has it, then takes the next free one, so colours spread out until all are in use."""
+    out, used = [], []
     for m in members:
         name = m.get("author") or m["title"]
-        out.append({**m, "name": name, "short": m.get("short") or name.split()[0]})
+        hue = preferred_hue(m["site"])
+        free = [h for h in range(HUES) if h not in used[-(HUES - 1):]] if len(used) else list(range(HUES))
+        if hue not in free:
+            hue = min(free, key=lambda h: (h - hue) % HUES)
+        used.append(hue)
+        out.append({**m, "name": name, "short": m.get("short") or name.split()[0], "hue": hue})
     return out
 
 def write_feed(events, updated):
@@ -684,7 +698,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
          "with new posts from members' own blygs and blogs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
 
 def avatar_html(c, size):
-    return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm")}</span>'
+    return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm", hue=c.get("hue"))}</span>'
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["--outside-hash"]:   # for the hourly check in .github/workflows/site.yml
