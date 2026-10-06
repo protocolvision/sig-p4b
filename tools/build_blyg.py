@@ -675,7 +675,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
              f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg or blog</button> '
              f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>, or a blog with an RSS feed? Ask to join the community below.</span></p>\n')
     if community:
-        intro += ('<h2 class="feed-h">Community</h2>\n<div class="farm-wrap">' + ant_farm(community) + '</div>\n'
+        intro += ('<h2 class="feed-h">Community</h2>\n<div class="farm-wrap">' + terrarium(community) + '</div>\n'
                   '<p class="farm-caption small muted"><label for="show-ours" title="Show only Protocols for Business posts">'
                   '<span class="avatar sm logo"><img class="mark" src="../favicon.svg" alt="" width="16" height="16"></span>'
                   'This group: show only our posts</label> · Hover a vehicle for its name; click to visit. '
@@ -702,63 +702,103 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
 OUR_MARK = ('<span class="avatar sm logo"><img class="mark" src="../favicon.svg" alt="Protocols for Business" '
             'title="Protocols for Business" width="16" height="16"></span>')   # class "mark": the image viewer skips it
 
-def ant_farm(community):
-    """The Community as an ant farm: each member's Braitenberg vehicle crawls up and down a tunnel it
-    dug, under its name on the surface; hovering brightens it and its tunnel, clicking goes to their
-    blyg or blog. SVG and CSS only (SMIL for the crawl); a still copy replaces it for reduced motion.
+def terrarium(community):
+    """The Community as a terrarium seen from above: each member's Braitenberg vehicle wanders its own
+    loop over the sand, leaving tread marks and pushing up little mounds in its colour, which grow as it
+    passes. Names ride along above the vehicles. Hover colours a member; click visits their blyg or blog.
+    SVG and CSS only (SMIL for motion and growth); reduced motion gets a still copy with grown mounds.
     The layout is seeded by the member list, so it holds still between changes."""
-    import random
+    import math, random
     n = len(community)
-    W, H, SURFACE = 480, 190, 34
-    r = random.Random(hashlib.sha256("|".join(c["site"] for c in community).encode()).hexdigest())
+    W, H, M = 480, 230, 26
+    r = random.Random(hashlib.sha256(("terrarium|" + "|".join(c["site"] for c in community)).encode()).hexdigest())
     f = lambda x: f"{x:.1f}".rstrip("0").rstrip(".")
-    step = (W - 70) / max(n - 1, 1)
-    xs = [35 + i * step for i in range(n)] if n > 1 else [W / 2]
-    clamp = lambda x: min(max(x, 18), W - 18)
-    tunnels, chambers = [], []
-    for i, x in enumerate(xs):
-        depth = r.uniform(95, H - 22)
-        pts = [(x, SURFACE)]
-        for k, frac in enumerate((.3, .62, 1)):
-            pts.append((clamp(x + r.uniform(-step * .45, step * .45)), SURFACE + (depth - SURFACE) * frac))
-        d = f"M{f(pts[0][0])} {f(pts[0][1])}"
-        for (ax, ay), (bx, by) in zip(pts, pts[1:]):
-            d += f" C{f(ax)} {f(ay + (by - ay) * .5)} {f(bx)} {f(by - (by - ay) * .5)} {f(bx)} {f(by)}"
-        tunnels.append(d)
-        chambers.append(pts[-1])
-    passages = []
-    for i in range(n - 1):   # side passages between neighbouring chambers, not travelled
-        if r.random() < .65:
-            (ax, ay), (bx, by) = chambers[i], chambers[i + 1]
-            mx, my = (ax + bx) / 2, max(ay, by) + r.uniform(-30, 14)
-            passages.append(f"M{f(ax)} {f(ay)} Q{f(mx)} {f(min(my, H - 14))} {f(bx)} {f(by)}")
-    def dig(d, k, cls="tun"):
-        return (f'<path class="{cls}-edge" d="{d}" pathLength="1" style="--k:{k}"/>'
-                f'<path class="{cls}" d="{d}" pathLength="1" style="--k:{k}"/>')
-    out = [f'<svg class="farm" viewBox="0 0 {W} {H}" role="group" aria-label="Community: members\' blygs and blogs">',
-           '<defs><pattern id="sand" width="7" height="7" patternUnits="userSpaceOnUse">'
-           '<circle class="grain" cx="1.5" cy="2" r=".7"/><circle class="grain" cx="5" cy="5.5" r=".55"/></pattern></defs>',
-           f'<rect class="glass" x=".75" y=".75" width="{W - 1.5}" height="{H - 1.5}" rx="8"/>',
-           f'<rect class="sand" x="1.5" y="{SURFACE}" width="{W - 3}" height="{H - SURFACE - 1.5}" rx="7"/>',
-           f'<path class="surface" d="M1.5 {SURFACE} H{W - 1.5}"/>']
-    out += [dig(d, n + j, "pass") for j, d in enumerate(passages)]
-    for (cx, cy) in chambers:
-        out.append(f'<ellipse class="chamber" cx="{f(cx)}" cy="{f(cy)}" rx="13" ry="7.5"/>')
-    for i, (c, d) in enumerate(zip(community, tunnels)):
+    def bez(p0, p1, p2, p3, t):
+        u = 1 - t
+        return (u**3 * p0[0] + 3 * u * u * t * p1[0] + 3 * u * t * t * p2[0] + t**3 * p3[0],
+                u**3 * p0[1] + 3 * u * u * t * p1[1] + 3 * u * t * t * p2[1] + t**3 * p3[1])
+    def loop(cx, cy, rx, ry):
+        """A closed wandering loop (Catmull-Rom through jittered points) as a path, plus samples along it."""
+        k = r.randint(5, 7)
+        a0 = r.uniform(0, 2 * math.pi)
+        pts = []
+        for j in range(k):
+            a = a0 + j * 2 * math.pi / k + r.uniform(-.25, .25)
+            q = r.uniform(.65, 1.15)
+            pts.append((min(max(cx + rx * q * math.cos(a), M), W - M), min(max(cy + ry * q * math.sin(a), M), H - M)))
+        segs = []
+        for j in range(k):
+            p0, p1, p2, p3 = pts[j - 1], pts[j], pts[(j + 1) % k], pts[(j + 2) % k]
+            segs.append((p1, (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6),
+                         (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6), p2))
+        d = f"M{f(pts[0][0])} {f(pts[0][1])}" + "".join(
+            f" C{f(c1[0])} {f(c1[1])} {f(c2[0])} {f(c2[1])} {f(e[0])} {f(e[1])}" for _, c1, c2, e in segs) + " Z"
+        samples = [bez(*sg, t / 40) for sg in segs for t in range(40)] + [pts[0]]
+        lens = [0]
+        for (x1, y1), (x2, y2) in zip(samples, samples[1:]):
+            lens.append(lens[-1] + math.hypot(x2 - x1, y2 - y1))
+        return d, samples, lens
+    cols = max(1, math.ceil(n / 2))
+    out = [f'<svg class="terra" viewBox="0 0 {W} {H}" role="group" aria-label="Community: members\' blygs and blogs">',
+           '<defs><pattern id="sand" width="6" height="6" patternUnits="userSpaceOnUse">'
+           '<circle class="grain" cx="1.2" cy="1.6" r=".55"/><circle class="grain" cx="4.4" cy="4.6" r=".45"/></pattern>'
+           '<radialGradient id="glow"><stop class="glow-in" offset="0"/><stop class="glow-out" offset="1"/></radialGradient></defs>',
+           f'<rect class="glass" x=".75" y=".75" width="{W - 1.5}" height="{H - 1.5}" rx="10"/>',
+           f'<rect class="floor" x="6" y="6" width="{W - 12}" height="{H - 12}" rx="6"/>',
+           f'<circle class="lamp-glow" cx="{W - 40}" cy="36" r="70" fill="url(#glow)"/>',
+           f'<g class="lamp"><circle cx="{W - 40}" cy="36" r="5"/>' + "".join(
+               f'<path d="M{f(W - 40 + 8 * math.cos(t))} {f(36 + 8 * math.sin(t))} L{f(W - 40 + 12 * math.cos(t))} {f(36 + 12 * math.sin(t))}"/>'
+               for t in [q * math.pi / 4 for q in range(8)]) + '</g>',
+           '<g class="plant">' + "".join(
+               f'<path d="M30 {H - 26} q{f(dx * .4)} {f(-dy * .6)} {f(dx)} {f(-dy)} q{f(-dx * .2)} {f(dy * .5)} {f(-dx)} {f(dy)}"/>'
+               for dx, dy in ((-14, 30), (-4, 38), (8, 34), (17, 22), (-20, 14))) + '</g>']
+    for _ in range(6):   # pebbles
+        px, py = r.uniform(M, W - M), r.uniform(M, H - M)
+        out.append(f'<ellipse class="pebble" cx="{f(px)}" cy="{f(py)}" rx="{f(r.uniform(2.5, 5))}" ry="{f(r.uniform(2, 3.5))}" transform="rotate({f(r.uniform(0, 180))} {f(px)} {f(py)})"/>')
+    stills = []
+    for i, c in enumerate(community):
         hue = c.get("hue", 0)
+        row, j = (0, i) if i < cols else (1, i - cols)   # two staggered rows across the tank
+        cx = M + 62 + (j + .5 * row) * (W - 2 * M - 124) / max(cols - .5, 1) + r.uniform(-10, 10)
+        cy = H * (.32 if row == 0 else .68) + r.uniform(-10, 10)
+        d, samples, lens = loop(cx, cy, r.uniform(48, 80), r.uniform(28, 46))
+        total = lens[-1]
+        dur = total / r.uniform(9, 14)            # seconds a lap takes, at a slow crawl
+        begin = .4 + i * .5 + r.uniform(0, 1.2)
+        mounds = []
+        for q in range(r.randint(3, 4)):
+            frac = (q + r.uniform(.15, .85)) / 4
+            idx = min(range(len(lens)), key=lambda j: abs(lens[j] - frac * total))
+            (x1, y1), (x2, y2) = samples[max(idx - 1, 0)], samples[min(idx + 1, len(samples) - 1)]
+            tx, ty = x2 - x1, y2 - y1
+            norm = math.hypot(tx, ty) or 1
+            side, off = r.choice([-1, 1]), r.uniform(9, 14)
+            mx, my = samples[idx][0] - ty / norm * off * side, samples[idx][1] + tx / norm * off * side
+            rx, ry, rot = r.uniform(5, 9), r.uniform(3.2, 5.5), r.uniform(0, 180)
+            t0, grow = begin + frac * dur, dur * r.uniform(2.5, 4)
+            mounds.append(
+                f'<g class="mound" transform="translate({f(mx)} {f(my)}) rotate({f(rot)})">'
+                f'<ellipse rx="0" ry="0"><animate attributeName="rx" values="0;{f(rx)}" begin="{f(t0)}s" dur="{f(grow)}s" fill="freeze"/>'
+                f'<animate attributeName="ry" values="0;{f(ry)}" begin="{f(t0)}s" dur="{f(grow)}s" fill="freeze"/></ellipse>'
+                f'<ellipse class="crest" rx="0" ry="0" cy="-.6"><animate attributeName="rx" values="0;{f(rx * .45)}" begin="{f(t0)}s" dur="{f(grow)}s" fill="freeze"/>'
+                f'<animate attributeName="ry" values="0;{f(ry * .4)}" begin="{f(t0)}s" dur="{f(grow)}s" fill="freeze"/></ellipse></g>')
+            stills.append(f'<g class="mound c{hue}" transform="translate({f(mx)} {f(my)}) rotate({f(rot)})"><ellipse rx="{f(rx)}" ry="{f(ry)}"/>'
+                          f'<ellipse class="crest" rx="{f(rx * .45)}" ry="{f(ry * .4)}" cy="-.6"/></g>')
         body = vehicle_svg(c["site"], hue=hue, bare=True)
-        place = 'transform="rotate(90) scale(.85) translate(-20 -22)"'
-        dur, begin = r.uniform(18, 30), 1.2 + i * .45 + r.uniform(0, 1.5)
-        ex, ey = chambers[i]
-        label_y = 14 if i % 2 == 0 or n < 7 else 25
+        place = 'transform="rotate(90) scale(.62) translate(-20 -22)"'
+        motion = f'dur="{f(dur)}s" begin="{f(begin)}s" repeatCount="indefinite" path="{d}"'
+        sx, sy = samples[0]
+        name = html.escape(c["short"])
         out.append(
             f'<a href="{html.escape(c["site"], quote=True)}" class="mem c{hue}" aria-label="{html.escape(c["name"], quote=True)}: {html.escape(c["title"], quote=True)}">'
-            f'<title>{html.escape(c["name"])}</title>{dig(d, i)}'
-            f'<text class="name" x="{f(xs[i])}" y="{label_y}" text-anchor="middle">{html.escape(c["short"])}</text>'
-            f'<g class="bv c{hue} moving" aria-hidden="true"><g {place}>{body}</g>'
-            f'<animateMotion dur="{f(dur)}s" begin="{f(begin)}s" repeatCount="indefinite" rotate="auto" '
-            f'keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" path="{d}"/></g>'
-            f'<g class="bv c{hue} still" aria-hidden="true" transform="translate({f(ex)} {f(ey - 4)}) rotate(-90)"><g {place}>{body}</g></g>'
+            f'<title>{html.escape(c["name"])}</title>'
+            f'<path class="tread" d="{d}"/><path class="hit" d="{d}"/>'
+            f'<g class="moving">{"".join(mounds)}'
+            f'<g class="bv c{hue}" aria-hidden="true"><g {place}>{body}</g><animateMotion {motion} rotate="auto"/></g>'
+            f'<g class="tag" aria-hidden="true"><text y="-13" text-anchor="middle">{name}</text><animateMotion {motion}/></g></g>'
+            f'<g class="still" aria-hidden="true">{"".join(stills[-len(mounds):])}'
+            f'<g class="bv c{hue}" transform="translate({f(sx)} {f(sy)})"><g transform="scale(.62) translate(-20 -22)">{body}</g></g>'
+            f'<text class="tag" x="{f(sx)}" y="{f(sy - 13)}" text-anchor="middle">{name}</text></g>'
             '</a>')
     out.append("</svg>")
     return "\n".join(out)

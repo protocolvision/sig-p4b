@@ -437,43 +437,43 @@ li.ours .feed-title a { font-weight: 600; }
 .community label[for="show-ours"] span:last-child { white-space: nowrap; }
 main:has(#show-ours:checked) .community label[for="show-ours"] .avatar { box-shadow: 0 0 0 2px var(--link); }
 
-/* Community ant farm (tools/build_blyg.py ant_farm): tunnels dug on load, vehicles crawl (SMIL),
-   hover brightens a member and fills their tunnel with their colour. */
+/* Community terrarium (tools/build_blyg.py terrarium): seen from above; vehicles wander loops (SMIL),
+   leave tread marks and push up sand mounds in their colour. Hover colours a member. */
 .farm-wrap { overflow-x: auto; margin: 0 0 .4rem; }
-svg.farm { display: block; width: 100%; min-width: 30rem; height: auto; font: 600 11px Lora, Georgia, serif; }
-.farm .glass { fill: var(--bg); stroke: var(--rule); stroke-width: 1.5; }
-.farm .sand { fill: url(#sand); }
-.farm .grain { fill: #d9d4c7; }
-.farm .surface { stroke: #cfc9ba; stroke-width: 1.2; fill: none; }
-.farm .tun-edge, .farm .pass-edge { fill: none; stroke: #ddd7c8; stroke-width: 13; stroke-linecap: round; }
-.farm .tun, .farm .pass { fill: none; stroke: var(--bg); stroke-width: 10.5; stroke-linecap: round; transition: stroke .25s; }
-.farm .tun-edge { transition: stroke .25s; }
-.farm .chamber { fill: var(--bg); stroke: #ddd7c8; stroke-width: 1.2; }
-.farm .name { fill: var(--muted); font-weight: 400; transition: fill .2s; }
-.farm .mem { cursor: pointer; }
-.farm .mem .bv { opacity: .7; transition: opacity .25s, color .25s; }
-.farm .mem .bv rect, .farm .mem .bv path:not(.w), .farm .mem .bv circle { fill: var(--bg); }
-.farm .mem:hover .bv, .farm .mem:focus-visible .bv { opacity: 1; color: var(--bv-ink); }
-.farm .mem:hover .bv rect, .farm .mem:hover .bv path:not(.w), .farm .mem:hover .bv circle,
-.farm .mem:focus-visible .bv rect, .farm .mem:focus-visible .bv path:not(.w), .farm .mem:focus-visible .bv circle { fill: var(--bv-tint); }
-.farm .mem:hover .name, .farm .mem:focus-visible .name { fill: var(--bv-ink); font-weight: 600; }
-.farm .mem:hover .tun, .farm .mem:focus-visible .tun { stroke: color-mix(in srgb, var(--bv-ink) 18%, var(--bg)); }
-.farm .mem:hover .tun-edge, .farm .mem:focus-visible .tun-edge { stroke: color-mix(in srgb, var(--bv-ink) 45%, var(--bg)); }
-.farm .mem:focus-visible { outline: none; }
-.farm .mem.c0 { --bv-ink: var(--bv-0); --bv-tint: var(--bv-0-tint); }
-.farm .mem.c1 { --bv-ink: var(--bv-1); --bv-tint: var(--bv-1-tint); }
-.farm .mem.c2 { --bv-ink: var(--bv-2); --bv-tint: var(--bv-2-tint); }
-.farm .mem.c3 { --bv-ink: var(--bv-3); --bv-tint: var(--bv-3-tint); }
-.farm .mem.c4 { --bv-ink: var(--bv-4); --bv-tint: var(--bv-4-tint); }
-.farm .mem.c5 { --bv-ink: var(--bv-5); --bv-tint: var(--bv-5-tint); }
-.farm .still { display: none; }
-/* digging: each tunnel draws in, one after another */
-.farm .tun, .farm .tun-edge, .farm .pass, .farm .pass-edge { stroke-dasharray: 1; stroke-dashoffset: 1; animation: dig 1.6s ease-out calc(var(--k) * .35s) forwards; }
-@keyframes dig { to { stroke-dashoffset: 0; } }
+svg.terra { display: block; width: 100%; min-width: 30rem; height: auto; font: 400 10px Lora, Georgia, serif; }
+.terra .glass { fill: none; stroke: var(--rule); stroke-width: 1.5; }
+.terra .floor { fill: url(#sand); stroke: #e4dfd2; stroke-width: 1; }
+.terra .grain { fill: #ddd7c9; }
+.terra .glow-in { stop-color: #f5c96b; stop-opacity: .28; }
+.terra .glow-out { stop-color: #f5c96b; stop-opacity: 0; }
+.terra .lamp { fill: #fff8e6; stroke: #c99a3a; stroke-width: 1; stroke-linecap: round; }
+.terra .plant { fill: #eef4ea; stroke: #7d9a6f; stroke-width: 1; stroke-linejoin: round; }
+.terra .pebble { fill: #ece8de; stroke: #d3cdbf; stroke-width: .8; }
+.terra .mem { --bv-ink: var(--muted); --bv-tint: var(--fill); color: var(--fg); cursor: pointer; }
+.terra .tread { fill: none; stroke: #e2dccd; stroke-width: 1.2; stroke-dasharray: 1.2 2.4; transition: stroke .25s; }
+.terra .hit { fill: none; stroke: transparent; stroke-width: 14; }
+.terra .mound ellipse { fill: color-mix(in srgb, var(--bv-ink) 12%, #efe9db); stroke: color-mix(in srgb, var(--bv-ink) 30%, #d8d1c1); stroke-width: .8; transition: fill .25s, stroke .25s; }
+.terra .mound .crest { fill: color-mix(in srgb, var(--bv-ink) 6%, #f7f3ea); stroke: none; }
+.terra .mem .bv { opacity: .75; transition: opacity .25s; }
+.terra .mem .bv rect, .terra .mem .bv path:not(.w), .terra .mem .bv circle { fill: var(--bg); }
+.terra .tag, .terra .tag text { fill: var(--muted); paint-order: stroke; stroke: var(--bg); stroke-width: 2.5px; stroke-linejoin: round; transition: fill .2s; }
+.terra .mem:hover .bv, .terra .mem:focus-visible .bv { opacity: 1; color: var(--bv-ink); }
+.terra .mem:hover .bv rect, .terra .mem:hover .bv path:not(.w), .terra .mem:hover .bv circle,
+.terra .mem:focus-visible .bv rect, .terra .mem:focus-visible .bv path:not(.w), .terra .mem:focus-visible .bv circle { fill: var(--bv-tint); }
+.terra .mem:hover .tag, .terra .mem:hover .tag text, .terra .mem:focus-visible .tag, .terra .mem:focus-visible .tag text { fill: var(--bv-ink); font-weight: 600; }
+.terra .mem:hover .tread, .terra .mem:focus-visible .tread { stroke: color-mix(in srgb, var(--bv-ink) 55%, var(--bg)); }
+.terra .mem:hover .mound ellipse:not(.crest), .terra .mem:focus-visible .mound ellipse:not(.crest) { fill: color-mix(in srgb, var(--bv-ink) 30%, #efe9db); stroke: var(--bv-ink); }
+.terra .mem:focus-visible { outline: none; }
+.terra .mem.c0 { --bv-ink: var(--bv-0); --bv-tint: var(--bv-0-tint); }
+.terra .mem.c1 { --bv-ink: var(--bv-1); --bv-tint: var(--bv-1-tint); }
+.terra .mem.c2 { --bv-ink: var(--bv-2); --bv-tint: var(--bv-2-tint); }
+.terra .mem.c3 { --bv-ink: var(--bv-3); --bv-tint: var(--bv-3-tint); }
+.terra .mem.c4 { --bv-ink: var(--bv-4); --bv-tint: var(--bv-4-tint); }
+.terra .mem.c5 { --bv-ink: var(--bv-5); --bv-tint: var(--bv-5-tint); }
+.terra .still { display: none; }
 @media (prefers-reduced-motion: reduce) {
-  .farm .tun, .farm .tun-edge, .farm .pass, .farm .pass-edge { animation: none; stroke-dashoffset: 0; }
-  .farm .moving { display: none; }
-  .farm .still { display: inline; }
+  .terra .moving { display: none; }
+  .terra .still { display: inline; }
 }
 .farm-caption { margin: 0 0 1.5rem; }
 .farm-caption label { cursor: pointer; color: var(--fg); }
