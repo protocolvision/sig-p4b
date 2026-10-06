@@ -406,3 +406,14 @@ ol.feed { border-bottom: 1px solid var(--rule); }
 ol.feed > li:not(.top) { display: none; }
 .feed-wrap:has(#show-ours:checked) ol.feed > li.from-member { display: none; }
 .feed-wrap:has(#show-ours:checked) ol.feed > li.ours { display: block; }
+
+/* Members' posts in the feed: quieter than ours (smaller, body-colored title, one-line preview,
+   indented behind their vehicle). */
+ol.feed > li.from-member { padding: .65rem 0 .7rem; }
+li.from-member .feed-title, li.from-member .feed-preview { padding-left: calc(20px + .3rem); }
+li.from-member .feed-title { margin-top: .1rem; font-size: .93rem; line-height: 1.4; }
+li.from-member .feed-title a { color: var(--fg); text-decoration-color: var(--rule); }
+li.from-member .feed-title a:hover { color: var(--link); text-decoration-color: currentColor; }
+li.from-member .feed-preview { font-size: .86rem; -webkit-line-clamp: 1; }
+li.ours .feed-title a { font-weight: 600; }
+@media (max-width: 34rem) { li.from-member .feed-meta .host { display: none; } }

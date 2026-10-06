@@ -612,7 +612,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
         host = re.sub(r"^https?://([^/]+).*$", r"\1", p["link"])
         entries.append((p["at"], "from-member", f'<div class="feed-meta">{avatar_html(c, "sm")}'
             f'<a href="{html.escape(c["site"], quote=True)}">{html.escape(c["name"])}</a> · '
-            f'<time datetime="{p["at"][:10]}">{day(p["at"])}</time> · on {html.escape(host)}</div>\n'
+            f'<time datetime="{p["at"][:10]}">{day(p["at"])}</time><span class="host"> · on {html.escape(host)}</span></div>\n'
             f'<p class="feed-title"><a href="{html.escape(p["link"], quote=True)}">{html.escape(p["title"])}</a></p>\n'
             + (f'<p class="feed-preview">{html.escape(p["preview"])}</p>' if p["preview"] and p["preview"] != p["title"] else "")))
     for d in ordered:
