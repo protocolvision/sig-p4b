@@ -46,7 +46,7 @@ The group uses a small set of words carefully. This is a plain-language list of 
 ## Questions the group is still testing
 
 - **Protocols are not products.** Products steer to a target; protocols widen what others can do. How far that holds for a business's hard core is [an open question](https://protocolsforbusiness.com/research/bpm/#not-products).
-- **Who takes a cut?** A fee, sign-off or claim added at the core taxes everyone who passes through. Where is it worth it?
+- **How are protocol economics shaped?** Who pays for a protocol, who gains from it, and where any fee, sign-off or claim sits. A charge at the core taxes everyone who passes through, so where is capturing value worth it?
 - **Is the purpose in the letter?** Anything a rule permits will eventually be done, so the purpose has to be written into the rule.
 
 Missing a term, or think one is defined wrong? Say so in a session or reply with a blyg of your own.
