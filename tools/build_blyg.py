@@ -393,6 +393,7 @@ def text_of(fragment, limit=220):
     text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<(script|style)\b.*?</\1>|<[^>]+>", " ", fragment or "", flags=re.S))).strip()
     return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0].rstrip(",;:·") + "…"
 
+FEED_SHOWN = 50   # posts in the Feed's default view
 PER_MEMBER = 3   # newest posts shown from each member's feed
 
 def member_posts(members):
@@ -585,7 +586,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
     for m in mentions:
         by_target.setdefault(m["target_id"], []).append(m)
     who = {c["site"]: c for c in community}
-    entries = []   # (date shown, html): our posts and members' posts in one dated list
+    entries = []   # (date shown, classes, html): our posts and members' posts in one dated list
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
@@ -599,21 +600,20 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
         if d["version"] > 1:
             label += f' · v{d["version"]}'
         href = f'{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
-        entries.append((shown, f'<li><div class="feed-meta"><time datetime="{shown[:10]}">{day(shown)}</time> · {label}'
+        entries.append((shown, "ours", f'<div class="feed-meta"><time datetime="{shown[:10]}">{day(shown)}</time> · {label}'
             f'{responses_here(by_target.get(d["id"], []))}</div>\n'
             f'<p class="feed-title"><a href="{href}">{html.escape(title_of(d, d["kind"]))}</a></p>\n'
-            f'<p class="feed-preview">{html.escape(summary(d["content_html"], 200))}</p></li>'))
+            f'<p class="feed-preview">{html.escape(summary(d["content_html"], 200))}</p>'))
     for p in posts:
         c = who.get(p["member"])
         if not c:
             continue
         host = re.sub(r"^https?://([^/]+).*$", r"\1", p["link"])
-        entries.append((p["at"], f'<li class="from-member"><div class="feed-meta">{avatar_html(c, "sm")}'
+        entries.append((p["at"], "from-member", f'<div class="feed-meta">{avatar_html(c, "sm")}'
             f'<a href="{html.escape(c["site"], quote=True)}">{html.escape(c["name"])}</a> · '
             f'<time datetime="{p["at"][:10]}">{day(p["at"])}</time> · on {html.escape(host)}</div>\n'
             f'<p class="feed-title"><a href="{html.escape(p["link"], quote=True)}">{html.escape(p["title"])}</a></p>\n'
-            + (f'<p class="feed-preview">{html.escape(p["preview"])}</p>' if p["preview"] and p["preview"] != p["title"] else "")
-            + '</li>'))
+            + (f'<p class="feed-preview">{html.escape(p["preview"])}</p>' if p["preview"] and p["preview"] != p["title"] else "")))
     for d in ordered:
         if d["kind"] == "withdrawn":
             continue
@@ -647,8 +647,15 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
         intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n' + "\n".join(
             f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
             f'{avatar_html(c, "lg")}<span>{html.escape(c["short"])}</span></a></li>' for c in community) + "\n</ul>\n")
-    intro += ('<h2 class="feed-h">Latest</h2>\n<ol class="feed">\n' + "\n".join(h for _, h in sorted(entries, key=lambda e: e[0], reverse=True))
-              + '\n</ol>\n')
+    # Everyone: the latest FEED_SHOWN posts. Ours only: every post of ours. A CSS-only toggle (style.css, :has()).
+    ordered_entries = sorted(entries, key=lambda e: e[0], reverse=True)
+    n_ours = sum(1 for e in entries if e[1] == "ours")
+    rows = "\n".join(f'<li class="{cls}{" top" if i < FEED_SHOWN else ""}">{h}</li>' for i, (_, cls, h) in enumerate(ordered_entries))
+    intro += ('<div class="feed-wrap">\n<div class="feed-head"><h2 class="feed-h">Latest</h2>\n'
+              '<fieldset class="feed-filter"><legend class="visually-hidden">Show</legend>'
+              f'<input type="radio" name="feed-show" id="show-all" checked><label for="show-all" title="The latest {FEED_SHOWN} posts">Everyone</label>'
+              f'<input type="radio" name="feed-show" id="show-ours"><label for="show-ours" title="All {n_ours} of our posts">Protocols for Business only</label>'
+              f'</fieldset></div>\n<ol class="feed">\n{rows}\n</ol>\n</div>\n')
     intro += (f'<p class="small muted">Members\' posts link to their own blygs. {RETURN_ICON} marks one of ours that someone '
               'answered on their blyg. Follow with any RSS reader: <a href="feed.xml">our feed</a> · '
               '<a href="blogroll.opml">all members (OPML)</a> · built on the <a href="https://blygger.org/">Blygger protocol</a> 0.3 · '
