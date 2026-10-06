@@ -30,7 +30,8 @@ are not published. Machine-generated passages are fenced as
 The fences never reach the wire: content_md drops them, and the rendered HTML of each
 block is wrapped in <div class="blyg-tk-gen"> with a matching `generated` entry (spec §5.7).
 
-Members: blyg-src/members.json lists members' blygs (title, author, site, feed). It becomes
+Members: blyg-src/members.json lists members' blygs or blogs (title, author, site, feed: a blyg's
+feed.xml or any RSS/Atom feed). It becomes
 blogroll.opml (0.3 §11) and a list on the blyg page. Adding someone is a publishing act: ask first.
 
 Responses: verified Webmentions from other blygs (site/mentions.js) are listed among the Updates on
@@ -340,7 +341,7 @@ def write_blogroll(members):
     (OUT / "blogroll.opml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>{a(TITLE)} — members' blygs</title>
+    <title>{a(TITLE)} — members' blygs and blogs</title>
   </head>
   <body>
 {rows}
@@ -397,35 +398,48 @@ FEED_SHOWN = 50   # posts in the Feed's default view
 PER_MEMBER = 3   # newest posts shown from each member's feed
 
 def member_posts(members):
-    """Recent posts from members' feeds, shown on the blyg page as links to their blygs (0.3 §13.5: displayed
-    with attribution, never re-emitted). BLYG_MENTIONS=0 skips this too."""
+    """Recent posts from members' feeds (a blyg's feed.xml, or any blog's RSS or Atom), shown on the blyg
+    page as links to their sites (0.3 §13.5: displayed with attribution, never re-emitted).
+    BLYG_MENTIONS=0 skips this too."""
     if os.environ.get("BLYG_MENTIONS") == "0":
         return []
     import xml.etree.ElementTree as ET
-    NS = "{https://blygger.org/ns/0.1}"
+    NS, A = "{https://blygger.org/ns/0.1}", "{http://www.w3.org/2005/Atom}"
+    def when(text, rfc):
+        try:
+            d = email.utils.parsedate_to_datetime(text) if rfc else datetime.fromisoformat(text.strip().replace("Z", "+00:00"))
+            return d.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        except Exception:
+            return None
     out = []
     for m in members:
         try:
-            rss = ET.fromstring(fetch(m["feed"], accept="application/rss+xml, application/xml")[0])
+            root = ET.fromstring(fetch(m["feed"], accept="application/rss+xml, application/atom+xml, application/xml")[0])
         except Exception as ex:
             print(f"blyg: {m['feed']} not loaded ({ex.__class__.__name__})", file=sys.stderr)
             continue
+        rows = []
+        if root.tag == A + "feed":   # Atom
+            for e in root.iter(A + "entry"):
+                links = e.findall(A + "link")
+                link = next((l.get("href", "") for l in links if l.get("rel", "alternate") == "alternate"), "")
+                rows.append((link, e.findtext(A + "id") or link, "", when(e.findtext(A + "published") or e.findtext(A + "updated") or "", False),
+                             e.findtext(A + "title") or "", e.findtext(A + "summary") or e.findtext(A + "content") or ""))
+        else:                        # RSS 2.0, including every blyg's feed.xml
+            for it in root.iter("item"):
+                link = (it.findtext("link") or "").strip()
+                rows.append((link, it.findtext(NS + "id") or link, it.findtext(NS + "kind") or "", when(it.findtext("pubDate") or "", True),
+                             it.findtext("title") or "", it.findtext("description") or ""))
         seen, n = set(), 0
-        for it in rss.iter("item"):
-            link = (it.findtext("link") or "").strip()
-            key = it.findtext(NS + "id") or link
-            if key in seen or not link.startswith(("https://", "http://")):
+        for link, key, kind, at, title, desc in rows:   # newest first; a blyg lists one entry per version
+            if key in seen or not link.startswith(("https://", "http://")) or not at:
                 continue
             seen.add(key)
-            if (it.findtext(NS + "kind") or "") == "withdrawn":
+            if kind == "withdrawn":
                 continue
-            try:
-                at = email.utils.parsedate_to_datetime(it.findtext("pubDate") or "").astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-            except Exception:
-                continue
-            preview = text_of(it.findtext("description") or "")
-            title = text_of(it.findtext("title") or "", 120) or preview[:80] or "A post"
-            out.append({"member": m["site"], "link": link, "at": at, "title": title, "preview": preview})
+            preview = text_of(desc)
+            out.append({"member": m["site"], "link": link, "at": at,
+                        "title": text_of(title, 120) or preview[:80] or "A post", "preview": preview})
             n += 1
             if n >= PER_MEMBER:
                 break
@@ -641,9 +655,9 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
                          "author": {"@type": "Organization" if author == "Protocols for Business" else "Person", "name": author}},
              "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
     intro = (f'<h1>Feed</h1>\n<p class="lede">Session notes, the research log and updates from Protocols for Business, '
-             f'with new posts from members\' own blygs. Our posts are versioned: edits show up as new versions, not new posts.</p>\n'
-             f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg</button> '
-             f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>? Ask to join the community below.</span></p>\n')
+             f'with new posts from members\' own blygs and blogs. Our posts are versioned: edits show up as new versions, not new posts.</p>\n'
+             f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg or blog</button> '
+             f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>, or a blog with an RSS feed? Ask to join the community below.</span></p>\n')
     if community:
         intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n' + "\n".join(
             f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
@@ -657,7 +671,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
               f'<input type="radio" name="feed-show" id="show-all" checked><label for="show-all" title="The latest {FEED_SHOWN} posts">Everyone</label>'
               f'<input type="radio" name="feed-show" id="show-ours"><label for="show-ours" title="All {n_ours} of our posts">Protocols for Business only</label>'
               f'</fieldset></div>\n<ol class="feed">\n{rows}\n</ol>\n</div>\n')
-    intro += (f'<p class="small muted">Members\' posts link to their own blygs. {RETURN_ICON} marks one of ours that someone '
+    intro += (f'<p class="small muted">Members\' posts link to their own blygs and blogs. {RETURN_ICON} marks one of ours that someone '
               'answered on their blyg. Follow with any RSS reader: <a href="feed.xml">our feed</a> · '
               '<a href="blogroll.opml">all members (OPML)</a> · built on the <a href="https://blygger.org/">Blygger protocol</a> 0.3 · '
               '<a href="blyg.json">manifest</a> · <a href="items/index.json">archive index</a></p>\n')
@@ -665,7 +679,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
     head = alt.format(rel="../") + ('<link rel="blogroll" href="blogroll.opml">\n' if community else "")
     (OUT / "index.html").write_text(page(
         {"title": "Feed · Protocols for Business", "desc": "Session notes, the research log and updates from Protocols for Business, "
-         "with new posts from members' own blygs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
+         "with new posts from members' own blygs and blogs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
 
 def avatar_html(c, size):
     return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm")}</span>'

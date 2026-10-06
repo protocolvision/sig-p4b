@@ -248,7 +248,34 @@ async function findBlyg(link: string): Promise<{ site: string; title: string; au
   return null;
 }
 
-// "Add your blyg" on the blyg page: check the address serves a blyg, then post the request to Discord.
+// Otherwise a blog: the address is an RSS/Atom feed, or a page that names one with <link rel="alternate">.
+async function findFeed(link: string): Promise<{ feed: string; title: string } | null> {
+  const get = async (u: string) => {
+    const r = await fetch(u, { headers: { Accept: "application/rss+xml, application/atom+xml, text/html;q=0.9" }, signal: AbortSignal.timeout(5000) });
+    return r.ok ? { url: r.url || u, text: (await r.text()).slice(0, 500_000) } : null;
+  };
+  const asFeed = (text: string) => {
+    if (!/<rss[\s>]|<feed[\s>][^]*?xmlns=["']http:\/\/www\.w3\.org\/2005\/Atom/i.test(text.slice(0, 5000))) return null;
+    return clean((text.match(/<title[^>]*>(?:<!\[CDATA\[)?([^<\]]*)/i) || [])[1], 150);
+  };
+  try {
+    const first = await get(link);
+    if (!first) return null;
+    const t = asFeed(first.text);
+    if (t !== null) return { feed: first.url, title: t };
+    const tag = (first.text.match(/<link\b[^>]*type=["']application\/(?:rss|atom)\+xml["'][^>]*>/i) || [])[0];
+    const href = tag && (tag.match(/href=["']([^"']+)["']/i) || [])[1];
+    if (!href) return null;
+    const feedUrl = new URL(href.replace(/&amp;/g, "&"), first.url).toString();
+    const second = await get(feedUrl);
+    const t2 = second && asFeed(second.text);
+    return second && t2 !== null ? { feed: second.url, title: t2 || "" } : null;
+  } catch {
+    return null;
+  }
+}
+
+// "Add your blyg or blog" on the Feed page: check the address serves a blyg or an RSS/Atom feed, then post the request to Discord.
 async function listing(req: Request, env: Env): Promise<Response> {
   const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
   const done = (ok: boolean, error?: string) =>
@@ -266,25 +293,27 @@ async function listing(req: Request, env: Env): Promise<Response> {
   const note = clean(String(body.note ?? "").replace(/\r?\n/g, " "), 600);
   let link = clean(body.link, 300);
   if (link && !/^https?:\/\//i.test(link)) link = "https://" + link;
-  if (!name || !contact || !link) return done(false, "Please add your name, a way to reach you, and your blyg’s address.");
+  if (!name || !contact || !link) return done(false, "Please add your name, a way to reach you, and your blyg or blog’s address.");
   if (!/^https:\/\/[^\s/]+\.[^\s]+$/i.test(link)) return done(false, "Please check the address; it should start with https://.");
   const ip = req.headers.get("CF-Connecting-IP") || "unknown";
   if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
   const blyg = await findBlyg(link);
-  if (!blyg) return done(false, "We couldn’t find a blyg at that address (no blyg.json). Check the link, or ask on Discord.");
+  const feed = blyg ? null : await findFeed(link);
+  if (!blyg && !feed) return done(false, "We couldn’t find a blyg or an RSS/Atom feed at that address. Check the link, or ask on Discord.");
   if (!env.DISCORD_WEBHOOK) return done(false, "Requests are not set up yet. Message @rafa_0x on Discord.");
   const r = await fetch(env.DISCORD_WEBHOOK, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       username: "Protocols for Business blyg",
-      content: "Request to list a blyg under Members’ blygs (add it to blyg-src/members.json):",
+      content: `Request to join the Feed’s community with a ${blyg ? "blyg" : "blog (RSS/Atom)"} (add it to blyg-src/members.json):`,
       embeds: [{
-        title: (blyg.title || blyg.site).slice(0, 250), url: blyg.site, description: note || undefined, color: 0x004fcc,
+        title: ((blyg ? blyg.title : feed!.title) || link).slice(0, 250), url: blyg ? blyg.site : link, description: note || undefined, color: 0x004fcc,
         fields: [
           { name: "From", value: name, inline: true },
           { name: "Contact", value: contact, inline: true },
-          ...(blyg.author ? [{ name: "Blyg author", value: blyg.author, inline: true }] : []),
+          ...(blyg?.author ? [{ name: "Blyg author", value: blyg.author, inline: true }] : []),
+          ...(feed ? [{ name: "Feed", value: feed.feed }] : []),
         ],
       }],
       allowed_mentions: { parse: [] },

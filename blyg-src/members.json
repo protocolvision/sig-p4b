@@ -12,6 +12,12 @@
   "feed": "https://blyg.aneeshsathe.com/feed.xml"
  },
  {
+  "title": "Notes | Matthew McDowell-Sweet",
+  "author": "Matthew McDowell-Sweet",
+  "site": "https://www.msweet.net/notes/",
+  "feed": "https://www.msweet.net/notes/feed.xml"
+ },
+ {
   "title": "Rafael Fernández",
   "author": "Rafael Fernández",
   "site": "https://rafael.fyi/blyg/",
