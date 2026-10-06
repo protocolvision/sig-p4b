@@ -436,64 +436,65 @@ def outside_hash(mentions, posts):
     state = [mentions, [[p["link"], p["at"], p["title"]] for p in posts]]
     return hashlib.sha256(json.dumps(state, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:16]
 
-IMG_EXT = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif", "image/webp": ".webp", "image/svg+xml": ".svg",
-           "image/x-icon": ".ico", "image/vnd.microsoft.icon": ".ico"}
-
-def icon_candidates(page_url):
-    """Icons a page names for itself, best first: apple-touch-icon, then the largest icon."""
-    try:
-        data, ctype, final = fetch(page_url, limit=800_000, accept="text/html")
-    except Exception:
-        return []
-    page = data.decode("utf-8", "replace")
-    found = []
-    for tag in re.findall(r"<link\b[^>]*>", page, re.I):
-        rel = (re.search(r'\brel=["\']?([^"\'>]+)', tag, re.I) or [None, ""])[1].lower()
-        href = (re.search(r'\bhref=["\']?([^"\'\s>]+)', tag, re.I) or [None, ""])[1]
-        if not href or "icon" not in rel or "mask" in rel:
-            continue
-        size = max([int(x) for x in re.findall(r"(\d+)x\d+", tag)] or [0])
-        rank = 1000 if "apple-touch-icon" in rel else size or (500 if href.endswith(".svg") else 1)
-        found.append((rank, urllib.parse.urljoin(final, html.unescape(href))))
-    return [u for _, u in sorted(found, reverse=True)]
-
-def avatar_for(m, slug):
-    """A member's picture, copied into blyg/community/ so readers' browsers never call their sites:
-    members.json "avatar", else the blyg manifest's author.avatar, else the icon their site names for itself."""
-    urls = [m["avatar"]] if m.get("avatar") else []
-    try:
-        man = get_json(m["site"] + "blyg.json")
-        if (man.get("author") or {}).get("avatar"):
-            urls.append(urllib.parse.urljoin(m["site"], man["author"]["avatar"]))
-        homes = [l.get("url", "") for l in (man.get("author") or {}).get("links") or []]
-    except Exception:
-        homes = []
-    root = re.sub(r"^(https://[^/]+).*$", r"\1/", m["site"])
-    same = lambda u: re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", u).split(".")[-2:] == re.sub(r"^https?://(www\.)?([^/]+).*$", r"\2", root).split(".")[-2:]
-    apex = "https://" + ".".join(re.sub(r"^https://([^/]+).*$", r"\1", root).split(".")[-2:]) + "/"   # blyg.example.com -> example.com
-    for page_url in dict.fromkeys([m["site"], root, apex] + [h for h in homes if h.startswith("https://") and same(h)]):
-        urls += icon_candidates(page_url)
-    urls.append(root + "favicon.ico")
-    for u in dict.fromkeys(urls):
-        try:
-            data, ctype, _ = fetch(u, limit=400_000, accept="image/*")
-        except Exception:
-            continue
-        ext = IMG_EXT.get(ctype.split(";")[0].strip().lower())
-        if ext and len(data) > 100:
-            (OUT / "community").mkdir(exist_ok=True)
-            (OUT / "community" / f"{slug}{ext}").write_bytes(data)
-            return f"community/{slug}{ext}"
-    return None
+def vehicle_svg(seed, small=False):
+    """A Braitenberg vehicle for one member, drawn in the site's line style: a body, two wheels, two
+    sensors and the wires between them, straight or crossed, excitatory (+, solid) or inhibitory
+    (-, dashed), sometimes with the light it turns toward or away from. Seeded by the blyg's address,
+    so a member keeps the same vehicle on every build."""
+    import math, random
+    r = random.Random(hashlib.sha256(seed.encode()).hexdigest())
+    f = lambda x: f"{x:.1f}".rstrip("0").rstrip(".")
+    crossed, inhibit = r.random() < .5, r.random() < .4
+    w, h = r.uniform(12, 16), r.uniform(14, 18)            # body
+    x0, y0 = 20 - w / 2, 21 - h / 2 + 2
+    shape = r.choice(["box", "box", "round", "nose"])
+    if shape == "box":
+        body = f'<rect x="{f(x0)}" y="{f(y0)}" width="{f(w)}" height="{f(h)}" rx="{f(r.uniform(1, 3))}"/>'
+    elif shape == "round":
+        body = f'<rect x="{f(x0)}" y="{f(y0)}" width="{f(w)}" height="{f(h)}" rx="{f(w / 2)}"/>'
+    else:
+        body = (f'<path d="M{f(x0)} {f(y0 + 4)} L20 {f(y0 - 1)} L{f(x0 + w)} {f(y0 + 4)} V{f(y0 + h)} H{f(x0)} Z"/>')
+    wy, wh = y0 + h - r.uniform(5, 7), r.uniform(4.5, 6)   # wheels, at the back
+    wheels = (f'<rect x="{f(x0 - 2.6)}" y="{f(wy)}" width="2.6" height="{f(wh)}" rx=".8"/>'
+              f'<rect x="{f(x0 + w)}" y="{f(wy)}" width="2.6" height="{f(wh)}" rx=".8"/>')
+    spread, sy = r.uniform(.25, .42) * w, y0 + (2 if shape != "nose" else 4)
+    sx = (20 - spread, 20 + spread)
+    kind = r.choice(["eye", "cup", "antenna"])
+    sensors = ""
+    for x in sx:
+        if kind == "eye":
+            sensors += f'<circle cx="{f(x)}" cy="{f(sy - 1.6)}" r="1.6"/>'
+        elif kind == "cup":
+            sensors += f'<path d="M{f(x - 1.9)} {f(sy - 3)} A1.9 1.9 0 0 0 {f(x + 1.9)} {f(sy - 3)}"/>'
+        else:
+            tip = (x + (x - 20) * .5, sy - 5)
+            sensors += f'<path d="M{f(x)} {f(sy)} L{f(tip[0])} {f(tip[1])}"/><circle cx="{f(tip[0])}" cy="{f(tip[1])}" r=".9"/>'
+    motors = (x0 + 1.2, x0 + w - 1.2)
+    my = wy + wh / 2
+    wires = ""
+    for i, x in enumerate(sx):
+        mx = motors[1 - i] if crossed else motors[i]
+        cy = (sy + my) / 2
+        wires += (f'<path class="w" d="M{f(x)} {f(sy + .4)} C{f(x)} {f(cy)} {f(mx)} {f(cy)} {f(mx)} {f(my)}"'
+                  + (' stroke-dasharray="1.6 1.3"' if inhibit else "") + '/>')
+    sign = (f'<path class="w" d="M{f(20 - 1.3)} {f(y0 + h - 2.2)} h2.6"/>' if inhibit else
+            f'<path class="w" d="M{f(20 - 1.3)} {f(y0 + h - 2.2)} h2.6 M20 {f(y0 + h - 3.5)} v2.6"/>')
+    tilt = r.uniform(-28, 28)
+    light = ""
+    if not small and r.random() < .55:   # the light it reacts to, off to one side ahead
+        lx, ly = 20 + r.choice([-1, 1]) * r.uniform(9, 12), r.uniform(5, 7)
+        rays = "".join(f'M{f(lx + 2.4 * math.cos(t))} {f(ly + 2.4 * math.sin(t))} L{f(lx + 3.6 * math.cos(t))} {f(ly + 3.6 * math.sin(t))} '
+                       for t in [k * math.pi / 4 for k in range(8)])
+        light = f'<g class="l"><circle cx="{f(lx)}" cy="{f(ly)}" r="1.4"/><path d="{rays.strip()}"/></g>'
+    detail = "" if small else wires + sign
+    return (f'<svg class="bv" viewBox="{"5 4 30 32" if small else "3 1 34 36"}" aria-hidden="true">{light}'
+            f'<g transform="rotate({f(tilt)} 20 22)">{wheels}{body}{sensors}{detail}</g></svg>')
 
 def community_of(members):
     out = []
     for m in members:
         name = m.get("author") or m["title"]
-        slug = re.sub(r"[^a-z0-9]+", "-", re.sub(r"^https://", "", m["site"]).lower()).strip("-")
-        img = None if os.environ.get("BLYG_MENTIONS") == "0" else avatar_for(m, slug)
-        initials = "".join(w[0] for w in re.findall(r"[^\W\d_]+", name)[:2]).upper() or "?"
-        out.append({**m, "name": name, "short": m.get("short") or name.split()[0], "img": img, "initials": initials})
+        out.append({**m, "name": name, "short": m.get("short") or name.split()[0]})
     return out
 
 def write_feed(events, updated):
@@ -667,9 +668,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
          "with new posts from members' own blygs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
 
 def avatar_html(c, size):
-    if c.get("img"):
-        return f'<img class="avatar {size}" src="{c["img"]}" alt="" width="{40 if size == "lg" else 18}" height="{40 if size == "lg" else 18}" loading="lazy">'
-    return f'<span class="avatar {size} initials" aria-hidden="true">{html.escape(c["initials"])}</span>'
+    return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm")}</span>'
 
 if __name__ == "__main__":
     if sys.argv[1:] == ["--outside-hash"]:   # for the hourly check in .github/workflows/site.yml
