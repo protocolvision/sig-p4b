@@ -6,7 +6,7 @@ generated_model: claude-opus-5-5
 # What would protocol-centric consulting look like?
 
 ::: generated
-Some of the people who come to these sessions advise businesses for a living, and the same question keeps coming up: what would it mean to sell this? To find out, we built a landing page for an independent advisory network built on the group's research, at [protocolvision.org](https://protocolvision.org/). It is a draft, shared for feedback. The research here stays open and unpaid; the advisory is a separate network that draws on it.
+What would it mean to sell this? To find out, we spent two days building a landing page for an independent advisory network that draws on the group's research, at [protocolvision.org](https://protocolvision.org/). It is a draft, shared for feedback. The research here stays open and unpaid; the advisory is separate.
 
 Writing a page that an operations lead reads in a minute turned out to be a good test of the ideas. Four things changed along the way.
 
