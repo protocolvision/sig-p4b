@@ -659,7 +659,9 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
              f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg or blog</button> '
              f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>, or a blog with an RSS feed? Ask to join the community below.</span></p>\n')
     if community:
-        intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n' + "\n".join(
+        intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n'
+                  '  <li><label for="show-ours" title="Show only Protocols for Business posts"><span class="avatar lg logo">'
+                  '<img src="../favicon.svg" alt="" width="24" height="24"></span><span>This group</span></label></li>\n' + "\n".join(
             f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
             f'{avatar_html(c, "lg")}<span>{html.escape(c["short"])}</span></a></li>' for c in community) + "\n</ul>\n")
     # Everyone: the latest FEED_SHOWN posts. Ours only: every post of ours. A CSS-only toggle (style.css, :has()).

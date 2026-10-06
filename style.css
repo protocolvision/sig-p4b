@@ -364,10 +364,10 @@ p .stub-icon { vertical-align: -2px; color: var(--link); }
 /* The feed (blyg/): one dated list of our posts and members' posts, with the community above it. */
 .feed-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 1.25rem 0 2rem; }
 h2.feed-h { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 2rem 0 .75rem; }
-.community { list-style: none; padding: 0; margin: 0 0 .5rem; display: flex; flex-wrap: wrap; gap: .9rem 1.1rem; }
-.community a { display: flex; flex-direction: column; align-items: center; gap: .3rem; width: 4.5rem; color: var(--fg); text-decoration: none; font-size: .85rem; line-height: 1.25; text-align: center; }
-.community a:hover span { color: var(--link); }
-.avatar { display: inline-flex; flex: none; border-radius: 50%; color: var(--fg); }
+.community { list-style: none; padding: 0; margin: 0 0 .5rem; display: flex; flex-wrap: wrap; gap: .9rem .85rem; }
+.community a, .community label { display: flex; cursor: pointer; flex-direction: column; align-items: center; gap: .3rem; min-width: 3.6rem; color: var(--fg); text-decoration: none; font-size: .85rem; line-height: 1.25; text-align: center; }
+.community a:hover span, .community label:hover span { color: var(--link); }
+.avatar { display: inline-flex; align-items: center; justify-content: center; flex: none; border-radius: 50%; color: var(--fg); }
 .avatar.lg { width: 46px; height: 46px; background: var(--fill); box-shadow: 0 0 0 1px var(--rule); }
 .avatar.sm { width: 20px; height: 20px; vertical-align: -5px; margin-right: .3rem; }
 /* Each member's Braitenberg vehicle (tools/build_blyg.py vehicle_svg): hairlines that stay hairlines at any size. */
@@ -391,7 +391,7 @@ ol.feed { border-bottom: 1px solid var(--rule); }
 .feed-meta details.blyg-responses ul { font-size: .92rem; }
 @media (max-width: 34rem) {
   .community { gap: .75rem .55rem; }
-  .community a { width: auto; min-width: 3.2rem; font-size: .78rem; }
+  .community a, .community label { width: auto; min-width: 3.2rem; font-size: .78rem; }
 }
 
 /* Feed filter: Everyone (latest 50) or Protocols for Business only (all of ours). CSS only; without :has() the default view stays. */
@@ -417,3 +417,8 @@ li.from-member .feed-title a:hover { color: var(--link); text-decoration-color: 
 li.from-member .feed-preview { font-size: .86rem; -webkit-line-clamp: 1; }
 li.ours .feed-title a { font-weight: 600; }
 @media (max-width: 34rem) { li.from-member .feed-meta .host { display: none; } }
+
+/* "This group" in the Community row: our favicon; clicking it shows only our posts. */
+.avatar.logo img { width: 24px; height: 24px; border-radius: 4px; }
+.community label[for="show-ours"] span:last-child { white-space: nowrap; }
+main:has(#show-ours:checked) .community label[for="show-ours"] .avatar { box-shadow: 0 0 0 2px var(--link); }
