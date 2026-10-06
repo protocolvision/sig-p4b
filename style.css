@@ -434,5 +434,6 @@ li.ours .feed-title a { font-weight: 600; }
 
 /* "This group" in the Community row: our favicon; clicking it shows only our posts. */
 .avatar.logo img { width: 24px; height: 24px; border-radius: 4px; }
+.avatar.sm.logo img { width: 15px; height: 15px; border-radius: 3px; }
 .community label[for="show-ours"] span:last-child { white-space: nowrap; }
 main:has(#show-ours:checked) .community label[for="show-ours"] .avatar { box-shadow: 0 0 0 2px var(--link); }

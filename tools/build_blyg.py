@@ -629,7 +629,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
         if d["version"] > 1:
             label += f' · v{d["version"]}'
         href = f'{"t" if d["kind"] == "thread" else "f"}/{d["id"]}/'
-        entries.append((shown, "ours", f'<div class="feed-meta"><time datetime="{shown[:10]}">{day(shown)}</time> · {label}'
+        entries.append((shown, "ours", f'<div class="feed-meta">{OUR_MARK}<time datetime="{shown[:10]}">{day(shown)}</time> · {label}'
             f'{responses_here(by_target.get(d["id"], []))}</div>\n'
             f'<p class="feed-title"><a href="{href}">{html.escape(title_of(d, d["kind"]))}</a></p>\n'
             f'<p class="feed-preview">{html.escape(summary(d["content_html"], 200))}</p>'))
@@ -675,7 +675,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
     if community:
         intro += ('<h2 class="feed-h">Community</h2>\n<ul class="community">\n'
                   '  <li><label for="show-ours" title="Show only Protocols for Business posts"><span class="avatar lg logo">'
-                  '<img src="../favicon.svg" alt="" width="24" height="24"></span><span>This group</span></label></li>\n' + "\n".join(
+                  '<img class="mark" src="../favicon.svg" alt="" width="24" height="24"></span><span>This group</span></label></li>\n' + "\n".join(
             f'  <li><a href="{html.escape(c["site"], quote=True)}" title="{html.escape(c["title"], quote=True)}">'
             f'{avatar_html(c, "lg")}<span>{html.escape(c["short"])}</span></a></li>' for c in community) + "\n</ul>\n")
     # Everyone: the latest FEED_SHOWN posts. Ours only: every post of ours. A CSS-only toggle (style.css, :has()).
@@ -696,6 +696,9 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
     (OUT / "index.html").write_text(page(
         {"title": "Feed · Protocols for Business", "desc": "Session notes, the research log and updates from Protocols for Business, "
          "with new posts from members' own blygs and blogs.", "path": "blyg/", "nav": "feed", "card": "blyg", "head": head}, intro))
+
+OUR_MARK = ('<span class="avatar sm logo"><img class="mark" src="../favicon.svg" alt="Protocols for Business" '
+            'title="Protocols for Business" width="16" height="16"></span>')   # class "mark": the image viewer skips it
 
 def avatar_html(c, size):
     return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm", hue=c.get("hue"))}</span>'
