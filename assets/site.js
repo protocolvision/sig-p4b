@@ -77,6 +77,17 @@
       }).catch(function () {});
   }
 
+  /* Copy buttons in the blyg's Follow / Join the conversation panels (hidden without JavaScript). */
+  document.querySelectorAll('button[data-copy]').forEach(function (b) {
+    if (!navigator.clipboard) return;
+    b.hidden = false;
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(b.getAttribute('data-copy')).then(function () {
+        var was = b.textContent; b.textContent = 'Copied'; setTimeout(function () { b.textContent = was; }, 1500);
+      }).catch(function () {});
+    });
+  });
+
   /* Short forms that go to the group's Discord channel: offer a talk ([data-talk]) and request advisory
      services ([data-advisory]). Both reuse the register dialog's look; the worker posts them and stores nothing. */
   var BASE = SIGNUP.replace(/\/signup$/, '');

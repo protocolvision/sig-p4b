@@ -608,7 +608,7 @@ def responses_here(ms):
 
 def write_pages(ordered, stems, community, mentions, posts, ohash):
     sys.path.insert(0, str(ROOT / "tools"))
-    from build_site import page
+    from build_site import page, DISCORD
     alt = ('<link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">\n'
            f'<link rel="webmention" href="{ORIGIN}webmention">\n')
     def date(iso): return datetime.fromisoformat(iso.replace("Z", "+00:00")).strftime("%-d %B %Y")
@@ -654,6 +654,7 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
             content = f'<h1>{html.escape(title_of(d, kind))}</h1>\n' + content
         body = (f'<p class="meta"><a href="../../">Feed</a> · {kind.lower()} · version {d["version"]} · '
                 f'updated {date(d["updated"])}</p>\n{stub_line(d)}<article class="blyg-item">\n{content}\n</article>\n'
+                f'{engage_html("../../../", DISCORD, d)}'
                 f'<section class="responses" data-responses="{d["id"]}" hidden><h2>Responses</h2><ul></ul></section>\n'
                 f'<p class="small muted">Machine-readable: <a href="../../items/{d["id"]}.json">item JSON</a> · '
                 f'changelog {len(d["changelog"])} version{"s" if len(d["changelog"]) != 1 else ""}</p>')
@@ -667,13 +668,14 @@ def write_pages(ordered, stems, community, mentions, posts, ohash):
             {"title": f"{title_of(d, kind)} · Protocols for Business blyg", "desc": summary(d["content_html"]), "path": path, "nav": "feed",
              "card_url": card_url, "og_type": "article",
              "og_extra": [("article:published_time", d["created"]), ("article:modified_time", d["updated"]), ("article:author", author)],
-             "posting": {"datePublished": d["created"], "dateModified": d["updated"], "image": card_url,
+             "posting": {"datePublished": d["created"], "dateModified": d["updated"], "image": card_url, "discussionUrl": DISCORD,
                          "author": {"@type": "Organization" if author == "Protocols for Business" else "Person", "name": author}},
              "head": alt.format(rel="../../../") + f'<link rel="alternate" type="application/json" href="../../items/{d["id"]}.json">\n'}, body))
     intro = (f'<h1>Feed</h1>\n<p class="lede">Session notes, the research log and updates from Protocols for Business, '
              f'with new posts from members\' own blygs and blogs. Our posts are versioned: edits show up as new versions, not new posts.</p>\n'
-             f'<p class="feed-cta"><button type="button" class="btn" data-listing>Add your blyg or blog</button> '
-             f'<span class="small muted">Write a <a href="https://blygger.org/">blyg</a>, or a blog with an RSS feed? Ask to join the community below.</span></p>\n')
+             + engage_html("../", DISCORD, extra='<button type="button" class="eng-btn" data-listing>'
+                           '<svg class="eng-icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M8 3v10M3 8h10" '
+                           'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Add your blyg or blog</button>'))
     if community:
         intro += ('<h2 class="feed-h">Community</h2>\n<div class="farm-wrap">' + terrarium(community) + '</div>\n'
                   '<p class="farm-caption small muted"><label for="show-ours" title="Show only Protocols for Business posts">'
@@ -764,7 +766,7 @@ def terrarium(community):
         d, samples, lens = loop(cx, cy, r.uniform(48, 80), r.uniform(28, 46))
         total = lens[-1]
         dur = total / r.uniform(9, 14)            # seconds a lap takes, at a slow crawl
-        begin = .4 + i * .5 + r.uniform(0, 1.2)
+        begin = -r.uniform(0, dur)                # already on its way at load, each at its own point of the loop
         mounds = []
         for q in range(r.randint(3, 4)):
             frac = (q + r.uniform(.15, .85)) / 4
@@ -775,7 +777,7 @@ def terrarium(community):
             side, off = r.choice([-1, 1]), r.uniform(9, 14)
             mx, my = samples[idx][0] - ty / norm * off * side, samples[idx][1] + tx / norm * off * side
             rx, ry, rot = r.uniform(5, 9), r.uniform(3.2, 5.5), r.uniform(0, 180)
-            t0, grow = begin + frac * dur, dur * r.uniform(2.5, 4)
+            t0, grow = (begin + frac * dur) % dur + .2, dur * r.uniform(2.5, 4)   # from its first pass after load
             mounds.append(
                 f'<g class="mound" transform="translate({f(mx)} {f(my)}) rotate({f(rot)})">'
                 f'<ellipse rx="0" ry="0"><animate attributeName="rx" values="0;{f(rx)}" begin="{f(t0)}s" dur="{f(grow)}s" fill="freeze"/>'
@@ -802,6 +804,44 @@ def terrarium(community):
             '</a>')
     out.append("</svg>")
     return "\n".join(out)
+
+RSS_ICON = ('<svg class="eng-icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="3.5" cy="12.5" r="1.6" fill="currentColor"/>'
+            '<path d="M2 7.2a6.8 6.8 0 0 1 6.8 6.8M2 2.6A11.4 11.4 0 0 1 13.4 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>')
+TALK_ICON = ('<svg class="eng-icon" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M2.5 3.5h11a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H7l-3.2 2.6V11.5H2.5a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1Z" '
+             'fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>')
+
+def engage_html(rel, discord, d=None, extra=""):
+    """Follow and Join the conversation: two disclosure buttons (no JavaScript needed; Copy buttons appear
+    with it). The text is written for people and for language models reading the page. On a post page
+    (d given) the panel carries the post's blyg ID, quote line and stub_of; on the Feed it is general."""
+    def copy(text, label="Copy"):
+        t = html.escape(text, quote=True)
+        return f'<code>{html.escape(text)}</code> <button type="button" class="copy" data-copy="{t}" hidden>{label}</button>'
+    follow = (f'<details class="engage" name="engage"><summary>{RSS_ICON}Follow</summary><div class="engage-panel">'
+              f'<p><strong>Follow this blyg.</strong> Paste the feed into any RSS reader, or the blyg\'s address into '
+              f'<a href="https://github.com/blygger/blygger-studio">Blygger Studio</a> or another blyg client:</p>'
+              f'<p class="eng-row">{copy(ORIGIN + "feed.xml")}</p><p class="eng-row">{copy(ORIGIN)}</p>'
+              f'<p>To follow every member too, import <a href="{rel}blyg/blogroll.opml">blogroll.opml</a>.</p></div></details>')
+    if d:
+        ref = json.dumps({"origin": ORIGIN, "id": d["id"], "version": d["version"]})
+        respond = (f'<li><strong>Respond from your own blyg.</strong> Quote this post in a thread, or publish a response to it '
+                   f'(in Blygger Studio: follow this blyg, then use Respond or Quote on this post). Your blyg sends a Webmention; '
+                   f'once it is verified, your post is listed under Responses here, usually within the hour.'
+                   f'<p class="eng-row"><span class="eng-k">Blyg ID</span> {copy(d["id"])}</p>'
+                   f'<p class="eng-row"><span class="eng-k">Quote line</span> {copy("![[" + d["id"] + "]]")}</p>'
+                   f'<p class="eng-row"><span class="eng-k">Respond to (stub_of)</span> {copy(ref)}</p>'
+                   f'<p class="eng-row"><span class="eng-k">Webmention endpoint</span> {copy(ORIGIN + "webmention")}</p></li>')
+    else:
+        respond = (f'<li><strong>Respond from your own blyg.</strong> Open a post and use Join the conversation there: it gives the '
+                   f'post\'s blyg ID and the lines to quote or respond to it. Your blyg sends a Webmention to '
+                   f'<code>{ORIGIN}webmention</code>; verified responses are listed under the post, usually within the hour.</li>')
+    talk = (f'<details class="engage" name="engage"><summary>{TALK_ICON}Join the conversation</summary><div class="engage-panel">'
+            f'<p>This is a feed, not a forum. Two ways to answer a post:</p><ul>'
+            f'<li><strong>Talk about it on Discord.</strong> The group meets in the Protocol Institute Discord, channel '
+            f'<strong>#protocols-for-business</strong>: <a href="{discord}">join the Discord</a>.</li>{respond}'
+            f'<li>No blyg yet? <a href="https://blygger.org/start/">Start one</a>, or use any blog with an RSS feed, then '
+            f'<a href="{rel}blyg/">ask to join the community</a> so your posts appear in the Feed.</li></ul></div></details>')
+    return f'<div class="engage-row">{follow}{talk}{extra}</div>\n'
 
 def avatar_html(c, size):
     return f'<span class="avatar {size}">{vehicle_svg(c["site"], small=size == "sm", hue=c.get("hue"))}</span>'

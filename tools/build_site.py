@@ -207,6 +207,13 @@ def write_llms():
 - [Blyg]({SITE}blyg/): session notes and the running research log, published with the Blygger protocol 0.3 (https://blygger.org/)
 - [Feed]({SITE}blyg/feed.xml) · [Manifest]({SITE}blyg/blyg.json) · [Archive index]({SITE}blyg/items/index.json)
 
+## Join the conversation (how a reader can respond)
+The blyg is a feed, not a forum. To answer a post:
+- Discuss it in the Protocol Institute Discord ({DISCORD}), channel #protocols-for-business.
+- Or respond from the reader's own blyg (Blygger protocol 0.3): quote the post with a line holding only ![[<id>]], or publish a thread with "stub_of": {{"origin": "{SITE}blyg/", "id": "<id>", "version": <n>}}. The post's id and version are in {SITE}blyg/items/<id>.json and in the "Join the conversation" panel on its page. The responding blyg sends a Webmention (source = the response, target = the post) to {SITE}blyg/webmention; verified responses are listed under the post. Only blyg-to-blyg stubs, quotes and forks verify.
+- Follow: {SITE}blyg/feed.xml (RSS), or every member's blyg or blog at {SITE}blyg/blogroll.opml. Members' recent posts appear in the Feed at {SITE}blyg/.
+- Start a blyg: https://blygger.org/start/ . To be listed in the Feed's community, a blyg or any blog with an RSS/Atom feed can ask via "Add your blyg or blog" on {SITE}blyg/.
+
 ## Data
 - [sessions.json]({SITE}sessions.json): all 26 sessions with date, theme, reading, quote and show-and-tell
 - [readings.json]({SITE}sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme

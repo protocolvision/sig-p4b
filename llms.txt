@@ -15,6 +15,13 @@
 - [Blyg](https://protocolsforbusiness.com/blyg/): session notes and the running research log, published with the Blygger protocol 0.3 (https://blygger.org/)
 - [Feed](https://protocolsforbusiness.com/blyg/feed.xml) · [Manifest](https://protocolsforbusiness.com/blyg/blyg.json) · [Archive index](https://protocolsforbusiness.com/blyg/items/index.json)
 
+## Join the conversation (how a reader can respond)
+The blyg is a feed, not a forum. To answer a post:
+- Discuss it in the Protocol Institute Discord (https://discord.gg/zNJdK7caj), channel #protocols-for-business.
+- Or respond from the reader's own blyg (Blygger protocol 0.3): quote the post with a line holding only ![[<id>]], or publish a thread with "stub_of": {"origin": "https://protocolsforbusiness.com/blyg/", "id": "<id>", "version": <n>}. The post's id and version are in https://protocolsforbusiness.com/blyg/items/<id>.json and in the "Join the conversation" panel on its page. The responding blyg sends a Webmention (source = the response, target = the post) to https://protocolsforbusiness.com/blyg/webmention; verified responses are listed under the post. Only blyg-to-blyg stubs, quotes and forks verify.
+- Follow: https://protocolsforbusiness.com/blyg/feed.xml (RSS), or every member's blyg or blog at https://protocolsforbusiness.com/blyg/blogroll.opml. Members' recent posts appear in the Feed at https://protocolsforbusiness.com/blyg/.
+- Start a blyg: https://blygger.org/start/ . To be listed in the Feed's community, a blyg or any blog with an RSS/Atom feed can ask via "Add your blyg or blog" on https://protocolsforbusiness.com/blyg/.
+
 ## Data
 - [sessions.json](https://protocolsforbusiness.com/sessions.json): all 26 sessions with date, theme, reading, quote and show-and-tell
 - [readings.json](https://protocolsforbusiness.com/sessions/map/readings.json): every reading on the map with its link, citation, area and syllabus theme

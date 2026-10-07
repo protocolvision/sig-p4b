@@ -479,3 +479,27 @@ svg.terra { display: block; width: 100%; min-width: 30rem; height: auto; font: 4
 .farm-caption label { cursor: pointer; color: var(--fg); }
 .farm-caption label:hover { color: var(--link); }
 main:has(#show-ours:checked) .farm-caption label { color: var(--link); font-weight: 600; }
+
+/* Follow / Join the conversation (tools/build_blyg.py engage_html): disclosure buttons whose panel
+   opens under the row; one open at a time (details name="engage"). */
+.engage-row { position: relative; display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 .75rem; }
+.engage > summary, .eng-btn { display: inline-flex; align-items: center; gap: .4rem; min-height: 40px; padding: 0 .9rem; border: 1px solid var(--rule);
+  border-radius: 8px; color: var(--fg); font-size: .92rem; cursor: pointer; list-style: none; user-select: none; }
+.engage > summary::-webkit-details-marker { display: none; }
+.engage > summary:hover, .eng-btn:hover { border-color: var(--muted); }
+.eng-btn { background: var(--bg); font: inherit; font-size: .92rem; }
+.eng-btn .eng-icon { color: var(--link); }
+.engage[open] > summary { background: var(--fill); border-color: var(--muted); }
+.engage .eng-icon { color: var(--link); }
+.engage-panel { position: absolute; left: 0; right: 0; top: calc(100% + .4rem); z-index: 5; padding: .9rem 1rem .4rem; background: var(--bg);
+  border: 1px solid var(--rule); border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,.08); font-size: .92rem; line-height: 1.5; }
+.engage-panel p { margin: 0 0 .6rem; }
+.engage-panel ul { margin: 0 0 .5rem; padding-left: 1.1rem; }
+.engage-panel li { margin: 0 0 .7rem; }
+.engage-panel .eng-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .5rem; margin: .35rem 0 0; }
+.engage-panel .eng-k { flex: 0 0 9.5rem; color: var(--muted); font-size: .85rem; }
+.engage-panel code { font-size: .8rem; background: var(--fill); padding: .1rem .35rem; border-radius: 4px; overflow-wrap: anywhere; }
+.engage-panel .copy { font: inherit; font-size: .8rem; padding: .05rem .5rem; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); color: var(--link); cursor: pointer; }
+.engage-panel .copy:hover { border-color: var(--link); }
+@media (max-width: 34rem) { .engage-panel .eng-k { flex-basis: 100%; } }
+.blyg-item + .engage-row { margin-top: 2rem; }
