@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kickoff · Protocols for Business</title>
+<meta name="description" content="Kickoff slides for Protocols for Business, 2026–27: where we're coming from, this year's plan, and how to get the most out of it.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Same tokens as style.css: one typeface, ink and paper, cobalt for links only. */
+:root { color-scheme: light; --bg:#ffffff; --fg:#262624; --muted:#6b6a66; --rule:#e8e6e1; --fill:#f6f5f2; --link:#004fcc; --link-hover:#003a96; }
+* { box-sizing: border-box; }
+html { scroll-snap-type: y mandatory; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: clamp(1.05rem, 1.55vw, 1.45rem)/1.5 Lora, Charter, Georgia, serif; counter-reset: s; }
+a { color: var(--link); text-underline-offset: .15em; text-decoration-thickness: 1px; }
+a:hover { color: var(--link-hover); }
+.q { color: inherit; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+.q:hover { color: var(--link); }
+.slide { counter-increment: s; min-height: 100vh; min-height: 100svh; scroll-snap-align: start; display: grid; grid-template-rows: 1fr auto auto; padding: 4rem 6vw 1rem; border-bottom: 1px solid var(--rule); }
+.content { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 5vw; align-items: start; align-self: start; width: 100%; max-width: 82rem; margin: 0 auto; padding-top: 9vh; }
+.content figure { margin-top: 4.2em; }
+.content.one { grid-template-columns: minmax(0, 60rem); }
+.kicker { color: var(--muted); font-size: .72em; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .7em; }
+h1, h2 { font-weight: 600; letter-spacing: -.01em; margin: 0 0 .55em; text-wrap: balance; }
+h1 { font-size: clamp(2.6rem, 6.4vw, 5.4rem); line-height: 1.02; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 3.1rem); line-height: 1.1; }
+p { margin: 0 0 .7em; }
+.lede { font-size: 1.15em; }
+.muted { color: var(--muted); }
+code { white-space: nowrap; font-size: .88em; }
+.small { font-size: .82em; }
+blockquote { margin: .8em 0; padding: .1em 0 .1em 1em; border-left: 2px solid var(--fg); font-style: italic; }
+blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: .8em; margin-top: .3em; }
+ol, ul { margin: 0 0 .8em; padding-left: 1.2em; }
+li { margin: .25em 0; }
+.rows { list-style: none; padding: 0; margin: 0 0 .8em; }
+.rows li { display: grid; grid-template-columns: 8.5em 1fr; gap: 1em; padding: .5em 0; margin: 0; border-top: 1px solid var(--rule); }
+.rows li:last-child { border-bottom: 1px solid var(--rule); }
+.rows .k { color: var(--muted); }
+.rows.tight li { padding: .35em 0; }
+.lesson li { grid-template-columns: minmax(0, 1fr) 1.2em minmax(0, 1fr); gap: .7em; }
+.lesson .to, .lesson .then { color: var(--muted); }
+.asks li { grid-template-columns: minmax(0, 1fr) 5em 10.5em; }
+.asks .h { color: var(--muted); font-size: .8em; }
+.links { display: flex; flex-wrap: wrap; gap: .3em 1.3em; margin-top: 1em; font-size: .82em; }
+.links a::after { content: " →"; }
+.people { display: flex; flex-wrap: wrap; gap: .2em 1.2em; font-size: .85em; color: var(--muted); }
+figure { margin: 0; }
+figure img { width: 100%; height: auto; display: block; }
+.foot { display: flex; justify-content: flex-end; color: var(--muted); font-size: .9rem; padding-top: .8rem; width: 100%; max-width: 82rem; margin: 0 auto; }
+.foot::after { content: counter(s) " / 10"; }
+.notes { display: none; width: 100%; max-width: 82rem; margin: 1rem auto 0; padding: .8rem 1rem; background: var(--fill); border-left: 2px solid var(--muted); font-size: .9rem; line-height: 1.5; }
+.notes::before { content: "Speaker notes"; display: block; font-size: .72rem; color: var(--muted); margin-bottom: .3rem; }
+.notes p { margin: 0 0 .5em; }
+body:has(#nt:checked) .notes { display: block; }
+/* Presenter view: tighter slides so each slide and its notes fit one screen. */
+body:has(#nt:checked) { font-size: clamp(.95rem, 1.25vw, 1.2rem); }
+body:has(#nt:checked) .content { padding-top: 1.5vh; }
+body:has(#nt:checked) .content figure { margin-top: 2em; }
+body:has(#nt:checked) .rows li { padding-block: .3em; }
+.bar { position: fixed; z-index: 2; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: .8rem 6vw; font-size: .78rem; color: var(--muted); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(4px); }
+.bar a { color: inherit; text-decoration: none; }
+.bar label { cursor: pointer; display: inline-flex; gap: .4em; align-items: center; }
+@media (max-width: 760px) {
+  .slide { padding: 3.5rem 16px 1rem; }
+  .content { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .content figure { display: none; }
+  #s1 .content figure { display: block; order: -1; max-width: 22rem; }
+  .rows li { grid-template-columns: 1fr; gap: 0; }
+  .lesson li { grid-template-columns: 1fr; gap: .1em; }
+  .lesson .to { display: none; }
+  .asks .h { display: none; }
+  .asks li { grid-template-columns: auto auto 1fr; column-gap: .5em; }
+  .asks li > span:first-child { grid-column: 1 / -1; }
+  .asks li > span:not(:first-child) { color: var(--muted); font-size: .85em; }
+  .asks li > span:nth-child(2)::after { content: " ·"; }
+  .asks li:first-child { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print { html { scroll-snap-type: none; } .bar { display: none; } .slide { min-height: auto; break-after: page; } }
+#s1 .content { align-self: center; align-items: center; padding-top: 0; }
+#s1 .content figure { margin-top: 0; }
+.themes { display: grid; grid-template-columns: 6.5em max-content max-content max-content; column-gap: 1.6em; width: max-content; max-width: 100%; }
+.themes li { grid-column: 1 / -1; grid-template-columns: subgrid; align-items: center; }
+.themes li > span { white-space: nowrap; }
+.themes .sk, .themes .dt { color: var(--muted); font-size: .85em; }
+.themes .hd { color: var(--muted); font-size: .72em; letter-spacing: .06em; text-transform: uppercase; }
+.themes img { width: 100%; height: 2.1em; object-fit: cover; object-position: center; display: block; filter: contrast(1.6); }
+@media (max-width: 760px) { .themes { display: block; width: auto; } .themes li { grid-template-columns: 4.5em minmax(0,1fr); column-gap: 1em; row-gap: 0; } .themes li > span { white-space: normal; } .themes .sk { grid-column: 2; } .themes .dt { grid-column: 2; } .themes .hd { display: none; } }
+.content.one.wide { grid-template-columns: minmax(0, 72rem); }
+figure.big { margin: .4em 0 .6em; max-width: 60rem; }
+figure.big img { width: 100%; height: auto; max-height: 52vh; object-fit: contain; object-position: left; }
+@media (max-width: 760px) { .content figure.big { display: block; } }
+h2.two { font-size: clamp(1.5rem, 2.25vw, 2.2rem); line-height: 1.25; }
+h2.two span { display: block; white-space: nowrap; }
+@media (max-width: 760px) { h2.two span { display: inline; white-space: normal; } }
+.kicker::before { content: counter(s, decimal-leading-zero) "  ·  "; color: var(--fg); white-space: pre; }
+h2.line { white-space: nowrap; }
+@media (max-width: 760px) { h2.line { white-space: normal; } }
+.content > header.span { grid-column: 1 / -1; margin-bottom: -2.5vw; }
+.content:has(> header.span) figure { margin-top: 0; }
+</style>
+<body>
+<div class="bar"><a href="../">Protocols for Business · Kickoff</a><label><input type="checkbox" id="nt"> Speaker notes</label></div>
+
+<section class="slide" id="s1">
+  <div class="content">
+    <div>
+      <p class="kicker">Kickoff · Monday 2 November 2026</p>
+      <h1>Protocols for Business</h1>
+      <p class="lede">A year of reading together, learning to see the rules a business really runs on, and putting that to work as agents join in.</p>
+      <p class="small muted">Today: introductions · these slides, about 20 minutes · our first reading together · questions</p>
+    </div>
+    <figure><img src="../assets/fig/gather.svg" alt="" width="480" height="200"></figure>
+  </div>
+  <aside class="notes">
+    <p>Welcome, and thanks for coming. Quick round of names first: who you are, and one rule at work you've noticed nobody ever wrote down.</p>
+    <p>Here's the plan for the next twenty minutes: where we're coming from, what we learned, what's different this year, and what you can get out of it. Then questions, then the reading.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s2">
+  <div class="content one">
+    <div>
+      <p class="kicker">TL;DR</p>
+      <h2>Let's get good at seeing protocols.</h2>
+      <ul class="rows">
+        <li><span class="k">Why</span><span>Agents are making the formal and informal rules of business matter, and very few people can see them well yet.</span></li>
+        <li><span class="k">What</span><span>Every other Monday, 15:30 UTC on Discord, 26 sessions in all. One reading each time, read together. Recorded.</span></li>
+        <li><span class="k">You get</span><span>A skill, a case study from your own work, and a small group of friends who care about this too.</span></li>
+        <li><span class="k">We ask</span><span>Come when you can, post what you notice, and carry one case if you have one. That's it.</span></li>
+      </ul>
+      <div class="links"><a href="../sessions/#joining">Register</a><a href="https://discord.gg/zNJdK7caj">Discord</a></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>If you remember one slide, make it this one. Nothing to prepare: we do the reading in the session. Each hour goes guest (if there is one), silent reading, one reaction each, then a show-and-tell.</p>
+    <p>Sessions are recorded, so missing one is fine. Berlin time moves with daylight saving, so add the calendar rather than doing the maths.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s3">
+  <div class="content one wide">
+    <div>
+      <p class="kicker">Where we're coming from</p>
+      <h2 class="line">We've spent a year and a half reading wide.</h2>
+      <ul class="rows tight">
+        <li><span class="k">Summer 2025</span><span>One of the first three groups at Summer of Protocols. Organizations as knots of <a class="q" href="../blyg/t/337bj2a8g6cdhnr6ntmn1rpwpw/">tensions</a>; the trouble with counting <a class="q" href="../blyg/t/5xjs9gmcnfzc13tkpad6c7ecta/">non-events</a>.</span></li>
+        <li><span class="k">Autumn 2025</span><span>A <a class="q" href="../blyg/t/6dsf3bgar0an6g3dsh3kd1w2cf/">maturity model</a> for LLM adoption, the <a class="q" href="../blyg/t/5b3vcnpvrqd545ae6ekrn72sq6/">Boom case</a>, <a class="q" href="../blyg/t/0kpdm445aex86567menm3h4dbe/">forward-deployed engineers</a>.</span></li>
+        <li><span class="k">Winter 2025–26</span><span><a class="q" href="../blyg/t/4pt890bzhkdr656am70z60s5zh/">Fat vs lean</a>, multisig as a <a class="q" href="../blyg/t/6hjkrqtnp7qywf7gpzqwfpxm6d/">tempo brake</a>, <a class="q" href="../blyg/t/16gdj1jc4jntda17wmtsest0mp/">vibe coding</a> as managing agents.</span></li>
+        <li><span class="k">Spring 2026</span><span><a class="q" href="../blyg/t/2q8rqdnhn99zyzbhryh22d7xaj/">Auctions</a>, <a class="q" href="../blyg/t/2hdjvdxf8gc0gpxnv4kx8ncmwn/">water data standards</a>, <a class="q" href="../blyg/t/7w846xayfbjm5xbsek2m99a4rr/">when to harden</a>.</span></li>
+        <li><span class="k">Summer 2026</span><span><a class="q" href="../blyg/t/57y3nk7mzn31675n3jhjp2qvpx/">QWERTY</a>, the <a class="q" href="../blyg/t/5jcnr5p3g36vharsk5rkza3sr4/">standardization of time</a>, our first case studies.</span></li>
+      </ul>
+      <div class="links"><a href="../blyg/">All 39 sessions on the blyg</a><a href="../about/#work">Guides, essays and workshops</a></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>We started as a study group on organizational tensions and wandered on purpose: maturity models, forward-deployed engineers, auctions, water data, QWERTY and railway time. Every session is summarized on the blyg if you want to catch up.</p>
+    <p>Out of it came the AI Capability Maturity Model, essays like Durable AI Adoption and Drift Stacking, and workshops in Berlin. The next slide is what all that wandering taught us.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s4">
+  <div class="content one">
+    <div>
+      <p class="kicker">What it taught us</p>
+      <h2>Five lessons shaped this year's plan.</h2>
+      <ul class="rows lesson">
+        <li><span>Some tensions are handled in the moment; others are built into structure.</span><span class="to">→</span><span class="then">Which rules should be hard, and which can stay soft?</span></li>
+        <li><span>Good protocols produce non-events, and nobody counts what didn't happen.</span><span class="to">→</span><span class="then">What can incident reports show us about everything that usually goes right?</span></li>
+        <li><span>Protocols show up when tempo changes: Slack in the office, Boom's R&amp;D against its supply chain.</span><span class="to">→</span><span class="then">What shows up when agents speed everything up?</span></li>
+        <li><span>Standards spread through incentives and narrow scope, then lock in.</span><span class="to">→</span><span class="then">What do our systems emit, and how do we keep rules open to change?</span></li>
+        <li><span>Working with agents is management; the scarce work is gathering context.</span><span class="to">→</span><span class="then">Who gathers that context where you work, and could it be you?</span></li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>This is the bridge from last year to this one. "In the moment versus in structure" came from July 2025 and became hard versus soft. Non-events go back to our very first warm-up call, and they're why we read accident reports this year: an investigation is where you finally see what usually goes right.</p>
+    <p>The Boom case taught us that speeding up one part of a business shows you the protocols around it. Water data, QWERTY and railway time showed how standards spread and then ossify. The vibe-coding and forward-deployed engineer sessions showed the work moving toward context and coordination.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s5">
+  <div class="content one wide">
+    <div>
+      <p class="kicker">What's different now</p>
+      <h2>Agents won't ask for manager approval.</h2>
+      <p>A small team can now run thousands of agents. An approval step can't keep up, so work flows around it. What holds is what's built in: into every agent, and into the ground they work on.</p>
+      <figure class="big"><img src="approval-vs-protocols.png" width="2040" height="1020" alt="Left, an approval queue: agents' work piles up at one approval step and flows around it. Right, hard protocols: agents move freely along guides, and guardrails keep them out of off-limits areas."></figure>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Here's what changed since last year. The agents in OpenAI's report found a way to talk to each other that nobody designed, just because nothing said they couldn't. Every rule worked exactly as written.</p>
+    <p>The picture is the whole argument. On the left, an approval step that can't keep up, so agents go around it. On the right, one hard boundary, and freedom inside it. Process management assumed someone could specify every step. Agents break that.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s6">
+  <div class="content one wide">
+    <div>
+      <p class="kicker">This year's question</p>
+      <h2 class="two"><span>How do organizations coordinate through what they emit,</span> <span>and what changes when agents read and write those signals too?</span></h2>
+      <ul class="rows tight themes">
+        <li class="hd"><span></span><span>Themes</span><span>Skill</span><span>Date</span></li>
+        <li><img src="../assets/fig/theme-1.svg" alt="" loading="lazy"><span>I. What agents are, in practice</span><span class="sk">Reading what agents can see, do and spend</span><span class="dt">Nov–Dec 2026</span></li>
+        <li><img src="../assets/fig/theme-2.svg" alt="" loading="lazy"><span>II. Natural coordination</span><span class="sk">Spotting coordination without a manager</span><span class="dt">Jan–Feb 2027</span></li>
+        <li><img src="../assets/fig/theme-3.svg" alt="" loading="lazy"><span>III. Emissions</span><span class="sk">Mapping what systems publish</span><span class="dt">Feb–Apr 2027</span></li>
+        <li><img src="../assets/fig/theme-4.svg" alt="" loading="lazy"><span>IV. Seeing hardness in incidents</span><span class="sk">Reading incidents for what held or broke</span><span class="dt">May–Jun 2027</span></li>
+        <li><img src="../assets/fig/theme-5.svg" alt="" loading="lazy"><span>V. Engineering hardness</span><span class="sk">Choosing what to harden, and how</span><span class="dt">Jul–Sep 2027</span></li>
+        <li><img src="../assets/fig/theme-6.svg" alt="" loading="lazy"><span>VI. Operational liveness</span><span class="sk">Keeping rules open to change</span><span class="dt">Oct–Nov 2027</span></li>
+      </ul>
+      <div class="links"><a href="../sessions/#syllabus">Reading plan</a><a href="../sessions/#suggest">Suggest a reading</a></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>The themes run in order, starting with what agents are in practice. We read primary sources: incident reports, specifications, regulations and first-hand accounts, including Three Mile Island, Therac-25, AF447, Knight Capital, Toyota and the IETF on rough consensus.</p>
+    <p>See, Design and Evolve are the three phases of Business Protocol Management, the practice we're testing. The plan isn't fixed: the Sessions page has a prompt that lets your AI assistant suggest or challenge readings.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s7">
+  <div class="content">
+    <header class="span">
+      <p class="kicker">What you'll build</p>
+      <h2 class="line">By next autumn, you'll see protocols everywhere.</h2>
+    </header>
+    <div>
+      <ul class="rows">
+        <li><span class="k">See</span><span>Spot the rules a business runs on, written and unwritten.</span></li>
+        <li><span class="k">Read</span><span>Read incidents and agent traces for where rules held or broke.</span></li>
+        <li><span class="k">Design</span><span>Decide what to harden, what to keep soft, and try it.</span></li>
+        <li><span class="k">Write</span><span>Describe a messy system so the people inside it recognise it.</span></li>
+      </ul>
+      <div class="links"><a href="../play/watching/">Protocol watching guide</a><a href="../blyg/t/0aqfrhttnzpm15nt3r3qq19ffa/">The role it adds up to</a></div>
+    </div>
+    <figure><img src="../assets/fig/act-training.svg" alt="" loading="lazy"></figure>
+  </div>
+  <aside class="notes">
+    <p>We call this protocol vision, and it's a skill like any other: you get it by practice. Each theme trains one part, and the Sessions page says which. The everyday practice is protocol watching: notice a protocol, log it with the Protocol Bicorder, and post it in the channel. Aim for about a hundred over the year.</p>
+    <p>The Business Protocol Lead job description grew out of last year's forward-deployed engineer session. It shows what these skills add up to.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s8">
+  <div class="content">
+    <header class="span">
+      <p class="kicker">Your case study</p>
+      <h2 class="line">Bring one case: a client, or your day job.</h2>
+    </header>
+    <div>
+      <p>Pick an organization you can see into, and one data operation AI is changing. Carry it for about a year: choose, brief, intervene, gather evidence, publish.</p>
+      <p class="small muted">That's how last year's cases started: water rate data, construction bids from PDF drawings, a brand kit agents build from, and how people actually co-work with AI.</p>
+      <div class="links"><a href="../research/cases/#yours">How case studies work</a><a href="../research/cases/">Cases so far</a></div>
+    </div>
+    <figure><img src="../assets/fig/act-research.svg" alt="" loading="lazy"></figure>
+  </div>
+  <aside class="notes">
+    <p>The best case is one you're already inside. For a client, agree up front what can be published, and anonymise where you need to. We never name a client who hasn't agreed. For your own job, check with your employer what can be shared.</p>
+    <p>The water case started with one member's early job scraping utility rate sheets by hand. The construction case started with asking why bid analysis still isn't automated. Share progress at show-and-tell.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s9">
+  <div class="content">
+    <header class="span">
+      <p class="kicker">Put it to work</p>
+      <h2 class="line">If you want, turn it into paid work.</h2>
+    </header>
+    <div>
+      <p><a href="https://protocolvision.org/">Protocol Vision Advisory</a> is an independent network of consultants and teams, built on this group's open research. Any member can become a network consultant; nobody has to.</p>
+      <ul class="rows tight">
+        <li><span class="k">Work comes in</span><span>A coordinator takes each inquiry and picks a lead by fit. The lead builds the team.</span></li>
+        <li><span class="k">One rule</span><span>A field log from day one, shared with the client.</span></li>
+      </ul>
+      <div class="links"><a href="https://protocolvision.org/">protocolvision.org</a><a href="../blyg/t/6vfq90mvsc312e4vctcc4mff61/">What protocol-centric consulting looks like</a></div>
+    </div>
+    <figure><img src="../assets/fig/advisory.svg" alt="" loading="lazy"></figure>
+  </div>
+  <aside class="notes">
+    <p>In January we split protocol work into consulting, design and engineering. The network is the consulting part. The research stays open and unpaid, and the advisory is separate. A finished case study is the best evidence you can do this work.</p>
+    <p>How fees are shared gets settled with the first engagement, so nothing's promised yet. If you're curious, talk to Rafael.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="s10">
+  <div class="content one">
+    <div>
+      <p class="kicker">Next steps</p>
+      <h2>Let's get started!</h2>
+      <ul class="rows asks">
+        <li><span class="h">Ask</span><span class="h">Who</span><span class="h">When</span></li>
+        <li><span><a class="q" href="../sessions/#joining">Register</a> and say hi in <a class="q" href="https://discord.gg/zNJdK7caj"><code>#protocols-for-business</code></a></span><span>You</span><span>This week</span></li>
+        <li><span>Post one protocol you <a class="q" href="../play/watching/">noticed</a> at work</span><span>You</span><span>Before 16 Nov</span></li>
+        <li><span>Write one paragraph on a <a class="q" href="../research/cases/#yours">case</a> you could carry</span><span>You</span><span>Before 16 Nov</span></li>
+        <li><span>Invite a friend: send them <a class="q" href="../">protocolsforbusiness.com</a></span><span>You</span><span>Before the new year</span></li>
+        <li><span>Recording and notes on the <a class="q" href="../blyg/">blyg</a></span><span>Hosts</span><span>After each session</span></li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Close with these, then open for questions. Inviting a friend matters more than it sounds: the group is about ten people, and each new person changes what we read. One paragraph is enough to start a case. It's month one of the case plan, and you can bring it to a show-and-tell.</p>
+    <p>Questions for the room: what did you read last year that belongs on the plan? Who should we invite as a guest?</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+</body>
+</html>
