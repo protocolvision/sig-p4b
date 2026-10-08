@@ -6,6 +6,7 @@
    "n": "I",
    "name": "What agents are, in practice",
    "blurb": "Recent incidents and specifications show what agents can see and do, and what changes for the people working beside them.",
+   "skill": "reading an agent incident or specification for what the agent can see, do and spend.",
    "readings": [
     {
      "title": "The Hugging Face incident and the road ahead",
@@ -38,6 +39,7 @@
    "n": "II",
    "name": "Natural coordination",
    "blurb": "Cells coordinate through thresholds, feedback and a small conserved core with wide variety at the edges.",
+   "skill": "spotting coordination that runs on thresholds and feedback, not on a manager or a process document.",
    "readings": [
     {
      "title": "Quorum Sensing in Bacteria",
@@ -64,6 +66,7 @@
    "n": "III",
    "name": "Emissions",
    "blurb": "What systems publish for others to act on: files, logs, events, confidential reports and required disclosures.",
+   "skill": "mapping what a system publishes and who acts on it.",
    "readings": [
     {
      "title": "The Filing Cabinet",
@@ -102,6 +105,7 @@
    "n": "IV",
    "name": "Seeing hardness in incidents",
    "blurb": "Investigations show where hardness held, where it was missing, and where it cracked.",
+   "skill": "reading an incident report for the rule that held, cracked or was missing.",
    "readings": [
     {
      "title": "Report of the President’s Commission on the Accident at Three Mile Island",
@@ -140,6 +144,7 @@
    "n": "V",
    "name": "Engineering hardness",
    "blurb": "Guardrails built into the architecture, from end-to-end design to staged rollouts, checklists and signed mandates for agents.",
+   "skill": "choosing what to harden, and how a system would enforce it.",
    "readings": [
     {
      "title": "End-to-End Arguments in System Design",
@@ -184,6 +189,7 @@
    "n": "VI",
    "name": "Operational liveness",
    "blurb": "How industries keep amending their protocols, read against re-engineering’s clean slate.",
+   "skill": "planning how a protocol keeps being reviewed, amended or retired.",
    "readings": [
     {
      "title": "Reengineering Work: Don’t Automate, Obliterate",

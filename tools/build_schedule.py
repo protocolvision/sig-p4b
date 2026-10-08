@@ -87,7 +87,9 @@ for i, t in enumerate(T["themes"], 1):
                     + (f'<br><span class="muted">Alongside: <a href="{ea(also["url"])}">{e(also["title"])}</a>, {e(also["cite"])}</span>' if also else "")
                     + f'</span><span class="ft">{feature_html(s)}</span></li>')
     out.append(f'<li id="theme-{t["n"].lower()}"><img class="fig-theme" src="../assets/fig/theme-{i}.svg" alt="" width="640" height="120" loading="lazy"><h3><span class="n">{e(t["n"])}.</span>{e(t["name"])}</h3>'
-               f'<p>{e(t["blurb"])}</p><p class="meta">{meta}</p>'
+               f'<p>{e(t["blurb"])}</p>'
+               + (f'<p class="small"><span class="muted">You’ll practise</span> {e(t["skill"])}</p>' if t.get("skill") else "")
+               + f'<p class="meta">{meta}</p>'
                f'<details><summary>Readings and sessions</summary><ol class="sessions">{"".join(rows)}</ol></details></li>')
 out.append("</ol>")
 out.append('<p><a href="map/">Explore every reading on the map</a></p>')
