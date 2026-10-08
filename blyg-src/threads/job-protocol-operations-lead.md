@@ -1,6 +1,6 @@
 ---
 id: 0aqfrhttnzpm15nt3r3qq19ffa
-author: Rafael Fernández
+author: Protocols for Business
 generated_model: claude-opus-5-5
 ---
 # A job description for the person who runs your protocols
@@ -25,6 +25,7 @@ The title and the word "protocols" are ours. If your company already calls this 
 
 ---
 
+::: generated
 ## Protocol Operations Lead
 
 [Company] · [Location] · Reports to the Chief Operations Officer
@@ -75,3 +76,4 @@ You will own how those rules are built into our systems, monitored and changed. 
 - Compensation: [salary range and benefits]
 - Hiring process: [stages]
 - [Equal opportunity statement]
+:::
