@@ -436,18 +436,24 @@ function render(t) {
 // ---------- the score: a recorded track (kickoff-score.m4a, 90 s), kept in step with the film ----------
 // While sound is on, the film follows the audio clock, so picture and sound can't drift apart.
 const audio = (() => {
-  const el = document.createElement('audio'); el.preload = 'auto';
-  [['kickoff-score.m4a', 'audio/mp4'], ['kickoff-score.mp3', 'audio/mpeg']].forEach(([src, type]) => { const s = document.createElement('source'); s.src = src; s.type = type; el.appendChild(s); });
-  document.body.appendChild(el);
-  let on = false, lastFix = 0;
-  const sync = (T, playing) => { if (!on) { el.pause(); return; } try { el.currentTime = T; } catch (e) {} if (playing) el.play().catch(() => {}); else el.pause(); };
+  // The whole track (about 1.8 MB) is fetched once, the first time sound is turned on, so it can seek anywhere on any host.
+  const el = document.createElement('audio'); el.preload = 'auto'; document.body.appendChild(el);
+  let on = false, lastFix = 0, loading = null;
+  const load = () => loading || (loading = (async () => {
+    for (const [src, type] of [['kickoff-score.m4a', 'audio/mp4'], ['kickoff-score.mp3', 'audio/mpeg']]) {
+      if (!el.canPlayType(type)) continue;
+      try { const r = await fetch(src); if (!r.ok) continue; el.src = URL.createObjectURL(await r.blob()); await new Promise((ok, no) => { el.oncanplay = ok; el.onerror = no; }); return true; } catch (e) {}
+    }
+    return false;
+  })());
+  const sync = (T, playing) => { if (!on) { el.pause(); return; } load().then((ok) => { if (!ok || !on) return; try { el.currentTime = T; } catch (e) {} if (playing) el.play().catch(() => {}); else el.pause(); }); };
   return {
     get on() { return on; },
-    toggle(T, playing) { on = !on; sync(T, playing); return on; },
+    toggle(T0, playing0) { on = !on; if (on) load().then(() => sync(T, playing)); else el.pause(); return on; },
     restart(T, playing) { sync(T, playing); },
     stop() { el.pause(); },
     clock(T) {   // the film's time while the track is playing; if the track can't seek to where the film is, the film keeps its own time and asks again
-      if (!on || el.paused || el.readyState < 2 || el.seeking) return null;
+      if (!on || !el.src || el.paused || el.readyState < 2 || el.seeking) return null;
       if (Math.abs(el.currentTime - T) > .4) { const now = performance.now(); if (now - lastFix > 1000) { lastFix = now; try { el.currentTime = T; } catch (e) {} } return null; }
       return el.currentTime;
     },
