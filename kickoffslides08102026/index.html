@@ -283,6 +283,8 @@ h1, h2 { transition: font-size .3s ease; }
 .filmwrap .kicker { justify-self: start; }
 .filmbox { width: min(100%, calc((100svh - 3.5rem - 7.5rem - 46px) * 16 / 9)); container-type: inline-size; }
 iframe.film { display: block; border: 0; width: 100%; height: calc(100cqw * 9 / 16 + 46px); background: #f9f8f5; }
+.watch { display: none; margin-top: 1rem; text-decoration: none; }
+@media (max-width: 760px) { .watch { display: inline-block; } }
 </style>
 <body>
 <div class="bar">
@@ -321,6 +323,7 @@ iframe.film { display: block; border: 0; width: 100%; height: calc(100cqw * 9 / 
     <div>
       <p class="kicker">Discovering New Nature</p>
       <div class="filmbox"><iframe class="film" src="film.html?embed" title="Kickoff film: protocols, AI and the year ahead (about 90 seconds)" loading="lazy" allow="autoplay"></iframe></div>
+      <a class="btn primary watch" href="film.html">Watch the film full screen</a>
     </div>
   </div>
   <aside class="notes">
