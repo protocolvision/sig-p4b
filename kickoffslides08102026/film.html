@@ -70,7 +70,7 @@ const SC = [
   { id: 'groups',   t: 55.2, tag: 'Protocol Institute · Research groups', cap: 'Eight groups, each studying protocols from different perspectives.' },
   { id: 'gather',   t: 63.6, tag: 'Protocols for Business', cap: 'Join us to learn to see, design and evolve protocols.' },
   { id: 'themes',   t: 68.4, tag: 'Protocols for Business · 2026–27', cap: 'Six questions we’ll investigate together.', sub: '26 Mondays: read a source, compare notes, bring your own cases.' },
-  { id: 'end',      t: 82, tag: '', cap: '' },
+  { id: 'end',      t: 81.6, tag: '', cap: '' },
 ];
 const END = 90, MORPH = 3;
 
@@ -433,99 +433,25 @@ function render(t) {
 }
 
 
-// ---------- the score: synthesized in the browser, scheduled from film time so it follows pause, scrub and jumps ----------
+// ---------- the score: a recorded track (kickoff-score.m4a, 90 s), kept in step with the film ----------
+// While sound is on, the film follows the audio clock, so picture and sound can't drift apart.
 const audio = (() => {
-  const B = 60 / 84, BAR = 4 * B, mtof = (m) => 440 * Math.pow(2, (m - 69) / 12);
-  const at = (id) => SC.find((x) => x.id === id).t;
-  const tSnap = at('snap'), tOoze = at('ooze'), tTwin = at('twin'), tArch = at('archive'), tGroups = at('groups'), tGather = at('gather'), tThemes = at('themes'), tEnd = at('end');
-  // I – vi – IV – V in D major: D, Bm, G, A. Each chord as pitch classes (root first); every part plays only notes of the chord sounding.
-  const CH = [[2, 6, 9], [11, 2, 6], [7, 11, 2], [9, 1, 4]];
-  const chordAt = (t) => CH[Math.floor(Math.max(0, t) / BAR + 1e-6) % 4];
-  const tone = (pcs, target) => { let best = 0, bd = 99; for (let m = target - 7; m <= target + 7; m++) if (pcs.includes(((m % 12) + 12) % 12) && Math.abs(m - target) < bd) { best = m; bd = Math.abs(m - target); } return best; };
-  const voice = (pcs) => [tone([pcs[0]], 40), tone(pcs, 55), tone(pcs, 59), tone(pcs, 64)];   // bass, then a close triad around middle C
-  let h = 7; const hr = () => (h = (h * 16807) % 2147483647) / 2147483647;
-  const EV = [], add = (t, type, o = {}) => { if (t >= tEnd - .02 && !o.last && o.m != null) return; EV.push({ t, type, ...o }); };   // nothing from the last bar spills into the final chord
-  const padLevel = (t) => smooth(1.5, 6, t) * (t > tSnap + .5 && t < tOoze - .5 ? .35 : 1);
-  let lastTop = 74;
-  for (let k = 0; k * BAR < tEnd; k++) {
-    const t = k * BAR, pcs = CH[k % 4], v = voice(pcs);
-    v.forEach((m, i) => add(t, 'pad', { m, dur: BAR, g: (i ? .045 : .06) * padLevel(t) }));
-    if (t >= tArch) v.slice(1).forEach((m) => add(t, 'str', { m: m + 12, dur: BAR, g: .02 * smooth(tArch, tArch + 6, t) }));
-    // piano: chord tones in the octave above, moving to the nearest one so the line stays smooth
-    const line = (n, beatGap, g0) => { for (let i = 0; i < n; i++) { const target = lastTop + [0, -3, 2, -2][i % 4]; const m = tone(pcs, target); lastTop = m; add(t + i * beatGap * B, 'pno', { m, g: i ? g0 * .8 : g0 }); } };
-    if (t < tSnap) line(k % 2 ? 3 : 2, 1.5, .2);
-    else if (t >= tOoze && t < tTwin) line(1, 4, .14);
-    else if (t >= tTwin && t < tArch) { [0, 2].forEach((bt) => v.slice(1).forEach((m) => add(t + bt * B, 'pno', { m: m + 12, g: .08 }))); }
-    else if (t >= tArch && t < tGather) line(4, 1, .13);
-    else if (t >= tGather) line(4, 1, .17);
-    // the pulse: root and fifth of the chord; restless while AI oozes, in step once the rails harden
-    if ((t >= tOoze && t < tArch) || t >= tGather) for (let e = 0; e < 8; e++) {
-      const loose = t < tTwin; if (loose && hr() < .22) continue;
-      const tt = t + e * B / 2 + (loose ? (hr() - .5) * .04 : 0), m = tone([pcs[0]], 62) + (e % 2 ? 7 : 0);
-      add(tt, 'plk', { m, g: (t >= tGather ? .05 : .075) * (loose ? .75 + hr() * .4 : 1) });
-    }
-  }
-  // the break: a creak as it tautens, three fibres snap, a low D when it parts
-  add(tSnap + 1.1, 'creak', { dur: .75 });
-  [1.92, 2.32, 2.72].forEach((d, i) => add(tSnap + d, 'snap', { g: .5 + i * .15 }));
-  add(tSnap + 2.78, 'pno', { m: tone(chordAt(tSnap + 2.78).slice(0, 1), 38), g: .28 }); add(tSnap + 2.78, 'thump', {});
-  add(tTwin + .25, 'bell', { m: tone(chordAt(tTwin + .25), 86), g: .08 });
-  [0.6, 1.1, 1.5].forEach((d) => add(tArch + d, 'paper', {}));
-  for (let i = 0; i < 8; i++) { const tt = tGroups + .9 + i * .3; add(tt, 'tick', { m: tone(chordAt(tt), 79 + i * 2) }); }
-  { const tt = tGroups + 4.8; add(tt, 'bell', { m: tone(chordAt(tt), 81), g: .08 }); }   // Protocols for Business lights up
-  for (let c = 0; c < 6; c++) { const tt = tThemes + .9 + c * 1.5; add(tt, 'bell', { m: tone(chordAt(tt), 74 + c * 2), g: .065 }); }   // a rising chord tone for each theme
-  for (let m = 0; m < 3; m++) add(tThemes + 9.4 + m * .4, 'click', {});
-  for (let c = 0; c < 6; c++) add(tThemes + 10.05 + c * .35, 'tap', {});
-  // the resolution: a plain D major chord, held, then silence
-  [38, 50, 54, 57, 62].forEach((m) => add(tEnd, 'pad', { m, dur: 4.5, g: .05, last: true }));
-  [62, 66, 69, 74].forEach((m) => { add(tEnd, 'pno', { m, g: .12, last: true }); add(tEnd, 'str', { m: m + 12, dur: 4, g: .02, last: true }); });
-  EV.sort((a, b) => a.t - b.t);
-
-  let ctx = null, bus = null, verb = null, on = false, sched = 0, anchor = 0, base = 0, noiseBuf = null;
-  function graph() {
-    ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const comp = ctx.createDynamicsCompressor(); comp.threshold.value = -18; comp.ratio.value = 3; comp.connect(ctx.destination);
-    const master = ctx.createGain(); master.gain.value = .9; master.connect(comp);
-    verb = ctx.createConvolver(); const len = ctx.sampleRate * 2.6, ir = ctx.createBuffer(2, len, ctx.sampleRate);
-    for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.4); }
-    verb.buffer = ir; const wet = ctx.createGain(); wet.gain.value = .32; verb.connect(wet); wet.connect(master);
-    noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); const nd = noiseBuf.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
-    graph.master = master;
-  }
-  function newBus() { if (bus) { const old = bus; old.gain.setTargetAtTime(0, ctx.currentTime, .03); setTimeout(() => old.disconnect(), 300); } bus = ctx.createGain(); bus.gain.value = 1; bus.connect(graph.master); bus.connect(verb); }
-  const env = (g, t0, a, peak, d) => { g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(peak, t0 + a); g.gain.exponentialRampToValueAtTime(.0001, t0 + a + d); };
-  function osc(type, f, t0, t1, out, detune = 0) { const o = ctx.createOscillator(); o.type = type; o.frequency.value = f; o.detune.value = detune; o.connect(out); o.start(t0); o.stop(t1); return o; }
-  function play(ev, t0, cut = 0) {
-    const g = ctx.createGain(); g.connect(bus);
-    if (ev.type === 'pno') { const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1900; lp.connect(g); const f = mtof(ev.m); osc('sine', f, t0, t0 + 3.2, lp); const o2 = ctx.createGain(); o2.gain.value = .15; o2.connect(lp); osc('triangle', f * 2, t0, t0 + 3.2, o2); env(g, t0, .006, ev.g, 2.8); }
-    if (ev.type === 'pad' || ev.type === 'str') { const dur = ev.dur - cut, lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = ev.type === 'pad' ? 1100 : 1700; lp.connect(g); const f = mtof(ev.m), ty = ev.type === 'pad' ? 'triangle' : 'sawtooth';
-      const rel = ev.last ? 2.5 : .35, a = ev.last ? .3 : Math.min(.35, dur); osc(ty, f, t0, t0 + dur + rel + .1, lp, -4); osc(ty, f, t0, t0 + dur + rel + .1, lp, 4); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(ev.g, t0 + a); g.gain.setValueAtTime(ev.g, t0 + dur - .05); g.gain.linearRampToValueAtTime(0, t0 + dur + rel); }
-    if (ev.type === 'plk') { const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.setValueAtTime(2600, t0); lp.frequency.exponentialRampToValueAtTime(380, t0 + .16); lp.connect(g); osc('square', mtof(ev.m), t0, t0 + .4, lp); env(g, t0, .004, ev.g, .3); }
-    if (ev.type === 'bell') { [1, 2, 3].forEach((r, i) => { const gg = ctx.createGain(); gg.connect(g); osc('sine', mtof(ev.m) * r, t0, t0 + 3, gg); env(gg, t0, .003, ev.g / (i * 1.6 + 1), 2.4 / (i + 1)); }); g.gain.value = 1; }
-    if (ev.type === 'tick') { osc('sine', mtof(ev.m), t0, t0 + .3, g); env(g, t0, .002, .05, .18); }
-    const noise = (dur, type, f, peak, a = .004, q = 1) => { const src = ctx.createBufferSource(); src.buffer = noiseBuf; const bf = ctx.createBiquadFilter(); bf.type = type; bf.frequency.value = f; bf.Q.value = q; src.connect(bf); bf.connect(g); src.start(t0, Math.random() * .5, dur + .1); env(g, t0, a, peak, dur); return bf; };
-    if (ev.type === 'snap') { noise(.08, 'highpass', 2500, .35 * ev.g); const g2 = ctx.createGain(); g2.connect(bus); osc('sine', 140, t0, t0 + .2, g2); env(g2, t0, .002, .12 * ev.g, .12); }
-    if (ev.type === 'creak') { const bf = noise(ev.dur, 'bandpass', 300, .06, ev.dur * .6, 6); bf.frequency.setValueAtTime(220, t0); bf.frequency.linearRampToValueAtTime(520, t0 + ev.dur); }
-    if (ev.type === 'thump') { osc('sine', 62, t0, t0 + .8, g); env(g, t0, .005, .25, .6); }
-    if (ev.type === 'paper') noise(.22, 'bandpass', 3200, .045, .02, .8);
-    if (ev.type === 'click') noise(.03, 'highpass', 4000, .08);
-    if (ev.type === 'tap') { noise(.05, 'bandpass', 1800, .06, .002, 2); }
-  }
-  function start(T) { if (!ctx) graph(); if (ctx.state === 'suspended') ctx.resume(); newBus(); anchor = ctx.currentTime + .06; base = T; sched = T;
-    for (const ev of EV) { if ((ev.type === 'pad' || ev.type === 'str') && ev.t < T && ev.t + ev.dur > T + .3) play(ev, anchor, T - ev.t); } }
-  function stop() { if (ctx && bus) { const old = bus; old.gain.setTargetAtTime(0, ctx.currentTime, .04); setTimeout(() => old.disconnect(), 300); bus = null; } }
+  const el = document.createElement('audio'); el.preload = 'auto';
+  [['kickoff-score.m4a', 'audio/mp4'], ['kickoff-score.mp3', 'audio/mpeg']].forEach(([src, type]) => { const s = document.createElement('source'); s.src = src; s.type = type; el.appendChild(s); });
+  document.body.appendChild(el);
+  let on = false, lastFix = 0;
+  const sync = (T, playing) => { if (!on) { el.pause(); return; } try { el.currentTime = T; } catch (e) {} if (playing) el.play().catch(() => {}); else el.pause(); };
   return {
     get on() { return on; },
-    toggle(T, playing) { on = !on; if (on && playing) start(T); else stop(); return on; },
-    restart(T, playing) { if (on && playing) start(T); else stop(); },
-    stop,
-    tick(T) {   // schedule what falls in the next half second of film
-      if (!on || !bus) return;
-      const nowFilm = base + (ctx.currentTime - anchor); if (Math.abs(nowFilm - T) > .25) { start(T); return; }   // drifted (tab hidden, slow frame): resync
-      const to = T + .5;
-      for (const ev of EV) { if (ev.t >= sched && ev.t < to) play(ev, anchor + (ev.t - base)); }
-      sched = to;
+    toggle(T, playing) { on = !on; sync(T, playing); return on; },
+    restart(T, playing) { sync(T, playing); },
+    stop() { el.pause(); },
+    clock(T) {   // the film's time while the track is playing; if the track can't seek to where the film is, the film keeps its own time and asks again
+      if (!on || el.paused || el.readyState < 2 || el.seeking) return null;
+      if (Math.abs(el.currentTime - T) > .4) { const now = performance.now(); if (now - lastFix > 1000) { lastFix = now; try { el.currentTime = T; } catch (e) {} } return null; }
+      return el.currentTime;
     },
+    tick() {},
   };
 })();
 
@@ -542,7 +468,7 @@ const soundBtn = document.getElementById('sound');
 soundBtn.onclick = () => { const on = audio.toggle(T, playing); soundBtn.textContent = on ? 'Sound off' : 'Sound on'; soundBtn.setAttribute('aria-pressed', on); };
 scrub.oninput = () => { T = +scrub.value; render(T); audio.restart(T, playing); };
 addEventListener('keydown', (e) => { if (e.key === ' ' && e.target === document.body) { e.preventDefault(); playBtn.click(); } });
-function loop(now) { requestAnimationFrame(loop); if (playing && ready) { const dt = last ? Math.min(.05, (now - last) / 1000) : 0; last = now; T += dt; if (T > END) { T = 0; audio.restart(T, playing); } scrub.value = T; render(T); audio.tick(T); } }
+function loop(now) { requestAnimationFrame(loop); if (playing && ready) { const dt = last ? Math.min(.05, (now - last) / 1000) : 0; last = now; const ac = audio.clock(T + dt); T = ac != null ? ac : T + dt; if (T > END - .05) { T = 0; audio.restart(T, playing); } scrub.value = T; render(T); } }
 document.fonts.load('600 27px Lora').then(() => document.fonts.load('500 14px "JetBrains Mono"')).then(() => { ready = true; render(T); requestAnimationFrame(loop); window.__ready = true; });
 window.__seek = (t) => { T = t; playing = false; render(t); };
 // in the deck: the slide tells the film when it's on screen

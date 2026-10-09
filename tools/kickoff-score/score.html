@@ -1,0 +1,174 @@
+<!doctype html><meta charset="utf-8"><title>Kickoff score renderer</title>
+<script>
+// The kickoff film's score, rendered offline. 100 bpm in D major: every scene change in the film lands on a beat.
+// Arrangement follows the film; harmony is checked (chord tones on strong beats, diatonic passing tones on weak ones).
+const SR = 48000, LEN = 90, BPM = 100, BEAT = 60 / BPM, BAR = 4 * BEAT;
+const S = { lanes: 0, tangle: 7.2, snap: 13.2, ooze: 18, underway: 24, twin: 31.2, hard: 37.2, archive: 44.4, inst: 50.4, groups: 55.2, gather: 63.6, themes: 68.4, end: 81.6 };
+const mtof = (m) => 440 * Math.pow(2, (m - 69) / 12);
+const PC = { C: 0, 'C#': 1, D: 2, E: 4, F: 5, 'F#': 6, G: 7, A: 9, B: 11 };
+const SCALE = [2, 4, 6, 7, 9, 11, 1];   // D major
+// chords per bar (34 bars to the final chord, then the tail). Each: [name, bass pc, chord pcs]
+const C_ = (name, bass, pcs) => ({ name, bass, pcs });
+const D = C_('D', 2, [2, 6, 9]), Bm = C_('Bm', 11, [11, 2, 6]), G = C_('G', 7, [7, 11, 2]), A = C_('A', 9, [9, 1, 4]),
+  A_C = C_('A/C#', 1, [9, 1, 4]), D_F = C_('D/F#', 6, [2, 6, 9]), Em7 = C_('Em7', 4, [4, 7, 11, 2]), A7 = C_('A7', 9, [9, 1, 4, 7]), Gmaj7 = C_('Gmaj7', 7, [7, 11, 2, 6]);
+const PROG = [];
+const push = (...cs) => cs.forEach((c) => PROG.push(c));
+push(D, Bm, G, A, D, Bm);                    // bars 0–5   (0–14.4): traffic, the tangle
+push(Bm, Bm);                                // bars 6–7   (14.4–19.2): the break holds on the relative minor
+push(Bm, G, D, A, Bm, G);                    // bars 8–13  (19.2–33.6): AI finds the leaks, already under way
+push(D, A_C, Bm, G, D);                      // bars 14–18 (33.6–45.6): the evil twin, hardness
+push(Gmaj7, D_F, Em7, A, Gmaj7, D_F, Em7, A); // bars 19–26 (45.6–64.8): Summer of Protocols, the Institute, the groups
+push(D, Bm, G, A, D, Bm, G, A7);             // bars 27–34 (64.8–84): join us, the six questions, the cadence
+// bar 34 starts at 81.6 = the end card: resolve on D
+const chordAt = (t) => (t >= S.end - 1e-6 ? D : PROG[Math.min(PROG.length - 1, Math.floor(t / BAR + 1e-6))]);
+
+// ---- voicing: keep the upper voices as still as possible between chords (smooth voice leading) ----
+function voiceLead(prev, pcs, lo = 57, hi = 76) {
+  const cands = []; for (let m = lo; m <= hi; m++) if (pcs.includes(m % 12)) cands.push(m);
+  let best = null, bc = 1e9;
+  for (let i = 0; i < cands.length; i++) for (let j = i + 1; j < cands.length; j++) for (let k = j + 1; k < cands.length; k++) {
+    const v = [cands[i], cands[j], cands[k]], pcsIn = new Set(v.map((m) => m % 12));
+    if (pcsIn.size < Math.min(3, pcs.length)) continue;            // three different chord tones
+    if (v[2] - v[0] > 12) continue;                                  // close position
+    const cost = prev ? v.reduce((s, m, q) => s + Math.abs(m - prev[q]), 0) : Math.abs(v[1] - 60);
+    if (cost < bc) { bc = cost; best = v; }
+  }
+  return best;
+}
+const near = (pcs, target, lo = 0, hi = 127) => { let b = target, d = 99; for (let m = Math.max(lo, target - 8); m <= Math.min(hi, target + 8); m++) if (pcs.includes(((m % 12) + 12) % 12) && Math.abs(m - target) < d) { d = Math.abs(m - target); b = m; } return b; };
+const inScale = (m) => SCALE.includes(((m % 12) + 12) % 12);
+
+// ---- the arrangement: a list of note events ----
+const EV = []; const add = (t, inst, o) => { if (t < LEN) EV.push({ t, inst, ...o }); };
+const sec = (t) => (t < S.snap ? 'intro' : t < S.ooze ? 'break' : t < S.twin ? 'leak' : t < S.archive ? 'hard' : t < S.gather ? 'warm' : t < S.end ? 'join' : 'end');
+let prevV = null;
+for (let b = 0; b < PROG.length; b++) {
+  const t = b * BAR, ch = PROG[b], s = sec(t + .01); if (t >= S.end - 1e-6) break;
+  const v = voiceLead(prevV, ch.pcs); prevV = v;
+  // pad: the whole bar, voices close; quieter in the break and the intro's first bars
+  const padG = { intro: t < 4 ? .5 : .75, break: .32, leak: .7, hard: .8, warm: .85, join: .9 }[s];
+  v.forEach((m) => add(t, 'pad', { m, dur: BAR, g: padG }));
+  // bass: root (or the written bass note) on the downbeat; a second hit on beat 3 once the music moves
+  const bass = near([ch.bass], 45, 40, 52);
+  if (s !== 'intro' || b >= 2) add(t, 'bass', { m: bass, dur: s === 'break' ? BAR : 2 * BEAT, g: s === 'break' ? .35 : .8 });
+  if (['leak', 'hard', 'join'].includes(s)) add(t + 2 * BEAT, 'bass', { m: bass, dur: 2 * BEAT, g: .65 });
+  // strings from the warm section on
+  if (s === 'warm' || s === 'join') v.forEach((m) => add(t, 'str', { m: m + 12, dur: BAR, g: s === 'join' ? .8 : .6 }));
+  // pulse: chord tones in eighths; restless (some missing) while AI finds the leaks, steady once the rails harden
+  if (s === 'leak' || s === 'hard' || s === 'join') for (let e = 0; e < 8; e++) {
+    if (s === 'leak' && [3, 6].includes((e + b) % 8)) continue;
+    const m = near(ch.pcs, 62 + [0, 7, 4, 7][e % 4] * (e % 2 ? 1 : 0) + (e % 4 === 2 ? 5 : 0), 57, 74);
+    add(t + e * BEAT / 2, 'plk', { m, g: (e % 2 ? .55 : .8) * (s === 'join' ? .7 : 1), pan: e % 2 ? .35 : -.35 });
+  }
+}
+// ---- melody: phrases of two bars; chord tones on strong beats, stepwise passing tones between ----
+function melody(fromBar, toBar, shape, g, octave = 0) {
+  let last = 74 + octave;
+  for (let b = fromBar; b < toBar; b++) {
+    const t = b * BAR, ch = PROG[b], pat = shape[(b - fromBar) % shape.length];
+    pat.forEach(([beat, dir, len]) => {
+      const strong = beat % 2 === 0, target = last + dir;
+      let m = strong ? near(ch.pcs, target, 66 + octave, 86 + octave) : (() => { let x = target; while (!inScale(x)) x += dir >= 0 ? 1 : -1; return x; })();
+      add(t + beat * BEAT, 'pno', { m, dur: len * BEAT, g: g * (strong ? 1 : .8) }); last = m;
+    });
+  }
+}
+// intro: sparse, two notes a bar, a question
+melody(0, 5, [[[0, 0, 2], [2, -2, 2]], [[0, 2, 3], [3, -1, 1]]], .55);
+// leak: one note a bar over the pulse
+melody(8, 13, [[[0, 0, 4]], [[0, -3, 4]]], .45);
+// hard: firm repeated chords (handled as chord stabs)
+for (let b = 13; b < 19; b++) { const t = b * BAR; if (t < S.twin - .1 || t >= S.archive) continue; const v = voiceLead(null, PROG[b].pcs, 62, 79); [0, 2].forEach((bt) => v.forEach((m) => add(t + bt * BEAT, 'pno', { m, dur: BEAT, g: .3 }))); }
+// warm: an arpeggiated line
+melody(19, 27, [[[0, 0, 1], [1, 3, 1], [2, 2, 1], [3, -2, 1]], [[0, -3, 1], [1, 2, 1], [2, 2, 1], [3, -1, 1]]], .45);
+// join: the tune, in two-bar phrases ending on stable tones
+melody(27, 34, [[[0, 0, 1.5], [1.5, -1, .5], [2, -2, 1], [3, 2, 1]], [[0, 3, 2], [2, -2, 1], [3, -1, 1]]], .6);
+// ---- the final chord at 81.6: D major, held, bells on top ----
+[38, 57, 62, 66, 69].forEach((m) => add(S.end, m < 45 ? 'bass' : 'pad', { m: m < 45 ? 50 : m, dur: 6.5, g: .9, last: true }));
+[62, 66, 69, 74].forEach((m) => { add(S.end, 'pno', { m: m + 12, dur: 6, g: .45 }); add(S.end, 'str', { m: m + 12, dur: 6, g: .8, last: true }); });
+// ---- sound design, timed to the picture ----
+add(S.snap + 1.1, 'creak', { dur: .75 });
+[1.925, 2.325, 2.725].forEach((d, i) => add(S.snap + d, 'snap', { g: .7 + i * .15 }));
+add(S.snap + 2.76, 'thump', {});
+add(S.twin + .55, 'bell', { m: near(chordAt(S.twin + .55).pcs, 86), g: .5 });
+[0.7, 1.15, 1.55].forEach((d) => add(S.archive + d, 'paper', {}));
+add(S.groups + 5.2, 'bell', { m: near(chordAt(S.groups + 5.2).pcs, 81), g: .45 });
+for (let c = 0; c < 6; c++) { const tt = S.themes + 1.15 + c * 1.5; add(tt, 'bell', { m: near(chordAt(tt).pcs, 74 + c * 2), g: .38, pan: -.5 + c * .2 }); }
+for (let m = 0; m < 3; m++) add(S.themes + 9.55 + m * .4, 'click', { pan: -.3 + m * .3 });
+for (let c = 0; c < 6; c++) add(S.themes + 10.2 + c * .35, 'tap', { pan: -.5 + c * .2 });
+EV.sort((a, b) => a.t - b.t);
+
+// ---- harmony check: every pitched note on a strong beat (or held) is a chord tone; weak-beat melody notes are in the scale ----
+function checkHarmony() {
+  const bad = [];
+  for (const e of EV) {
+    if (e.m == null) continue;
+    const ch = chordAt(e.t + 1e-4), pc = ((e.m % 12) + 12) % 12, beatPos = Math.round(((e.t % BAR) / BEAT) * 2) / 2, strong = Number.isInteger(beatPos) && beatPos % 2 === 0;
+    if (e.inst === 'bass') { if (pc !== ch.bass && !ch.pcs.includes(pc)) bad.push([e.inst, e.t.toFixed(2), e.m, ch.name]); continue; }
+    if (e.inst === 'pno' && !strong) { if (!inScale(e.m)) bad.push([e.inst, e.t.toFixed(2), e.m, 'out of scale']); continue; }
+    if (!ch.pcs.includes(pc)) bad.push([e.inst, e.t.toFixed(2), e.m, ch.name]);
+  }
+  return bad;
+}
+
+// ---- synthesis ----
+async function render() {
+  const ctx = new OfflineAudioContext(2, SR * LEN, SR);
+  const master = ctx.createGain(); master.gain.value = .5;
+  const comp = ctx.createDynamicsCompressor(); comp.threshold.value = -20; comp.knee.value = 12; comp.ratio.value = 2; comp.attack.value = .02; comp.release.value = .25;
+  const mud = ctx.createBiquadFilter(); mud.type = 'peaking'; mud.frequency.value = 320; mud.Q.value = .9; mud.gain.value = -3;
+  const air = ctx.createBiquadFilter(); air.type = 'highshelf'; air.frequency.value = 5500; air.gain.value = 4;
+  const sub = ctx.createBiquadFilter(); sub.type = 'highpass'; sub.frequency.value = 35; sub.Q.value = .7;
+  master.connect(sub); sub.connect(mud); mud.connect(air); air.connect(comp); comp.connect(ctx.destination);
+  // reverb: a generated room with a short pre-delay and a smooth tail
+  const verb = ctx.createConvolver(), irLen = SR * 2.8, ir = ctx.createBuffer(2, irLen, SR); let seed = 3; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647 * 2 - 1;
+  for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < irLen; i++) { const tt = i / SR; d[i] = tt < .018 ? 0 : rnd() * Math.exp(-tt * 2.4) * (1 - Math.exp(-tt * 60)); } }
+  verb.buffer = ir; const verbHP = ctx.createBiquadFilter(); verbHP.type = 'highpass'; verbHP.frequency.value = 250; const verbOut = ctx.createGain(); verbOut.gain.value = .55;
+  verb.connect(verbHP); verbHP.connect(verbOut); verbOut.connect(master);
+  // instrument buses: each with its EQ, level and reverb send
+  const bus = (gain, hp, lp, send) => { const g = ctx.createGain(); g.gain.value = gain; let node = g; if (hp) { const f = ctx.createBiquadFilter(); f.type = 'highpass'; f.frequency.value = hp; f.Q.value = .7; node.connect(f); node = f; } if (lp) { const f = ctx.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = lp; f.Q.value = .7; node.connect(f); node = f; } node.connect(master); const s = ctx.createGain(); s.gain.value = send; node.connect(s); s.connect(verb); return g; };
+  const B = { pad: bus(.16, 240, 3400, .35), bass: bus(.36, 45, 700, .04), str: bus(.15, 260, 7000, .45), pno: bus(.5, 120, 9000, .28), plk: bus(.17, 260, 8000, .22), bell: bus(.22, 350, 12000, .5), sfx: bus(.5, 80, 14000, .15) };
+  const noiseBuf = ctx.createBuffer(1, SR * 2, SR); { const d = noiseBuf.getChannelData(0); let s2 = 9; for (let i = 0; i < d.length; i++) { s2 = (s2 * 16807) % 2147483647; d[i] = s2 / 2147483647 * 2 - 1; } }
+  const panner = (p, out) => { const n = ctx.createStereoPanner(); n.pan.value = p || 0; n.connect(out); return n; };
+  const osc = (type, f, t0, t1, out, det = 0) => { const o = ctx.createOscillator(); o.type = type; o.frequency.value = f; o.detune.value = det; o.connect(out); o.start(t0); o.stop(t1); return o; };
+  const adsr = (g, t0, a, peak, d, s, rel, t1) => { g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(peak, t0 + a); g.gain.setTargetAtTime(peak * s, t0 + a, d); g.gain.setValueAtTime(g.gain.value, t1); g.gain.setTargetAtTime(0, t1, rel / 4); };
+  for (const e of EV) {
+    const t0 = e.t;
+    if (e.inst === 'pno') {   // a soft piano: a few harmonics that decay at different rates, velocity sets brightness, a little hammer noise
+      const f = mtof(e.m), out = panner((e.m - 70) / 40, B.pno), vel = e.g, tone = ctx.createBiquadFilter(); tone.type = 'lowpass'; tone.frequency.value = 1600 + 5200 * vel; tone.connect(out);
+      const dec = Math.max(1.2, 4.2 - (e.m - 60) * .05), tEnd = t0 + Math.max(e.dur || 1, .2) + 1.6;
+      [[1, 1, 1], [2, .42, .7], [3, .2, .5], [4, .1, .35], [5, .05, .25]].forEach(([h, amp, dk]) => { const g = ctx.createGain(); g.connect(tone); osc('sine', f * h * (1 + .0004 * h * h), t0, tEnd + .5, g); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(amp * vel * .5, t0 + .004); g.gain.setTargetAtTime(0, t0 + .004, dec * dk / 3); g.gain.setTargetAtTime(0, tEnd, .08); });
+      const n = ctx.createBufferSource(); n.buffer = noiseBuf; const nf = ctx.createBiquadFilter(); nf.type = 'bandpass'; nf.frequency.value = f * 3; nf.Q.value = 1; const ng = ctx.createGain(); n.connect(nf); nf.connect(ng); ng.connect(out); ng.gain.setValueAtTime(.05 * vel, t0); ng.gain.exponentialRampToValueAtTime(.0001, t0 + .03); n.start(t0, (e.m * .013) % 1, .05);
+    }
+    if (e.inst === 'pad' || e.inst === 'str') {   // detuned voices spread across the stereo field, slow attack, cross-fade at the bar line
+      const f = mtof(e.m), dur = e.dur, rel = e.last ? 3 : .45, a = e.inst === 'pad' ? (e.last ? .3 : .35) : .5, t1 = t0 + dur - .02;
+      [[-7, -.5], [0, 0], [7, .5]].forEach(([det, pan]) => { const g = ctx.createGain(), lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = e.inst === 'pad' ? 2200 : 4200; g.connect(lp); lp.connect(panner(pan * (e.inst === 'pad' ? .7 : .5), B[e.inst]));
+        const o = osc(e.inst === 'pad' ? 'triangle' : 'sawtooth', f, t0, t1 + rel + .2, g, det); if (e.inst === 'str') { const lfo = ctx.createOscillator(), lg = ctx.createGain(); lfo.frequency.value = 5.2; lg.gain.value = 6; lfo.connect(lg); lg.connect(o.detune); lfo.start(t0); lfo.stop(t1 + rel + .2); }
+        adsr(g, t0, a, e.g * .33, 1, .85, rel, t1); });
+    }
+    if (e.inst === 'bass') { const f = mtof(e.m), g = ctx.createGain(); g.connect(B.bass); osc('sine', f, t0, t0 + e.dur + 1, g); const g2 = ctx.createGain(); g2.gain.value = .25; g2.connect(g); osc('triangle', f * 2, t0, t0 + e.dur + 1, g2); adsr(g, t0, .02, e.g * .6, .6, .7, e.last ? 2.5 : .25, t0 + e.dur - .03); }
+    if (e.inst === 'plk') { const f = mtof(e.m), out = panner(e.pan, B.plk), lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.Q.value = 2; lp.frequency.setValueAtTime(3200, t0); lp.frequency.exponentialRampToValueAtTime(500, t0 + .18); lp.connect(out); const g = ctx.createGain(); g.connect(lp); osc('triangle', f, t0, t0 + .6, g); osc('square', f * 2, t0, t0 + .6, (() => { const x = ctx.createGain(); x.gain.value = .12; x.connect(g); return x; })()); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(e.g * .35, t0 + .004); g.gain.setTargetAtTime(0, t0 + .004, .09); }
+    if (e.inst === 'bell') { const f = mtof(e.m), out = panner(e.pan || .2, B.bell); [[1, 1, 1.4], [2, .35, .7], [3, .15, .45], [4.01, .06, .3]].forEach(([h, amp, dk]) => { const g = ctx.createGain(); g.connect(out); osc('sine', f * h, t0, t0 + 4, g); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(amp * e.g, t0 + .003); g.gain.setTargetAtTime(0, t0 + .003, dk); }); }
+    const noise = (dur, type, f, q, peak, a, pan) => { const n = ctx.createBufferSource(); n.buffer = noiseBuf; const bf = ctx.createBiquadFilter(); bf.type = type; bf.frequency.value = f; bf.Q.value = q; const g = ctx.createGain(); n.connect(bf); bf.connect(g); g.connect(panner(pan || 0, B.sfx)); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(peak, t0 + a); g.gain.setTargetAtTime(0, t0 + a, dur / 3); n.start(t0, (t0 * .37) % 1.5, dur + .3); return bf; };
+    if (e.inst === 'creak') { const bf = noise(e.dur, 'bandpass', 260, 8, .35, e.dur * .7); bf.frequency.setValueAtTime(200, t0); bf.frequency.linearRampToValueAtTime(480, t0 + e.dur); }
+    if (e.inst === 'snap') { noise(.06, 'highpass', 2200, .7, .55 * e.g, .002, (e.g - .85) * 2); const g = ctx.createGain(); g.connect(B.sfx); osc('sine', 150, t0, t0 + .2, g); g.gain.setValueAtTime(.25 * e.g, t0); g.gain.setTargetAtTime(0, t0, .04); }
+    if (e.inst === 'thump') { const g = ctx.createGain(); g.connect(B.sfx); const o = osc('sine', 70, t0, t0 + 1, g); o.frequency.setValueAtTime(90, t0); o.frequency.exponentialRampToValueAtTime(48, t0 + .5); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(.5, t0 + .005); g.gain.setTargetAtTime(0, t0 + .005, .18); }
+    if (e.inst === 'paper') noise(.25, 'bandpass', 3400, .8, .16, .03, (t0 * 7 % 1) - .5);
+    if (e.inst === 'click') noise(.025, 'highpass', 5000, .7, .22, .001, e.pan);
+    if (e.inst === 'tap') noise(.05, 'bandpass', 1900, 2.5, .2, .002, e.pan);
+  }
+  // fade the tail
+  master.gain.setValueAtTime(.5, LEN - 2.2); master.gain.linearRampToValueAtTime(0, LEN - .1);
+  const buf = await ctx.startRendering();
+  // 16-bit WAV
+  const L = buf.getChannelData(0), R = buf.getChannelData(1), n = L.length, out = new DataView(new ArrayBuffer(44 + n * 4));
+  const str = (o, s2) => [...s2].forEach((c, i) => out.setUint8(o + i, c.charCodeAt(0)));
+  str(0, 'RIFF'); out.setUint32(4, 36 + n * 4, true); str(8, 'WAVE'); str(12, 'fmt '); out.setUint32(16, 16, true); out.setUint16(20, 1, true); out.setUint16(22, 2, true); out.setUint32(24, SR, true); out.setUint32(28, SR * 4, true); out.setUint16(32, 4, true); out.setUint16(34, 16, true); str(36, 'data'); out.setUint32(40, n * 4, true);
+  let peak = 0; for (let i = 0; i < n; i++) { const l = Math.max(-1, Math.min(1, L[i])), r = Math.max(-1, Math.min(1, R[i])); peak = Math.max(peak, Math.abs(L[i]), Math.abs(R[i])); out.setInt16(44 + i * 4, l * 32767, true); out.setInt16(46 + i * 4, r * 32767, true); }
+  window.__wav = new Uint8Array(out.buffer); window.__peak = peak;
+  return { peak, samples: n };
+}
+window.__harmony = checkHarmony();
+window.__events = EV.length;
+render().then((r) => { window.__done = r; });
+</script>
