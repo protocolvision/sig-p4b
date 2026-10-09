@@ -53,8 +53,11 @@ body.embed .bar { max-width: none; }
 .rotate button { font: 400 14px/1 "JetBrains Mono", monospace; background: none; border: 1px solid var(--faint); border-radius: 4px; padding: 8px 14px; color: var(--ink2); }
 .stage:fullscreen { width: 100vw; height: 100vh; max-width: none; aspect-ratio: auto; }
 @media (max-height: 520px) and (orientation: landscape) {   /* a phone held sideways: the film takes the screen */
-  body { padding: 4px 8px; gap: 4px; }
-  .stage { width: min(100%, calc((100vh - 40px) * 16 / 9)); }
+  html, body { height: 100vh; height: 100dvh; }   /* the visible height, not the area behind the browser bars */
+  body { padding: 4px max(8px, env(safe-area-inset-right)) 4px max(8px, env(safe-area-inset-left)); gap: 4px; }
+  .stage { width: min(100%, calc((100vh - 44px) * 16 / 9)); width: min(100%, calc((100dvh - 44px) * 16 / 9)); }
+  .bar { flex-wrap: nowrap; }
+  .bar input[type=range] { min-width: 60px; }
   .chapters { display: none; }
   .bar { gap: 8px; font-size: 12px; }
   .bar button { padding: 4px 8px; }
