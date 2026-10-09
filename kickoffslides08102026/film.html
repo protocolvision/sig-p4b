@@ -370,16 +370,34 @@ function decor(id, w, t, lt) {
     g.globalAlpha = w * reveal(2, lt); const [sx, sy] = cellC(2); g.fillStyle = rgba(C.ink); g.beginPath(); g.arc(sx, sy, 5, 0, TAU); g.fill(); }
   g.restore();
 }
-// things that sit on top of the strands: the essay pages
+// things that sit on top of the strands: the essay pages.
+// Each page (with its soft shadow) is drawn once into its own small canvas and then stamped every frame:
+// a live shadowBlur on six large pages is too slow on phones and made the film skip.
+const SHEET_PAD = 48; let sheetCache = null, sheetK = 0;
+document.fonts?.ready.then(() => { sheetCache = null; });
+function sheetSprites() {
+  if (sheetCache && sheetK === k) return sheetCache;
+  sheetK = k; const sc = Math.max(k, .5);
+  sheetCache = SHEETS.map((_, i) => {
+    const c = document.createElement('canvas'); c.width = Math.ceil((330 + 2 * SHEET_PAD) * sc); c.height = Math.ceil((420 + 2 * SHEET_PAD) * sc);
+    const x = c.getContext('2d'); x.scale(sc, sc); x.translate(165 + SHEET_PAD, 210 + SHEET_PAD);
+    x.shadowColor = 'rgba(44,44,42,.14)'; x.shadowBlur = 24 * sc; x.shadowOffsetY = 8 * sc; x.fillStyle = '#ffffff'; x.fillRect(-165, -210, 330, 420); x.shadowColor = 'transparent'; x.strokeStyle = rgba(C.ink, .55); x.lineWidth = 1; x.strokeRect(-165, -210, 330, 420);
+    const T = ['The Swarm and the Formation', 'Safe New World', 'A Protocol Pattern Language for Urban Space', 'Protocols Don’t Build Pyramids', 'Constructing the Evil Twin of AI', 'The Unreasonable Sufficiency of Protocols'][i];
+    x.fillStyle = rgba(i === 5 ? C.cobalt : C.ink2); x.font = '500 14px "JetBrains Mono"'; x.fillText(i === 4 ? 'PROTOCOLIZED · 2025' : i === 5 ? 'SUMMER OF PROTOCOLS · 2024' : 'SUMMER OF PROTOCOLS', -135, -170);
+    x.fillStyle = rgba(C.ink); x.font = '600 27px Lora'; let ln = '', yy = -130; T.split(' ').forEach((wd) => { if (x.measureText(ln + wd).width > 270) { x.fillText(ln, -135, yy); ln = ''; yy += 34; } ln += wd + ' '; }); x.fillText(ln, -135, yy);
+    x.fillStyle = rgba(C.hair); for (let q = 0; q < 8; q++) x.fillRect(-135, yy + 36 + q * 20, 250 - (q % 3) * 40, 4);
+    return c;
+  });
+  return sheetCache;
+}
 function decorTop(id, w) {
   if (w < .01) return;
-  g.save(); g.globalAlpha = smooth(.35, .9, w);
-  if (id === 'archive') {   // the pages stack like real paper: opaque, each with its own edge
-    SHEETS.forEach(([x, y, rot], i) => { g.save(); g.translate(x, y); g.rotate(rot); g.shadowColor = 'rgba(44,44,42,.14)'; g.shadowBlur = 24; g.shadowOffsetY = 8; g.fillStyle = '#ffffff'; g.fillRect(-165, -210, 330, 420); g.shadowColor = 'transparent'; g.strokeStyle = rgba(C.ink, .55); g.lineWidth = 1; g.strokeRect(-165, -210, 330, 420);
-      const T = ['The Swarm and the Formation', 'Safe New World', 'A Protocol Pattern Language for Urban Space', 'Protocols Don’t Build Pyramids', 'Constructing the Evil Twin of AI', 'The Unreasonable Sufficiency of Protocols'][i];
-      g.fillStyle = rgba(i === 5 ? C.cobalt : C.ink2); g.font = '500 14px "JetBrains Mono"'; g.fillText(i === 4 ? 'PROTOCOLIZED · 2025' : i === 5 ? 'SUMMER OF PROTOCOLS · 2024' : 'SUMMER OF PROTOCOLS', -135, -170);
-      g.fillStyle = rgba(C.ink); g.font = '600 27px Lora'; let ln = '', yy = -130; T.split(' ').forEach((wd) => { if (g.measureText(ln + wd).width > 270) { g.fillText(ln, -135, yy); ln = ''; yy += 34; } ln += wd + ' '; }); g.fillText(ln, -135, yy);
-      g.fillStyle = rgba(C.hair); for (let q = 0; q < 8; q++) g.fillRect(-135, yy + 36 + q * 20, 250 - (q % 3) * 40, 4); g.restore(); });
+  g.save();
+  if (id === 'archive') {   // the pages stack like real paper: opaque, each with its own edge.
+    // The outlines morph in first; each page then fills in behind its outline, one after another, settling onto the table.
+    const sp = sheetSprites();
+    SHEETS.forEach(([x, y, rot], i) => { const a = smooth(.55 + i * .06, Math.min(1, .77 + i * .06), w); if (a < .01) return; const lift = 1 - a;
+      g.save(); g.globalAlpha = a; g.translate(x, y - 14 * lift); g.rotate(rot * (1 + .5 * lift)); g.scale(1 + .03 * lift, 1 + .03 * lift); g.drawImage(sp[i], -165 - SHEET_PAD, -210 - SHEET_PAD, 330 + 2 * SHEET_PAD, 420 + 2 * SHEET_PAD); g.restore(); });
   }
   g.restore();
 }
