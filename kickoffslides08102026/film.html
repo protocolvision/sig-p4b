@@ -509,15 +509,18 @@ upright.addEventListener('change', checkRotate); checkRotate();
 // full screen, and on phones that allow it, lock to landscape
 const fullBtn = document.getElementById('full'), stageEl = document.getElementById('stage');
 if (document.fullscreenEnabled && !EMBED) { fullBtn.hidden = false; fullBtn.onclick = async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else { await document.documentElement.requestFullscreen(); await screen.orientation?.lock?.('landscape'); } } catch (e) {} }; }
-// glass mode: controls float over the film and fade while it plays; a tap or a mouse move brings them back
+// glass mode: controls float over the film, hidden while it plays; a tap on the film (or a mouse move) shows them for a few seconds
 const sideways = matchMedia('(max-height: 520px) and (orientation: landscape)');
 let idleTimer = 0;
+function hide() { clearTimeout(idleTimer); if (playing && document.body.classList.contains('glass')) document.body.classList.add('idle'); else document.body.classList.remove('idle'); }
 function wake() { document.body.classList.remove('idle'); clearTimeout(idleTimer); if (playing && document.body.classList.contains('glass')) idleTimer = setTimeout(() => document.body.classList.add('idle'), 2800); }
-function glassMode() { const on = !EMBED && (sideways.matches || !!document.fullscreenElement); document.body.classList.toggle('glass', on); fullBtn.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; wake(); }
+function glassMode() { const on = !EMBED && (sideways.matches || !!document.fullscreenElement); document.body.classList.toggle('glass', on); fullBtn.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; hide(); }
 sideways.addEventListener('change', glassMode); document.addEventListener('fullscreenchange', glassMode); glassMode();
-stageEl.addEventListener('click', () => { if (document.body.classList.contains('idle')) wake(); });
-for (const ev of ['pointermove', 'pointerdown', 'keydown']) addEventListener(ev, wake, { passive: true });
-playBtn.addEventListener('click', wake);
+stageEl.addEventListener('click', () => { if (document.body.classList.contains('idle')) wake(); else hide(); });
+document.querySelector('.bar').addEventListener('pointerdown', wake);
+addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse') wake(); }, { passive: true });
+addEventListener('keydown', wake);
+playBtn.addEventListener('click', () => { clearTimeout(idleTimer); if (playing) idleTimer = setTimeout(hide, 700); else hide(); });
 // in the deck: the slide tells the film when it's on screen
 addEventListener('message', (e) => { const cmd = e.data && e.data.film; if (cmd === 'play' && !playing && !REDUCE) playBtn.click(); if (cmd === 'pause' && playing) playBtn.click(); });
 })();
