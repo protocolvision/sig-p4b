@@ -51,17 +51,16 @@ body.embed .bar { max-width: none; }
 @keyframes tilt { 0%, 30% { transform: rotate(0); } 60%, 100% { transform: rotate(-90deg); } }
 @media (prefers-reduced-motion: reduce) { .rotate svg { animation: none; transform: rotate(-90deg); } }
 .rotate button { font: 400 14px/1 "JetBrains Mono", monospace; background: none; border: 1px solid var(--faint); border-radius: 4px; padding: 8px 14px; color: var(--ink2); }
-.stage:fullscreen { width: 100vw; height: 100vh; max-width: none; aspect-ratio: auto; }
-@media (max-height: 520px) and (orientation: landscape) {   /* a phone held sideways: the film takes the screen */
-  html, body { height: 100vh; height: 100dvh; }   /* the visible height, not the area behind the browser bars */
-  body { padding: 4px max(8px, env(safe-area-inset-right)) 4px max(8px, env(safe-area-inset-left)); gap: 4px; }
-  .stage { width: min(100%, calc((100vh - 44px) * 16 / 9)); width: min(100%, calc((100dvh - 44px) * 16 / 9)); }
-  .bar { flex-wrap: nowrap; }
-  .bar input[type=range] { min-width: 60px; }
-  .chapters { display: none; }
-  .bar { gap: 8px; font-size: 12px; }
-  .bar button { padding: 4px 8px; }
-}
+/* Glass mode (a phone held sideways, or full screen): the film takes the screen and the controls float over it, fading while it plays */
+html:fullscreen { background: var(--paper); }
+body.glass { height: 100vh; height: 100dvh; grid-template-rows: 1fr; padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); gap: 0; background: var(--paper); }
+body.glass .stage { width: min(100%, calc(100vh * 16 / 9)); width: min(100%, calc(100dvh * 16 / 9)); box-shadow: none; }
+body.glass .chapters { display: none; }
+body.glass .bar { position: fixed; left: 50%; bottom: max(10px, env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 24px), 680px); flex-wrap: nowrap; gap: 8px; font-size: 12px; padding: 7px 10px; border-radius: 14px; background: rgba(249, 248, 245, .55); -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3); border: 1px solid rgba(255, 255, 255, .7); box-shadow: 0 6px 24px rgba(44, 44, 42, .14); transition: opacity .35s, transform .35s; box-sizing: border-box; }
+body.glass .bar button { padding: 5px 9px; background: rgba(255, 255, 255, .45); border-color: rgba(44, 44, 42, .18); }
+body.glass .bar input[type=range] { min-width: 60px; }
+body.glass.idle .bar { opacity: 0; transform: translate(-50%, 10px); pointer-events: none; }
+body.glass.idle { cursor: none; }
 </style>
 <template id="qr-src"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" width="100%" height="100%" class="segno"><path class="qrline" stroke="#262624" d="M0 0.5h7m5 0h2m2 0h1m2 0h3m1 0h1m2 0h7m-33 1h1m5 0h1m2 0h3m1 0h3m1 0h2m2 0h2m3 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h6m2 0h1m1 0h2m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1m3 0h1m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h3m1 0h2m7 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h2m2 0h1m1 0h2m5 0h2m-23 1h1m1 0h5m3 0h6m1 0h1m4 0h1m1 0h1m1 0h5m-31 1h1m2 0h1m3 0h1m1 0h1m9 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h2m1 0h2m1 0h1m2 0h3m3 0h3m6 0h2m2 0h1m1 0h2m-31 1h1m3 0h1m2 0h2m4 0h1m3 0h2m1 0h2m3 0h1m1 0h5m-33 1h1m5 0h4m2 0h1m2 0h1m1 0h2m1 0h1m3 0h2m1 0h3m1 0h2m-32 1h1m1 0h2m4 0h1m1 0h1m2 0h3m1 0h2m2 0h2m2 0h1m4 0h2m-33 1h3m1 0h1m1 0h2m2 0h2m1 0h2m2 0h2m3 0h1m2 0h2m1 0h2m1 0h1m-32 1h1m2 0h1m1 0h1m2 0h2m3 0h1m2 0h1m2 0h1m1 0h2m1 0h3m1 0h3m-29 1h6m1 0h1m1 0h1m4 0h2m2 0h1m1 0h2m1 0h1m1 0h2m3 0h1m-33 1h1m1 0h1m1 0h2m4 0h1m2 0h1m2 0h6m1 0h1m1 0h3m1 0h2m1 0h1m-32 1h3m1 0h2m1 0h1m1 0h2m3 0h3m2 0h2m3 0h1m1 0h2m1 0h1m-31 1h1m1 0h1m6 0h2m1 0h1m1 0h1m4 0h3m1 0h1m2 0h6m-30 1h3m1 0h1m1 0h1m1 0h4m1 0h2m1 0h3m2 0h3m1 0h3m1 0h2m-33 1h1m1 0h1m4 0h2m1 0h2m1 0h3m1 0h3m2 0h2m1 0h2m5 0h1m-33 1h1m1 0h2m2 0h1m1 0h4m2 0h3m1 0h1m2 0h2m1 0h1m3 0h4m-32 1h1m1 0h4m2 0h1m1 0h1m2 0h1m1 0h1m5 0h1m5 0h6m-33 1h1m3 0h4m1 0h1m1 0h1m1 0h1m1 0h3m4 0h7m2 0h1m-24 1h1m1 0h1m5 0h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m3 0h1m3 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h3m2 0h1m1 0h2m1 0h4m1 0h2m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h4m2 0h2m2 0h1m1 0h1m3 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h6m1 0h2m2 0h1m2 0h1m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m5 0h1m2 0h1m3 0h4m1 0h1m-30 1h1m5 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m5 0h3m-31 1h7m1 0h1m1 0h2m2 0h1m2 0h1m4 0h6m3 0h1"/></svg></template>
 <div class="rotate" id="rotate" hidden><svg viewBox="0 0 64 64" width="72" height="72" aria-hidden="true"><rect x="20" y="8" width="24" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 40a20 20 0 0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 50l2 4-4 1" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Turn your phone sideways to watch the film.</p><button type="button" id="anyway">Watch anyway</button></div>
@@ -509,7 +508,16 @@ document.getElementById('anyway').onclick = () => { anyway = true; checkRotate()
 upright.addEventListener('change', checkRotate); checkRotate();
 // full screen, and on phones that allow it, lock to landscape
 const fullBtn = document.getElementById('full'), stageEl = document.getElementById('stage');
-if (document.fullscreenEnabled && !EMBED) { fullBtn.hidden = false; fullBtn.onclick = async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else { await stageEl.requestFullscreen(); await screen.orientation?.lock?.('landscape'); } } catch (e) {} }; }
+if (document.fullscreenEnabled && !EMBED) { fullBtn.hidden = false; fullBtn.onclick = async () => { try { if (document.fullscreenElement) await document.exitFullscreen(); else { await document.documentElement.requestFullscreen(); await screen.orientation?.lock?.('landscape'); } } catch (e) {} }; }
+// glass mode: controls float over the film and fade while it plays; a tap or a mouse move brings them back
+const sideways = matchMedia('(max-height: 520px) and (orientation: landscape)');
+let idleTimer = 0;
+function wake() { document.body.classList.remove('idle'); clearTimeout(idleTimer); if (playing && document.body.classList.contains('glass')) idleTimer = setTimeout(() => document.body.classList.add('idle'), 2800); }
+function glassMode() { const on = !EMBED && (sideways.matches || !!document.fullscreenElement); document.body.classList.toggle('glass', on); fullBtn.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; wake(); }
+sideways.addEventListener('change', glassMode); document.addEventListener('fullscreenchange', glassMode); glassMode();
+stageEl.addEventListener('click', () => { if (document.body.classList.contains('idle')) wake(); });
+for (const ev of ['pointermove', 'pointerdown', 'keydown']) addEventListener(ev, wake, { passive: true });
+playBtn.addEventListener('click', wake);
 // in the deck: the slide tells the film when it's on screen
 addEventListener('message', (e) => { const cmd = e.data && e.data.film; if (cmd === 'play' && !playing && !REDUCE) playBtn.click(); if (cmd === 'pause' && playing) playBtn.click(); });
 })();
