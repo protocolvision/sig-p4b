@@ -6,3 +6,5 @@ sources/
 __pycache__/
 *.pyc
 dist/
+.dev.vars
+.wrangler/

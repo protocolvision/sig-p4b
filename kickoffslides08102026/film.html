@@ -1,0 +1,551 @@
+<meta charset="utf-8">
+<title>Kickoff Film Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a 16:9 stage on paper that scales to the window, with a slim transport bar under it.
+   Visual language from protocolvision.org's tangle study: ink rope, forest crystal, packet cards, fog. */
+:root { --paper:#f9f8f5; --ink:#2c2c2a; --ink2:#5f5e5a; --faint:#b3b0a8; --hair:#d9d6cf; --hard:#0f6e56; --cobalt:#004fcc; --ui-bg:#eceae4; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--ui-bg); color: var(--ink); font: 15px/1.4 Lora, Georgia, serif; display: grid; grid-template-rows: 1fr auto; padding-inline: 16px; padding-block: 16px; box-sizing: border-box; gap: 12px; }
+.stage-wrap { display: grid; place-items: center; min-height: 0; }
+.stage { position: relative; width: min(100%, calc((100vh - 120px) * 16 / 9)); aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; background: var(--paper); container-type: inline-size; box-shadow: 0 1px 0 var(--hair), 0 20px 60px rgba(44,44,42,.08); }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ov { position: absolute; inset: 0; pointer-events: none; color: var(--ink); }
+.tag { position: absolute; left: 5cqw; top: 5.5cqh; font: 500 .9cqw/1 "JetBrains Mono", monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--ink2); }
+.cap { position: absolute; left: 5cqw; bottom: 6.5cqh; width: 70cqw; font: 600 3.25cqw/1.08 Lora, Georgia, serif; letter-spacing: -.012em; text-wrap: balance; }
+.cap .sub { display: block; font-weight: 400; font-size: 1.4cqw; line-height: 1.45; letter-spacing: 0; color: var(--ink2); margin-top: .8cqw; width: 56cqw; }
+.credit { position: absolute; right: 5cqw; bottom: 5.5cqh; text-align: right; font: 400 .78cqw/1.5 "JetBrains Mono", monospace; color: var(--ink2); }
+.lbl { position: absolute; font: 500 .8cqw/1.3 "JetBrains Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+.lbl i { display: block; font: 400 italic 1.15cqw/1.3 Lora, serif; letter-spacing: 0; text-transform: none; color: var(--ink2); margin-top: .3cqw; }
+.lbl.c { transform: translateX(-50%); text-align: center; }
+.ev { position: absolute; width: 25cqw; padding: 1cqw 1.2cqw; border: 1px solid var(--ink); background: var(--paper); font: 400 1.15cqw/1.35 Lora, serif; box-shadow: 0 6px 18px rgba(44,44,42,.08); }
+.ev b { display: block; font: 500 .72cqw/1 "JetBrains Mono", monospace; letter-spacing: .14em; color: var(--cobalt); margin-bottom: .55cqw; }
+.big { position: absolute; left: 5cqw; top: 14cqh; font: 600 7.4cqw/1 Lora, serif; letter-spacing: -.015em; }
+.pill { position: absolute; transform: translateX(-50%); font: 500 1cqw/1 "JetBrains Mono", monospace; letter-spacing: .14em; color: var(--ink2); white-space: nowrap; }
+.side { position: absolute; right: 6cqw; top: 14cqh; width: 26cqw; border-left: 1px solid var(--ink); padding-left: 2cqw; font: 400 1.3cqw/1.5 Lora, serif; }
+.side b { display: block; font-weight: 600; font-size: 1.7cqw; margin: 0 0 .3cqw; }
+.side p { margin: 0 0 1.4cqw; color: var(--ink2); }
+.cell { position: absolute; width: 27cqw; font: 400 1.2cqw/1.3 Lora, serif; }
+.cell small { display: block; font: 500 .7cqw/1 "JetBrains Mono", monospace; letter-spacing: .12em; color: var(--ink2); margin-top: .4cqw; text-transform: uppercase; }
+.title { position: absolute; left: 5cqw; top: 16cqh; font: 600 7cqw/1 Lora, serif; letter-spacing: -.015em; }
+.meta { position: absolute; left: 5cqw; top: 55cqh; font: 400 1.9cqw/1.5 Lora, serif; }
+.meta .url { font: 500 1.3cqw/1 "JetBrains Mono", monospace; color: var(--cobalt); display: block; margin-top: 1.6cqw; }
+.qr { position: absolute; right: 8cqw; top: 22cqh; width: 15cqw; aspect-ratio: 1; }
+.bar { display: flex; gap: 14px; align-items: center; max-width: 1200px; width: 100%; margin: 0 auto; font: 400 13px/1 "JetBrains Mono", monospace; color: var(--ink2); flex-wrap: wrap; }
+.bar button { font: inherit; background: var(--paper); color: inherit; border: 1px solid var(--faint); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
+.bar button:hover, .bar button:focus-visible { border-color: var(--cobalt); color: var(--cobalt); outline: none; }
+.bar input[type=range] { flex: 1; min-width: 160px; accent-color: var(--cobalt); }
+.chapters { display: flex; gap: 6px; flex-wrap: wrap; width: 100%; }
+.chapters button { padding: 4px 8px; font-size: 11px; }
+.chapters button.on { border-color: var(--cobalt); color: var(--cobalt); }
+body.embed { padding: 0; gap: 8px; background: var(--paper); }
+body.embed .stage { width: min(100%, calc((100vh - 46px) * 16 / 9)); box-shadow: 0 0 0 1px var(--hair); }
+body.embed .chapters { display: none; }
+body.embed .bar { max-width: none; }
+</style>
+<template id="qr-src"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" width="100%" height="100%" class="segno"><path class="qrline" stroke="#262624" d="M0 0.5h7m5 0h2m2 0h1m2 0h3m1 0h1m2 0h7m-33 1h1m5 0h1m2 0h3m1 0h3m1 0h2m2 0h2m3 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h6m2 0h1m1 0h2m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1m3 0h1m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h3m1 0h2m7 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h2m2 0h1m1 0h2m5 0h2m-23 1h1m1 0h5m3 0h6m1 0h1m4 0h1m1 0h1m1 0h5m-31 1h1m2 0h1m3 0h1m1 0h1m9 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h2m1 0h2m1 0h1m2 0h3m3 0h3m6 0h2m2 0h1m1 0h2m-31 1h1m3 0h1m2 0h2m4 0h1m3 0h2m1 0h2m3 0h1m1 0h5m-33 1h1m5 0h4m2 0h1m2 0h1m1 0h2m1 0h1m3 0h2m1 0h3m1 0h2m-32 1h1m1 0h2m4 0h1m1 0h1m2 0h3m1 0h2m2 0h2m2 0h1m4 0h2m-33 1h3m1 0h1m1 0h2m2 0h2m1 0h2m2 0h2m3 0h1m2 0h2m1 0h2m1 0h1m-32 1h1m2 0h1m1 0h1m2 0h2m3 0h1m2 0h1m2 0h1m1 0h2m1 0h3m1 0h3m-29 1h6m1 0h1m1 0h1m4 0h2m2 0h1m1 0h2m1 0h1m1 0h2m3 0h1m-33 1h1m1 0h1m1 0h2m4 0h1m2 0h1m2 0h6m1 0h1m1 0h3m1 0h2m1 0h1m-32 1h3m1 0h2m1 0h1m1 0h2m3 0h3m2 0h2m3 0h1m1 0h2m1 0h1m-31 1h1m1 0h1m6 0h2m1 0h1m1 0h1m4 0h3m1 0h1m2 0h6m-30 1h3m1 0h1m1 0h1m1 0h4m1 0h2m1 0h3m2 0h3m1 0h3m1 0h2m-33 1h1m1 0h1m4 0h2m1 0h2m1 0h3m1 0h3m2 0h2m1 0h2m5 0h1m-33 1h1m1 0h2m2 0h1m1 0h4m2 0h3m1 0h1m2 0h2m1 0h1m3 0h4m-32 1h1m1 0h4m2 0h1m1 0h1m2 0h1m1 0h1m5 0h1m5 0h6m-33 1h1m3 0h4m1 0h1m1 0h1m1 0h1m1 0h3m4 0h7m2 0h1m-24 1h1m1 0h1m5 0h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m3 0h1m3 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h3m2 0h1m1 0h2m1 0h4m1 0h2m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h4m2 0h2m2 0h1m1 0h1m3 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h6m1 0h2m2 0h1m2 0h1m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m5 0h1m2 0h1m3 0h4m1 0h1m-30 1h1m5 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m5 0h3m-31 1h7m1 0h1m1 0h2m2 0h1m2 0h1m4 0h6m3 0h1"/></svg></template>
+<div class="stage-wrap"><div class="stage" id="stage"><canvas id="c"></canvas><div class="ov" id="ov"></div></div></div>
+<div class="bar">
+  <button id="play" type="button">Pause</button>
+  <button id="sound" type="button" aria-pressed="false">Sound on</button>
+  <span id="clock">00:00</span>
+  <input id="scrub" type="range" min="0" max="90" step="0.01" value="0" aria-label="Position in the film">
+  <div class="chapters" id="chapters"></div>
+</div>
+<script>
+(() => {
+// ---------- timeline ----------
+const SC = [
+  { id: 'lanes',    t: 0,  tag: 'Discovering New Nature: Protocols and AI', cap: 'Simple protocols coordinate an unreasonable amount of the world.', sub: 'Keep to one side of the road, and millions of strangers pass each other every day.', credit: 'After “The Unreasonable Sufficiency of Protocols”, 2024' },
+  { id: 'tangle',   t: 7.2,  tag: 'Discovering New Nature: Protocols and AI', cap: 'The better protocols work, the harder they are to see.' },
+  { id: 'snap',     t: 13.2, tag: 'Discovering New Nature: Protocols and AI', cap: 'Mostly, we notice when protocols strain and break.' },
+  { id: 'ooze',     t: 18, tag: 'Discovering New Nature: Protocols and AI', cap: 'AI finds where protocols leak.' },
+  { id: 'underway', t: 24, tag: 'Discovering New Nature: Protocols and AI', cap: 'Changes to how we coordinate with AI are already under way.', sub: 'Agents are plugging in, paying and finding gaps on their own.' },
+  { id: 'twin',     t: 31.2, tag: 'Discovering New Nature: Protocols and AI', cap: 'Protocols are AI’s evil twin.', sub: 'Rigid where AI is fluid. Hard rules give agents a clear way through.', credit: 'After Venkatesh Rao, “Constructing the Evil Twin of AI”, 2025' },
+  { id: 'hard',     t: 37.2, tag: 'Discovering New Nature: Protocols and AI', cap: 'Hardness makes something very likely to be true in the future.', credit: 'After Josh Stark, “Atoms, Institutions, Blockchains”, 2022' },
+  { id: 'archive',  t: 44.4, tag: 'Summer of Protocols · 2023–2025', cap: 'Summer of Protocols set out to study all of this.' },
+  { id: 'inst',     t: 50.4, tag: 'Protocol Institute · 2026', cap: 'In 2026 the work became an institute.' },
+  { id: 'groups',   t: 55.2, tag: 'Protocol Institute · Research groups', cap: 'Eight groups, each studying protocols from different perspectives.' },
+  { id: 'gather',   t: 63.6, tag: 'Protocols for Business', cap: 'Join us to learn to see, design and evolve protocols.' },
+  { id: 'themes',   t: 68.4, tag: 'Protocols for Business · 2026–27', cap: 'Six questions we’ll investigate together.', sub: '26 Mondays: read a source, compare notes, bring your own cases.' },
+  { id: 'end',      t: 82, tag: '', cap: '' },
+];
+const END = 90, MORPH = 3;
+
+// ---------- canvas and basics ----------
+const W = 1920, H = 1080, TAU = Math.PI * 2, VIS_BOTTOM = 770;   // visuals stay above the caption zone
+const cv = document.getElementById('c'), g = cv.getContext('2d'), ov = document.getElementById('ov'), stage = document.getElementById('stage');
+const fogCv = document.createElement('canvas'), fg = fogCv.getContext('2d');
+let k = 1;
+function size() { const r = stage.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 1.5); cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr); k = cv.width / W; fogCv.width = cv.width; fogCv.height = cv.height; }
+new ResizeObserver(() => { size(); render(T); }).observe(stage); size();
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const lerp = (a, b, t) => a + (b - a) * t, clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+const rgba = (c, a = 1) => `rgba(${c[0] | 0},${c[1] | 0},${c[2] | 0},${a})`;
+const C = { paper: [249, 248, 245], ink: [44, 44, 42], ink2: [95, 94, 90], faint: [179, 176, 168], hair: [217, 214, 207], hard: [15, 110, 86], cobalt: [0, 79, 204] };
+const MEMBER = [[0, 79, 204], [15, 123, 108], [180, 105, 14], [184, 50, 128], [107, 70, 193], [192, 57, 43], [44, 44, 42]];   // the Feed's member colours
+
+// ---------- the cast ----------
+const N = 48, K = 44, M = 700;
+const S = Array.from({ length: N }, (_, i) => ({ i, r: [rnd(), rnd(), rnd(), rnd(), rnd()], seed: rnd() * 10 }));
+const P = Array.from({ length: M }, (_, j) => ({ j, r: [rnd(), rnd(), rnd(), rnd()] }));
+
+// streamlines around an obstacle, inside the visual zone
+function streams(cx, cy, R) {
+  const out = [];
+  for (let j = 0; j < 120; j++) {
+    let y = 110 + (j + .5) / 120 * (VIS_BOTTOM - 140), x = -60; const pts = [];
+    for (let s = 0; s < 600 && x < W + 60; s++) { const X = (x - cx) / R, Y = (y - cy) / R, r2 = X * X + Y * Y; const u = 1 - (X * X - Y * Y) / (r2 * r2), v = -2 * X * Y / (r2 * r2); x += u * 4; y += v * 4; pts.push([x, y]); }
+    out.push(pts);
+  }
+  return out;
+}
+const FLOW = streams(1150, 420, 150);
+// the approval flow: four steps in a walled channel with gaps; agents go through in order, then start taking shortcuts
+const FY = 420, WT = 365, WB = 475, STEPS = [['REQUEST', 400], ['REVIEW', 760], ['APPROVE', 1120], ['DONE', 1480]];
+const GAP_T = [880, 1000], GAP_B = [1210, 1320];
+function routeOf(pts) { const L = [0]; for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); return { pts, L, tot: L[L.length - 1] }; }
+function bez(a, c, b, n = 24) { return Array.from({ length: n + 1 }, (_, i) => { const u = i / n, v = 1 - u; return [v * v * a[0] + 2 * v * u * c[0] + u * u * b[0], v * v * a[1] + 2 * v * u * c[1] + u * u * b[1]]; }); }
+const ROUTES = [
+  routeOf([[140, FY], ...STEPS.map(([, x]) => [x, FY]), [1780, FY]]),                                              // through every step
+  routeOf([[140, FY], [400, FY], [760, FY], [940, FY], [940, WT - 10], ...bez([940, WT - 40], [1250, 170], [1820, 300])]),   // out of the top gap, around review and approval
+  routeOf([[140, FY], [400, FY], [760, FY], [1120, FY], [1265, FY], [1265, WB + 10], ...bez([1265, WB + 40], [1500, 650], [1820, 560])]),   // out of the bottom gap, around approval
+];
+const dwell = (x) => STEPS.reduce((d, [, sx]) => d + Math.exp(-(((x - sx) / 46) ** 2)), 0);   // agents slow down at each step
+function alongRoute(R, s) { let i = 1; while (i < R.L.length - 1 && R.L[i] < s) i++; const a = R.pts[i - 1], b = R.pts[i], f = (s - R.L[i - 1]) / ((R.L[i] - R.L[i - 1]) || 1); return [lerp(a[0], b[0], f), lerp(a[1], b[1], f), Math.atan2(b[1] - a[1], b[0] - a[0])]; }
+function onStream(j, t, speed) { const L = FLOW[j % FLOW.length], n = L.length, p = (P[j].r[0] * n + t * speed * 60) % n, i = Math.floor(p), b = L[Math.max(0, i - 3)]; return { x: L[i][0], y: L[i][1], a: Math.atan2(L[i][1] - b[1], L[i][0] - b[0]), tx: L[Math.max(0, i - 26)][0], ty: L[Math.max(0, i - 26)][1] }; }
+
+// the evil twin's rails: crystal guides that narrow into a gate and open again
+const RAILS = 4, railY = (k2, x) => { const base = 230 + k2 * 125, pinch = .45 + .55 * smooth(0, 520, Math.abs(x - 1150)); return 420 + (base - 420) * pinch; };
+
+// shapes
+const line = (x0, y0, x1, y1, bend = 0) => (u) => [lerp(x0, x1, u), lerp(y0, y1, u) + Math.sin(u * Math.PI) * bend];
+const poly = (pts, closed = true) => (u) => { const segs = closed ? pts.length : pts.length - 1, f = u * segs, i = Math.min(Math.floor(f), segs - 1), a = pts[i], b = pts[(i + 1) % pts.length], v = f - i; return [lerp(a[0], b[0], v), lerp(a[1], b[1], v)]; };
+const rect = (x, y, w, h, rot = 0) => { const c = Math.cos(rot), s = Math.sin(rot), p = (dx, dy) => [x + dx * c - dy * s, y + dx * s + dy * c]; return poly([p(-w / 2, -h / 2), p(w / 2, -h / 2), p(w / 2, h / 2), p(-w / 2, h / 2)]); };
+const arc = (cx, cy, r, a0, a1) => (u) => { const a = lerp(a0, a1, u); return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; };
+const HIDE = (x = 960, y = 420) => ({ f: line(x, y, x, y), kind: 'line', w: 1, col: C.ink, a: 0 });
+
+// ---------- layouts ----------
+const GROUPS = [['Formal Protocol Theory', 360, 230], ['Memory Research Group', 800, 160], ['Protocol Fiction', 1300, 210], ['Distributed Robotics Group', 1520, 380], ['Psychohistory', 1420, 600], ['Personhood Research Group', 820, 640], ['Intelligence Media', 300, 520], ['Protocols for Business', 1040, 410]];
+const HUB = [1380, 380];
+const p4bLit = (lt) => smooth(4.6, 5.8, lt);   // Protocols for Business lights up near the end of the groups scene
+const SHEETS = [[330, 335, -.08], [720, 300, .06], [1110, 325, -.05], [1500, 360, .1], [520, 545, .04], [940, 535, -.03]];
+const CELLS = [0, 1, 2, 3, 4, 5].map((i) => [96 + i * 292, 260]), CW = 260, CH = 220;
+const cellC = (i) => [CELLS[i][0] + CW / 2, CELLS[i][1] + CH / 2];
+const reveal = (c, lt) => smooth(.8 + c * 1.5, 1.5 + c * 1.5, lt);   // the themes appear one at a time
+const ROPE = { kind: 'rope', w: 1.3, rw: 3.4, fibres: 2, pitch: 18, col: C.ink, a: 1 };
+const roadY = (road, x) => { const y = 260 + road * 100, u = x / W; return y + 30 - 70 * u + Math.sin(u * Math.PI) * 26 * Math.sin(road * 1.3); };
+
+const scenes = {
+  lanes(s, t) {   // a street plan from above: roads, kerbs and the centre line
+    const i = s.i;
+    if (i < 15) { const road = Math.floor(i / 3), part = i % 3, off = part === 0 ? -14 : part === 1 ? 14 : 0; return { f: (u) => { const x = lerp(-40, W + 40, u); return [x, roadY(road, x) + off]; }, kind: 'line', w: part === 2 ? 1 : 1.4, col: part === 2 ? C.faint : C.ink, a: part === 2 ? .9 : .85, dash: part === 2 ? 1 : 0 }; }
+    
+    return HIDE(960, 500);
+  },
+  tangle(s, t) {   // the tangle, mostly in fog
+    const [r0, r1, r2, r3, r4] = s.r, cx = 140 + r0 * 1640, cy = 140 + r1 * 640, R = 90 + r2 * 200, kk = 2 + Math.floor(r3 * 3), ph = r4 * TAU + t * .04;
+    return { ...ROPE, f: (u) => { const a = u * TAU + ph, rr = R * (1 + .35 * Math.sin(a * kk + ph * 2)); return [cx + rr * Math.cos(a) * 1.35, cy + rr * Math.sin(a)]; }, closed: true, rw: 2.6 + r2 * 2.2, col: s.i % 7 ? C.ink : C.hard };
+  },
+  snap(s, t, lt) {   // one rope pulled taut; its three fibres snap one at a time, then it parts
+    const taut = smooth(1.1, 1.8, lt), brk = smooth(1.85, 2, lt) + smooth(2.25, 2.4, lt) + smooth(2.65, 2.8, lt);
+    const parted = lt > 2.75, rec = parted ? 1 - Math.exp(-(lt - 2.75) * 4) * Math.cos((lt - 2.75) * 7) : 0, gap = rec * 80;
+    const y = (x) => 430 + (1 - taut) * 50 * Math.sin(clamp((x + 60) / (W + 120), 0, 1) * Math.PI);
+    const base = { ...ROPE, rw: 15, w: 2.2, fibres: 3, pitch: 56 };
+    if (s.i === 0) return { ...base, f: (u) => { const x = lerp(-60 - taut * 30, 960 - gap, u); return [x, y(x) + Math.pow(u, 5) * rec * 26]; }, brkB: brk };
+    if (s.i === 1) return { ...base, f: (u) => { const x = lerp(960 + gap, W + 60 + taut * 30, u); return [x, y(x) + Math.pow(1 - u, 5) * rec * 26]; }, brkA: brk };
+    return { ...scenes.tangle(s, t), a: 0 };
+  },
+  ooze(s, t) {   // an approval flow: walls with gaps, four steps
+    const W4 = [[200, WT, GAP_T[0], WT], [GAP_T[1], WT, 1720, WT], [200, WB, GAP_B[0], WB], [GAP_B[1], WB, 1720, WB]];
+    if (s.i < 4) return { f: line(...W4[s.i]), kind: 'line', w: 2, col: C.ink, a: 1 };
+    if (s.i < 8) { const x = STEPS[s.i - 4][1]; return { f: rect(x, FY, 120, 72), closed: true, kind: 'line', w: 1.6, col: C.ink, a: 1 }; }
+    return HIDE(960, FY);
+  },
+  underway(s, t) { return scenes.ooze(s, t); },
+  twin(s, t) {   // crystal rails that guide the work through
+    if (s.i < RAILS) return { f: (u) => { const x = lerp(120, 1820, u); return [x, railY(s.i, x)]; }, kind: 'crystal', w: 1, hw: 5, rod: 24, col: C.hard, a: 1 };
+    return HIDE(1150, 420);
+  },
+  hard(s, t) {   // three engravings: a vault door, an institution, a chain of blocks
+    const i = s.i, ink = { kind: 'line', w: 2, col: C.ink, a: 1 };
+    if (i < 8) { const vx = 400, vy = 400;
+      if (i === 0) return { ...ink, f: arc(vx, vy, 170, 0, TAU), closed: true, w: 2.4 };
+      if (i === 1) return { ...ink, f: arc(vx, vy, 140, 0, TAU), closed: true };
+      if (i === 2) return { ...ink, f: arc(vx, vy, 46, 0, TAU), closed: true, w: 3 };
+      const a = (i - 3) / 5 * TAU; return { ...ink, f: line(vx + Math.cos(a) * 46, vy + Math.sin(a) * 46, vx + Math.cos(a) * 112, vy + Math.sin(a) * 112), w: 3 }; }
+    if (i < 18) { const ix = 960, iy = 420, j = i - 8;
+      if (j < 5) return { ...ink, f: rect(ix - 168 + j * 84, iy + 20, 40, 190), closed: true, w: 1.8 };
+      if (j === 5) return { ...ink, f: poly([[ix - 220, iy - 100], [ix, iy - 185], [ix + 220, iy - 100]]), closed: true };
+      if (j === 6) return { ...ink, f: line(ix - 230, iy - 88, ix + 230, iy - 88) };
+      if (j === 7) return { ...ink, f: line(ix - 230, iy - 76, ix + 230, iy - 76) };
+      return { ...ink, f: line(ix - 250, iy + 126 + (j - 8) * 14, ix + 250, iy + 126 + (j - 8) * 14) }; }
+    if (i < 25) { const bx = 1520, by = 420, j = i - 18;
+      if (j < 4) { const x = bx - 190 + j * 126, y = by + (j % 2 ? 26 : -26); return { f: rect(x, y, 84, 84), closed: true, kind: 'crystal', hw: 7, rod: 26, w: 1.1, col: C.hard, a: 1 }; }
+      const x = bx - 148 + (j - 4) * 126, y0 = by + ((j - 4) % 2 ? 26 : -26), y1 = by + ((j - 3) % 2 ? 26 : -26); return { f: line(x, y0, x + 42, y1), kind: 'line', w: 2.2, col: C.hard, a: 1 }; }
+    return HIDE(960, 420);
+  },
+  archive(s, t) {
+    if (s.i < 6) { const [x, y, rot] = SHEETS[s.i]; return { f: rect(x, y, 330, 420, rot), closed: true, kind: 'line', w: 1.2, col: C.ink, a: .9 }; }
+    return HIDE(960, 400);
+  },
+  inst(s, t) {
+    if (s.i < 4) return { f: line(96 + s.i * 250, 595, 96 + s.i * 250 + 180, 595), kind: 'line', w: 1.4, col: C.ink, a: .8 };
+    return HIDE(1350, 400);
+  },
+  groups(s, t, lt) {
+    const E = []; for (let a = 0; a < 8; a++) for (let b2 = a + 1; b2 < 8; b2++) E.push([a, b2]);   // every group linked to every other
+    if (s.i < E.length) { const [a, b] = E[s.i], A = GROUPS[a], B = GROUPS[b]; const hl = (a === 7 || b === 7) ? p4bLit(lt) : 0; return { f: line(A[1], A[2], B[1], B[2]), kind: 'line', w: 1 + .4 * hl, col: C.faint.map((v, z) => lerp(v, C.cobalt[z], hl)), a: lerp(.8, .9, hl), dash: 1 - hl }; }
+    return HIDE(1040, 410);
+  },
+  gather(s, t) {
+    const [r0, r1, r2, r3] = s.r, a = Math.PI * (.6 + r0 * .8), d = 700 + r1 * 900, sx = HUB[0] + Math.cos(a) * d, sy = clamp(HUB[1] + Math.sin(a) * d * .5, 90, VIS_BOTTOM);
+    const mx = lerp(sx, HUB[0], .45) + (r2 - .5) * 200, my = lerp(sy, HUB[1], .45) + (r3 - .5) * 140;
+    return { f: (u) => { const v = 1 - u; return [v * v * sx + 2 * v * u * mx + u * u * HUB[0], v * v * sy + 2 * v * u * my + u * u * HUB[1]]; }, kind: 'line', w: .7 + r2 * 1, col: r3 < .12 ? C.hard : C.ink, a: .3 + r1 * .5 };
+  },
+  themes(s, t, lt) {   // six simple pictures in a row, one per theme
+    const i = s.i, R = (o, c) => ({ ...o, a: o.a * reveal(c, lt) });
+    if (i === 0) { const [x, y] = CELLS[5]; return R({ f: (u) => { const X = lerp(x + 10, x + CW - 10, u), ph = ((u * 2 - t * .35) % 1 + 1) % 1; let dy = 0; if (ph > .4 && ph < .45) dy = -50 * Math.sin((ph - .4) / .05 * Math.PI); else if (ph > .45 && ph < .49) dy = 20 * Math.sin((ph - .45) / .04 * Math.PI); return [X, y + CH / 2 + dy]; }, kind: 'line', w: 2, col: C.ink, a: 1 }, 5); }
+    if (i === 1) { const [x, y] = CELLS[3]; return R({ f: (u) => { const X = lerp(x + 10, x + CW - 10, u); return [X, y + CH / 2 + (Math.sin(u * 17) + Math.sin(u * 41 + 1) * .6) * 12 + (u > .55 ? 18 : 0)]; }, kind: 'line', w: 2, col: C.ink, a: 1 }, 3); }
+    if (i >= 6 && i < 14) { const [cx, cy] = cellC(4), j = i - 6, a0 = j / 8 * TAU + t * .05, a1 = (j + 1) / 8 * TAU + t * .05; return R({ f: arc(cx, cy, 58, a0, a1), kind: 'crystal', hw: 6, rod: 20, w: 1.1, col: C.hard, a: 1 }, 4); }
+    if (i >= 18 && i < 21) { const [cx, cy] = cellC(2), j = i - 18, r = ((t * 26 + j * 40) % 120) + 6; return R({ f: arc(cx, cy, r, 0, TAU), closed: true, kind: 'line', w: 1.2, col: C.ink, a: Math.max(0, .9 - r / 130) }, 2); }
+    return HIDE(960, 370);
+  },
+  end(s, t) { if (s.i === 0) return { f: line(96, 500, 900, 500), kind: 'line', w: 2.5, col: C.cobalt, a: 1 }; return HIDE(500, 500); },
+};
+// seven members moving between the six themes, each on their own route
+function memberPos(m, t) {   // three members, each visiting the themes in turn
+  const route = [[0, 2, 4, 1], [3, 5, 1, 0], [5, 1, 3, 2]][m], period = 2.4 + m * .2;
+  const f = (t + m * .8) / period, a = route[Math.floor(f) % 4], b = route[(Math.floor(f) + 1) % 4], u = smooth(.55, 1, f % 1);
+  const A = cellC(a), B = cellC(b), oa = [m * 30 - 30, 70];
+  return [lerp(A[0], B[0], u) + oa[0], lerp(A[1], B[1], u) + oa[1]];
+}
+
+const pscenes = {
+  lanes(p, t) { const [r0, r1, r2, r3] = p.r;
+    if (p.j < 40) { const road = Math.floor(r0 * 5), dir = r1 < .5 ? 1 : -1, sp = 60 + r2 * 110, x = ((r3 * (W + 200) + dir * t * sp) % (W + 200) + W + 200) % (W + 200) - 100; const y = roadY(road, x) + dir * 7, y2 = roadY(road, x + 4) + dir * 7; return { x, y, a: 1, kind: 'car', s: 1, rot: Math.atan2(y2 - y, 4) + (dir > 0 ? 0 : Math.PI) }; }
+    return { x: r0 * W, y: 120 + r1 * 600, a: 0, kind: 'dot', col: C.ink, s: 1 }; },
+  tangle(p, t) { return { x: p.r[0] * W, y: 120 + p.r[1] * 600, a: 0, kind: 'dot', col: C.ink, s: 1 }; },
+  snap(p, t, lt) { return { x: 960, y: 430, a: 0, kind: 'fibre', s: 1, col: C.ink }; },
+  ooze(p, t, lt) {   // agents follow the flow; at each gap, a growing share slip out and take the shortcut
+    if (p.j >= 56) return { x: 960, y: FY, a: 0, kind: 'card', s: 1 };
+    const [r0, r1, r2, r3] = p.r, sp = 120 + r1 * 30, LAP = 1900, pos = r0 * LAP + t * sp, s0 = pos % LAP;
+    const top = r2 < .5, sc = ROUTES[top ? 1 : 2], sG = alongRoute(ROUTES[0], 0) && (top ? 800 : 1125);   // arc length where the gap is
+    const tAtGap = t - (s0 - sG) / sp, shareThen = .8 * smooth(.4, 3.2, lt - (t - tAtGap)), coin = ((Math.floor(pos / LAP) * 7919 + p.j * 104729) % 1000) / 1000;
+    const R = s0 > sG && coin < shareThen ? sc : ROUTES[0];
+    if (s0 > R.tot) return { x: 1820, y: FY, a: 0, kind: 'card', s: 1 };
+    const x0 = alongRoute(R, s0)[0], s1 = Math.max(0, s0 - 34 / (1 + 1.4 * dwell(x0)));   // a short pause at each step
+    const [x, y, a] = alongRoute(R, s0 * .5 + s1 * .5), [tx, ty] = alongRoute(R, Math.max(0, s0 - 80)), inside = R === ROUTES[0] || x < sG + 140;
+    const edge = smooth(0, 60, s0) * (1 - smooth(R.tot - 60, R.tot, s0));
+    return { x, y: y + (r3 - .5) * (inside ? 44 : 10), a: .95 * edge, kind: 'card', rot: a, s: 1, tail: [tx, ty + (r3 - .5) * (inside ? 30 : 6)], mark: false };
+  },
+  underway(p, t, lt) { return pscenes.ooze(p, t, lt + 6); },   // the flow carries on, shortcuts and all
+  twin(p, t) {   // packets travel along the lanes between rails, through the gate, in order
+    if (p.j >= 80) return { x: 1150, y: 420, a: 0, kind: 'card', s: 1 };
+    const [r0, r1, r2] = p.r, lane = p.j % (RAILS - 1), sp = 150 + r1 * 40, x = ((r0 * 1900 + t * sp) % 1900) + 40, f = .25 + r2 * .5, y = lerp(railY(lane, x), railY(lane + 1, x), f), y2 = lerp(railY(lane, x + 6), railY(lane + 1, x + 6), f);
+    const edge = smooth(40, 160, x) * (1 - smooth(1700, 1840, x));
+    return { x, y, a: .95 * edge, kind: 'card', rot: Math.atan2(y2 - y, 6), s: 1, tail: [x - 50, lerp(railY(lane, x - 50), railY(lane + 1, x - 50), f)], mark: p.j % 3 === 0 }; },
+  hard(p, t) { const c = [[400, 400], [960, 420], [1520, 420]][p.j % 3]; return { x: c[0] + (p.r[0] - .5) * 400, y: c[1] + (p.r[1] - .5) * 300, a: 0, kind: 'card', rot: 0, s: 1 }; },
+  archive(p, t) { return { x: p.r[0] * W, y: 120 + p.r[1] * 600, a: 0, kind: 'dot', col: C.ink, s: 1 }; },
+  inst(p, t) { return pscenes.archive(p, t); },
+  groups(p, t) { const [r0, r1, r2, r3] = p.r, g0 = GROUPS[p.j % 8], ang = r0 * TAU + t * (.1 + r3 * .2), rad = 22 + r1 * 70; return { x: g0[1] + Math.cos(ang) * rad, y: g0[2] + Math.sin(ang) * rad * .7, a: 0, kind: 'dot', col: C.ink2, s: 1 }; },
+  gather(p, t) { const g0 = GROUPS[p.j % 8]; return { x: g0[1] + (p.r[0] - .5) * 100, y: g0[2] + (p.r[1] - .5) * 70, a: 0, kind: 'dot', col: C.ink2, s: 1 }; },
+  themes(p, t, lt) { const [r0, r1, r2, r3] = p.r, j = p.j;
+    if (j < 60) { const [x, y] = CELLS[1], cx = x + CW / 2 + Math.sin(t * .5) * 40, cy = y + CH / 2 + Math.sin(t * .7) * 14, a = r0 * TAU, rr = Math.pow(r1, .7), bx = cx + Math.cos(a) * rr * 80 * (1 + .3 * Math.sin(t + a * 2)), by = cy + Math.sin(a) * rr * 34 + Math.sin(bx * .03 + t * 2) * 8;
+      return { x: bx, y: by, a: .8 * reveal(1, lt), kind: 'dot', col: C.ink, s: .8 + r2 * .4 }; }
+    if (j === 60) { const [cx, cy] = cellC(0), a = t * .8; return { x: cx + Math.cos(a) * 70, y: cy + Math.sin(a) * 45, a: reveal(0, lt), kind: 'vehicle', rot: a + Math.PI / 2, s: 1 }; }
+    if (j < 64) { const m = j - 61, [x, y] = memberPos(m, t); return { x, y, a: smooth(9.3 + m * .4, 9.8 + m * .4, lt), kind: 'member', col: MEMBER[m], s: 1 }; }
+    if (j < 70) { const cell = j - 64, [x, y] = CELLS[cell], appear = 10 + cell * .35; return { x: x + CW - 34, y: y + 20, a: smooth(appear, appear + .4, lt), kind: 'note', col: MEMBER[cell % 3], rot: (r2 - .5) * .2, s: 1 }; }
+    return { x: 960, y: 370, a: 0, kind: 'dot', col: C.ink, s: 1 }; },
+  end(p, t) { return { x: 500, y: 455, a: 0, kind: 'dot', col: C.ink, s: 1 }; },
+};
+
+// ---------- drawing ----------
+function dense(pts, step = 2.2) {
+  const out = []; let L = 0;
+  for (let i = 0; i < pts.length - 1; i++) { const a = pts[i], b = pts[i + 1], d = Math.hypot(b[0] - a[0], b[1] - a[1]), n = Math.max(1, Math.ceil(d / step)), tx = (b[0] - a[0]) / (d || 1), ty = (b[1] - a[1]) / (d || 1);
+    for (let q = 0; q < n; q++) out.push([lerp(a[0], b[0], q / n), lerp(a[1], b[1], q / n), L + d * q / n, -ty, tx]); L += d; }
+  const b = pts[pts.length - 1], a = pts[pts.length - 2] || b, d = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1; out.push([b[0], b[1], L, -(b[1] - a[1]) / d, (b[0] - a[0]) / d]);
+  return out;
+}
+function rope(pts, st, sd) {   // the study's rope: a faint body and twisted fibres. Fibres can break at either end
+  // (brkA at the start, brkB at the end, counted in fibres): a broken fibre springs back, untwists and splays out.
+  const D = dense(pts), tot = D[D.length - 1][2], off = (L) => .8 * (Math.sin(L * .05 + sd) + .6 * Math.sin(L * .13 + 2 * sd));
+  const nf = Math.max(1, Math.round(st.fibres || 2)), bA = st.brkA || 0, bB = st.brkB || 0, U = 150;
+  g.strokeStyle = rgba(st.col); g.lineCap = 'round'; g.lineJoin = 'round';
+  const a0 = g.globalAlpha, trimA = smooth(nf - 1, nf, bA) * 60, trimB = smooth(nf - 1, nf, bB) * 60;
+  g.beginPath(); let on = false; D.forEach(([x, y, L, nx, ny]) => { if (L < trimA || tot - L < trimB) { on = false; return; } const d = off(L); on ? g.lineTo(x + nx * d, y + ny * d) : g.moveTo(x + nx * d, y + ny * d); on = true; });
+  g.lineWidth = 2 * st.rw + st.w; g.globalAlpha = a0 * .1; g.stroke(); g.globalAlpha = a0; g.lineWidth = st.w;
+  for (let f = 0; f < nf; f++) {
+    const fa = clamp(bA - f, 0, 1), fb = clamp(bB - f, 0, 1), side = f - (nf - 1) / 2;
+    g.beginPath(); on = false;
+    for (const [x, y, L, nx, ny] of D) {
+      const kA = clamp(1 - L / U, 0, 1), kB = clamp(1 - (tot - L) / U, 0, 1);
+      const load = 1 - .6 * (kA * Math.min(bA, nf - .5) + kB * Math.min(bB, nf - .5)) / nf;   // the fibres left carry the load and straighten
+      const ph = TAU * L / st.pitch + f * TAU / nf - TAU * 1.3 * (fa * kA * kA + fb * kB * kB);   // a broken fibre untwists near its end only
+      const splay = (fa * kA * kA + fb * kB * kB) * side * 34 + (fa * kA ** 3 + fb * kB ** 3) * 16 * (f % 2 ? 1 : -1);
+      if ((fa > 0 && L < fa * 26) || (fb > 0 && tot - L < fb * 26)) { on = false; continue; }   // a broken fibre's end springs back a little
+      const d = off(L) + st.rw * load * Math.sin(ph) * (1 + .15 * Math.sin(L * .07 + f)) + splay;
+      on ? g.lineTo(x + nx * d, y + ny * d) : g.moveTo(x + nx * d, y + ny * d); on = true;
+    }
+    g.stroke();
+  }
+}
+function crystal(pts, st) {   // the study's crystal: straight faceted rods at fixed arc lengths
+  const D = dense(pts, 3), tot = D[D.length - 1][2], Lr = Math.max(8, st.rod || 26), gp = 1.6;
+  const at = (Lq) => { let lo = 0, hi = D.length - 1; while (lo < hi) { const m = (lo + hi + 1) >> 1; if (D[m][2] <= Lq) lo = m; else hi = m - 1; } return D[lo]; };
+  for (let q = 0; q * Lr < tot; q++) {
+    const A = at(q * Lr + gp), B = at(Math.min(tot, (q + 1) * Lr - gp)), dx = B[0] - A[0], dy = B[1] - A[1], d = Math.hypot(dx, dy); if (d < 4) continue;
+    const tx = dx / d, ty = dy / d, nx = -ty, ny = tx, hw = st.hw * (.85 + .3 * (Math.sin(q * 12.9898) * .5 + .5)), tip = Math.min(st.hw * .9, d * .3);
+    const Q = [[A[0], A[1]], [A[0] + tx * tip + nx * hw, A[1] + ty * tip + ny * hw], [B[0] - tx * tip + nx * hw, B[1] - ty * tip + ny * hw], [B[0], B[1]], [B[0] - tx * tip - nx * hw, B[1] - ty * tip - ny * hw], [A[0] + tx * tip - nx * hw, A[1] + ty * tip - ny * hw]];
+    const pg = (pp) => { g.beginPath(); pp.forEach(([x, y], i) => (i ? g.lineTo(x, y) : g.moveTo(x, y))); g.closePath(); };
+    pg(Q); g.fillStyle = rgba(st.col, .14); g.fill(); pg(Q.slice(0, 4)); g.fillStyle = rgba(st.col, .38); g.fill();
+    pg(Q); g.strokeStyle = rgba(st.col); g.lineWidth = st.w; g.lineJoin = 'miter'; g.stroke();
+    g.beginPath(); g.moveTo(A[0], A[1]); g.lineTo(B[0], B[1]); g.lineWidth = st.w * .6; g.stroke();
+  }
+}
+function drawStrand(st, pts, sd) {
+  if (st.a < .01) return;
+  g.save(); const wr = st.wr || 0, wc = st.wc || 0, wl = Math.max(0, 1 - wr - wc);
+  const D = st.closed ? pts.concat([pts[0]]) : pts;
+  if (wl > .02) { g.globalAlpha = clamp(st.a * wl, 0, 1); if (st.dash > .5) g.setLineDash([3, 6]); g.beginPath(); D.forEach(([x, y], i) => (i ? g.lineTo(x, y) : g.moveTo(x, y))); g.strokeStyle = rgba(st.col); g.lineWidth = st.w; g.lineCap = 'round'; g.lineJoin = 'round'; g.stroke(); g.setLineDash([]); }
+  if (wr > .02) { g.globalAlpha = clamp(st.a * wr, 0, 1); rope(D, st, sd); }
+  if (wc > .02) { g.globalAlpha = clamp(st.a * smooth(.3, 1, wc), 0, 1); crystal(D, st); }
+  g.restore();
+}
+function drawParticle(q) {
+  if (q.a < .02 || !isFinite(q.x)) return;
+  const A = clamp(q.a, 0, 1);
+  if (q.tail && q.wcard > .3) { g.save(); g.globalAlpha = A * .16 * q.wcard; g.strokeStyle = rgba(C.ink); g.lineWidth = 2.6; g.lineCap = 'round'; g.beginPath(); g.moveTo(q.tail[0], q.tail[1]); g.lineTo(q.x, q.y); g.stroke(); g.restore(); }
+  g.save(); g.translate(q.x, q.y);
+  const part = (w, fn) => { if (w > .02) { g.save(); g.globalAlpha = A * w; fn(); g.restore(); } };
+  part(q.wcard, () => { g.rotate(q.rot); const w = 22, h = 15; g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, 2.5); g.fillStyle = rgba(C.paper); g.fill(); g.strokeStyle = rgba(C.ink); g.lineWidth = 1.3; g.stroke();
+    g.beginPath(); g.moveTo(-w * .32, -h * .12); g.lineTo(w * .26, -h * .12); g.moveTo(-w * .32, h * .18); g.lineTo(w * .06, h * .18); g.lineWidth = .9; g.stroke();
+    if (q.mark) { g.beginPath(); g.moveTo(w / 2 - 7, -h / 2); g.lineTo(w / 2, -h / 2); g.lineTo(w / 2, -h / 2 + 7); g.closePath(); g.fillStyle = rgba(C.hard); g.fill(); } });
+  part(q.wcar, () => { g.rotate(q.rot); g.beginPath(); g.roundRect(-10, -5, 20, 10, 2.5); g.fillStyle = rgba(C.paper); g.fill(); g.strokeStyle = rgba(C.ink); g.lineWidth = 1.4; g.stroke(); g.fillStyle = rgba(C.ink); g.fillRect(3, -3.5, 3.5, 7); });
+  part(q.wvehicle, () => { g.rotate(q.rot); g.strokeStyle = rgba(C.ink); g.lineWidth = 1.5; g.fillStyle = rgba(C.paper); g.beginPath(); g.roundRect(-10, -12, 20, 24, 5); g.fill(); g.stroke(); g.fillStyle = rgba(C.ink); g.fillRect(-13, 1, 4, 9); g.fillRect(9, 1, 4, 9); g.beginPath(); g.moveTo(-5, -12); g.lineTo(-9, -22); g.moveTo(5, -12); g.lineTo(9, -22); g.stroke(); });
+  part(q.wdot, () => { g.fillStyle = rgba(q.col); g.beginPath(); g.arc(0, 0, 2.2 * q.s, 0, TAU); g.fill(); });
+  part(q.wmember, () => { g.fillStyle = rgba(q.col); g.beginPath(); g.moveTo(0, 0); g.lineTo(0, 22); g.lineTo(6, 16); g.lineTo(11, 25); g.lineTo(14, 23); g.lineTo(9, 15); g.lineTo(17, 15); g.closePath(); g.fill(); g.strokeStyle = rgba(C.paper); g.lineWidth = 1.2; g.stroke(); });
+  part(q.wnote, () => { g.rotate(q.rot); g.fillStyle = rgba(C.paper); g.strokeStyle = rgba(C.ink, .7); g.lineWidth = 1; g.beginPath(); g.rect(-14, -10, 28, 20); g.fill(); g.stroke(); g.fillStyle = rgba(q.col); g.fillRect(-14, -10, 4, 20); g.strokeStyle = rgba(C.ink, .5); g.beginPath(); g.moveTo(-6, -3); g.lineTo(9, -3); g.moveTo(-6, 3); g.lineTo(4, 3); g.stroke(); });
+  g.restore();
+}
+
+// fixtures that belong to one scene, faded by its weight
+function decor(id, w, t, lt) {
+  if (w < .01) return;
+  g.save(); g.globalAlpha = w;
+  if (id === 'ooze' || id === 'underway') { g.fillStyle = rgba(C.ink); g.font = '500 16px "JetBrains Mono"'; g.textAlign = 'center'; STEPS.forEach(([n, x]) => g.fillText(n, x, WB + 34)); g.fillStyle = rgba(C.ink2); g.font = '400 14px "JetBrains Mono"'; g.fillText('→', 580, FY + 5); g.fillText('→', 940 - 0, WB + 34); }
+  if (id === 'hard') {   // engraving-style hatching
+    g.strokeStyle = rgba(C.ink); g.lineWidth = .8; g.globalAlpha = w * .45;
+    g.save(); g.beginPath(); g.arc(400, 400, 170, 0, TAU); g.arc(400, 400, 140, 0, TAU, true); g.clip(); for (let x = 200; x < 600; x += 7) { g.beginPath(); g.moveTo(x, 200); g.lineTo(x + 120, 600); g.stroke(); } g.restore();
+    g.fillStyle = rgba(C.ink); g.globalAlpha = w; [[560, 330], [560, 470]].forEach(([x, y]) => g.fillRect(x, y - 18, 14, 36));
+    g.globalAlpha = w * .45; for (let j = 0; j < 5; j++) { const x0 = 960 - 168 + j * 84 + 6; for (let x = x0; x < x0 + 18; x += 5) { g.beginPath(); g.moveTo(x, 349); g.lineTo(x, 531); g.stroke(); } }
+    g.save(); g.beginPath(); g.moveTo(740, 320); g.lineTo(960, 235); g.lineTo(1180, 320); g.closePath(); g.clip(); for (let x = 700; x < 1200; x += 8) { g.beginPath(); g.moveTo(x, 235); g.lineTo(x - 60, 330); g.stroke(); } g.restore();
+  }
+  if (id === 'groups') { const hl = p4bLit(lt); GROUPS.forEach(([n, x, y], i) => { const k2 = i === 7 ? hl : 0, mix = (a2, b2) => a2.map((v, z) => lerp(v, b2[z], k2)); g.beginPath(); g.arc(x, y, 9 + 7 * k2, 0, TAU); g.fillStyle = rgba(mix(C.paper, C.cobalt)); g.fill(); g.strokeStyle = rgba(mix(C.ink, C.cobalt)); g.lineWidth = 1.6; g.stroke(); if (k2 > .01) { g.save(); g.globalAlpha *= k2; g.setLineDash([3, 5]); [34, 58].forEach((r) => { g.beginPath(); g.arc(x, y, r * (.7 + .3 * k2), 0, TAU); g.stroke(); }); g.setLineDash([]); g.restore(); } }); }
+  if (id === 'gather') { const [hx, hy] = HUB; g.fillStyle = rgba(C.cobalt); g.fillRect(hx - 8, hy - 8, 16, 16); g.setLineDash([3, 5]); g.strokeStyle = rgba(C.cobalt, .5); g.lineWidth = 1.2; [28, 52, 82].forEach((r) => { g.beginPath(); g.arc(hx, hy, r, 0, TAU); g.stroke(); }); g.setLineDash([]); }
+  if (id === 'themes') { g.globalAlpha = w * reveal(0, lt); const [lx, ly] = cellC(0); const r = g.createRadialGradient(lx, ly, 0, lx, ly, 40); r.addColorStop(0, rgba(C.cobalt, .3)); r.addColorStop(1, rgba(C.cobalt, 0)); g.fillStyle = r; g.fillRect(lx - 40, ly - 40, 80, 80); g.fillStyle = rgba(C.cobalt); g.beginPath(); g.arc(lx, ly, 5, 0, TAU); g.fill();
+    g.globalAlpha = w * reveal(2, lt); const [sx, sy] = cellC(2); g.fillStyle = rgba(C.ink); g.beginPath(); g.arc(sx, sy, 5, 0, TAU); g.fill(); }
+  g.restore();
+}
+// things that sit on top of the strands: the essay pages
+function decorTop(id, w) {
+  if (w < .01) return;
+  g.save(); g.globalAlpha = smooth(.35, .9, w);
+  if (id === 'archive') {   // the pages stack like real paper: opaque, each with its own edge
+    SHEETS.forEach(([x, y, rot], i) => { g.save(); g.translate(x, y); g.rotate(rot); g.shadowColor = 'rgba(44,44,42,.14)'; g.shadowBlur = 24; g.shadowOffsetY = 8; g.fillStyle = '#ffffff'; g.fillRect(-165, -210, 330, 420); g.shadowColor = 'transparent'; g.strokeStyle = rgba(C.ink, .55); g.lineWidth = 1; g.strokeRect(-165, -210, 330, 420);
+      const T = ['The Swarm and the Formation', 'Safe New World', 'A Protocol Pattern Language for Urban Space', 'Protocols Don’t Build Pyramids', 'Constructing the Evil Twin of AI', 'The Unreasonable Sufficiency of Protocols'][i];
+      g.fillStyle = rgba(i === 5 ? C.cobalt : C.ink2); g.font = '500 14px "JetBrains Mono"'; g.fillText(i === 4 ? 'PROTOCOLIZED · 2025' : i === 5 ? 'SUMMER OF PROTOCOLS · 2024' : 'SUMMER OF PROTOCOLS', -135, -170);
+      g.fillStyle = rgba(C.ink); g.font = '600 27px Lora'; let ln = '', yy = -130; T.split(' ').forEach((wd) => { if (g.measureText(ln + wd).width > 270) { g.fillText(ln, -135, yy); ln = ''; yy += 34; } ln += wd + ' '; }); g.fillText(ln, -135, yy);
+      g.fillStyle = rgba(C.hair); for (let q = 0; q < 8; q++) g.fillRect(-135, yy + 36 + q * 20, 250 - (q % 3) * 40, 4); g.restore(); });
+  }
+  g.restore();
+}
+// fog over the tangle: paper mist with one slow lens that shows a single piece
+function fog(w, t) {
+  if (w < .01) return;
+  fg.setTransform(1, 0, 0, 1, 0, 0); fg.clearRect(0, 0, fogCv.width, fogCv.height); fg.setTransform(k, 0, 0, k, 0, 0);
+  fg.fillStyle = 'rgba(249,248,245,.96)'; fg.fillRect(0, 0, W, H);
+  const lx = 820 + Math.sin(t * .35) * 330, ly = 400 + Math.sin(t * .5) * 80, R = 210;
+  fg.globalCompositeOperation = 'destination-out'; const r = fg.createRadialGradient(lx, ly, 0, lx, ly, R); r.addColorStop(0, 'rgba(0,0,0,1)'); r.addColorStop(.62, 'rgba(0,0,0,.9)'); r.addColorStop(1, 'rgba(0,0,0,0)'); fg.fillStyle = r; fg.fillRect(0, 0, W, H); fg.globalCompositeOperation = 'source-over';
+  fg.strokeStyle = 'rgba(44,44,42,.4)'; fg.lineWidth = 1; fg.setLineDash([2, 6]); fg.beginPath(); fg.arc(lx, ly, R * .8, 0, TAU); fg.stroke(); fg.setLineDash([]);
+  g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = w; g.drawImage(fogCv, 0, 0); g.restore();
+}
+
+// ---------- overlay ----------
+const QR = document.getElementById('qr-src').innerHTML;
+const pc = (x) => (x / 19.2).toFixed(2) + 'cqw', pv = (y) => (y / 10.8).toFixed(2) + 'cqh';
+function overlayHTML(sc) {
+  let h = sc.tag ? `<span class="tag">${sc.tag}</span>` : '';
+    if (sc.id === 'underway') h += `<div class="ev" style="left:${pc(96)};top:${pv(110)}"><b>OPENAI · 2026</b>Agents found ways to talk to each other by writing files into a package manager.</div><div class="ev" style="left:${pc(96)};top:${pv(560)}"><b>MODEL CONTEXT PROTOCOL · 2024</b>Agents plug straight into a company’s tools and data.</div><div class="ev" style="left:${pc(640)};top:${pv(560)}"><b>AGENT PAYMENTS PROTOCOL · 2025</b>Agents can pay for things on someone’s behalf.</div>`;
+  if (sc.id === 'hard') h += `<span class="lbl c" style="left:${pc(400)};top:${pv(615)}">Atoms<i>A vault stays shut</i></span><span class="lbl c" style="left:${pc(960)};top:${pv(615)}">Institutions<i>Courts and banks behave predictably</i></span><span class="lbl c" style="left:${pc(1520)};top:${pv(615)}">Blockchains<i>A record that won’t change</i></span>`;
+  if (sc.id === 'inst') h += `<div class="big">Protocol<br>Institute</div>${['RESEARCH', 'EDUCATION', 'MEDIA', 'SCENE-MAKING'].map((w, i) => `<span class="pill" style="left:${pc(96 + i * 250 + 90)};top:${pv(612)}">${w}</span>`).join('')}<div class="side"><b>Protocolized</b><p>Online publication.</p><b>Protocol School</b><p>First class, 2025.</p><b>Symposium</b><p>2026: New Nature.</p></div>`;
+  if (sc.id === 'groups') h += GROUPS.map(([n, x, y], i) => `<span class="lbl${i === 7 ? ' p4b' : ''}" style="left:${pc(x + 20)};top:${pv(y + 18)}">${n}</span>`).join('');
+  if (sc.id === 'themes') h += [['I. What agents are, in practice', 'Nov–Dec'], ['II. Natural coordination', 'Jan–Feb'], ['III. Emissions', 'Feb–Apr'], ['IV. Seeing hardness in incidents', 'May–Jun'], ['V. Engineering hardness', 'Jul–Sep'], ['VI. Operational liveness', 'Oct–Nov']].map(([n, d], i) => `<div class="cell" style="left:${pc(CELLS[i][0])};top:${pv(CELLS[i][1] + CH + 16)};width:13.5cqw">${n}<small>${d}</small></div>`).join('');
+  if (sc.id === 'end') h += `<div class="title">Protocols<br>for Business</div><div class="meta">Kickoff · Monday 2 November · 15:30 UTC<br><span style="color:var(--ink2)">Every other Monday on Discord. Recorded.</span><span class="url">protocolsforbusiness.com</span></div><div class="qr">${QR}</div>`;
+  if (sc.cap) h += `<div class="cap">${sc.cap}${sc.sub ? `<span class="sub">${sc.sub}</span>` : ''}</div>`;
+  if (sc.credit) h += `<span class="credit">${sc.credit}</span>`;
+  return h;
+}
+const layers = SC.map((sc) => { const d = document.createElement('div'); d.className = 'fade'; d.style.opacity = 0; d.innerHTML = overlayHTML(sc); ov.appendChild(d); return d; });
+
+const p4bLabel = layers[SC.findIndex((x) => x.id === 'groups')].querySelector('.p4b');
+const themeCells = [...layers[SC.findIndex((x) => x.id === 'themes')].querySelectorAll('.cell')];
+// ---------- a frame ----------
+function sceneAt(t) { let i = 0; while (i < SC.length - 1 && t >= SC[i + 1].t) i++; return i; }
+function weights(t) { return SC.map((sc, i) => { const a = sc.t, b = i < SC.length - 1 ? SC[i + 1].t : END + 10; return smooth(a - MORPH / 2, a + MORPH / 2, t) * (1 - smooth(b - MORPH / 2, b + MORPH / 2, t)); }); }
+const KINDS = ['card', 'car', 'vehicle', 'fibre', 'dot', 'member', 'note'];
+let T = 0;
+function render(t) {
+  const Wt = weights(t), i = sceneAt(t);
+  const pairs = Wt.map((w, j) => [w, j]).filter(([w]) => w > .001).sort((a, b) => b[0] - a[0]).slice(0, 2), tot = pairs.reduce((s, [w]) => s + w, 0) || 1;
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = rgba(C.paper); g.fillRect(0, 0, cv.width, cv.height); g.setTransform(k, 0, 0, k, 0, 0);
+  pairs.forEach(([w, j]) => decor(SC[j].id, w / tot, t, t - SC[j].t));
+  for (const s of S) {
+    let pts = null, st = null;
+    const Ls = pairs.map(([w, j]) => scenes[SC[j].id](s, t, t - SC[j].t)), pw = pairs.map(([w], z) => (w / tot) * (Ls[z].a > .01 ? 1 : 1e-4)), pwt = pw.reduce((a, b) => a + b, 0);
+    const pos = Array.from({ length: K }, () => [0, 0]);
+    Ls.forEach((L, z) => { const v = pw[z] / pwt; for (let m = 0; m < K; m++) { const p = L.f(m / (K - 1)); pos[m][0] += p[0] * v; pos[m][1] += p[1] * v; } });
+    pairs.forEach(([w, j], z) => { const u = w / tot, L = Ls[z], q = pos;
+      const kr = L.kind === 'rope' ? 1 : 0, kc = L.kind === 'crystal' ? 1 : 0;
+      if (!pts) { pts = q; st = { brkA: (L.brkA || 0) * u, brkB: (L.brkB || 0) * u, w: L.w * u, rw: (L.rw || 3) * u, fibres: (L.fibres || 2) * u, pitch: (L.pitch || 18) * u, hw: (L.hw || 8) * u, rod: (L.rod || 26) * u, col: L.col.map((v) => v * u), a: L.a * u, wr: kr * u, wc: kc * u, closed: !!L.closed, dash: (L.dash || 0) * u }; }
+      else { st.brkA += (L.brkA || 0) * u; st.brkB += (L.brkB || 0) * u; st.w += L.w * u; st.rw += (L.rw || 3) * u; st.fibres += (L.fibres || 2) * u; st.pitch += (L.pitch || 18) * u; st.hw += (L.hw || 8) * u; st.rod += (L.rod || 26) * u; st.col = st.col.map((v, z) => v + L.col[z] * u); st.a += L.a * u; st.wr += kr * u; st.wc += kc * u; st.closed = st.closed && !!L.closed; st.dash += (L.dash || 0) * u; } });
+    drawStrand(st, pts, s.seed);
+  }
+  for (const p of P) {
+    const q = { x: 0, y: 0, a: 0, s: 0, rot: 0, col: [0, 0, 0], tail: null, mark: false }; KINDS.forEach((kk) => (q['w' + kk] = 0));
+    const Rs = pairs.map(([w, j]) => pscenes[SC[j].id](p, t, t - SC[j].t)), qw = pairs.map(([w], z) => (w / tot) * (Rs[z].a > .01 ? 1 : 1e-4)), qwt = qw.reduce((a, b) => a + b, 0);
+    Rs.forEach((r, z) => { q.x += r.x * qw[z] / qwt; q.y += r.y * qw[z] / qwt; });
+    pairs.forEach(([w, j], z) => { const u = w / tot, r = Rs[z]; q.a += r.a * u; q.s += r.s * u; q.rot += (r.rot || 0) * u; q.col = q.col.map((v, z) => v + (r.col || C.ink)[z] * u); if (r.a > .01) q['w' + r.kind] += u; if (r.tail && u > .5) q.tail = r.tail; if (r.mark && u > .5) q.mark = true; });
+    const ws = KINDS.reduce((s, kk) => s + q['w' + kk], 0); if (!ws) continue; KINDS.forEach((kk) => (q['w' + kk] /= ws));
+    drawParticle(q);
+  }
+  pairs.forEach(([w, j]) => decorTop(SC[j].id, w / tot));
+  pairs.forEach(([w, j]) => { if (SC[j].id === 'tangle') fog(Math.min(1, w / tot * 1.8), t); });
+  const GI = SC.findIndex((x) => x.id === 'groups'); if (p4bLabel) p4bLabel.style.color = rgba(C.ink.map((v, z) => lerp(v, C.cobalt[z], p4bLit(t - SC[GI].t))));
+  const TI = SC.findIndex((x) => x.id === 'themes'); themeCells.forEach((el, c) => (el.style.opacity = reveal(c, t - SC[TI].t).toFixed(3)));
+  layers.forEach((L, j) => { const a = SC[j].t, b = j < SC.length - 1 ? SC[j + 1].t : END + 10; L.style.opacity = (smooth(a + .1, a + .9, t) * (1 - smooth(b - .9, b - .1, t))).toFixed(3); });
+  document.getElementById('clock').textContent = `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+  chapterBtns.forEach((b, j) => b.classList.toggle('on', j === i));
+}
+
+
+// ---------- the score: synthesized in the browser, scheduled from film time so it follows pause, scrub and jumps ----------
+const audio = (() => {
+  const B = 60 / 84, BAR = 4 * B, mtof = (m) => 440 * Math.pow(2, (m - 69) / 12);
+  const at = (id) => SC.find((x) => x.id === id).t;
+  const tSnap = at('snap'), tOoze = at('ooze'), tTwin = at('twin'), tArch = at('archive'), tGroups = at('groups'), tGather = at('gather'), tThemes = at('themes'), tEnd = at('end');
+  // I – vi – IV – V in D major: D, Bm, G, A. Each chord as pitch classes (root first); every part plays only notes of the chord sounding.
+  const CH = [[2, 6, 9], [11, 2, 6], [7, 11, 2], [9, 1, 4]];
+  const chordAt = (t) => CH[Math.floor(Math.max(0, t) / BAR + 1e-6) % 4];
+  const tone = (pcs, target) => { let best = 0, bd = 99; for (let m = target - 7; m <= target + 7; m++) if (pcs.includes(((m % 12) + 12) % 12) && Math.abs(m - target) < bd) { best = m; bd = Math.abs(m - target); } return best; };
+  const voice = (pcs) => [tone([pcs[0]], 40), tone(pcs, 55), tone(pcs, 59), tone(pcs, 64)];   // bass, then a close triad around middle C
+  let h = 7; const hr = () => (h = (h * 16807) % 2147483647) / 2147483647;
+  const EV = [], add = (t, type, o = {}) => { if (t >= tEnd - .02 && !o.last && o.m != null) return; EV.push({ t, type, ...o }); };   // nothing from the last bar spills into the final chord
+  const padLevel = (t) => smooth(1.5, 6, t) * (t > tSnap + .5 && t < tOoze - .5 ? .35 : 1);
+  let lastTop = 74;
+  for (let k = 0; k * BAR < tEnd; k++) {
+    const t = k * BAR, pcs = CH[k % 4], v = voice(pcs);
+    v.forEach((m, i) => add(t, 'pad', { m, dur: BAR, g: (i ? .045 : .06) * padLevel(t) }));
+    if (t >= tArch) v.slice(1).forEach((m) => add(t, 'str', { m: m + 12, dur: BAR, g: .02 * smooth(tArch, tArch + 6, t) }));
+    // piano: chord tones in the octave above, moving to the nearest one so the line stays smooth
+    const line = (n, beatGap, g0) => { for (let i = 0; i < n; i++) { const target = lastTop + [0, -3, 2, -2][i % 4]; const m = tone(pcs, target); lastTop = m; add(t + i * beatGap * B, 'pno', { m, g: i ? g0 * .8 : g0 }); } };
+    if (t < tSnap) line(k % 2 ? 3 : 2, 1.5, .2);
+    else if (t >= tOoze && t < tTwin) line(1, 4, .14);
+    else if (t >= tTwin && t < tArch) { [0, 2].forEach((bt) => v.slice(1).forEach((m) => add(t + bt * B, 'pno', { m: m + 12, g: .08 }))); }
+    else if (t >= tArch && t < tGather) line(4, 1, .13);
+    else if (t >= tGather) line(4, 1, .17);
+    // the pulse: root and fifth of the chord; restless while AI oozes, in step once the rails harden
+    if ((t >= tOoze && t < tArch) || t >= tGather) for (let e = 0; e < 8; e++) {
+      const loose = t < tTwin; if (loose && hr() < .22) continue;
+      const tt = t + e * B / 2 + (loose ? (hr() - .5) * .04 : 0), m = tone([pcs[0]], 62) + (e % 2 ? 7 : 0);
+      add(tt, 'plk', { m, g: (t >= tGather ? .05 : .075) * (loose ? .75 + hr() * .4 : 1) });
+    }
+  }
+  // the break: a creak as it tautens, three fibres snap, a low D when it parts
+  add(tSnap + 1.1, 'creak', { dur: .75 });
+  [1.92, 2.32, 2.72].forEach((d, i) => add(tSnap + d, 'snap', { g: .5 + i * .15 }));
+  add(tSnap + 2.78, 'pno', { m: tone(chordAt(tSnap + 2.78).slice(0, 1), 38), g: .28 }); add(tSnap + 2.78, 'thump', {});
+  add(tTwin + .25, 'bell', { m: tone(chordAt(tTwin + .25), 86), g: .08 });
+  [0.6, 1.1, 1.5].forEach((d) => add(tArch + d, 'paper', {}));
+  for (let i = 0; i < 8; i++) { const tt = tGroups + .9 + i * .3; add(tt, 'tick', { m: tone(chordAt(tt), 79 + i * 2) }); }
+  { const tt = tGroups + 4.8; add(tt, 'bell', { m: tone(chordAt(tt), 81), g: .08 }); }   // Protocols for Business lights up
+  for (let c = 0; c < 6; c++) { const tt = tThemes + .9 + c * 1.5; add(tt, 'bell', { m: tone(chordAt(tt), 74 + c * 2), g: .065 }); }   // a rising chord tone for each theme
+  for (let m = 0; m < 3; m++) add(tThemes + 9.4 + m * .4, 'click', {});
+  for (let c = 0; c < 6; c++) add(tThemes + 10.05 + c * .35, 'tap', {});
+  // the resolution: a plain D major chord, held, then silence
+  [38, 50, 54, 57, 62].forEach((m) => add(tEnd, 'pad', { m, dur: 4.5, g: .05, last: true }));
+  [62, 66, 69, 74].forEach((m) => { add(tEnd, 'pno', { m, g: .12, last: true }); add(tEnd, 'str', { m: m + 12, dur: 4, g: .02, last: true }); });
+  EV.sort((a, b) => a.t - b.t);
+
+  let ctx = null, bus = null, verb = null, on = false, sched = 0, anchor = 0, base = 0, noiseBuf = null;
+  function graph() {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const comp = ctx.createDynamicsCompressor(); comp.threshold.value = -18; comp.ratio.value = 3; comp.connect(ctx.destination);
+    const master = ctx.createGain(); master.gain.value = .9; master.connect(comp);
+    verb = ctx.createConvolver(); const len = ctx.sampleRate * 2.6, ir = ctx.createBuffer(2, len, ctx.sampleRate);
+    for (let c = 0; c < 2; c++) { const d = ir.getChannelData(c); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 2.4); }
+    verb.buffer = ir; const wet = ctx.createGain(); wet.gain.value = .32; verb.connect(wet); wet.connect(master);
+    noiseBuf = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate); const nd = noiseBuf.getChannelData(0); for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    graph.master = master;
+  }
+  function newBus() { if (bus) { const old = bus; old.gain.setTargetAtTime(0, ctx.currentTime, .03); setTimeout(() => old.disconnect(), 300); } bus = ctx.createGain(); bus.gain.value = 1; bus.connect(graph.master); bus.connect(verb); }
+  const env = (g, t0, a, peak, d) => { g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(peak, t0 + a); g.gain.exponentialRampToValueAtTime(.0001, t0 + a + d); };
+  function osc(type, f, t0, t1, out, detune = 0) { const o = ctx.createOscillator(); o.type = type; o.frequency.value = f; o.detune.value = detune; o.connect(out); o.start(t0); o.stop(t1); return o; }
+  function play(ev, t0, cut = 0) {
+    const g = ctx.createGain(); g.connect(bus);
+    if (ev.type === 'pno') { const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1900; lp.connect(g); const f = mtof(ev.m); osc('sine', f, t0, t0 + 3.2, lp); const o2 = ctx.createGain(); o2.gain.value = .15; o2.connect(lp); osc('triangle', f * 2, t0, t0 + 3.2, o2); env(g, t0, .006, ev.g, 2.8); }
+    if (ev.type === 'pad' || ev.type === 'str') { const dur = ev.dur - cut, lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = ev.type === 'pad' ? 1100 : 1700; lp.connect(g); const f = mtof(ev.m), ty = ev.type === 'pad' ? 'triangle' : 'sawtooth';
+      const rel = ev.last ? 2.5 : .35, a = ev.last ? .3 : Math.min(.35, dur); osc(ty, f, t0, t0 + dur + rel + .1, lp, -4); osc(ty, f, t0, t0 + dur + rel + .1, lp, 4); g.gain.setValueAtTime(0, t0); g.gain.linearRampToValueAtTime(ev.g, t0 + a); g.gain.setValueAtTime(ev.g, t0 + dur - .05); g.gain.linearRampToValueAtTime(0, t0 + dur + rel); }
+    if (ev.type === 'plk') { const lp = ctx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.setValueAtTime(2600, t0); lp.frequency.exponentialRampToValueAtTime(380, t0 + .16); lp.connect(g); osc('square', mtof(ev.m), t0, t0 + .4, lp); env(g, t0, .004, ev.g, .3); }
+    if (ev.type === 'bell') { [1, 2, 3].forEach((r, i) => { const gg = ctx.createGain(); gg.connect(g); osc('sine', mtof(ev.m) * r, t0, t0 + 3, gg); env(gg, t0, .003, ev.g / (i * 1.6 + 1), 2.4 / (i + 1)); }); g.gain.value = 1; }
+    if (ev.type === 'tick') { osc('sine', mtof(ev.m), t0, t0 + .3, g); env(g, t0, .002, .05, .18); }
+    const noise = (dur, type, f, peak, a = .004, q = 1) => { const src = ctx.createBufferSource(); src.buffer = noiseBuf; const bf = ctx.createBiquadFilter(); bf.type = type; bf.frequency.value = f; bf.Q.value = q; src.connect(bf); bf.connect(g); src.start(t0, Math.random() * .5, dur + .1); env(g, t0, a, peak, dur); return bf; };
+    if (ev.type === 'snap') { noise(.08, 'highpass', 2500, .35 * ev.g); const g2 = ctx.createGain(); g2.connect(bus); osc('sine', 140, t0, t0 + .2, g2); env(g2, t0, .002, .12 * ev.g, .12); }
+    if (ev.type === 'creak') { const bf = noise(ev.dur, 'bandpass', 300, .06, ev.dur * .6, 6); bf.frequency.setValueAtTime(220, t0); bf.frequency.linearRampToValueAtTime(520, t0 + ev.dur); }
+    if (ev.type === 'thump') { osc('sine', 62, t0, t0 + .8, g); env(g, t0, .005, .25, .6); }
+    if (ev.type === 'paper') noise(.22, 'bandpass', 3200, .045, .02, .8);
+    if (ev.type === 'click') noise(.03, 'highpass', 4000, .08);
+    if (ev.type === 'tap') { noise(.05, 'bandpass', 1800, .06, .002, 2); }
+  }
+  function start(T) { if (!ctx) graph(); if (ctx.state === 'suspended') ctx.resume(); newBus(); anchor = ctx.currentTime + .06; base = T; sched = T;
+    for (const ev of EV) { if ((ev.type === 'pad' || ev.type === 'str') && ev.t < T && ev.t + ev.dur > T + .3) play(ev, anchor, T - ev.t); } }
+  function stop() { if (ctx && bus) { const old = bus; old.gain.setTargetAtTime(0, ctx.currentTime, .04); setTimeout(() => old.disconnect(), 300); bus = null; } }
+  return {
+    get on() { return on; },
+    toggle(T, playing) { on = !on; if (on && playing) start(T); else stop(); return on; },
+    restart(T, playing) { if (on && playing) start(T); else stop(); },
+    stop,
+    tick(T) {   // schedule what falls in the next half second of film
+      if (!on || !bus) return;
+      const nowFilm = base + (ctx.currentTime - anchor); if (Math.abs(nowFilm - T) > .25) { start(T); return; }   // drifted (tab hidden, slow frame): resync
+      const to = T + .5;
+      for (const ev of EV) { if (ev.t >= sched && ev.t < to) play(ev, anchor + (ev.t - base)); }
+      sched = to;
+    },
+  };
+})();
+
+// ---------- transport ----------
+const playBtn = document.getElementById('play'), scrub = document.getElementById('scrub'), chapters = document.getElementById('chapters');
+scrub.max = END;
+const chapterBtns = SC.map((sc, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = `${i + 1}`; b.title = sc.cap || 'End card'; b.onclick = () => { T = sc.t + .01; render(T); audio.restart(T, playing); }; chapters.appendChild(b); return b; });
+const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches, EMBED = /[?&]embed\b/.test(location.search);
+if (EMBED) document.body.classList.add('embed');
+let playing = !REDUCE && !EMBED, last = 0, ready = false;
+playBtn.textContent = playing ? 'Pause' : 'Play';
+playBtn.onclick = () => { playing = !playing; playBtn.textContent = playing ? 'Pause' : 'Play'; last = 0; audio.restart(T, playing); };
+const soundBtn = document.getElementById('sound');
+soundBtn.onclick = () => { const on = audio.toggle(T, playing); soundBtn.textContent = on ? 'Sound off' : 'Sound on'; soundBtn.setAttribute('aria-pressed', on); };
+scrub.oninput = () => { T = +scrub.value; render(T); audio.restart(T, playing); };
+addEventListener('keydown', (e) => { if (e.key === ' ' && e.target === document.body) { e.preventDefault(); playBtn.click(); } });
+function loop(now) { requestAnimationFrame(loop); if (playing && ready) { const dt = last ? Math.min(.05, (now - last) / 1000) : 0; last = now; T += dt; if (T > END) { T = 0; audio.restart(T, playing); } scrub.value = T; render(T); audio.tick(T); } }
+document.fonts.load('600 27px Lora').then(() => document.fonts.load('500 14px "JetBrains Mono"')).then(() => { ready = true; render(T); requestAnimationFrame(loop); window.__ready = true; });
+window.__seek = (t) => { T = t; playing = false; render(t); };
+// in the deck: the slide tells the film when it's on screen
+addEventListener('message', (e) => { const cmd = e.data && e.data.film; if (cmd === 'play' && !playing && !REDUCE) playBtn.click(); if (cmd === 'pause' && playing) playBtn.click(); });
+})();
+</script>

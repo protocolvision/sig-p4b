@@ -8,7 +8,9 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="deck.js" defer></script>
+<script src="fig.js" defer></script>
 <style>
 /* Same tokens as style.css: one typeface, ink and paper, cobalt for links only. */
 :root { color-scheme: light; --bg:#ffffff; --fg:#262624; --muted:#6b6a66; --rule:#e8e6e1; --fill:#f6f5f2; --link:#004fcc; --link-hover:#003a96; }
@@ -51,7 +53,7 @@ li { margin: .25em 0; }
 figure { margin: 0; }
 figure img { width: 100%; height: auto; display: block; }
 .foot { display: flex; justify-content: flex-end; color: var(--muted); font-size: .9rem; padding-top: .8rem; width: 100%; max-width: 82rem; margin: 0 auto; }
-.foot::after { content: counter(s) " / 10"; }
+.foot::after { content: counter(s) " / 11"; }
 .notes { display: none; width: 100%; max-width: 82rem; margin: 1rem auto 0; padding: .8rem 1rem; background: var(--fill); border-left: 2px solid var(--muted); font-size: .9rem; line-height: 1.5; }
 .notes::before { content: "Speaker notes"; display: block; font-size: .72rem; color: var(--muted); margin-bottom: .3rem; }
 .notes p { margin: 0 0 .5em; }
@@ -102,9 +104,201 @@ h2.line { white-space: nowrap; }
 @media (max-width: 760px) { h2.line { white-space: normal; } }
 .content > header.span { grid-column: 1 / -1; margin-bottom: -2.5vw; }
 .content:has(> header.span) figure { margin-top: 0; }
+/* ---- live layer (deck.js) ---- */
+.bar { align-items: center; padding-block: .55rem; }
+.bar .side { display: flex; align-items: center; gap: 1rem; }
+.bar .follow { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); }
+.qr { width: 40px; height: 40px; padding: 3px; border: 1px solid var(--rule); background: #fff; border-radius: 4px; cursor: zoom-in; }
+.qr svg { width: 100%; height: 100%; display: block; }
+.qr.big { position: fixed; z-index: 6; right: 6vw; top: 3.4rem; width: min(70vw, 320px); height: auto; aspect-ratio: 1; padding: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.18); cursor: zoom-out; }
+.pill { font: inherit; font-size: .78rem; border: 1px solid var(--rule); background: #fff; border-radius: 999px; padding: .25rem .75rem; cursor: pointer; color: var(--fg); }
+.pill b { color: var(--link); font-weight: 600; }
+.qa { position: fixed; z-index: 3; top: 3.5rem; right: 0; bottom: 0; width: min(23rem, 100vw); background: var(--bg); border-left: 1px solid var(--rule); padding: 1rem 1.2rem 2rem; overflow: auto; font-size: .95rem; line-height: 1.45; transform: translateX(100%); visibility: hidden; transition: transform .25s ease, visibility .25s; }
+body.qa-open .qa { transform: none; visibility: visible; }
+@media (min-width: 1100px) {
+  body.qa-open .slide { padding-right: calc(23rem + 2vw); }
+  body.qa-open h1 { font-size: clamp(2.4rem, 5vw, 4.6rem); }
+  body.qa-open h2 { font-size: clamp(1.6rem, 2.6vw, 2.7rem); }
+  body.qa-open h2.two { font-size: clamp(1.4rem, 1.9vw, 2rem); }
+}
+@media (min-width: 1100px) and (max-width: 1499px) {
+  body.qa-open h2.line { white-space: normal; }
+  body.qa-open .themes { grid-template-columns: 5em minmax(0, 1.2fr) minmax(0, 1fr) auto 2.5em; width: auto; }
+  body.qa-open .themes li > span { white-space: normal; }
+}
+.qa header { display: flex; justify-content: space-between; align-items: center; }
+#qa-close { border: 0; background: none; font-size: 1.5rem; line-height: 1; cursor: pointer; color: var(--muted); }
+.qa textarea, .widget textarea, .widget input { width: 100%; font: inherit; font-size: .9rem; padding: .5rem .6rem; border: 1px solid var(--rule); border-radius: 6px; background: #fff; color: var(--fg); resize: vertical; }
+.row { display: flex; gap: .8em; align-items: center; margin-top: .5em; flex-wrap: wrap; }
+.btn { font: inherit; font-size: .85rem; border: 1px solid var(--link); color: var(--link); background: #fff; border-radius: 6px; padding: .35rem .85rem; cursor: pointer; }
+.btn:hover, .btn.toggle.on { background: var(--link); color: #fff; }
+.qa-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+.qa-list li { display: grid; grid-template-columns: 2.6rem 1fr; gap: .7rem; align-items: start; padding: .6rem 0; margin: 0; border-top: 1px solid var(--rule); }
+.qa-list p { margin: .15rem 0 0; }
+.qa-list button { display: flex; flex-direction: column; align-items: center; border: 1px solid var(--rule); background: #fff; border-radius: 6px; padding: .15rem 0; cursor: pointer; color: var(--muted); font: inherit; font-size: .78rem; }
+.qa-list button.on { border-color: var(--link); color: var(--link); }
+.qa-list li.empty { display: block; color: var(--muted); }
+.foot { justify-content: space-between; align-items: center; }
+.react { display: flex; gap: .5rem; }
+.react button { font: inherit; font-size: .95rem; display: inline-flex; gap: .35em; align-items: center; border: 1px solid var(--rule); background: #fff; border-radius: 999px; padding: .2rem .7rem; cursor: pointer; color: var(--fg); transition: transform .15s ease; }
+.react button:active { transform: scale(1.18); }
+.react button.on { border-color: var(--link); background: color-mix(in srgb, var(--link) 8%, #fff); }
+.react b { font-weight: 600; font-size: .78rem; }
+[data-poll][role="button"] { cursor: pointer; transition: background-color .2s; }
+[data-poll][role="button"]:hover { background-color: var(--fill); }
+[data-poll][role="button"].on { background-color: color-mix(in srgb, var(--link) 7%, #fff); }
+[data-poll][role="button"]:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.ct, .pct { color: var(--muted); font-size: .85em; text-align: right; white-space: nowrap; }
+.ct b, .pct b { font-weight: 600; color: var(--link); }
+.on .ct::before, .on .pct::before { content: "✓ "; color: var(--link); }
+.rows.there li { grid-template-columns: 8.5em minmax(0, 1fr) 3em; }
+.lesson li { grid-template-columns: minmax(0, 1fr) 1.2em minmax(0, 1fr) 3em; background-image: linear-gradient(90deg, color-mix(in srgb, var(--link) 10%, transparent) var(--pct, 0%), transparent var(--pct, 0%)); transition: background-color .2s, --pct .6s; }
+.themes { grid-template-columns: 6.5em max-content max-content max-content 3em; }
+.hint { font-size: .76em; color: var(--link); margin: -.25em 0 .7em; }
+.widget { border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.1rem; background: var(--bg); font-size: .82em; line-height: 1.45; }
+.widget .wk { font-weight: 600; margin: 0 0 .5em; }
+.mini { padding-left: 1.2em; margin: 0 0 .6em; }
+.mini li { margin: .25em 0; }
+.widget details { margin: 0 0 .6em; }
+.widget pre { white-space: pre-wrap; font: .72rem/1.5 ui-monospace, Menlo, monospace; background: var(--fill); padding: .6rem; border-radius: 6px; max-height: 12em; overflow: auto; }
+.preview { color: var(--muted); margin: .4em 0 0; }
+.fine { font-size: .82em; color: var(--muted); margin: .6em 0 0; }
+.ok { color: #0f6e56; }
+.stack { display: grid; gap: 1rem; }
+#paid-form label { display: block; font-size: .9em; color: var(--muted); margin-top: .4em; }
+figure.live canvas { display: block; width: min(100%, 100vh); }
+@property --pct { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+@media (max-width: 760px) {
+  .bar .follow span, .bar label { display: none; }
+  .rows.there li { grid-template-columns: minmax(0, 1fr) 3em; } .rows.there .k { grid-column: 1 / -1; }
+  .lesson li { grid-template-columns: minmax(0, 1fr) 3em; } .lesson .then { grid-column: 1; } .lesson .pct { grid-row: 1 / span 2; grid-column: 2; }
+  .themes .ct { grid-column: 2; text-align: left; }
+  .content .widget, .content .stack { order: 2; }
+}
+/* gentle entrances, once per slide (deck.js adds .anim and .in; reduced motion skips them) */
+html.anim .slide .content > header, html.anim .slide .content > div > *, html.anim .slide .content > figure, html.anim .slide .content > .widget, html.anim .slide .content > .stack { opacity: 0; transform: translateY(10px); transition: opacity .7s ease, transform .7s ease; }
+html.anim .slide.in .content > header, html.anim .slide.in .content > div > *, html.anim .slide.in .content > figure, html.anim .slide.in .content > .widget, html.anim .slide.in .content > .stack { opacity: 1; transform: none; }
+html.anim .slide .content > div > :nth-child(2) { transition-delay: .08s; } html.anim .slide .content > div > :nth-child(3) { transition-delay: .16s; }
+html.anim .slide .content > div > :nth-child(4) { transition-delay: .24s; } html.anim .slide .content > div > :nth-child(5) { transition-delay: .32s; }
+html.anim .slide .content > figure, html.anim .slide .content > .widget, html.anim .slide .content > .stack { transition-delay: .3s; }
+html.anim #s1 .content > figure { transform: translateX(24px); transition-duration: 1.4s; }
+html.anim #s3 .there li, html.anim #s4 .lesson li { opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease, background-color .2s; }
+html.anim #s3.in .there li, html.anim #s4.in .lesson li { opacity: 1; transform: none; }
+html.anim #s4 .lesson .to { display: inline-block; transform: scaleX(0); transform-origin: left; transition: transform .5s ease; }
+html.anim #s4.in .lesson .to { transform: none; }
+html.anim #s3.in .there li:nth-child(1), html.anim #s4.in .lesson li:nth-child(1) { transition-delay: 0.49s; }
+html.anim #s4.in .lesson li:nth-child(1) .to { transition-delay: 0.89s; }
+html.anim #s3.in .there li:nth-child(2), html.anim #s4.in .lesson li:nth-child(2) { transition-delay: 0.63s; }
+html.anim #s4.in .lesson li:nth-child(2) .to { transition-delay: 1.03s; }
+html.anim #s3.in .there li:nth-child(3), html.anim #s4.in .lesson li:nth-child(3) { transition-delay: 0.77s; }
+html.anim #s4.in .lesson li:nth-child(3) .to { transition-delay: 1.17s; }
+html.anim #s3.in .there li:nth-child(4), html.anim #s4.in .lesson li:nth-child(4) { transition-delay: 0.91s; }
+html.anim #s4.in .lesson li:nth-child(4) .to { transition-delay: 1.31s; }
+html.anim #s3.in .there li:nth-child(5), html.anim #s4.in .lesson li:nth-child(5) { transition-delay: 1.05s; }
+html.anim #s4.in .lesson li:nth-child(5) .to { transition-delay: 1.45s; }
+html.anim #s3.in .there li:nth-child(6), html.anim #s4.in .lesson li:nth-child(6) { transition-delay: 1.19s; }
+html.anim #s4.in .lesson li:nth-child(6) .to { transition-delay: 1.59s; }
+/* fit every slide in one screen: type and spacing follow the screen's height too */
+body { font-size: clamp(.92rem, min(1.55vw, 2.2vh), 1.45rem); }
+h1 { font-size: clamp(2.2rem, min(6.4vw, 9vh), 5.4rem); }
+h2 { font-size: clamp(1.5rem, min(3.5vw, 4.9vh), 3.1rem); }
+h2.two { font-size: clamp(1.3rem, min(2.25vw, 3.6vh), 2.2rem); }
+.slide { padding-top: 3.7rem; }
+.content { padding-top: 5vh; }
+.rows li { padding: .4em 0; }
+.rows.tight li { padding: .28em 0; }
+.lesson { font-size: .9em; }
+.lesson li { padding: .45em 0; }
+.widget { padding: .8rem 1rem; }
+.stack { gap: .7rem; }
+figure.live canvas { width: min(100%, calc((100vh - 21rem) * 2)); }
+@media (min-width: 1100px) {
+  body.qa-open h1 { font-size: clamp(2.2rem, min(5vw, 8.5vh), 4.6rem); }
+  body.qa-open h2 { font-size: clamp(1.5rem, min(2.6vw, 4.6vh), 2.7rem); }
+  body.qa-open h2.two { font-size: clamp(1.3rem, min(1.9vw, 3.4vh), 2rem); }
+}
+.foot { padding-top: .4rem; }
+.slide { padding-bottom: .7rem; }
+/* header: a fixed height, and its right-hand group lines up over the question panel */
+.bar { height: 3.5rem; padding-block: 0; }
+.bar .side { height: 100%; }
+.qa { top: 3.5rem; }
+@media (min-width: 1100px) {
+  .bar { padding-right: 0; }
+  .bar .right { width: 23rem; justify-content: center; border-left: 1px solid transparent; }
+  body.qa-open .bar .right { border-left-color: var(--rule); }
+  body.qa-open #qa-open { border-color: var(--link); color: var(--link); }
+}
+/* call-to-action cards, and drawers for the forms */
+.cta { margin-top: 1.1rem; border: 1px solid var(--rule); border-radius: 10px; padding: .85rem 1rem; font-size: .85em; line-height: 1.45; max-width: 34rem; }
+.cta .wk { font-weight: 600; margin: 0 0 .3em; }
+.cta p { margin: 0 0 .4em; }
+.btn.primary { background: var(--link); color: #fff; }
+.btn.primary:hover { background: var(--link-hover); border-color: var(--link-hover); }
+dialog.drawer { position: fixed; inset: 0 0 0 auto; margin: 0; width: min(30rem, 100vw); height: 100%; max-height: none; border: 0; border-left: 1px solid var(--rule); padding: 1.3rem 1.5rem 2rem; background: var(--bg); color: var(--fg); font: .95rem/1.5 Lora, Charter, Georgia, serif; overflow: auto; box-shadow: -24px 0 60px rgba(0,0,0,.08); }
+dialog.drawer[open] { animation: drawer-in .25s ease; }
+dialog.drawer::backdrop { background: rgba(38,38,36,.28); }
+@keyframes drawer-in { from { transform: translateX(32px); opacity: 0; } }
+.drawer header { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; }
+.drawer h3 { margin: 0; font-size: 1.3rem; }
+.drawer .x { border: 0; background: none; font-size: 1.6rem; line-height: 1; cursor: pointer; color: var(--muted); }
+.drawer textarea, .drawer input { width: 100%; font: inherit; font-size: .9rem; padding: .5rem .6rem; border: 1px solid var(--rule); border-radius: 6px; background: #fff; color: var(--fg); resize: vertical; }
+.drawer label { display: block; margin-top: .7rem; color: var(--muted); font-size: .88rem; }
+.drawer pre { white-space: pre-wrap; font: .75rem/1.5 ui-monospace, Menlo, monospace; background: var(--fill); padding: .7rem; border-radius: 6px; }
+.drawer .mini { margin: .8rem 0; }
+@media (max-width: 760px) {
+  dialog.drawer { inset: auto 0 0 0; width: 100%; height: auto; max-height: 90vh; border-left: 0; border-top: 1px solid var(--rule); border-radius: 14px 14px 0 0; }
+  dialog.drawer[open] { animation-name: sheet-in; }
+  @keyframes sheet-in { from { transform: translateY(40px); opacity: 0; } }
+}
+@media (prefers-reduced-motion: reduce) { dialog.drawer[open] { animation: none; } }
+/* title figure: the hub appears, then the streaks draw in toward it */
+svg.gather { width: 100%; height: auto; display: block; overflow: visible; }
+html.anim #s1 .content > figure { opacity: 1; transform: none; }
+html.anim #s1 .gather .hub { opacity: 0; transform-box: fill-box; transform-origin: center; transform: scale(.4); transition: opacity .6s ease, transform .8s cubic-bezier(.2,.8,.3,1.2); }
+html.anim #s1.in .gather .hub { opacity: 1; transform: none; }
+html.anim #s1 .gather .streak { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.8s cubic-bezier(.35,.1,.25,1) calc(.7s + var(--i) * 45ms); }
+html.anim #s1.in .gather .streak { stroke-dashoffset: 0; }
+html.anim #s1 .gather .head { opacity: 0; transition: opacity .35s ease calc(2.3s + var(--i) * 45ms); }
+html.anim #s1.in .gather .head { opacity: 1; }
+dialog.drawer { max-width: none; }
+@media (max-width: 760px) {
+  .bar { padding-inline: 16px; }
+  .bar .follow, .bar .qr { display: none; }   /* already on a phone */
+  .bar .side a { white-space: nowrap; }
+}
+@media (max-width: 760px) {
+  .qa { width: 100vw; border-left: 0; }
+  .lesson .to, html.anim #s4 .lesson .to { display: none; }
+  figure.live canvas { width: min(100%, calc((100svh - 21rem) * .58)); margin-inline: auto; }
+}
+/* the slides make room for the question panel at the same pace the panel slides in */
+.slide { transition: padding-right .3s ease; }
+h1, h2 { transition: font-size .3s ease; }
+.qa { transition: transform .3s ease, visibility .3s; }
+@media (prefers-reduced-motion: reduce) { .slide, h1, h2, .qa { transition: none; } }
+/* the film slide */
+.filmwrap { max-width: none; grid-template-columns: minmax(0, 1fr) !important; padding-top: 2.5vh !important; }
+.filmwrap > div { display: grid; justify-items: center; }
+.filmwrap .kicker { justify-self: start; }
+.filmbox { width: min(100%, calc((100svh - 3.5rem - 7.5rem - 46px) * 16 / 9)); container-type: inline-size; }
+iframe.film { display: block; border: 0; width: 100%; height: calc(100cqw * 9 / 16 + 46px); background: #f9f8f5; }
 </style>
 <body>
-<div class="bar"><a href="../">Protocols for Business · Kickoff</a><label><input type="checkbox" id="nt"> Speaker notes</label></div>
+<div class="bar">
+  <span class="side"><a href="../">Protocols for Business · Kickoff</a><label><input type="checkbox" id="nt"> Speaker notes</label></span>
+  <span class="side right">
+    <button type="button" id="qa-open" class="pill" aria-expanded="false" aria-controls="qa">Questions <b></b></button>
+    <a class="follow" href="https://protocolsforbusiness.com/kickoffslides08102026/">Follow along<span> on your phone</span></a>
+    <button type="button" id="qr" class="qr" aria-label="QR code for this deck. Tap to enlarge."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" aria-hidden="true" class="segno"><path class="qrline" stroke="#262624" d="M0 0.5h7m5 0h2m2 0h1m2 0h3m1 0h1m2 0h7m-33 1h1m5 0h1m2 0h3m1 0h3m1 0h2m2 0h2m3 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m1 0h6m2 0h1m1 0h2m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h1m3 0h1m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h3m1 0h2m7 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-25 1h2m2 0h1m1 0h2m5 0h2m-23 1h1m1 0h5m3 0h6m1 0h1m4 0h1m1 0h1m1 0h5m-31 1h1m2 0h1m3 0h1m1 0h1m9 0h3m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h2m1 0h2m1 0h1m2 0h3m3 0h3m6 0h2m2 0h1m1 0h2m-31 1h1m3 0h1m2 0h2m4 0h1m3 0h2m1 0h2m3 0h1m1 0h5m-33 1h1m5 0h4m2 0h1m2 0h1m1 0h2m1 0h1m3 0h2m1 0h3m1 0h2m-32 1h1m1 0h2m4 0h1m1 0h1m2 0h3m1 0h2m2 0h2m2 0h1m4 0h2m-33 1h3m1 0h1m1 0h2m2 0h2m1 0h2m2 0h2m3 0h1m2 0h2m1 0h2m1 0h1m-32 1h1m2 0h1m1 0h1m2 0h2m3 0h1m2 0h1m2 0h1m1 0h2m1 0h3m1 0h3m-29 1h6m1 0h1m1 0h1m4 0h2m2 0h1m1 0h2m1 0h1m1 0h2m3 0h1m-33 1h1m1 0h1m1 0h2m4 0h1m2 0h1m2 0h6m1 0h1m1 0h3m1 0h2m1 0h1m-32 1h3m1 0h2m1 0h1m1 0h2m3 0h3m2 0h2m3 0h1m1 0h2m1 0h1m-31 1h1m1 0h1m6 0h2m1 0h1m1 0h1m4 0h3m1 0h1m2 0h6m-30 1h3m1 0h1m1 0h1m1 0h4m1 0h2m1 0h3m2 0h3m1 0h3m1 0h2m-33 1h1m1 0h1m4 0h2m1 0h2m1 0h3m1 0h3m2 0h2m1 0h2m5 0h1m-33 1h1m1 0h2m2 0h1m1 0h4m2 0h3m1 0h1m2 0h2m1 0h1m3 0h4m-32 1h1m1 0h4m2 0h1m1 0h1m2 0h1m1 0h1m5 0h1m5 0h6m-33 1h1m3 0h4m1 0h1m1 0h1m1 0h1m1 0h3m4 0h7m2 0h1m-24 1h1m1 0h1m5 0h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m3 0h1m3 0h3m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h3m2 0h1m1 0h2m1 0h4m1 0h2m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h4m2 0h2m2 0h1m1 0h1m3 0h6m1 0h2m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h6m1 0h2m2 0h1m2 0h1m1 0h3m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m5 0h1m2 0h1m3 0h4m1 0h1m-30 1h1m5 0h1m2 0h1m2 0h1m1 0h1m1 0h1m1 0h1m2 0h2m5 0h3m-31 1h7m1 0h1m1 0h2m2 0h1m2 0h1m4 0h6m3 0h1"/></svg></button>
+  </span>
+</div>
+<aside id="qa" class="qa" aria-label="Questions">
+  <header><b>Ask a question</b><button type="button" id="qa-close" aria-label="Close questions">×</button></header>
+  <p class="muted small">Anonymous. Upvote what you want answered.</p>
+  <form id="qa-form"><textarea maxlength="280" rows="3" placeholder="Ask anything about the group, the year or the slides."></textarea><div class="row"><button type="submit" class="btn">Ask</button><span class="note small muted" aria-live="polite"></span></div></form>
+  <ol id="qa-list" class="qa-list"></ol>
+</aside>
 
 <section class="slide" id="s1">
   <div class="content">
@@ -113,11 +307,25 @@ h2.line { white-space: nowrap; }
       <h1>Protocols for Business</h1>
       <p class="lede">The next year’s learning plan, and putting protocol vision to work as agents join business operations.</p>
     </div>
-    <figure><img src="../assets/fig/gather.svg" alt="" width="480" height="200"></figure>
+    <figure><svg class="gather" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-label="Lines converging from all sides on a single point"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path class="streak" pathLength="1" style="--i:0" d="M173.6 210.0L181.2 206.8L188.9 203.8L196.6 200.7L204.4 197.8L212.2 194.9L220.1 192.2L228.0 189.4L235.9 186.8L243.9 184.2L252.0 181.7L260.0 179.3L268.1 176.9L276.3 174.6L284.5 172.4L292.7 170.3L301.0 168.2L309.3 166.2L317.7 164.3L326.1 162.5L334.6 160.7L343.1 159.0L351.6 157.4L360.2 155.8L368.8 154.3L377.4 152.9L386.1 151.6L394.9 150.3" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:0" d="M394.9 150.3L391.6 152.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:0" d="M394.9 150.3L391.1 149.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:1" d="M98.9 -10.0L109.2 -0.7L119.4 8.3L129.7 17.0L140.1 25.5L150.5 33.7L160.9 41.6L171.4 49.2L181.9 56.6L192.5 63.7L203.1 70.5L213.7 77.0L224.4 83.3L235.1 89.3L245.9 95.0L256.7 100.4L267.6 105.6L278.5 110.5L289.4 115.1L300.4 119.5L311.4 123.6L322.4 127.4L333.6 130.9L344.7 134.2L355.9 137.1L367.1 139.9L378.4 142.3L389.7 144.5" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:1" d="M389.7 144.5L385.8 145.5" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:1" d="M389.7 144.5L386.5 142.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:2" d="M-10.0 120.3L1.6 120.1L13.5 120.0L25.5 120.0L37.8 120.1L50.3 120.3L63.0 120.5L75.8 120.8L88.9 121.2L102.3 121.7L115.8 122.2L129.5 122.9L143.4 123.6L157.6 124.4L171.9 125.2L186.5 126.2L201.3 127.2L216.2 128.3L231.4 129.5L246.8 130.8L262.4 132.2L278.2 133.6L294.2 135.1L310.5 136.7L326.9 138.4L343.6 140.1L360.4 142.0L377.5 143.9" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:2" d="M377.5 143.9L373.7 145.2" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:2" d="M377.5 143.9L374.1 141.7" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:3" d="M116.2 -10.0L128.8 -0.6L141.3 8.5L153.6 17.3L165.7 25.9L177.7 34.1L189.4 42.1L201.0 49.8L212.5 57.2L223.7 64.3L234.8 71.2L245.7 77.8L256.5 84.1L267.0 90.1L277.4 95.8L287.6 101.2L297.7 106.4L307.6 111.3L317.3 115.9L326.8 120.2L336.1 124.3L345.3 128.0L354.3 131.5L363.2 134.7L371.8 137.6L380.3 140.2L388.6 142.6L396.8 144.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:3" d="M396.8 144.7L392.9 145.5" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:3" d="M396.8 144.7L393.7 142.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:4" d="M216.2 -10.0L225.8 -3.1L235.3 3.7L244.5 10.4L253.6 17.0L262.4 23.5L271.1 29.9L279.5 36.2L287.7 42.3L295.7 48.4L303.5 54.4L311.1 60.2L318.5 66.0L325.7 71.6L332.7 77.2L339.5 82.6L346.1 88.0L352.4 93.2L358.6 98.3L364.5 103.4L370.3 108.3L375.8 113.1L381.1 117.8L386.3 122.4L391.2 126.9L395.9 131.3L400.4 135.6L404.7 139.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:4" d="M404.7 139.8L400.9 138.5" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:4" d="M404.7 139.8L403.3 136.0" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:5" d="M106.8 210.0L117.6 207.5L128.3 205.1L139.1 202.6L149.8 200.2L160.5 197.8L171.2 195.5L181.8 193.2L192.5 190.8L203.1 188.6L213.7 186.3L224.4 184.1L234.9 181.9L245.5 179.7L256.1 177.5L266.6 175.4L277.1 173.3L287.6 171.2L298.1 169.1L308.6 167.1L319.1 165.1L329.5 163.1L339.9 161.1L350.3 159.2L360.7 157.3L371.1 155.4L381.5 153.5L391.8 151.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:5" d="M391.8 151.7L388.6 154.0" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:5" d="M391.8 151.7L388.0 150.6" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:6" d="M241.6 -10.0L246.5 -4.6L251.6 0.8L256.7 6.2L261.8 11.6L267.1 17.0L272.4 22.4L277.7 27.8L283.2 33.2L288.7 38.6L294.2 44.1L299.9 49.5L305.6 54.9L311.3 60.4L317.2 65.8L323.1 71.2L329.0 76.7L335.1 82.1L341.2 87.6L347.3 93.0L353.5 98.5L359.8 104.0L366.2 109.4L372.6 114.9L379.1 120.4L385.7 125.9L392.3 131.4L399.0 136.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:6" d="M399.0 136.8L395.1 135.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:6" d="M399.0 136.8L397.3 133.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:7" d="M-10.0 189.3L6.3 189.4L22.4 189.3L38.4 189.1L54.3 188.8L70.1 188.4L85.7 187.9L101.3 187.4L116.7 186.7L132.0 185.9L147.2 185.0L162.2 183.9L177.1 182.8L191.9 181.6L206.6 180.3L221.2 178.9L235.6 177.3L250.0 175.7L264.2 174.0L278.2 172.1L292.2 170.2L306.0 168.2L319.8 166.0L333.4 163.8L346.8 161.4L360.2 159.0L373.4 156.4L386.5 153.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:7" d="M386.5 153.7L383.3 156.2" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:7" d="M386.5 153.7L382.7 152.7" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:8" d="M82.5 -10.0L93.0 -5.4L103.5 -0.8L114.1 3.9L124.7 8.6L135.5 13.4L146.2 18.3L157.1 23.3L168.0 28.3L179.0 33.3L190.0 38.5L201.1 43.6L212.3 48.9L223.6 54.2L234.9 59.6L246.3 65.0L257.7 70.5L269.2 76.1L280.8 81.7L292.4 87.4L304.1 93.2L315.9 99.0L327.7 104.9L339.6 110.8L351.6 116.8L363.6 122.9L375.7 129.0L387.9 135.2" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:8" d="M387.9 135.2L383.9 135.1" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:8" d="M387.9 135.2L385.5 132.0" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:9" d="M-10.0 10.3L6.4 18.5L22.7 26.4L38.9 34.1L54.9 41.6L70.8 48.8L86.5 55.7L102.2 62.4L117.7 68.9L133.0 75.1L148.3 81.1L163.4 86.8L178.3 92.3L193.1 97.6L207.8 102.5L222.4 107.3L236.8 111.8L251.1 116.1L265.3 120.1L279.3 123.8L293.2 127.3L307.0 130.6L320.7 133.6L334.2 136.4L347.5 139.0L360.8 141.3L373.9 143.3L386.8 145.1" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:9" d="M386.8 145.1L383.0 146.3" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:9" d="M386.8 145.1L383.5 142.9" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:10" d="M110.6 210.0L119.0 206.5L127.5 203.1L136.2 199.8L145.1 196.6L154.1 193.4L163.2 190.4L172.5 187.5L181.9 184.7L191.4 181.9L201.1 179.3L211.0 176.8L220.9 174.4L231.1 172.0L241.3 169.8L251.7 167.7L262.3 165.6L273.0 163.7L283.8 161.8L294.8 160.1L305.9 158.4L317.2 156.9L328.6 155.4L340.1 154.1L351.8 152.8L363.6 151.7L375.6 150.6L387.7 149.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:10" d="M387.7 149.7L384.3 151.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:10" d="M387.7 149.7L384.0 148.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:11" d="M8.1 210.0L21.2 202.4L34.3 195.1L47.6 188.2L60.9 181.8L74.2 175.7L87.6 170.0L101.1 164.7L114.6 159.8L128.2 155.3L141.9 151.2L155.6 147.5L169.3 144.2L183.2 141.3L197.0 138.7L211.0 136.6L225.0 134.8L239.0 133.5L253.1 132.5L267.3 132.0L281.6 131.8L295.9 132.0L310.2 132.6L324.6 133.6L339.1 135.0L353.6 136.8L368.2 139.0L382.9 141.6" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:11" d="M382.9 141.6L379.0 142.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:11" d="M382.9 141.6L379.6 139.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:12" d="M-10.0 132.7L3.3 134.8L16.7 136.8L30.2 138.7L43.8 140.5L57.4 142.2L71.2 143.7L85.0 145.1L99.0 146.5L113.0 147.7L127.1 148.8L141.3 149.7L155.6 150.6L170.0 151.4L184.5 152.0L199.0 152.5L213.7 152.9L228.4 153.2L243.3 153.4L258.2 153.5L273.2 153.5L288.3 153.3L303.5 153.1L318.8 152.7L334.1 152.2L349.6 151.6L365.1 150.9L380.8 150.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:12" d="M380.8 150.0L377.2 152.0" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:12" d="M380.8 150.0L377.1 148.5" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:13" d="M-10.0 134.8L5.7 136.2L21.4 137.6L37.0 139.0L52.5 140.2L67.9 141.4L83.2 142.5L98.4 143.6L113.6 144.5L128.6 145.4L143.6 146.3L158.5 147.0L173.3 147.7L188.1 148.3L202.7 148.8L217.3 149.3L231.8 149.7L246.2 150.0L260.5 150.2L274.7 150.4L288.8 150.5L302.9 150.5L316.9 150.4L330.8 150.3L344.6 150.1L358.3 149.8L371.9 149.5L385.5 149.1" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:13" d="M385.5 149.1L382.0 150.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:13" d="M385.5 149.1L381.9 147.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:14" d="M135.0 210.0L145.5 205.5L155.9 201.2L166.3 197.1L176.6 193.1L186.8 189.3L197.0 185.7L207.1 182.2L217.1 178.9L227.1 175.8L237.0 172.8L246.8 170.0L256.6 167.4L266.3 164.9L275.9 162.6L285.5 160.5L295.0 158.5L304.4 156.7L313.8 155.1L323.1 153.6L332.3 152.3L341.5 151.1L350.6 150.2L359.7 149.4L368.6 148.7L377.5 148.2L386.4 147.9L395.2 147.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:14" d="M395.2 147.8L391.6 149.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:14" d="M395.2 147.8L391.5 146.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:15" d="M217.2 -10.0L221.6 -3.5L226.1 3.0L230.9 9.4L235.8 15.7L240.9 21.9L246.1 28.0L251.5 34.1L257.1 40.1L262.8 46.0L268.7 51.9L274.8 57.6L281.0 63.3L287.4 68.9L294.0 74.4L300.7 79.8L307.6 85.2L314.7 90.5L321.9 95.7L329.3 100.8L336.9 105.9L344.6 110.9L352.5 115.8L360.6 120.6L368.8 125.3L377.2 130.0L385.8 134.6L394.5 139.1" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:15" d="M394.5 139.1L390.5 139.0" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:15" d="M394.5 139.1L392.1 135.9" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:16" d="M112.8 -10.0L120.3 -2.2L128.1 5.4L136.0 12.9L144.1 20.2L152.5 27.3L161.0 34.3L169.8 41.1L178.7 47.7L187.8 54.2L197.2 60.5L206.7 66.6L216.4 72.5L226.4 78.3L236.5 83.9L246.8 89.4L257.3 94.7L268.1 99.8L279.0 104.7L290.1 109.5L301.5 114.1L313.0 118.5L324.7 122.8L336.6 126.9L348.8 130.8L361.1 134.6L373.6 138.1L386.3 141.6" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:16" d="M386.3 141.6L382.4 142.3" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:16" d="M386.3 141.6L383.3 139.0" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:17" d="M145.2 -10.0L155.8 -1.6L166.4 6.6L176.8 14.6L187.2 22.3L197.4 29.9L207.6 37.2L217.6 44.3L227.5 51.3L237.4 58.0L247.1 64.5L256.7 70.8L266.3 76.8L275.7 82.7L285.0 88.4L294.2 93.8L303.3 99.1L312.4 104.1L321.3 108.9L330.1 113.5L338.8 117.9L347.4 122.1L355.9 126.0L364.3 129.8L372.6 133.3L380.8 136.7L388.9 139.8L396.9 142.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:17" d="M396.9 142.7L392.9 143.1" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:17" d="M396.9 142.7L394.1 139.9" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:18" d="M73.0 -10.0L83.0 -2.0L93.2 5.7L103.4 13.3L113.8 20.8L124.3 28.0L134.9 35.1L145.6 41.9L156.5 48.6L167.5 55.2L178.6 61.5L189.8 67.7L201.1 73.6L212.6 79.4L224.2 85.1L235.9 90.5L247.7 95.8L259.6 100.9L271.7 105.8L283.9 110.5L296.2 115.0L308.6 119.4L321.2 123.6L333.8 127.6L346.6 131.4L359.5 135.1L372.6 138.6L385.7 141.9" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:18" d="M385.7 141.9L381.8 142.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:18" d="M385.7 141.9L382.6 139.3" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:19" d="M121.2 -10.0L131.7 -2.9L142.2 4.1L152.6 11.0L163.0 17.7L173.4 24.4L183.7 30.9L194.0 37.3L204.2 43.6L214.5 49.7L224.7 55.8L234.9 61.7L245.0 67.5L255.1 73.2L265.2 78.8L275.2 84.2L285.2 89.5L295.2 94.7L305.2 99.8L315.1 104.8L325.0 109.6L334.8 114.4L344.6 119.0L354.4 123.5L364.2 127.8L373.9 132.1L383.6 136.2L393.3 140.2" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:19" d="M393.3 140.2L389.3 140.4" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:19" d="M393.3 140.2L390.6 137.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:20" d="M253.1 210.0L253.3 208.5L253.9 206.9L254.9 205.4L256.3 203.7L258.0 202.0L260.1 200.3L262.6 198.5L265.4 196.7L268.7 194.8L272.3 192.9L276.3 191.0L280.6 189.0L285.4 186.9L290.5 184.9L296.0 182.7L301.8 180.5L308.1 178.3L314.7 176.0L321.7 173.7L329.1 171.4L336.8 169.0L345.0 166.5L353.5 164.0L362.4 161.5L371.6 158.9L381.3 156.3L391.3 153.6" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:20" d="M391.3 153.6L388.3 156.2" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:20" d="M391.3 153.6L387.4 152.8" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:21" d="M244.0 -10.0L248.9 -3.5L253.9 2.9L258.9 9.2L264.0 15.5L269.2 21.7L274.4 27.8L279.7 33.8L285.1 39.8L290.5 45.7L296.0 51.5L301.5 57.2L307.2 62.9L312.8 68.5L318.6 74.0L324.4 79.4L330.3 84.8L336.2 90.1L342.2 95.3L348.3 100.5L354.4 105.5L360.6 110.5L366.9 115.5L373.2 120.3L379.6 125.1L386.1 129.8L392.6 134.4L399.2 139.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:21" d="M399.2 139.0L395.3 138.4" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:21" d="M399.2 139.0L397.2 135.5" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:22" d="M-10.0 182.4L6.2 181.3L22.4 180.2L38.4 179.0L54.3 177.9L70.0 176.8L85.7 175.6L101.2 174.5L116.6 173.4L131.9 172.2L147.0 171.0L162.1 169.9L177.0 168.7L191.8 167.5L206.5 166.3L221.1 165.2L235.5 164.0L249.8 162.8L264.0 161.6L278.1 160.4L292.1 159.2L305.9 157.9L319.7 156.7L333.3 155.5L346.8 154.3L360.1 153.0L373.4 151.8L386.5 150.5" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:22" d="M386.5 150.5L383.1 152.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:22" d="M386.5 150.5L382.7 149.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:23" d="M-10.0 68.4L4.6 71.4L19.2 74.4L33.7 77.4L48.3 80.3L62.9 83.3L77.5 86.2L92.0 89.1L106.6 92.0L121.2 94.8L135.7 97.7L150.3 100.5L164.9 103.3L179.4 106.1L194.0 108.9L208.6 111.6L223.1 114.3L237.7 117.0L252.2 119.7L266.8 122.4L281.4 125.0L295.9 127.6L310.5 130.3L325.0 132.8L339.6 135.4L354.1 137.9L368.7 140.5L383.2 143.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:23" d="M383.2 143.0L379.4 144.1" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:23" d="M383.2 143.0L380.0 140.6" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:24" d="M163.4 -10.0L179.7 -5.3L195.3 -0.6L210.5 4.2L225.1 9.0L239.1 13.9L252.6 18.8L265.6 23.8L278.0 28.9L289.8 34.0L301.2 39.1L311.9 44.4L322.2 49.6L331.9 55.0L341.0 60.3L349.6 65.8L357.7 71.3L365.2 76.8L372.1 82.4L378.5 88.1L384.4 93.8L389.7 99.6L394.5 105.4L398.8 111.3L402.5 117.3L405.6 123.3L408.2 129.3L410.3 135.4" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:24" d="M410.3 135.4L407.5 132.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:24" d="M410.3 135.4L410.8 131.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:25" d="M6.3 210.0L18.7 211.2L31.1 212.2L43.7 213.0L56.4 213.5L69.3 213.7L82.2 213.8L95.3 213.6L108.4 213.1L121.7 212.4L135.1 211.5L148.7 210.3L162.3 208.9L176.1 207.3L190.0 205.4L204.0 203.2L218.1 200.9L232.3 198.2L246.7 195.4L261.1 192.3L275.7 189.0L290.4 185.4L305.3 181.6L320.2 177.5L335.2 173.2L350.4 168.7L365.7 163.9L381.1 158.9" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:25" d="M381.1 158.9L378.2 161.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:25" d="M381.1 158.9L377.2 158.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:26" d="M-10.0 127.9L4.9 131.2L19.8 134.3L34.6 137.2L49.4 139.9L64.2 142.4L79.0 144.8L93.8 146.9L108.5 148.9L123.2 150.7L137.9 152.4L152.6 153.8L167.2 155.0L181.8 156.1L196.4 157.0L211.0 157.7L225.5 158.2L240.0 158.5L254.5 158.7L269.0 158.6L283.4 158.4L297.8 158.0L312.2 157.4L326.6 156.6L341.0 155.6L355.3 154.5L369.6 153.2L383.9 151.6" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:26" d="M383.9 151.6L380.5 153.8" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:26" d="M383.9 151.6L380.1 150.3" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:27" d="M165.5 210.0L173.6 213.0L181.8 215.6L189.9 217.9L198.1 219.8L206.4 221.3L214.6 222.5L222.9 223.3L231.2 223.8L239.5 223.8L247.9 223.5L256.3 222.9L264.7 221.8L273.2 220.4L281.7 218.7L290.2 216.5L298.8 214.0L307.3 211.2L315.9 208.0L324.6 204.4L333.2 200.4L341.9 196.1L350.6 191.4L359.4 186.3L368.2 180.9L377.0 175.1L385.8 168.9L394.7 162.4" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:27" d="M394.7 162.4L392.8 165.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:27" d="M394.7 162.4L390.8 163.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:28" d="M-10.0 32.4L3.5 40.6L17.0 48.5L30.6 56.0L44.3 63.3L58.1 70.3L71.9 76.9L85.8 83.3L99.8 89.4L113.9 95.1L128.1 100.6L142.3 105.8L156.7 110.7L171.1 115.3L185.5 119.5L200.1 123.5L214.7 127.2L229.5 130.6L244.3 133.7L259.1 136.5L274.1 139.0L289.1 141.2L304.3 143.1L319.5 144.7L334.7 146.0L350.1 147.0L365.5 147.7L381.0 148.1" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:28" d="M381.0 148.1L377.4 149.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:28" d="M381.0 148.1L377.5 146.3" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:29" d="M249.2 -10.0L251.6 -4.9L254.2 0.3L257.0 5.5L260.1 10.7L263.4 15.9L266.9 21.1L270.6 26.4L274.6 31.7L278.9 37.0L283.3 42.3L288.0 47.7L293.0 53.0L298.1 58.4L303.5 63.8L309.2 69.3L315.0 74.7L321.1 80.2L327.5 85.7L334.0 91.3L340.8 96.8L347.9 102.4L355.1 108.0L362.6 113.6L370.4 119.3L378.3 124.9L386.5 130.6L394.9 136.3" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:29" d="M394.9 136.3L391.0 135.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:29" d="M394.9 136.3L392.9 132.9" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:30" d="M-10.0 42.8L4.2 48.0L18.4 53.1L32.7 58.1L47.0 63.0L61.3 67.8L75.6 72.4L90.0 76.9L104.4 81.4L118.8 85.7L133.2 89.9L147.7 93.9L162.2 97.9L176.7 101.8L191.2 105.5L205.8 109.1L220.4 112.6L235.0 116.0L249.6 119.3L264.3 122.5L279.0 125.5L293.7 128.5L308.4 131.3L323.2 134.0L338.0 136.6L352.8 139.1L367.6 141.5L382.5 143.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:30" d="M382.5 143.8L378.7 144.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:30" d="M382.5 143.8L379.2 141.5" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:31" d="M-10.0 138.8L7.6 142.4L24.9 145.8L42.1 148.9L59.0 151.8L75.7 154.4L92.2 156.8L108.5 159.0L124.5 161.0L140.4 162.7L156.0 164.2L171.4 165.4L186.7 166.5L201.7 167.2L216.4 167.8L231.0 168.1L245.4 168.2L259.5 168.1L273.4 167.7L287.1 167.1L300.6 166.2L313.9 165.1L327.0 163.8L339.8 162.3L352.5 160.5L364.9 158.5L377.1 156.2L389.1 153.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:31" d="M389.1 153.8L385.9 156.2" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:31" d="M389.1 153.8L385.2 152.8" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:32" d="M63.7 210.0L70.3 210.2L77.2 210.3L84.6 210.1L92.3 209.8L100.4 209.4L109.0 208.8L117.9 208.0L127.2 207.0L136.9 205.9L146.9 204.6L157.4 203.1L168.2 201.5L179.5 199.7L191.1 197.7L203.1 195.6L215.5 193.3L228.3 190.8L241.5 188.2L255.1 185.4L269.1 182.4L283.4 179.3L298.2 176.0L313.3 172.5L328.8 168.9L344.7 165.1L361.0 161.1L377.7 156.9" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:32" d="M377.7 156.9L374.6 159.5" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:32" d="M377.7 156.9L373.8 156.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:33" d="M164.9 210.0L178.2 205.2L191.2 200.7L203.8 196.3L216.1 192.1L228.1 188.1L239.7 184.2L250.9 180.6L261.9 177.2L272.4 173.9L282.7 170.8L292.6 167.9L302.2 165.2L311.4 162.7L320.3 160.4L328.8 158.3L337.0 156.3L344.9 154.5L352.4 153.0L359.6 151.6L366.4 150.4L372.9 149.4L379.1 148.5L384.9 147.9L390.4 147.4L395.5 147.2L400.3 147.1L404.8 147.2" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:33" d="M404.8 147.2L401.1 148.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:33" d="M404.8 147.2L401.2 145.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:34" d="M-10.0 83.5L0.7 83.3L11.6 83.3L22.9 83.5L34.4 83.8L46.1 84.3L58.2 85.0L70.5 85.8L83.2 86.8L96.1 88.0L109.2 89.3L122.7 90.9L136.4 92.6L150.4 94.4L164.7 96.5L179.2 98.7L194.1 101.1L209.2 103.7L224.6 106.4L240.3 109.3L256.2 112.4L272.4 115.6L288.9 119.1L305.7 122.7L322.8 126.4L340.1 130.4L357.7 134.5L375.6 138.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:34" d="M375.6 138.8L371.7 139.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:34" d="M375.6 138.8L372.5 136.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:35" d="M-10.0 116.0L3.4 118.8L16.9 121.5L30.4 124.0L44.1 126.4L57.8 128.7L71.6 130.9L85.5 132.9L99.5 134.9L113.5 136.7L127.7 138.4L141.9 140.0L156.2 141.4L170.6 142.8L185.1 144.0L199.6 145.1L214.3 146.1L229.0 146.9L243.8 147.7L258.7 148.3L273.7 148.8L288.8 149.2L303.9 149.5L319.1 149.6L334.5 149.7L349.9 149.6L365.3 149.4L380.9 149.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:35" d="M380.9 149.0L377.3 150.8" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:35" d="M380.9 149.0L377.3 147.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:36" d="M-10.0 112.7L7.9 114.2L25.5 115.8L43.0 117.3L60.1 118.8L77.1 120.3L93.8 121.7L110.3 123.2L126.5 124.6L142.5 125.9L158.2 127.3L173.8 128.6L189.0 129.9L204.1 131.2L218.9 132.4L233.5 133.6L247.8 134.8L261.9 136.0L275.7 137.1L289.3 138.2L302.7 139.3L315.9 140.4L328.8 141.4L341.4 142.4L353.9 143.4L366.1 144.4L378.0 145.3L389.7 146.2" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:36" d="M389.7 146.2L386.0 147.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:36" d="M389.7 146.2L386.3 144.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:37" d="M-10.0 159.5L8.3 156.3L26.3 153.3L44.1 150.5L61.6 147.9L78.8 145.5L95.8 143.3L112.5 141.3L128.9 139.5L145.1 137.9L161.0 136.5L176.7 135.3L192.0 134.3L207.1 133.5L222.0 132.9L236.5 132.5L250.8 132.3L264.9 132.3L278.6 132.5L292.1 132.9L305.4 133.5L318.3 134.3L331.0 135.3L343.5 136.5L355.6 137.9L367.5 139.5L379.2 141.3L390.5 143.3" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:37" d="M390.5 143.3L386.7 144.4" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:37" d="M390.5 143.3L387.3 141.0" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:38" d="M208.3 210.0L214.7 208.5L221.1 207.0L227.5 205.4L234.0 203.8L240.5 202.2L247.1 200.5L253.8 198.7L260.4 196.9L267.2 195.1L274.0 193.2L280.8 191.2L287.7 189.2L294.7 187.2L301.6 185.1L308.7 183.0L315.8 180.8L322.9 178.5L330.1 176.3L337.4 173.9L344.7 171.6L352.0 169.2L359.4 166.7L366.8 164.2L374.3 161.6L381.9 159.0L389.5 156.3L397.1 153.6" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:38" d="M397.1 153.6L394.3 156.5" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:38" d="M397.1 153.6L393.1 153.2" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:39" d="M82.4 210.0L96.8 206.6L110.9 203.2L124.8 199.9L138.6 196.8L152.1 193.7L165.4 190.7L178.4 187.8L191.3 185.0L204.0 182.4L216.4 179.7L228.7 177.2L240.7 174.8L252.5 172.5L264.1 170.3L275.5 168.1L286.6 166.1L297.6 164.1L308.3 162.3L318.9 160.5L329.2 158.8L339.3 157.3L349.2 155.8L358.9 154.4L368.4 153.1L377.6 151.9L386.7 150.8L395.5 149.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:39" d="M395.5 149.8L392.1 151.9" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:39" d="M395.5 149.8L391.7 148.5" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:40" d="M164.2 210.0L174.7 209.7L185.0 209.3L195.1 208.8L205.1 208.1L215.0 207.3L224.8 206.3L234.4 205.3L243.9 204.1L253.3 202.7L262.5 201.3L271.6 199.7L280.6 197.9L289.4 196.0L298.1 194.0L306.7 191.9L315.1 189.6L323.4 187.2L331.5 184.7L339.6 182.1L347.5 179.3L355.2 176.3L362.9 173.3L370.4 170.1L377.7 166.7L385.0 163.3L392.1 159.7L399.0 156.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:40" d="M399.0 156.0L396.7 159.2" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:40" d="M399.0 156.0L395.1 156.1" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:41" d="M-10.0 78.8L4.6 83.4L19.2 87.8L33.9 92.0L48.5 96.1L63.1 100.1L77.7 103.8L92.3 107.5L106.9 110.9L121.4 114.3L136.0 117.4L150.6 120.4L165.2 123.3L179.8 126.0L194.3 128.5L208.9 130.9L223.4 133.1L238.0 135.2L252.5 137.1L267.1 138.9L281.6 140.5L296.2 141.9L310.7 143.2L325.2 144.4L339.8 145.4L354.3 146.2L368.8 146.9L383.3 147.4" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:41" d="M383.3 147.4L379.7 149.0" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:41" d="M383.3 147.4L379.8 145.5" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:42" d="M180.9 210.0L189.5 208.6L198.0 207.1L206.5 205.6L214.9 204.0L223.3 202.4L231.7 200.7L240.0 199.0L248.3 197.2L256.5 195.4L264.7 193.5L272.9 191.6L281.0 189.6L289.1 187.6L297.1 185.5L305.1 183.4L313.0 181.2L320.9 179.0L328.8 176.7L336.6 174.3L344.4 171.9L352.2 169.5L359.8 167.0L367.5 164.5L375.1 161.9L382.7 159.2L390.2 156.5L397.7 153.8" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:42" d="M397.7 153.8L394.9 156.6" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:42" d="M397.7 153.8L393.7 153.4" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:43" d="M183.7 210.0L191.8 204.7L199.8 199.7L207.9 194.9L215.9 190.3L224.0 186.0L232.0 181.8L240.0 177.9L248.0 174.2L255.9 170.7L263.9 167.5L271.8 164.4L279.8 161.6L287.7 159.1L295.6 156.7L303.5 154.6L311.4 152.6L319.2 150.9L327.1 149.5L334.9 148.2L342.7 147.2L350.5 146.4L358.3 145.8L366.1 145.4L373.9 145.3L381.7 145.4L389.4 145.7L397.1 146.2" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:43" d="M397.1 146.2L393.4 147.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:43" d="M397.1 146.2L393.7 144.3" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:44" d="M-10.0 73.1L7.0 76.2L23.8 79.2L40.4 82.1L56.9 85.1L73.2 88.0L89.3 90.9L105.3 93.7L121.0 96.5L136.6 99.3L152.1 102.0L167.3 104.7L182.4 107.4L197.3 110.1L212.0 112.7L226.6 115.2L241.0 117.8L255.2 120.3L269.3 122.8L283.2 125.2L296.9 127.7L310.4 130.0L323.7 132.4L336.9 134.7L349.9 137.0L362.8 139.2L375.4 141.5L387.9 143.7" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:44" d="M387.9 143.7L384.1 144.7" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:44" d="M387.9 143.7L384.7 141.3" stroke="#262624" stroke-width="0.5"/><path class="streak" pathLength="1" style="--i:45" d="M47.4 210.0L59.0 206.2L70.7 202.5L82.4 198.9L94.3 195.4L106.2 192.1L118.1 188.9L130.2 185.8L142.3 182.8L154.4 179.9L166.7 177.2L179.0 174.6L191.4 172.1L203.8 169.7L216.3 167.4L228.9 165.3L241.6 163.3L254.3 161.4L267.1 159.6L280.0 157.9L292.9 156.4L305.9 155.0L319.0 153.7L332.1 152.5L345.3 151.5L358.6 150.5L371.9 149.7L385.3 149.0" stroke="#262624" stroke-width="0.5" fill="none" opacity="0.75"/><path class="head" style="--i:45" d="M385.3 149.0L381.8 151.0" stroke="#262624" stroke-width="0.5"/><path class="head" style="--i:45" d="M385.3 149.0L381.6 147.5" stroke="#262624" stroke-width="0.5"/><circle class="hub" cx="412.8" cy="148.0" r="15.0" stroke="#004fcc" stroke-width="0.5" fill="none"/><circle class="hub" cx="412.8" cy="148.0" r="24.0" stroke="#004fcc" stroke-width="0.5" fill="none" stroke-dasharray="2 2"/><circle class="hub" cx="412.8" cy="148.0" r="33.0" stroke="#004fcc" stroke-width="0.5" fill="none" stroke-dasharray="2 2"/><rect class="hub" x="408.8" y="144.0" width="8.0" height="8.0" stroke="#004fcc" stroke-width="0.75" fill="#004fcc"/></g></svg></figure>
   </div>
   <aside class="notes">
     <p>Welcome, and thanks for coming. Quick round of names first: who you are, and one rule at work you've noticed nobody ever wrote down.</p>
     <p>Here's the plan for the next twenty minutes: where we're coming from, what we learned, what's different this year, and what you can get out of it. Then questions, then the reading.</p>
+  </aside>
+  <div class="foot"></div>
+</section>
+
+<section class="slide" id="sfilm">
+  <div class="content one filmwrap">
+    <div>
+      <p class="kicker">Discovering New Nature</p>
+      <div class="filmbox"><iframe class="film" src="film.html?embed" title="Kickoff film: protocols, AI and the year ahead (about 90 seconds)" loading="lazy" allow="autoplay"></iframe></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Let the film play; it's about a minute and a half. Turn the sound on in the film's controls if the room has speakers.</p>
+    <p>It sets up the year in one go: simple protocols coordinate an unreasonable amount of the world, they're hard to see until they strain and break, AI finds where they leak, and protocols are AI's evil twin. Then where the work comes from, Summer of Protocols and the Protocol Institute, and where we come in.</p>
   </aside>
   <div class="foot"></div>
 </section>
@@ -148,12 +356,14 @@ h2.line { white-space: nowrap; }
     <div>
       <p class="kicker">Where we're coming from</p>
       <h2 class="line">We've spent a year and a half reading wide.</h2>
-      <ul class="rows tight">
-        <li><span class="k">Summer 2025</span><span>One of the first three groups at Summer of Protocols. Organizations as knots of <a class="q" href="../blyg/t/337bj2a8g6cdhnr6ntmn1rpwpw/">tensions</a>; the trouble with counting <a class="q" href="../blyg/t/5xjs9gmcnfzc13tkpad6c7ecta/">non-events</a>.</span></li>
-        <li><span class="k">Autumn 2025</span><span>A <a class="q" href="../blyg/t/6dsf3bgar0an6g3dsh3kd1w2cf/">maturity model</a> for LLM adoption, the <a class="q" href="../blyg/t/5b3vcnpvrqd545ae6ekrn72sq6/">Boom case</a>, <a class="q" href="../blyg/t/0kpdm445aex86567menm3h4dbe/">forward-deployed engineers</a>.</span></li>
-        <li><span class="k">Winter 2025–26</span><span><a class="q" href="../blyg/t/4pt890bzhkdr656am70z60s5zh/">Fat vs lean</a>, multisig as a <a class="q" href="../blyg/t/6hjkrqtnp7qywf7gpzqwfpxm6d/">tempo brake</a>, <a class="q" href="../blyg/t/16gdj1jc4jntda17wmtsest0mp/">vibe coding</a> as managing agents.</span></li>
-        <li><span class="k">Spring 2026</span><span><a class="q" href="../blyg/t/2q8rqdnhn99zyzbhryh22d7xaj/">Auctions</a>, <a class="q" href="../blyg/t/2hdjvdxf8gc0gpxnv4kx8ncmwn/">water data standards</a>, <a class="q" href="../blyg/t/7w846xayfbjm5xbsek2m99a4rr/">when to harden</a>.</span></li>
-        <li><span class="k">Summer 2026</span><span><a class="q" href="../blyg/t/57y3nk7mzn31675n3jhjp2qvpx/">QWERTY</a>, the <a class="q" href="../blyg/t/5jcnr5p3g36vharsk5rkza3sr4/">standardization of time</a>, our first case studies.</span></li>
+      <p class="hint">Tap every season you were there for.</p>
+      <ul class="rows tight there">
+        <li data-poll="there" data-option="summer-2025" role="button" tabindex="0"><span class="k">Summer 2025</span><span>One of the first three groups at Summer of Protocols. Organizations as knots of <a class="q" href="../blyg/t/337bj2a8g6cdhnr6ntmn1rpwpw/">tensions</a>; the trouble with counting <a class="q" href="../blyg/t/5xjs9gmcnfzc13tkpad6c7ecta/">non-events</a>.</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="there" data-option="autumn-2025" role="button" tabindex="0"><span class="k">Autumn 2025</span><span>A <a class="q" href="../blyg/t/6dsf3bgar0an6g3dsh3kd1w2cf/">maturity model</a> for LLM adoption, the <a class="q" href="../blyg/t/5b3vcnpvrqd545ae6ekrn72sq6/">Boom case</a>, <a class="q" href="../blyg/t/0kpdm445aex86567menm3h4dbe/">forward-deployed engineers</a>.</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="there" data-option="winter-2025" role="button" tabindex="0"><span class="k">Winter 2025–26</span><span><a class="q" href="../blyg/t/4pt890bzhkdr656am70z60s5zh/">Fat vs lean</a>, multisig as a <a class="q" href="../blyg/t/6hjkrqtnp7qywf7gpzqwfpxm6d/">tempo brake</a>, <a class="q" href="../blyg/t/16gdj1jc4jntda17wmtsest0mp/">vibe coding</a> as managing agents.</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="there" data-option="spring-2026" role="button" tabindex="0"><span class="k">Spring 2026</span><span><a class="q" href="../blyg/t/2q8rqdnhn99zyzbhryh22d7xaj/">Auctions</a>, <a class="q" href="../blyg/t/2hdjvdxf8gc0gpxnv4kx8ncmwn/">water data standards</a>, <a class="q" href="../blyg/t/7w846xayfbjm5xbsek2m99a4rr/">when to harden</a>.</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="there" data-option="summer-2026" role="button" tabindex="0"><span class="k">Summer 2026</span><span><a class="q" href="../blyg/t/57y3nk7mzn31675n3jhjp2qvpx/">QWERTY</a>, the <a class="q" href="../blyg/t/5jcnr5p3g36vharsk5rkza3sr4/">standardization of time</a>, our first case studies.</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="there" data-option="new" role="button" tabindex="0"><span class="k">Today</span><span>First time here? Welcome. Tap this one.</span><span class="ct"><b data-count></b></span></li>
       </ul>
       <div class="links"><a href="../blyg/">All 39 sessions on the blyg</a><a href="../about/#work">Guides, essays and workshops</a></div>
     </div>
@@ -170,12 +380,13 @@ h2.line { white-space: nowrap; }
     <div>
       <p class="kicker">What it taught us</p>
       <h2>Five lessons shaped this year's plan.</h2>
-      <ul class="rows lesson">
-        <li><span>Some tensions are handled in the moment; others are built into structure.</span><span class="to">→</span><span class="then">Which rules should be hard, and which can stay soft?</span></li>
-        <li><span>Good protocols produce non-events, and nobody counts what didn't happen.</span><span class="to">→</span><span class="then">What can incident reports show us about everything that usually goes right?</span></li>
-        <li><span>Protocols show up when tempo changes: Slack in the office, Boom's R&amp;D against its supply chain.</span><span class="to">→</span><span class="then">What shows up when agents speed everything up?</span></li>
-        <li><span>Standards spread through incentives and narrow scope, then lock in.</span><span class="to">→</span><span class="then">What do our systems emit, and how do we keep rules open to change?</span></li>
-        <li><span>Working with agents is management; the scarce work is gathering context.</span><span class="to">→</span><span class="then">Who gathers that context where you work, and could it be you?</span></li>
+      <p class="hint">Tap the question you most want to dig into this year.</p>
+      <ul class="rows lesson" data-single>
+        <li data-poll="lesson" data-option="l1" role="button" tabindex="0"><span>Some tensions are handled in the moment; others are built into structure.</span><span class="to">→</span><span class="then">Which rules should be hard, and which can stay soft?</span><span class="pct"><b data-count></b></span></li>
+        <li data-poll="lesson" data-option="l2" role="button" tabindex="0"><span>Good protocols produce non-events, and nobody counts what didn't happen.</span><span class="to">→</span><span class="then">What can incident reports show us about everything that usually goes right?</span><span class="pct"><b data-count></b></span></li>
+        <li data-poll="lesson" data-option="l3" role="button" tabindex="0"><span>Protocols show up when tempo changes: Slack in the office, Boom's R&amp;D against its supply chain.</span><span class="to">→</span><span class="then">What shows up when agents speed everything up?</span><span class="pct"><b data-count></b></span></li>
+        <li data-poll="lesson" data-option="l4" role="button" tabindex="0"><span>Standards spread through incentives and narrow scope, then lock in.</span><span class="to">→</span><span class="then">What do our systems emit, and how do we keep rules open to change?</span><span class="pct"><b data-count></b></span></li>
+        <li data-poll="lesson" data-option="l5" role="button" tabindex="0"><span>Working with agents is management; the scarce work is gathering context.</span><span class="to">→</span><span class="then">Who gathers that context where you work, and could it be you?</span><span class="pct"><b data-count></b></span></li>
       </ul>
     </div>
   </div>
@@ -192,7 +403,7 @@ h2.line { white-space: nowrap; }
       <p class="kicker">What's different now</p>
       <h2>Agents won't ask for manager approval.</h2>
       <p>A small team can now run thousands of agents. An approval step can't keep up, so work flows around it. What holds is what's built in: into every agent, and into the ground they work on.</p>
-      <figure class="big"><img src="approval-vs-protocols.png" width="2040" height="1020" alt="Left, an approval queue: agents' work piles up at one approval step and flows around it. Right, hard protocols: agents move freely along guides, and guardrails keep them out of off-limits areas."></figure>
+      <figure class="big live"><canvas data-fig="scale" role="img" aria-label="Left, an approval queue: agents' work piles up at one approval step and flows around it. Right, hard protocols: agents move freely along guides, and guardrails keep them out of off-limits areas."></canvas><noscript><img src="approval-vs-protocols.png" width="2040" height="1020" alt="Left, an approval queue: agents' work piles up at one approval step and flows around it. Right, hard protocols: agents move freely along guides, and guardrails keep them out of off-limits areas."></noscript></figure>
     </div>
   </div>
   <aside class="notes">
@@ -207,16 +418,17 @@ h2.line { white-space: nowrap; }
     <div>
       <p class="kicker">This year's question</p>
       <h2 class="two"><span>How will AI-native organizations run their operations?</span></h2>
+      <p class="hint">Tap the themes you're most curious about.</p>
       <ul class="rows tight themes">
-        <li class="hd"><span></span><span>Themes</span><span>Skill</span><span>Date</span></li>
-        <li><img src="../assets/fig/theme-1.svg" alt="" loading="lazy"><span>I. What agents are, in practice</span><span class="sk">Reading what agents can see, do and spend</span><span class="dt">Nov–Dec 2026</span></li>
-        <li><img src="../assets/fig/theme-2.svg" alt="" loading="lazy"><span>II. Natural coordination</span><span class="sk">Spotting coordination without a manager</span><span class="dt">Jan–Feb 2027</span></li>
-        <li><img src="../assets/fig/theme-3.svg" alt="" loading="lazy"><span>III. Emissions</span><span class="sk">Mapping what systems publish</span><span class="dt">Feb–Apr 2027</span></li>
-        <li><img src="../assets/fig/theme-4.svg" alt="" loading="lazy"><span>IV. Seeing hardness in incidents</span><span class="sk">Reading incidents for what held or broke</span><span class="dt">May–Jun 2027</span></li>
-        <li><img src="../assets/fig/theme-5.svg" alt="" loading="lazy"><span>V. Engineering hardness</span><span class="sk">Choosing what to harden, and how</span><span class="dt">Jul–Sep 2027</span></li>
-        <li><img src="../assets/fig/theme-6.svg" alt="" loading="lazy"><span>VI. Operational liveness</span><span class="sk">Keeping rules open to change</span><span class="dt">Oct–Nov 2027</span></li>
+        <li class="hd"><span></span><span>Themes</span><span>Skill</span><span>Date</span><span></span></li>
+        <li data-poll="theme" data-option="t1" role="button" tabindex="0"><img src="../assets/fig/theme-1.svg" alt="" loading="lazy"><span>I. What agents are, in practice</span><span class="sk">Reading what agents can see, do and spend</span><span class="dt">Nov–Dec 2026</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="theme" data-option="t2" role="button" tabindex="0"><img src="../assets/fig/theme-2.svg" alt="" loading="lazy"><span>II. Natural coordination</span><span class="sk">Spotting coordination without a manager</span><span class="dt">Jan–Feb 2027</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="theme" data-option="t3" role="button" tabindex="0"><img src="../assets/fig/theme-3.svg" alt="" loading="lazy"><span>III. Emissions</span><span class="sk">Mapping what systems publish</span><span class="dt">Feb–Apr 2027</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="theme" data-option="t4" role="button" tabindex="0"><img src="../assets/fig/theme-4.svg" alt="" loading="lazy"><span>IV. Seeing hardness in incidents</span><span class="sk">Reading incidents for what held or broke</span><span class="dt">May–Jun 2027</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="theme" data-option="t5" role="button" tabindex="0"><img src="../assets/fig/theme-5.svg" alt="" loading="lazy"><span>V. Engineering hardness</span><span class="sk">Choosing what to harden, and how</span><span class="dt">Jul–Sep 2027</span><span class="ct"><b data-count></b></span></li>
+        <li data-poll="theme" data-option="t6" role="button" tabindex="0"><img src="../assets/fig/theme-6.svg" alt="" loading="lazy"><span>VI. Operational liveness</span><span class="sk">Keeping rules open to change</span><span class="dt">Oct–Nov 2027</span><span class="ct"><b data-count></b></span></li>
       </ul>
-      <div class="links"><a href="../sessions/#syllabus">Reading plan</a><a href="../sessions/#suggest">Suggest a reading</a></div>
+      <div class="links"><a href="../sessions/#syllabus">Reading plan</a><a href="../sessions/map/3d/">Explore the 3-D reading map</a><a href="../sessions/#suggest">Suggest a reading</a></div>
     </div>
   </div>
   <aside class="notes">
@@ -260,6 +472,11 @@ h2.line { white-space: nowrap; }
       <p>Pick an organization you can see into, and one data operation AI is changing. Carry it for about a year: choose, brief, intervene, gather evidence, publish.</p>
       <p class="small muted">That's how last year's cases started: water rate data, construction bids from PDF drawings, a brand kit agents build from, and how people actually co-work with AI.</p>
       <div class="links"><a href="../research/cases/#yours">How case studies work</a><a href="../research/cases/">Cases so far</a></div>
+      <div class="cta">
+        <p class="wk">Introduce yourself</p>
+        <p class="small muted">Your AI assistant drafts it from what it knows about you: name, website, and a case you might carry. You check it before anything is sent.</p>
+        <div class="row"><button type="button" class="btn primary" data-open="intro-drawer">Introduce yourself</button><span class="small ok" data-sent="intro" hidden>✓ Your intro is in</span></div>
+      </div>
     </div>
     <figure><img src="../assets/fig/act-research.svg" alt="" loading="lazy"></figure>
   </div>
@@ -283,6 +500,11 @@ h2.line { white-space: nowrap; }
         <li><span class="k">One rule</span><span>A field log from day one, shared with the client.</span></li>
       </ul>
       <div class="links"><a href="https://protocolvision.org/">protocolvision.org</a><a href="../blyg/t/6vfq90mvsc312e4vctcc4mff61/">What protocol-centric consulting looks like</a></div>
+      <div class="cta">
+        <p class="wk">Interested?</p>
+        <div class="row"><button type="button" class="btn primary" data-open="paid-drawer">I'm interested in paid work</button><button type="button" class="btn" data-open="intro-drawer">Introduce yourself</button></div>
+        <p class="small ok" data-sent="paid" hidden>✓ We have your email. Rafael will follow up.</p>
+      </div>
     </div>
     <figure><img src="../assets/fig/advisory.svg" alt="" loading="lazy"></figure>
   </div>
@@ -306,6 +528,11 @@ h2.line { white-space: nowrap; }
         <li><span>Invite a friend: send them <a class="q" href="../">protocolsforbusiness.com</a></span><span>You</span><span>Before the new year</span></li>
         <li><span>Recording and notes on the <a class="q" href="../blyg/">blyg</a></span><span>Hosts</span><span>After each session</span></li>
       </ul>
+      <div class="cta">
+        <p class="wk">Write a blyg, blog or Substack?</p>
+        <p class="small muted">Add it to the community feed, so the group reads your posts alongside ours.</p>
+        <div class="row"><button type="button" class="btn primary" data-open="feed-drawer">Add it to the feed</button><span class="small ok" data-feed-sent hidden>✓ Sent. The hosts will add it.</span></div>
+      </div>
     </div>
   </div>
   <aside class="notes">
@@ -314,5 +541,47 @@ h2.line { white-space: nowrap; }
   </aside>
   <div class="foot"></div>
 </section>
+
+<dialog id="intro-drawer" class="drawer" aria-labelledby="intro-title">
+  <header><h3 id="intro-title">Introduce yourself</h3><button type="button" class="x" data-close aria-label="Close">×</button></header>
+  <p class="muted">Your AI assistant drafts your intro from what it already knows about you. You check it, then send it to the hosts.</p>
+  <ol class="mini">
+    <li><button type="button" class="btn" data-copy-prompt>Copy the prompt</button> <span class="note small muted" aria-live="polite"></span></li>
+    <li>Paste it into ChatGPT, Claude or any assistant that knows you.</li>
+    <li>Paste its answer below, check it, and send.</li>
+  </ol>
+  <details><summary class="small">Read the prompt</summary><pre id="intro-prompt">I'm joining the Protocols for Business research group (https://protocolsforbusiness.com/). We read together about how organizations coordinate through protocols as AI agents join the work. Each member can carry a case study for a year: an organization they can see into (a client, or their own employer) and one data operation AI is changing there.
+
+Using what you know about me (your memory of me, our past conversations, my work and projects), draft my intro for the hosts in exactly this format:
+
+Name: my name
+Website: my personal site, blog or profile (leave blank if you don't know one)
+Case study idea: two or three sentences on the organization, the data operation, and what I'd want to find out
+
+If you don't know enough for the case study idea, ask me one or two questions first. Leave out anything confidential about my employer, clients or other people. Show me the draft and wait for me to confirm.</pre></details>
+  <form data-intro><label for="intro-text">Your assistant's answer</label><textarea id="intro-text" rows="7" placeholder="Name: …&#10;Website: …&#10;Case study idea: …"></textarea><p class="preview small"></p><div class="row"><button type="submit" class="btn primary">Send to the hosts</button><span class="note small muted" aria-live="polite"></span></div></form>
+  <p class="small ok" data-sent="intro" hidden>✓ Your intro is in. Send another to update it.</p>
+  <p class="fine">Only the hosts see this.</p>
+</dialog>
+<dialog id="paid-drawer" class="drawer" aria-labelledby="paid-title">
+  <header><h3 id="paid-title">Interested in paid work</h3><button type="button" class="x" data-close aria-label="Close">×</button></header>
+  <p class="muted">Leave your email and Rafael will follow up after the session about joining <a href="https://protocolvision.org/">Protocol Vision Advisory</a>. No commitment either way.</p>
+  <form id="paid-form"><label>Name <input name="name" autocomplete="name"></label><label>Email <input type="email" name="email" required autocomplete="email"></label><div class="row"><button type="submit" class="btn primary">Send</button><span class="note small muted" aria-live="polite"></span></div></form>
+  <p class="small ok" data-sent="paid" hidden>✓ We have your email.</p>
+  <p class="fine">Only the hosts see your email.</p>
+</dialog>
+<dialog id="feed-drawer" class="drawer" aria-labelledby="feed-title">
+  <header><h3 id="feed-title">Add your blyg, blog or Substack</h3><button type="button" class="x" data-close aria-label="Close">×</button></header>
+  <p class="muted">Your posts join the community on the <a href="../blyg/">Feed</a>. We check that the address has a blyg or an RSS feed (every Substack does), then the hosts add it.</p>
+  <form id="feed-form" data-endpoint="https://sig-p4b-signup.rafaeldf2.workers.dev/listing">
+    <label>Name <input name="name" required maxlength="100" autocomplete="name"></label>
+    <label>Discord handle or email <input name="contact" required maxlength="150" autocapitalize="off" spellcheck="false"></label>
+    <label>Your blyg, blog or Substack's address <input name="link" required maxlength="300" inputmode="url" placeholder="https://you.substack.com/" autocapitalize="off" spellcheck="false"></label>
+    <label>Anything we should know <span class="small">(optional)</span><textarea name="note" rows="2" maxlength="600"></textarea></label>
+    <input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+    <div class="row"><button type="submit" class="btn primary">Send</button><span class="note small muted" aria-live="polite"></span></div>
+  </form>
+  <p class="fine">Your name, contact and address go to the hosts in the group's Discord channel.</p>
+</dialog>
 </body>
 </html>

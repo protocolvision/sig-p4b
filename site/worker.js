@@ -1,6 +1,7 @@
 // protocolsforbusiness.com: serve the built site from ../dist, send www and http to the bare https domain,
 // and run the blyg's Webmention endpoint (Blygger 0.3 §15) at /blyg/webmention.
 import { receive, listFor, listRecent } from "./mentions.js";
+import { kickoff } from "./kickoff.js";
 
 const ORIGIN = "https://protocolsforbusiness.com/blyg/";
 const ENDPOINT = ORIGIN + "webmention";
@@ -13,11 +14,12 @@ async function ownItem(env, req, id) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    if (url.hostname === "www.protocolsforbusiness.com" || url.protocol === "http:") {
+    if (!env.LOCAL_DEV && (url.hostname === "www.protocolsforbusiness.com" || url.protocol === "http:")) {   // LOCAL_DEV: set in .dev.vars for wrangler dev
       url.hostname = "protocolsforbusiness.com";
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
+    if (url.pathname.startsWith("/api/kickoff/")) return kickoff(request, env, url);   // the kickoff deck's live layer
     if (url.pathname === "/blyg/webmention") {
       if (request.method === "POST") {
         return receive(request, env, ctx, ORIGIN, async (id) => !!(await ownItem(env, request, id)),

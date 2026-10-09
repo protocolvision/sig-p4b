@@ -17,5 +17,10 @@
   "kv_namespaces": [
     { "binding": "MENTIONS", "id": "9214a86adf814e4e896b69a2c72cd5e7" }   // blyg Webmentions: pointers and rate counters
   ],
+  "d1_databases": [
+    // The kickoff deck's live layer (kickoff.js). Schema changes: add a file to migrations/, then
+    // `npx wrangler d1 migrations apply kickoff --remote` (and `--local` for wrangler dev).
+    { "binding": "KICKOFF", "database_name": "kickoff", "database_id": "a5068771-8df3-4667-a40e-a590f8d823af", "migrations_dir": "migrations" }
+  ],
   "observability": { "enabled": true }
 }
