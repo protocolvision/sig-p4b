@@ -6,7 +6,8 @@ code from those 10 or answers "none". The request goes through the Message Batch
 structured JSON constrained to the 10 candidate codes plus "none". Client and batch patterns follow
 extract_tasks.py.
 
-Input: the CSV written by map_occupations.py (columns id, title, normalised, method, ...). Only rows
+Input: the CSV written by map_occupations.py (columns id, title, normalised, method, candidate_code, department, ...). The
+candidate_code (best dictionary hit) is always among the 10 offered; department, if present, is shown as context. Only rows
 with method == "model" are sent.
 
 Usage (from loop-tools/, with the analytics venv):
@@ -35,7 +36,7 @@ SYSTEM = (
     "You assign one O*NET-SOC occupation code to a job-posting title. You are given the title and a numbered "
     "list of candidate occupations. Choose the single candidate whose occupation best matches the work the "
     "title describes. Choose \"none\" if no candidate is a reasonable match; do not pick the least bad one. "
-    "Judge by the work, not by a shared word: \"Product Manager\" is not a designer because both say "
+    "A department may be given as context. Judge by the work, not by a shared word: \"Product Manager\" is not a designer because both say "
     "\"product\". Answer with the candidate's code exactly as listed, or \"none\"."
 )
 
@@ -49,7 +50,7 @@ def schema(codes):
     }
 
 
-def candidates(m, norm, k=N_CAND):
+def candidates(m, norm, k=N_CAND, must=""):
     """Top-k O*NET codes by token overlap with the normalised title. Per code, the best dictionary title
     counts: score = (shared tokens, share of the posting's tokens, Jaccard); ties go to the code with the most
     dictionary titles, then the lowest code (as in map_occupations)."""
@@ -66,6 +67,8 @@ def candidates(m, norm, k=N_CAND):
                 if code not in best or score > best[code]:
                     best[code] = score
     ranked = sorted(best, key=lambda c: (best[c][0] * -1, -best[c][1], -best[c][2], -m.code_count[c], c))
+    if must:                                       # a dictionary hit is always offered
+        ranked = [must] + [c for c in ranked if c != must]
     return ranked[:k]
 
 
@@ -84,12 +87,12 @@ def submit(a):
     # one request per distinct normalised title; custom_id = t<index>
     uniq = {}
     for r in rows:
-        uniq.setdefault(r["normalised"], r["title"])
+        uniq.setdefault((r["normalised"], r.get("department", ""), r.get("candidate_code", "")), r["title"])
     meta, reqs = {}, []
-    for i, (norm, title) in enumerate(sorted(uniq.items())):
-        cands = candidates(m, norm)
+    for i, ((norm, dept, must), title) in enumerate(sorted(uniq.items())):
+        cands = candidates(m, norm, must=must)
         cid = f"t{i}"
-        meta[cid] = {"normalised": norm, "title": title, "candidates": cands}
+        meta[cid] = {"normalised": norm, "department": dept, "must": must, "title": title, "candidates": cands}
         if not cands:
             continue                                   # nothing overlaps: leave as model-none without a call
         listing = "\n".join(f"{n + 1}. {c}  {m.occ.get(c, '')}" for n, c in enumerate(cands))
@@ -100,7 +103,7 @@ def submit(a):
                 max_tokens=200,
                 system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
                 output_config={"effort": "low", "format": {"type": "json_schema", "schema": schema(cands)}},
-                messages=[{"role": "user", "content": f"Title: {title}\n\nCandidates:\n{listing}"}],
+                messages=[{"role": "user", "content": f"Title: {title}\n" + (f"Department: {dept}\n" if dept else "") + f"\nCandidates:\n{listing}"}],
             ),
         ))
     state = {"model": a.model, "input": str(pathlib.Path(a.input).resolve()), "batches": []}
@@ -151,11 +154,11 @@ def collect(a):
          open(state["input"], encoding="utf-8") as fin:
         w = csv.writer(f)
         w.writerow(["id", "title", "normalised", "onet_code", "method", "onet_title", "candidates"])
-        by_norm = {v["normalised"]: (k, v) for k, v in meta.items()}
+        by_norm = {(v["normalised"], v["department"], v["must"]): (k, v) for k, v in meta.items()}
         for r in csv.DictReader(fin):
             if r["method"] != "model":
                 continue
-            cid, v = by_norm[r["normalised"]]
+            cid, v = by_norm[(r["normalised"], r.get("department", ""), r.get("candidate_code", ""))]
             if cid in answer or not v["candidates"]:
                 code = answer.get(cid, "none")
                 code = "" if code == "none" else code

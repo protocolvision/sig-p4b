@@ -5,8 +5,9 @@ Needs Python 3.9+, standard library only, and the O*NET text files in corpus/b-r
 Usage:
   python3 map_occupations.py IN.jsonl OUT.csv
 
-IN.jsonl has one object per line with fields `id` and `title`.
-OUT.csv columns: id, title, normalised, onet_code, method, onet_title, study_occupation, candidate_code
+IN.jsonl has one object per line with fields `id` and `title`, and optionally `department` (passed through).
+OUT.csv columns: id, title, normalised, onet_code, method, onet_title, study_occupation, candidate_code,
+candidate_method, department
 
 Both sides (posting titles and O*NET titles) are singularised before lookup (Pharmacists -> pharmacist).
 Lead, staff and head of are removed only as leading seniority words followed by a function noun
@@ -17,11 +18,10 @@ Order of matching (first hit wins):
   exact      normalised title equals a normalised O*NET occupation title
   alternate  ... equals an O*NET alternate title ("Job Titles.txt" in release 31.0)
   reported   ... equals an O*NET sample-of-reported-title
-  fallback   every token of some dictionary title (2+ tokens) appears in the posting title AND those tokens
-             cover at least FALLBACK_COVER (60%) of the posting's tokens; otherwise the title goes to "model"
-  model      no safe match (no dictionary hit, or a fallback hit covering < 60% of the title); onet_code is
-             empty and `candidate_code` holds the rejected fallback guess, if any. assign_titles_model.py
-             resolves these titles with the Messages Batches API.
+  model      EVERY other title. onet_code is empty. Dictionary hits are candidates only: `candidate_code`
+             holds the best hit and `candidate_method` its level (exact, alternate, reported, fallback, or
+             fallback-low when the matched title covers < 60% of the posting's tokens). assign_titles_model.py
+             resolves these titles with the Message Batches API.
   unmatched  the title is empty after normalisation
 Ties, at every step: most specific match first (fallback: most tokens), then the SOC code with the most
 dictionary titles (the most common code), then the lowest code. Nothing is random.
@@ -62,7 +62,8 @@ OVERRIDES = [
 ]
 
 SENIORITY = {"senior", "sr", "junior", "jr", "principal", "i", "ii", "iii", "ll"}
-FIELDS = ["id", "title", "normalised", "onet_code", "method", "onet_title", "study_occupation", "candidate_code"]
+FIELDS = ["id", "title", "normalised", "onet_code", "method", "onet_title", "study_occupation", "candidate_code",
+          "candidate_method", "department"]
 FALLBACK_COVER = 0.60
 
 # "lead" and "staff" are seniority only as the first word of a title and only before a function noun.
@@ -159,20 +160,21 @@ class Mapper:
         return None
 
     def map(self, title):
-        """Return (normalised, code, method, onet_title, study_occupation, candidate_code)."""
+        """Return (normalised, code, method, onet_title, study_occupation, candidate_code, candidate_method).
+        Only the study-occupation override table assigns a code. Every other title gets method "model"; the
+        best dictionary hit (exact, alternate, reported or fallback) is kept as candidate_code/candidate_method."""
         raw_norm = normalise(title, strip_lead=False)
         norm = normalise(title)
         if not norm:
-            return norm, "", "unmatched", "", "", ""
+            return norm, "", "unmatched", "", "", "", ""
         ov = self.override(raw_norm)
         if ov:
-            return norm, ov[1], "override", self.occ.get(ov[1], ""), ov[0], ""
+            return norm, ov[1], "override", self.occ.get(ov[1], ""), ov[0], "", ""
         hit = self.index.get(norm)
         if hit:
             for level in ("exact", "alternate", "reported"):
                 if level in hit:
-                    code = pick(hit[level], self.code_count)
-                    return norm, code, level, self.occ.get(code, ""), "", ""
+                    return norm, "", "model", "", "", pick(hit[level], self.code_count), level
         toks = set(norm.split())
         best = None
         for w in toks:
@@ -184,10 +186,9 @@ class Mapper:
                     if best is None or key < best[0]:
                         best = (key, c)
         if best:
-            if -best[0][0] / len(toks) >= FALLBACK_COVER:
-                return norm, best[1], "fallback", self.occ.get(best[1], ""), "", ""
-            return norm, "", "model", "", "", best[1]
-        return norm, "", "model", "", "", ""
+            cover = -best[0][0] / len(toks)
+            return norm, "", "model", "", "", best[1], "fallback" if cover >= FALLBACK_COVER else "fallback-low"
+        return norm, "", "model", "", "", "", ""
 
 
 def main():
@@ -202,9 +203,9 @@ def main():
             if not line.strip():
                 continue
             r = json.loads(line)
-            norm, code, method, otitle, study, cand = m.map(r["title"])
+            norm, code, method, otitle, study, cand, cmeth = m.map(r["title"])
             n[method] += 1
-            w.writerow([r["id"], r["title"], norm, code, method, otitle, study, cand])
+            w.writerow([r["id"], r["title"], norm, code, method, otitle, study, cand, cmeth, r.get("department", "")])
     print(f"dictionary: {len(m.index)} normalised titles, {len(m.code_count)} codes", file=sys.stderr)
     print("; ".join(f"{k} {v}" for k, v in n.most_common()), file=sys.stderr)
 
