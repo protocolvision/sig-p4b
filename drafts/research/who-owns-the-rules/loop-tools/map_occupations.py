@@ -40,9 +40,12 @@ ONET = HERE.parent / "corpus" / "b-raw" / "onet"
 # separates them.
 # Words that make a "controller" title something other than the finance role (C5, fix 3). The S1 walk's
 # sel.py regex is not in the repo (C6 asks for it to be committed); this is the reviewer's list.
-CONTROLLER_EXCLUDE_PHRASES = ["air traffic"]
+CONTROLLER_EXCLUDE_PHRASES = ["air traffic", "business controller", "business controlling"]
 CONTROLLER_EXCLUDE_WORDS = {"project", "production", "motor", "firmware", "plc", "network", "domain", "cost",
-                            "credit", "quality", "inventory"}
+                            "credit", "quality", "inventory",
+                            # 10 Oct 2026, after the 200-title check (non-finance controllers):
+                            "maintenance", "mro", "purchasing", "intern", "internship", "controlling"}
+CONTROLLER_EXCLUDE_RE = re.compile(r"\bspecialist\b.*\bcontroller\b")   # "Specialist, Europe Controllers"
 # Head-level words accepted wherever the study occupation is an operations manager role (C5, fix 4).
 HEAD = ["manager", "director", "head", "vp", "vice president", "lead"]
 
@@ -152,7 +155,8 @@ class Mapper:
         padded = f" {norm} "
         for study, code, groups in OVERRIDES:
             if study == "controller" and (any(f" {p} " in padded for p in CONTROLLER_EXCLUDE_PHRASES)
-                                          or CONTROLLER_EXCLUDE_WORDS & set(norm.split())):
+                                          or CONTROLLER_EXCLUDE_WORDS & set(norm.split())
+                                          or CONTROLLER_EXCLUDE_RE.search(norm)):
                 continue
             if all(any(all(f" {w} " in padded for w in a.split())
                        for a in (normalise(x, False) for x in g)) for g in groups):
