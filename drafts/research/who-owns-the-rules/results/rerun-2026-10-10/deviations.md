@@ -55,3 +55,15 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    - Board coverage is 41% of the frame and misses most large tech and finance firms. Features about early
      adopters and diffusion (N06a, N21, D6) are therefore coded from filings, speech and vendor documents,
      not from the board crawl.
+
+8. **Seeds v3: final handling, fixed before any coding** (`review/seeds-v3-review.md`). The key is unchanged
+   (SHA-256 in `log.md`).
+   - **Dropped:** seeds 19 (unresolved ambiguity), 32, 38, 39, 45, 46, 53, 69, 109 (miskeyed or failing
+     the RD test) and 112 (duplicate of 79). RD keeps 16 seeds, so its gate is 12 of 16 plus the Wilson
+     lower bound of 0.5.
+   - **PE second codes are inconsistent in the key** (missing on 8, 30, 63, 72, 99 and 110, among others).
+     Rule: on any RD seed, a coder's PE code is not counted as a false positive.
+   - **Merge:** `performer` is hidden from coders, because it cues negatives.
+   - **Reporting:** seed recall is reported as an upper bound. The filing and posting seeds are more
+     specific than real records, and 38 of 60 positives are invented scenarios with no cited source.
+     Speech seeds were not compared with real speech records, which did not yet exist.
