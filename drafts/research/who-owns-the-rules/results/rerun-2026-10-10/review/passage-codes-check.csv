@@ -1,0 +1,321 @@
+doc_id,code,yours,automated,note
+0001193125-26-120769_6,own_use,no,no,
+0001193125-26-120769_6,product,yes,yes,agentic APIs subscribed by clients
+0001193125-26-120769_6,reorg,no,no,
+0001193125-26-120769_6,body,no,no,
+0001193125-26-120769_6,metric,no,no,
+0001193125-26-120769_6,controls,no,no,
+0001193125-26-120769_6,workforce,no,no,
+0001193125-26-120769_6,rule_cited,no,no,
+0001108524-26-000190_1,own_use,no,no,
+0001108524-26-000190_1,product,yes,yes,Agentforce Apps
+0001108524-26-000190_1,reorg,no,no,
+0001108524-26-000190_1,body,no,no,
+0001108524-26-000190_1,metric,no,no,
+0001108524-26-000190_1,controls,no,no,
+0001108524-26-000190_1,workforce,no,no,
+0001108524-26-000190_1,rule_cited,no,no,
+0001835830-26-000040_1,own_use,no,no,
+0001835830-26-000040_1,product,no,no,
+0001835830-26-000040_1,reorg,no,no,
+0001835830-26-000040_1,body,no,no,
+0001835830-26-000040_1,metric,no,no,
+0001835830-26-000040_1,controls,no,no,
+0001835830-26-000040_1,workforce,no,no,
+0001835830-26-000040_1,rule_cited,no,no,
+0001193125-26-037138_4,own_use,yes,yes,uses generative and agentic AI tools for internal purposes
+0001193125-26-037138_4,product,yes,yes,agentic AI features in software products
+0001193125-26-037138_4,reorg,no,no,
+0001193125-26-037138_4,body,yes,yes,cross-functional governance organization to oversee AI use
+0001193125-26-037138_4,metric,no,no,
+0001193125-26-037138_4,controls,yes,yes,global AI Tools Policy in place
+0001193125-26-037138_4,workforce,no,no,
+0001193125-26-037138_4,rule_cited,no,no,
+0001601830-26-000098_0,own_use,yes,yes,Target Discovery / Drug Design / Clinical agents in own R&D
+0001601830-26-000098_0,product,no,no,
+0001601830-26-000098_0,reorg,no,no,
+0001601830-26-000098_0,body,yes,no,"Chief AI Officer appointed; codebook lists CAIO as a body, though oversight duties are not spelled out (borderline)"
+0001601830-26-000098_0,metric,yes,yes,structural analysis 4h->30min; 1.3-1.6x enrollment
+0001601830-26-000098_0,controls,no,no,
+0001601830-26-000098_0,workforce,no,no,
+0001601830-26-000098_0,rule_cited,no,no,
+0001403161-25-000089_3,own_use,yes,yes,employee AI assistant uses agentic AI
+0001403161-25-000089_3,product,no,no,
+0001403161-25-000089_3,reorg,no,no,
+0001403161-25-000089_3,body,no,no,
+0001403161-25-000089_3,metric,yes,yes,"26,000 employees, 261,000 chats"
+0001403161-25-000089_3,controls,no,no,
+0001403161-25-000089_3,workforce,no,no,
+0001403161-25-000089_3,rule_cited,no,no,
+0000950170-25-105867_0,own_use,no,no,
+0000950170-25-105867_0,product,no,no,
+0000950170-25-105867_0,reorg,no,no,
+0000950170-25-105867_0,body,no,no,
+0000950170-25-105867_0,metric,no,no,
+0000950170-25-105867_0,controls,no,no,
+0000950170-25-105867_0,workforce,no,no,
+0000950170-25-105867_0,rule_cited,no,no,
+0001327811-25-000198_2,own_use,no,yes,"'increasingly using AI products ... in running our business': AI generally, no agents or automation named"
+0001327811-25-000198_2,product,yes,yes,building generative and agentic AI into product suite
+0001327811-25-000198_2,reorg,no,no,
+0001327811-25-000198_2,body,no,no,
+0001327811-25-000198_2,metric,no,no,
+0001327811-25-000198_2,controls,no,no,
+0001327811-25-000198_2,workforce,no,no,
+0001327811-25-000198_2,rule_cited,yes,yes,EU AI Act - working to ensure compliance
+0001468327-26-000020_2,own_use,no,no,
+0001468327-26-000020_2,product,no,no,
+0001468327-26-000020_2,reorg,no,no,
+0001468327-26-000020_2,body,no,no,
+0001468327-26-000020_2,metric,no,no,
+0001468327-26-000020_2,controls,no,no,
+0001468327-26-000020_2,workforce,no,no,
+0001468327-26-000020_2,rule_cited,no,no,
+0001477333-26-000054_0,own_use,no,yes,announces a plan toward an agentic AI-first operating model; no actual use of agents is stated in this passage
+0001477333-26-000054_0,product,no,no,
+0001477333-26-000054_0,reorg,yes,yes,agentic AI-first operating model plan
+0001477333-26-000054_0,body,no,no,
+0001477333-26-000054_0,metric,no,no,
+0001477333-26-000054_0,controls,no,no,
+0001477333-26-000054_0,workforce,yes,yes,plan reduced ~20% of workforce
+0001477333-26-000054_0,rule_cited,no,no,
+0001828791-25-000078_0,own_use,no,no,
+0001828791-25-000078_0,product,yes,yes,ViantAI suite incl. automated bidding (borderline: AI agent itself only on roadmap)
+0001828791-25-000078_0,reorg,no,no,
+0001828791-25-000078_0,body,no,no,
+0001828791-25-000078_0,metric,no,no,
+0001828791-25-000078_0,controls,no,no,
+0001828791-25-000078_0,workforce,no,no,
+0001828791-25-000078_0,rule_cited,no,no,
+0001734722-25-000007_0,own_use,no,no,
+0001734722-25-000007_0,product,yes,yes,UiPath agentic automation platform
+0001734722-25-000007_0,reorg,no,no,
+0001734722-25-000007_0,body,no,no,
+0001734722-25-000007_0,metric,no,no,
+0001734722-25-000007_0,controls,no,no,
+0001734722-25-000007_0,workforce,no,no,
+0001734722-25-000007_0,rule_cited,no,no,
+0001943896-26-000060_8,own_use,yes,yes,use and rely on agentic AI incl. to generate code
+0001943896-26-000060_8,product,yes,yes,Rubrik Agent Cloud
+0001943896-26-000060_8,reorg,no,no,
+0001943896-26-000060_8,body,yes,yes,AI governance committee pre-approves AI tools
+0001943896-26-000060_8,metric,no,no,
+0001943896-26-000060_8,controls,yes,yes,pre-approval review of each AI tool
+0001943896-26-000060_8,workforce,no,no,
+0001943896-26-000060_8,rule_cited,no,no,
+0001660134-26-000020_1,own_use,no,no,
+0001660134-26-000020_1,product,yes,yes,Okta for AI Agents / Auth0 for AI Agents
+0001660134-26-000020_1,reorg,no,no,
+0001660134-26-000020_1,body,no,no,
+0001660134-26-000020_1,metric,no,no,
+0001660134-26-000020_1,controls,no,no,
+0001660134-26-000020_1,workforce,no,no,
+0001660134-26-000020_1,rule_cited,no,no,
+0001650372-26-000036_9,own_use,no,no,
+0001650372-26-000036_9,product,yes,yes,Rovo apps and agents
+0001650372-26-000036_9,reorg,no,no,
+0001650372-26-000036_9,body,no,no,
+0001650372-26-000036_9,metric,no,no,
+0001650372-26-000036_9,controls,no,no,
+0001650372-26-000036_9,workforce,no,no,
+0001650372-26-000036_9,rule_cited,no,no,
+0001569345-26-000015_0,own_use,no,no,
+0001569345-26-000015_0,product,yes,yes,autonomous agents and copilots offered
+0001569345-26-000015_0,reorg,no,no,
+0001569345-26-000015_0,body,no,no,
+0001569345-26-000015_0,metric,no,no,
+0001569345-26-000015_0,controls,no,no,
+0001569345-26-000015_0,workforce,no,no,
+0001569345-26-000015_0,rule_cited,no,no,
+0001943896-26-000047_6,own_use,yes,yes,use and rely on agentic AI incl. to generate code
+0001943896-26-000047_6,product,yes,yes,Rubrik Agent Cloud
+0001943896-26-000047_6,reorg,no,no,
+0001943896-26-000047_6,body,yes,yes,AI governance committee pre-approves AI tools
+0001943896-26-000047_6,metric,no,no,
+0001943896-26-000047_6,controls,yes,yes,pre-approval review of each AI tool
+0001943896-26-000047_6,workforce,no,no,
+0001943896-26-000047_6,rule_cited,no,no,
+0001734722-26-000050_0,own_use,no,no,
+0001734722-26-000050_0,product,yes,yes,agentic automation platform
+0001734722-26-000050_0,reorg,no,no,
+0001734722-26-000050_0,body,no,no,
+0001734722-26-000050_0,metric,no,no,
+0001734722-26-000050_0,controls,no,no,
+0001734722-26-000050_0,workforce,no,no,
+0001734722-26-000050_0,rule_cited,no,no,
+0001447669-26-000021_0,own_use,yes,yes,customer support through our AI agents
+0001447669-26-000021_0,product,no,no,
+0001447669-26-000021_0,reorg,no,no,
+0001447669-26-000021_0,body,no,no,
+0001447669-26-000021_0,metric,no,no,
+0001447669-26-000021_0,controls,no,no,
+0001447669-26-000021_0,workforce,no,no,
+0001447669-26-000021_0,rule_cited,no,no,
+0001564408-26-000052_0,own_use,no,no,
+0001564408-26-000052_0,product,no,no,
+0001564408-26-000052_0,reorg,no,no,
+0001564408-26-000052_0,body,no,no,
+0001564408-26-000052_0,metric,no,no,
+0001564408-26-000052_0,controls,no,no,
+0001564408-26-000052_0,workforce,no,no,
+0001564408-26-000052_0,rule_cited,no,no,
+0001099590-26-000006_1,own_use,yes,yes,proprietary decision automation agents (Verdi); autonomous agents for phone screening
+0001099590-26-000006_1,product,no,no,
+0001099590-26-000006_1,reorg,no,no,
+0001099590-26-000006_1,body,no,no,
+0001099590-26-000006_1,metric,yes,yes,95% adoption; 1.4M inquiries; self-service 70%->93%
+0001099590-26-000006_1,controls,yes,yes,human interviews remain central (borderline)
+0001099590-26-000006_1,workforce,yes,yes,"trained over 23,000 people on AI tools"
+0001099590-26-000006_1,rule_cited,no,no,
+0001321655-26-000041_2,own_use,yes,yes,AI (incl. agentic per heading) used for internal functions
+0001321655-26-000041_2,product,yes,yes,AI (incl. agentic) integrated into platforms
+0001321655-26-000041_2,reorg,no,no,
+0001321655-26-000041_2,body,no,no,
+0001321655-26-000041_2,metric,no,no,
+0001321655-26-000041_2,controls,yes,yes,internal policies and technological capabilities to govern AI use
+0001321655-26-000041_2,workforce,no,no,
+0001321655-26-000041_2,rule_cited,no,no,
+0001477932-26-003805_0,own_use,yes,yes,Agentic Ops autonomous execution layer across agency network
+0001477932-26-003805_0,product,yes,yes,automation tools for clients/third parties
+0001477932-26-003805_0,reorg,yes,yes,ONAR Labs division launched to centralise AI-enabled optimization
+0001477932-26-003805_0,body,no,no,
+0001477932-26-003805_0,metric,no,no,
+0001477932-26-003805_0,controls,yes,yes,QA Layer deploy-blocking governance (borderline)
+0001477932-26-003805_0,workforce,no,no,
+0001477932-26-003805_0,rule_cited,no,no,
+0001327811-26-000026_3,own_use,no,yes,"same Workday wording: internal AI use, no agents or automation named"
+0001327811-26-000026_3,product,yes,yes,building generative and agentic AI into product suite
+0001327811-26-000026_3,reorg,no,no,
+0001327811-26-000026_3,body,no,no,
+0001327811-26-000026_3,metric,no,no,
+0001327811-26-000026_3,controls,no,no,
+0001327811-26-000026_3,workforce,no,no,
+0001327811-26-000026_3,rule_cited,yes,yes,EU AI Act - working to ensure compliance
+0001213900-25-046124_0,own_use,no,no,
+0001213900-25-046124_0,product,yes,yes,enables agentic AI at the Edge (borderline)
+0001213900-25-046124_0,reorg,no,no,
+0001213900-25-046124_0,body,no,no,
+0001213900-25-046124_0,metric,no,no,
+0001213900-25-046124_0,controls,no,no,
+0001213900-25-046124_0,workforce,no,no,
+0001213900-25-046124_0,rule_cited,no,no,
+0001628280-26-018731_7,own_use,no,no,
+0001628280-26-018731_7,product,yes,yes,GitLab Duo Agent Platform
+0001628280-26-018731_7,reorg,no,no,
+0001628280-26-018731_7,body,no,no,
+0001628280-26-018731_7,metric,no,no,
+0001628280-26-018731_7,controls,no,no,
+0001628280-26-018731_7,workforce,no,no,
+0001628280-26-018731_7,rule_cited,yes,yes,GDPR and CCPA apply to data processed by GitLab Duo
+0001628280-26-032124_0,own_use,yes,yes,Project Foundry embedding AI agents into every function
+0001628280-26-032124_0,product,no,no,
+0001628280-26-032124_0,reorg,yes,yes,transform operating model via Project Foundry
+0001628280-26-032124_0,body,no,no,
+0001628280-26-032124_0,metric,no,no,
+0001628280-26-032124_0,controls,no,no,
+0001628280-26-032124_0,workforce,no,no,
+0001628280-26-032124_0,rule_cited,no,no,
+0001493152-26-026334_1,own_use,no,no,
+0001493152-26-026334_1,product,yes,yes,agentic AI-powered personalization
+0001493152-26-026334_1,reorg,no,no,
+0001493152-26-026334_1,body,no,no,
+0001493152-26-026334_1,metric,no,no,
+0001493152-26-026334_1,controls,no,no,
+0001493152-26-026334_1,workforce,no,no,
+0001493152-26-026334_1,rule_cited,no,no,
+0001585521-26-000071_1,own_use,no,no,
+0001585521-26-000071_1,product,yes,yes,"Zoom Virtual Agent 3.0, custom agents"
+0001585521-26-000071_1,reorg,no,no,
+0001585521-26-000071_1,body,no,no,
+0001585521-26-000071_1,metric,no,no,
+0001585521-26-000071_1,controls,no,no,
+0001585521-26-000071_1,workforce,no,no,
+0001585521-26-000071_1,rule_cited,no,no,
+0001560327-26-000008_0,own_use,yes,no,agentic AI 'developed and tested in our managed SOC'; Rapid7 runs the MDR/SOC itself
+0001560327-26-000008_0,product,yes,yes,agentic AI workflows in MDR / Incident Command
+0001560327-26-000008_0,reorg,no,no,
+0001560327-26-000008_0,body,no,no,
+0001560327-26-000008_0,metric,yes,no,AI triage 'reduces false positives by up to 99.93%' in Rapid7-operated MDR (borderline marketing claim)
+0001560327-26-000008_0,controls,yes,yes,guardrails via TRiSM framework (borderline)
+0001560327-26-000008_0,workforce,no,no,
+0001560327-26-000008_0,rule_cited,no,no,
+0001777393-26-000013_0,own_use,yes,yes,implemented agentic AI solutions in internal enterprise systems
+0001777393-26-000013_0,product,yes,yes,agentic AI in ChargePoint Platform
+0001777393-26-000013_0,reorg,no,no,
+0001777393-26-000013_0,body,no,no,
+0001777393-26-000013_0,metric,no,no,
+0001777393-26-000013_0,controls,no,no,
+0001777393-26-000013_0,workforce,no,no,
+0001777393-26-000013_0,rule_cited,no,no,
+0001792789-26-000050_0,own_use,no,yes,AI 'in support of internal business operations'; agents mentioned only as consumer/competitor tech
+0001792789-26-000050_0,product,no,no,
+0001792789-26-000050_0,reorg,no,no,
+0001792789-26-000050_0,body,no,no,
+0001792789-26-000050_0,metric,no,no,
+0001792789-26-000050_0,controls,no,no,
+0001792789-26-000050_0,workforce,no,no,
+0001792789-26-000050_0,rule_cited,no,no,
+0000896878-26-000014_0,own_use,no,no,
+0000896878-26-000014_0,product,yes,yes,launched AI agents for customers
+0000896878-26-000014_0,reorg,no,no,
+0000896878-26-000014_0,body,no,no,
+0000896878-26-000014_0,metric,no,no,
+0000896878-26-000014_0,controls,no,yes,"'adhere to responsible AI principles', 'customer remains in control': generic, no specific practice"
+0000896878-26-000014_0,workforce,no,no,
+0000896878-26-000014_0,rule_cited,no,no,
+0001193125-26-394793_10,own_use,no,yes,"generative AI used by workforce and 'internal adoption of AI tools'; not agents, and framed as risk"
+0001193125-26-394793_10,product,yes,yes,integrating agentic AI workflows into platform
+0001193125-26-394793_10,reorg,no,no,
+0001193125-26-394793_10,body,no,no,
+0001193125-26-394793_10,metric,no,no,
+0001193125-26-394793_10,controls,no,no,
+0001193125-26-394793_10,workforce,no,no,
+0001193125-26-394793_10,rule_cited,no,no,
+0001104659-26-031280_0,own_use,yes,yes,proprietary DataScore and DataValue AI agents make decisions
+0001104659-26-031280_0,product,yes,yes,agentic data commerce stack
+0001104659-26-031280_0,reorg,no,no,
+0001104659-26-031280_0,body,no,no,
+0001104659-26-031280_0,metric,no,no,
+0001104659-26-031280_0,controls,yes,yes,agents subordinate to human oversight; humans retain final authority
+0001104659-26-031280_0,workforce,no,no,
+0001104659-26-031280_0,rule_cited,no,no,
+0001624322-26-000037_0,own_use,yes,yes,deploy agentic AI across bank workflows (Covecta)
+0001624322-26-000037_0,product,no,no,
+0001624322-26-000037_0,reorg,no,no,
+0001624322-26-000037_0,body,no,no,
+0001624322-26-000037_0,metric,no,no,
+0001624322-26-000037_0,controls,no,no,
+0001624322-26-000037_0,workforce,no,no,
+0001624322-26-000037_0,rule_cited,no,no,
+0001477333-26-000054_4,own_use,yes,yes,incorporating AI tools and automation
+0001477333-26-000054_4,product,no,no,
+0001477333-26-000054_4,reorg,yes,yes,agentic AI-first operating model
+0001477333-26-000054_4,body,no,no,
+0001477333-26-000054_4,metric,no,no,
+0001477333-26-000054_4,controls,no,no,
+0001477333-26-000054_4,workforce,yes,yes,workforce reduction to align with AI-first model
+0001477333-26-000054_4,rule_cited,no,no,
+0001193125-26-307785_1,own_use,yes,yes,600 AI features and agents across operations
+0001193125-26-307785_1,product,yes,yes,WISE agentic AI across solutions
+0001193125-26-307785_1,reorg,no,no,
+0001193125-26-307785_1,body,no,no,
+0001193125-26-307785_1,metric,yes,yes,~600 AI features and agents
+0001193125-26-307785_1,controls,no,no,
+0001193125-26-307785_1,workforce,no,no,
+0001193125-26-307785_1,rule_cited,no,no,
+0000884144-23-000012_0,own_use,yes,yes,RPA bots as digital workers
+0000884144-23-000012_0,product,no,no,
+0000884144-23-000012_0,reorg,no,no,
+0000884144-23-000012_0,body,no,no,
+0000884144-23-000012_0,metric,no,no,
+0000884144-23-000012_0,controls,no,no,
+0000884144-23-000012_0,workforce,no,yes,"RPA lets the company scale 'without ... hire additional staff': no actual headcount change, and RPA is not AI"
+0000884144-23-000012_0,rule_cited,no,no,
+0001583708-26-000041_2,own_use,no,no,
+0001583708-26-000041_2,product,yes,yes,Wayfinder uses agentic AI
+0001583708-26-000041_2,reorg,no,no,
+0001583708-26-000041_2,body,no,no,
+0001583708-26-000041_2,metric,no,no,
+0001583708-26-000041_2,controls,no,no,
+0001583708-26-000041_2,workforce,no,no,
+0001583708-26-000041_2,rule_cited,no,no,
