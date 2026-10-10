@@ -1,0 +1,126 @@
+doc_id,task_id,verbatim,is_target,relation_ok,performer_ok,note
+M072_c05,M072_c05:1,True,True,True,True,
+M072_c05,M072_c05:2,True,True,True,True,
+M072_c05,M072_c05:3,True,True,True,True,
+M072_c05,M072_c05:4,True,True,True,True,
+M072_c05,M072_c05:5,True,True,True,True,
+M072_c05,M072_c05:6,True,True,True,True,
+M072_c05,M072_c05:7,True,True,True,True,
+M072_c05,M072_c05:8,True,True,True,True,
+M072_c05,M072_c05:10,True,True,True,True,
+M072_c05,M072_c05:11,True,True,True,True,
+M001_c04,M001_c04:1,True,True,True,True,"'we'-less fragment; self vs own team ambiguous, accepted"
+M059_c00,M059_c00:0,True,True,True,True,
+M059_c00,M059_c00:1,True,True,True,True,
+M059_c00,M059_c00:2,True,True,True,True,
+M059_c00,M059_c00:3,True,True,True,True,
+M059_c00,M059_c00:4,True,True,True,True,
+M059_c00,M059_c00:5,True,False,True,True,"slogan/company motto, not an activity"
+M024_c03,M024_c03:0,True,True,True,True,
+M024_c03,M024_c03:1,True,True,True,True,
+M024_c03,M024_c03:3,True,False,True,True,fragment: outcome ('exceeded that') with no activity content; the activity ('we targeted to hire at least 300') was missed
+M024_c03,M024_c03:4,True,True,True,True,
+M017_c09,M017_c09:0,True,True,True,True,
+M017_c09,M017_c09:1,True,True,True,True,
+M017_c09,M017_c09:4,True,True,True,True,
+M017_c09,M017_c09:6,True,True,True,True,
+M040_c07,M040_c07:0,True,True,True,True,
+M040_c07,M040_c07:4,True,True,True,True,
+M040_c07,M040_c07:5,True,True,True,True,
+M040_c07,M040_c07:8,True,False,True,True,"statement of accountability/role, not an activity"
+M040_c07,M040_c07:9,True,True,True,True,
+M073_c04,M073_c04:0,True,True,True,True,
+M073_c04,M073_c04:7,True,True,True,True,
+M073_c04,M073_c04:10,True,True,True,True,
+M061_c00,M061_c00:0,True,True,True,True,
+M061_c00,M061_c00:3,True,True,True,True,
+M081_c01,M081_c01:0,True,True,True,True,
+M081_c01,M081_c01:1,True,True,False,True,"marketing technology team is another team in the company, not the speaker's - other team"
+M081_c01,M081_c01:2,True,True,False,True,performed by the marketing technology team - other team
+M064_c00,M064_c00:0,True,True,True,True,
+M064_c00,M064_c00:1,True,True,True,True,
+M064_c00,M064_c00:2,True,True,True,True,
+M064_c00,M064_c00:3,True,True,True,True,
+M064_c00,M064_c00:4,True,True,True,True,
+M064_c00,M064_c00:6,True,True,True,True,
+M064_c00,M064_c00:7,True,True,True,True,
+M052_c02,M052_c02:2,True,True,True,True,
+M052_c02,M052_c02:3,True,False,True,True,describes the speaker's product capability (AI judges/courts) - product pitch
+M056_c00,M056_c00:1,True,True,False,True,McKinsey observation about client companies - should be general claim
+M056_c00,M056_c00:3,True,True,False,True,claim about companies - should be general claim
+M023_c05,M023_c05:1,True,True,True,True,
+M023_c05,M023_c05:2,True,True,True,True,
+M023_c05,M023_c05:3,True,True,True,True,
+M016_c01,M016_c01:0,True,True,True,True,
+M016_c01,M016_c01:1,True,True,True,True,
+M016_c01,M016_c01:4,True,True,True,True,
+M016_c01,M016_c01:5,True,True,True,True,
+M016_c01,M016_c01:6,True,True,True,True,
+M016_c01,M016_c01:7,True,True,True,False,"team rebuilds processes; performer should be person (AI is the target state), inconsistent with :5/:6"
+M016_c01,M016_c01:9,True,False,True,True,fragment 'we're in the process of doing that' - antecedent (building an agentic market-intelligence structure) not captured
+M016_c01,M016_c01:10,True,True,True,True,
+M088_c00,M088_c00:1,True,False,True,True,"talk narration ('let me take you through'), not a work activity"
+M040_c08,M040_c08:0,True,True,True,True,
+M040_c08,M040_c08:1,True,True,True,True,
+M040_c08,M040_c08:2,True,False,True,True,"general claim about board members wanting information - a desire, not an activity"
+M073_c06,M073_c06:1,True,True,True,True,
+M073_c06,M073_c06:2,True,True,True,True,
+M073_c06,M073_c06:5,True,True,True,True,
+M073_c06,M073_c06:6,True,True,True,True,
+M073_c06,M073_c06:7,True,True,True,True,
+M073_c06,M073_c06:8,True,True,True,True,
+M073_c06,M073_c06:10,True,True,True,True,
+M073_c06,M073_c06:11,True,False,True,True,malformed span: joins 'I'm also adding' with 'Jason Stealthy already has voice'; real activity is 'we're adding like voice and video to this agent' (listed as missed)
+M018_c01,M018_c01:1,True,True,True,True,
+M018_c01,M018_c01:3,True,True,True,True,
+M018_c01,M018_c01:4,True,False,True,True,"employment state, not an activity"
+M018_c01,M018_c01:7,True,False,False,True,"disposition ('willing to') of the adidas Brazil team, not an activity; that team is not the speaker's own team (other team)"
+M018_c01,M018_c01:8,True,False,False,True,"disposition ('willing to'), not an activity; Brazil team = other team"
+M064_c06,M064_c06:0,True,True,True,True,borderline promotional but a current team activity
+M064_c06,M064_c06:3,True,False,False,True,"spoken by the host (Andrew Zigler); distribution channel, not an activity"
+M052_c03,M052_c03:0,True,False,True,True,product pitch for speaker's company
+M052_c03,M052_c03:1,True,False,True,False,"product pitch (agents set up to help customers' risk managers); performer would be agent, not person"
+M052_c03,M052_c03:2,True,True,True,True,other-company activity reported second hand; kept since schema allows 'other team'
+M072_c05,MISSED,True,True,,,quote: After training it and learning it and spending months time to learn it
+M072_c05,MISSED,True,True,,,quote: because we do these events
+M072_c05,MISSED,True,True,,,borderline; quote: we would answer like two weeks later
+M059_c00,MISSED,True,True,,,quote: we said that AI will be the baseline expectation of Shopify
+M056_c01,MISSED,True,True,,,quote: We really encourage clients to focus on where are the parts of your business that you need to transform to perform the way you want
+M056_c01,MISSED,True,True,,,quote: We've estimated up to potentially 3 million by the time you get to 2030
+M056_c01,MISSED,True,True,,,general claim; quote: you'll see a ton of examples of people that are leveraging agents to help serve their customers
+M056_c01,MISSED,True,True,,,general claim; borderline; quote: a COO often has to work with the CFO and others to kind of figure out what the capital agenda looks like
+M024_c03,MISSED,True,True,,,quote: we've chosen to flip that mix
+M024_c03,MISSED,True,True,,,"quote: as we insource, we are targeting everything from cybersecurity talent to data scientists to software engineers to application configuration specialists"
+M024_c03,MISSED,True,True,,,quote: we were very focused on getting many of those building blocks in
+M024_c03,MISSED,True,True,,,"quote: in last fiscal year, we targeted to hire at least 300"
+M024_c03,MISSED,True,True,,,"borderline; quote: we start with, is it a global product?"
+M024_c03,MISSED,True,True,,,"quote: Then we start looking for, of course, availability of talent."
+M024_c03,MISSED,True,True,,,"quote: half my job was spent just saying, No, it's not ready for that yet"
+M017_c09,MISSED,True,True,,,"quote: we do that through a very targeted, structured capability upskilling program"
+M088_c02,MISSED,True,True,,,quote: I have taken a youngster as my reverse mentor
+M088_c02,MISSED,True,True,,,quote: I'm learning new tools
+M040_c07,MISSED,True,True,,,quote: when I did a lot of early days of RPA implementation
+M040_c07,MISSED,True,True,,,quote: actually even wrote a book about it
+M040_c07,MISSED,True,True,,,quote: I've used a lot of that learning today for for AI
+M040_c07,MISSED,True,True,,,quote: my FP&amp;A team going through redesigning that workflow
+M073_c04,MISSED,True,True,,,quote: I rewrote a lot of it just cuz it was better
+M073_c04,MISSED,True,True,,,quote: there's at least two leading vendors that we said no to
+M073_c04,MISSED,True,True,,,borderline; agents; quote: even though we have three on Artisan
+M073_c04,MISSED,True,True,,,general claim; quote: A lot of folks we chat to say support and sales are their top two use cases for agents
+M081_c01,MISSED,True,True,,,quote: when we were setting goals for 2024
+M081_c01,MISSED,True,True,,,also in overlap with M081_c02; counted once here; quote: they call us and we react to that
+M064_c00,MISSED,True,True,,,quote: we basically came pretty close to feature parity with internally with our internal product called Code Compose
+M064_c00,MISSED,True,True,,,borderline (DevMate platform); quote: we had a centralized place
+M052_c02,MISSED,True,True,,,quote: I got to prepare my report for the board each quarter
+M052_c02,MISSED,True,True,,,borderline; habitual practice; quote: I'm going to read every word of that report before I send it to the board
+M056_c00,MISSED,True,True,,,"general claim; quote: They have a culture that is driven around reacting to the latest crisis, resolving it"
+M056_c00,MISSED,True,True,,,general claim; borderline; quote: some companies have done very well and others have really struggled with
+M016_c01,MISSED,True,True,,,quote: before we were basically a procurement organization that was focusing on getting the raw materials in the best possible way to produce our resins
+M016_c01,MISSED,True,True,,,the activity behind :9; quote: how do you build an agentic structure maybe with that person who is the expert
+M040_c08,MISSED,True,True,,,borderline; quote: it helped me become an earlier adopter of a lot of technologies like Agentic AI
+M073_c06,MISSED,True,True,,,quote: The other thing we've started doing is because it can do the meetings bookings
+M073_c06,MISSED,True,True,,,agent; quote: Now it just books the meeting.
+M073_c06,MISSED,True,True,,,quote: The rep would reach out
+M073_c06,MISSED,True,True,,,quote: so we're adding like voice and video to this agent as well
+M018_c01,MISSED,True,True,,,quote: I've been going to the clock events for a good while
+M018_c01,MISSED,True,True,,,borderline; quote: we went as a team

@@ -107,3 +107,12 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       overlap dedupe;
     - a clean Opus check on 25 chunks must reach 0.7 precision and recall.
     The 8 transcript pages without timestamps are extracted too, with paragraph positions.
+
+13. **Speech: consensus fails on recall; choice between union and Sonnet-only fixed before measuring.** The
+    clean check of consensus records gave precision 0.83 and recall 0.61 (fail). Two alternatives are
+    judged on 25 NEW chunks (seed 20261018), excluding the first sample. A clean Opus reviewer judges every
+    record from either model, blind to which model produced it, and lists missed activities. From that
+    one review: precision and recall for union, Sonnet-only and Haiku-only. Rule: use the variant passing
+    both 0.7 gates; if several pass, the one with higher recall; if none, speech records are reported
+    with their measured precision and recall as limits. Speech is descriptive only in any case (H-cal
+    refuted).
