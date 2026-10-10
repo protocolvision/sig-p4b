@@ -19,9 +19,10 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | Media frames for v2 | `sources-v2/`: current practitioners and historical recordings |
 | Industry analogue (S8) | Run 10 October 2026: trading and the grid nearest (tied); findings, red team and gatekeeper check in `results/industry-2026-10-10/`; report updated |
 | Role library | `roles/`: 8 emergent and 5 analogue roles with postings, capability models and coded activities (search-summary grade) |
-| Corpus and rerun | Planned: `corpus/` (manifest of every cited source, acquisition plan, `acquire.py`) and `RERUN.md`; needs a machine with network access |
-| Recommendation | Provisional: `recommendation-draft.md`; final after the rerun |
-| Loop v2 run | Not yet run (part of the rerun) |
+| Corpus and rerun | Run 10 October 2026 on branch `rerun-2026-10-10`: `results/rerun-2026-10-10/` (Corpus B crawl, six instruments, blind findings, verification of round one, comparison, red team, deviations 1–26) |
+| Findings and recommendation | Final: `results/rerun-2026-10-10/findings.md`, `exec-summary.md`, `recommendation.md` (Opus-reviewed); report republished from `report/who-owns-the-rules.html` (round one kept as `who-owns-the-rules-round1.html`) |
+| Loop v2 run | Run as part of the rerun (Corpus B; clustering, seeded coding, calibration) |
+| Field work | Next: `results/rerun-2026-10-10/field-plan-scaffold.md` (20 firms, nine claims) |
 | Post or practice-guide changes | Waiting on the review |
 
 ## Files

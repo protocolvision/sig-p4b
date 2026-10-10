@@ -281,3 +281,9 @@ The blind findings' five forecasts are kept unchanged. None of the corrections b
 | 5 | 2029-12-31 | At least one agent-scoped vendor certification dated in I5 is retired or renamed: Microsoft AB-620 or AB-900, Salesforce Agentforce Specialist, or AWS AIP-C01 | 0.75 | Microsoft Learn, Salesforce Trailhead and AWS Certification credential pages |
 
 Forecasts 1 and 4 test absorption against a new occupation. Forecasts 2 and 3 test whether binding law, once in force, names a person at deployers. Forecast 5 tests the early fade and renaming signs (N24 now; H4 later).
+
+---
+
+## Addendum: round one verification after the corpus-wide recheck (10 October 2026)
+
+Section 4's "20% (upper bound, recheck pending)" is superseded. After a corpus-wide recheck and an Opus review of it (`verification-random150.md`, `review/verification-recheck-review.md`), the random 150 split two ways: 5 of 131 checkable claims (3.8%, Wilson 1.6–8.6%) were contradicted by an acquired source, and 38 (29.0%, 21.9–37.3%) had no supporting passage in the corpus, 16 of them because the cited page was never acquired. "No passage" is not evidence that a claim is false. The industry slice is the weak part: 20 of 55 checkable claims (36.4%) were contradicted by a source, mostly bindingness and robustness. The loop analysis is unchanged (122 of 127), and the loop red team stands at 52 confirmed, 9 corrected and 9 not checkable.

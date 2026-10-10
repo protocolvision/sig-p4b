@@ -61,3 +61,7 @@ Small subsamples (3 verifiable characterisations): the intervals are wide, so di
 - Tools: ripgrep (fixed-string, case-insensitive) over `corpus/text` and `corpus/b-raw/{signatures,vendor,history,filings,postings,audio,onet}`; hits were opened and read.
 - Rule for `confirmed`: the figure, date or wording appears in an acquired text; trivial punctuation differences were accepted.
 - Rule for `not checkable`: list ordinals, headings, forecasts and opinions, the authors' own recommendations or syntheses, and negative statements about the authors' own searches.
+
+## Opus review of the recheck (applied 10 October 2026)
+
+`review/verification-recheck-review.md`. Counts and intervals reproduce. Three rows reclassified: CL2011 confirmed (NERC version table), CL1680 corrected (Talkdesk page dated 04/14/2026), CL0299 not found (checkable heading). Final: 88 confirmed, 5 corrected, 38 not found, 19 not checkable. Report two rates, not one "error rate": **contradicted by a source 5 of 131 (3.8%, Wilson 1.6–8.6%)**; **no supporting passage in the corpus 38 of 131 (29.0%, 21.9–37.3%)**, 16 of them because the cited page was never acquired. Five confirmed rows are partial (main assertion only: CL0530, CL0815, CL0903, CL1817, CL1966). Industry: 20 of 55 checkable claims contradicted by a source (36.4%, 24.9–49.6%).
