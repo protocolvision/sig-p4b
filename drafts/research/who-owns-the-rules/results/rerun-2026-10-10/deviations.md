@@ -275,3 +275,14 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       by employer type and sector. No time trend: the crawl is current-only and the historical board crawl
       was not built, so N04a is coded from other instruments or marked insufficient.
     - Occupation codes appear only descriptively (deviation 18).
+
+22. **Speech codes: adjudication of disagreements.** Two coders (Sonnet A, Haiku B) coded all 862 speech
+    records:
+    - kappa PV 0.28, PE 0.66, RD 0.33, AO 0.56, OT 0.58;
+    - coder A defaulted unflagged records to OT, which likely under-codes AO.
+    Speech is descriptive only (H-cal refuted), so a full recode is not run. Instead:
+    - a clean Opus adjudicator codes every record on which the coders differ, blind to which coder gave
+      which code;
+    - it also checks 40 random records that both coded OT;
+    - final speech codes = the agreed codes, plus the adjudicated codes for disagreements;
+    - kappa is reported as measured, and the both-OT check is reported as a miss rate.

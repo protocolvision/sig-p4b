@@ -1,0 +1,863 @@
+task_id,code1,code2,reason
+M001_c00:0,OT,,Vendor-level praise of support strategy; no rule or agent operation named
+M001_c00:1,OT,,Generic effort statement
+M001_c00:2,OT,,Vendor choice only; no rule set
+M001_c00:3,AO,,Trialling agent fit for the business
+M001_c00:4,AO,,Trialling bots
+M001_c00:6,OT,,Aspiration away from reactive service; no practice shown
+M001_c01:0,AO,,Earlier build-out of an agent with another vendor
+M001_c01:1,OT,,Hardware fulfilment via 3PL
+M001_c02:1,AO,,Configuring agent source content (URLs)
+M001_c02:10,AO,,Testing agent answers on dashboards
+M001_c02:3,AO,,Standardising language supplied to agent content
+M001_c02:6,PE,,Grants engineers apps and screen cloud access to test and sandbox agent
+M001_c02:7,AO,,Product team writing help content for agent
+M001_c02:8,AO,,Integrating agent with Salesforce
+M001_c02:9,AO,,Linking agent to Notion documentation
+M001_c03:3,AO,,Teams assisting agent build
+M001_c03:5,OT,,Lists engagement elements; no rule
+M001_c04:1,OT,,Training people in sandbox use
+M004_c00:1,OT,,Career history
+M004_c00:2,OT,,Names knowledge base tool
+M004_c00:4,OT,,Personal career approach
+M004_c00:5,OT,,Personal onboarding plan
+M004_c00:6,AO,,Builds personal agent in Claude and Notion
+M004_c00:7,AO,,Compares two agents for output closeness
+M004_c01:10,OT,,Personal apps for home
+M004_c01:11,OT,,Personal project
+M004_c01:6,AO,,Tests agent against reporting models
+M004_c01:7,AO,,Vibe coding to build tools
+M004_c01:8,OT,,Help from finance colleague on personal build
+M004_c02:1,OT,,Inherits a CRM instance
+M004_c02:11,AO,,Monitors running agents on schedules
+M004_c02:12,AO,,Agent weekly summary pushed to Slack
+M004_c02:2,AO,,Feeds report into agent to build outputs
+M004_c02:4,AO,,Prompting agent to build
+M004_c02:5,OT,,Shares work with team
+M004_c02:6,OT,,Shares work with COO
+M004_c02:7,OT,,Funnel rebuild; no rule
+M004_c02:8,OT,,Documentation habit
+M004_c02:9,OT,,Recording calls; no rule
+M004_c03:10,AO,,Agent tuned to a colleague's tone and questions
+M004_c03:12,AO,,Uses communication agents in pipeline update
+M004_c03:2,AO,,Builds agents in Claude projects
+M004_c03:3,AO,,Notion agents running in channels
+M004_c03:4,AO,,Handful of agents running in channels
+M004_c03:5,AO,,Same agents in other channels
+M004_c03:6,AO,,Supplies CRM and call data to Notion for agents
+M004_c03:8,AO,,Built Notion agent that pushes updates
+M004_c03:9,AO,,Cloud project tuned for update tone and detail
+M004_c04:1,OT,,Iterating on ideas
+M004_c04:2,AO,,Colleague built a Notion agent
+M004_c04:3,OT,,Moves content into systems; no rule
+M004_c05:0,AO,,Prompt to help build prompts
+M004_c05:1,OT,,Reading material
+M010_c00:0,OT,,Career history
+M010_c00:1,OT,,Career history
+M010_c00:2,OT,,Career history
+M010_c00:3,OT,,Career history
+M010_c00:4,OT,,Career history
+M010_c00:5,OT,,Career history
+M010_c00:6,OT,,Career history
+M010_c02:0,OT,,Scenario planning; no rule
+M010_c02:1,OT,,Budgets and forecasts
+M010_c02:2,OT,,Consolidated planning process
+M010_c02:3,OT,,Cross-division plan; no rule set
+M010_c02:4,OT,,Workforce planning
+M010_c03:0,OT,,Assumptions ownership noted; no rule set for agents
+M010_c03:1,OT,,Org structure change
+M010_c03:3,OT,,Centres of excellence review
+M010_c03:4,OT,,Structural work in progress
+M010_c03:6,OT,,Job design; no agent rule
+M010_c04:0,OT,,Job description structure
+M010_c04:1,OT,,Data extraction mishap
+M010_c04:3,OT,,Excel extraction
+M010_c04:4,OT,,Relationships with data architects
+M010_c04:5,OT,,Finance data warehouse build
+M010_c04:6,OT,,Business rules for data; not agent-facing
+M010_c05:0,AO,,Copilot pilot started
+M010_c05:1,OT,,Governance council attendance; no rule decided
+M010_c05:3,OT,,Learning Copilot
+M010_c05:5,OT,,Personal use of assistant for summaries
+M010_c06:2,AO,,Some RPA in place
+M010_c06:3,AO,,Some automation in journals
+M010_c07:1,OT,,Career history
+M010_c07:3,OT,,Personal shortcut habit
+M010_c07:4,OT,,Anecdote
+M014_c00:0,OT,,Philosophy statement; no rule
+M014_c00:2,OT,,Hires a chief procurement officer
+M014_c00:4,OT,,Supplier review; no rule shown
+M014_c00:5,OT,,Strategy coordination role
+M014_c01:1,OT,,Centre of excellence created
+M014_c01:2,OT,,Navigating change
+M014_c01:3,OT,,Internal messaging care
+M014_c01:4,OT,,General AI adoption claim
+M014_c01:5,OT,,General progress claim
+M014_c02:1,OT,,Job enrichment claim
+M014_c02:10,OT,,Investment in procurement tech stack
+M014_c02:13,OT,,Training offered
+M014_c02:2,OT,,General strides claim
+M014_c02:3,AO,,Autonomous sourcing introduced
+M014_c02:4,AO,,AI built into quoting
+M014_c02:6,AO,,Predictive shortage tool
+M014_c02:7,OT,,Shortage elimination claim
+M014_c02:9,OT,,Delivery timeline
+M014_c03:0,OT,,Job expectations restated
+M014_c03:3,OT,,Capability brought in-house
+M014_c03:4,OT,,Encourages staff engagement
+M014_c03:5,OT,,Investment statement
+M014_c03:7,OT,,Sandbox for experiments; no rule
+M014_c03:8,OT,,Quarterly process
+M014_c04:0,OT,,P&L ownership
+M014_c04:2,OT,,Inorganic growth
+M014_c04:3,OT,,Board funding
+M014_c04:4,OT,,Acquisitions
+M014_c04:5,OT,,Joint venture
+M014_c04:6,OT,,Organisational stance on owning risk; no mapping or rule
+M014_c04:7,OT,,Risk management stance
+M014_c04:8,OT,,Investment statement
+M014_c05:1,OT,,Risk reduction claim
+M014_c05:3,OT,,Using available tech; general
+M014_c05:4,OT,,Mature process claim
+M016_c00:0,OT,,Business ownership
+M016_c00:1,OT,,Business scale
+M016_c00:3,OT,,Career move
+M016_c01:0,OT,,Products description
+M016_c01:1,OT,,Products description
+M016_c01:10,OT,,Process redesign
+M016_c01:4,OT,,Business model description
+M016_c01:5,OT,,Procurement rebuild intent
+M016_c01:6,OT,,Process review intent
+M016_c01:7,OT,,Process rebuild intent
+M016_c01:9,OT,,Process rebuild in progress
+M016_c02:10,OT,,Experiments; no rule
+M016_c02:11,PE,,Grants Replit licences to staff
+M016_c02:12,PE,,Grants Copilot Studio licences to staff
+M016_c02:13,PE,,Lets staff experiment with tools (access grant)
+M016_c02:14,OT,,Mandatory AI course
+M016_c02:2,OT,,Mixed approach statement
+M016_c02:3,OT,,Operating model redesign
+M016_c02:4,OT,,Hiring leaders
+M016_c02:8,OT,,AI team formed
+M016_c02:9,OT,,Skills programme
+M016_c03:6,PV,,Associates exceeded replica budget in two weeks; limit breach noticed
+M016_c04:0,OT,,Expo attendance
+M016_c04:1,OT,,Expo attendance
+M016_c04:3,OT,,Sales follow-up
+M016_c04:7,OT,,Debate on a question; no rule
+M016_c05:0,OT,,Traction claim
+M017_c00:0,OT,,Procurement profile claim
+M017_c00:3,OT,,Transformation claim
+M017_c00:4,OT,,Source-to-pay system claim
+M017_c00:5,OT,,General claim about systems; not practice
+M017_c01:0,OT,,Priority balancing discussion; no decision stated
+M017_c01:1,OT,,Savings focus
+M017_c01:2,OT,,Supply flexibility
+M017_c01:3,OT,,Recipe flexibility
+M017_c01:4,OT,,Scenario planning
+M017_c01:6,OT,,Hedging
+M017_c01:7,OT,,Healthcare experience
+M017_c01:8,OT,,Weather tracking
+M017_c02:1,OT,,Services transformation
+M017_c02:2,OT,,Efficiency claim
+M017_c02:4,OT,,Pricing discussion
+M017_c02:5,OT,,Crisis management claim
+M017_c03:0,OT,,Career history
+M017_c03:4,OT,,Continued use claim
+M017_c04:0,OT,,Productivity review
+M017_c04:1,OT,,Productivity review
+M017_c04:11,OT,,Resilience work claim
+M017_c04:2,AO,,Agent used for marketing content
+M017_c04:3,AO,,Agent used for data cleanup
+M017_c04:4,AO,,Agent used in planning models
+M017_c04:5,OT,,E-commerce conversation
+M017_c04:6,OT,,Tool launch
+M017_c04:7,PE,,Gives co-pilots to all procurement teams (access grant)
+M017_c04:8,OT,,Pilot run
+M017_c05:1,OT,,Purchasing scope
+M017_c05:2,OT,,Supply resilience work
+M017_c05:3,OT,,Dual sourcing
+M017_c05:4,OT,,Inventory buffer
+M017_c06:2,OT,,Savings scope
+M017_c06:3,OT,,Contract strategy
+M017_c07:0,OT,,Tool experimentation
+M017_c07:1,OT,,Meeting summary use
+M017_c07:3,AO,,Developing agent use cases
+M017_c07:4,OT,,Shared service centres
+M017_c07:5,AO,,AI layer applied to optimise processes
+M017_c08:0,OT,,Value chain investment claim
+M017_c08:1,OT,,Supplier investment claim
+M017_c08:3,OT,,Partner relationships
+M017_c08:5,OT,,Competitor study
+M017_c08:7,OT,,Startup scouting
+M017_c08:8,OT,,NPS measurement
+M017_c09:0,OT,,Supplier events
+M017_c09:1,OT,,Sponsorship
+M017_c09:4,OT,,Persona training
+M017_c09:6,OT,,Culture push
+M017_c10:0,OT,,Other-team training claim
+M017_c10:1,AO,,Other team deploys agents for contract summaries and clean-up
+M018_c00:3,OT,,Macro writing history
+M018_c00:4,AO,,Earlier agent generated bespoke letters from data
+M018_c00:6,OT,,Personal task preference
+M018_c01:1,OT,,Event history
+M018_c01:3,OT,,Advisory role
+M018_c01:4,OT,,Employer context
+M018_c01:7,OT,,Other team willing to change processes; no rule
+M018_c01:8,OT,,Other team willing to use tech
+M018_c02:1,OT,,Conference contact
+M018_c02:3,OT,,Writing activity
+M018_c03:0,OT,,Reports of legal heads' practice; general
+M018_c04:1,OT,,Stated aim of talk
+M018_c07:0,OT,,Role change
+M021_c00:0,OT,,Role description
+M021_c00:1,OT,,Centre of excellence role; no rule decided
+M021_c00:11,OT,,Tool adoption
+M021_c00:13,OT,,Service desk reduction attributed to AI; no trade-off stated
+M021_c00:2,OT,,Services provided to other parts of the group
+M021_c00:3,OT,,Service compliance area described
+M021_c00:4,OT,,Journey history claim
+M021_c00:6,OT,,Revisiting principles; no rule change named
+M021_c00:7,PE,,Changed the guard rails that agents operate within
+M021_c01:0,OT,,Language model creation
+M021_c01:1,OT,,Roadshows to sell benefits
+M021_c01:2,OT,,Agent resolves a share of issues; usage only
+M021_c01:4,OT,,New roles created
+M021_c01:5,AO,,Digital coaches monitor agent journeys
+M021_c02:0,OT,,AI use across incident and problem management
+M021_c02:1,AO,,Agent search over document stores
+M021_c02:2,OT,,Externally bought tool integrated
+M021_c02:3,AO,,Feeding learning into the platform AI
+M021_c02:4,AO,,Training the AI to be trusted
+M021_c02:5,OT,,Share of conversations handled by agent; usage only
+M021_c03:0,OT,,Staffing of human maintenance
+M021_c03:2,PE,,Team governs AI bots in service management
+M023_c00:1,OT,,Company positioning claim
+M023_c00:2,OT,,Role change
+M023_c00:3,OT,,Personal role
+M023_c00:5,OT,,Digital evolution claim
+M023_c00:6,OT,,Personal role
+M023_c00:8,OT,,Working with product head
+M023_c01:1,OT,,Personal role
+M023_c01:10,OT,,Talent investment
+M023_c01:11,OT,,Data leaders community
+M023_c01:2,OT,,Core technology transformation
+M023_c01:3,OT,,Practices adopted; no rule shown
+M023_c01:5,PE,,Set data governance as first priority
+M023_c01:6,PV,,Data ownership mapped across the company
+M023_c01:7,OT,,Master data tool
+M023_c01:8,OT,,Warehouse platform
+M023_c01:9,OT,,Cloud move
+M023_c02:0,OT,,ML recommendation engine; not an agent
+M023_c02:1,OT,,ML merchandising; not an agent
+M023_c02:10,AO,,Built an internal GenAI tool
+M023_c02:2,OT,,Engineering tool built
+M023_c02:4,OT,,Physical process description
+M023_c02:5,OT,,Engineering AI cleaning process
+M023_c02:6,OT,,Patent claim
+M023_c02:7,OT,,General AI use claim
+M023_c02:8,OT,,General GenAI history claim
+M023_c03:0,AO,,Supplying internal knowledge base to AI
+M023_c03:1,AO,,Built an internal GenAI tool
+M023_c03:2,OT,,Experiments in many areas
+M023_c04:0,PE,,Architecture to plug partners in and out; interfaces between systems
+M023_c04:3,OT,,Product team organisation
+M023_c05:1,OT,,Product teams drive innovation
+M023_c05:2,OT,,Board learning
+M023_c05:3,OT,,Board contribution
+M023_c06:1,OT,,Conference talk
+M023_c06:2,OT,,Book purchase
+M023_c06:3,OT,,Book distribution
+M023_c06:4,OT,,Book purchase
+M023_c06:5,OT,,Book distribution to leaders
+M024_c00:0,OT,,Structural history of business units
+M024_c00:1,OT,,Centralisation claim
+M024_c00:2,OT,,Outsourcing history
+M024_c00:3,OT,,Structure claim
+M024_c00:4,OT,,Solve-once claim
+M024_c00:5,OT,,Talent alignment
+M024_c01:1,OT,,Strategy and governance team described
+M024_c01:2,OT,,Leadership team change
+M024_c01:4,OT,,Data domains discussion
+M024_c01:5,OT,,Reconsidered centralisation; no rule decided
+M024_c02:1,OT,,Specificity claim
+M024_c02:2,OT,,Harmonised data view
+M024_c02:3,OT,,Data for product value
+M024_c02:4,OT,,Sourcing mix change
+M024_c02:5,OT,,Delivery claim
+M024_c02:6,OT,,Insourcing talent
+M024_c03:0,OT,,Hub location
+M024_c03:1,OT,,Location investment
+M024_c03:3,OT,,Hiring target exceeded
+M024_c03:4,OT,,Plugging away claim
+M024_c04:0,OT,,Use case categories
+M024_c04:3,OT,,Reversing use claim
+M024_c04:4,OT,,AI history claim
+M024_c04:5,OT,,Analytics use case
+M024_c04:6,AO,,Trained AI on product specs
+M024_c04:7,OT,,Checking sales adoption
+M024_c04:8,OT,,Data put into hands of users
+M024_c05:0,OT,,Data access for product teams
+M024_c05:1,OT,,Checking adoption
+M024_c05:2,OT,,Adoption metrics
+M024_c05:6,OT,,Personal intention
+M024_c05:7,OT,,Interview history
+M024_c06:2,AO,,Starting to experiment with more agents
+M024_c06:4,PE,,Chose to keep a human in the loop; approval gate
+M024_c06:6,OT,,Cyber preparation
+M024_c07:0,OT,,Personal reading habit
+M024_c07:1,OT,,Peer group talk
+M024_c07:2,OT,,Podcast habit
+M024_c07:3,OT,,Personal habit
+M028_c00:0,OT,,Career history
+M028_c00:2,OT,,Teaching role
+M028_c00:5,OT,,Client work description
+M028_c00:6,OT,,Business line description
+M028_c00:7,OT,,Root cause work; no agent rule
+M028_c01:0,OT,,Discussion framing
+M028_c03:2,OT,,Stakeholder talks
+M030_c00:0,AO,,Building and deploying agentic systems
+M030_c00:1,PE,,Human in the loop where needed; approval gate
+M030_c00:2,OT,,Governance committee formed; no rule stated
+M030_c00:3,PE,,Approved architectural patterns that builders must use
+M030_c00:4,OT,,Risk assessment started
+M030_c01:1,OT,,General claim about cloud partners
+M030_c01:2,PE,,Establishing guardrails and patterns
+M030_c01:3,PE,,AI operating model with approved architectures
+M030_c01:5,OT,,Bias steps; vague
+M030_c01:6,AO,,Uses synthetic data for models
+M030_c01:8,OT,,Steps claim
+M030_c02:0,OT,,Bias steps claim
+M040_c00:4,OT,,Indirect bucket definition
+M040_c00:6,AO,,Implementing bots in transactional finance
+M040_c00:7,OT,,Framework claim
+M040_c01:0,AO,,Built platform with partner
+M040_c01:2,AO,,Engineering work with NVIDIA on model determinism
+M040_c01:3,OT,,Partnership claim
+M040_c01:4,OT,,Platform choice
+M040_c01:5,OT,,Efficiency aim
+M040_c01:6,OT,,Scaling ambition
+M040_c01:7,OT,,On-prem partnership
+M040_c01:9,AO,,Co-engineered a model service
+M040_c02:2,OT,,Faster outcomes claim
+M040_c02:3,OT,,Documentation as process
+M040_c02:5,OT,,Past RPA work
+M040_c02:7,OT,,Personal analytics history
+M040_c03:0,OT,,Personal use of AI for focus
+M040_c03:2,AO,,Preparing to deploy agent for operational calls
+M040_c03:4,OT,,Personal tool use
+M040_c03:6,AO,,Checks AI output personally
+M040_c03:8,OT,,Staff use of tools
+M040_c03:9,OT,,Memo reading
+M040_c04:0,OT,,Personal workflow ambition
+M040_c04:2,OT,,Personal fact checking
+M040_c04:4,AO,,Ensuring data quality for agent platforms
+M040_c04:5,AO,,Data layer used for agent platforms
+M040_c04:6,OT,,Workflow transformation in FP&A
+M040_c04:8,OT,,Strategy role
+M040_c05:0,OT,,Team structure
+M040_c05:1,OT,,Transformation claim
+M040_c05:10,OT,,Redesign of operating model claim
+M040_c05:2,OT,,Collaboration claim
+M040_c05:3,OT,,Supply chain initiative
+M040_c05:4,OT,,Other team deploying AI
+M040_c05:5,OT,,Career history
+M040_c05:6,OT,,Process redesign claim
+M040_c05:7,OT,,FP&A consolidation; no rule decided
+M040_c05:8,OT,,Standardisation aim
+M040_c05:9,OT,,Workflow first claim
+M040_c06:0,OT,,Version count claim
+M040_c06:1,OT,,Experiments claim
+M040_c06:3,OT,,Investment elsewhere
+M040_c06:4,OT,,Personal investment
+M040_c06:7,OT,,Personal learning
+M040_c07:0,OT,,Academic work
+M040_c07:4,OT,,Centralisation enabled agent deployment; no rule
+M040_c07:5,AO,,Agent used to gather facts
+M040_c07:8,OT,,Accountability statement
+M040_c07:9,OT,,Training 3000 people
+M040_c08:0,OT,,Personal purchase
+M040_c08:1,OT,,Board seat
+M040_c08:2,OT,,General claim about boards; not practice
+M040_c09:2,OT,,Pivot table work
+M046_c00:4,OT,,Access expansion claim
+M046_c01:0,OT,,Patient matching service
+M046_c01:1,OT,,Therapist access claim
+M046_c01:10,OT,,Patient-first claim
+M046_c01:11,OT,,Admin burden claim
+M046_c01:3,OT,,Non-clinical work claim
+M046_c01:5,OT,,Partner selection
+M046_c01:7,OT,,Measurement claim
+M046_c01:8,OT,,Consistency claim
+M046_c01:9,OT,,Personal interest
+M046_c02:10,PE,,More guardrails on clinical side; limits on agent use
+M046_c02:3,PE,,Safety and effectiveness checks before deployment; testing gate
+M046_c02:4,AO,,Provider-facing tools launched
+M046_c02:5,OT,,Patient-side initiatives withheld
+M046_c02:7,OT,,Workflow adaptation claim
+M046_c02:9,OT,,Finance use claim
+M046_c03:0,OT,,Customer call listening
+M046_c03:1,OT,,Partner meetings
+M046_c03:2,OT,,Personal initiative
+M046_c03:6,OT,,Pricing redesign
+M048_c00:1,OT,,Investment claim
+M048_c01:0,OT,,Implementation services
+M048_c01:2,OT,,ERP data flow description
+M048_c01:3,AO,,Agent automates transactional data
+M048_c02:0,AO,,Designing agents in ecosystem
+M048_c02:1,AO,,Designing agents for years
+M048_c02:4,OT,,Hiring accountants
+M048_c02:5,OT,,Recruiting claim
+M048_c03:2,AO,,Designing forecasting tools
+M048_c03:4,OT,,Own solution use
+M048_c03:5,OT,,Cash application history
+M048_c03:6,OT,,Personal tool use
+M048_c04:1,AO,,Testing agent
+M048_c04:3,AO,,Releasing agents
+M048_c04:5,AO,,Designing agents for accurate outcomes
+M048_c04:6,OT,,Reconciliation claim
+M048_c04:7,OT,,Workflow history
+M048_c05:0,AO,,Supplying data pool to agent
+M050_c00:0,OT,,Career history
+M050_c00:4,OT,,Career history
+M050_c00:6,OT,,Career history
+M050_c01:10,OT,,Personal interest
+M050_c01:2,OT,,Business history
+M050_c01:4,OT,,Framework claim; no rule
+M050_c01:5,OT,,Functional areas development
+M050_c01:6,OT,,Career move
+M050_c01:9,OT,,Team stability
+M050_c02:0,OT,,Personal career
+M050_c02:1,OT,,Team building
+M050_c02:3,OT,,Incident reporting as issue-addressing; no rule named
+M050_c03:0,OT,,Hiring anecdote
+M050_c03:4,OT,,Recording and transcription of risk catch-ups
+M050_c03:5,AO,,Agent produces meeting notes and action points
+M050_c03:7,OT,,Personal anecdote
+M050_c03:8,OT,,Meeting attendance
+M050_c04:1,OT,,Career history
+M050_c04:2,OT,,Personal spreadsheets
+M052_c00:0,OT,,Career history
+M052_c00:1,OT,,Career history
+M052_c00:3,OT,,Career history
+M052_c00:7,OT,,Advanced technology initiatives history
+M052_c00:8,OT,,Company founding
+M052_c01:0,AO,,Agent alerts team when anomalies appear
+M052_c02:2,AO,,Owns an agent scheduler
+M052_c02:3,OT,,Unclear reference to AI courts
+M052_c03:0,OT,,Company services claim
+M052_c03:1,AO,,Dozens of agents set up
+M052_c03:2,OT,,Other firm spend claim
+M056_c00:1,OT,,Focus on functional excellence claim
+M056_c00:3,OT,,Retention claim
+M056_c02:0,OT,,Risk impact claim
+M056_c02:1,OT,,Resilience claim
+M056_c02:2,OT,,Supply chain observation
+M059_c00:0,OT,,Company practice claim
+M059_c00:1,OT,,Infrastructure build claim
+M059_c00:2,OT,,Prototype practice claim
+M059_c00:3,OT,,Infrastructure history
+M059_c00:4,OT,,Launch scale claim
+M059_c00:5,OT,,Slogan
+M059_c01:0,OT,,Tool rollout history
+M059_c01:2,OT,,Team pairing
+M059_c01:3,AO,,Internal LLM proxy for agent access
+M059_c01:7,OT,,Platform announcement
+M059_c02:10,OT,,Shift in AI strategy claim
+M059_c02:11,PE,,Circuit breakers limit agent behaviour
+M059_c02:3,OT,,Build-for-real practice
+M059_c02:5,AO,,Checks on AI-written code
+M059_c02:6,OT,,Leaderboard removed; no rule
+M059_c02:7,OT,,Usage dashboard
+M059_c02:9,OT,,Highlighting utility
+M059_c03:1,OT,,Asking questions in channel
+M059_c03:2,AO,,Monitors agent PR volume
+M059_c03:4,OT,,Practice claim
+M059_c03:5,OT,,Model use claim
+M059_c04:11,AO,,Data generated to train agent behaviour
+M059_c04:2,AO,,Distilling to smaller models
+M059_c04:4,OT,,Infrastructure for distillation
+M059_c04:5,OT,,Platform name
+M059_c04:6,OT,,Platform name
+M059_c04:9,OT,,Usage by R and D
+M059_c05:10,OT,,Inference hardware
+M059_c05:3,OT,,Platform launch
+M059_c05:4,OT,,Practice claim
+M059_c05:5,OT,,Platform name
+M059_c05:7,OT,,General claim about activities
+M059_c05:8,OT,,Hardware claim
+M059_c05:9,OT,,Training hardware use
+M059_c06:0,AO,,Distils narrow agent use cases
+M059_c06:1,AO,,Distilled agents run in production
+M059_c06:2,PE,,Engineers not allowed smaller models; restriction on what people may do
+M059_c06:3,OT,,Personal tool install
+M059_c06:4,OT,,Platform development
+M059_c07:2,OT,,Commerce enablement claim
+M059_c07:7,OT,,Catalogue build
+M059_c07:8,OT,,Provider work claim
+M059_c07:9,OT,,Personal agent message
+M059_c08:0,OT,,Infrastructure claim
+M059_c08:2,OT,,Personal use
+M059_c08:3,OT,,Personal purchase
+M059_c08:5,OT,,Use claim
+M059_c08:7,OT,,Research claim
+M060_c00:2,OT,,Time allocation
+M061_c00:0,OT,,Personal habit
+M061_c00:3,OT,,Peer talk habit
+M064_c00:0,OT,,History of tactics
+M064_c00:1,OT,,Editor build
+M064_c00:2,OT,,Source control build
+M064_c00:3,OT,,Experiment measurement
+M064_c00:4,OT,,Experiment history
+M064_c00:6,OT,,Personal tool search
+M064_c00:7,OT,,Personal tool use
+M064_c01:0,OT,,Tooling aim
+M064_c01:1,OT,,Tools pushed to developers
+M064_c01:2,PE,,Code freeze over holiday period; restricts changes
+M064_c01:4,OT,,Metric measured
+M064_c02:0,OT,,Business challenges set
+M064_c02:1,OT,,Challenge set
+M064_c02:2,OT,,Senior engineer demo
+M064_c02:3,AO,,Built with an agent
+M064_c02:4,AO,,Challenge to build agent testing harness
+M064_c02:5,OT,,Challenge list
+M064_c03:2,OT,,Team usage aim
+M064_c06:0,OT,,Waitlist
+M064_c06:3,OT,,Distribution channel
+M065_c00:3,OT,,Personal activity
+M065_c01:0,OT,,Personal learning
+M065_c01:1,AO,,Uses agentic tools for automation
+M065_c01:2,AO,,Built AI code review benchmark
+M065_c01:3,OT,,Tool familiarity claim
+M065_c02:0,OT,,AI use claim
+M065_c02:1,OT,,Adoption claim
+M065_c03:1,OT,,Senior engineer deployed
+M065_c03:2,OT,,Deep dive decision; no rule
+M065_c04:0,OT,,Impact measurement claim
+M065_c04:1,OT,,Flow opened
+M065_c04:3,OT,,Maturity list
+M065_c04:4,OT,,Precision claim
+M065_c04:6,OT,,PR labels for tracking
+M065_c05:3,OT,,PR metric
+M065_c05:4,OT,,Normalisation
+M065_c05:5,OT,,Personal OKRs
+M065_c05:6,OT,,Lead discussions
+M065_c06:0,OT,,Guild creation
+M065_c06:1,OT,,Guild build
+M065_c06:2,PE,,Changed compliance approval process for new tools
+M065_c06:3,OT,,Delegation to guild
+M065_c06:7,AO,,Shared tool in repo for engineers
+M065_c07:3,OT,,Repo tracking
+M065_c07:4,AO,,Vibe coding work
+M072_c00:2,OT,,Hiring stance claim
+M072_c00:4,OT,,Founder history
+M072_c00:5,OT,,Meetup history
+M072_c00:6,OT,,Event history
+M072_c00:7,OT,,Event scale
+M072_c00:8,OT,,Investment claim
+M072_c00:9,OT,,Investment claim
+M072_c01:10,OT,,Limits pushed claim
+M072_c01:14,OT,,Vendor use claim
+M072_c01:2,OT,,Investment claim
+M072_c01:6,OT,,Go-to-market team
+M072_c01:7,AO,,Agent in production
+M072_c01:8,AO,,Agent closed a sponsorship on its own
+M072_c02:1,AO,,Agent for lapsed users
+M072_c02:4,AO,,Person orchestrates agents
+M072_c02:5,OT,,Productivity claim
+M072_c03:0,AO,,Agent qualifies website visitors
+M072_c04:0,OT,,Consulting shift claim
+M072_c04:1,OT,,Call with another firm
+M072_c04:2,OT,,Call with another firm
+M072_c04:3,OT,,Question to another firm
+M072_c05:1,AO,,Three agents working for sales
+M072_c05:10,AO,,Agent began support work by itself
+M072_c05:11,AO,,Agent sold sponsorship by itself
+M072_c05:2,AO,,Reduced prompt for agent
+M072_c05:3,AO,,Prompt given to agent platform
+M072_c05:4,AO,,Built tools in Replit
+M072_c05:5,AO,,Built calculator tool
+M072_c05:6,AO,,Built pitch deck reviewer
+M072_c05:7,AO,,Used agent tool
+M072_c05:8,OT,,Previous tool use
+M072_c06:1,OT,,Vendor choice
+M072_c06:4,AO,,Trained the agent
+M072_c06:5,AO,,Agent sent 60000 emails
+M072_c06:8,OT,,Other vendors did the work
+M072_c07:1,RD,,Decided to reactivate segment sales had dropped; functions named
+M072_c07:2,AO,,Agent used on reactivation
+M072_c07:3,AO,,Agent trained on prompt
+M072_c07:4,AO,,Training agent daily
+M072_c07:5,AO,,Reviewing and answering agent issues
+M072_c07:6,AO,,Many agents running
+M072_c07:7,AO,,Reviewing agent outputs hours weekly
+M072_c07:8,OT,,Manual replies
+M072_c08:0,OT,,Volume claim
+M072_c08:1,OT,,Tried both approaches
+M072_c08:10,OT,,Meeting setting
+M072_c08:11,OT,,Sponsor list
+M072_c08:12,OT,,Tool use
+M072_c08:13,OT,,Sales activity
+M072_c08:14,OT,,Division of work
+M072_c08:15,OT,,Division of work
+M072_c08:3,OT,,Faked approach claim
+M072_c08:4,OT,,Sending practice claim
+M072_c08:5,OT,,Sending practice claim
+M072_c09:5,AO,,Prompting model for improvement
+M072_c09:6,OT,,Email sent
+M072_c09:9,OT,,Staffing claim
+M072_c11:0,OT,,Tool use claim
+M072_c11:3,OT,,Staffing change claim
+M072_c11:4,OT,,AI work claim
+M072_c11:5,OT,,Personal effort
+M072_c11:7,OT,,Engineer role
+M072_c11:8,OT,,Other company claim
+M072_c12:0,OT,,Personal deal
+M072_c12:7,OT,,General claim about vendors; not practice
+M072_c13:0,OT,,Event speakers
+M072_c13:2,OT,,Hiring claim
+M072_c13:3,OT,,Volume claim
+M072_c13:4,OT,,Vendor conversation
+M072_c14:1,OT,,Personal apps
+M072_c14:2,OT,,Personal build
+M072_c14:4,OT,,Other company claim
+M072_c15:2,OT,,Personal app
+M072_c15:3,OT,,Business scale claim
+M072_c15:5,OT,,Investment history
+M072_c16:1,OT,,Staffing claim
+M072_c16:2,OT,,Personal history
+M072_c16:3,OT,,Staffing claim
+M072_c16:5,OT,,Reading
+M072_c17:1,OT,,Personal use
+M072_c17:7,OT,,Founder meeting
+M072_c18:2,OT,,Event history
+M072_c18:3,OT,,Event history
+M072_c18:4,OT,,Event history
+M072_c18:5,OT,,Event history
+M072_c18:8,OT,,Tools built
+M072_c18:9,OT,,Tool build claim
+M072_c19:1,OT,,Personal question
+M073_c00:0,OT,,Vendors declined; no rule
+M073_c00:1,AO,,Uses an agent app
+M073_c00:10,OT,,Personal redo
+M073_c00:11,RD,,Removed agent from sales tickets and sponsors; several functions named
+M073_c00:2,AO,,Agent conversation volume
+M073_c00:3,OT,,Usage claim
+M073_c00:5,OT,,Tools added
+M073_c00:6,AO,,Agent count grown to about 20 and run
+M073_c00:7,OT,,Replacing staff with AI claim
+M073_c00:8,AO,,Managing the agents
+M073_c00:9,OT,,Personal courses
+M073_c01:0,RD,,Removed agent from sales tickets and sponsors; several functions named
+M073_c01:1,PE,,Agent scoped to general areas of the business; limits on where it operates
+M073_c01:10,AO,,Added AI RevOps agent
+M073_c01:11,AO,,Added momentum and attention agents
+M073_c01:12,AO,,Built agents internally
+M073_c01:13,AO,,Rolled out internally built apps
+M073_c01:14,AO,,Agents for content review
+M073_c01:15,AO,,Daily monitoring of agent outputs
+M073_c01:18,AO,,Fixing wrong agent outputs
+M073_c01:2,OT,,Scope-of-use claim
+M073_c01:20,AO,,Agent used for warm outbound
+M073_c01:22,AO,,Personal training of agent on use cases
+M073_c01:23,AO,,Agent deployed for 100 days
+M073_c01:24,AO,,Agent message volume
+M073_c01:3,AO,,Trying new agent uses every two weeks
+M073_c01:4,AO,,New agent idea each week
+M073_c01:6,AO,,Agent app in use
+M073_c01:7,AO,,Three agent instances for SDR
+M073_c01:8,AO,,Inbound agent rolled out on website
+M073_c01:9,AO,,Agent automates sales collateral
+M073_c02:10,AO,,Built contact list for agent
+M073_c02:11,AO,,Built outreach list for agent
+M073_c02:13,AO,,Reviews all agent messages early on
+M073_c02:14,AO,,Spot-checks agent output now
+M073_c02:15,AO,,Spot-check of outgoing messages
+M073_c02:16,OT,,Time spent on replies
+M073_c02:4,AO,,Tunes agent customisation settings
+M073_c02:5,AO,,Tunes agent message content
+M073_c02:6,AO,,Supplies CRM data to agent
+M073_c02:8,OT,,Repeated practice claim
+M073_c02:9,AO,,Reads agent messages
+M073_c03:1,AO,,Spot-checks agent content
+M073_c03:10,AO,,Updates agent content
+M073_c03:11,AO,,Supplies dates and locations to agent
+M073_c03:13,AO,,Rewrites agent content
+M073_c03:2,AO,,Checks agent for hallucinated speakers
+M073_c03:3,OT,,Time in inbox
+M073_c03:5,OT,,Other activity claim
+M073_c03:6,PE,,Empowers AI to respond to more sponsor messages; delegates approval scope
+M073_c03:7,AO,,Supplies CSV data to agent
+M073_c03:9,AO,,Supplies speaker data to agent
+M073_c04:0,AO,,Tunes agent
+M073_c04:10,AO,,Dedicated inbound agent set up
+M073_c04:7,OT,,Observation of repeat visits
+M073_c05:1,AO,,Three agents on one platform
+M073_c05:3,AO,,Agent on qualification platform
+M073_c05:4,OT,,Agent naming
+M073_c05:5,OT,,Agent naming
+M073_c05:6,AO,,Deployed agent
+M073_c05:7,AO,,Agent schedule set
+M073_c05:8,AO,,Agent ingests CRM data daily
+M073_c06:1,AO,,Routing handled manually before agent
+M073_c06:10,AO,,Rolled out agent feature
+M073_c06:11,AO,,Adding voice to agent
+M073_c06:2,OT,,Routing step
+M073_c06:5,AO,,Daily review with colleague
+M073_c06:6,AO,,Trained agent on ticket sales
+M073_c06:7,AO,,Adjusted agent prompt
+M073_c06:8,AO,,Wrote agent prompt for group tickets
+M073_c07:0,AO,,Used two platforms for agent
+M073_c07:1,AO,,Agent kept open to monitor
+M073_c07:11,AO,,Live coding of agent
+M073_c07:2,AO,,Monitors agent activity
+M073_c07:3,AO,,Takes over agent conversations
+M073_c07:8,AO,,Daily review of agent output
+M073_c08:0,AO,,Loads content into presentation agent
+M073_c08:1,AO,,Selects content for agent
+M073_c08:10,AO,,Tuned agent wording
+M073_c08:2,AO,,Supplies company description to agent
+M073_c08:4,OT,,Sends output to recipients
+M073_c08:5,AO,,Uses presentation agent
+M073_c08:6,AO,,Supplies brand guidelines to agent
+M073_c08:7,AO,,Agent set to update stage
+M073_c08:8,OT,,Uses CRM
+M073_c09:0,AO,,Built tools in Replit
+M073_c09:11,OT,,Personal launch
+M073_c09:12,AO,,Rebuilt a tool with agent platform
+M073_c09:13,OT,,Website rebuild
+M073_c09:2,OT,,Agency hire
+M073_c09:4,OT,,Personal app build
+M073_c09:6,AO,,Built an agent
+M073_c09:9,OT,,Calculator build
+M076_c00:0,OT,,Career history
+M076_c00:1,OT,,Career history
+M076_c00:2,OT,,Career history
+M076_c00:3,OT,,Career history
+M076_c00:4,OT,,Career history
+M076_c00:5,OT,,Legal tech claim
+M076_c00:6,OT,,Personal stance
+M076_c01:0,OT,,Onboarding time claim
+M076_c02:1,OT,,Funding claim
+M076_c02:2,OT,,Insourcing claim
+M076_c02:3,OT,,Outside counsel claim
+M076_c02:4,OT,,Hiring claim
+M076_c03:1,OT,,Service lines
+M081_c00:0,OT,,Productivity claim
+M081_c00:1,OT,,Writing use claim
+M081_c00:2,AO,,Custom apps to synthesise feedback
+M081_c00:3,OT,,Scale claim
+M081_c00:4,OT,,Experimentation claim
+M081_c01:0,OT,,Adoption goal set
+M081_c01:1,OT,,Team onboarded tools
+M081_c01:2,OT,,Training sessions
+M084_c00:0,AO,,Using agentic tools for manual processes
+M084_c00:1,OT,,Order volume claim
+M084_c00:2,AO,,First agent test
+M084_c00:3,AO,,First order through agent
+M084_c01:1,PV,,Audit trail built to review agent actions
+M084_c01:2,PE,,Processes turned to autonomous; sets what agent may do
+M084_c01:6,PE,,Verifier agent to check agent run outcomes; approval gate
+M084_c02:0,OT,,Choice of option
+M084_c02:2,OT,,Job list gathering
+M084_c02:3,OT,,Job concentration analysis
+M084_c02:5,OT,,Customer service focus
+M084_c02:7,OT,,Target selection
+M086_c01:1,OT,,Client experience
+M086_c02:1,OT,,Acquisition history
+M086_c02:2,OT,,Sourcing method
+M088_c00:1,OT,,History
+M088_c01:0,OT,,Repeated question
+M088_c01:1,OT,,Reverse mentoring
+M088_c01:2,OT,,Learning tools
+M041_p01:0,AO,,Personal AI assistant running alongside
+M041_p01:1,AO,,Assistant run three months
+M041_p01:2,AO,,Assistant handles upward one-on-ones
+M041_p01:3,OT,,Assistant joins coaching sessions
+M041_p02:0,AO,,Separate chats per employee using guidance file
+M041_p02:1,OT,,Tool features used
+M041_p02:2,OT,,Re-evaluated features
+M041_p03:0,OT,,One-on-ones run in Notion
+M041_p03:1,OT,,Private Notion spaces per employee
+M041_p03:2,OT,,Reorganised Notion
+M041_p03:3,AO,,Gave Claude database lookup
+M041_p03:4,AO,,Uses AI transcription of one-on-ones
+M041_p03:5,OT,,Transcription start timing
+M041_p03:6,AO,,Refined transcription agent prompt
+M041_p03:7,AO,,Checks transcription attributions
+M041_p04:4,AO,,Agent files notes in its own database
+M041_p04:5,OT,,Built over time
+M041_p05:1,OT,,Personal feedback use
+M041_p05:3,OT,,Journal-style use
+M041_p05:5,PV,,Access to manager's meeting notes; who may see what across roles
+M053_p00:2,OT,,Personal skills claim
+M053_p01:1,OT,,Career history
+M053_p01:4,OT,,Career history
+M053_p01:6,OT,,Education
+M053_p02:1,OT,,Personal learning from misstep
+M053_p02:5,OT,,Hiring pressure
+M053_p03:0,OT,,Pace reflection
+M053_p03:1,OT,,Tool use history
+M053_p03:4,OT,,Personal creative project
+M053_p03:5,OT,,Personal creative project
+M053_p03:6,OT,,Creative project tools
+M053_p04:0,AO,,AI used for compensation analysis
+M053_p04:2,PE,,Validation stops built into workflow; approval gates
+M053_p04:3,AO,,Agent given too much end-to-end scope; reflection on tuning
+M053_p05:1,OT,,Personal mistake
+M053_p05:2,PE,,Expanding agent autonomy in domains with flexibility; limit change
+M053_p05:3,OT,,General claim about implementation; not practice
+M053_p06:0,OT,,Personal reflection on bolt-on AI
+M054_p01:0,OT,,Career history
+M054_p01:1,OT,,Implementation history
+M054_p02:0,OT,,Research prep
+M054_p02:2,AO,,Asked staff to build own agents
+M054_p03:10,AO,,HR agents helped build workforce framework
+M054_p03:3,OT,,Agents named
+M054_p03:5,OT,,Thinking on agent uses
+M054_p03:6,PE,,Defined agent scope in and out of bounds
+M054_p03:9,AO,,Agents used to develop workforce plan
+M054_p05:0,OT,,Framework use
+M054_p05:2,OT,,Feedback given
+M054_p05:3,OT,,Practice claim
+M054_p06:1,OT,,Values talk
+M054_p06:2,OT,,Outbound shift claim
+M054_p06:4,AO,,Other team built agent to catch missed candidates
+M054_p07:0,OT,,CEO listening
+M054_p08:0,OT,,Personal talk
+M054_p08:1,OT,,Personal habit
+M067_p01:3,PV,,Found five conflicting return policies across the organisation; written rule gap
+M067_p01:4,PV,,Sees gap in customer interactions against rules
+M067_p01:8,OT,,Roadmap request
+M067_p01:9,OT,,Company history
+M067_p02:4,OT,,Whiteboard product planning
+M067_p02:6,OT,,Product launch claim
+M067_p02:7,OT,,Employee engagement
+M067_p03:1,AO,,Collects data from agent and human interactions
+M067_p03:3,AO,,A/B testing of agent behaviour
+M067_p03:4,AO,,Lays out every agent interaction for review
+M067_p03:8,AO,,Caught agent error in conclusions
+M067_p04:0,AO,,Scores every agent and human interaction
+M067_p04:1,AO,,Surfaces agent and human mistakes
+M067_p04:2,OT,,General claim about analysis share; not practice
+M067_p04:5,OT,,Product development claim
+M067_p04:6,OT,,Human copilot use
+M067_p06:0,OT,,Resolution tracking
+M067_p06:1,OT,,Platform description
+M067_p06:2,OT,,Automation rate goal
+M067_p06:3,OT,,Pricing model
+M067_p06:4,OT,,Customer frameworks
+M067_p06:5,AO,,A/B testing encouraged
+M067_p06:6,OT,,Personal news review
+M067_p06:7,OT,,Customer messaging
+M067_p07:3,AO,,Scores all interactions by human or agent
+M067_p07:4,OT,,Volume claim
+M067_p07:6,OT,,Data preparation
+M067_p07:8,OT,,Acquisition claim
+M067_p08:0,OT,,Vendor talks
+M067_p08:11,OT,,Customer work
+M067_p08:2,OT,,Training claim
+M067_p08:6,OT,,Licence claim
+M067_p08:7,OT,,Personal use
+M067_p09:0,OT,,Privacy claim
+M067_p09:1,OT,,Trust claim
