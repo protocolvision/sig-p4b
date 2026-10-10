@@ -253,3 +253,25 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     - **Limitation, stated in the report:** non-English duties sit mostly in language clusters or noise,
       so the activity analysis (I2) effectively describes English-language postings.
     - The rule was written after seeing cluster 0, which is why it is post hoc.
+
+21. **I1 labour-market measures, fixed before any I1 figure is computed.**
+    - **Agent or AI duty:** a posting task whose span contains any title term of deviation 14 (AI, A.I.,
+      agentic, LLM, GenAI, "generative AI", "machine learning", automation, prompt, copilot, "intelligent
+      automation", RPA, "AI governance", "responsible AI", "model risk"). "Agent" or "agents" counts only
+      next to AI, agentic, autonomous, virtual or digital (as in deviation 14). This is lexical and
+      transparent. It is validated on the 300 real records of the coding pool against the coders' AO, PE
+      and RD codes, and the agreement is reported.
+    - **Absorption (N07, H-absorb):** among postings in existing occupations, defined as the S1 study
+      occupations plus, separately, all non-new-title postings, the number with at least one agent or AI
+      duty, set against the number of new-title postings (deviation 14, excluding human-agent titles).
+      Reported as a ratio, weighted by employer (each employer weight 1), and also unweighted, by employer
+      type and US vs non-US.
+    - **Cross-function postings (N02, D2):**
+      - **Primary:** share of postings with tasks in found work clusters of two or more function families,
+        at least one business and one technical (reviewed labels).
+      - **Secondary (descriptive):** the same using all non-artefact clusters.
+      - Reported for new-title postings vs other postings.
+    - **New-title spread:** new-title postings per employer and the share of employers with at least one,
+      by employer type and sector. No time trend: the crawl is current-only and the historical board crawl
+      was not built, so N04a is coded from other instruments or marked insufficient.
+    - Occupation codes appear only descriptively (deviation 18).
