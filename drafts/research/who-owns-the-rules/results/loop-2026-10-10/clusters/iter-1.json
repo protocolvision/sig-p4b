@@ -1,0 +1,355 @@
+{
+  "iteration": 1,
+  "clusters": [
+    {
+      "cluster_id": "C1",
+      "description": "Setting up general-purpose AI tools for a team's work and then checking, fixing and handing on what they produce: writing prompts, deciding which tool does which part, breaking work into pieces the tool can take, reviewing quality, and remediating outputs before they reach colleagues or clients.",
+      "record_ids": [
+        "R3791",
+        "R4148",
+        "R3226",
+        "R7335",
+        "R8444",
+        "R1640",
+        "R7467",
+        "R9906"
+      ],
+      "bundling_evidence": "Three docs, each bundling the set internally: D187 (R3791 reviewing AI output + R4148 writing prompts, same performer 'workers in AI-exposed occupations', both 'new'); D730 (R3226 handling outputs, R7335 prompting/checking/fixing, R8444 discretizing activity, same performer 'professionals using LLMs'); D887 (R7467 assigning roles to tools, R1640 managing outputs for stakeholders, R9906 modifying and remediating contributions, same performer 'creative agency workers'). Across docs the same object (AI/LLM output) and the same loop (prompt -> check -> fix -> pass on) recur, and all are cross-functional or marketing. Cross-doc tie is same-knowledge/same-object, so medium rather than high.",
+      "roles": [
+        {
+          "role": "Team member who checks and fixes AI output as part of their own deliverable",
+          "exists_today": true,
+          "existing_title": "None separate; done inside existing knowledge-work roles (analyst, copywriter, account executive)",
+          "seniority_at_first_hire": "entry to mid",
+          "lasting_or_transitional": "transitional",
+          "reason": "R7335 and R3791 describe checking/fixing as a new chore spread across everyone exposed; as tools improve and this becomes normal hygiene it is unlikely to justify its own headcount."
+        },
+        {
+          "role": "Person who configures how a team's work is split between people and AI tools (assigns tools to sub-tasks, defines the units of work, sets review points)",
+          "exists_today": false,
+          "existing_title": "Closest today: 'AI enablement lead', 'AI operations specialist', short-lived 'prompt engineer'",
+          "seniority_at_first_hire": "mid to senior",
+          "lasting_or_transitional": "lasting",
+          "reason": "R8444 (discretize activity into units the system can process) and R7467 (assign roles to AI tools) are design decisions about the work itself, not about any one output; someone has to own them as tools change, and R1640 shows outputs are managed for internal and external stakeholders, i.e. someone answers for them."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C2",
+      "description": "Handling customer conversations next to an AI assistant: the AI takes scripted lead qualification, drafts call summaries and suggests answers; the human takes off-script questions, corrects the AI's mistakes and summaries, and resolves the issue.",
+      "record_ids": [
+        "R7862",
+        "R9946",
+        "R5827",
+        "R9407",
+        "R4439",
+        "R9524"
+      ],
+      "bundling_evidence": "Three docs, each internally bundled: D895 (R7862 fixing AI errors, R9946 rewriting call summaries; same performer, customer service representatives); D338 (R9407 resolving issues, R5827 AI spreading best practices from experienced to novice agents; customer support agents); D492 (R9524 chatbot does scripted lead-gen and passes only serious leads, R4439 agents answer off-script questions; telemarketing). Across docs: same functions (customer operations, sales), same performer type (frontline agents), and the same hand-off decision (AI takes the script, human takes the exception; R9524 decision 'chatbot passes only serious leads').",
+      "roles": [
+        {
+          "role": "Frontline agent who handles exceptions and off-script cases and corrects the assistant",
+          "exists_today": true,
+          "existing_title": "Customer service representative / tier-2 support agent / inside sales agent",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "lasting",
+          "reason": "R4439 shows off-script work growing while R9524 removes the scripted part; the role persists but narrows to the hard cases and needs fewer heads per volume (R9407 +14% issues per hour)."
+        },
+        {
+          "role": "Person who curates the assistant's answers and summary templates from what the best agents do",
+          "exists_today": true,
+          "existing_title": "Knowledge base manager / conversation designer / support enablement lead",
+          "seniority_at_first_hire": "mid",
+          "lasting_or_transitional": "lasting",
+          "reason": "R5827 says the AI carries tacit know-how from able workers to novices, and R9946 needs knowledge of 'key details needed to resolve issues'; someone must decide what gets carried and fix what gets lost."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C3",
+      "description": "Building and maintaining software with AI coding tools: more coding and exploration of new languages and projects, broader full-stack work and side projects, less project coordination, while front-end tasks and bug fixing are increasingly done by the AI directly.",
+      "record_ids": [
+        "R1042",
+        "R7434",
+        "R8424",
+        "R5585",
+        "R1434",
+        "R5212",
+        "R4820",
+        "R5362",
+        "R6220"
+      ],
+      "bundling_evidence": "D230 bundles R1042 (exploration), R7434 (less project management), R8424 (more coding) for one performer (developers with GitHub Copilot). D951 bundles R5362 (full-stack variety) and R6220 (nice-to-have dashboards) for Anthropic engineers. R5585 (D296) has the same performer and driver as D230 (developers, GitHub Copilot). R1434, R5212 and R4820 are software tasks taken over by the AI (Claude Code, Claude via enterprise API: R5212 and R4820 share the exact performer). All are engineering only. D869 and D711 were split: R5212 and R4820 differ in performer and function from their doc-mates (travel agents, technical writers; Claude.ai users).",
+      "roles": [
+        {
+          "role": "Software engineer who writes, reviews and steers AI-written code across a wider stack",
+          "exists_today": true,
+          "existing_title": "Software engineer / full-stack developer",
+          "seniority_at_first_hire": "entry (but entry hiring is shrinking, see C5)",
+          "lasting_or_transitional": "lasting",
+          "reason": "R8424 and R5585 show coding output growing; R5362 widens scope; R1434, R5212 and R4820 remove routine pieces (UI tasks, error fixes), so the role persists but junior tasks thin out."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C4",
+      "description": "Delegating whole tasks to an agent and deciding, while it runs, how much to let it do: approving steps when new, letting it run and interrupting when something needs correction when experienced, with fewer back-and-forth refinement sessions.",
+      "record_ids": [
+        "R2641",
+        "R8043",
+        "R1691",
+        "R6737"
+      ],
+      "bundling_evidence": "D687 bundles R2641 (experienced users interrupt) and R8043 (new users approve each step): same activity space, same decision ('when something needs correction'), knowledge 'instincts' / 'experience with the agent'. D711 bundles R6737 (handing over complete tasks, growing) and R1691 (fewer iteration conversations, shrinking): same performer (Claude.ai users) and the same trade-off, delegate whole versus refine step by step. Cross-doc link is the same decision (how much autonomy to grant), so medium.",
+      "roles": [
+        {
+          "role": "Agent supervisor who sets autonomy levels for agent runs and intervenes on exceptions",
+          "exists_today": false,
+          "existing_title": "No stable title; closest: 'AI agent operator', senior engineer or team lead doing it informally",
+          "seniority_at_first_hire": "senior (practitioner)",
+          "lasting_or_transitional": "lasting skill, transitional as a separate job",
+          "reason": "R2641 ties good intervention to experience-based instinct, so it sits with experienced practitioners rather than a new entry-level job; R6737 shows delegation spreading across functions, which argues for absorption into many roles rather than one."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C5",
+      "description": "Deciding the mix of people and agents a unit runs on: which workstreams agents fully automate, how many agents are needed for which tasks, how many humans guide them, and therefore how many junior people to hire.",
+      "record_ids": [
+        "R6160",
+        "R1191",
+        "R8995",
+        "R6654",
+        "R7847"
+      ],
+      "bundling_evidence": "D973 bundles R6160 (guide agents; decision 'How many agents are needed for which roles and tasks? ... how many humans are needed to guide them?') with R1191 (fully automated workstreams). R8995, R6654 and R7847 come from three different docs but share the same performer ('employers') and the same decision (whether to keep hiring young/junior people in exposed work), which is the human side of the R6160 question. Bundling is by same decision and performer, not by doc, hence medium.",
+      "roles": [
+        {
+          "role": "Leader who plans headcount across humans and agents and owns which workstreams are automated",
+          "exists_today": true,
+          "existing_title": "Head of strategic workforce planning / COO / operations director (agent side has no settled title)",
+          "seniority_at_first_hire": "senior / executive",
+          "lasting_or_transitional": "lasting",
+          "reason": "R6160 frames the agent-and-human sizing question as a standing management decision; R1191 shows workstreams already fully automated by 46% of leaders; R7847 links reduced junior hiring to firms adding 'GenAI integrator roles', i.e. this decision is already being made and someone is accountable for it."
+        },
+        {
+          "role": "Junior worker in exposed occupations",
+          "exists_today": true,
+          "existing_title": "Graduate / early-career hire in software and customer service",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "transitional",
+          "reason": "R6654, R8995 and R7847 show early-career hiring shrinking in exposed occupations; this is the role being traded against agents."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C6",
+      "description": "Writing job postings and screening applicant resumes with AI.",
+      "record_ids": [
+        "R3947",
+        "R4494"
+      ],
+      "bundling_evidence": "Same doc (D322), same performer (HR professionals using AI), same function (HR), sequential steps of one hiring pipeline.",
+      "roles": [
+        {
+          "role": "Recruiter / talent acquisition coordinator",
+          "exists_today": true,
+          "existing_title": "Recruiter / talent acquisition specialist",
+          "seniority_at_first_hire": "entry to mid",
+          "lasting_or_transitional": "transitional",
+          "reason": "R3947 (65% generate job descriptions) and R4494 (33% screen resumes) are the drafting and filtering parts of recruiting; both are the kind of document work AI is taking over, leaving the judgment and candidate-relationship parts."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C7",
+      "description": "Keeping the books for small and mid-sized clients with AI accounting software: the software classifies transactions, the accountant overrides its errors with judgment and serves more clients with time moved to higher-value work.",
+      "record_ids": [
+        "R1960",
+        "R2394",
+        "R2515",
+        "R2771"
+      ],
+      "bundling_evidence": "Same doc (D453), same performer (accountants) and same tool; R2771 (transaction classification automated) and R2515 (override AI errors; decision 'accountants add their own judgment') are two sides of one control point; R1960 and R2394 are the capacity effect.",
+      "roles": [
+        {
+          "role": "Accountant who owns the client's books, signs off on AI-classified entries and advises the client",
+          "exists_today": true,
+          "existing_title": "Accountant / client accounting services manager",
+          "seniority_at_first_hire": "mid",
+          "lasting_or_transitional": "lasting",
+          "reason": "R2515 is a judgment and sign-off that stays with an accountable professional; R2394 (55% more clients) and R1960 (8.5% of time moved to high-value tasks) shift the job towards advisory and review, while R2771 removes the bookkeeping entry work."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C8",
+      "description": "Routine administrative and record-keeping tasks handed to AI: invoices, routine emails, appointment scheduling, maintaining call files, and tedious or dangerous steps in finance and manufacturing operations.",
+      "record_ids": [
+        "R9867",
+        "R3624",
+        "R5157",
+        "R6843"
+      ],
+      "bundling_evidence": "R5157 and R6843 share a doc (D119) and the same decision label (worker desire for automation and expert-rated capability both high, 'Green Light zone'). R9867 (D459) and R3624 (D377) share functions with them (administration, finance) and the same direction of change (moving to or automated by AI). D119 was split: its other records (R3724, R3844) are about skills, not administrative tasks. Cross-doc ties are function-level only, so low.",
+      "roles": [
+        {
+          "role": "Administrative assistant / scheduler / records clerk",
+          "exists_today": true,
+          "existing_title": "Administrative assistant; scheduling coordinator; records clerk",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "transitional",
+          "reason": "Workers themselves want these automated (R5157, R6843 Green Light), people already delegate them (R9867) and firms report them automated (R3624); little in the records ties them to a judgment someone must own."
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "cluster_id": "C9",
+      "description": "Occupations where AI takes the higher-skilled tasks (planning, analysis, deciding revisions) and leaves the lower-skilled remainder (printing tickets, taking payment).",
+      "record_ids": [
+        "R7576",
+        "R6357",
+        "R6396"
+      ],
+      "bundling_evidence": "Same doc (D869) and the same mechanism: Claude usage covering the tasks that require more education. R7576 and R6357 share the performer (travel agents) and are explicitly the before/after of one job; R6396 (technical writers, decision 'decide on revisions') is the same pattern in another occupation. D869's R5212 (software error fixing) was moved to C3 because its performer and function differ.",
+      "roles": [
+        {
+          "role": "Travel agent / technical writer handling the residual transactional tasks",
+          "exists_today": true,
+          "existing_title": "Travel agent; technical writer",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "transitional",
+          "reason": "R6357 leaves tasks like ticket printing and payment collection that are themselves easy to automate; R7576 and R6396 move the judgment-heavy part to AI, which hollows the role rather than reshaping it."
+        },
+        {
+          "role": "Reviewer who decides which AI-proposed revisions to technical publications go out",
+          "exists_today": false,
+          "existing_title": "Documentation lead / editor (partial)",
+          "seniority_at_first_hire": "mid",
+          "lasting_or_transitional": "lasting",
+          "reason": "R6396 carries a decision ('decide on revisions'); a published document needs someone accountable for it even if analysis is done by AI."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C10",
+      "description": "Everyday information work across functions: searching for information, analysing data, writing communications and email, giving customers information, alongside a shift towards coordinating and training colleagues.",
+      "record_ids": [
+        "R7594",
+        "R9819",
+        "R6367",
+        "R8222",
+        "R3844",
+        "R3724"
+      ],
+      "bundling_evidence": "D968 bundles R6367 (information gathering) and R8222 (providing and communicating information). D119 bundles R3844 (analyzing data, shrinking) and R3724 (coordinating work and training others, growing) as two sides of one skill shift for the same generic performer ('workers'). R7594 (D472) and R9819 (D388) share the object (communications, email) and cross-functional scope. Ties beyond the two doc pairs are object and function only; performers are generic, so low.",
+      "roles": [
+        {
+          "role": "Generic knowledge worker",
+          "exists_today": true,
+          "existing_title": "None specific (analyst, coordinator, sales or office professional)",
+          "seniority_at_first_hire": "entry to mid",
+          "lasting_or_transitional": "transitional",
+          "reason": "These are tasks spread across most roles (R7594 writing 57%, R6367 searching 49%); R9819 (25% less email time) and R3844 (information processing losing agency) shrink them inside existing jobs, while R3724 (coordinating and training) grows inside the same jobs; no new accountable owner appears."
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "cluster_id": "C11",
+      "description": "Producing writing, images and simple code to order as an outside contractor on online platforms.",
+      "record_ids": [
+        "R2122",
+        "R5995",
+        "R6498"
+      ],
+      "bundling_evidence": "Same performer (freelancers on online platforms) across D632 and D110, same functions (marketing, communications), same object (freelance jobs/posts), same direction (shrinking). D110 bundles R5995 and R6498 internally.",
+      "roles": [
+        {
+          "role": "Freelance copywriter / illustrator / coder for small commissions",
+          "exists_today": true,
+          "existing_title": "Freelance copywriter; freelance illustrator; freelance developer",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "transitional",
+          "reason": "R2122 (fewer jobs and lower earnings), R5995 (17% fewer image-creation posts) and R6498 (21% fewer writing and coding posts) show direct substitution with no new oversight task attached."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C12",
+      "description": "Drafting legal documents (contracts, client memos, employee handbook sections) with an AI drafting aid.",
+      "record_ids": [
+        "R1948",
+        "R5843",
+        "R7451"
+      ],
+      "bundling_evidence": "Same doc (D211), same performer (law students with GPT-4), same knowledge (legal analysis); the doc explicitly bundles the four drafting tasks in one assignment.",
+      "roles": [
+        {
+          "role": "Junior lawyer who drafts with AI and is accountable for the legal analysis",
+          "exists_today": true,
+          "existing_title": "Associate / junior lawyer / in-house counsel",
+          "seniority_at_first_hire": "entry",
+          "lasting_or_transitional": "lasting",
+          "reason": "The knowledge (legal analysis) and the accountability for a signed contract or memo stay with a qualified person; the change is speed (12% to 32%), not who answers for the document."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C13",
+      "description": "Developing new products and commercially oriented proposals as one person with AI instead of a cross-functional pair.",
+      "record_ids": [
+        "R5764",
+        "R5899"
+      ],
+      "bundling_evidence": "Same doc (D857), same functions (R&D and marketing), same object (product proposals / innovation challenges); R5764 and R5899 describe one person with AI covering what a technical-plus-commercial pair did.",
+      "roles": [
+        {
+          "role": "Product developer who covers both technical and commercial sides of a proposal",
+          "exists_today": true,
+          "existing_title": "Product manager / product developer",
+          "seniority_at_first_hire": "mid",
+          "lasting_or_transitional": "lasting",
+          "reason": "R5764 (individual with AI matches a team) and R5899 (R&D people propose commercially oriented solutions) fold two specialties into one accountable person rather than creating a new role."
+        }
+      ],
+      "confidence": "low"
+    }
+  ],
+  "unclustered": [
+    "R8950"
+  ],
+  "outlook": {
+    "distinct_roles_by_2030": [
+      "C5",
+      "C1"
+    ],
+    "absorbed": [
+      "C4",
+      "C3",
+      "C2",
+      "C7",
+      "C12",
+      "C13",
+      "C10",
+      "C6"
+    ],
+    "automated": [
+      "C11",
+      "C8",
+      "C9"
+    ],
+    "reasons": "Distinct roles: C5, because the decision in R6160 (how many agents for which tasks, how many humans to guide them) together with R1191 (whole workstreams automated) and R7847 (junior hiring cut where 'GenAI integrator roles' are added) is a standing, cross-team staffing decision that needs a named, senior owner. C1, but only its design half: R8444 (breaking work into units the system can process) and R7467 (assigning roles to AI tools) are decisions about how work is set up that someone must keep current, while its checking half (R7335, R3791) stays inside existing jobs. Absorbed: C4, because R2641 ties good intervention to instincts built through experience, so agent supervision becomes part of senior practitioners' work rather than a new job (R6737 shows delegation spreading across functions). C3, C2, C7 and C12 keep their existing titles while the AI-handled parts (R1434, R5212, R4820; R9524; R2771; drafting speed in D211) move out and judgment stays (R4439 off-script answers, R2515 accountant overrides, legal analysis in R7451). C13 merges two specialties into product roles (R5764, R5899). C10 and C6 are task shifts inside existing jobs (R9819, R3844, R3947). Automated: C11 shows direct substitution with no oversight task left (R2122, R5995, R6498); C8 tasks are ones workers want automated and tools can do (R5157, R6843 Green Light; R9867; R3624); C9's remainder after AI takes the skilled part (R6357 printing tickets and taking payment) is itself routine, though R6396's revision decision may survive inside an editor role. Junior hiring (R6654, R8995, R7847) is the main risk for the absorbed clusters: if entry roles in C2, C3 and C12 shrink, it is unclear where the experience behind R2641-type judgment will come from. R8950 (procurement teams using generative AI) is unclustered: it shares no doc, performer, decision or knowledge with any other record."
+  }
+}
