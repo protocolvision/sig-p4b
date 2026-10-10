@@ -176,3 +176,6 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       pairwise ARI is reported beside the holdout ARI (loop v2 section 7).
     - **Labels.** Each found cluster is labelled by a model reading its 20 most central spans, blind to the
       codebook and the hypotheses. The codebook is applied only afterwards (section 5).
+    Clarification, before any real run: dedupe within employer comes BEFORE the 300-per-employer cap, so
+    the cap counts distinct tasks. The pool is 116,207 tasks after the performer filter and dedupe, and
+    33,172 after the cap (partial extraction; recomputed on the final pool).
