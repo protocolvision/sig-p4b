@@ -1,6 +1,6 @@
 # Who owns the rules? How new roles emerge, and the question protocol thinking has to ask
 
-Research draft, v3 (after review rounds 1–2) · 10 October 2026 · Protocols for Business · for review before any post
+Research draft, v4 (after review rounds 1–4) · 10 October 2026 · Protocols for Business · for review before any post
 
 > **Status.** Working notes, not for publication. Sources were found through web search on 10 October
 > 2026, but this environment could not open the pages themselves. Facts marked **(S)** come from
@@ -223,106 +223,140 @@ What the counter-cases show:
 | Data | Cheap storage and compute | Engineering against analysis | Lasted, then branched |
 | Model work | Large language models | Small | Absorbed into AI engineering and context design |
 
-**Why roles emerge.** Usually a capability makes a new kind of work cheap (though Y2K and the Chief
-Diversity Officer show it isn't necessary), and a cost lands between existing functions until someone
-senior asks who answers for it.
+**Why roles emerge.** In our sample, usually a capability makes a new kind of work cheap (Y2K and the
+Chief Diversity Officer show it isn't necessary), and a cost lands between existing functions until
+someone senior asks who answers for it.
 
-**Why roles last.** Two further conditions, each testable before the fact:
+**Why roles last.** Three conditions, meant as tests before the fact. Section 5's Chief Digital Officer
+shows they can still mislead: in 2016 its conflict looked permanent.
 
 1. **The conflict comes from a permanent trade-off in the business model, not from a migration.** Speed
-   against stability, revenue against risk, one brand against another: these never end. Old channel
-   against new, legacy against digital, pre-2000 dates against post-2000: these end when the migration
-   completes. The test: *would this conflict still exist if the transition finished tomorrow?*
-2. **Something outside the role keeps renewing the question.** A recurring, countable cost or a number the
-   role controls (an error budget, fraud losses, a brand's profit), a regulator or auditor, or customers who
+   against stability, revenue against risk, one brand against another never end. Old channel against new,
+   legacy against digital, pre-2000 dates against post-2000 end when the migration completes. The test:
+   *would this conflict still exist if the transition finished tomorrow?*
+2. **Nobody already owns the trade-off.** Most permanent trade-offs have an owner. The roles that lasted
+   took one nobody held: no one owned a single brand's results in 1931, or reliability while shipping in
+   2003.
+3. **Something outside the role keeps renewing the question, and the role controls a number.** A recurring,
+   countable cost (an error budget, fraud losses, a brand's profit), a regulator or auditor, or customers who
    demand it. Roles held up only by a sponsor (the Chief Knowledge Officer, the Chief Digital Officer)
-   fade when the sponsor moves on.
+   faded when the sponsor moved on.
 
-When the work is a skill rather than a conflict (HTML, prompting, growth tactics), it moves into many
-existing roles, as the webmaster's and the prompt engineer's work did. The work doesn't disappear; the
-single owner does.
+**Counter-examples to keep in view.**
 
-Three further patterns:
+- **Roles named after a technology that lasted:** database administrator, network engineer, ERP consultant,
+  cloud architect (M). The better split: technology that becomes *infrastructure with its own maintenance
+  load* keeps a role; technology that becomes *literacy* (HTML, prompting) is absorbed; technology that
+  *fails* (the metaverse) takes its role with it.
+- **A permanent trade-off whose role faded:** Microsoft folded its software test engineers into a single
+  engineer role in 2014 (S).[^sdet] Change advisory boards held speed against stability for decades, but
+  research for *Accelerate* found external change approval was associated with slower delivery and was not
+  associated with fewer failed changes (S).[^cab] The trade-off moved into engineering practice.
+- **A legal mandate without a dedicated role:** GDPR requires many companies to name a data protection
+  officer, yet in one 2018 survey 62% of in-house lawyers gave the duty to existing staff, and outsourced
+  "DPO as a service" became common (S).[^dpo] Regulation renews the *duty*; it doesn't guarantee a role.
 
-- **Questions that name the technology predict short-lived roles.** Webmaster, prompt engineer, Chief
-  Digital Officer, metaverse lead: each question named the technology, and each role split, was absorbed
-  or faded. The data scientist is the exception, and its question can be restated as a cost (growth
-  decisions made blind). Questions that name a cost or a conflict (Camay against Ivory, a $10 million
-  theft, outages after releases) produced the roles that lasted.
+**Further patterns, with the same caution.**
+
+- **In our sample, questions that name the technology went with short-lived roles** (webmaster, prompt
+  engineer, Chief Digital Officer, metaverse lead), and questions that name a cost or a conflict went with
+  roles that lasted. This is a reconstruction, not a law; the data scientist fits only when its question is
+  restated as a cost.
 - **The title trails the work by years.** Eliason and Monty did the work under other titles; Facebook's
   data scientists were first hired as analysts and research scientists; official classification took ten
   years.
-- **Regulation is the strongest renewer.** Sarbanes-Oxley section 404 (2002) made internal controls an
-  audited duty; SEC Item 106 (2023) made companies name who manages cyber risk; the EU AI Act will require
-  named, competent human oversight of high-risk AI from December 2027.
 
 ## 7. The case that it's all engineering
 
-The strongest version of the challenge:
+**The strongest case.** Every rule in question (discount limits, approval chains, data leaving the company,
+spending caps) ends up as policy written in code: access scopes, policy engines, checks in the release
+pipeline. Deciding what a rule says happens once, in the function that already owns the risk. What
+follows (versioning, testing, rollout and rollback) is engineering work, and SRE showed engineers can own a
+business trade-off once it is a number. Next, agents will carry limits among themselves through
+agent-to-agent protocols, signed mandates and spending tokens, and monitors will flag violations faster
+than any reviewer. A human rule owner in the middle repeats the change advisory board, which slowed
+delivery without improving stability. Rule changes can go through code review, with finance, security
+and legal approving their own lines. No new role, only tooling and peer review.
 
-- **Protocols in this sense are code.** Permissions, spending limits, approval workflows and output checks
-  are built by engineers. SRE is the precedent: an operations problem solved by hiring software engineers.
-  GRC engineering and platform engineering show the same move in compliance and infrastructure.
-- **The most recent analogue was absorbed in two years.** Prompt engineering went from a $335,000 posting
-  to "obsolete". Protocol thinking may become a skill every engineer and manager learns.
-- **Engineering is absorbing risk work.** Gartner predicts that by 2028 half of content risk roles will
-  move from legal and cybersecurity into AI engineering (S).[^gartner] AI engineer is the fastest-growing
-  title.
-- **The DevOps founders warned against exactly this.** Humble's objection to a "devops team" applies to a
-  "protocol team": a layer between those who set rules and those who build them.
-
-Where the challenge is weaker:
+**Where it is weaker.**
 
 - **Engineering builds rules but doesn't decide them.** Which discount limit, whose approval, what data may
-  leave: these trade revenue against risk. Engineering didn't settle development against operations either,
-  until SRE's error budget turned the conflict into a number.
+  leave: these trade revenue against risk. In the SRE case, it took a number (the error budget), not a new
+  function, to settle the conflict; the question is who sets and owns the equivalent number for business
+  rules.
 - **Security is engineered too, and the CISO still exists.** Since 2023 US listed companies must name who
   owns cyber risk. A function built in code can still need an accountable owner.
 - **New roles are already forming around agents.** Forward-deployed engineers, Chief AI Officers and named
-  agent owners exist because someone must answer for agents in the business. The open question is whether
-  rule ownership becomes one of them, or a duty inside one.
+  agent owners exist because someone must answer for agents in the business.
 
-**The incumbent.** A steady-state owner of business rules already exists: the controller and the internal
-controls function, audited under Sarbanes-Oxley in listed companies. It owns rules about money and
-reporting, mostly tested once a year. GRC engineering is turning those controls into code.
+**What would decide between the views.**
 
-**Verdict, moderate confidence.** A standalone "protocol" role is less likely than the duties landing in
-an existing or forming role: internal controls and GRC engineering, revenue operations, a Chief AI
-Officer's office, or platform engineering. A distinct role is likely only where agents are slowed or
-exposed by rules no one owns, at a cost that recurs and can be counted.
+- **Who approves rule changes.** In companies running many agents, do business owners approve changes to
+  policy code, or only engineers?
+- **How often rules change across functions.** Rare changes suit a committee or the function that owns the
+  risk; frequent ones that cut across functions need an owner.
+- **Time to amend.** How long it takes to change a wrong rule once it is found, in companies with and
+  without a named owner.
+- **Incident attribution.** Are incidents traced to a wrong or unowned rule, or to an implementation bug?
+- **Titles over time.** Whether "AI governance", "agent operations" or "AI controls" titles persist or fold
+  back into engineering (section 10).
+
+**Verdict, moderate confidence.** A standalone "protocol" role is the less likely outcome. The likelier
+one is the duties landing in an existing structure (section 8), as the DPO's did. A distinct role is
+likely only where rule changes are frequent, cut across functions, have no owner, and carry a cost that
+recurs and can be counted.
 
 ## 8. Applying the pattern to protocols
 
-| Candidate gap | Permanent trade-off? | What renews it | Who might absorb it | Likely outcome |
+| Candidate gap | Permanent trade-off? | Already owned? | What renews it | Likely outcome |
 | --- | --- | --- | --- | --- |
-| What each agent may see, do and spend | Yes: access against safety | Security incidents, audits | Security, identity and access management | Absorbed into security |
-| Day-to-day oversight of agents in each team | No: a skill that spreads | Nothing outside the team | Every manager | Becomes a skill, as prompting did |
-| "Get our agents deployed" | No: a migration | A sponsor | Chief AI Officer, forward-deployed engineers | Transition role; ends when deployment is routine |
-| Which business rules become enforced in systems, and how they change as the business grows | Yes: revenue against risk, speed against control | Deals waiting on approvals, incidents traced to rules, and from December 2027 EU oversight duties | Nobody today: security, finance, legal, sales and engineering each hold a piece | Candidate for a role, or a mandate for internal controls, RevOps or platform engineering |
+| What each agent may see, do and spend | Yes: access against safety | Yes: security, identity and access management | Incidents, audits | Absorbed into security |
+| Day-to-day oversight of agents in each team | No: a skill that spreads | Each manager | Nothing outside the team | Becomes a skill, as prompting did |
+| "Get our agents deployed" | No: a migration | Chief AI Officer, forward-deployed engineers | A sponsor | Transition role; ends when deployment is routine |
+| Which business rules become enforced in systems, and how they change together as the business grows | Yes: revenue against risk, speed against control | Split: finance, security, legal and sales each own pieces; no one owns how they change together | Deals waiting on approvals, incidents traced to rules, and from December 2027 EU oversight duties | Candidate for a role, or a mandate for an existing structure |
 
-Only the fourth gap passes both tests for lasting. It also tells us how a protocol role would have to be
-framed: as refereeing revenue against risk with a number it controls (approval wait times, exception
-rates, incidents traced to rules), not as "getting agents deployed". The second framing is a transition
-role.
+**Where the fourth gap could land.**
+
+| Structure | Strength | Risk |
+| --- | --- | --- |
+| CFO organisation: deal desk, FP&A, controller | Already owns discount and spending limits and their delays | Leans to cost control over growth |
+| Internal controls and GRC engineering | Audited, already turning controls into code | Tests once a year; leans to compliance |
+| Enterprise risk / chief risk officer | Owns the risk register across functions | Far from day-to-day work |
+| Revenue operations | Owns the funnel's systems and data | Only covers revenue-side rules |
+| Platform engineering | Builds and runs the enforcement | Doesn't decide the trade-offs |
+| A council or committee | Cheap, cross-functional | Can become a change advisory board |
+| A champions network in each function | Close to the work | No one answers for the whole |
+| Vendor and agent-platform defaults | No headcount | The vendor's rules become yours by default |
+| Each team owns its interface rules | Matches the guide's own Amazon example | No one owns how rules interact |
+| A dedicated role | One owner for how rules change together | The CAB risk; needs a number it controls |
+
+**A tension in our own material.** The Business Protocol Lead template says the role *finds* the rules
+("security, finance and legal decide what the rules say; engineering builds them"). By sections 6 and 9,
+a role that lasts has to *own* something: the speed and quality of changing rules. Section 9's question is
+built to show which it should be.
 
 ## 9. The question a business needs to ask today
 
-Each lasting role began with a question that named a cost and asked who answers for it, and something kept
-asking it. The equivalent for protocols, without naming the technology:
+In our reconstructions, lasting roles began with a question that named a cost and asked who answers for
+it, and something kept asking it. The protocol version should be measurable, neutral about technology,
+and able to come out against a new role:
 
-> **Our growth waits on rules nobody owns: approvals, limits and data permissions. Who answers for what
-> each rule costs us, in deals delayed and in damage done, and who may change it?**
+> **When a person or an agent runs into one of our rules and the rule is wrong, how long does it take for
+> someone with the authority to change it, and who is that?**
+
+Supporting measure: for the ten most-used approvals and limits, how long work waits on each, how often each
+is overridden, and who can change it.
 
 How the answer points to a structure:
 
-- **"The CTO" or "engineering"** → no new role; protocol thinking becomes an engineering skill.
-- **"The CISO"** → security absorbs it, and the rules lean toward restriction.
-- **"The controller"** → internal controls absorbs it, and the rules lean toward audit.
-- **"The COO", or each function separately** → the gap is real. If its cost recurs and can be counted,
-  expect a role, under whatever title the company already uses.
+- **Short time to amend, a named owner** → no new role; the current structure works.
+- **Long time to amend, but rare** → a committee or the function that owns the risk is enough.
+- **Long time to amend, recurring, ownership split across functions** → a candidate role, or a mandate for
+  one of the structures in section 8, with time to amend as the number it controls.
 
-Agents make the question urgent, because they hit unowned rules faster and more often than people do. They
-are the reason to ask now, not the subject of the question.
+Agents make the question urgent, because by our hypothesis they hit wrong or unowned rules faster and more
+often than people do; the Artifactory incident is one illustration. They are the reason to ask now, not
+the subject of the question.
 
 ## 10. Gaps and next research steps
 
@@ -339,7 +373,11 @@ are the reason to ask now, not the subject of the question.
 
 - [ ] **Survivorship.** Section 5 adds seven counter-cases, but failed roles still leave fewer traces than
   successful ones.
-- [ ] **Reconstructed questions.** Each business question is our reading. McElroy's memo asked for staff.
+- [ ] **Reconstructed, and so partly circular.** Each business question is our reading, written knowing how
+  the role turned out, and then used to explain the outcome. McElroy's memo asked for staff. Test the
+  conditions on roles forming now (section 3) and check back in two years.
+- [ ] **Base rate.** We have no count of all new titles that appeared and how many lasted, so we can't say
+  how unusual the lasting ones are.
 - [ ] **Vendor numbers.** CISO coverage, FDE growth, product-ops growth and LinkedIn rankings come from
   industry sources with their own methods and interests.
 - [ ] **New titles versus new occupations.** Autor and colleagues estimate about 60% of 2018 US employment
@@ -404,3 +442,6 @@ are the reason to ask now, not the subject of the question.
 [^growth]: "Growth Hacking," *Wikipedia*, https://en.wikipedia.org/wiki/Growth_hacking. (S)
 [^metaverse]: "Disney's Metaverse Chief Departs Shortly After Division Shutdown," *Campaign Asia*, https://www.campaignasia.com/article/disneys-metaverse-chief-departs-shortly-after-division-shutdown/485682. (S)
 [^ibm]: IBM, "IBM Study: CEOs Are Reshaping C-Suite Roles for the AI Era," 4 May 2026, https://newsroom.ibm.com/2026-05-04-ibm-study-ceos-are-reshaping-c-suite-roles-for-the-ai-era. (S; samples may differ between years)
+[^sdet]: "How Microsoft Does Quality Assurance," *The Pragmatic Engineer*, https://newsletter.pragmaticengineer.com/p/how-microsoft-does-quality-assurance. (S)
+[^cab]: Nicole Forsgren, Jez Humble and Gene Kim, *Accelerate: The Science of Lean Software and DevOps* (IT Revolution, 2018), as summarized in "Change-Advisory Board," *Wikipedia*, https://en.wikipedia.org/wiki/Change-advisory_board, and "Change Advisory Boards Don't Work," *Octopus Deploy*, https://octopus.com/blog/change-advisory-boards-dont-work. (S)
+[^dpo]: "GDPR Says Companies Must Have a Data Privacy Officer," *SHRM*, citing an Association of Corporate Counsel survey (2018), https://www.shrm.org/topics-tools/employment-law-compliance/gdpr-says-companies-must-data-privacy-officer; IAPP, "Outsourcing Your DPO," https://www.iapp.org/resources/article/series-outsourcing-your-dpo. (S)
