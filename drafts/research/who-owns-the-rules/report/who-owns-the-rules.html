@@ -1,11 +1,6 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who Owns the Rules</title>
 <meta name="robots" content="noindex">
 <meta name="description" content="Who owns the rules when AI agents join the business: desk research on postings, filings, speech, law and vendors. Protocols for Business, October 2026.">
-<title>Who Owns the Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap">
@@ -26,13 +21,7 @@
   --serif: Lora, Charter, Georgia, serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }
-/* Light only. The page sets data-theme="light"; these blocks exist for the artifact contract and never apply while it is set. */
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  color-scheme: dark; --bg: #161614; --fg: #ebe9e3; --muted: #a9a7a0; --hair: #4a4944; --action: #7ba6ff; --action-hover: #a8c4ff; --accent: #4fb897;
-} }
-:root[data-theme="dark"] {
-  color-scheme: dark; --bg: #161614; --fg: #ebe9e3; --muted: #a9a7a0; --hair: #4a4944; --action: #7ba6ff; --action-hover: #a8c4ff; --accent: #4fb897;
-}
+/* Light only by design: one palette, set explicitly. */
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -153,8 +142,6 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   table.hgrid thead th { vertical-align: bottom; padding-left: 2px; padding-right: 2px; }
 }
 </style>
-</head>
-<body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <pattern id="hx-f" width="2.4" height="2.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="2.4" style="stroke:var(--accent)" stroke-width=".5"/></pattern>
   <pattern id="hx-c" width="2.4" height="2.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="2.4" style="stroke:var(--action)" stroke-width=".5"/></pattern>
@@ -1345,5 +1332,4 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   })();
 })();
 </script>
-</body>
-</html>
+
