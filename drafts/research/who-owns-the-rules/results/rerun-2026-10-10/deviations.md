@@ -227,3 +227,16 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
          or more families, at least one of them business and at least one technical. The rate is reported
          over time and by group.
       5. "None" titles are treated as unknown, not as a category.
+
+19. **Clustering: degenerate EOM solution, rerun with leaf selection (post hoc, both reported).** The
+    pre-registered run (eom) gave holdout ARI 0.017 and 0 clusters found. Diagnosis: the independent
+    holdout clustering collapsed into one cluster holding 24,515 of 25,553 points (96%), with 0% noise.
+    That is a known HDBSCAN eom failure on near-uniform density. Meanwhile the discovery half gave 89
+    clusters, and the three full-pool baselines gave 159–175 clusters with mean pairwise ARI 0.86. A
+    stability test against one blob cannot be read.
+    - **Rule, set before rerunning:** a solution is degenerate if one cluster holds more than half of its
+      points. If any solution in a run is degenerate, the whole run (discovery, holdout and baselines) is
+      repeated with cluster_selection_method = "leaf". Every other parameter and the found rule are
+      unchanged.
+    - The eom result is kept (`clusters/stability-eom.md`) and reported beside the leaf result
+      (`clusters/leaf/`). The change was made after seeing a failure, and the report says so.

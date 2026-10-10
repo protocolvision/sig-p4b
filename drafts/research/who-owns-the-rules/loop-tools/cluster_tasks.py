@@ -95,7 +95,7 @@ def run_umap_hdbscan(X, seed, P, fit_umap_only=False):
     import umap, hdbscan
     um = umap.UMAP(n_neighbors=P["nn"], n_components=10, min_dist=0.0, metric="cosine", random_state=seed).fit(X)
     Z = um.embedding_
-    cl = hdbscan.HDBSCAN(min_cluster_size=P["mcs"], min_samples=P["ms"], cluster_selection_method="eom",
+    cl = hdbscan.HDBSCAN(min_cluster_size=P["mcs"], min_samples=P["ms"], cluster_selection_method=P.get("sel", "eom"),
                          prediction_data=True).fit(Z)
     return um, cl
 
@@ -121,10 +121,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--smoke", type=int, default=0)
     ap.add_argument("--tasks", default=str(TASKS))
+    ap.add_argument("--selection", default="eom", choices=["eom", "leaf"])  # deviation 19: leaf after a degenerate eom run
     a = ap.parse_args()
     smoke = a.smoke > 0
     P = dict(nn=15, mcs=10, ms=3, min_pred=5, min_emp=3) if smoke else dict(nn=30, mcs=30, ms=10, min_pred=30, min_emp=10)
-    outdir = OUT / "smoke" if smoke else OUT
+    P["sel"] = a.selection
+    outdir = OUT / "smoke" if smoke else (OUT / "leaf" if a.selection == "leaf" else OUT)
     outdir.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
 
@@ -202,6 +204,9 @@ def main():
           + (f"; smoke sample: {len(df)}" if smoke else ""),
           f"- Postings: {len(postings)}; discovery tasks {len(di)}, holdout tasks {len(hi)}",
           f"- Noise fraction: discovery {np.mean(lab_d < 0):.3f}, holdout independent {np.mean(lab_h < 0):.3f}",
+          f"- Selection method: {P['sel']}. Largest cluster share (degenerate if > 0.5): discovery "
+          f"{(np.bincount(lab_d[lab_d >= 0]).max() / len(lab_d)) if (lab_d >= 0).any() else 0:.3f}, holdout independent "
+          f"{(np.bincount(lab_h[lab_h >= 0]).max() / len(lab_h)) if (lab_h >= 0).any() else 0:.3f}",
           "", "## Parameters",
           f"- Embedding: {MODEL}, L2-normalised (cache {EMBED.relative_to(ROOT)}/postings.npy)",
           f"- UMAP: n_neighbors {P['nn']}, n_components 10, min_dist 0.0, metric cosine, random_state {UMAP_SEED} "
