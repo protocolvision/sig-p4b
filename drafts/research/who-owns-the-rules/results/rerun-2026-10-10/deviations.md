@@ -153,3 +153,26 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     duty bundles, design section 3) uses DevOps only. For trading and the grid, I3 relies on dated rule
     texts (I4) and the signature timelines, and their few postings are illustrative. If CDX access
     returns before synthesis, one more collection pass is attempted.
+
+16. **Clustering parameters, fixed before any clustering** (design section 5 gives the method, not the
+    settings).
+    - **Pool.** Haiku posting tasks from the final extraction (after the credit-blocked batch is redone),
+      performer = person or both. At most 300 tasks per employer, drawn at random (seed 20261024), so that
+      large Workday boards cannot dominate. Deduplicated by normalised span within employer.
+    - **Split.** A random half for discovery and the other half as holdout, by POSTING (all tasks of one
+      posting fall in the same half), seed 20261011.
+    - **Embedding.** all-mpnet-base-v2, L2-normalised.
+    - **Reduction.** UMAP: n_neighbors 30, n_components 10, min_dist 0.0, metric cosine, random_state
+      fixed per run.
+    - **Clustering.** HDBSCAN: min_cluster_size 30, min_samples 10, cluster_selection_method "eom".
+    - **Holdout test.**
+      - Assign holdout points to discovery clusters with `hdbscan.approximate_predict`.
+      - Cluster the holdout independently with the same settings.
+      - Compute the adjusted Rand index between the two labelings, on points that are non-noise in both.
+      - A discovery cluster counts as **found** if its predicted holdout members reach 30 or more, its best-
+        matching independent holdout cluster overlaps it with Jaccard ≥ 0.5, the overall ARI is 0.6 or more,
+        and its tasks come from at least 10 distinct employers.
+    - **Noise baseline.** Three more full runs with different UMAP seeds on the full pool; the mean
+      pairwise ARI is reported beside the holdout ARI (loop v2 section 7).
+    - **Labels.** Each found cluster is labelled by a model reading its 20 most central spans, blind to the
+      codebook and the hypotheses. The codebook is applied only afterwards (section 5).
