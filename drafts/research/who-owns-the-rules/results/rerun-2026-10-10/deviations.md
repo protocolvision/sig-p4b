@@ -311,3 +311,8 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       for both confirmation rules.
     This is standard two-phase sampling. It was added after the flag's precision was known, and the report
     says so.
+    **Addendum, fixed before coder B's phase-2 codes were seen:** coder A again reports defaulting
+    unflagged rows to OT. Final phase-2 codes are therefore the agreed codes plus a blind Opus
+    adjudication of every disagreement (as in deviation 22). "Confirmed" means AO, PE or RD in the final
+    code. The "either coder" and "both coders" rules are replaced by this single rule, and agreement (kappa)
+    is reported.
