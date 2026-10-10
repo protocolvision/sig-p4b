@@ -14,7 +14,7 @@ Usage (from loop-tools/, with the analytics venv):
 
 State and output go to corpus/b-raw/extract/<NAME>/ (ignored by git): batches.json, tasks.jsonl, report.json.
 """
-import argparse, json, pathlib, re, sys, time
+import argparse, json, pathlib, re, statistics, sys, time
 
 import anthropic
 from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
@@ -32,56 +32,75 @@ PROMPTS = {
         "education, benefits, pay, and descriptions of the company or team. If the posting lists no tasks, "
         "return an empty list."
     ),
-    # Filing prompt v2 (10 October 2026), after the clean check of v1 found precision 0.39
-    # (results/rerun-2026-10-10/review/extraction-check-filings.md). v1 is in git history.
+    # Filing prompt history. v1 (git history) asked for activities of the company, its people "or its
+    # systems": precision 0.39 on the clean check. v2 (10 October 2026) added exclusions and negative
+    # examples (results/rerun-2026-10-10/review/extraction-check-filings.md) but still let product
+    # capability through. v3 (14 October 2026, review items C1-C2) keeps only what the company's people,
+    # teams or functions do, including directing or running agents in the firm's own operations;
+    # product capability is excluded rather than labelled.
     "filing": (
         "You read one passage from a company's annual or quarterly report. List every activity that THIS "
-        "company, its employees, or software it runs on its own operations has actually performed, is "
-        "performing, has started or has stopped, as stated in the passage. Copy each one exactly, character "
-        "for character (keep quotes, capitals and punctuation; never use \"...\"), one complete clause per "
+        "company's people, teams or functions have actually performed, are performing, have started or have "
+        "stopped, as stated in the passage. This includes work in which they direct, configure, supervise or "
+        "run agents or software in the company's own operations. Copy each one exactly, character for "
+        "character (keep quotes, capitals and punctuation; never use \"...\"), one complete clause per "
         "item.\n\n"
         "Do NOT include:\n"
-        "- what a product or platform can do, is designed to do, or enables customers to do (\"X enables\", "
-        "\"customers can\", \"allows organizations to\"), unless the passage says the company itself runs it "
-        "on its own operations or delivers it as a service it performs;\n"
+        "- what a product, platform or system does, can do, is designed to do, or enables customers to do "
+        "(\"X enables\", \"customers can\", \"allows organizations to\"), including anything it does for "
+        "customers;\n"
+        "- mergers, acquisitions, divestitures, financing, capital raising and other corporate transactions;\n"
         "- actions by customers, partners, competitors, regulators, merchants, acquired companies before the "
-        "acquisition, or the market;\n"
+        "acquisition, or the market, and any other party's actions;\n"
         "- forecasts, intentions and plans (expect, intend, plan, will, potential, may, could);\n"
         "- goals, priorities or commitments (focused on, committed to, our strategy is);\n"
         "- risk statements, hypotheticals, accounting definitions, and legal or non-GAAP boilerplate.\n\n"
         "Before you output an item, check that its grammatical subject is the company (we, the Company, a "
-        "named subsidiary), its people, or its internal systems, and that the verb describes something done, "
+        "named subsidiary) or its people, teams or functions, and that the verb describes something done, "
         "not something possible. If none qualify, return an empty list.\n\n"
+        "For each item, set performer to: person (people do the work), \"agent in own operations\" (software "
+        "or agents run in the company's own operations do the work), both, or unclear.\n\n"
         "Examples of what NOT to extract:\n"
         "- \"the AI agents can operate independently to perform tasks across various business functions\" "
         "(a product capability)\n"
+        "- \"The C3 AI orchestrator coordinates multiple AI agents, invokes specialized machine-learning "
+        "models or mathematical tools as necessary and handles all data types and tasks\" (a product feature)\n"
         "- \"traditional and non-traditional competitors use other, new data sources and technologies\" "
         "(competitors' actions)\n"
         "- \"we are focused on expanding profitability, free cash flows and capital return\" (a goal)\n"
-        "- \"We intend to continue to invest in our research and development capabilities\" (an intention)"
+        "- \"We intend to continue to invest in our research and development capabilities\" (an intention)\n"
+        "- \"We expect to continue to invest heavily in generative AI\" (a forecast)\n"
+        "- \"remain committed to organic initiatives and a programmatic approach to growth through tuck-in "
+        "acquisitions and divestitures\" (a priority and M&A)"
     ),
 }
-PROMPT_VERSION = {"posting": "v1", "filing": "v2"}
+PROMPT_VERSION = {"posting": "v1", "filing": "v3"}
 
-SCHEMA = {
-    "type": "object",
-    "properties": {
-        "tasks": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "span": {"type": "string", "description": "the task, copied exactly from the text"},
-                    "performer": {"type": "string", "enum": ["person", "software or agent", "both", "unclear"]},
+def make_schema(performers):
+    return {
+        "type": "object",
+        "properties": {
+            "tasks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "span": {"type": "string", "description": "the task, copied exactly from the text"},
+                        "performer": {"type": "string", "enum": performers},
+                    },
+                    "required": ["span", "performer"],
+                    "additionalProperties": False,
                 },
-                "required": ["span", "performer"],
-                "additionalProperties": False,
-            },
-        }
-    },
-    "required": ["tasks"],
-    "additionalProperties": False,
-}
+            }
+        },
+        "required": ["tasks"],
+        "additionalProperties": False,
+    }
+
+
+# Postings keep the original performer values; the filing schema (v3) drops product capability.
+SCHEMAS = {"posting": make_schema(["person", "software or agent", "both", "unclear"]),
+           "filing": make_schema(["person", "agent in own operations", "both", "unclear"])}
 
 
 def norm(s):
@@ -117,7 +136,7 @@ def submit(a):
                     model=a.model,
                     max_tokens=8000,
                     system=[{"type": "text", "text": PROMPTS[doc["kind"]], "cache_control": {"type": "ephemeral"}}],
-                    output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
+                    output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMAS[doc["kind"]]}},
                     messages=[{"role": "user", "content": doc["text"]}],
                 ),
             )
@@ -144,53 +163,144 @@ def collect(a):
     for bid in state["batches"]:
         while client.messages.batches.retrieve(bid).processing_status != "ended":
             time.sleep(60)
-    texts = {doc["id"]: norm(doc["text"]) for doc in load_docs(state["input"])}
+    docs = {doc["id"]: doc for doc in load_docs(state["input"])}
+    texts = {i: norm(doc["text"]) for i, doc in docs.items()}
     n_docs = n_tasks = n_verbatim = 0
-    failed = []
+    failed, rows = [], []
+    for bid in state["batches"]:
+        for res in client.messages.batches.results(bid):
+            if res.result.type != "succeeded":
+                failed.append({"id": res.custom_id, "type": res.result.type})
+                continue
+            msg = res.result.message
+            if msg.stop_reason != "end_turn":
+                failed.append({"id": res.custom_id, "type": msg.stop_reason})
+                continue
+            text = next(b.text for b in msg.content if b.type == "text")
+            n_docs += 1
+            for k, t in enumerate(json.loads(text)["tasks"]):
+                verbatim = norm(t["span"]) in texts.get(res.custom_id, "")
+                n_tasks += 1
+                n_verbatim += verbatim
+                rows.append({"doc_id": res.custom_id, "task_id": f"{res.custom_id}:{k}",
+                             "span": t["span"], "performer": t["performer"],
+                             "verbatim": verbatim, "model": state["model"],
+                             "prompt_version": state.get("prompt_version")})
+    # Undeduplicated spans, one row per extraction: used by agree().
+    with open(d / "tasks-raw.jsonl", "w") as out:
+        for r in rows:
+            out.write(json.dumps(r) + "\n")
+    rows, n_dedup = dedupe_filings(rows, docs)
     with open(d / "tasks.jsonl", "w") as out:
-        for bid in state["batches"]:
-            for res in client.messages.batches.results(bid):
-                if res.result.type != "succeeded":
-                    failed.append({"id": res.custom_id, "type": res.result.type})
-                    continue
-                msg = res.result.message
-                if msg.stop_reason != "end_turn":
-                    failed.append({"id": res.custom_id, "type": msg.stop_reason})
-                    continue
-                text = next(b.text for b in msg.content if b.type == "text")
-                n_docs += 1
-                for k, t in enumerate(json.loads(text)["tasks"]):
-                    verbatim = norm(t["span"]) in texts.get(res.custom_id, "")
-                    n_tasks += 1
-                    n_verbatim += verbatim
-                    out.write(json.dumps({"doc_id": res.custom_id, "task_id": f"{res.custom_id}:{k}",
-                                          "span": t["span"], "performer": t["performer"],
-                                          "verbatim": verbatim, "model": state["model"],
-                                          "prompt_version": state.get("prompt_version")}) + "\n")
-    report = {"model": state["model"], "docs": n_docs, "tasks": n_tasks,
+        for r in rows:
+            out.write(json.dumps(r) + "\n")
+    report = {"model": state["model"], "docs": n_docs, "tasks": n_tasks, "tasks_after_dedupe": len(rows),
+              "filing_spans_merged_as_repeats": n_dedup,
               "verbatim_rate": round(n_verbatim / n_tasks, 4) if n_tasks else None, "failed": failed}
     (d / "report.json").write_text(json.dumps(report, indent=1))
     print(json.dumps({k: v for k, v in report.items() if k != "failed"}), f"failed={len(failed)}")
 
 
+def dedupe_filings(rows, docs):
+    """Filings only: one row per (cik, normalised span), from the company's earliest filing.
+
+    Adds n_repeats (occurrences across the company's passages) and filed_dates (sorted filing date of each
+    occurrence) to the kept row. Postings pass through unchanged. Review item C1, fix 2.
+    """
+    keep, groups = [], {}
+    for r in rows:
+        doc = docs.get(r["doc_id"], {})
+        if doc.get("kind") != "filing":
+            keep.append(r)
+            continue
+        groups.setdefault((doc.get("cik"), norm(r["span"])), []).append((doc.get("filed") or "", r["doc_id"], r))
+    for occ in groups.values():
+        occ.sort(key=lambda x: (x[0], x[1], x[2]["task_id"]))
+        first = dict(occ[0][2])
+        first["cik"] = docs[occ[0][1]].get("cik")
+        first["filed"] = occ[0][0]
+        first["n_repeats"] = len(occ)
+        first["filed_dates"] = [o[0] for o in occ]
+        keep.append(first)
+    n_merged = sum(len(o) - 1 for o in groups.values())
+    return keep, n_merged
+
+
 def agree(a):
-    """Span-level F1 between two runs on the documents both extracted (normalised exact match)."""
+    """Agreement gate between two runs on the documents both extracted (design section 5, review item C3).
+
+    Matching rule (fixed in log.md): one-to-one greedy matching on word-set Jaccard >= 0.5, highest
+    similarity first. Reports P, R, F1 for run A against run B, unmatched spans in both directions,
+    documents where exactly one run returned nothing (counted as misses: their spans are all unmatched),
+    exact-match F1 (diagnostic only) and the median per-document count ratio A/B (gate: [0.8, 1.25]).
+    Uses tasks-raw.jsonl (before per-company dedupe) when present.
+    """
     def spans(name):
+        f = run_dir(name) / "tasks-raw.jsonl"
+        f = f if f.exists() else run_dir(name) / "tasks.jsonl"
         by_doc = {}
-        for line in open(run_dir(name) / "tasks.jsonl"):
+        for line in open(f):
             r = json.loads(line)
-            by_doc.setdefault(r["doc_id"], set()).add(norm(r["span"]))
+            by_doc.setdefault(r["doc_id"], []).append(norm(r["span"]))
         return by_doc
+
+    def words(x):
+        return frozenset(re.findall(r"\w+", x))
+
+    def match(xs, ys):
+        wx, wy = [words(x) for x in xs], [words(y) for y in ys]
+        cand = []
+        for i, p in enumerate(wx):
+            for j, q in enumerate(wy):
+                u = len(p | q)
+                if u and len(p & q) / u >= 0.5:
+                    cand.append((-len(p & q) / u, i, j))
+        cand.sort()
+        ui, uj, n = set(), set(), 0
+        for _, i, j in cand:
+            if i not in ui and j not in uj:
+                ui.add(i); uj.add(j); n += 1
+        return n
+
+    def prf(tp, na, nb):
+        p, r = tp / (na or 1), tp / (nb or 1)
+        return p, r, 2 * p * r / ((p + r) or 1)
+
     sa, sb = spans(a.run_a), spans(a.run_b)
-    tp = fa = fb = 0
-    for doc in sa.keys() & sb.keys():
-        tp += len(sa[doc] & sb[doc])
-        fa += len(sa[doc] - sb[doc])
-        fb += len(sb[doc] - sa[doc])
-    p, r = tp / ((tp + fa) or 1), tp / ((tp + fb) or 1)
-    f1 = 2 * p * r / ((p + r) or 1)
-    print(json.dumps({"docs": len(sa.keys() & sb.keys()), "precision_a_vs_b": round(p, 3),
-                      "recall_a_vs_b": round(r, 3), "span_f1": round(f1, 3)}))
+    def universe(name):
+        """Documents the run was asked to extract and returned a result for (failed requests excluded)."""
+        d = run_dir(name)
+        ids = {doc["id"] for doc in load_docs(json.loads((d / "batches.json").read_text())["input"])}
+        return ids - {f["id"] for f in json.loads((d / "report.json").read_text())["failed"]}
+
+    docs = universe(a.run_a) & universe(a.run_b)
+    tp = exact = na = nb = missed_docs = 0
+    ratios = []
+    for doc in docs:
+        xa, xb = sa.get(doc, []), sb.get(doc, [])
+        if not (xa or xb):
+            continue
+        na += len(xa); nb += len(xb)
+        tp += match(xa, xb)
+        exact += len(set(xa) & set(xb))
+        if bool(xa) != bool(xb):
+            missed_docs += 1
+        if xa and xb:
+            ratios.append(len(xa) / len(xb))
+        else:
+            ratios.append(0.0 if xb else float("inf"))
+    p, r, f1 = prf(tp, na, nb)
+    _, _, f1e = prf(exact, na, nb)
+    ratio = statistics.median(ratios) if ratios else None
+    print(json.dumps({
+        "docs_in_both_runs": len(docs), "docs_with_spans": len(ratios), "docs_one_model_empty": missed_docs,
+        "spans_a": na, "spans_b": nb, "matched": tp,
+        "unmatched_a": na - tp, "unmatched_b": nb - tp,
+        "precision_a_vs_b": round(p, 3), "recall_a_vs_b": round(r, 3), "jaccard_f1": round(f1, 3),
+        "exact_f1_diagnostic": round(f1e, 3),
+        "median_count_ratio_a_over_b": round(ratio, 3) if ratio is not None else None,
+        "count_ratio_gate_0.8_1.25": ratio is not None and 0.8 <= ratio <= 1.25,
+    }))
 
 
 def main():

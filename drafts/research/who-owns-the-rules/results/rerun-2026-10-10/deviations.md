@@ -67,3 +67,13 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    - **Reporting:** seed recall is reported as an upper bound. The filing and posting seeds are more
      specific than real records, and 38 of 60 positives are invented scenarios with no cited source.
      Speech seeds were not compared with real speech records, which did not yet exist.
+
+9. **Filings: consensus extraction after a narrow gate miss.** Filings v3 (prompt v3, merged windows,
+   per-company dedupe) reached Jaccard F1 0.689 between Haiku and Sonnet on the 10% sample (gate 0.7);
+   count ratio 1.00 (gate passed); exact F1 0.386. Rather than loosen the gate or revise the prompt again,
+   Sonnet extracts all 2,216 passages and the filings extraction used downstream is the **consensus set**:
+   spans found by both models (one-to-one Jaccard ≥ 0.5, Sonnet's span text kept). Single-model spans are
+   kept in a separate file, flagged, and excluded from clustering. The 0.689 is reported. A clean Opus
+   check of the consensus set on 25 fresh passages must reach 0.7 precision and recall before use.
+   Vendor filers (SIC 7370–7374, 3570–3579) supply 64% of passages and are analysed separately from
+   adopters.

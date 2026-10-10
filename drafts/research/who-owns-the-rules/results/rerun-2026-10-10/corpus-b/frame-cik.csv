@@ -1,0 +1,551 @@
+employer,type,cik,edgar_name,match_type,n_candidates
+Walmart,fortune500,104169,Walmart Inc.,exact,1
+Amazon,fortune500,1018724,AMAZON COM INC,exact,1
+UnitedHealth Group,fortune500,731766,UNITEDHEALTH GROUP INC,exact,1
+Apple,fortune500,320193,Apple Inc.,exact,1
+CVS Health,fortune500,64803,CVS HEALTH Corp,exact,1
+Berkshire Hathaway,fortune500,1067983,BERKSHIRE HATHAWAY INC,exact,1
+Alphabet,fortune500,1652044,Alphabet Inc.,exact,1
+Exxon Mobil Holdings,fortune500,34088,EXXON MOBIL CORP,exact,1
+McKesson,fortune500,927653,MCKESSON CORP,exact,1
+Cencora,fortune500,1140859,"Cencora, Inc.",exact,1
+JPMorgan Chase,fortune500,19617,JPMORGAN CHASE & CO,prefix,1
+Costco Wholesale,fortune500,909832,COSTCO WHOLESALE CORP /NEW,exact,1
+Cigna Group,fortune500,1739940,Cigna Group,exact,1
+Microsoft,fortune500,789019,MICROSOFT CORP,exact,1
+Cardinal Health,fortune500,721371,CARDINAL HEALTH INC,exact,1
+Chevron,fortune500,93410,CHEVRON CORP,exact,1
+Bank of America,fortune500,70858,BANK OF AMERICA CORP /DE/,exact,1
+General Motors,fortune500,1467858,General Motors Co,exact,1
+Ford Motor,fortune500,37996,FORD MOTOR CO,exact,1
+Elevance Health,fortune500,1156039,"Elevance Health, Inc.",exact,1
+Citigroup,fortune500,831001,CITIGROUP INC,exact,1
+Meta Platforms,fortune500,1326801,"Meta Platforms, Inc.",exact,1
+Centene,fortune500,1071739,CENTENE CORP,exact,1
+Home Depot,fortune500,354950,"HOME DEPOT, INC.",exact,1
+Fannie Mae,fortune500,310522,FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE,override,1
+Walgreens Boots Alliance,fortune500,1618921,"Walgreens Boots Alliance, Inc.",exact,1
+Kroger,fortune500,56873,KROGER CO,exact,1
+Phillips 66,fortune500,1534701,Phillips 66,exact,1
+Marathon Petroleum,fortune500,1510295,Marathon Petroleum Corp,exact,1
+Verizon Communications,fortune500,732712,VERIZON COMMUNICATIONS INC,exact,1
+Nvidia,fortune500,1045810,NVIDIA CORP,exact,1
+Goldman Sachs Group,fortune500,886982,GOLDMAN SACHS GROUP INC,exact,1
+Wells Fargo,fortune500,72971,WELLS FARGO & COMPANY/MN,prefix,67
+Valero Energy,fortune500,1035002,VALERO ENERGY CORP/TX,exact,1
+Comcast,fortune500,1166691,COMCAST CORP,exact,1
+State Farm Insurance,fortune500,,,none,0
+AT&T,fortune500,732717,AT&T INC.,exact,1
+Freddie Mac,fortune500,1026214,FEDERAL HOME LOAN MORTGAGE CORP,override,1
+Humana,fortune500,49071,HUMANA INC,exact,1
+Morgan Stanley,fortune500,895421,MORGAN STANLEY,exact,1
+Target,fortune500,27419,TARGET CORP,exact,2
+StoneX Group,fortune500,913760,StoneX Group Inc.,exact,1
+Tesla,fortune500,1318605,"Tesla, Inc.",exact,1
+Dell Technologies,fortune500,1571996,Dell Technologies Inc.,exact,1
+PepsiCo,fortune500,77476,PEPSICO INC,exact,1
+Walt Disney,fortune500,1744489,Walt Disney Co,exact,1
+UPS,fortune500,1090727,UNITED PARCEL SERVICE INC,override,1
+Johnson & Johnson,fortune500,200406,JOHNSON & JOHNSON,exact,1
+FedEx,fortune500,1048911,FEDEX CORP,exact,1
+Archer Daniels Midland,fortune500,7084,Archer-Daniels-Midland Co,exact,1
+Procter & Gamble,fortune500,80424,PROCTER & GAMBLE Co,exact,1
+Lowe's,fortune500,60667,LOWES COMPANIES INC,prefix,1
+Energy Transfer,fortune500,1276187,Energy Transfer LP,exact,1
+RTX,fortune500,101829,RTX Corp,exact,1
+Albertsons,fortune500,1646972,"Albertsons Companies, Inc.",prefix,1
+Sysco,fortune500,96021,SYSCO CORP,exact,1
+Progressive,fortune500,80661,PROGRESSIVE CORP/OH/,exact,1
+American Express,fortune500,4962,AMERICAN EXPRESS CO,exact,1
+Lockheed Martin,fortune500,936468,LOCKHEED MARTIN CORP,exact,1
+MetLife,fortune500,1099219,METLIFE INC,exact,1
+HCA Healthcare,fortune500,860730,"HCA Healthcare, Inc.",exact,1
+Prudential Financial,fortune500,1137774,PRUDENTIAL FINANCIAL INC,exact,1
+Boeing,fortune500,12927,BOEING CO,exact,1
+Caterpillar,fortune500,18230,CATERPILLAR INC,exact,1
+Merck,fortune500,310158,"Merck & Co., Inc.",prefix,1
+Allstate,fortune500,899051,ALLSTATE CORP,exact,1
+Pfizer,fortune500,78003,PFIZER INC,exact,1
+International Business Machines,fortune500,51143,INTERNATIONAL BUSINESS MACHINES CORP,exact,1
+New York Life Insurance,fortune500,,,none,0
+Delta Air Lines,fortune500,27904,"DELTA AIR LINES, INC.",exact,1
+Publix Super Markets,fortune500,81061,PUBLIX SUPER MARKETS INC,exact,1
+Nationwide,fortune500,,,none,0
+TD Synnex,fortune500,1177394,TD SYNNEX CORP,exact,1
+United Airlines Holdings,fortune500,319687,"UNITED AIRLINES, INC.",exact,2
+ConocoPhillips,fortune500,1163165,CONOCOPHILLIPS,exact,1
+TJX,fortune500,109198,TJX COMPANIES INC /DE/,prefix,1
+AbbVie,fortune500,1551152,AbbVie Inc.,exact,1
+Enterprise Products Partners,fortune500,1061219,ENTERPRISE PRODUCTS PARTNERS L.P.,exact,1
+Charter Communications,fortune500,1091667,"CHARTER COMMUNICATIONS, INC. /MO/",exact,1
+Performance Food Group,fortune500,1618673,Performance Food Group Co,exact,1
+American Airlines Group,fortune500,4515,"AMERICAN AIRLINES, INC.",exact,2
+Capital One Financial,fortune500,927628,CAPITAL ONE FINANCIAL CORP,exact,1
+Cisco Systems,fortune500,858877,"CISCO SYSTEMS, INC.",exact,1
+HP,fortune500,47217,HP INC,exact,1
+Tyson Foods,fortune500,100493,"TYSON FOODS, INC.",exact,1
+Intel,fortune500,50863,INTEL CORP,exact,1
+Oracle,fortune500,1341439,ORACLE CORP,exact,1
+Broadcom,fortune500,1730168,Broadcom Inc.,exact,1
+Deere,fortune500,315189,DEERE & CO,prefix,2
+Nike,fortune500,320187,"NIKE, Inc.",exact,1
+Liberty Mutual Insurance Group,fortune500,,,none,0
+Plains GP Holdings,fortune500,1581990,PLAINS GP HOLDINGS LP,exact,1
+United Services Automobile Assn.,fortune500,,,none,0
+Bristol-Myers Squibb,fortune500,14272,BRISTOL MYERS SQUIBB CO,exact,1
+Ingram Micro Holding,fortune500,1897762,Ingram Micro Holding Corp,exact,1
+General Dynamics,fortune500,40533,GENERAL DYNAMICS CORP,exact,1
+Coca-Cola,fortune500,21344,COCA COLA CO,exact,1
+TIAA,fortune500,,,none,0
+Travelers,fortune500,86312,"TRAVELERS COMPANIES, INC.",prefix,1
+Eli Lilly,fortune500,59478,ELI LILLY & Co,prefix,1
+Uber Technologies,fortune500,1543151,"Uber Technologies, Inc",exact,1
+Massachusetts Mutual Life Insurance,fortune500,,,none,0
+Dow,fortune500,1751788,DOW INC.,exact,1
+Thermo Fisher Scientific,fortune500,97745,THERMO FISHER SCIENTIFIC INC.,exact,1
+U.S. Bancorp,fortune500,36104,US BANCORP \DE\,override,1
+World Kinect,fortune500,789460,WORLD KINECT CORP,exact,1
+Abbott Laboratories,fortune500,1800,ABBOTT LABORATORIES,exact,1
+Best Buy,fortune500,764478,BEST BUY CO INC,exact,1
+Northwestern Mutual,fortune500,,,none,0
+Northrop Grumman,fortune500,1133421,NORTHROP GRUMMAN CORP /DE/,exact,1
+Molina Healthcare,fortune500,1179929,"MOLINA HEALTHCARE, INC.",exact,1
+Dollar General,fortune500,29534,DOLLAR GENERAL CORP,exact,1
+Bank of New York (BNY),fortune500,1390777,Bank of New York Mellon Corp,override,1
+Warner Bros. Discovery,fortune500,1437107,"Warner Bros. Discovery, Inc.",exact,1
+CHS,fortune500,823277,CHS INC,exact,1
+Netflix,fortune500,1065280,NETFLIX INC,exact,1
+Qualcomm,fortune500,804328,QUALCOMM INC/DE,exact,1
+GE Aerospace,fortune500,40545,GENERAL ELECTRIC CO,override,1
+Honeywell Technologies,fortune500,773840,HONEYWELL INTERNATIONAL INC,override,1
+Salesforce,fortune500,1108524,"Salesforce, Inc.",exact,1
+Philip Morris International,fortune500,1413329,Philip Morris International Inc.,exact,1
+US Foods Holding,fortune500,1665918,US Foods Holding Corp.,exact,1
+D.R. Horton,fortune500,882184,HORTON D R INC /DE/,override,1
+Lithia Motors,fortune500,1023128,LITHIA MOTORS INC,exact,1
+Mondelēz International,fortune500,1103982,"Mondelez International, Inc.",exact,1
+Starbucks,fortune500,829224,STARBUCKS CORP,exact,1
+Visa,fortune500,1403161,VISA INC.,exact,1
+CBRE Group,fortune500,1138118,"CBRE GROUP, INC.",exact,1
+Lennar Corporation,fortune500,920760,LENNAR CORP /NEW/,exact,1
+GE Vernova,fortune500,1996810,GE Vernova Inc.,exact,1
+PNC Financial Services Group,fortune500,713676,"PNC FINANCIAL SERVICES GROUP, INC.",exact,1
+Cummins,fortune500,26172,CUMMINS INC,exact,1
+Paccar,fortune500,75362,PACCAR INC,exact,1
+Amgen,fortune500,318154,AMGEN INC,exact,1
+PBF Energy,fortune500,1534504,PBF Energy Inc.,exact,2
+GuideWell Mutual Holding,fortune500,,,none,0
+PayPal Holdings,fortune500,1633917,"PayPal Holdings, Inc.",exact,1
+United Natural Foods,fortune500,1020859,UNITED NATURAL FOODS INC,exact,1
+Dollar Tree,fortune500,935703,"DOLLAR TREE, INC.",exact,1
+Nucor,fortune500,73309,NUCOR CORP,exact,1
+Penske Automotive Group,fortune500,1019849,"PENSKE AUTOMOTIVE GROUP, INC.",exact,1
+Coupang,fortune500,1834584,"Coupang, Inc.",exact,1
+Hewlett Packard Enterprise,fortune500,1645590,Hewlett Packard Enterprise Co,exact,1
+Duke Energy,fortune500,1326160,Duke Energy CORP,exact,1
+KKR,fortune500,1404912,KKR & Co. Inc.,prefix,8
+Ferguson Enterprises,fortune500,2011641,Ferguson Enterprises Inc. /DE/,exact,1
+Paramount Skydance,fortune500,2041610,Paramount Skydance Corp,exact,1
+Jabil,fortune500,898293,JABIL INC,exact,1
+Gilead Sciences,fortune500,882095,"GILEAD SCIENCES, INC.",exact,1
+HF Sinclair,fortune500,1915657,HF Sinclair Corp,exact,1
+CarMax,fortune500,1170010,CARMAX INC,exact,1
+Mastercard,fortune500,1141391,Mastercard Inc,exact,1
+NRG Energy,fortune500,1013871,"NRG ENERGY, INC.",exact,1
+Arrow Electronics,fortune500,7536,"ARROW ELECTRONICS, INC.",exact,1
+Baker Hughes,fortune500,1701605,Baker Hughes Co,exact,2
+Southwest Airlines,fortune500,92380,SOUTHWEST AIRLINES CO,exact,1
+AIG,fortune500,5272,"AMERICAN INTERNATIONAL GROUP, INC.",override,2
+Applied Materials,fortune500,6951,APPLIED MATERIALS INC /DE,exact,1
+Occidental Petroleum,fortune500,797468,OCCIDENTAL PETROLEUM CORP /DE/,exact,1
+AutoNation,fortune500,350698,"AUTONATION, INC.",exact,1
+Southern,fortune500,92122,SOUTHERN CO,exact,1
+Hartford Insurance Group,fortune500,874766,"HARTFORD FINANCIAL SERVICES GROUP, INC.",exact,1
+Apollo Global Management,fortune500,1858681,"Apollo Global Management, Inc.",exact,1
+Charles Schwab,fortune500,316709,SCHWAB CHARLES CORP,override,1
+McDonald's,fortune500,63908,MCDONALDS CORP,exact,1
+Kraft Heinz,fortune500,1637459,Kraft Heinz Co,exact,1
+Advanced Micro Devices,fortune500,2488,ADVANCED MICRO DEVICES INC,exact,1
+Truist Financial,fortune500,92230,TRUIST FINANCIAL CORP,exact,1
+Freeport-McMoRan,fortune500,831259,FREEPORT-MCMORAN INC,exact,1
+Micron Technology,fortune500,723125,MICRON TECHNOLOGY INC,exact,1
+Marriott International,fortune500,1048286,MARRIOTT INTERNATIONAL INC /MD/,exact,1
+Carrier Global,fortune500,1783180,CARRIER GLOBAL Corp,exact,1
+NextEra Energy,fortune500,753308,NEXTERA ENERGY INC,exact,1
+3M,fortune500,66740,3M CO,exact,1
+Marsh & McLennan,fortune500,62709,"MARSH & MCLENNAN COMPANIES, INC.",prefix,1
+PG&E,fortune500,1004980,PG&E Corp,exact,1
+Union Pacific,fortune500,100885,UNION PACIFIC CORP,exact,1
+Synchrony,fortune500,1601712,Synchrony Financial,prefix,4
+Block,fortune500,1512673,"Block, Inc.",exact,1
+Danaher,fortune500,313616,DANAHER CORP /DE/,exact,1
+Avnet,fortune500,8858,AVNET INC,exact,1
+Booking Holdings,fortune500,1075531,Booking Holdings Inc.,exact,1
+EOG Resources,fortune500,821189,EOG RESOURCES INC,exact,1
+Quanta Services,fortune500,1050915,"QUANTA SERVICES, INC.",exact,1
+Discover,fortune500,1393612,Discover Financial Services,override,1
+Constellation Energy,fortune500,1868275,Constellation Energy Corp,exact,1
+Genuine Parts,fortune500,40987,GENUINE PARTS CO,exact,1
+Jones Lang LaSalle,fortune500,1037976,JONES LANG LASALLE INC,exact,1
+Lear,fortune500,842162,LEAR CORP,exact,1
+Live Nation Entertainment,fortune500,1335258,"Live Nation Entertainment, Inc.",exact,1
+Sherwin-Williams,fortune500,89800,SHERWIN WILLIAMS CO,exact,1
+Exelon,fortune500,1109357,EXELON CORP,exact,1
+Macy's,fortune500,794367,"Macy's, Inc.",exact,1
+Halliburton,fortune500,45012,HALLIBURTON CO,exact,1
+Stryker,fortune500,310764,STRYKER CORP,exact,1
+Reinsurance Group of America,fortune500,898174,REINSURANCE GROUP OF AMERICA INC,exact,1
+Waste Management,fortune500,823768,WASTE MANAGEMENT INC,exact,1
+State Street,fortune500,93751,STATE STREET CORP,exact,1
+WESCO International,fortune500,929008,WESCO INTERNATIONAL INC,exact,1
+Oneok,fortune500,1039684,ONEOK INC /NEW/,exact,1
+Adobe,fortune500,796343,ADOBE INC.,exact,1
+American Family Insurance Group,fortune500,,,none,0
+L3Harris Technologies,fortune500,202058,"L3HARRIS TECHNOLOGIES, INC. /DE/",exact,1
+Ross Stores,fortune500,745732,"ROSS STORES, INC.",exact,1
+CDW,fortune500,1402057,CDW Corp,exact,1
+Tenet Healthcare,fortune500,70318,TENET HEALTHCARE CORP,exact,1
+BJ's Wholesale Club,fortune500,1531152,"BJ's Wholesale Club Holdings, Inc.",exact,1
+Fiserv,fortune500,798354,FISERV INC,exact,1
+Altria Group,fortune500,764180,"ALTRIA GROUP, INC.",exact,1
+BlackRock,fortune500,1364742,BlackRock Inc.,exact,2
+Becton Dickinson,fortune500,10795,BECTON DICKINSON & CO,prefix,1
+Colgate-Palmolive,fortune500,21665,COLGATE PALMOLIVE CO,exact,1
+Kimberly-Clark,fortune500,55785,KIMBERLY CLARK CORP,exact,1
+Group 1 Automotive,fortune500,1031203,GROUP 1 AUTOMOTIVE INC,exact,1
+Parker-Hannifin,fortune500,76334,PARKER HANNIFIN CORP,exact,1
+General Mills,fortune500,40704,GENERAL MILLS INC,exact,1
+Cognizant Technology Solutions,fortune500,1058290,COGNIZANT TECHNOLOGY SOLUTIONS CORP,exact,1
+American Electric Power,fortune500,4904,AMERICAN ELECTRIC POWER CO INC,exact,1
+GE HealthCare,fortune500,1932393,GE HealthCare Technologies Inc.,prefix,1
+Automatic Data Processing,fortune500,8670,AUTOMATIC DATA PROCESSING INC,exact,1
+Cleveland-Cliffs,fortune500,764065,CLEVELAND-CLIFFS INC.,exact,1
+Aflac,fortune500,4977,AFLAC INC,exact,1
+Goodyear Tire & Rubber,fortune500,42582,GOODYEAR TIRE & RUBBER CO /OH/,exact,1
+Corebridge Financial,fortune500,1889539,"Corebridge Financial, Inc.",exact,1
+Newmont,fortune500,1164727,NEWMONT Corp /DE/,exact,1
+International Paper,fortune500,51434,INTERNATIONAL PAPER CO /NEW/,exact,1
+AutoZone,fortune500,866787,AUTOZONE INC,exact,1
+Lincoln National,fortune500,59558,LINCOLN NATIONAL CORP,exact,1
+PulteGroup,fortune500,822416,PULTEGROUP INC/MI/,exact,1
+Ameriprise Financial,fortune500,820027,AMERIPRISE FINANCIAL INC,exact,1
+Murphy USA,fortune500,1573516,Murphy USA Inc.,exact,1
+ManpowerGroup,fortune500,871763,ManpowerGroup Inc.,exact,1
+C.H. Robinson Worldwide,fortune500,1043277,"C. H. ROBINSON WORLDWIDE, INC.",override,1
+PPG Industries,fortune500,79879,PPG INDUSTRIES INC,exact,1
+Edison International,fortune500,827052,EDISON INTERNATIONAL,exact,1
+Steel Dynamics,fortune500,1022671,STEEL DYNAMICS INC,exact,1
+Loews,fortune500,60086,LOEWS CORP,exact,1
+Emerson Electric,fortune500,32604,EMERSON ELECTRIC CO,exact,1
+Aramark,fortune500,1584509,Aramark,exact,1
+MGM Resorts International,fortune500,789570,MGM Resorts International,exact,1
+Vistra,fortune500,1692819,Vistra Corp.,exact,1
+Asbury Automotive Group,fortune500,1144980,ASBURY AUTOMOTIVE GROUP INC,exact,1
+W.W. Grainger,fortune500,277135,"W.W. GRAINGER, INC.",exact,1
+Global Partners,fortune500,1323468,GLOBAL PARTNERS LP,exact,1
+Jacobs Solutions,fortune500,52988,JACOBS SOLUTIONS INC.,exact,1
+Corteva,fortune500,1755672,"Corteva, Inc.",exact,1
+Peter Kiewit Sons',fortune500,,,none,0
+Boston Scientific,fortune500,885725,BOSTON SCIENTIFIC CORP,exact,1
+O'Reilly Automotive,fortune500,898173,O REILLY AUTOMOTIVE INC,override,1
+Leidos Holdings,fortune500,1336920,"Leidos Holdings, Inc.",exact,1
+Markel Group,fortune500,1096343,MARKEL GROUP INC.,exact,1
+Whirlpool,fortune500,106640,WHIRLPOOL CORP /DE/,exact,1
+Guardian Life Ins. Co. of America,fortune500,,,none,0
+Builders FirstSource,fortune500,1316835,"Builders FirstSource, Inc.",exact,1
+Ally Financial,fortune500,40729,Ally Financial Inc.,exact,1
+Targa Resources,fortune500,1389170,Targa Resources Corp.,exact,1
+Fluor,fortune500,1124198,FLUOR CORP,exact,1
+Intuit,fortune500,896878,INTUIT INC.,exact,1
+AECOM,fortune500,868857,AECOM,exact,1
+Jones Financial (Edward Jones),fortune500,815917,JONES FINANCIAL COMPANIES LLLP,override,1
+Kohl's,fortune500,885639,KOHLS Corp,exact,1
+Land O'Lakes,fortune500,,,none,0
+Principal Financial,fortune500,1126328,PRINCIPAL FINANCIAL GROUP INC,exact,1
+Dominion Energy,fortune500,715957,"DOMINION ENERGY, INC",exact,1
+Kyndryl Holdings,fortune500,1867072,"Kyndryl Holdings, Inc.",exact,1
+Republic Services,fortune500,1060391,"REPUBLIC SERVICES, INC.",exact,1
+Devon Energy,fortune500,1090012,DEVON ENERGY CORP/DE,exact,1
+Illinois Tool Works,fortune500,49826,ILLINOIS TOOL WORKS INC,exact,1
+Northern Trust,fortune500,73124,NORTHERN TRUST CORP,exact,1
+Auto-Owners Insurance,fortune500,,,none,0
+Universal Health Services,fortune500,352915,UNIVERSAL HEALTH SERVICES INC,exact,1
+Pacific Life,fortune500,,,none,0
+EchoStar,fortune500,1415404,EchoStar CORP,exact,1
+Ecolab,fortune500,31462,ECOLAB INC.,exact,1
+Cheniere Energy,fortune500,3570,"Cheniere Energy, Inc.",exact,1
+Omnicom Group,fortune500,29989,OMNICOM GROUP INC.,exact,1
+Texas Instruments,fortune500,97476,TEXAS INSTRUMENTS INC,exact,1
+United States Steel,fortune500,1163302,UNITED STATES STEEL CORP,exact,1
+Estée Lauder,fortune500,1001250,ESTEE LAUDER COMPANIES INC,prefix,1
+Farmers Insurance Exchange,fortune500,,,none,0
+Kenvue,fortune500,1944048,Kenvue Inc.,exact,1
+IQVIA Holdings,fortune500,1478242,IQVIA HOLDINGS INC.,exact,1
+Stanley Black & Decker,fortune500,93556,"STANLEY BLACK & DECKER, INC.",exact,1
+Keurig Dr Pepper,fortune500,1418135,Keurig Dr Pepper Inc.,exact,1
+United Rentals,fortune500,1067701,"UNITED RENTALS, INC.",exact,1
+Consolidated Edison,fortune500,1047862,CONSOLIDATED EDISON INC,exact,1
+Amphenol,fortune500,820313,AMPHENOL CORP /DE/,exact,1
+Baxter International,fortune500,10456,BAXTER INTERNATIONAL INC,exact,1
+Kinder Morgan,fortune500,1506307,"KINDER MORGAN, INC.",exact,1
+Gap,fortune500,39911,GAP INC,exact,1
+Nordstrom,fortune500,72333,NORDSTROM INC,exact,1
+Super Micro Computer,fortune500,1375365,"Super Micro Computer, Inc.",exact,1
+First Citizens BancShares,fortune500,798941,FIRST CITIZENS BANCSHARES INC /DE/,exact,1
+Raymond James Financial,fortune500,720005,RAYMOND JAMES FINANCIAL INC,exact,1
+Lam Research,fortune500,707549,LAM RESEARCH CORP,exact,1
+Tractor Supply,fortune500,916365,TRACTOR SUPPLY CO /DE/,exact,1
+Casey's General Stores,fortune500,726958,CASEYS GENERAL STORES INC,exact,1
+Viatris,fortune500,1792044,Viatris Inc,exact,1
+Mutual of Omaha,fortune500,,,none,0
+EMCOR Group,fortune500,105634,"EMCOR Group, Inc.",exact,1
+CSX,fortune500,277948,CSX CORP,exact,1
+LKQ,fortune500,1065696,LKQ CORP,exact,1
+Otis Worldwide,fortune500,1781335,Otis Worldwide Corp,exact,1
+Sonic Automotive,fortune500,1043509,SONIC AUTOMOTIVE INC,exact,1
+S&P Global,fortune500,64040,S&P Global Inc.,exact,1
+Regeneron Pharmaceuticals,fortune500,872589,"REGENERON PHARMACEUTICALS, INC.",exact,1
+BorgWarner,fortune500,908255,BORGWARNER INC,exact,1
+Fox,fortune500,1754301,Fox Corp,exact,1
+Reliance,fortune500,861884,"RELIANCE, INC.",exact,1
+Western & Southern Financial Group,fortune500,,,none,0
+Textron,fortune500,217346,TEXTRON INC,exact,1
+Expedia Group,fortune500,1324424,"Expedia Group, Inc.",exact,1
+Fidelity National Financial,fortune500,1331875,"Fidelity National Financial, Inc.",exact,1
+Carvana,fortune500,1690820,CARVANA CO.,exact,1
+DXC Technology,fortune500,1688568,DXC Technology Co,exact,1
+W.R. Berkley,fortune500,11544,BERKLEY W R CORP,override,1
+M&T Bank,fortune500,36270,M&T BANK CORP,exact,1
+Dick's Sporting Goods,fortune500,1089063,"DICK'S SPORTING GOODS, INC.",exact,1
+Xcel Energy,fortune500,72903,XCEL ENERGY INC,exact,1
+Fifth Third Bancorp,fortune500,35527,FIFTH THIRD BANCORP,exact,1
+Blackstone,fortune500,1393818,Blackstone Inc.,exact,1
+Sempra,fortune500,1032208,SEMPRA,exact,1
+Erie Insurance Group,fortune500,,,none,0
+Corning,fortune500,24741,CORNING INC /NY,exact,1
+Lumen Technologies,fortune500,18926,"Lumen Technologies, Inc.",exact,1
+FirstEnergy,fortune500,1031296,FIRSTENERGY CORP,exact,1
+Hess,fortune500,4447,HESS CORP,exact,1
+Labcorp Holdings,fortune500,920148,LABORATORY CORP OF AMERICA HOLDINGS,exact,1
+Western Digital,fortune500,106040,WESTERN DIGITAL CORP,exact,1
+Unum Group,fortune500,5513,Unum Group,exact,1
+DaVita,fortune500,927066,DAVITA INC.,exact,1
+Kellanova,fortune500,55067,KELLOGG CO,exact,1
+Henry Schein,fortune500,1000228,HENRY SCHEIN INC,exact,1
+Ryder System,fortune500,85961,RYDER SYSTEM INC,exact,1
+Community Health Systems,fortune500,1108109,COMMUNITY HEALTH SYSTEMS INC,exact,1
+Delek US Holdings,fortune500,1694426,"Delek US Holdings, Inc.",exact,1
+DTE Energy,fortune500,936340,DTE ENERGY CO,exact,1
+Equitable Holdings,fortune500,1333986,"Equitable Holdings, Inc.",exact,1
+DuPont,fortune500,1666700,"DuPont de Nemours, Inc.",override,1
+LPL Financial Holdings,fortune500,1397911,LPL Financial Holdings Inc.,exact,1
+Citizens Financial Group,fortune500,759944,CITIZENS FINANCIAL GROUP INC/RI,exact,1
+MasTec,fortune500,15615,MASTEC INC,exact,1
+AES,fortune500,874761,AES CORP,exact,1
+Berry Global Group,fortune500,1378992,"BERRY GLOBAL GROUP, INC.",exact,1
+Westlake,fortune500,1262823,WESTLAKE CORP,exact,1
+Norfolk Southern,fortune500,702165,NORFOLK SOUTHERN CORP,exact,1
+Air Products & Chemicals,fortune500,2969,"Air Products & Chemicals, Inc.",exact,1
+J.B. Hunt Transport Services,fortune500,728535,HUNT J B TRANSPORT SERVICES INC,override,1
+Ball,fortune500,9389,BALL Corp,exact,1
+Conagra Brands,fortune500,23217,CONAGRA BRANDS INC.,exact,1
+Huntington Bancshares,fortune500,49196,HUNTINGTON BANCSHARES INC /MD/,exact,1
+Hormel Foods,fortune500,48465,HORMEL FOODS CORP /DE/,exact,1
+Eversource Energy,fortune500,72741,EVERSOURCE ENERGY,exact,1
+Alcoa,fortune500,1675149,Alcoa Corp,exact,1
+Entergy,fortune500,65984,ENTERGY CORP /DE/,exact,1
+Assurant,fortune500,1267238,"ASSURANT, INC.",exact,1
+Chewy,fortune500,1766502,"Chewy, Inc.",exact,1
+Wayfair,fortune500,1616707,Wayfair Inc.,exact,1
+Crown Holdings,fortune500,1219601,"CROWN HOLDINGS, INC.",exact,1
+Avis Budget Group,fortune500,723612,"AVIS BUDGET GROUP, INC.",exact,1
+Intercontinental Exchange,fortune500,1571949,"Intercontinental Exchange, Inc.",exact,1
+Alaska Air Group,fortune500,766421,"ALASKA AIR GROUP, INC.",exact,1
+GXO Logistics,fortune500,1852244,"GXO Logistics, Inc.",exact,1
+AGCO,fortune500,880266,AGCO CORP /DE,exact,1
+Graybar Electric,fortune500,205402,GRAYBAR ELECTRIC CO INC,exact,1
+Molson Coors Beverage,fortune500,24545,MOLSON COORS BEVERAGE CO,exact,1
+Arthur J. Gallagher,fortune500,354190,Arthur J. Gallagher & Co.,prefix,1
+Huntington Ingalls Industries,fortune500,1501585,"HUNTINGTON INGALLS INDUSTRIES, INC.",exact,1
+International Flavors & Fragrances,fortune500,51253,INTERNATIONAL FLAVORS & FRAGRANCES INC,exact,1
+Darden Restaurants,fortune500,940944,DARDEN RESTAURANTS INC,exact,1
+Cincinnati Financial,fortune500,20286,CINCINNATI FINANCIAL CORP,exact,1
+Chipotle Mexican Grill,fortune500,1058090,CHIPOTLE MEXICAN GRILL INC,exact,1
+Yum China Holdings,fortune500,1673358,"Yum China Holdings, Inc.",exact,1
+Las Vegas Sands,fortune500,1300514,LAS VEGAS SANDS CORP,exact,1
+Ulta Beauty,fortune500,1403568,"Ulta Beauty, Inc.",exact,1
+Caesars Entertainment,fortune500,1590895,"Caesars Entertainment, Inc.",exact,1
+BrightSpring Health Services,fortune500,1865782,"BrightSpring Health Services, Inc.",exact,1
+Andersons,fortune500,821026,"Andersons, Inc.",exact,1
+Hershey,fortune500,47111,HERSHEY CO,exact,1
+Hilton Worldwide Holdings,fortune500,1585689,Hilton Worldwide Holdings Inc.,exact,1
+Mosaic,fortune500,1285785,MOSAIC CO,exact,1
+Airbnb,fortune500,1559720,"Airbnb, Inc.",exact,1
+Diamondback Energy,fortune500,1539838,"Diamondback Energy, Inc.",exact,1
+American Tower,fortune500,1053507,AMERICAN TOWER CORP /MA/,exact,1
+Vertex Pharmaceuticals,fortune500,875320,VERTEX PHARMACEUTICALS INC / MA,prefix,1
+ServiceNow,fortune500,1373715,"ServiceNow, Inc.",exact,1
+Owens Corning,fortune500,1370946,Owens Corning,exact,1
+Thrivent Financial,fortune500,,,none,0
+Advance Auto Parts,fortune500,1158449,ADVANCE AUTO PARTS INC,exact,1
+Toll Brothers,fortune500,794170,"Toll Brothers, Inc.",exact,1
+Mohawk Industries,fortune500,851968,MOHAWK INDUSTRIES INC,exact,1
+Motorola Solutions,fortune500,68505,"Motorola Solutions, Inc.",exact,1
+Oshkosh,fortune500,775158,OSHKOSH CORP,exact,1
+DoorDash,fortune500,1792789,"DoorDash, Inc.",exact,1
+Accendra Health,fortune500,75252,OWENS & MINOR INC/VA/,exact,1
+NVR,fortune500,906163,NVR INC,exact,1
+Interpublic Group,fortune500,51644,"INTERPUBLIC GROUP OF COMPANIES, INC.",prefix,1
+Booz Allen Hamilton Holding,fortune500,1443646,Booz Allen Hamilton Holding Corp,exact,1
+Burlington Stores,fortune500,1579298,"Burlington Stores, Inc.",exact,1
+Expeditors Intl. of Washington,fortune500,746515,EXPEDITORS INTERNATIONAL OF WASHINGTON INC,override,1
+Lululemon athletica,fortune500,1397187,lululemon athletica inc.,exact,1
+Fidelity National Information (FIS),fortune500,1136893,"Fidelity National Information Services, Inc.",override,1
+Jefferies Financial Group,fortune500,96223,Jefferies Financial Group Inc.,exact,1
+Williams,fortune500,107263,"WILLIAMS COMPANIES, INC.",override,1
+VF,fortune500,103379,V F CORP,override,1
+FM,fortune500,,,none,0
+Autoliv,fortune500,1034670,AUTOLIV INC,exact,1
+Westinghouse Air Brake,fortune500,943452,WESTINGHOUSE AIR BRAKE TECHNOLOGIES CORP,prefix,1
+Public Service Enterprise Group,fortune500,788784,PUBLIC SERVICE ENTERPRISE GROUP INC,exact,1
+Dana,fortune500,26780,DANA INC,exact,1
+Ebay,fortune500,1065088,EBAY INC,exact,1
+Celanese,fortune500,1306830,Celanese Corp,exact,1
+Global Payments,fortune500,1123360,GLOBAL PAYMENTS INC,exact,1
+News Corp.,fortune500,1564708,NEWS CORP,exact,1
+Thor Industries,fortune500,730263,THOR INDUSTRIES INC,exact,1
+QVC Group,fortune500,1254699,QVC INC,exact,2
+Icahn Enterprises,fortune500,813762,ICAHN ENTERPRISES L.P.,exact,1
+Constellation Brands,fortune500,16918,"CONSTELLATION BRANDS, INC.",exact,1
+Quest Diagnostics,fortune500,1022079,QUEST DIAGNOSTICS INC,exact,1
+KLA,fortune500,319201,KLA CORP,exact,1
+QXO Building Products,fortune500,,,none,0
+APA,fortune500,1841666,APA Corp,exact,1
+Gold.com,fortune500,1591588,"A-Mark Precious Metals, Inc.",exact,1
+Biogen,fortune500,875045,BIOGEN INC.,exact,1
+Campbell's,fortune500,16732,CAMPBELL SOUP CO,exact,1
+Concentrix,fortune500,1803599,Concentrix Corp,exact,1
+Cintas,fortune500,723254,CINTAS CORP,exact,1
+SpartanNash,fortune500,877422,SpartanNash Co,exact,1
+Ace Hardware,fortune500,,,none,0
+Analog Devices,fortune500,6281,ANALOG DEVICES INC,exact,1
+Eastman Chemical,fortune500,915389,EASTMAN CHEMICAL CO,exact,1
+Interactive Brokers Group,fortune500,1381197,"Interactive Brokers Group, Inc.",exact,1
+Regions Financial,fortune500,1281761,REGIONS FINANCIAL CORP,exact,1
+JetBlue Airways,fortune500,1158463,JETBLUE AIRWAYS CORP,exact,1
+Zoetis,fortune500,1555280,Zoetis Inc.,exact,1
+KeyCorp,fortune500,91576,KEYCORP /NEW/,exact,1
+Oscar Health,fortune500,1568651,"Oscar Health, Inc.",exact,1
+Ovintiv,fortune500,1792580,Ovintiv Inc.,exact,1
+Seaboard,fortune500,88121,SEABOARD CORP /DE/,exact,1
+Hertz Global Holdings,fortune500,1657853,"HERTZ GLOBAL HOLDINGS, INC",exact,1
+Skechers U.S.A.,fortune500,1065837,SKECHERS USA INC,exact,1
+Optimum Communications,fortune500,1702780,"Altice USA, Inc.",exact,1
+NOV,fortune500,1021860,NOV Inc.,exact,1
+Graphic Packaging Holding,fortune500,1408075,GRAPHIC PACKAGING HOLDING CO,exact,1
+Avery Dennison,fortune500,8818,Avery Dennison Corp,exact,1
+Equinix,fortune500,1101239,EQUINIX INC,exact,1
+Insight Enterprises,fortune500,932696,INSIGHT ENTERPRISES INC,exact,1
+Sirius XM Holdings,fortune500,908937,SIRIUS XM HOLDINGS INC.,exact,1
+PVH,fortune500,78239,PVH CORP. /DE/,exact,1
+CenterPoint Energy,fortune500,1130310,CENTERPOINT ENERGY INC,exact,1
+WEC Energy Group,fortune500,783325,"WEC ENERGY GROUP, INC.",exact,1
+Xylem,fortune500,1524472,Xylem Inc.,exact,1
+Franklin Templeton,fortune500,38777,FRANKLIN RESOURCES INC,override,1
+PPL,fortune500,922224,PPL Corp,exact,1
+Workday,fortune500,1327811,"Workday, Inc.",exact,1
+Dover,fortune500,29905,DOVER Corp,exact,1
+Packaging Corp. of America,fortune500,75677,PACKAGING CORP OF AMERICA,exact,1
+ABM Industries,fortune500,771497,ABM INDUSTRIES INC /DE/,exact,1
+Intuitive Surgical,fortune500,1035267,INTUITIVE SURGICAL INC,exact,1
+American Financial Group,fortune500,1042046,AMERICAN FINANCIAL GROUP INC,exact,1
+Rockwell Automation,fortune500,1024478,"ROCKWELL AUTOMATION, INC",exact,1
+Solventum,fortune500,1964738,Solventum Corp,exact,1
+Old Republic International,fortune500,74260,OLD REPUBLIC INTERNATIONAL CORP,exact,1
+Securian Financial Group,fortune500,,,none,0
+Prologis,fortune500,1045609,"Prologis, Inc.",exact,2
+J.M. Smucker,fortune500,,,none,0
+Taylor Morrison Home,fortune500,1562476,Taylor Morrison Home Corp,exact,1
+XPO,fortune500,1166003,"XPO, Inc.",exact,1
+Voya Financial,fortune500,1535929,"Voya Financial, Inc.",exact,1
+Palo Alto Networks,fortune500,1327567,Palo Alto Networks Inc,exact,1
+Vertiv Holdings,fortune500,1674101,Vertiv Holdings Co,exact,1
+Welltower,fortune500,766704,WELLTOWER INC.,exact,1
+Foot Locker,fortune500,850209,"FOOT LOCKER, INC.",exact,1
+Par Pacific Holdings,fortune500,821483,"PAR PACIFIC HOLDINGS, INC.",exact,1
+TransDigm Group,fortune500,1260221,TransDigm Group INC,exact,1
+Commercial Metals,fortune500,22444,COMMERCIAL METALS Co,exact,1
+Post Holdings,fortune500,1530950,"Post Holdings, Inc.",exact,1
+Masco,fortune500,62996,MASCO CORP /DE/,exact,1
+Rush Enterprises,fortune500,1012019,RUSH ENTERPRISES INC \TX\,prefix,1
+KBR,fortune500,1357615,"KBR, INC.",exact,1
+Sprouts Farmers Market,fortune500,1575515,"Sprouts Farmers Market, Inc.",exact,1
+Williams-Sonoma,fortune500,719955,WILLIAMS SONOMA INC,exact,1
+Zimmer Biomet Holdings,fortune500,1136869,"ZIMMER BIOMET HOLDINGS, INC.",exact,1
+CACI International,fortune500,16058,CACI INTERNATIONAL INC /DE/,exact,1
+Microchip Technology,fortune500,827054,MICROCHIP TECHNOLOGY INC,exact,1
+Watsco,fortune500,105016,WATSCO INC,exact,1
+Newell Brands,fortune500,814453,NEWELL BRANDS INC.,exact,1
+ARKO,fortune500,1823794,ARKO Corp.,exact,1
+Sanmina,fortune500,897723,SANMINA CORP,exact,1
+Electronic Arts,fortune500,712515,ELECTRONIC ARTS INC.,exact,1
+Yum Brands,fortune500,1041061,YUM BRANDS INC,exact,1
+Fastenal,fortune500,815556,FASTENAL CO,exact,1
+CMS Energy,fortune500,811156,CMS ENERGY CORP,exact,1
+Monster Beverage,fortune500,865752,Monster Beverage Corp,exact,1
+Endeavor Group Holdings,fortune500,1766363,"Endeavor Group Holdings, Inc.",exact,1
+Science Applications International,fortune500,1571123,Science Applications International Corp,exact,1
+Core & Main,fortune500,1856525,"Core & Main, Inc.",exact,1
+Howmet Aerospace,fortune500,4281,Howmet Aerospace Inc.,exact,1
+Ingredion,fortune500,1046257,Ingredion Inc,exact,1
+Vulcan Materials,fortune500,1396009,Vulcan Materials CO,exact,1
+OpenAI,venture-backed-software,,,none,0
+Anthropic,venture-backed-software,,,none,0
+Stripe,venture-backed-software,,,none,0
+Databricks,venture-backed-software,,,none,0
+Canva,venture-backed-software,,,none,0
+Ramp,venture-backed-software,,,none,0
+Navan,venture-backed-software,1639723,"Navan, Inc.",exact,1
+Anysphere,venture-backed-software,,,none,0
+Deel,venture-backed-software,,,none,0
+Notion,venture-backed-software,,,none,0
+Grammarly,venture-backed-software,,,none,0
+Celonis,venture-backed-software,,,none,0
+Grafana Labs,venture-backed-software,,,none,0
+Netskope,venture-backed-software,2063196,Netskope Inc,exact,1
+Gusto,venture-backed-software,,,none,0
+Rippling,venture-backed-software,,,none,0
+Tanium,venture-backed-software,,,none,0
+Miro,venture-backed-software,,,none,0
+Abnormal AI,venture-backed-software,,,none,0
+Attentive,venture-backed-software,,,none,0
+Cohesity,venture-backed-software,,,none,0
+Arctic Wolf,venture-backed-software,,,none,0
+Flock Safety,venture-backed-software,,,none,0
+VAST Data,venture-backed-software,,,none,0
+AlphaSense,venture-backed-software,,,none,0
+Perplexity AI,venture-backed-software,,,none,0
+Checkr,venture-backed-software,,,none,0
+OneTrust,venture-backed-software,,,none,0
+Plaid,venture-backed-software,,,none,0
+Talkdesk,venture-backed-software,,,none,0
+Carta,venture-backed-software,,,none,0
+Postman,venture-backed-software,,,none,0
+Zoho,venture-backed-software,,,none,0
+Airtable,venture-backed-software,,,none,0
+Dataiku,venture-backed-software,,,none,0
+Fivetran,venture-backed-software,,,none,0
+Cribl,venture-backed-software,,,none,0
+Dialpad,venture-backed-software,,,none,0
+1Password,venture-backed-software,,,none,0
+Checkout.com,venture-backed-software,,,none,0
+Automation Anywhere,venture-backed-software,,,none,0
+Motive,venture-backed-software,,,none,0
+Vercel,venture-backed-software,,,none,0
+Glean,venture-backed-software,,,none,0
+Airwallex,venture-backed-software,,,none,0
+Clio,venture-backed-software,,,none,0
+NinjaOne,venture-backed-software,,,none,0
+Zapier,venture-backed-software,,,none,0
+Lambda,venture-backed-software,,,none,0
+Brex,venture-backed-software,,,none,0
