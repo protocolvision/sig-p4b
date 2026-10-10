@@ -48,7 +48,11 @@ From the phase 2 verification files:
 - Loop analysis: 122 of 127 claims confirmed; the analysis script reproduces round one's numbers exactly.
   Kappa recomputes at 0.95.
 - Loop red team: 61 of 70 confirmed; 9 small corrections.
-- Industry findings, plus a random 150 across all files: pending (error rate with interval).
+- Industry findings and red team: 38 of 70 confirmed, 19 corrected, 10 not found, 3 unverifiable. The
+  weakest part of round one: trading-rule bindingness overstated (guidance shown as rules); robustness
+  mis-stated (trading in fact beats the grid in about 91% of weightings); the Citi role misread. The analogue
+  conclusion (trading nearest) survives, with weaker 'binding rule' support.
+- Random 150 across all files: pending (error rate with interval).
 - Then the comparison: replicated, revised, round one only.
 
 ## DevOps question (one honest paragraph, not a headline)
