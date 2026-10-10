@@ -80,7 +80,7 @@
         "R6205",
         "R7862"
       ],
-      "bundling_evidence": "Same object (inbound service conversations) and same split of performers across many docs: agents resolve the routine volume (R3527, R7722, R6205, R2388, R2520-type, R1065, R9631), humans take transfers and sensitive topics (R6765, R3869, R4669) and repair AI output (R9946, R7862, R9196). D598 ties the bundle to a rule set the human must know (recognising invoked federal rights, R8227; access to a human, R4669). D338 shows the knowledge moving from experienced agents into the model (R5827).",
+      "bundling_evidence": "Same object (inbound service conversations) and same split of performers across many docs: agents resolve the routine volume (R3527, R7722, R6205, R2388, R1065, R9631), humans take transfers and sensitive topics (R6765, R3869, R4669) and repair AI output (R9946, R7862, R9196). D598 ties the bundle to a rule set the human must know (recognising invoked federal rights, R8227; access to a human, R4669). D338 shows the knowledge moving from experienced agents into the model (R5827).",
       "roles": [
         {
           "role": "Escalation-tier service representative (handles what the agent transfers, plus rights and sensitive cases)",
@@ -225,13 +225,13 @@
         "R2641",
         "R7721"
       ],
-      "bundling_evidence": "Same decision (whether to merge or run a change) across engineering docs: review every agent change (R4431, R5137, R5416), separation between the requester and the approver (R3469), approving workflow runs on agent PRs (R5427), automatic AI review on protected branches (R6017), peer review for production access (R4556), postmortem of an agent incident (R8231). Same performer delegates work (R9845, R5050, R2641) while bulk migrations and upgrades are automated (R7252, R4413, R2464, R4820, R1434). Shared knowledge: the codebase and when the agent needs correction (R2641).",
+      "bundling_evidence": "Same decision (whether to merge or run a change) across engineering docs: review every agent change (R4431, R5137, R5416), separation between the requester and the approver (R3469), approving workflow runs on agent PRs (R5427), automatic AI review on protected branches (R6017), peer review for production access (R4556), postmortem of an agent incident (R8231). Same performer delegates work (R9845, R5050, R2641) while bulk migrations and upgrades are automated (R7252, R4413, R2464, R1434). Shared knowledge: the codebase and when the agent needs correction (R2641).",
       "roles": [
         {
           "role": "Software engineer as reviewer and delegator of agent work",
           "exists_today": true,
           "existing_title": "Software engineer (senior)",
-          "seniority_at_first_hire": "Senior; junior demand falls (R6654, R7721 senior growing)",
+          "seniority_at_first_hire": "Senior; senior demand grows (R7721); junior hiring falls (R6654, see C14)",
           "lasting_or_transitional": "Lasting, absorbed",
           "reason": "Review is growing (R4431, R5137) and stays with engineers who hold merge rights; no new title appears in the records."
         },
@@ -390,7 +390,7 @@
         "R1324",
         "R4845"
       ],
-      "bundling_evidence": "Same function, object and decision across finance docs: agents match and classify (R1762, R2771, R1324, R6952, R4845, R9830-type), accountants approve in bulk and handle exceptions (R8174), override errors (R2515), and finance experts judge flagged terms (R1896 ASC 606). Close automation is pushed by managers (R9248). Shrinking task lists (R3499, R1960, R9142) and growing advisory (R2394). External auditors adapt to technology-assisted evidence (R8511, R7514, R8187). Shared knowledge: tolerance rules, accounting standards, IT controls.",
+      "bundling_evidence": "Same function, object and decision across finance docs: agents match and classify (R1762, R2771, R1324, R6952, R4845), accountants approve in bulk and handle exceptions (R8174), override errors (R2515), and finance experts judge flagged terms (R1896 ASC 606). Close automation is pushed by managers (R9248). Shrinking task lists (R3499, R1960, R9142) and growing advisory (R2394). External auditors adapt to technology-assisted evidence (R8511, R7514, R8187). Shared knowledge: tolerance rules, accounting standards, IT controls.",
       "roles": [
         {
           "role": "Accountant as exception handler and reviewer of agent output",
@@ -600,7 +600,7 @@
           "existing_title": "Existing occupations",
           "seniority_at_first_hire": "Any",
           "lasting_or_transitional": "Absorbed",
-          "reason": "R2263-type evidence and R3724 show these skills become part of existing jobs rather than a title."
+          "reason": "R3724 (and R2263 in C14) show these skills become part of existing jobs rather than a title."
         }
       ],
       "confidence": "medium"
