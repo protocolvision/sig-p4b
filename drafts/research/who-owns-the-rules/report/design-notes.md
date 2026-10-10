@@ -78,3 +78,16 @@ the lead findings. Steps:
 - cluster code families;
 - seed outcomes.
 Use real data only. Respect reduced motion (show the final state).
+
+## r3: protocolvision.org brand (2026-10-10)
+
+`template-v2.html` is restyled to the brand; the previous version is `template-v2-r2.html`. Data schema, script logic, animations, reduced motion and collapse rules are unchanged. Differences from the sections above (Tokens, Structure): they describe r2 and are superseded where listed here.
+
+- **Font:** one typeface, JetBrains Mono, self-hosted. `@font-face` for weights 400, 500, 700 points at `fonts/jetbrains-mono-latin-{400,500,700}.woff2` (relative; licence in `fonts/OFL.txt`). Stack: `"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace`. No third-party font. Body 15px/1.75 (14px under 560px, as on the site); h1 `clamp(1.5rem,4.4vw,2.15rem)` weight 400, -.025em; h2 `clamp(1.35rem,3.4vw,1.7rem)` weight 700, -.015em. Column 46rem, side padding 1.25rem. Mono is wide, so head-to-head feature labels are 12px with a 220px label column (stacked above the row below 560px); keep names under about 28 characters.
+- **Light tokens:** paper `--bg` #f9f8f5, ink `--fg` #2c2c2a, ink-2 `--muted` #5f5e5a, hair `--rule` #d9d6cf, `--fill` #f1efe9, cobalt `--action` #004fcc (hover #003a96), forest `--accent` #0f6e56 (the brand's `--hard`), `--line` #8a8780 for chart axes, `--warn` #a8481b (contradicts and caveats only; not a brand colour).
+- **Dark tokens:** `--bg` #161614, `--fg` #ebe9e3, `--muted` #a9a7a0, `--rule` #3a3935, `--fill` #201f1c, `--action` #7ba6ff (hover #a8c4ff), `--accent` #4fb897, `--line` #77756e, `--warn` #e48a5c, `--on-accent` #10100e. Applied under `prefers-color-scheme: dark` and `data-theme="dark"`.
+- **Contrast (checked by script):** light: ink 13.2, ink-2 6.1, cobalt 6.6, forest 5.8, warn 5.5, white on forest 6.2, white on cobalt 7.0, axes 3.4 (on fill 3.1). Dark: ink 14.9, ink-2 7.5, cobalt 7.5, forest 7.5, warn 7.0, dark text on forest 7.8, on cobalt 7.9, axes 3.9. All text at least 4.5:1, graphics at least 3:1.
+- **Masthead:** the logo (inline `mark.svg`, recoloured through tokens so it works in dark) at 22px plus "Protocol Vision" in bold, left; the report date, right, in ink-2. The series name sits in small spaced text above the headline.
+- **Findings:** each carries a small running label ("01", "02", ...) in the site's `.n` style (12px, .1em, ink-2, top hairline) above its heading. The finding's `body` (or the verdict sentence) renders as `.ask`: forest left border, weight 500.
+- **Figure colour:** ink marks and ink-2 secondary marks, hair guides, cobalt for the current state and highlights (present row of profiles, present-day timeline events and "now", the head-to-head sum marker, the ambient packet), forest for hard or confirmed (grid strong, single and early rings, observed profile dots, historical timeline events). Ambient figure: forest rigid rule and joints, ink-2 frayed strands.
+- **Screenshots:** `r3-1280-light.png` (full page), `r3-1280-dark.png` (top, 2400px), `r3-375-dark.png` (375px iframe), all in reduced motion (final state).

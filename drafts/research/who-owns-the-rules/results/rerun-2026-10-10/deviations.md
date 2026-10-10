@@ -296,3 +296,18 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     The raw cluster and I3 data files are excluded; I2.md and I3.md summarise them neutrally.
     `leak_check.py` scans exactly this list, and coding starts only when it is clean. I5c (community and
     tooling dates, specified in A.2 but not yet collected) is collected first and summarised into I5.md.
+
+24. **I1: two-phase estimate of agent duties (post hoc, after the lexical flag failed validation).** The
+    pre-registered lexical flag (deviation 21) has precision 0.05 (coder A) and 0.14 (coder B) on 200 real
+    posting records: generic "AI" (13 of 18 false positives) and "automation" (5). The flag is kept, and
+    its figures are reported with that precision, as counts of term mentions. To estimate actual agent
+    duties, a second phase is added:
+    - random samples of flagged TASKS: 150 from S1 postings, 300 from rest20 and 150 from new-title
+      postings, all seed 20261029;
+    - the two agent coders (Sonnet, Haiku) code each task with the v2 codebook, blind to group;
+    - a task is confirmed if either coder codes AO, PE or RD, and also, separately, if both do;
+    - per group: confirmed share × flagged postings (with the rest20 weights), with Wilson intervals;
+    - the ratio of confirmed agent-duty postings in existing occupations to new-title postings is reported
+      for both confirmation rules.
+    This is standard two-phase sampling. It was added after the flag's precision was known, and the report
+    says so.

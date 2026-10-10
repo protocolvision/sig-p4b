@@ -6,64 +6,75 @@
 <meta name="robots" content="noindex">
 <title>Report Template Draft</title>
 <style>
-/* Layout: a memo. One 40rem text column, running prose, every heading a full statement. No cards, badges, page numbers or tab nav.
-   One typeface (the site's Lora/Charter/Georgia stack). Paper, ink, one forest accent. Hard = solid, soft = frayed/dashed.
-   Figures animate in once when scrolled into view (calm, 600-1200 ms, ease-out); reduced motion shows the final state. */
+/* Layout: a memo in the protocolvision.org brand. One 46rem column of running prose, every heading a full statement.
+   One typeface: JetBrains Mono, self-hosted (fonts/). Paper, ink, cobalt for actions/current state, forest for "hard".
+   Hard = solid, soft = frayed/dashed. Figures animate in once when scrolled into view; reduced motion shows the final state. */
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/jetbrains-mono-latin-400.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/jetbrains-mono-latin-500.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/jetbrains-mono-latin-700.woff2") format("woff2"); }
 :root {
   color-scheme: light;
-  --bg: #fbfbf8;          /* paper, slight green bias */
-  --fg: #1d2320;          /* ink */
-  --muted: #586059;       /* 6.3:1 on paper */
-  --rule: #dfe3dc;        /* faint guides only, never the only carrier of meaning */
-  --line: #8a938c;        /* chart axes and guides: 3:1 on paper */
-  --fill: #f1f3ee;
-  --accent: #0f6e56;      /* forest */
-  --on-accent: #ffffff;   /* text on an accent fill */
+  --bg: #f9f8f5;          /* paper */
+  --fg: #2c2c2a;          /* ink */
+  --muted: #5f5e5a;       /* ink-2 */
+  --rule: #d9d6cf;        /* hair: faint guides only, never the only carrier of meaning */
+  --line: #8a8780;        /* chart axes: 3:1 on paper */
+  --fill: #f1efe9;
+  --action: #004fcc;      /* cobalt: links, highlights, the current state */
+  --action-hover: #003a96;
+  --accent: #0f6e56;      /* forest: hard, confirmed */
+  --on-accent: #ffffff;   /* text on a forest or cobalt fill */
   --warn: #a8481b;        /* contradicts / caveat: always paired with a shape and a word */
-  --font: Lora, Charter, Georgia, "Times New Roman", serif;
+  --font: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   color-scheme: dark;
-  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --line: #69736b; --fill: #1b211e;
-  --accent: #46b996; --on-accent: #0b0f0d; --warn: #e48a5c;
+  --bg: #161614; --fg: #ebe9e3; --muted: #a9a7a0; --rule: #3a3935; --line: #77756e; --fill: #201f1c;
+  --action: #7ba6ff; --action-hover: #a8c4ff; --accent: #4fb897; --on-accent: #10100e; --warn: #e48a5c;
 } }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --line: #69736b; --fill: #1b211e;
-  --accent: #46b996; --on-accent: #0b0f0d; --warn: #e48a5c;
+  --bg: #161614; --fg: #ebe9e3; --muted: #a9a7a0; --rule: #3a3935; --line: #77756e; --fill: #201f1c;
+  --action: #7ba6ff; --action-hover: #a8c4ff; --accent: #4fb897; --on-accent: #10100e; --warn: #e48a5c;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.7 var(--font); font-variant-numeric: lining-nums tabular-nums; }
-.wrap { max-width: 40rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 1.5rem 4rem; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
-a { color: var(--accent); text-underline-offset: .15em; }
-h1 { font-size: 1.95rem; line-height: 1.22; margin: .5rem 0 .6rem; text-wrap: balance; }
-h2 { font-size: 1.4rem; line-height: 1.3; margin: 0 0 .4rem; text-wrap: balance; }
-h3 { font-size: 1.08rem; line-height: 1.4; font-weight: 600; margin: 0 0 .3rem; text-wrap: balance; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.75 var(--font); font-variant-numeric: tabular-nums; }
+.wrap { max-width: 46rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 0 4rem; }
+:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; border-radius: 2px; }
+a { color: var(--action); text-underline-offset: .2em; } a:hover { color: var(--action-hover); }
+h1 { font-size: clamp(1.5rem, 4.4vw, 2.15rem); line-height: 1.25; font-weight: 400; letter-spacing: -.025em; margin: .5rem 0 1rem; text-wrap: balance; }
+h2 { font-size: clamp(1.35rem, 3.4vw, 1.7rem); line-height: 1.25; font-weight: 700; letter-spacing: -.015em; margin: 0 0 .6rem; text-wrap: balance; }
+h3 { font-size: 1rem; line-height: 1.5; font-weight: 700; margin: 0 0 .3rem; text-wrap: balance; }
 p { margin: 0 0 1rem; }
 .dek { color: var(--muted); margin: 0 0 1rem; }
-h1 + .dek { font-size: 1.12rem; }
+h1 + .dek { font-size: 1.05rem; }
 .muted, .small { color: var(--muted); }
-.small { font-size: .9rem; line-height: 1.5; }
-.top { color: var(--muted); font-size: .9rem; }
-.contents { color: var(--muted); font-size: .9rem; line-height: 1.55; margin: 1.2rem 0 0; }
+.small { font-size: 13px; line-height: 1.6; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem 0; font-size: 14px; color: var(--muted); }
+.top b { font-weight: 700; color: var(--fg); display: inline-flex; align-items: center; gap: .55rem; }
+.top svg { width: 22px; height: 22px; flex: none; }
+.mk-ink { fill: var(--fg); } .mk-core { stroke: var(--action); } .mk-grid { stroke: var(--muted); }
+.series { color: var(--muted); font-size: 12px; letter-spacing: .1em; margin: 1.5rem 0 0; }
+.contents { color: var(--muted); font-size: 13px; line-height: 1.7; margin: 1.2rem 0 0; }
 .contents a { color: var(--muted); text-decoration-color: var(--line); }
-.contents a:hover { color: var(--fg); }
+.contents a:hover { color: var(--action); }
 section.memo { margin-top: 3.25rem; scroll-margin-top: 1rem; }
 section.memo:first-of-type { margin-top: 2.25rem; }
-.finding { margin-top: 1.9rem; }
-.finding h3 { font-size: 1.15rem; }
+.n { max-width: none; font-size: 12px; letter-spacing: .1em; color: var(--muted); margin: 0 0 1rem; padding-top: 1rem; border-top: .5px solid var(--rule); }
+.finding { margin-top: 2.5rem; }
+.ask { margin: 1.1rem 0 .9rem; padding-left: 1rem; border-left: 2px solid var(--accent); font-weight: 500; }
+.finding h3 { font-size: 1.1rem; margin-bottom: .6rem; }
 .finding p { margin-bottom: .55rem; }
-.finding .basis { font-size: .9rem; line-height: 1.5; color: var(--muted); margin-bottom: .6rem; }
-.finding .quote { font-style: italic; font-size: .98rem; margin: .8rem 0 .2rem 1rem; }
-.finding .quote cite { font-style: normal; font-size: .85rem; color: var(--muted); margin-left: .4rem; }
-.finding .caveat { font-size: .9rem; line-height: 1.5; }
-.finding .caveat b { color: var(--warn); font-weight: 600; }
+.finding .basis { font-size: 13px; line-height: 1.6; color: var(--muted); margin-bottom: .6rem; }
+.finding .quote { font-style: italic; font-size: 13px; margin: .8rem 0 .2rem 1rem; }
+.finding .quote cite { font-style: normal; font-size: 12px; color: var(--muted); margin-left: .4rem; }
+.finding .caveat { font-size: 13px; line-height: 1.6; }
+.finding .caveat b { color: var(--warn); font-weight: 700; }
 figure { margin: 1.9rem 0 0; padding: 0; }
 figure > h3 { margin-bottom: .2rem; }
-figure > .dek { font-size: .95rem; margin-bottom: .8rem; }
-figcaption { font-size: .9rem; line-height: 1.5; color: var(--muted); margin-top: .6rem; }
+figure > .dek { font-size: 14px; margin-bottom: .8rem; }
+figcaption { font-size: 13px; line-height: 1.6; color: var(--muted); margin-top: .6rem; }
 .scroll { overflow-x: auto; max-width: 100%; position: relative; }
 svg text { font-family: var(--font); fill: var(--fg); }
 svg .mut { fill: var(--muted); }
@@ -74,33 +85,33 @@ svg .mut { fill: var(--muted); }
 /* ambient figure: a hard rule that meets a frayed one */
 [hidden] { display: none !important; }
 .ambient { display: block; width: 100%; height: auto; margin: 1.1rem 0 0; }
-.ambient .hard { fill: none; stroke: var(--fg); stroke-width: 3; stroke-linecap: butt; }
-.ambient .joint { stroke: var(--fg); stroke-width: 1.5; }
+.ambient .hard { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: butt; }
+.ambient .joint { stroke: var(--accent); stroke-width: 1.5; }
 .ambient .strand { fill: none; stroke: var(--muted); stroke-width: 1.8; stroke-linecap: round; }
-.ambient .packet { fill: var(--accent); }
+.ambient .packet { fill: var(--action); }
 
 /* grid */
 .gridwrap table { border-collapse: collapse; width: 100%; }
 .gridwrap th, .gridwrap td { padding: .45rem .2rem; text-align: center; border-bottom: 1px solid var(--rule); font-weight: 400; }
-.gridwrap th[scope=row] { text-align: left; font-size: .95rem; line-height: 1.35; min-width: 7.5rem; padding-right: .5rem; }
-.gridwrap thead th { font-size: .82rem; color: var(--muted); vertical-align: bottom; }
+.gridwrap th[scope=row] { text-align: left; font-size: 13px; line-height: 1.4; min-width: 7.5rem; padding-right: .5rem; }
+.gridwrap thead th { font-size: 12px; color: var(--muted); vertical-align: bottom; }
 .gridwrap td svg { width: 22px; height: 22px; display: block; margin: auto; }
-.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; margin: .8rem 0 0; padding: 0; list-style: none; font-size: .88rem; color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; margin: .8rem 0 0; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
 .legend li { display: flex; align-items: center; gap: .4rem; }
 .legend svg { width: 18px; height: 18px; flex: none; }
 
 /* feature profiles: unboxed rows, the present row set apart by weight and a gap */
 .prof { display: grid; gap: .1rem; list-style: none; padding: 0; margin: 0; }
-.prow { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 3rem; align-items: center; gap: .5rem; padding: .3rem 0; }
+.prow { display: grid; grid-template-columns: 12rem minmax(0, 1fr) 3rem; align-items: center; gap: .5rem; padding: .3rem 0; }
 .prow.present { margin-top: .7rem; }
 .prow.present .nm { font-weight: 700; }
-.prow .nm { font-size: .92rem; line-height: 1.3; min-width: 0; }
-.prow .sc { font-size: .85rem; text-align: right; color: var(--muted); }
+.prow .nm { font-size: 13px; line-height: 1.3; min-width: 0; }
+.prow .sc { font-size: 12px; text-align: right; color: var(--muted); }
 .prow svg { width: 100%; height: 22px; display: block; }
-.fhead { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 3rem; gap: .5rem; font-size: .75rem; color: var(--muted); }
+.fhead { display: grid; grid-template-columns: 12rem minmax(0, 1fr) 3rem; gap: .5rem; font-size: 11px; color: var(--muted); }
 .fhead svg { width: 100%; height: 14px; display: block; }
-.fkey { columns: 2 14rem; column-gap: 1.5rem; font-size: .85rem; color: var(--muted); padding: 0; list-style: none; margin: .8rem 0 0; }
-.fkey li { break-inside: avoid; padding: .1rem 0; } .fkey b { color: var(--fg); font-weight: 600; margin-right: .35rem; }
+.fkey { columns: 2 16rem; column-gap: 1.5rem; font-size: 12px; color: var(--muted); padding: 0; list-style: none; margin: .8rem 0 0; }
+.fkey li { break-inside: avoid; padding: .1rem 0; } .fkey b { color: var(--fg); font-weight: 700; margin-right: .35rem; }
 @media (max-width: 34rem) {
   .prow, .fhead { grid-template-columns: minmax(0, 1fr) 3rem; }
   .prow .nm { grid-column: 1; } .prow .sc { grid-column: 2; grid-row: 1; } .prow svg { grid-column: 1 / -1; }
@@ -109,9 +120,9 @@ svg .mut { fill: var(--muted); }
 
 /* head to head and timeline: SVG drawn at the container's real width so text stays at its set size */
 .chart svg { width: 100%; height: auto; display: block; }
-.ev { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 1.5rem; font-size: .88rem; }
-.ev li { display: flex; gap: .5rem; } .ev b { flex: none; min-width: 2.2rem; color: var(--muted); font-weight: 600; }
-@media (max-width: 34rem) { .ev { grid-template-columns: 1fr; } }
+.ev { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 1.5rem; font-size: 12px; }
+.ev li { display: flex; gap: .5rem; } .ev b { flex: none; min-width: 2.2rem; color: var(--muted); font-weight: 700; }
+@media (max-width: 46rem) { .ev { grid-template-columns: 1fr; } }
 
 /* changes and next tests: plain paragraphs */
 .item { margin: 0 0 1rem; }
@@ -119,16 +130,18 @@ svg .mut { fill: var(--muted); }
 .item .small { margin-top: .1rem; }
 
 /* closing note */
-.closing p { font-size: .98rem; }
+.closing p { font-size: 14px; }
 details { padding: .35rem 0; }
-summary { cursor: pointer; padding: .2rem 0; color: var(--accent); font-size: .98rem; }
+summary { cursor: pointer; padding: .2rem 0; color: var(--action); font-size: 14px; font-weight: 500; }
+summary:hover { color: var(--action-hover); }
 details ol, details ul { padding-left: 1.2rem; margin: .5rem 0 0; }
-details li { margin-bottom: .45rem; font-size: .94rem; }
-.src { border-collapse: collapse; width: 100%; min-width: 26rem; font-size: .88rem; }
+details li { margin-bottom: .45rem; font-size: 13px; }
+.src { border-collapse: collapse; width: 100%; min-width: 28rem; font-size: 12px; }
 .src th, .src td { text-align: left; padding: .4rem .6rem .4rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-.src th { color: var(--muted); font-weight: 600; }
+.src th { color: var(--muted); font-weight: 700; }
 .src td:first-child { white-space: nowrap; }
-footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
+footer { margin-top: 3.5rem; padding-top: 1rem; border-top: .5px solid var(--rule); color: var(--muted); font-size: 12px; }
+@media (max-width: 560px) { body { font-size: 14px; } }
 .visually-hidden { position: absolute !important; left: 0; top: 0; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* Motion. The script adds .anim to <html> only when motion is allowed and IntersectionObserver exists;
@@ -153,7 +166,8 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
 </head>
 <body>
 <div class="wrap">
-<header class="top"><span id="m-series"></span> · <span id="m-date"></span></header>
+<header class="top"><b><svg viewBox="0 0 64 64" aria-hidden="true"><defs><pattern id="mk-h" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="3" class="mk-core" stroke-width=".9"/></pattern></defs><path class="mk-grid" fill="none" d="M10 4V60M4 10H60M32 4V60M4 32H60M54 4V60M4 54H60" stroke-width=".5" stroke-dasharray="6 2 1 2"/><g class="mk-ink"><circle cx="10" cy="10" r="2.6"/><circle cx="10" cy="32" r="2.6"/><circle cx="10" cy="54" r="2.6"/><circle cx="32" cy="10" r="2.6"/><circle cx="32" cy="54" r="2.6"/><circle cx="54" cy="10" r="2.6"/><circle cx="54" cy="32" r="2.6"/><circle cx="54" cy="54" r="2.6"/></g><rect class="mk-core" x="20" y="20" width="24" height="24" fill="url(#mk-h)" stroke-width="2.4"/></svg>Protocol Vision</b><span id="m-date"></span></header>
+<p class="series" id="m-series"></p>
 <svg class="ambient" id="ambient" viewBox="0 0 600 40" aria-hidden="true" data-anim hidden></svg>
 <h1 id="m-title"></h1>
 <p class="dek" id="m-dek"></p>
@@ -482,11 +496,12 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
     if (decisive) items.unshift({headline: V.headline, body: null, instruments: V.instruments || [], confidence: V.confidence, verdict: V});
     if (h2hDecisive) items.push({headline: 'Between ' + H2.a + ' and ' + H2.b + ', the evidence favours ' + (h2hSum > 0 ? H2.a : H2.b) + '.',
       body: 'The head-to-head on ' + H2.features.length + ' separating features clears its decision band (see below).', instruments: [], confidence: null, power: H2.power});
-    items.forEach(function (f) {
+    items.forEach(function (f, fi) {
       var a = h('article', {'class': 'finding'});
+      a.appendChild(h('p', {'class': 'n', text: ('0' + (fi + 1)).slice(-2)}));
       a.appendChild(h('h3', {text: f.headline}));
-      if (f.body) a.appendChild(h('p', {text: f.body}));
-      if (f.verdict) a.appendChild(h('p', {text: 'The test returns this verdict in ' + range(f.verdict.power) + ' of simulated runs when its pattern is the truth' +
+      if (f.body) a.appendChild(h('p', {'class': 'ask', text: f.body}));
+      if (f.verdict) a.appendChild(h('p', {'class': 'ask', text: 'The test returns this verdict in ' + range(f.verdict.power) + ' of simulated runs when its pattern is the truth' +
         (f.verdict.falseSupport != null ? ', and false support is at most ' + f.verdict.falseSupport + '%.' : '.')}));
       if (f.power) a.appendChild(h('p', {'class': 'small', text: f.power}));
       var basis = [];
@@ -545,6 +560,7 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
     var n = P.features.length, W = n * 20, H = 22;
     function guides(v, y1, y2) { for (var i = 5; i < n; i += 5) v.appendChild(s('line', {x1: i * 20, x2: i * 20, y1: y1, y2: y2, stroke: 'var(--rule)', 'stroke-width': 1})); }
     function row(p, cls, ri) {
+      var col = cls === 'present' ? 'var(--action)' : 'var(--accent)';
       var r = h('li', {'class': 'prow' + (cls ? ' ' + cls : '')});
       r.appendChild(h('div', {'class': 'nm', text: p.name}));
       var txt = p.values.map(function (x, i) { return P.features[i].id + ' ' + ['absent', 'early sign', 'observed'][x]; }).join(', ');
@@ -553,8 +569,8 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
       v.appendChild(s('line', {x1: 4, x2: W - 4, y1: 11, y2: 11, stroke: 'var(--rule)', 'stroke-width': 1}));
       p.values.forEach(function (x, i) {
         var cx = i * 20 + 10, c;
-        if (x === 2) c = s('circle', {cx: cx, cy: 11, r: 6.5, fill: 'var(--accent)'});
-        else if (x === 1) c = s('circle', {cx: cx, cy: 11, r: 5.5, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2, 'stroke-dasharray': '3 2'});
+        if (x === 2) c = s('circle', {cx: cx, cy: 11, r: 6.5, fill: col});
+        else if (x === 1) c = s('circle', {cx: cx, cy: 11, r: 5.5, fill: 'none', stroke: col, 'stroke-width': 2, 'stroke-dasharray': '3 2'});
         else c = s('circle', {cx: cx, cy: 11, r: 2, fill: 'var(--muted)'});
         v.appendChild(A(c, 'grow', ri * 80 + i * 12));
       });
@@ -586,25 +602,25 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
     var F = H2.features, n = F.length, k = H2.k, sum = h2hSum;
     F.forEach(function (f) { $('h2h-sr').appendChild(h('li', {text: f.id + ' ' + f.name + ': ' + (f.value > 0 ? 'favours ' + H2.a : f.value < 0 ? 'favours ' + H2.b : 'no difference')})); });
     onWidth($('h2h'), function (W) {
-      var narrow = W < 480, labW = narrow ? 0 : 170, x0 = labW + 10, x1 = W - 10, mid = (x0 + x1) / 2, half = (x1 - x0) / 2;
+      var narrow = W < 560, labW = narrow ? 0 : 220, x0 = labW + 10, x1 = W - 10, mid = (x0 + x1) / 2, half = (x1 - x0) / 2;
       var rowH = narrow ? 44 : 30, top = 30, sumTop = top + n * rowH + 30, Ht = sumTop + 82;
       var v = s('svg', {width: W, height: Ht, viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': H2.headline + ' Sum ' + sum + ', decision band plus or minus ' + k + '. Per-feature values follow as a list.'});
       v.appendChild(s('text', {x: x0, y: 14, 'font-size': 13, 'class': 'mut'}, '← ' + H2.b));
       v.appendChild(s('text', {x: x1, y: 14, 'font-size': 13, 'text-anchor': 'end', 'class': 'mut'}, H2.a + ' →'));
       F.forEach(function (f, i) {
         var y = top + i * rowH + (narrow ? 30 : rowH / 2);
-        v.appendChild(s('text', narrow ? {x: 0, y: y - 13, 'font-size': 13} : {x: 0, y: y + 4, 'font-size': 13}, f.id + ' ' + f.name));
+        v.appendChild(s('text', narrow ? {x: 0, y: y - 13, 'font-size': 12} : {x: 0, y: y + 4, 'font-size': 12}, f.id + ' ' + f.name));
         v.appendChild(s('line', {x1: x0, x2: x1, y1: y, y2: y, stroke: 'var(--rule)', 'stroke-width': 1}));
         var cx = mid + f.value * half * 0.8;
-        if (f.value !== 0) v.appendChild(s('line', {x1: mid, x2: cx, y1: y, y2: y, stroke: 'var(--accent)', 'stroke-width': 3, 'stroke-linecap': 'round'}));
-        v.appendChild(s('circle', {cx: cx, cy: y, r: 7, fill: f.value === 0 ? 'var(--bg)' : 'var(--accent)', stroke: 'var(--accent)', 'stroke-width': 2}));
+        if (f.value !== 0) v.appendChild(s('line', {x1: mid, x2: cx, y1: y, y2: y, stroke: 'var(--fg)', 'stroke-width': 3, 'stroke-linecap': 'round'}));
+        v.appendChild(s('circle', {cx: cx, cy: y, r: 7, fill: f.value === 0 ? 'var(--bg)' : 'var(--fg)', stroke: 'var(--fg)', 'stroke-width': 2}));
       });
       // centre line: one piece per row on phones, so it never runs through the labels above each row
       if (narrow) F.forEach(function (f, i) { var y = top + i * rowH + 30; v.insertBefore(s('line', {x1: mid, x2: mid, y1: y - 10, y2: y + 10, stroke: 'var(--fg)', 'stroke-width': 1.5}), v.firstChild); });
       else v.insertBefore(s('line', {x1: mid, x2: mid, y1: top, y2: top + n * rowH + 4, stroke: 'var(--fg)', 'stroke-width': 1.5}), v.firstChild);
       var max = Math.max(n, k + 1), sx = function (val) { return mid + val / max * half; };
       var ay = sumTop + 30;
-      v.appendChild(s('text', {x: 0, y: narrow ? sumTop : ay + 4, 'font-size': 13, 'font-weight': 700}, 'Sum of ' + n + ' features'));
+      v.appendChild(s('text', {x: 0, y: narrow ? sumTop : ay + 4, 'font-size': 12, 'font-weight': 700}, 'Sum of ' + n + ' features'));
       v.appendChild(s('rect', {x: sx(-k), y: ay - 14, width: sx(k) - sx(-k), height: 28, fill: 'var(--fill)', stroke: 'var(--line)', 'stroke-dasharray': '4 3'}));
       v.appendChild(s('text', {x: mid, y: ay - 19, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, 'not separated: within ±' + k));
       v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--fg)', 'stroke-width': 1.5}));
@@ -614,7 +630,7 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
         v.appendChild(s('text', {x: sx(t), y: ay + 33, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, (t > 0 ? '+' : '') + t));
       }
       var mk = A(s('g'), 'slide', 200, mid - sx(sum));
-      mk.appendChild(s('circle', {cx: sx(sum), cy: ay, r: 11, fill: 'var(--accent)', stroke: 'var(--bg)', 'stroke-width': 2}));
+      mk.appendChild(s('circle', {cx: sx(sum), cy: ay, r: 11, fill: 'var(--action)', stroke: 'var(--bg)', 'stroke-width': 2}));
       mk.appendChild(s('text', {x: sx(sum), y: ay + 4, 'font-size': 12, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:var(--on-accent)'}, (sum > 0 ? '+' : '') + sum));
       v.appendChild(mk);
       $('h2h').appendChild(v);
@@ -640,12 +656,12 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
       v.appendChild(A(s('line', {x1: x0, x2: X(A0.nowYear), y1: yP, y2: yP, pathLength: 1, stroke: 'var(--fg)', 'stroke-width': 2}), 'draw', 150));
       v.appendChild(A(s('line', {x1: X(A0.nowYear), x2: x1, y1: yP, y2: yP, stroke: 'var(--line)', 'stroke-width': 1.5, 'stroke-dasharray': '2 5', 'stroke-linecap': 'round'}), 'fade', 1300));
       var g0 = A(s('g'), 'fade', 300);
-      g0.appendChild(s('line', {x1: X(0), x2: X(0), y1: yH - 18, y2: yP + 16, stroke: 'var(--accent)', 'stroke-width': 1, 'stroke-dasharray': '3 3'}));
-      g0.appendChild(s('text', {x: X(0) + 4, y: yH - 20, 'font-size': 12, style: 'fill:var(--accent)'}, 'year 0'));
+      g0.appendChild(s('line', {x1: X(0), x2: X(0), y1: yH - 18, y2: yP + 16, stroke: 'var(--muted)', 'stroke-width': 1, 'stroke-dasharray': '3 3'}));
+      g0.appendChild(s('text', {x: X(0) + 4, y: yH - 20, 'font-size': 12, 'class': 'mut'}, 'year 0'));
       v.appendChild(g0);
       var gn = A(s('g'), 'fade', 1300);
-      gn.appendChild(s('line', {x1: X(A0.nowYear), x2: X(A0.nowYear), y1: yP - 16, y2: yP + 16, stroke: 'var(--warn)', 'stroke-width': 1.5}));
-      gn.appendChild(s('text', {x: X(A0.nowYear) + 5, y: yP + 26, 'font-size': 12, style: 'fill:var(--warn)'}, 'now'));
+      gn.appendChild(s('line', {x1: X(A0.nowYear), x2: X(A0.nowYear), y1: yP - 16, y2: yP + 16, stroke: 'var(--action)', 'stroke-width': 1.5}));
+      gn.appendChild(s('text', {x: X(A0.nowYear) + 5, y: yP + 26, 'font-size': 12, style: 'fill:var(--action)'}, 'now'));
       v.appendChild(gn);
       v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--line)'}));
       var span = A0.max - A0.min, step = (x1 - x0) / span < 22 ? (span > 20 ? 5 : 4) : 2;
@@ -655,10 +671,11 @@ footer { margin-top: 3.5rem; color: var(--muted); font-size: .88rem; }
       }
       v.appendChild(s('text', {x: x1, y: ay + 35, 'font-size': 12, 'text-anchor': 'end', 'class': 'mut'}, A0.unit));
       function marks(arr, y, pre, solid) {
+        var col = solid ? 'var(--accent)' : 'var(--action)';
         (arr || []).forEach(function (e, i) {
           var g = A(s('g'), 'grow', 400 + rank(e) * 130);
-          g.appendChild(s('circle', {cx: X(e.year), cy: y, r: 10, fill: solid ? 'var(--accent)' : 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 2}));
-          g.appendChild(s('text', {x: X(e.year), y: y + 4, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:' + (solid ? 'var(--on-accent)' : 'var(--accent)')}, pre + (i + 1)));
+          g.appendChild(s('circle', {cx: X(e.year), cy: y, r: 10, fill: solid ? col : 'var(--bg)', stroke: col, 'stroke-width': 2}));
+          g.appendChild(s('text', {x: X(e.year), y: y + 4, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:' + (solid ? 'var(--on-accent)' : 'var(--action)')}, pre + (i + 1)));
           v.appendChild(g);
         });
       }
