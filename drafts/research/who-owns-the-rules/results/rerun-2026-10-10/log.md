@@ -85,3 +85,4 @@ Branch `rerun-2026-10-10`. Runbook: [`../../RERUN.md`](../../RERUN.md).
 - Clustering (eom, pre-registered): pool 50,675 tasks, 197 employers; holdout ARI 0.017; 0 found. Independent holdout clustering degenerate (one cluster with 96% of points, 0% noise); discovery 89 clusters; baselines 159–175 clusters, mean ARI 0.86. Deviation 19: rerun with leaf selection (post hoc, both reported).
 - Report backlog (user request): animated method walkthrough (sample → extraction → embedding and clusters → coding → findings), real data. Needs 2D UMAP coordinates for about 3,000 statements, saved from the final clustering run.
 - Clustering leaf rerun (deviation 19): holdout ARI 0.827 (passes 0.6); baseline mean ARI 0.964; 114 discovery clusters; **11 found**; noise 65%; largest cluster share 1% (no degeneracy). Found clusters carry inference; all 114 are labelled descriptively.
+- Found clusters: 3 of 11 are language artefacts (deviation 20); 8 found work clusters.

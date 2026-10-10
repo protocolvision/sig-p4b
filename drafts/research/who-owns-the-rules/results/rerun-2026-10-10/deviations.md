@@ -240,3 +240,16 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       unchanged.
     - The eom result is kept (`clusters/stability-eom.md`) and reported beside the leaf result
       (`clusters/leaf/`). The change was made after seeing a failure, and the report says so.
+
+20. **Language clusters are excluded from work-bundle inference (post hoc, rule stated).** The embedding
+    model (all-mpnet-base-v2) is English-centred, so non-English postings cluster by language rather than
+    by work.
+    - **Rule:** a cluster is a language artefact if more than 50% of its 20 central spans are mostly
+      non-Latin script, or fewer than 30% contain common English function words (the, and, to, of, with,
+      for).
+    - **Outcome:** 8 of 114 clusters are artefacts, 3 of them among the 11 found (clusters 0 Chinese and
+      Japanese, 6 Spanish, 10 Polish). **8 found work clusters remain.**
+    - Language artefacts are reported, not interpreted.
+    - **Limitation, stated in the report:** non-English duties sit mostly in language clusters or noise,
+      so the activity analysis (I2) effectively describes English-language postings.
+    - The rule was written after seeing cluster 0, which is why it is post hoc.
