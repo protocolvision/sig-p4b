@@ -1,0 +1,61 @@
+seed_id,true_code,second_code,type,modelled_on,source_url
+J714006:0,RD,,positive,SRE error-budget policy (opened) - release freeze decision,https://sre.google/workbook/error-budget-policy/
+S575198:0,OT,,unrelated,,
+J479146:0,RD,PE,positive,SRE error-budget policy (opened) - disputes decided by senior leader,https://sre.google/workbook/error-budget-policy/
+J414328:0,OT,,unrelated,,
+J360494:0,OT,,applies-existing-rule,applies existing rule,
+S932967:0,OT,,applies-existing-rule,applies existing rule,
+J288499:0,AO,,agent-ops,,
+F0001298420286-26-097641_6685:0,RD,,positive,analogue of SRE error-budget policy: keep/hold decision with documented exceptions,https://sre.google/workbook/error-budget-policy/
+J917710:0,PV,,positive,"Clinical alert-fatigue review and tiering (opened) - override review, transposed to agents",https://psnet.ahrq.gov/primer/alert-fatigue
+S355953:0,RD,,positive,analogue of clinical alert reduction: retire low-value recurring prompts,https://psnet.ahrq.gov/primer/alert-fatigue
+S185831:0,PE,,positive,Clinical alert-fatigue review and tiering (opened) - interruptive only for severe alerts,https://psnet.ahrq.gov/primer/alert-fatigue
+J702326:0,RD,,positive,analogue of SRE error-budget policy: disputes over thresholds escalated to a named decider,https://sre.google/workbook/error-budget-policy/
+F0001640595281-26-074709_1965:0,PV,,positive,SRE error-budget policy (opened) - class-of-outage trigger,https://sre.google/workbook/error-budget-policy/
+F0001228807284-26-026952_5056:0,PE,,positive,analogue of SRE incident management: defined roles and who may act,https://sre.google/sre-book/managing-incidents/
+F0001417225286-26-075078_2320:0,OT,,applies-existing-rule,applies existing rule,
+J460160:0,OT,,applies-existing-rule,applies existing rule,
+J864878:0,PE,,positive,SRE incident management (opened) - declaration criteria,https://sre.google/sre-book/managing-incidents/
+F0001174447287-26-062644_5552:0,AO,,agent-ops,,
+J401924:0,PE,,positive,analogue of SRE error-budget policy: explicit allowed exceptions and gates,https://sre.google/workbook/error-budget-policy/
+F0001926295282-26-066429_5561:0,OT,,unrelated,,
+F0001740710286-26-057024_7233:0,RD,,positive,analogue of SRE error-budget policy: speed vs reliability budget decision,https://sre.google/workbook/error-budget-policy/
+J223800:0,AO,,agent-ops,,
+F0001241960282-26-020876_3887:0,PE,,positive,analogue of SRE incident criteria: when a second party must be involved,https://sre.google/sre-book/managing-incidents/
+J538433:0,OT,,unrelated,,
+S272975:0,OT,,unrelated,,
+F0001690504283-26-011581_8945:0,OT,,applies-existing-rule,applies existing rule,
+F0001871464289-26-033900_5304:0,OT,,applies-existing-rule,applies existing rule,
+F0001295625280-26-029094_7864:0,OT,,unrelated,,
+F0001560559285-26-089929_6220:0,RD,,positive,"analogue of clinical alert reduction: remove low-severity interruptions, liability concern weighed",https://psnet.ahrq.gov/primer/alert-fatigue
+J542182:0,PV,,positive,access-exception audit (not sourced),
+F0001999395282-26-077566_1884:0,AO,,agent-ops,,
+J800675:0,AO,,agent-ops,,
+F0001478825288-26-061429_7521:0,OT,,applies-existing-rule,applies existing rule,
+S901710:0,AO,,agent-ops,,
+S685184:0,RD,,positive,analogue of clinical alert retirement: drop low-value interruptions when another check covers them,https://psnet.ahrq.gov/primer/alert-fatigue
+F0001665100286-26-018158_4122:0,PV,,positive,analogue of alert-override review: exceptions outside the standard path,https://psnet.ahrq.gov/primer/alert-fatigue
+F0001070619283-26-067753_3659:0,OT,,unrelated,,
+S958105:0,OT,,unrelated,,
+S428988:0,AO,,agent-ops,,
+S456644:0,OT,,unrelated,,
+S829070:0,RD,,positive,analogue of SRE error-budget policy: freeze/keep decisions between functions,https://sre.google/workbook/error-budget-policy/
+S467188:0,OT,,applies-existing-rule,applies existing rule,
+F0001995044285-26-090443_1417:0,PE,,positive,analogue of SRE error-budget policy: freeze with narrow P0/security exceptions,https://sre.google/workbook/error-budget-policy/
+F0001073731283-26-090487_7164:0,PE,,positive,SRE incident management (opened) - commander handoff,https://sre.google/sre-book/managing-incidents/
+S708064:0,PV,,positive,SRE incident management (opened) - escalation criteria vs practice,https://sre.google/sre-book/managing-incidents/
+J935601:0,PV,,positive,SRE error-budget policy (opened) - postmortem trigger,https://sre.google/workbook/error-budget-policy/
+S578365:0,RD,,positive,refund-limit decision (not sourced),
+J172103:0,AO,,agent-ops,,
+S980770:0,OT,,applies-existing-rule,applies existing rule,
+F0001497183281-26-025119_8996:0,AO,,agent-ops,,
+S383051:0,PE,,positive,SRE error-budget policy (opened) - policy text,https://sre.google/workbook/error-budget-policy/
+S597128:0,PV,,positive,analogue of alert-override review: what people accept without escalating,https://psnet.ahrq.gov/primer/alert-fatigue
+S830901:0,AO,,agent-ops,,
+J796414:0,OT,,applies-existing-rule,applies existing rule,
+S168157:0,PV,,positive,"Clinical alert-fatigue review and tiering (opened) - override review, transposed to agents",https://psnet.ahrq.gov/primer/alert-fatigue
+J163616:0,PV,,positive,"Clinical alert-fatigue review and tiering (opened) - override review, transposed to agents",https://psnet.ahrq.gov/primer/alert-fatigue
+J866676:0,OT,,unrelated,,
+S835567:0,PE,,positive,never-answer list (not sourced),
+F0001277617287-26-031160_9459:0,PV,,positive,analogue of alert-override review: approvals that do not match the written matrix,https://psnet.ahrq.gov/primer/alert-fatigue
+J778563:0,PE,,positive,analogue of severity tiering of alerts: only severe ones interrupt,https://psnet.ahrq.gov/primer/alert-fatigue
