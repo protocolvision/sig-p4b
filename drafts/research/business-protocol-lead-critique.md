@@ -71,7 +71,7 @@ Keep these. They are the role's method and its edge over an auditor or an engine
    question alive.
 8. **Reporting line taken for granted.** The COO is right if no one owns how rules change together. Where
    the controller or deal desk already owns limits and their delays, the role belongs with the CFO. The
-   research's fourth question (incumbency) should decide this, not the template.
+   research's ownership question (question 4 in its summary) should decide this, not the template.
 
 ## 5. Projection, 2027–2029
 

@@ -6,6 +6,10 @@ Research draft, v5 (after five review rounds) · 10 October 2026 · Protocols fo
 > 2026, but this environment could not open the pages themselves. Facts marked **(S)** come from
 > search-result summaries of the named page; facts marked **(M)** are from memory. Open each source before
 > quoting it. No archived job posting has been retrieved yet (see section 10).
+>
+> **For the post.** Suggested order: the problem; three or four short lineages; the counter-cases; the
+> conditions; the roles forming now, tested against them; the case for engineering; where the work could
+> land; the question and the verdict. Move the full lineage tables, the timeline and the notes to an appendix.
 
 ## Summary
 
