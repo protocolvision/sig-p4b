@@ -1,0 +1,601 @@
+id,code1,code2,reason
+Q0001,AO,,Improves agent effectiveness by supplying tools; no rule others rely on
+Q0002,OT,,Generic layout automation for engineering efficiency; no agent or rule
+Q0003,OT,,Generic automation project support
+Q0004,OT,,GPU infrastructure for AI systems; no agent rule
+Q0005,PE,,Sets norms governing permitted AI-assisted usage that others must follow
+Q0006,OT,,Mentoring and skill growth
+Q0007,OT,,Cloud infrastructure design; no agent rule set
+Q0008,AO,,Builds AI-native systems and skills that supply content to keep messaging current
+Q0009,OT,,Partnering on AI initiatives and reusable capabilities
+Q0010,AO,,Develops and supports GenAI platforms and applications
+Q0011,OT,,General AI tool adoption and continuous improvement
+Q0012,PE,,Architecture sets human review points and interfaces between AI and other systems
+Q0013,OT,,Generic automation and reporting support
+Q0014,OT,,Marketing automation campaign QA
+Q0015,OT,,Sharing expertise on agentic tools
+Q0016,OT,,AI log analysis and RCA for engineering productivity; no agent rule
+Q0017,OT,,Using AI tools to accelerate engineering tasks
+Q0018,OT,,Embedding AI ways of working; no rule set
+Q0019,OT,,Installation and maintenance of systems
+Q0020,AO,,Designs agent prompts and tool calls; prompts and content are AO per boundary rule
+Q0021,RD,PE,Aligns applied AI standards across architecture security and engineering; cross-function standard decision
+Q0022,OT,,Mentoring and security capability building through reviews
+Q0023,OT,,Tracks LLM technology and tool selection
+Q0024,OT,,Data pipelines and retrieval infrastructure for AI platform teams
+Q0025,OT,,Leads planning and operational enablement; no agent rule named
+Q0026,OT,,New product introduction engineering
+Q0027,PE,,Sets governance and promotion gates across environments
+Q0028,AO,PE,Builds per-agent eval harness and monitoring; CI regression gates are approval gates
+Q0029,AO,,Develops reusable agent skills
+Q0030,OT,,Vision roadmap and operating model; no explicit rule set
+Q0031,OT,,Waste removal service
+Q0032,AO,,Builds AI solutions with cutting-edge models for customers
+Q0033,OT,,Security tooling and automation
+Q0034,AO,,Builds LLM-enabled generative features for search platform
+Q0035,OT,,Identifies and shares AI enhancements
+Q0036,OT,,Predictive ML analysis of performance data
+Q0037,PE,,Builds services that disrupt agent fraud; blocking and limits on agent activity
+Q0038,OT,,Quantum AI application research
+Q0039,OT,,Reliability and latency of AI workloads; infrastructure not agent rule
+Q0040,OT,,Uses agentic coding tools for bug fixing; applying tool not building agent
+Q0041,OT,,Culture and upskilling for AI decision support
+Q0042,OT,,Informing sales staff about products
+Q0043,OT,,Python tooling for infrastructure workflows
+Q0044,OT,,Building automation technology evaluation
+Q0045,AO,,Integrates AI into telemetry processing to produce intelligence
+Q0046,AO,,On-device deployment of LLMs and agents
+Q0047,OT,,Operational automation and monitoring capabilities
+Q0048,OT,,Lifecycle support for manufacturing systems
+Q0049,OT,,Helping partners utilize AI factories
+Q0050,OT,,Workflow automation; governance mentioned but no rule set or decision
+Q0051,AO,,Builds AI-enabled analytical systems for scientific workflows
+Q0052,OT,,Documentation maintenance
+Q0053,OT,,Builds tools for scientists and engineers; not agent rules
+Q0054,OT,,Drives adoption of AI-assisted practices
+Q0055,OT,,Leads team building AI search systems; no agent rule
+Q0056,OT,,Supports customers on AI features and best practices
+Q0057,OT,,Design automation scripts
+Q0058,OT,,Test automation written with AI coding tools
+Q0059,OT,,Process assessment and future-state design; no explicit rule set
+Q0060,AO,,Develops AI-assisted methodologies for research and monitoring
+Q0061,OT,,Scaling automation across sites
+Q0062,OT,,Research topics on analytics
+Q0063,AO,PE,Defines evaluation method for AI contract analysis; quality bar sets acceptance threshold
+Q0064,OT,,DevOps platform support for AI workloads
+Q0065,AO,,Designs and deploys AI solutions on Vertex AI
+Q0066,AO,PE,Prompt engineering and tuning; intelligent routing sets which model handles which request
+Q0067,OT,,Champions appropriate AI use; no explicit rule set
+Q0068,AO,,Builds and deploys AI agents from templates
+Q0069,PE,,Sets standards that govern AI-assisted development
+Q0070,OT,,Applies existing safety and quality standards
+Q0071,OT,,Statistical yield analysis
+Q0072,RD,PE,Aligns AI capabilities with enterprise standards across functions; cross-function standard decision
+Q0073,OT,,Uses AI tools in daily work within existing standards
+Q0074,OT,,Process improvement and automation
+Q0075,OT,,Uses AI tools in daily work within existing standards
+Q0076,OT,,Automation for compliance monitoring
+Q0077,AO,,Supplies content so AI systems represent it accurately
+Q0078,PE,,Sets governance standards for GenAI solutions others must follow
+Q0079,OT,,AI literacy requirement for candidates
+Q0080,AO,,Builds AI solutions that automate business workflows
+Q0081,OT,,Leverages AI to optimize processes
+Q0082,AO,PE,Agentic prompt engineering and RAG; guardrail best practices set limits
+Q0083,OT,,Uses AI coding tools to solve issues
+Q0084,OT,,Uses AI tools in daily work within existing standards
+Q0085,OT,,Team leadership for AI engineers
+Q0086,OT,,Project lifecycle ownership
+Q0087,AO,,Builds automated evaluation and validation for AI solutions
+Q0088,OT,,Communication and AI literacy plans
+Q0089,OT,,Guiding teams on AI dev tool use for delivery speed
+Q0090,AO,,Tests and deploys AI agents and workflows on Power Platform
+Q0091,OT,,Alert noise reduction for monitoring; not agent rules
+Q0092,OT,,Document workflow process improvement
+Q0093,OT,,Proposes AI solutions; no trade-off or rule decision named
+Q0094,OT,,Translates regulations into customer guidance; applying existing rules
+Q0095,OT,,Data management across sources
+Q0096,OT,,Reusable services and templates
+Q0097,OT,,Automation and tool adoption
+Q0098,PE,,Defines workflow instructions and AI-enabled practices that people follow
+Q0099,OT,,Guiding customers on big data and AI projects
+Q0100,OT,,Opportunity identification for ML and automation
+Q0101,OT,,Team guidance on AI for content and learning
+Q0102,OT,,ML problem solving at scale
+Q0103,PE,,Defines SOPs and audit-ready documentation governing AI-enabled work
+Q0104,OT,,Identifies and shares AI enhancements
+Q0105,OT,,Technical vision and architecture for cloud platform
+Q0106,OT,,Survey of workflows for automation
+Q0107,OT,,Process analysis for AI opportunities
+Q0108,OT,,Capital project automation requirements
+Q0109,OT,,Integrating AI dev tools into workflows
+Q0110,OT,,Bringing AI capabilities into production with partners
+Q0111,OT,,Lifecycle of automation solutions; not agent specific
+Q0112,OT,,Supports legal review of assessments; applying existing rules
+Q0113,OT,,Adoption of AI analytics
+Q0114,OT,,Identifies automation opportunities
+Q0115,AO,,Architects AI agents and workflows on Salesforce
+Q0116,OT,,Input on automation design
+Q0117,OT,,Infrastructure automation pipelines
+Q0118,OT,,Manufacturing control systems
+Q0119,OT,,Uses AI tools to analyze customer environments
+Q0120,OT,,Uses AI agents to streamline workflows
+Q0121,OT,,Network automation and analytics
+Q0122,PE,,Sets logging and data retention controls others rely on for audit
+Q0123,AO,,Monitors production AI solutions for performance failures and risks
+Q0124,OT,,Unit and automation tests
+Q0125,OT,,Trains CX team for AI adoption
+Q0126,OT,,ML on big data for customer experience
+Q0127,OT,,Test automation skills
+Q0128,AO,,Translates customer challenges into agentic solutions
+Q0129,OT,,Uses AI tools in daily work within existing standards
+Q0130,OT,,Tracks frontier AI technology and prototypes
+Q0131,OT,,Architectural direction for data and AI delivery
+Q0132,OT,,ML anomaly detection on data
+Q0133,PE,AO,Checks that AI gateway policy matches requests; verification of agent policy enforcement
+Q0134,OT,,Automation of manual processes
+Q0135,OT,,ML platform system architecture
+Q0136,OT,,AI-enabled workflows and productivity
+Q0137,OT,,Waste removal service
+Q0138,OT,,Signal processing and ML on sensor data
+Q0139,OT,,Marketing technology ecosystem optimization
+Q0140,OT,,Analyzes technical use cases with LLMs
+Q0141,OT,,Automated reporting and data quality checks
+Q0142,OT,,Automation opportunities including AI workflows
+Q0143,PE,AO,Architects agents with human approval gates and escalation for risk decisions and production changes
+Q0144,OT,,Merchandise handling
+Q0145,OT,,Embeds AI tooling in delivery workflows
+Q0146,OT,,Vendor relationships
+Q0147,OT,,AI tools for failure analysis
+Q0148,OT,,Vague move to AI-native workflow patterns; no explicit rule or agent build
+Q0149,OT,,Evaluates emerging AI technologies
+Q0150,OT,,Uses AI for task efficiency and insight
+Q0151,OT,,SOC design flow review and automation upgrades; no agent rule
+Q0152,OT,,Keeping current and certifications
+Q0153,AO,PE,Monitors LLM drift and hallucination; triggered routing changes set which model handles requests
+Q0154,OT,,Process optimization with partners
+Q0155,OT,,Product vision and roadmap for AI healthcare
+Q0156,PV,PE,Access pattern analysis maps who can access what and finds entitlement gaps; role design follows
+Q0157,OT,,IAM mentorship and architecture guidance
+Q0158,AO,,Builds platform for teams to create and manage AI agents
+Q0159,AO,,Productionizes models and GenAI capabilities
+Q0160,OT,,ML research on vaccine immune data
+Q0161,OT,,Architecture of air-gapped AI platform
+Q0162,OT,,Uses AI productivity tools
+Q0163,PE,,Establishes engineering standards and reference implementations other teams adopt
+Q0164,OT,,Experimentation and POCs
+Q0165,OT,,AI tools for permit preparation
+Q0166,AO,,Builds evaluation testing and observability for AI systems
+Q0167,OT,,Architecture reviews and guidance; not stated as approval gate
+Q0168,OT,,Product lifecycle ownership for AI solutions
+Q0169,AO,,Builds production AI application backends
+Q0170,AO,,Builds platform capabilities enabling autonomous agent workflows
+Q0171,OT,,Uses AI dev tools for development tasks
+Q0172,PE,,Develops SOPs and SLAs that set supplier performance limits others follow
+Q0173,OT,,Integrates runbooks and bots for remediation
+Q0174,AO,,Builds AI evaluation and MLOps platform capabilities
+Q0175,OT,,Subject matter lead for AI and data strategy
+Q0176,OT,,Workday integrations and automation
+Q0177,OT,,Sets technical direction for agent platform team
+Q0178,OT,,Reusable automation solutions
+Q0179,OT,,Library functionality for AI workloads performance
+Q0180,AO,,Verifies AI-assisted outputs for quality and reliability
+Q0181,OT,,Business case and strategy for digital growth
+Q0182,OT,,Uses AI-assisted tools for productivity
+Q0183,OT,,Embeds AI tooling in development
+Q0184,OT,,Big data and AI project delivery for customers
+Q0185,OT,,Pioneers AI-enabled delivery approaches
+Q0186,OT,,Design trends and AI awareness
+Q0187,OT,,R&D AI strategy; no trade-off or rule decision named
+Q0188,OT,,Cross-functional automation and AI projects
+Q0189,OT,,Mentoring on AI-assisted development
+Q0190,OT,,Prototyping with GenAI tools
+Q0191,OT,,CI/CD and deployment platform infrastructure
+Q0192,OT,,Business cases for AI security platform
+Q0193,AO,,Creates MCP servers packaging AI capabilities for agents
+Q0194,OT,,Change enablement for marketing teams
+Q0195,OT,,AI-assisted testing techniques
+Q0196,OT,,Knowledge sharing in support team
+Q0197,OT,,AI-augmented SDLC pipeline for automation and efficiency
+Q0198,OT,,Data solutions for AI use cases
+Q0199,OT,,Automation and self-service to reduce effort
+Q0200,AO,,Builds core architecture for AI-native security operations automation
+Q0201,OT,,Ensures business cases reflect operational data
+Q0202,OT,,Leads AI and automation pilots
+Q0203,OT,,Advises on AI opportunities in payments
+Q0204,OT,,Advisory on adoption patterns; no rule set by the role
+Q0205,OT,,Data connections and AI capability delivery
+Q0206,OT,,Uses AI tools for research and reporting
+Q0207,OT,,Partners on decision systems in fulfillment; not a rule set
+Q0208,OT,,Model throughput and cost optimization for AI infrastructure
+Q0209,OT,,Interfaces for building automation
+Q0210,OT,,Technical decision-making including where to apply AI
+Q0211,PE,,Owns SDLC stage gates and acceptance criteria that others rely on
+Q0212,OT,,Uses AI tools in daily work within existing standards
+Q0213,OT,,Leads consultants for customer adoption
+Q0214,OT,,Strategic direction for automation team
+Q0215,OT,,Identifies AI use cases to reduce routine tasks
+Q0216,OT,,Translates customer needs into requirements
+Q0217,OT,,Process design and automation for controller
+Q0218,RD,,Recommendations balance innovation against accountability in governance frameworks; trade-off stated
+Q0219,OT,,Uses AI to improve productivity with existing oversight
+Q0220,OT,,Reusable IaC for provisioning AI workloads
+Q0221,OT,,Builds AI and HPC infrastructure
+Q0222,PE,,Designs human review workflows and confidence-based routing that set when AI acts alone
+Q0223,AO,,Deploys AI models into production and integrates them
+Q0224,OT,,Analytical data models
+Q0225,OT,,Product introduction and manufacturing for AI hardware
+Q0226,OT,,Coordinates scientists and engineers
+Q0227,OT,,AI-first developer workflow within platform limits
+Q0228,OT,,System enhancements and process automation
+Q0229,AO,,Implements production-ready AI and ML solutions
+Q0230,OT,,Commercialization strategy for AI products
+Q0231,OT,,Vulnerability remediation automation
+Q0232,OT,,Evaluates tooling for quality analytics
+Q0233,PE,,Sets cross-team interfaces and resolves dependencies across AI teams
+Q0234,OT,,Mentoring developers
+Q0235,AO,,Builds and tests AI-assisted workflows for evidence collection and validates them
+Q0236,AO,,Integrates and operates AI solutions safely
+Q0237,OT,,AI and data tools for process optimization
+Q0238,OT,,Uses AI tools; identifies opportunities for AI-enabled resources
+Q0239,OT,,AI fluency and culture
+Q0240,PE,,Business cases must include HIPAA and keep clinicians in care decisions; sets human involvement requirement
+Q0241,PE,,Manages IAM network boundaries quotas and data flow controls for AI services
+Q0242,OT,,Uses AI tools as operator
+Q0243,OT,,Data pipelines for decisions
+Q0244,OT,,Deal-level AI subject matter expertise
+Q0245,OT,,Enterprise AI product strategy buy versus build; no trade-off stated
+Q0246,OT,,ERP automation with AI
+Q0247,OT,,Uses AI across lifecycle with existing validation and privacy controls
+Q0248,AO,,Hands-on building of operators and controllers
+Q0249,RD,PE,Gives risk-based guidance balancing innovation against regulatory and risk requirements; trade-off stated
+Q0250,OT,,Controls assessment and automation
+Q0251,OT,,Leads use case identification with customers
+Q0252,OT,,Writes code in several languages
+Q0253,PE,,Defines SRE standards and automated qualification gates for production services
+Q0254,OT,,Identifies AI opportunities with stakeholders
+Q0255,OT,,Database operations collaboration
+Q0256,AO,,Co-designs AI-enhanced threat detection workflows
+Q0257,OT,,Shared platform libraries
+Q0258,OT,,APIs and backend services
+Q0259,AO,,Automates a process through AI agents
+Q0260,OT,,Portfolio narrative alignment
+Q0261,AO,,Supports LLM application and GenAI integration
+Q0262,PE,,Designs data flows and AI harness interfaces between finance and engineering
+Q0263,OT,,Code quality practices
+Q0264,OT,,Incident response and RCA; not agent specific
+Q0265,OT,,Relationship building with teams and vendors
+Q0266,OT,,Uses AI sales tools
+Q0267,OT,,Billing implementation for AI clients
+Q0268,OT,,DevOps practices for data assets
+Q0269,OT,,Applies AI tools across engineering lifecycle
+Q0270,OT,,Uses AI tools for integration solutions
+Q0271,PE,,Architects AI gateway access controls and governance
+Q0272,OT,,Uses AI code generation with review
+Q0273,OT,,Legacy script modernization
+Q0274,PE,,Sets which AI platforms and agents are approved and how they may be used
+Q0275,OT,,Builds ML models for fraud and abuse detection
+Q0276,OT,,Promotes AI-assisted development practice
+Q0277,AO,,Builds retrieval algorithms supplying data to LLMs
+Q0278,OT,,Cross-business technology synergies
+Q0279,OT,,Relationship ownership for AI for Science
+Q0280,OT,,Automation refactoring
+Q0281,OT,,Customer service
+Q0282,OT,,Waste removal service
+Q0283,OT,,Automation for compliance monitoring
+Q0284,OT,,Integrations with retail technology providers
+Q0285,OT,,MLOps automation practices
+Q0286,OT,,Direction for AI in documentation tooling
+Q0287,AO,,Designs AI-driven workflow engines replacing orchestration chains
+Q0288,OT,,Forecasting with AI tools
+Q0289,OT,,Improves AI-driven legal tools
+Q0290,OT,,Network architecture for AI capabilities
+Q0291,PE,,Sets the standard for AI-native platform engineering that teams follow
+Q0292,OT,,Emerging technology integration
+Q0293,OT,,AI tools for defect analysis
+Q0294,AO,,Designs agent prompts reasoning and tool calls
+Q0295,OT,,Platform automation for consistency
+Q0296,OT,,Product vision for model serving platform
+Q0297,OT,,Workday modernization
+Q0298,OT,,Automation tooling use
+Q0299,OT,,Documents AI-augmented methods
+Q0300,OT,,Industry trend assessment for investment
+Q0301,AO,,Architects and delivers agentic and LLM-powered applications
+Q0302,OT,,Competitive positioning and evangelism
+Q0303,OT,,Consulting offerings development
+Q0304,OT,,Feasibility scoping and roadmap for agentic projects; no rule set
+Q0305,OT,,Uses AI tools for engineering problem solving
+Q0306,AO,PE,Stands up LLMOps eval harnesses and serving; cost and quality guardrails set limits
+Q0307,OT,,Waste removal service
+Q0308,AO,,Builds evaluation testing and observability for AI systems
+Q0309,OT,,Automation frameworks and IaC
+Q0310,OT,,Training audit staff on tools
+Q0311,OT,,Performance research on networking hardware
+Q0312,OT,,Front-end interfaces to AI and enterprise systems
+Q0313,OT,,CI/CD and IaC practices
+Q0314,OT,,Leads AI platform engineering team
+Q0315,PE,,Sets architecture standards and design review practices others follow
+Q0316,OT,,Client experience and advisor education
+Q0317,OT,,Communications strategy
+Q0318,OT,,Embeds AI tooling in engineering workflows
+Q0319,OT,,Industrial automation project lifecycle
+Q0320,OT,,CI/CD support
+Q0321,OT,,Sales operations support
+Q0322,OT,,Data platform automation
+Q0323,OT,,Exploring AI-driven training personalization
+Q0324,OT,,Engineering excellence practices
+Q0325,OT,,Observability trend assessment
+Q0326,AO,,Builds platform capabilities for developing and managing AI agents
+Q0327,OT,,Customer data and AI delivery on platform
+Q0328,AO,,Designs AI-ready data structures supplying content to RAG and agents
+Q0329,OT,,Waste removal service
+Q0330,OT,,Workload profiling for bottlenecks
+Q0331,OT,,Applies existing compliance standards to platforms
+Q0332,PE,,Defines and promotes improved standards and operating models for the job area
+Q0333,AO,,Builds AI-powered enterprise applications
+Q0334,AO,,Architects agentic systems with LLM reasoning and tool orchestration
+Q0335,OT,,Process standardization and automation knowledge
+Q0336,OT,,Identifies and shares AI enhancements
+Q0337,AO,,Builds LLM processing for unstructured data and personalization
+Q0338,OT,,Prioritizes capability investments with leaders; no rule set
+Q0339,OT,,Embeds AI tooling in delivery
+Q0340,OT,,Self-healing automation for toil reduction
+Q0341,PE,AO,Agent-facing APIs and event backends set interfaces between agents and systems
+Q0342,OT,,Secure cloud platform hosting agentic workloads
+Q0343,PE,,Defines approvals change management and lifecycle controls for AI governance
+Q0344,OT,,Uses AI development tools
+Q0345,AO,,Builds AI DevOps pipeline for experimentation and iteration
+Q0346,OT,,Uses AI tools for productivity
+Q0347,OT,,Applies governed AI for pricing and analysis
+Q0348,OT,,Identifies and deploys AI solutions for efficiency
+Q0349,OT,,Executive communications on AI transformation
+Q0350,OT,,Speeds GenAI delivery lifecycle
+Q0351,OT,,Explains product fit to organizations
+Q0352,OT,,Product demonstrations
+Q0353,PE,,Defines KRIs escalation protocols and control thresholds for AI risk
+Q0354,AO,,Builds infrastructure to customize generative AI models
+Q0355,OT,,Industry participation
+Q0356,OT,,Data engineering expertise
+Q0357,OT,,Uses AI coding assistants
+Q0358,OT,,Candidate prototype requirement
+Q0359,OT,,Uses AI tools for productivity
+Q0360,OT,,Uses AI engineering tools
+Q0361,OT,,Applies existing data protection and governance guidelines
+Q0362,OT,,Automation utilities and libraries
+Q0363,OT,,Identifies and shares AI enhancements
+Q0364,OT,,Evaluates AI and automation adoption
+Q0365,OT,,Lead AI strategy on customer engagements
+Q0366,OT,,BI and analytics solutions
+Q0367,OT,,Training content
+Q0368,PE,,Defines fallback and error behaviour for AI features; hand-off when AI fails
+Q0369,PE,,Refines tollgate framework that gates automation projects
+Q0370,OT,,Lab techniques
+Q0371,OT,,Analytical products with ML
+Q0372,PE,,Coordinates interfaces between automation civil and MEP teams
+Q0373,OT,,Evaluates building systems
+Q0374,OT,,Testing strategies for solution quality
+Q0375,OT,,ML tooling and serving infrastructure
+Q0376,OT,,Leads platform teams for agent infrastructure
+Q0377,OT,,Cloud data platform services
+Q0378,AO,PE,Designs agent logic tool calls and orchestration; deterministic guardrails set limits
+Q0379,AO,,Designs advanced agentic systems for lab automation
+Q0380,OT,,Development and automation tasks
+Q0381,OT,,Explores technologies
+Q0382,OT,,Helps move AI solutions into production
+Q0383,OT,,Infrastructure automation pipelines
+Q0384,OT,,Partners with security on AI solutions
+Q0385,OT,,Partners on AI transformation
+Q0386,OT,,Leads AI initiatives in commercial operations
+Q0387,AO,,Architects distributed systems powering AI agents
+Q0388,OT,,Translates security workflows into platform interfaces
+Q0389,PV,,Finds gaps between how performance data is collected and reported and how it should be
+Q0390,OT,,Interfacing with automation controls
+Q0391,OT,,Scales AI solutions across sites
+Q0392,OT,,Integration patterns for AI capabilities
+Q0393,OT,,Demonstrates systems as one platform
+Q0394,OT,,Security culture aligned to AI risks
+Q0395,AO,,Builds LLM-enabled applications
+Q0396,OT,,Mentoring and AI-native practice
+Q0397,OT,,Uses AI to resolve merge conflicts
+Q0398,OT,,ML models for bioreactor prediction
+Q0399,OT,,Continuous improvement
+Q0400,OT,,Assesses ML methods for clinical development
+Q0401,AO,,Implements agentic sales workflows in CRM
+Q0402,OT,,Automation solutions for provisioning and remediation
+Q0403,PE,,Security architecture reviews gate designs against enterprise standards
+Q0404,OT,,Mentoring designers
+Q0405,OT,,Aligns implementations with customer strategies
+Q0406,OT,,Distribution automation adaptation
+Q0407,OT,,Vision statement for agentic ML
+Q0408,OT,,Partnering across teams
+Q0409,OT,,Coaching engineers on AI adoption
+Q0410,OT,,Learns to evaluate AI output limitations
+Q0411,OT,,Proof of concept
+Q0412,OT,,Identifies AI opportunities with leaders
+Q0413,OT,,Project execution
+Q0414,OT,,Architecture engagements
+Q0415,OT,,Oversees analysts
+Q0416,OT,,Finance automation with RPA and AI
+Q0417,PV,PE,Maps rules exceptions data dependencies and human decision points before choosing an automation approach
+Q0418,OT,,Escalates exceptions surfaced by AI review under existing rules
+Q0419,OT,,Accelerates AI workloads
+Q0420,OT,,Customer delivery on Databricks
+Q0421,OT,,On-site client embedding
+Q0422,OT,,Engineering delivery practices
+Q0423,AO,,Integrates GenAI into personalization and decisioning
+Q0424,OT,,Integrates AI into failure analysis
+Q0425,AO,,Builds GenAI platforms and SDKs for engineering teams
+Q0426,OT,,Digital transformation
+Q0427,OT,,Tests for platform quality
+Q0428,OT,,Integrates AI tools into team methods
+Q0429,OT,,Market monitoring with AI research tools
+Q0430,PE,,Establishes engineering practices for agentic AI development applied across workforce
+Q0431,OT,,Certifications and learning
+Q0432,OT,,Uses AI tools for analysis
+Q0433,OT,,Visibility across AI initiatives
+Q0434,OT,,Executes CI/CD pipelines
+Q0435,OT,,Champions AI-first methodology
+Q0436,OT,,Uses AI coding agents in daily work
+Q0437,OT,,Technical leadership and mentorship
+Q0438,OT,,Uses AI tools in modeling
+Q0439,OT,,Uses AI tools for cost studies
+Q0440,PE,,Defines how AI agents are provisioned governed monitored and decommissioned
+Q0441,PE,,RPA governance documentation standards and intake rules
+Q0442,OT,,Builds analytical and ML solutions
+Q0443,OT,,Cost reduction through automation
+Q0444,AO,,Supports monitoring and fixing of deployed AI capabilities
+Q0445,AO,,Integrates GenAI into business solutions
+Q0446,OT,,Embeds AI into sales workflows for capacity
+Q0447,OT,,Mailbox automation exploration
+Q0448,OT,,Prepares HR datasets for ML
+Q0449,OT,,ML models for design validation
+Q0450,AO,,Integrates LLM providers and vector stores into RAG workflows
+Q0451,PE,,Sets vendor accountability terms beyond SLAs for innovation and outcomes
+Q0452,OT,,Uses AI-assisted workflows for investigation
+Q0453,OT,,Market intelligence and partnerships
+Q0454,OT,,Diagnoses customer hiring needs before deploying agents
+Q0455,OT,,Applies AI tools to facilities performance
+Q0456,AO,,Prototypes template systems using agentic tools and node-based workflows
+Q0457,OT,,Kubernetes test infrastructure
+Q0458,OT,,Integration reliability as APIs evolve
+Q0459,OT,,Trend tracking
+Q0460,OT,,Scaling systems through automation
+Q0461,PE,,Embeds AI security controls into development deployment and monitoring workflows others must follow
+Q0462,OT,,Clinical design grounding for AI capabilities
+Q0463,OT,,Identifies and shares AI enhancements
+Q0464,OT,,Consolidates documents into one search with AI teams
+Q0465,OT,,Legacy reporting modernization
+Q0466,OT,,Uses AI to automate build workflow
+Q0467,OT,,Uses AI-assisted tools for coding
+Q0468,OT,,Integrates AI and data solutions across teams
+Q0469,OT,,Executive communication of AI data ROI
+Q0470,OT,,Full-stack apps and automation services
+Q0471,AO,,Delivers end-to-end AI solutions with architects and engineers
+Q0472,OT,,Lead developer for code scanning platform
+Q0473,OT,,Automation system modifications
+Q0474,OT,,Uses agentic coding tools
+Q0475,AO,,Drives improvement of deployed AI-powered solutions using performance and feedback
+Q0476,AO,,Validates AI-assisted outputs
+Q0477,OT,,Analytics modernization
+Q0478,AO,,Builds agent workflows prompt strategies and evaluation criteria from inventions
+Q0479,OT,,Identifies and shares AI enhancements
+Q0480,OT,,Customer service
+Q0481,OT,,Applies AI tools across lifecycle
+Q0482,OT,,HA and failover architecture; infrastructure not agent rule
+Q0483,AO,,Monitors production AI applications against SLOs
+Q0484,PE,,Drives adoption of technology standards and frameworks and reviews team work against them
+Q0485,OT,,Merchandise handling
+Q0486,OT,,Integrates AI platforms with cloud and enterprise environments
+Q0487,AO,,Oversees design of AI and GenAI solutions
+Q0488,OT,,Platform automation and monitoring
+Q0489,OT,,Transformation portfolio and PMO
+Q0490,OT,,Containerizes applications
+Q0491,OT,,Champions TDD and AI tooling
+Q0492,OT,,Scopes agentic tooling investments for toil reduction
+Q0493,AO,,Builds agentic applications and assistants
+Q0494,OT,,Partner enablement on roadmap
+Q0495,OT,,Continuous improvement
+Q0496,OT,,Evaluates and pilots agentic AI
+Q0497,OT,,Cloud solution integration design
+Q0498,OT,,Regional automation roadmap
+Q0499,OT,,Identifies gaps between business needs and technology; no rule named
+Q0500,OT,,Ensures compliance with existing IP and responsible AI requirements
+Q0501,OT,,Vendor relationship management
+Q0502,AO,,Hands-on design and orchestration of agentic workflows
+Q0503,OT,,AI tools for insight generation
+Q0504,OT,,Client enablement and collateral
+Q0505,OT,,Future-state inspection strategy
+Q0506,PE,AO,Designs orchestration layer routing hand-offs between AI agents
+Q0507,OT,,Validation methodologies and automation frameworks
+Q0508,OT,,Owns code quality regardless of author; applies existing review
+Q0509,OT,,Technology use for intern programs
+Q0510,OT,,DevSecOps practices
+Q0511,OT,,API integrations to identity infrastructure
+Q0512,OT,,Evaluates AI-assisted workflows
+Q0513,OT,,Collects success stories
+Q0514,AO,,Develops AI-powered operational assistants
+Q0515,AO,,Architecture of AI-native security operations automation
+Q0516,AO,,Leads agentic AI solution development
+Q0517,OT,,AI-enabled tools for engineering productivity
+Q0518,OT,,Competitive monitoring
+Q0519,OT,,Tax reporting automation
+Q0520,PE,,Sets reference architectures and coding standards for AI features that teams adopt
+Q0521,AO,,Integrates LLM frameworks into reliability workflows
+Q0522,AO,,Prototypes and productionizes GenAI use cases with prompt engineering
+Q0523,AO,,Ensures AI platforms are secure observable and production-ready
+Q0524,OT,,Scalable ML products
+Q0525,OT,,Builds reporting tooling for toil reduction
+Q0526,OT,,Analyses test automation results
+Q0527,OT,,Migration automation through approved release interfaces
+Q0528,OT,,Refresh methodology and process efficiency
+Q0529,OT,,Infrastructure automation and monitoring
+Q0530,PE,,Defines and implements AI governance frameworks policies and procedures
+Q0531,OT,,Waste removal service
+Q0532,AO,,Builds full-stack LLM applications
+Q0533,OT,,Cyber defense against AI-enabled risks
+Q0534,OT,,Drives AI-first practices
+Q0535,OT,,Backend services for digital measurement
+Q0536,OT,,Dashboard prototype
+Q0537,OT,,Reporting standardization and reuse
+Q0538,AO,,Makes content accessible to AI assistants so they surface it
+Q0539,OT,,AI for onboarding and engagement
+Q0540,PE,,Sets access controls and responsible AI controls for AI workloads
+Q0541,OT,,Automation and reusable tooling
+Q0542,OT,,Waste removal service
+Q0543,AO,PE,Versions models and prompts and monitors; deployment gating sets approval conditions
+Q0544,OT,,AI fluency and judgment
+Q0545,OT,,Vulnerability reporting automation
+Q0546,OT,,Power management design-in
+Q0547,OT,,Prioritizes roadmap by business impact
+Q0548,OT,,Backend services for AI-enabled products
+Q0549,AO,,Integrates trained models into services and UIs
+Q0550,AO,,Builds and tests GenAI with RAG and agent workflows
+Q0551,OT,,Controls and automation for equipment
+Q0552,OT,,AI-assisted root cause analysis for yield
+Q0553,OT,,Leads customers on AI transformation
+Q0554,OT,,Evaluates AI for vaccine research
+Q0555,OT,,Product prioritization for AI platform adoption
+Q0556,OT,,Incident response and postmortems; not agent specific
+Q0557,OT,,Sustains existing capabilities
+Q0558,OT,,AI-driven drafting and localisation workflows
+Q0559,OT,,Store team supervision
+Q0560,OT,,Platform scalability for analytics and AI
+Q0561,OT,,Customer readiness and change management
+Q0562,OT,,Understanding customer AI strategies
+Q0563,OT,,AI development workflows for firmware
+Q0564,OT,,Governance dashboards for reporting
+Q0565,OT,,Cloud AI and ML solutions
+Q0566,OT,,Robotics and vision systems
+Q0567,PE,,Pre-engagement gatekeeping and readiness criteria before handover
+Q0568,AO,,Builds agentic AI workflows reducing manual effort
+Q0569,OT,,Waste removal service
+Q0570,AO,,Builds distributed systems powering AI agents
+Q0571,AO,,Builds prompt engineering framework
+Q0572,OT,,Workflow automation capabilities
+Q0573,OT,,Pilots AI capabilities for analysts
+Q0574,OT,,Cross-functional AI workflow creation
+Q0575,OT,,Technical leadership on data modeling and prompts
+Q0576,OT,,Identifies AI business opportunities
+Q0577,OT,,Troubleshoots AI environments generally
+Q0578,OT,,Public narrative on responsible AI
+Q0579,OT,,Data and automation maturity
+Q0580,OT,,Analytics and NLP for intelligence
+Q0581,OT,,Designs AI capabilities and leads initiatives
+Q0582,OT,,Trend tracking
+Q0583,OT,,AI infrastructure platform components
+Q0584,OT,,ML models for structured and unstructured data
+Q0585,OT,,Integration between enterprise platforms
+Q0586,PE,,Owns CI/CD quality gates that release decisions depend on
+Q0587,AO,,Builds automation that helps engineers and AI agents work safely
+Q0588,PE,,Establishes governance guardrails and standards for selling AI
+Q0589,OT,,Data lifecycle for AI readiness
+Q0590,OT,,Reviews deliverables from AI teams
+Q0591,OT,,Lab templates and automation
+Q0592,PE,,Builds AI security intake risk tiering control requirements and approved-tool guardrails
+Q0593,OT,,Lab systems automation
+Q0594,OT,,Evaluates AI tools for policy-compliant use
+Q0595,OT,,Cloud security support including AI
+Q0596,RD,PE,Cross-functional AI governance decides backlog priority and risk management trade-offs
+Q0597,OT,,Customer issue responses
+Q0598,AO,,Troubleshoots and root-causes agentic platform failures
+Q0599,OT,,Issue resolution
+Q0600,OT,,Chaos testing automation tools

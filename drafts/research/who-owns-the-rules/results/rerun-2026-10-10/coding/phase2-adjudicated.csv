@@ -1,0 +1,81 @@
+id,code1,code2,reason
+Q0543,AO,,Applying MLOps versioning/gating/monitoring to models; applies practice rather than setting a rule others rely on
+Q0523,AO,,Making AI platforms secure/observable/production-ready; build and operate work with no rule set
+Q0586,OT,,Test automation frameworks and CI quality gates for software; not agents and no rule on people or agents
+Q0077,OT,,How content is represented in AI-mediated discovery; no agent operations or rules
+Q0261,AO,,Building LLM applications
+Q0451,OT,,Vendor accountability management
+Q0538,OT,,SEO and crawlability work for AI assistants; not operating an agent
+Q0456,OT,,Uses agentic tools to produce templates; no agent built and no rule set
+Q0487,AO,,Overseeing build of AI/ML solutions
+Q0080,AO,,Contributing to AI solutions for workflow automation
+Q0506,AO,,Designing an orchestration layer for agents; technical infrastructure with no permission or hand-off rule named
+Q0045,AO,,Integrating AI to process telemetry
+Q0174,AO,,Platform for AI evaluation and lifecycle; build/monitor work
+Q0200,AO,,Architecture for AI security automation
+Q0484,OT,,Adopting engineering standards and code review; applies existing standards and is not about agents
+Q0153,AO,,Monitoring LLM drift and triggering retraining/routing
+Q0169,AO,,Building AI applications
+Q0159,AO,,Productionizing models
+Q0223,AO,,Deploying and integrating AI models
+Q0262,AO,,Designing AI harnesses and data flows with finance users
+Q0128,AO,,Building agentic solutions for customers
+Q0229,AO,,Implementing production AI solutions
+Q0378,AO,PE,Builds agents (AO) and sets deterministic guardrails that limit what agents may do (PE)
+Q0027,OT,,Environment governance for DEV/QA/PROD; not agent rules
+Q0570,AO,,Building systems that power agents
+Q0372,OT,,Engineering-discipline coordination
+Q0034,AO,,Building LLM search features
+Q0249,OT,,Risk guidance on use cases names a trade-off but no rule/limit change; applies policy
+Q0240,OT,,Accounting for existing regulatory requirements in business cases; applies rules
+Q0306,AO,PE,Building LLMOps evaluation and monitoring (AO); cost and quality guardrails set limits on AI workloads (PE)
+Q0051,AO,,Building LLM-based analytical systems
+Q0403,OT,,Security architecture reviews for alignment with existing standards; applies rules
+Q0256,AO,,Co-designing AI threat-detection workflows
+Q0417,PV,,Mapping rules exceptions and human decision points in a process before automation
+Q0287,AO,,Replacing orchestration chains with AI workflow engines
+Q0248,OT,,Platform engineering build work; no agent
+Q0065,AO,,Building AI solutions on Vertex
+Q0515,AO,,Architecture for AI security automation (duplicate of Q0200)
+Q0098,OT,,Putting tool guidance into training materials and tracking adoption
+Q0277,AO,,Retrieval that supplies content to LLMs
+Q0387,AO,,Building systems that power agents
+Q0291,OT,,Vague standard-setting for platform engineering practice
+Q0445,AO,,Integrating GenAI into solutions
+Q0315,OT,,Design reviews and reliability practices; not agents or rules
+Q0010,AO,,Building GenAI platforms
+Q0450,AO,,Building RAG retrieval workflows
+Q0354,AO,,Tooling to customize and tune GenAI models
+Q0218,OT,,Recommendations that inform investment; no rule decision
+Q0395,AO,,Building LLM applications
+Q0274,OT,,Driving adoption of approved tools within policy; applies rules
+Q0046,AO,,Deploying models and agents on device
+Q0032,AO,,Building customer AI solutions
+Q0368,PE,AO,Fallback and error experiences set the hand-off conditions for an AI feature (PE); also steering features (AO)
+Q0475,AO,,Improving AI solutions from feedback
+Q0060,OT,,Using AI to support research methods
+Q0170,AO,,Platform capabilities for agent workflows
+Q0341,AO,,Agent-facing APIs and backend; technical interfaces with no rule named
+Q0389,OT,,Using AI to find gaps in data reporting; the gaps are not rules
+Q0063,AO,,Evaluation methodology and quality bar are tests (boundary rule: AO)
+Q0082,AO,,Prompt engineering and RAG expertise; guardrail best practice is advice and sets no rule
+Q0180,OT,,Verifying AI-assisted outputs against existing standards
+Q0471,AO,,Delivering AI solutions
+Q0332,OT,,General process and standards improvement; not agent rules
+Q0021,OT,,Aligning AI standards with existing enterprise requirements; no specific permission or limit set
+Q0549,AO,,Integrating models into services
+Q0066,AO,,Prompt engineering and routing
+Q0337,AO,,Applying LLMs to data processing
+Q0532,AO,,Building AI applications
+Q0425,AO,,Building GenAI platforms and SDKs
+Q0333,AO,,Building AI applications
+Q0072,OT,,Aligning AI capabilities with existing governance; applies rules
+Q0133,PE,,Testing that the gateway policy matches the right requests and actions; testing a policy that limits agent traffic
+Q0037,OT,,Fraud detection services; not operating an agent or setting its rules
+Q0233,OT,,Cross-team delivery coordination
+Q0423,AO,,Integrating GenAI into a product
+Q0028,AO,,Evaluation harness and regression gates are tests (boundary rule: AO)
+Q0476,OT,,Validating outputs and mentoring
+Q0328,AO,,Data structures that supply content to AI and agents
+Q0236,AO,,Integrating and operating AI solutions
+Q0596,PE,,Setting cross-functional AI governance: risk management and model governance rules
