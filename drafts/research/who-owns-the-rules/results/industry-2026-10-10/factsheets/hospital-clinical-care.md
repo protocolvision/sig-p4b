@@ -71,7 +71,7 @@ El Camino Hospital (Mountain View, California) piloted Lockheed's Medical Inform
 24. Wolters Kluwer. "Ten Things Your Joint Commission Surveyor Is Looking For." 2026. https://www.wolterskluwer.com/ja-jp/expert-insights/ten-things-your-joint-commission-surveyor-is-looking-for.
 25. Certiphi Screening. "The Joint Commission's Primary Source Verification Requirements." https://certiphi.com/resource-center/background-screening/the-joint-commissions-primary-source-verification-requirements.
 26. The Joint Commission. Standards FAQ, Medical Staff (MS). https://www.jointcommission.org/standards/standard-faqs/critical-access-hospital/medical-staff-ms/000001440.
-27. Federation of State Medical Boards. "FCVS TJC Principles." Updated October 2017. https://preproduction.fsmb.org/siteassets/fcvs/fcvs_tjc_principles-updated-10_2017-1.pdf.
+27. FSMB (Federation Credentials Verification Service). "FCVS TJC Principles." Updated October 2017. https://preproduction.fsmb.org/siteassets/fcvs/fcvs_tjc_principles-updated-10_2017-1.pdf.
 28. AHRQ PSNet. "Patient Safety and Quality Improvement Act of 2005." https://psnet.ahrq.gov/issue/patient-safety-and-quality-improvement-act-2005.
 29. Mondaq. "Patient Safety and Quality Improvement Act of 2005 Signed into Law." September 9, 2005. https://mondaq.com/unitedstates/consumer/34760/patient-safety-and-quality-improvement-act-of-2005-signed-into-law.
 30. AHRQ PSNet. "ISMP Medication Errors Reporting Program." https://psnet.ahrq.gov/issue/ismp-medication-errors-reporting-program.
