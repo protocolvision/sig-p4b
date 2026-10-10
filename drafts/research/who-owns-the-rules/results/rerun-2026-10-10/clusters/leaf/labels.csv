@@ -1,0 +1,115 @@
+cluster_id,found,label,function_family,business_or_technical,notes
+0,True,"Mixed Asian-language duties across payments, sales, legal, and technical roles",other,mixed,Multilingual (zh/ja) mix of unrelated functions
+1,False,"Korean-language duties in logistics, analysis, HR, and legal",other,mixed,"Korean-language mix of logistics, data, HR, legal, finance"
+2,True,Configure and support SAP ERP solutions,it/security,technical,
+3,False,Build ML fraud detection and fraud strategy,data/ml,technical,Also includes fraud policy partnership
+4,False,Grow strategic customer accounts and revenue at Stripe,sales/revops,business,Includes some data/product partnership statements
+5,False,Care for animals and deliver veterinary medical care,healthcare/clinical,mixed,Research animal husbandry and companion animal vet care
+6,True,"Spanish/Portuguese maintenance, facilities, and operations procedures and reporting",manufacturing/field,technical,"Spanish/Portuguese mix of maintenance, documentation, ops"
+7,False,"French-language customer relations, sales, and quality nonconformance",other,mixed,"French mix of sales, customer service, quality"
+8,False,Perform other related duties as assigned,other,business,
+9,False,Other duties as assigned,other,business,
+10,True,"Polish-language engineering, vehicle rental, quality, and retail duties",other,mixed,"Polish mix of production, car rental, retail, investigations"
+11,False,"German-language vehicle, materials, retail, and technical support duties",other,mixed,"German mix of retail, technical service, materials"
+12,False,Nordic-language car rental customer service and vehicle prep,customer support,business,Norwegian/Danish rental counter and vehicle cleaning
+13,False,Run pharmacy operations and fill prescriptions,healthcare/clinical,mixed,"Dispensing, patient consultation, store pharmacy management"
+14,False,Provide statistical and scientific support for drug development,healthcare/clinical,technical,"Biostatistics, preclinical, regulatory and drug safety collaboration"
+15,False,Shape patient support and commercial strategy for pharma products,marketing,business,"Patient services, market insight, brand teams"
+16,False,Coordinate member care plans with providers,healthcare/clinical,mixed,"Care management, member education, provider coordination"
+17,False,Document patient care and clinical assessments,healthcare/clinical,technical,Includes medical record coding and utilization review
+18,False,Develop and manage pricing models and strategy,finance,business,
+19,True,Participate in on-call rotations and 24/7 support,it/security,technical,"On-call across IT, field service and emergency services"
+20,False,Maintain accurate CRM and sales activity records,sales/revops,business,
+21,False,"Evaluate, monitor, and govern ML model performance",data/ml,technical,
+22,False,Identify and mitigate business and regulatory risks,other,business,"Risk across enterprise, legal, safety, and reporting"
+23,False,Oversee construction projects and contractors,operations,mixed,"Engineering, construction, and maintenance project oversight"
+24,False,Drive continuous process improvement initiatives,operations,business,
+25,False,Prepare food and support catering and restaurant service,operations,business,"Kitchen, catering, and restaurant support"
+26,False,"Follow food safety, hygiene, and health regulations",manufacturing/field,business,Food safety and hygiene compliance
+27,False,Negotiate commercial contracts and deal terms,legal,business,"Mixes sales deal structuring, legal and procurement contracting"
+28,False,Manage supplier contracts and procurement relationships,procurement,business,
+29,False,Optimize manufacturing processes for efficiency and quality,manufacturing/field,technical,
+30,False,"Travel for meetings, training, and field assignments",other,business,
+31,False,"Run community outreach, events, and local engagement",marketing,business,
+32,False,Schedule calendars and coordinate events and meetings,other,business,Executive assistance and event logistics
+33,False,Build and maintain data pipelines and data systems,data/ml,technical,
+34,False,Validate data quality and ensure reporting accuracy,data/ml,technical,
+35,False,"Handle claims, litigation, and legal dispute resolution",legal,business,Insurance claims and litigation support
+36,False,Track and report KPIs and performance metrics,other,business,"KPIs across operations, product, and customer success"
+37,False,Build dashboards and reporting tools for decisions,data/ml,technical,
+38,False,"Plan, schedule, and coordinate daily work and projects",operations,business,
+39,False,Manage competing priorities in fast-paced environments,other,business,
+40,False,"Prepare forecasts, budgets, and pipeline reporting",finance,business,Sales forecasts and financial planning
+41,False,Train and onboard employees and teams,hr,business,Training materials and delivery for varied staff
+42,False,Deliver HR services and partner with leaders,hr,business,"HR business partnering, shared services, HR systems"
+43,True,Recruit and source talent for open roles,hr,business,
+44,False,Foster culture of accountability and improvement,other,business,Leadership culture statements
+45,False,"Coach, mentor, and develop team members",hr,business,People management and coaching
+46,False,"Foster collaborative, inclusive team environment",other,business,
+47,False,Communicate insights and recommendations to senior leaders,other,business,Presenting analysis and strategy to stakeholders
+48,False,"Plan projects, timelines, budgets, and risks",operations,business,Project management
+49,False,Align stakeholders and drive cross-functional execution,other,business,
+50,False,"Analyze investments, portfolios, and business cases",finance,business,
+51,False,Underwrite and service loans and credit,finance,business,"Loan evaluation, structuring and servicing"
+52,False,Support and coach insurance underwriting,finance,business,Underwriting guidance and training
+53,False,Keep work areas clean and organized,manufacturing/field,business,Cleaning and housekeeping
+54,False,Prepare and monitor budgets and expenses,finance,business,
+55,False,"Perform accounting, journal entries, and period close",finance,business,
+56,False,Process and reconcile vendor invoices,finance,business,Accounts payable
+57,False,"Manage accounts receivable, billing, and collections",finance,business,Includes some AP processing
+58,False,Promote workplace safety culture and leadership,manufacturing/field,business,Safety leadership and EHS
+59,False,Follow safety procedures and use protective equipment,manufacturing/field,business,Individual worker safety compliance
+60,False,Serve as escalation point for complex issues,operations,business,"Escalation across support, incidents, and delivery"
+61,False,Lead incident response and root cause analysis,it/security,technical,Also workplace/medical incident response
+62,False,Maintain technical documentation and records,other,mixed,"Documentation across technical, project, and audit contexts"
+63,False,"Perform laboratory testing, sampling, and quality documentation",manufacturing/field,technical,Lab and QC testing
+64,False,Inspect parts with precision measuring instruments,manufacturing/field,technical,
+65,False,Perform quality inspections to specifications,manufacturing/field,technical,
+66,False,Understand customer needs and drive customer success,customer support,business,Customer success and voice-of-customer
+67,True,"Lead store operations, sales, and retail team",operations,business,Retail store management and merchandising
+68,False,Prevent retail loss and protect store assets,operations,business,Loss prevention
+69,True,Support internal and external audits,finance,business,Audit coordination and documentation
+70,False,Ensure regulatory compliance and policy maintenance,legal,business,Compliance monitoring and policy
+71,False,Answer inbound customer phone calls,customer support,business,
+72,False,Deliver guest service and hospitality experience,customer support,business,Hospitality and food-service guests
+73,False,Provide excellent customer service,customer support,business,
+74,False,Implement automation and operational efficiency solutions,operations,mixed,Engineering automation and process automation
+75,False,"Analyze market, competitor, and pricing insights",marketing,business,Market research and strategy analysis
+76,True,Design and execute software test plans and automation,software engineering,technical,
+77,False,Verify and design semiconductor chips,manufacturing/field,technical,Hardware design verification and silicon development
+78,False,Participate in Agile development ceremonies,software engineering,technical,
+79,False,"Write clean, tested, maintainable code",software engineering,technical,
+80,False,"Code, test, deploy, and maintain applications",software engineering,technical,
+81,False,Troubleshoot and resolve production issues,software engineering,technical,Includes mechanical/electrical troubleshooting
+82,False,Participate in design and code reviews,software engineering,technical,
+83,True,Mentor engineers and provide technical leadership,software engineering,technical,
+84,False,Collaborate with cross-functional teams,other,business,
+85,False,Advise financial advisors and investment clients,finance,business,Wealth advisory and client service
+86,False,"Operate forklifts and load, unload, and move vehicles",manufacturing/field,technical,Warehouse equipment and vehicle transport
+87,False,Build and maintain customer and partner relationships,sales/revops,business,
+88,False,Plan go-to-market and partnership launches,marketing,business,
+89,False,Diagnose and repair electrical and mechanical equipment,manufacturing/field,technical,
+90,False,Design and support electrical substation engineering,manufacturing/field,technical,Electrical engineering and power systems
+91,False,"Coordinate shipping, receiving, and freight logistics",operations,business,
+92,False,Manage inventory and warehouse stock,operations,business,
+93,False,Measure and optimize marketing campaign performance,marketing,mixed,Includes marketing technology engineering
+94,False,Partner on platform engineering roadmaps and integration,software engineering,technical,
+95,False,Translate product vision into technical roadmaps,other,mixed,Product and technology roadmapping
+96,False,Execute marketing programs and brand messaging,marketing,business,
+97,False,Plan territories and accounts to drive sales,sales/revops,business,
+98,False,Grow new and existing customer accounts,sales/revops,business,
+99,False,Repair and maintain vehicles and equipment,manufacturing/field,technical,
+100,False,"Machine, weld, and fabricate parts and tooling",manufacturing/field,technical,
+101,False,Support sales teams with enablement and pre-sales,sales/revops,business,"Sales training, proposals and coordination"
+102,False,Achieve sales targets and revenue goals,sales/revops,business,
+103,False,"Prospect, qualify, and close sales opportunities",sales/revops,business,
+104,False,Identify and develop new business opportunities,sales/revops,business,
+105,False,Build backend services and APIs,software engineering,technical,
+106,False,Architect and operate cloud and Kubernetes infrastructure,it/security,technical,
+107,False,"Build identity, authentication, and access controls",it/security,technical,
+108,False,Partner with cybersecurity to remediate risks and secure systems,it/security,technical,
+109,False,Build and productionize machine learning platforms and pipelines,data/ml,technical,
+110,False,Govern AI systems for compliance and responsible use,data/ml,mixed,"AI governance, risk, legal and privacy collaboration"
+111,True,Assess AI systems for security risk,it/security,technical,
+112,False,Build agentic AI workflows and systems,data/ml,technical,
+113,False,Identify AI use cases and deliver business AI solutions,data/ml,mixed,Business case and technical AI delivery
