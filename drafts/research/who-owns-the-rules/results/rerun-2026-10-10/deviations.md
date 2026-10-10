@@ -184,3 +184,23 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     - employer counts per cluster use discovery members only;
     - when a span repeats within an employer, it is assigned to the posting that comes first in tasks.jsonl
       (deterministic for a fixed file).
+
+17. **Codebook coding by cluster, with record-level seed and validation sample (user direction: efficiency,
+    10 October 2026).** Loop v2 section 6 codes every record with two coders of different models. To
+    avoid about 33,000 × 2 API calls, coding moves to Claude Code agents on the user's account. Fixed
+    before any coding:
+    - **Cluster coding.** Each FOUND cluster is coded from 40 spans: its 20 most central plus 20 random
+      members (seed 20261025). Two independent coders (Sonnet and Haiku agents, each with its own context)
+      give up to two codes (PV, PE, RD, AO, OT) per cluster with a share estimate, using the v2 codebook
+      and boundary rule verbatim. Disagreements are reported, not reconciled.
+    - **Record pool for seeds and validation.** 300 real records (stratified across found clusters and
+      noise, seed 20261026) mixed with the 110 retained v3 seeds. All get neutral ids and real-record
+      fields; `performer` is hidden. The same two coders code every record.
+    - **Gates (as in deviation 6).**
+      - Seed recall ≥ 0.7 per code with Wilson lower bound ≥ 0.5.
+      - Seed precision is reported.
+      - Kappa per code between coders.
+    - **Validation.** On the 300 real records, agreement between a record's own code and its cluster's
+      code is reported per code. This is the information lost by cluster-level coding.
+    - Cluster-level shares replace record counts in every finding that cites codebook counts, and the
+      report says so.
