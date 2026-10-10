@@ -1,0 +1,46 @@
+date,query,engine,results_kept
+2026-10-10,"devopsdays Ghent 2009 October 30 welcome page devopsdays.org",WebSearch,2
+2026-10-10,"""10+ Deploys Per Day: Dev and Ops Cooperation at Flickr"" Velocity 2009 slides",WebSearch,2
+2026-10-10,"2013 State of DevOps report Puppet Labs IT Revolution PDF",WebSearch,1
+2026-10-10,"url=learn.puppetlabs.com/system/files/2013-State-of-Devops-Report.pdf",wayback-available,0
+2026-10-10,"url=puppetlabs.com/wp-content/uploads/2013/03/*; puppetlabs.com/blog/2013-state-of-devops*",wayback-cdx,1
+2026-10-10,"Accelerate State of DevOps 2018 report PDF DORA four key metrics",WebSearch,0
+2026-10-10,"Patrick Debois ""Agile Infrastructure and Operations"" Agile 2008 conference paper",WebSearch,1
+2026-10-10,"query.title=Agile Infrastructure and Operations How Infra-gile are You",crossref-api,1
+2026-10-10,"url=jedi.be/presentations/agile-infrastructure-agile2008.pdf; dev2ops.org/2012/09/*",wayback-cdx,1
+2026-10-10,"AWS Certified DevOps Engineer Professional exam launched 2015 announcement",WebSearch,1
+2026-10-10,"CNCF TAG App Delivery platforms white paper published April 2023 announcement",WebSearch,1
+2026-10-10,"Indeed Hiring Lab ""DevOps engineer"" job postings share trend",WebSearch,0
+2026-10-10,"O*NET ""DevOps Engineer"" sample reported job title occupation code",WebSearch,2
+2026-10-10,"indeed.com/q-Devops-Engineer-jobs.html; indeed.com/jobtrends?q=devops; simplyhired q-devops (2009-2014)",wayback-cdx,2
+2026-10-10,"simplyhired.com/a/jobs/list/q-devops prefix (2009-2011); indeed.com/q-devops prefix",wayback-cdx,1
+2026-10-10,"devops (all time) explore",google-trends-api,0
+2026-10-10,"DevOps Institute ""SRE Foundation"" certification launched 2019 press release",WebSearch,1
+2026-10-10,"indeed/simplyhired site reliability engineer (2010-2017); google.com/support/jobs (2005-2007)",wayback-cdx,0
+2026-10-10,"site reliability engineer",onet-keyword-search,1
+2026-10-10,"Bundesdatenschutzgesetz 1977 betrieblicher Datenschutzbeauftragter § 28 Bundesgesetzblatt Text",WebSearch,2
+2026-10-10,"""chief privacy officer"" first appointed 1999 OR 2000 New York Times article",WebSearch,2
+2026-10-10,"isc2.org (1996-1998)",wayback-cdx,1
+2026-10-10,"""chief compliance officer"" compliance programs of investment companies (2003-12 to 2004-01)",federalregister-api,0
+2026-10-10,"bls.gov/soc/* (2000-2003); bls.gov/oes/2000/oes131041.htm",wayback-cdx,0
+2026-10-10,"""prompt engineer"" job title obsolete 2025 postings decline Indeed OR LinkedIn data",WebSearch,3
+2026-10-10,"Washington Post February 2023 ""prompt engineer"" Riley Goodside Scale AI hottest new job",WebSearch,3
+2026-10-10,"""webmaster"" job title history 1994 1995 first webmaster term origin decline web developer",WebSearch,2
+2026-10-10,"""Certified Internet Webmaster"" CIW certification launched 1997 OR 1998 ProsoftTraining",WebSearch,1
+2026-10-10,"simplyhired q-site+reliability / q-data+scientist / q-webmaster / q-prompt+engineer; indeed q-site-reliability / q-data-scientist",wayback-cdx,4
+2026-10-10,"DJ Patil ""Building Data Science Teams"" 2011 ""Jeff Hammerbacher and I"" title data scientist",WebSearch,1
+2026-10-10,"dbt ""What is an analytics engineer"" Michael Kaminsky Locally Optimistic 2019",WebSearch,1
+2026-10-10,"LinkedIn 2017 US Emerging Jobs Report machine learning engineer data scientist growth PDF",WebSearch,1
+2026-10-10,"Glassdoor 2016 ""50 Best Jobs in America"" data scientist number one median base salary press release",WebSearch,1
+2026-10-10,"Cleveland 2001 ""Data Science: An Action Plan for Expanding the Technical Areas of the Field of Statistics"" International Statistical Review PDF",WebSearch,2
+2026-10-10,"INFORMS Certified Analytics Professional launched 2013 OR ""Cloudera Certified Professional: Data Scientist"" 2013 announcement",WebSearch,1
+2026-10-10,"""2018 Standard Occupational Classification"" (OMB)",federalregister-api,1
+2026-10-10,"""Standard Occupational Classification"" revision 2018 (2014-01-01 to 2017-10-01)",federalregister-api,1
+2026-10-10,"Neil McElroy 1931 brand man memo Procter & Gamble May 13 1931 text",WebSearch,2
+2026-10-10,"Low Fullerton 1994 ""Brands, Brand Management, and the Brand Manager System: A Critical-Historical Evaluation"" Journal of Marketing Research diffusion of brand manager system",WebSearch,3
+2026-10-10,"Ben Horowitz ""Good Product Manager/Bad Product Manager"" Netscape 1996 original memo a16z",WebSearch,1
+2026-10-10,"Scott Cook Procter & Gamble brand management lessons Intuit founder interview Stanford",WebSearch,1
+2026-10-10,"HBR 1960s ""product manager"" system diffusion industrial companies Ames ""Payoff from product management"" 1963",WebSearch,0
+2026-10-10,"responsive web designer",onet-keyword-search,1
+2026-10-10,"policy as code",onet-keyword-search,0
+2026-10-10,"repos open-policy-agent/opa; chef/chef; puppetlabs/puppet; prometheus/prometheus",github-api,2

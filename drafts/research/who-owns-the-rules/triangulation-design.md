@@ -187,3 +187,33 @@ In `results/rerun-2026-10-10/`:
 - DevOps is itself ongoing; its later features (D4) are judged from about fifteen years of history.
 - Coders and historians share model knowledge of how DevOps turned out; feature coding is blind to pattern
   names to limit this, not to remove it.
+
+## Addendum A (10 October 2026, before any present-day coding)
+
+Added after the round-1 signatures (`results/rerun-2026-10-10/signatures.csv`, 133 cells: 88 P, 6 R, 39 NF)
+and before any Corpus B evidence was coded. No present-day evidence had been coded or read for features
+when this was written.
+
+1. **Signatures supersede section 2's wording.** The DevOps features in section 2 were written before the
+   historian's work. The evidence contradicts two of them: open tooling came before the first community
+   (D3), and the rename came about 14 years after 2009, not about 10 (D4). The scored profiles are the
+   historian's, not section 2's.
+2. **Power check.** On the 14 features observable within about three years, a present identical to the
+   DevOps profile beats the next pattern (scarcity boom, P4) by 0.05, against the 0.15 margin in section
+   6.3. With simulated coding noise, H-DevOps could come top but could never be "supported". The test as
+   written could not support the hypothesis.
+3. **Fixes.**
+   - (a) Round 2 of the signatures splits the late features into early and late halves and adds early
+     discriminators (N20–N24), with the same source rules.
+   - (b) **Scoring.** score = 1 − mean |present − pattern| over the features that are graded (not NF) in
+     the pattern and observable now. yes = 1, partial = 0.5, no = 0.
+   - (c) **Margin.** The margin is set by simulation on the final signatures, before coding. Each pattern
+     is taken in turn as the truth. Coding noise is q = 0.2: each feature moves one step with probability
+     0.2. The margin is the smallest value at which a pattern that is not the truth reaches "supported" in
+     no more than 5% of 2,000 runs, across all truths.
+   - (d) **Families.** Any patterns whose ideal profiles are still within that margin on observable
+     features form a family. The verdict is first given for the family, then within it as "not yet
+     distinguishable", with the features that would separate them and a date to check them.
+   - (e) Section 6.3's fixed 0.15 is replaced by (c). Section 6.4 still applies.
+4. The simulation script and its output are committed with the round-2 signatures, before step 2 of
+   section 6.
