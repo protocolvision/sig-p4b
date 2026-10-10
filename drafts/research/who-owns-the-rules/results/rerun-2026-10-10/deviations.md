@@ -146,3 +146,10 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       - **If agreement fails, the fallback is decided now:** Sonnet extracts all selected postings, and
         the clean check judges Sonnet-only. Consensus is not used for postings, because consensus cost
         recall in speech.
+
+15. **I3 period postings: DevOps only for the posting-language comparison.** Archive access (CDX
+    rate-limited; the availability-API retry found only PJM 2010 pages) gave DevOps 60 postings
+    (2011–2016), trading controls 17 and grid 5. The posting-language comparison (embedding similarity and
+    duty bundles, design section 3) uses DevOps only. For trading and the grid, I3 relies on dated rule
+    texts (I4) and the signature timelines, and their few postings are illustrative. If CDX access
+    returns before synthesis, one more collection pass is attempted.
