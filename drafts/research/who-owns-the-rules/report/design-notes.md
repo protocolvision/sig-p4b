@@ -59,3 +59,22 @@ Landmarks and one h1; focusable scroll regions with labels; SVGs carry `role="im
 
 - The page is rendered by script; with JavaScript off it is empty. The site rule is "no JS", so the final report should be pre-rendered at build time (run the same script once and save the DOM) before publishing.
 - Head-to-head feature labels are single-line SVG text; keep names under about 40 characters.
+
+## Backlog: method walkthrough figure (user request, 10 October 2026)
+
+An animated, scroll-driven figure showing how the data was transformed, so a reader can grasp the
+method intuitively. It is placed in the closing method note, or as a short "how we did it" figure after
+the lead findings. Steps:
+1. **Corpus and sample:** crawled postings → selected postings (dots grouped by employer type and sector).
+2. **Extraction:** postings split into duty statements (counts animate).
+3. **Embedding and clusters:** statements move into a 2D map and settle into clusters; discovery and
+   holdout halves side by side.
+4. **Coding:** clusters coloured by code family, with the hidden seeds shown being caught (or missed).
+5. **Analysis:** clusters fold into the headline findings (absorption vs new titles; functions combined).
+
+**Data needed:**
+- the funnel counts from log.md;
+- 2D UMAP coordinates for a stratified sample of about 3,000 statements, with cluster ids;
+- cluster code families;
+- seed outcomes.
+Use real data only. Respect reduced motion (show the final state).
