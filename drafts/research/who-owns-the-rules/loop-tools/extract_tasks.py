@@ -80,7 +80,10 @@ def submit(a):
     client = anthropic.Anthropic()
     d = run_dir(a.run)
     docs = load_docs(a.input)
-    state = {"model": a.model, "input": str(pathlib.Path(a.input).resolve()), "batches": []}
+    bad = [doc["id"] for doc in docs if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", doc["id"])]
+    if bad:
+        sys.exit(f"{len(bad)} ids are not valid batch custom_ids ([A-Za-z0-9_-], 1-64 chars), e.g. {bad[0]}")
+    state ={"model": a.model, "input": str(pathlib.Path(a.input).resolve()), "batches": []}
     for i in range(0, len(docs), BATCH_SIZE):
         chunk = docs[i : i + BATCH_SIZE]
         reqs = [

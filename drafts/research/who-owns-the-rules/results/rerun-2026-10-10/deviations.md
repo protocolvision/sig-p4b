@@ -29,3 +29,10 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    of each `needs-browser` or `failed` source (status `ok-wayback`). The text header records the snapshot
    URL and date. An archived copy may differ from the version round one cited; claims checked against one
    cite the snapshot. Only sources with no usable copy go to the browser.
+
+5. **Extraction check by a clean agent, not a person.** Triangulation design section 5 says "a person checks 50
+   records by hand before analysis". At the user's direction (10 October 2026), a fresh Opus agent does the
+   check instead: a model family different from both extractors (Haiku, Sonnet), with no design files,
+   hypotheses or codebook in its context, only the 50 sampled records and their source texts. It judges
+   verbatim match, whether each span is a task, the performer label, and missed tasks (precision and a recall
+   estimate). Limitation: a model checking models can share their blind spots; field work is the human check.
