@@ -1,6 +1,6 @@
 # Who owns the rules? How new roles emerge, and the question a business has to ask
 
-Research draft, v5 (after five review rounds) · 10 October 2026 · Protocols for Business · for review before any post
+Research draft, v6 (five review rounds, plus seniority) · 10 October 2026 · Protocols for Business · for review before any post
 
 > **Status.** Working notes, not for publication. Sources were found through web search on 10 October
 > 2026, but this environment could not open the pages themselves. Facts marked **(S)** come from
@@ -30,7 +30,9 @@ Research draft, v5 (after five review rounds) · 10 October 2026 · Protocols fo
 **What the lineages suggest.** A role emerges when a cost lands between functions and someone senior asks
 who answers for it. In our sample, roles that lasted met three conditions: the trade-off is permanent rather than a
 migration; nobody already owns it; and something outside the role keeps asking, with a number the role
-controls. Otherwise the work moves into existing roles, as it did in most of our cases.
+controls. Otherwise the work moves into existing roles, as it did in most of our cases. Roles that lasted mostly
+started with junior or mid-level practitioners, whose authority came from a rule a senior sponsor signed
+(section 6); senior-first hires mostly signalled a transition and faded.
 
 **The question set.** In our reconstructions, lasting roles answered a question of this shape:
 
@@ -198,6 +200,7 @@ would have asked at that stage, as we reconstruct it.
 | Governance, risk and compliance (GRC) engineer | about 2024 | Our compliance evidence is collected by hand once a year. Who turns controls into code? | A manifesto and vendor career guides; sources disagree on whether it's a title or a capability (S)[^grc] |
 | Named agent owner | 2025–26 | Who manages each agent's lifecycle? | Analyst recommendation, not a title (S)[^forrester] |
 | Agent supervisor | 2026 | Who oversees agents doing work people used to do? | Gartner expects infrastructure staff to shift to supervising agents (S)[^gartner] |
+| AI agent manager | 2025–26 | Who sets agents' tasks, reviews their output and handles the exceptions they can't? | Defined in *Harvard Business Review* by Srinivasan and Wei; no standard title, no senior track (S)[^agentmgr] |
 
 All but one of these questions name the technology. In our sample (section 6), roles like that were
 usually short-lived, though roles tied to infrastructure, like database administrator, lasted. Only the GRC engineer's question names a recurring cost.
@@ -290,6 +293,41 @@ shows they can still mislead: in 2016 its conflict looked permanent.
    countable cost (an error budget, fraud losses, a brand's profit), a regulator or auditor, or customers who
    demand it. Roles held up only by a sponsor (the Chief Knowledge Officer, the Chief Digital Officer)
    faded when the sponsor moved on.
+
+### Who held new roles first
+
+Most roles that lasted began with junior or mid-level practitioners and grew upward. Most roles that began
+as senior hires faded.
+
+| Role | First holders | Seniority at the start | Lasted? |
+| --- | --- | --- | --- |
+| Brand man (1931) | McElroy was 26; P&G recruited brand assistants straight from university (S)[^pgbrand] | Junior | Yes |
+| Spreadsheet analyst | Analysts and associates in finance teams (M) | Junior | Yes, inside finance |
+| Webmaster | Often whoever knew HTML (M) | Junior to mid | Split |
+| SRE (2003) | A senior lead; engineers hired at the normal engineering bar (S)[^sre] | Mid, under a senior lead | Yes |
+| DevOps | Sysadmins and developers, from the grassroots (S)[^devops] | Mid | Yes |
+| Social media manager | Mid-level managers (Eliason, Monty's "Communications Manager" title); mass hiring junior, "intern-tier" (S)[^revelio] | Junior to mid | Yes |
+| Data scientist | Practitioners, many young PhDs (M) | Mid | Yes |
+| Prompt engineer | Practitioners, well paid, not executives | Mid | Absorbed |
+| Forward-deployed engineer | Palantir hires new graduates as "Deltas" (S)[^fdegrad] | Junior to mid | Growing |
+| CISO (1995) | Katz, on a board mandate | Senior | Yes: the exception |
+| Chief Knowledge, Digital and Diversity Officers; metaverse leads | Executives | Senior | Faded |
+| Chief AI Officer | Executives | Senior | Too early to tell |
+
+**Two readings.** Senior-first hires are how companies signal a transition, and transitions end.
+Practitioner roles are how a capability becomes routine, and they grow a senior layer later: brand men
+became brand managers and then chief marketing officers; data science got chief data officers above it;
+SRE got vice presidents. The CISO shows the other route: a visible loss, a board mandate and later
+regulation can create a senior role directly.
+
+**Authority came from an agreement, not from rank.** The early SRE could stop launches because Google's
+error budget policy, approved in advance by the people who make the business decision, said so (S).[^ebpolicy]
+The brand man's authority came from answering for one brand's profit. In both cases a senior sponsor
+signed the rule once, and practitioners applied it every day. For protocol work, the equivalent would be
+an amendment rule and an autonomy budget signed by the COO, applied by practitioners.
+
+Caveat: the seniority of early holders is partly from memory, and junior roles that faded leave even fewer
+traces than senior ones.
 
 **Counter-examples to keep in view.**
 
@@ -497,3 +535,7 @@ That is the likelier outcome in most companies, as it was for the DPO.
 [^cab]: Nicole Forsgren, Jez Humble and Gene Kim, *Accelerate: The Science of Lean Software and DevOps* (IT Revolution, 2018), as summarized in "Change-Advisory Board," *Wikipedia*, https://en.wikipedia.org/wiki/Change-advisory_board, and "Change Advisory Boards Don't Work," *Octopus Deploy*, https://octopus.com/blog/change-advisory-boards-dont-work. (S)
 [^dpo]: "GDPR Says Companies Must Have a Data Privacy Officer," *SHRM*, citing an Association of Corporate Counsel survey (2018), https://www.shrm.org/topics-tools/employment-law-compliance/gdpr-says-companies-must-data-privacy-officer; IAPP, "Outsourcing Your DPO," https://www.iapp.org/resources/article/series-outsourcing-your-dpo. (S)
 [^hf]: OpenAI, "The Hugging Face Incident and the Road Ahead," 2026, https://openai.com/index/hugging-face-incident-and-the-road-ahead/; the group's first reading of the year. (S)
+[^pgbrand]: "The History of Procter & Gamble's Brand Strategy," *LiveAbout*, https://www.liveabout.com/market-research-history-brand-management-at-pandg-2297141; "Deb Henretta," *Wikipedia*, https://en.wikipedia.org/wiki/Deb_Henretta (hired as a brand assistant after her master's in 1985). (S)
+[^fdegrad]: Palantir, "Forward Deployed Software Engineer, New Grad," https://jobs.lever.co/palantir/2e6b0ac8-83e9-4be5-a3aa-cf319f751728; "Dev versus Delta: Demystifying Engineering Roles at Palantir," https://blog.palantir.com/dev-versus-delta-demystifying-engineering-roles-at-palantir-ad44c2a6e87. (S)
+[^ebpolicy]: Google, *The Site Reliability Workbook*, "Implementing SLOs" and Appendix B, "Example Error Budget Policy," https://sre.google/workbook/implementing-slos/. (S)
+[^agentmgr]: Suraj Srinivasan and Vivienne Wei, on the "agent manager," *Harvard Business Review*, as summarized at https://blog.theinterviewguys.com/what-an-ai-agent-manager-actually-does/; titles and hiring in "AI Agent Manager Jobs in 2026," https://www.aicodex.to/articles/agent-operator-job-market-2026. (S)
