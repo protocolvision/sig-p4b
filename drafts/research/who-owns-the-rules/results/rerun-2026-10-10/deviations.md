@@ -286,3 +286,13 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     - it also checks 40 random records that both coded OT;
     - final speech codes = the agreed codes, plus the adjudicated codes for disagreements;
     - kappa is reported as measured, and the both-OT check is reported as a miss rate.
+
+23. **Feature coders' inputs limited to the neutral write-ups and tables (before any feature coding).** The
+    leak check finds pattern words inside RAW data files: posting text in `clusters/*.csv`, and the I3 data
+    files, where one history is labelled with a pattern name. The feature-coding prompt's input list is
+    narrowed to:
+    - `instruments/I1.md` … `I6.md` and `instruments/I*-tables.csv`;
+    - `corpus-b/filings-*.csv`.
+    The raw cluster and I3 data files are excluded; I2.md and I3.md summarise them neutrally.
+    `leak_check.py` scans exactly this list, and coding starts only when it is clean. I5c (community and
+    tooling dates, specified in A.2 but not yet collected) is collected first and summarised into I5.md.

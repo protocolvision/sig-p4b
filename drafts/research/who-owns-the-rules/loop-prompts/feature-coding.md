@@ -20,6 +20,8 @@ change. Call this **agent work**. Any job title used mainly for agent work is an
 
 ## Inputs
 
+(Narrowed by deviation 23: only `instruments/I1.md` to `I6.md`, `instruments/I5c.md`, `instruments/I*-tables.csv` and `corpus-b/filings-*.csv`. Do not open `clusters/` or any other file.)
+
 Only these files (paths from `results/rerun-2026-10-10/`). Superseded copies whose names end in `-v1` are
 not inputs.
 

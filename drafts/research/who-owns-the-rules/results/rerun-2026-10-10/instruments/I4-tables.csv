@@ -1,0 +1,152 @@
+table,group,rule,metric,value,n,source_id,note
+by_family,trading and markets,,provisions,53,53,,
+by_family,trading and markets,,binding = yes,35,53,,
+by_family,trading and markets,,"names a role, function or body",31,53,,
+by_family,trading and markets,,regulates changes,25,53,,
+by_family,trading and markets,,regulates changes and names a change owner,12,53,,
+by_family,grid operations,,provisions,7,7,,
+by_family,grid operations,,binding = yes,7,7,,
+by_family,grid operations,,"names a role, function or body",7,7,,
+by_family,grid operations,,regulates changes,0,7,,
+by_family,grid operations,,regulates changes and names a change owner,0,7,,
+by_family,AI law and standards,,provisions,37,37,,
+by_family,AI law and standards,,binding = yes,24,37,,
+by_family,AI law and standards,,"names a role, function or body",5,37,,
+by_family,AI law and standards,,regulates changes,4,37,,
+by_family,AI law and standards,,regulates changes and names a change owner,0,37,,
+by_family,lab self-policy,,provisions,13,13,,
+by_family,lab self-policy,,binding = yes,0,13,,
+by_family,lab self-policy,,"names a role, function or body",11,13,,
+by_family,lab self-policy,,regulates changes,3,13,,
+by_family,lab self-policy,,regulates changes and names a change owner,3,13,,
+by_family,platform rule,,provisions,1,1,,
+by_family,platform rule,,binding = yes,1,1,,
+by_family,platform rule,,"names a role, function or body",0,1,,
+by_family,platform rule,,regulates changes,0,1,,
+by_family,platform rule,,regulates changes and names a change owner,0,1,,
+by_rule,platform rule,Amazon Business Solutions Agreement update / Agent Policy (forum notice only),provisions,1,1,C2b7df1f2,binding yes 1; names role 0; regulates changes 0; effective: 4 Mar 2026
+by_rule,lab self-policy,Anthropic Responsible Scaling Policy,provisions,6,6,C72290590; Cf9d2715e,binding yes 0; names role 5; regulates changes 1; effective: Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023); v2.0 15 Oct 2024 to v2.2 14 May 2025
+by_rule,AI law and standards,"Colorado SB26-189 (C.R.S. 6-1-1701 to 6-1-1707), signed act",provisions,3,3,CO-SB26-189-act,"binding yes 3; names role 1; regulates changes 1; effective: Approved 14 May 2026; takes effect 1 Jan 2027, applies to decisions on or after that date"
+by_rule,AI law and standards,EU AI Act (Reg 2024/1689),provisions,18,18,C9b1da45a,binding yes 18; names role 3; regulates changes 2; effective: 2 Aug 2026 as enacted (Chapter IX); Omnibus text read does not move it; 2 Feb 2025 (Chapters I-II); Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+by_rule,AI law and standards,EU AI Act Digital Omnibus (Reg 2026/1744),provisions,3,3,C8b5bc20b,binding yes 3; names role 0; regulates changes 0; effective: Enters into force third day after OJ publication; Enters into force third day after OJ publication (signed 8 Jul 2026; publication date not in text read)
+by_rule,trading and markets,EU Delegated Reg 2017/589 (RTS 6),provisions,25,25,C217f8b25,binding yes 25; names role 12; regulates changes 10; effective: Applies from 3 Jan 2018
+by_rule,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),provisions,3,3,Ceb232737,binding yes 0; names role 3; regulates changes 3; effective: Feb 2018 (publication)
+by_rule,trading and markets,FCA Handbook SYSC 27.7 (certification functions),provisions,1,1,C060d8f5f,binding yes 1; names role 1; regulates changes 0; effective: 10 Dec 2018 (date on SYSC 27.7.3)
+by_rule,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,provisions,3,3,C3db6f9c1,binding yes 0; names role 3; regulates changes 2; effective: Not stated in text
+by_rule,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),provisions,6,6,C07e09d04,binding yes 0; names role 3; regulates changes 2; effective: 26 Mar 2015 (notice date)
+by_rule,trading and markets,"FINRA Regulatory Notice 16-21 (NASD Rule 1032(f), Series 57)",provisions,2,2,C6b47f19f,binding yes 2; names role 2; regulates changes 1; effective: Beginning 30 Jan 2017; Beginning 30 Jan 2017 (SEC approval 7 Apr 2016; notice 6 Jun 2016)
+by_rule,lab self-policy,Google DeepMind Frontier Safety Framework,provisions,3,3,Cd899a8f2; Ce9065d39,binding yes 0; names role 2; regulates changes 1; effective: Latest v3.1 published 17 Apr 2026 (v1.0 17 May 2024)
+by_rule,grid operations,NERC PER-003-2 Operating Personnel Credentials,provisions,1,1,C84c34c54,binding yes 1; names role 1; regulates changes 0; effective: Version 2 adopted 10 May 2018; FERC approved 21 Nov 2018 (version history); text says see Implementation Plan
+by_rule,grid operations,NERC PER-005-2 Operations Personnel Training,provisions,6,6,Cb1d56448,"binding yes 6; names role 6; regulates changes 0; effective: First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+by_rule,AI law and standards,NIST AI 600-1 Generative AI Profile,provisions,4,4,C4c17f4ad,binding yes 0; names role 0; regulates changes 0; effective: July 2024 (voluntary; approved 25 Jul 2024)
+by_rule,AI law and standards,NIST AI RMF 1.0 (AI 100-1),provisions,9,9,C88fe07c0,binding yes 0; names role 1; regulates changes 1; effective: January 2023 (voluntary)
+by_rule,lab self-policy,OpenAI Preparedness Framework v2,provisions,4,4,C3c1aad5c,binding yes 0; names role 4; regulates changes 1; effective: 15 Apr 2025 (Version 2)
+by_rule,trading and markets,PRA SS5/18 Algorithmic trading,provisions,6,6,Cef3dde3f,binding yes 0; names role 5; regulates changes 4; effective: Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+by_rule,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),provisions,7,7,C9e5e0522,"binding yes 7; names role 2; regulates changes 3; effective: 75 FR 69825, 15 Nov 2010 (date printed in the text)"
+totals,rule_type,"law, regulation or supervisory rule",provisions,66,111,,
+totals,rule_type,supervisory guidance,provisions,18,111,,
+totals,rule_type,voluntary standard or framework,provisions,13,111,,
+totals,rule_type,lab self-policy,provisions,13,111,,
+totals,rule_type,platform or commercial rule,provisions,1,111,,
+totals,binding,yes,provisions,67,111,,
+totals,binding,no,provisions,44,111,,
+totals,addressee,investment firm,provisions,53,111,,
+totals,addressee,other,provisions,13,111,,
+totals,addressee,lab itself,provisions,13,111,,
+totals,addressee,provider/developer,provisions,10,111,,
+totals,addressee,deployer/user firm,provisions,8,111,,
+totals,addressee,grid entity,provisions,7,111,,
+totals,addressee,provider/developer; deployer/user firm,provisions,5,111,,
+totals,addressee,deployer/user firm; provider/developer,provisions,1,111,,
+totals,addressee,platform seller,provisions,1,111,,
+totals,names_role,no,provisions,57,111,,
+totals,names_role,yes,provisions,54,111,,
+totals,regulates_changes,no,provisions,78,111,,
+totals,regulates_changes,yes,provisions,32,111,,
+totals,regulates_changes,unclear,provisions,1,111,,
+change_owners_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 5(2),person designated by the senior management of the investment firm,1,C217f8b25,Applies from 3 Jan 2018
+change_owners_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 11,person designated by senior management of the investment firm,1,C217f8b25,Applies from 3 Jan 2018
+change_owners_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 15(6),"designated individual of the investment firm, after verification by the risk management function",1,C217f8b25,Applies from 3 Jan 2018
+change_owners_named,trading and markets,"FINRA Regulatory Notice 16-21 (NASD Rule 1032(f), Series 57)",Securities Trader registration,"associated person primarily responsible for the design, development or significant modification of the algorithm, and the person supervising that work (registered Securities Trader)",1,C6b47f19f,Beginning 30 Jan 2017 (SEC approval 7 Apr 2016; notice 6 Jun 2016)
+change_owners_named,trading and markets,PRA SS5/18 Algorithmic trading,3.2-3.3,"assigned owner of each algorithm; sign-off by Front Office, Risk Management and other control functions",1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+change_owners_named,trading and markets,PRA SS5/18 Algorithmic trading,5 (risk control inventory),person with authority to change the setting of the control; the control owner,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+change_owners_named,trading and markets,PRA SS5/18 Algorithmic trading,6.4-6.5,Risk Management function; person with authority following its instruction,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+change_owners_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),5.7,staff with responsibility for approving deployment and material amendment of trading algorithms (certification function),1,Ceb232737,Feb 2018 (publication)
+change_owners_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),Good practice: deployment,senior management delegate,1,Ceb232737,Feb 2018 (publication)
+change_owners_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),4.9 (good practice),independent risk function; pre-authorised front-line staff within pre-agreed levels,1,Ceb232737,Feb 2018 (publication)
+change_owners_named,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,3.1.4,Senior Management Function (good practice at some firms),1,C3db6f9c1,Not stated in text
+change_owners_named,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,3.3.1,individuals with responsibility for managing pre-trade and post-trade controls,1,C3db6f9c1,Not stated in text
+change_owners_named,lab self-policy,Anthropic Responsible Scaling Policy,Policy changes,"Board of Directors (approves, in consultation with the LTBT); CEO and Responsible Scaling Officer (propose)",1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+change_owners_named,lab self-policy,OpenAI Preparedness Framework v2,Updates to the framework,OpenAI Leadership (final decisions); SAG reviews proposed changes,1,C3c1aad5c,15 Apr 2025 (Version 2)
+change_owners_named,lab self-policy,Google DeepMind Frontier Safety Framework,Framework review and updates,appropriate corporate governance bodies (review of the updated version),1,Ce9065d39,Latest v3.1 published 17 Apr 2026 (v1.0 17 May 2024)
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 1(a),none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),"Art 5(1),(3)-(5)",none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 5(7),none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 8,none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),"Art 13(6),(8)",none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),"Art 15(1),(4)",none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 20(2),none named,1,C217f8b25,Applies from 3 Jan 2018
+changes_regulated_no_owner,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),(c)(1)(i)-(ii),none named,1,C9e5e0522,"75 FR 69825, 15 Nov 2010 (date printed in the text)"
+changes_regulated_no_owner,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),(d),none named,1,C9e5e0522,"75 FR 69825, 15 Nov 2010 (date printed in the text)"
+changes_regulated_no_owner,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),(e)(1),none named,1,C9e5e0522,"75 FR 69825, 15 Nov 2010 (date printed in the text)"
+changes_regulated_no_owner,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),Effective practices: development,none named,1,C07e09d04,26 Mar 2015 (notice date)
+changes_regulated_no_owner,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),Effective practices: post-production,none named,1,C07e09d04,26 Mar 2015 (notice date)
+changes_regulated_no_owner,trading and markets,PRA SS5/18 Algorithmic trading,2.3,none named,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+changes_regulated_no_owner,AI law and standards,EU AI Act (Reg 2024/1689),"Art 17(1)(a),(i)",none named,1,C9b1da45a,Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+changes_regulated_no_owner,AI law and standards,EU AI Act (Reg 2024/1689),Art 43(4),none named,1,C9b1da45a,Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+changes_regulated_no_owner,AI law and standards,"Colorado SB26-189 (C.R.S. 6-1-1701 to 6-1-1707), signed act",6-1-1702(2),none named,1,CO-SB26-189-act,"Approved 14 May 2026; takes effect 1 Jan 2027, applies to decisions on or after that date"
+changes_regulated_no_owner,AI law and standards,NIST AI RMF 1.0 (AI 100-1),MANAGE 4.1,none named,1,C88fe07c0,January 2023 (voluntary)
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 1(c),risk control function; compliance function,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 2(1)-(2),compliance staff,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 3(4),risk and compliance staff,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 5(2),person designated by the senior management,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 9(2)-(3),risk management function; internal audit function; senior management,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 11,person designated by senior management,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),"Art 13(6),(8)",compliance function; monitoring staff,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 15(3),designated staff member,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 15(6),designated individual; risk management function,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 16(2)-(3),trader in charge of the algorithm; independent risk control function,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),Art 16(4),staff members in charge of real-time monitoring,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,EU Delegated Reg 2017/589 (RTS 6),"Art 17(1),(5)",traders responsible for the algorithm; risk control function,1,C217f8b25,Applies from 3 Jan 2018
+roles_named,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),(c)(2)(iv),appropriate surveillance personnel,1,C9e5e0522,"75 FR 69825, 15 Nov 2010 (date printed in the text)"
+roles_named,trading and markets,SEC Rule 15c3-5 (17 CFR 240.15c3-5),(e)(2),Chief Executive Officer (or equivalent officer),1,C9e5e0522,"75 FR 69825, 15 Nov 2010 (date printed in the text)"
+roles_named,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),Effective practices: committee,cross-disciplinary committee,1,C07e09d04,26 Mar 2015 (notice date)
+roles_named,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),Effective practices: testing,independent testing (quality assurance) function,1,C07e09d04,26 Mar 2015 (notice date)
+roles_named,trading and markets,FINRA Regulatory Notice 15-09 (algorithmic trading supervision),Effective practices: compliance,supervisory and compliance staff,1,C07e09d04,26 Mar 2015 (notice date)
+roles_named,trading and markets,"FINRA Regulatory Notice 16-21 (NASD Rule 1032(f), Series 57)",Securities Trader registration,Securities Trader (registered person),1,C6b47f19f,Beginning 30 Jan 2017 (SEC approval 7 Apr 2016; notice 6 Jun 2016)
+roles_named,trading and markets,"FINRA Regulatory Notice 16-21 (NASD Rule 1032(f), Series 57)",Supervisory assignment,Securities Trader Principal or Securities Trader,1,C6b47f19f,Beginning 30 Jan 2017
+roles_named,trading and markets,PRA SS5/18 Algorithmic trading,2.2,governing body or risk committee,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+roles_named,trading and markets,PRA SS5/18 Algorithmic trading,2.5,Senior Management Function holder(s),1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+roles_named,trading and markets,PRA SS5/18 Algorithmic trading,3.2-3.3,"algorithm owner; Front Office, Risk Management and other control functions",1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+roles_named,trading and markets,PRA SS5/18 Algorithmic trading,5 (risk control inventory),person with authority to change control setting; control owner,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+roles_named,trading and markets,PRA SS5/18 Algorithmic trading,6.4-6.5,Risk Management function,1,Cef3dde3f,Published 15 Jun 2018; expectations effective 30 Jun 2018 (per web page Ce06358c0)
+roles_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),5.7,Algorithmic Trading certification function holder,1,Ceb232737,Feb 2018 (publication)
+roles_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),Good practice: deployment,senior management delegate,1,Ceb232737,Feb 2018 (publication)
+roles_named,trading and markets,FCA Algorithmic Trading Compliance in Wholesale Markets (Feb 2018),4.9 (good practice),independent risk function; pre-authorised front-line staff,1,Ceb232737,Feb 2018 (publication)
+roles_named,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,3.1.4,Senior Management Function (practice at some firms),1,C3db6f9c1,Not stated in text
+roles_named,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,3.3.1,individuals responsible for pre- and post-trade controls,1,C3db6f9c1,Not stated in text
+roles_named,trading and markets,FCA Multi-firm review of algorithmic trading controls: high-level observations,3.1.3,algorithm owner; individuals approved to operate,1,C3db6f9c1,Not stated in text
+roles_named,trading and markets,FCA Handbook SYSC 27.7 (certification functions),SYSC 27.7.3R item (8),Algorithmic trading (FCA certification function),1,C060d8f5f,10 Dec 2018 (date on SYSC 27.7.3)
+roles_named,AI law and standards,EU AI Act (Reg 2024/1689),"Art 14(1),(4)(d)-(e)",natural persons assigned human oversight,1,C9b1da45a,Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+roles_named,AI law and standards,EU AI Act (Reg 2024/1689),Art 14(5),at least two natural persons,1,C9b1da45a,Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+roles_named,AI law and standards,EU AI Act (Reg 2024/1689),Art 26(2),natural persons assigned human oversight,1,C9b1da45a,Chapter III Sections 1-3 apply from 2 Aug 2026 as enacted; Omnibus (Reg 2026/1744) moves to 2 Dec 2027 (Annex III systems) and 2 Aug 2028 (Annex I systems)
+roles_named,AI law and standards,"Colorado SB26-189 (C.R.S. 6-1-1701 to 6-1-1707), signed act","6-1-1701(15), 6-1-1705(1)(a)(II)",individual designated by the deployer,1,CO-SB26-189-act,"Approved 14 May 2026; takes effect 1 Jan 2027, applies to decisions on or after that date"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R1 (1.1-1.4),System Operators,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R2,Transmission Owner personnel who can act independently in real time,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R3 (3.1),personnel assigned real-time tasks,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R4,System Operators and personnel under R1/R2,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R5,Operations Support Personnel,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-005-2 Operations Personnel Training,R6,Generator Operator dispatch personnel,1,Cb1d56448,"First day of first calendar quarter 24 months after regulatory approval; FERC approved 19 Jun 2014 (version history), so about 1 Jul 2016 (computed, not stated)"
+roles_named,grid operations,NERC PER-003-2 Operating Personnel Credentials,R1-R3,NERC-certified System Operator,1,C84c34c54,Version 2 adopted 10 May 2018; FERC approved 21 Nov 2018 (version history); text says see Implementation Plan
+roles_named,AI law and standards,NIST AI RMF 1.0 (AI 100-1),GOVERN 2.3,executive leadership,1,C88fe07c0,January 2023 (voluntary)
+roles_named,lab self-policy,Anthropic Responsible Scaling Policy,Responsible Scaling Officer,Responsible Scaling Officer (RSO),1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+roles_named,lab self-policy,Anthropic Responsible Scaling Policy,CEO and RSO approval of risk reports and deployment,CEO and Responsible Scaling Officer,1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+roles_named,lab self-policy,Anthropic Responsible Scaling Policy,Policy changes,CEO; Responsible Scaling Officer; Board of Directors; Long-Term Benefit Trust (consulted),1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+roles_named,lab self-policy,Anthropic Responsible Scaling Policy,Noncompliance reporting,Responsible Scaling Officer; executive not reporting to RSO; Board member,1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+roles_named,lab self-policy,Anthropic Responsible Scaling Policy,Third-party procedural compliance review,third-party reviewer,1,Cf9d2715e,Latest version v3.4 effective 8 Jul 2026 (first version 19 Sep 2023)
+roles_named,lab self-policy,OpenAI Preparedness Framework v2,Safety Advisory Group,Safety Advisory Group (SAG); SAG Chair,1,C3c1aad5c,15 Apr 2025 (Version 2)
+roles_named,lab self-policy,OpenAI Preparedness Framework v2,OpenAI Leadership,OpenAI Leadership (CEO or designee),1,C3c1aad5c,15 Apr 2025 (Version 2)
+roles_named,lab self-policy,OpenAI Preparedness Framework v2,Board Safety and Security Committee,Safety and Security Committee of the Board,1,C3c1aad5c,15 Apr 2025 (Version 2)
+roles_named,lab self-policy,OpenAI Preparedness Framework v2,Updates to the framework,Safety Advisory Group; OpenAI Leadership,1,C3c1aad5c,15 Apr 2025 (Version 2)
+roles_named,lab self-policy,Google DeepMind Frontier Safety Framework,Governance body approval of response plans and safety cases,appropriate corporate governance body/function (v2.0 names councils),1,Cd899a8f2,Latest v3.1 published 17 Apr 2026 (v1.0 17 May 2024)
+roles_named,lab self-policy,Google DeepMind Frontier Safety Framework,Framework review and updates,appropriate corporate governance bodies,1,Ce9065d39,Latest v3.1 published 17 Apr 2026 (v1.0 17 May 2024)

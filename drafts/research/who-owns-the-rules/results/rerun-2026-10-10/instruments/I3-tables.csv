@@ -1,0 +1,354 @@
+table,group,period,item,metric,value,n,source_id,title,note
+counts,history a: operations and systems-engineering postings,2011,,postings,12,12,,,
+counts,history a: operations and systems-engineering postings,2012,,postings,12,12,,,
+counts,history a: operations and systems-engineering postings,2013,,postings,11,11,,,
+counts,history a: operations and systems-engineering postings,2014,,postings,3,3,,,
+counts,history a: operations and systems-engineering postings,2015,,postings,11,11,,,
+counts,history a: operations and systems-engineering postings,2016,,postings,11,11,,,
+counts,history b: trading systems and risk postings,2007,,postings,6,6,,,
+counts,history b: trading systems and risk postings,2008,,postings,4,4,,,
+counts,history b: trading systems and risk postings,2009,,postings,2,2,,,
+counts,history b: trading systems and risk postings,2010,,postings,3,3,,,
+counts,history b: trading systems and risk postings,2012,,postings,1,1,,,
+counts,history b: trading systems and risk postings,2015,,postings,1,1,,,
+counts,history c: grid control-room postings,2009,,postings,1,1,,,
+counts,history c: grid control-room postings,2010,,postings,3,3,,,
+counts,history c: grid control-room postings,2014,,postings,1,1,,,
+title_family,history a: operations and systems-engineering postings,2011,operations or systems engineer title,postings,6,12,,,
+title_family,history a: operations and systems-engineering postings,2011,systems administrator title,postings,3,12,,,
+title_family,history a: operations and systems-engineering postings,2011,title with development-and-operations compound,postings,3,12,,,
+title_family,history a: operations and systems-engineering postings,2012,operations or systems engineer title,postings,4,12,,,
+title_family,history a: operations and systems-engineering postings,2012,systems administrator title,postings,2,12,,,
+title_family,history a: operations and systems-engineering postings,2012,title with development-and-operations compound,postings,6,12,,,
+title_family,history a: operations and systems-engineering postings,2013,operations or systems engineer title,postings,4,11,,,
+title_family,history a: operations and systems-engineering postings,2013,systems administrator title,postings,3,11,,,
+title_family,history a: operations and systems-engineering postings,2013,title with development-and-operations compound,postings,4,11,,,
+title_family,history a: operations and systems-engineering postings,2014,operations or systems engineer title,postings,1,3,,,
+title_family,history a: operations and systems-engineering postings,2014,title with development-and-operations compound,postings,2,3,,,
+title_family,history a: operations and systems-engineering postings,2015,operations or systems engineer title,postings,2,11,,,
+title_family,history a: operations and systems-engineering postings,2015,systems administrator title,postings,1,11,,,
+title_family,history a: operations and systems-engineering postings,2015,title with development-and-operations compound,postings,5,11,,,
+title_family,history a: operations and systems-engineering postings,2015,title with reliability engineer wording,postings,3,11,,,
+title_family,history a: operations and systems-engineering postings,2016,operations or systems engineer title,postings,2,11,,,
+title_family,history a: operations and systems-engineering postings,2016,systems administrator title,postings,1,11,,,
+title_family,history a: operations and systems-engineering postings,2016,title with development-and-operations compound,postings,6,11,,,
+title_family,history a: operations and systems-engineering postings,2016,title with reliability engineer wording,postings,2,11,,,
+title_family,history a: operations and systems-engineering postings,2011-2016,operations or systems engineer title,postings,19,60,,,
+title_family,history a: operations and systems-engineering postings,2011-2016,systems administrator title,postings,10,60,,,
+title_family,history a: operations and systems-engineering postings,2011-2016,title with development-and-operations compound,postings,26,60,,,
+title_family,history a: operations and systems-engineering postings,2011-2016,title with reliability engineer wording,postings,5,60,,,
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_rules_approval_limits,postings with flag,17,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_risk_compliance_audit,postings with flag,5,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_monitoring_uptime_oncall,postings with flag,18,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_build_deploy_automate,postings with flag,33,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_provisioning_config,postings with flag,19,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_customers_clients,postings with flag,16,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_works_with_developers,postings with flag,16,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,lex_ai_ml_terms,postings with flag,4,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,bg_sysadmin_ops_experience,postings with flag,25,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,bg_software_dev_experience,postings with flag,33,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,bg_degree_mentioned,postings with flag,8,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,bg_years_stated,postings with flag,14,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,pl_ops_team,postings with flag,10,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,pl_eng_team,postings with flag,8,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,pl_compound_team,postings with flag,1,35,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2011-2013,pl_risk_team,postings with flag,0,35,,,"keyword presence, not coded judgement"
+years_stated,history a: operations and systems-engineering postings,2011-2013,lowest years figure in posting,median,5,13,,,postings stating a years figure; implausible parses above 15 dropped
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_rules_approval_limits,postings with flag,13,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_risk_compliance_audit,postings with flag,2,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_monitoring_uptime_oncall,postings with flag,19,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_build_deploy_automate,postings with flag,25,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_provisioning_config,postings with flag,16,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_customers_clients,postings with flag,16,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_works_with_developers,postings with flag,18,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,lex_ai_ml_terms,postings with flag,1,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,bg_sysadmin_ops_experience,postings with flag,16,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,bg_software_dev_experience,postings with flag,24,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,bg_degree_mentioned,postings with flag,5,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,bg_years_stated,postings with flag,12,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,pl_ops_team,postings with flag,5,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,pl_eng_team,postings with flag,3,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,pl_compound_team,postings with flag,3,25,,,"keyword presence, not coded judgement"
+lexical_flags,history a: operations and systems-engineering postings,2014-2016,pl_risk_team,postings with flag,0,25,,,"keyword presence, not coded judgement"
+years_stated,history a: operations and systems-engineering postings,2014-2016,lowest years figure in posting,median,4,11,,,postings stating a years figure; implausible parses above 15 dropped
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_rules_approval_limits,postings with flag,5,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_risk_compliance_audit,postings with flag,6,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_monitoring_uptime_oncall,postings with flag,3,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_build_deploy_automate,postings with flag,4,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_provisioning_config,postings with flag,0,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_customers_clients,postings with flag,10,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_works_with_developers,postings with flag,3,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,lex_ai_ml_terms,postings with flag,3,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,bg_sysadmin_ops_experience,postings with flag,1,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,bg_software_dev_experience,postings with flag,10,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,bg_degree_mentioned,postings with flag,12,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,bg_years_stated,postings with flag,12,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,pl_ops_team,postings with flag,0,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,pl_eng_team,postings with flag,1,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,pl_compound_team,postings with flag,0,17,,,"keyword presence, not coded judgement"
+lexical_flags,history b: trading systems and risk postings,2007-2015,pl_risk_team,postings with flag,3,17,,,"keyword presence, not coded judgement"
+years_stated,history b: trading systems and risk postings,2007-2015,lowest years figure in posting,median,3.0,12,,,postings stating a years figure; implausible parses above 15 dropped
+lexical_flags,history c: grid control-room postings,2009-2014,lex_rules_approval_limits,postings with flag,5,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_risk_compliance_audit,postings with flag,4,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_monitoring_uptime_oncall,postings with flag,3,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_build_deploy_automate,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_provisioning_config,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_customers_clients,postings with flag,2,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_works_with_developers,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,lex_ai_ml_terms,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,bg_sysadmin_ops_experience,postings with flag,3,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,bg_software_dev_experience,postings with flag,1,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,bg_degree_mentioned,postings with flag,4,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,bg_years_stated,postings with flag,4,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,pl_ops_team,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,pl_eng_team,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,pl_compound_team,postings with flag,0,5,,,"keyword presence, not coded judgement"
+lexical_flags,history c: grid control-room postings,2009-2014,pl_risk_team,postings with flag,0,5,,,"keyword presence, not coded judgement"
+years_stated,history c: grid control-room postings,2009-2014,lowest years figure in posting,median,4.0,4,,,postings stating a years figure; implausible parses above 15 dropped
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,bg_sysadmin_ops_experience,postings with flag,7,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,bg_software_dev_experience,postings with flag,12,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,lex_provisioning_config,postings with flag,5,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,lex_monitoring_uptime_oncall,postings with flag,4,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,lex_rules_approval_limits,postings with flag,6,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2011,lex_build_deploy_automate,postings with flag,11,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,bg_sysadmin_ops_experience,postings with flag,10,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,bg_software_dev_experience,postings with flag,12,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,lex_provisioning_config,postings with flag,7,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,lex_monitoring_uptime_oncall,postings with flag,6,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,lex_rules_approval_limits,postings with flag,4,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2012,lex_build_deploy_automate,postings with flag,11,12,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,bg_sysadmin_ops_experience,postings with flag,8,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,bg_software_dev_experience,postings with flag,9,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,lex_provisioning_config,postings with flag,7,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,lex_monitoring_uptime_oncall,postings with flag,8,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,lex_rules_approval_limits,postings with flag,7,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2013,lex_build_deploy_automate,postings with flag,11,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,bg_sysadmin_ops_experience,postings with flag,1,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,bg_software_dev_experience,postings with flag,3,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,lex_provisioning_config,postings with flag,2,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,lex_monitoring_uptime_oncall,postings with flag,3,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,lex_rules_approval_limits,postings with flag,2,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2014,lex_build_deploy_automate,postings with flag,3,3,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,bg_sysadmin_ops_experience,postings with flag,7,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,bg_software_dev_experience,postings with flag,11,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,lex_provisioning_config,postings with flag,5,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,lex_monitoring_uptime_oncall,postings with flag,8,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,lex_rules_approval_limits,postings with flag,6,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2015,lex_build_deploy_automate,postings with flag,11,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,bg_sysadmin_ops_experience,postings with flag,8,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,bg_software_dev_experience,postings with flag,10,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,lex_provisioning_config,postings with flag,9,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,lex_monitoring_uptime_oncall,postings with flag,8,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,lex_rules_approval_limits,postings with flag,5,11,,,
+lexical_flags_by_year,history a: operations and systems-engineering postings,2016,lex_build_deploy_automate,postings with flag,11,11,,,
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_rules_approval_limits,postings with flag,20,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_risk_compliance_audit,postings with flag,13,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_monitoring_uptime_oncall,postings with flag,12,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_build_deploy_automate,postings with flag,30,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_provisioning_config,postings with flag,2,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_customers_clients,postings with flag,20,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_works_with_developers,postings with flag,14,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,lex_ai_ml_terms,postings with flag,30,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,bg_sysadmin_ops_experience,postings with flag,5,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,bg_software_dev_experience,postings with flag,25,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,bg_degree_mentioned,postings with flag,21,30,,,"keyword presence, not coded judgement"
+lexical_flags,today: AI or agent title postings (random 30),2026,bg_years_stated,postings with flag,27,30,,,"keyword presence, not coded judgement"
+years_stated,today: AI or agent title postings (random 30),2026,lowest years figure in posting,median,6,27,,,postings stating a years figure
+today_placement_type,today: AI or agent title postings (random 30),2026,team named with AI wording,postings,13,30,,,
+today_placement_type,today: AI or agent title postings (random 30),2026,not named,postings,9,30,,,
+today_placement_type,today: AI or agent title postings (random 30),2026,existing functional unit,postings,8,30,,,
+today_hire_origin,today: AI or agent title postings (random 30),2026,same function,postings,25,30,,,
+today_hire_origin,today: AI or agent title postings (random 30),2026,adjacent function,postings,3,30,,,
+today_hire_origin,today: AI or agent title postings (random 30),2026,entry level,postings,2,30,,,
+today_ai_experience_asked,today: AI or agent title postings (random 30),2026,yes,postings,23,30,,,
+today_ai_experience_asked,today: AI or agent title postings (random 30),2026,preferred,postings,4,30,,,
+today_ai_experience_asked,today: AI or agent title postings (random 30),2026,no,postings,3,30,,,
+today_function,today: AI or agent title postings (random 30),2026,software engineering,postings,3,30,,,
+today_function,today: AI or agent title postings (random 30),2026,solutions architecture,postings,3,30,,,
+today_function,today: AI or agent title postings (random 30),2026,security architecture,postings,2,30,,,
+today_function,today: AI or agent title postings (random 30),2026,program management,postings,2,30,,,
+today_function,today: AI or agent title postings (random 30),2026,machine learning engineering,postings,2,30,,,
+today_function,today: AI or agent title postings (random 30),2026,customer success,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,solution consulting / enablement,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,engineering management,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,product and program leadership,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,technical pre-sales,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,AI/ML research engineering,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,analytics / data science,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,security research,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,learning and content,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,forward-deployed engineering,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,software engineering (embedded),postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,AI engineering,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,student intern,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,product and program leadership (networking),postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,solution consulting / value engineering,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,scientific research,postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,solution consulting (graduate program),postings,1,30,,,
+today_function,today: AI or agent title postings (random 30),2026,sales,postings,1,30,,,
+reports_to_named,history a: operations and systems-engineering postings,2011-2016,postings naming who the hire reports to,postings,4,60,a-22; a-25; a-29; a-37,,CTO (2); Director of Operations; Systems Admin Team Lead
+reports_to_named,history b: trading systems and risk postings,2007-2015,postings naming who the hire reports to,postings,3,17,b-02; b-04; b-08,,senior Risk Manager; Global Head of Risk for Prime Brokerage (2)
+reports_to_named,history c: grid control-room postings,2009-2014,postings naming who the hire reports to,postings,1,5,c-04,,Manager of State & Member Training
+reports_to_named,today: AI or agent title postings (random 30),2026,postings naming who the hire reports to,postings,2,30,today 3; today 19,,Security Architecture leader; Regional Business Governance & Compliance Director
+posting_hist,history a: operations and systems-engineering postings,2011-01-14,,words after boilerplate removal,454,1,a-01,Distributed Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-02-20,GoSquared,words after boilerplate removal,210,1,a-02,Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-05-14,TRUECar,words after boilerplate removal,359,1,a-03,Work by the Beach! Senior Linux Systems Engineer Wanted!,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-05-31,"VMware, Inc.",words after boilerplate removal,721,1,a-04,Open Source Release Engineer - Cloud Foundry,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-06-01,,words after boilerplate removal,249,1,a-05,Yelp is hiring a Systems Administrator (Corp)!,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2011-06-17,Goldstar,words after boilerplate removal,322,1,a-06,"DevOps Engineer - Chef, Rails, MySQL, Solr, Redis",title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2011-06-19,2 other jobs,words after boilerplate removal,384,1,a-07,Data Operations Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-06-20,2 other jobs,words after boilerplate removal,388,1,a-08,Senior Systems Administrator,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2011-06-27,CrowdFlower,words after boilerplate removal,460,1,a-09,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2011-06-27,2 other jobs,words after boilerplate removal,188,1,a-10,Yelp is hiring a Release Engineer!,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2011-06-27,MyDrive Solutions,words after boilerplate removal,511,1,a-11,"Developers - Ruby, Rails, GIS, C++, Hadoop, devops",title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2011-09-27,LOYAL3,words after boilerplate removal,436,1,a-12,Senior System Administrator,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2012-01-10,Rails Machine,words after boilerplate removal,575,1,a-13,Web Operations Engineers (DevOps),title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-01-15,1 other jobs,words after boilerplate removal,464,1,a-14,Web Operations Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2012-01-26,Zumba Fitness,words after boilerplate removal,666,1,a-15,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-02-09,1 other jobs,words after boilerplate removal,280,1,a-16,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-02-12,A2Z Research & Development,words after boilerplate removal,489,1,a-17,Senior Linux Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2012-05-14,Brooklyn Museum,words after boilerplate removal,427,1,a-18,DevOps Programmer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-05-14,DRH Internet Inc,words after boilerplate removal,353,1,a-19,Linux Sysadmin,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2012-05-19,TIM Group,words after boilerplate removal,642,1,a-20,DevOps System Adminstrator (Linux) Hosted Systems,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-09-20,Reliant Security,words after boilerplate removal,261,1,a-21,Open Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2012-10-08,DonorsChoose.org,words after boilerplate removal,778,1,a-22,Systems Engineer (Technology & User Experience Team),operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2012-10-18,Offerpop,words after boilerplate removal,328,1,a-23,Development Operations Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2012-10-18,Yelp,words after boilerplate removal,432,1,a-24,Systems Administrator (Product),systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Wikimedia Foundation,words after boilerplate removal,964,1,a-25,Tools Lab Operations Engineer (Contractor),operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Meetup,words after boilerplate removal,763,1,a-26,Systems Administrator @ Meetup,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Stroock & Stroock & Lavan LLP,words after boilerplate removal,563,1,a-27,Desktop Systems Engineer eager to implement “Bleeding Edge” Technology,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Wayfair,words after boilerplate removal,674,1,a-28,Windows Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Roboreus Ltd,words after boilerplate removal,644,1,a-29,Linux Systems Administrator,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Atlantic Media Company,words after boilerplate removal,533,1,a-30,Senior Systems Administrator,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Flywheel,words after boilerplate removal,741,1,a-31,Dev Ops Engineer @ Flywheel,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Wetpaint,words after boilerplate removal,909,1,a-32,DevOps Engineer for Wetpaint,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Hangar 162 Productions,words after boilerplate removal,436,1,a-33,iOS Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Action.IO,words after boilerplate removal,470,1,a-34,Dev Ops Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2013-01-20,Braintree,words after boilerplate removal,695,1,a-35,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2014-07-04,Rent The Runway,words after boilerplate removal,348,1,a-36,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2014-08-21,Pagely®,words after boilerplate removal,313,1,a-37,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2014-08-28,2 other jobs,words after boilerplate removal,615,1,a-38,Operations Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2015-03-19,D. E. Shaw Research,words after boilerplate removal,477,1,a-39,Systems Administrator: Supercomputers for Computational Biochemistry,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2015-04-03,Two Sigma Investments,words after boilerplate removal,762,1,a-40,Hardware Operations Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2015-04-20,Dataminr,words after boilerplate removal,586,1,a-41,Site Reliability Engineer,title with reliability engineer wording
+posting_hist,history a: operations and systems-engineering postings,2015-05-10,Verizon,words after boilerplate removal,266,1,a-42,Senior DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2015-05-14,30 other jobs,words after boilerplate removal,458,1,a-43,Database Infrastructure Engineer - MySQL,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2015-05-23,DotCloud,words after boilerplate removal,365,1,a-44,Site Reliability Engineer @ DotCloud,title with reliability engineer wording
+posting_hist,history a: operations and systems-engineering postings,2015-09-06,VM Farms,words after boilerplate removal,722,1,a-45,Linux System Administrator (DevOps),title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2015-10-22,KeyMe Inc,words after boilerplate removal,373,1,a-46,AWS DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2015-10-22,"HERE, a Nokia company",words after boilerplate removal,641,1,a-47,"Build and Tools Engineer - DevOps, Linux, CI, C/C++",title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2015-10-23,SuperAwesome,words after boilerplate removal,604,1,a-48,DevOps || Systems Architect,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2015-10-24,EnerNOC,words after boilerplate removal,764,1,a-49,Site Reliability Engineer,title with reliability engineer wording
+posting_hist,history a: operations and systems-engineering postings,2016-01-01,Help Scout,words after boilerplate removal,1198,1,a-50,DevOps Engineer - EU Timezone,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2016-01-04,relayr,words after boilerplate removal,697,1,a-51,DevOps Engineer for IoT,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2016-01-06,TheLadders,words after boilerplate removal,695,1,a-52,AWS Systems Engineer,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2016-01-11,Auth0,words after boilerplate removal,657,1,a-53,Site Reliability Engineer,title with reliability engineer wording
+posting_hist,history a: operations and systems-engineering postings,2016-01-12,Firetalk,words after boilerplate removal,813,1,a-54,Lead DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2016-01-24,New Relic,words after boilerplate removal,1246,1,a-55,"Site Reliability Engineering, Manager",title with reliability engineer wording
+posting_hist,history a: operations and systems-engineering postings,2016-01-24,Xamarin,words after boilerplate removal,658,1,a-56,Senior Systems Administrator,systems administrator title
+posting_hist,history a: operations and systems-engineering postings,2016-02-20,ABOUT YOU GmbH,words after boilerplate removal,955,1,a-57,Operations Engineer for most exciting E-Commerce project wanted!,operations or systems engineer title
+posting_hist,history a: operations and systems-engineering postings,2016-02-23,New Relic,words after boilerplate removal,968,1,a-58,DevOps Engineer,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2016-02-23,Clevertech,words after boilerplate removal,536,1,a-59,Extraordinary DevOps Leader,title with development-and-operations compound
+posting_hist,history a: operations and systems-engineering postings,2016-02-23,Subtext Media,words after boilerplate removal,563,1,a-60,DevOps Engineer,title with development-and-operations compound
+posting_hist,history b: trading systems and risk postings,2007-02-21,Bloomberg,words after boilerplate removal,214,1,b-01,"BUSINESS MANAGER - FX, DERIVATIVES - TRADING SYSTEMS",
+posting_hist,history b: trading systems and risk postings,2007-03-30,"Ashton Lane Group, Inc",words after boilerplate removal,196,1,b-02,Market Risk Manager,
+posting_hist,history b: trading systems and risk postings,2007-07-05,Roy Talman & Associates,words after boilerplate removal,192,1,b-03,Automated Trading Software Engineer,
+posting_hist,history b: trading systems and risk postings,2007-11-07,Analytic Recruiting Inc.,words after boilerplate removal,250,1,b-04,"Director, Prime Brokerage Risk Management – Southern CT",
+posting_hist,history b: trading systems and risk postings,2007-11-23,DTG Capital Markets,words after boilerplate removal,395,1,b-05,"Quantitative Analysts/Traders for Low, Mid and High-Frequency Proprietary Equity (Cash, Derivatives) Trading/Statistical Arbitrage",
+posting_hist,history b: trading systems and risk postings,2007-11-23,Comprehensive Recruiting,words after boilerplate removal,131,1,b-06,High-Frequency Algorithmic Trading Specialist,
+posting_hist,history b: trading systems and risk postings,2008-01-15,Comprehensive Recruiting,words after boilerplate removal,258,1,b-07,Valuation Risk Control-Commodities,
+posting_hist,history b: trading systems and risk postings,2008-02-15,Analytic Recruiting Inc.,words after boilerplate removal,157,1,b-08,Prime Brokerage Risk Management- New York,
+posting_hist,history b: trading systems and risk postings,2008-02-18,COMPREHENSIVE RECRUITING,words after boilerplate removal,182,1,b-09,Strategist/FX High Frequency Trading,
+posting_hist,history b: trading systems and risk postings,2008-03-21,Analytic Recruiting,words after boilerplate removal,147,1,b-10,"Programmer/Analyst, Mortgage Trading Hedge Fund – CT",
+posting_hist,history b: trading systems and risk postings,2009-08-13,Kforce Professional Staffing,words after boilerplate removal,78,1,b-11,Trading Systems Support Analyst,
+posting_hist,history b: trading systems and risk postings,2009-09-25,Company Confidential,words after boilerplate removal,90,1,b-12,Algorithmic Trading Quantitative Analyst,
+posting_hist,history b: trading systems and risk postings,2010-03-12,Fidessa corporation,words after boilerplate removal,295,1,b-13,Trading Systems Support Analyst,
+posting_hist,history b: trading systems and risk postings,2010-03-26,Company Confidential,words after boilerplate removal,291,1,b-14,Trading Systems Architect,
+posting_hist,history b: trading systems and risk postings,2010-05-20,Prudential,words after boilerplate removal,115,1,b-15,Electronic Trading and Desktop Support,
+posting_hist,history b: trading systems and risk postings,2012-05-03,Citi,words after boilerplate removal,705,1,b-16,E Trading Support Analyst,
+posting_hist,history b: trading systems and risk postings,2015-09-09,Huxley Banking & Financial Services,words after boilerplate removal,160,1,b-17,Trading System Support Engineer,
+posting_hist,history c: grid control-room postings,2009-10-28,Dominion Resources Inc,words after boilerplate removal,595,1,c-01,Control Room Operator III,
+posting_hist,history c: grid control-room postings,2014-06-14,"Etech Hi, Inc.",words after boilerplate removal,253,1,c-02,Power System Operator,
+posting_hist,history c: grid control-room postings,2010-08-03,PJM Interconnection,words after boilerplate removal,906,1,c-03,Master Coordinator- System Operator,
+posting_hist,history c: grid control-room postings,2010-08-03,PJM Interconnection,words after boilerplate removal,863,1,c-04,Sr. Trainer,
+posting_hist,history c: grid control-room postings,2010-08-03,PJM Interconnection,words after boilerplate removal,446,1,c-05,(Sr.) Engineer,
+posting_today,today: AI or agent title postings (random 30),2026,Anthropic,team as stated | placement | function | hire origin | AI experience asked,Customer Success team (Enterprise Tech segment) | existing functional unit | customer success | same function | yes,1,Pgreenhouse_anthropic_5082455008,AI Outcomes Manager,"duties: customer adoption, account planning, change management"
+posting_today,today: AI or agent title postings (random 30),2026,Workday,team as stated | placement | function | hire origin | AI experience asked,Partner AI Experience team (pod with Solution Architecture and Solution Consulting) | team named with AI wording | solution consulting / enablement | same function | yes,1,Pworkday_workday_JR-0108016,Partner AI Solution Consultant Advisor - oCFO,"duties: partner enablement, playbooks, positioning of finance AI features"
+posting_today,today: AI or agent title postings (random 30),2026,IQVIA Holdings,team as stated | placement | function | hire origin | AI experience asked,Security Architecture team; reports to the Security Architecture leader | existing functional unit | security architecture | same function | yes,1,Pworkday_iqvia_R1549373,AI Security Architect,"duties: AI tool intake and security review, governance committee seat, assessment playbooks, regulatory coordination, reporting metrics"
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,Developer Technology (DevTech) organization | existing functional unit | software engineering | same function | preferred,1,Pworkday_nvidia_JR2026967,AI Developer Technology Engineer,duties: performance analysis and optimization of AI algorithms on GPUs
+posting_today,today: AI or agent title postings (random 30),2026,Plaid,team as stated | placement | function | hire origin | AI experience asked,AI Applications team (newly formed) | team named with AI wording | engineering management | same function | yes,1,Pashby_plaid_3b205208-b07b-4acd-8abc-09f0fd0f88f1,"Engineering Manager, AI Applications",duties: lead 4 engineers; build and scale customer-support AI agents
+posting_today,today: AI or agent title postings (random 30),2026,Gusto,team as stated | placement | function | hire origin | AI experience asked,AI product team inside Gusto Retirement | team named with AI wording | software engineering | same function | yes,1,Pgreenhouse_gusto_7986047,"Staff Software Engineer, Retirement AI",duties: ship LLM-powered features
+posting_today,today: AI or agent title postings (random 30),2026,Motorola Solutions,team as stated | placement | function | hire origin | AI experience asked,Design and Tools (D&T) organization; AI & Automation value stream | team named with AI wording | product and program leadership | same function | no,1,Pworkday_motorolasolutions_R65843,Senior AI Product Manager (Hybrid),"duties: own strategy, roadmap and execution of the AI value stream"
+posting_today,today: AI or agent title postings (random 30),2026,Anthropic,team as stated | placement | function | hire origin | AI experience asked,Applied AI team (pre-sales) | team named with AI wording | technical pre-sales | same function | yes,1,Pgreenhouse_anthropic_5409008008,"Applied AI Architect, Strategic Enterprise Tech","duties: technical advising to enterprise customers, content, customer builds"
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,not named | not named | solutions architecture | adjacent function | yes,1,Pworkday_nvidia_JR2027112,"Senior Solution Architect, MLOps - AI Factory",duties: architect and scale GPU AI infrastructure with customers
+posting_today,today: AI or agent title postings (random 30),2026,Analog Devices,team as stated | placement | function | hire origin | AI experience asked,Lorenz Labs | existing functional unit | AI/ML research engineering | same function | yes,1,Pworkday_analogdevices_R265563,"Principal AI/ML Engineer, Deep Agentic Reasoning Engineer (Lorenz Labs)","duties: fine-tuning, reinforcement learning, multi-agent orchestration"
+posting_today,today: AI or agent title postings (random 30),2026,Biogen,team as stated | placement | function | hire origin | AI experience asked,"Predictive Science & AI, US Commercial | team named with AI wording | analytics / data science | same function | yes",1,Pworkday_biibhr_REQ24002,Associate Director - Predictive Science & AI US Commercial,duties: build predictive ML models for commercial teams
+posting_today,today: AI or agent title postings (random 30),2026,Merck,team as stated | placement | function | hire origin | AI experience asked,Security Architecture team | existing functional unit | security architecture | same function | yes,1,Pworkday_msd_R411511,AI Security Architect - Associate Director,"duties: security reviews and risk assessments of AI systems and agents, controls, secure-by-design"
+posting_today,today: AI or agent title postings (random 30),2026,Palo Alto Networks,team as stated | placement | function | hire origin | AI experience asked,not named | not named | security research | same function | preferred,1,Pworkday_paloaltonetworks_JR-018445,Sr Staff Security Researcher (AI-Assisted Vulnerability Research),duties: build AI harnesses for vulnerability discovery and reporting
+posting_today,today: AI or agent title postings (random 30),2026,Expedia Group,team as stated | placement | function | hire origin | AI experience asked,AI Learning & Knowledge Enablement team | team named with AI wording | learning and content | same function | yes,1,Pworkday_expedia_R-109420,"Senior Content Strategist, AI Learning & Knowledge Enablement","duties: content strategy, govern AI-assisted content for accuracy and traceability, standards for others"
+posting_today,today: AI or agent title postings (random 30),2026,ServiceNow,team as stated | placement | function | hire origin | AI experience asked,Applied AI Forward Deployed Engineering team | team named with AI wording | forward-deployed engineering | same function | yes,1,Psmartrecruiters_servicenow_744000149073920,Forward Deployed Solution Engineer – Applied AI FDE,duties: embed with customers; build AI systems; guardrails and data governance in customer environments
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,TensorRT-LLM team | team named with AI wording | software engineering | same function | yes,1,Pworkday_nvidia_JR2022327,"AI Computing Software Development Engineer, TensorRT-LLM",duties: LLM inference software
+posting_today,today: AI or agent title postings (random 30),2026,Motorola Solutions,team as stated | placement | function | hire origin | AI experience asked,AI team within camera systems group | team named with AI wording | software engineering (embedded) | same function | preferred,1,Pworkday_motorolasolutions_R66347,Senior Software Engineer - AI/Computer Vision (Camera Systems),duties: deploy AI models on camera hardware in C++
+posting_today,today: AI or agent title postings (random 30),2026,Ecolab,team as stated | placement | function | hire origin | AI experience asked,not named | not named | AI engineering | same function | yes,1,Pworkday_ecolab_R00305764,AI Engineer,duties: build LLM applications and agentic workflows
+posting_today,today: AI or agent title postings (random 30),2026,Jones Lang LaSalle,team as stated | placement | function | hire origin | AI experience asked,Facilities & Workplace AI portfolio; reports to the Regional Business Governance & Compliance Director | existing functional unit | program management | same function | yes,1,Pworkday_jll_REQ534894,AI Program Manager – Facilities & Workplace (APAC),"duties: portfolio governance, intake, lifecycle gating, approvals tracking, benefits reporting"
+posting_today,today: AI or agent title postings (random 30),2026,Avis Budget Group,team as stated | placement | function | hire origin | AI experience asked,not named (cross-functional) | not named | student intern | entry level | yes,1,Pworkday_avisbudget_R0190563,Accelerate - AI Enablement Intern Summer 2027,duties: identify and implement AI solutions; liaison between technical and non-technical teams
+posting_today,today: AI or agent title postings (random 30),2026,Stripe,team as stated | placement | function | hire origin | AI experience asked,Radar ML team | team named with AI wording | machine learning engineering | same function | yes,1,Pgreenhouse_stripe_8243617,"Machine Learning Engineer, Radar","duties: fraud-detection models, full ML lifecycle"
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,not named | not named | product and program leadership (networking) | same function | no,1,Pworkday_nvidia_JR2023620,"Senior Product Manager, AI Software Defined Networking",duties: product ownership of AI networking software
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,not named | not named | solutions architecture | adjacent function | yes,1,Pworkday_nvidia_JR2022101,"Senior Solutions Architect, Generative AI","duties: accelerate customer workloads, design AI infrastructure"
+posting_today,today: AI or agent title postings (random 30),2026,RTX,team as stated | placement | function | hire origin | AI experience asked,Connected Battlespace Emerging Capabilities (CBEC) business; Trusted AI & Autonomy portfolio | existing functional unit | program management | same function | no,1,Pworkday_globalhr_01875596,"Associate Director, Program Management - Connected Battlespace Emerging Capabilities (CBEC) - Trusted AI & Autonomy CTA Lead (Onsite)",duties: lead strategic development and execution of an AI and autonomy portfolio
+posting_today,today: AI or agent title postings (random 30),2026,Celonis,team as stated | placement | function | hire origin | AI experience asked,not named | not named | solution consulting / value engineering | same function | yes,1,Pgreenhouse_celonis_7993836003,Senior Strategic Solutions Consultant (AI),"duties: proof-of-value projects, LLM/agent systems with guardrails, value selling"
+posting_today,today: AI or agent title postings (random 30),2026,Amgen,team as stated | placement | function | hire origin | AI experience asked,"Research organization, Large Molecule Discovery informatics; AI enablement team | team named with AI wording | scientific research | same function | yes",1,Pworkday_amgen_R-241122,Principal Scientist – AI/ML Workflow & Ecosystem Lead (Large Molecule Discovery Informatics),"duties: lead AI enablement, data standards, model reproducibility and documentation"
+posting_today,today: AI or agent title postings (random 30),2026,Celonis,team as stated | placement | function | hire origin | AI experience asked,Global Value Engineering Center of Excellence (graduate program) | existing functional unit | solution consulting (graduate program) | entry level | preferred,1,Pgreenhouse_celonis_7765677003,Associate (AI) Solution Consultant (DACH) - Orbit Program,"duties: customer engagements, business impact presentations"
+posting_today,today: AI or agent title postings (random 30),2026,Nvidia,team as stated | placement | function | hire origin | AI experience asked,not named | not named | solutions architecture | adjacent function | yes,1,Pworkday_nvidia_JR2024427,Senior Solutions Architect – Large Scale AI Training,duties: support AI labs on large-scale model training
+posting_today,today: AI or agent title postings (random 30),2026,General Mills,team as stated | placement | function | hire origin | AI experience asked,D&T AI and Automation (AIA) organization | team named with AI wording | machine learning engineering | same function | yes,1,Pworkday_genmills_10128326,Sr. D&T Machine Learning Engineer (Agentic Ai),"duties: operationalize agentic and ML platform, proofs of concept, documentation, security and compliance adherence"
+posting_today,today: AI or agent title postings (random 30),2026,Cohesity,team as stated | placement | function | hire origin | AI experience asked,not named (specialist overlay beside field sales teams) | not named | sales | same function | yes,1,Pworkday_cohesity_R04801,Senior AI Sales Specialist,duties: own AI revenue and pipeline
+quote,history,2011-05-14,quote,words,13,1,a-03,,ultimately responsible for making sure our production systems are reliable and perform well.
+quote,history,2011-06-27,quote,words,6,1,a-09,,"Sysadmin experience, whether official or not"
+quote,history,2011-09-27,quote,words,14,1,a-12,,"build and maintain environments that are secure, redundant, high performing, standards compliant, and stable."
+quote,history,2013-01-20,quote,words,11,1,a-31,,"You’ll straddle the worlds of development, operations, release and continuous deployment"
+quote,history,2012-10-08,quote,words,8,1,a-22,,This position will report directly to our CTO
+quote,history,2013-01-20,quote,words,17,1,a-25,,"You will report to the Director of Operations, and will work closely with Operations staff, the Engineering"
+quote,history,2013-01-20,quote,words,8,1,a-29,,Reporting directly to the Systems Admin Team Lead
+quote,history,2015-05-23,quote,words,11,1,a-44,,"Proficiency in Python application development (aka a developer, not a scripter)."
+quote,history,2016-01-01,quote,words,12,1,a-50,,"responsible for working on our three biggest priorities: uptime, security and performance."
+quote,history,2016-01-04,quote,words,12,1,a-51,,"You bring experience and feel comfortable working with both, Developers and Operators"
+quote,history,2012-02-09,quote,words,10,1,a-16,,You will not have to report to any non-engineer managers.
+quote,history,2007-03-30,quote,words,9,1,b-02,,"Designing, measuring, and monitoring market risk and trading limits."
+quote,history,2007-11-07,quote,words,29,1,b-04,,"Reporting to the bank’s Global Head of Risk for Prime Brokerage, this role involves overseeing the establishment and enforcement of the margin risk policy for the bank’s buyside clients."
+quote,history,2008-01-15,quote,words,15,1,b-07,,The position will also require asserting the effectiveness of valuation controls under Sarbanes Oxley 404.
+quote,history,2012-05-03,quote,words,22,1,b-16,,"Ensure incident and problem management, change management and request fulfillment on behalf of customers are carried out to the best levels possible."
+quote,history,2007-07-05,quote,words,12,1,b-03,,Requirements: 5+ years of professional C++ development. Bachelor's degree in technical field.
+quote,history,2010-08-03,quote,words,23,1,c-03,,the responsibility and the authority to take direct and timely real-time actions (without obtaining higher level approval) including directing shedding of firm load
+quote,history,2010-08-03,quote,words,19,1,c-04,,Much of the curriculum must be developed and delivered in compliance with the NERC CEH program and PER standards.
+quote,history,2009-10-28,quote,words,7,1,c-01,,Perform all control room based operational procedures;
+quote,today: AI or agent title postings (random 30),2026,quote,words,21,1,Pgreenhouse_anthropic_5082455008,AI Outcomes Manager,Join Anthropic's Customer Success team in a high-visibility & high-impact role driving AI adoption across a small number of strategic accounts
+quote,today: AI or agent title postings (random 30),2026,quote,words,17,1,Pworkday_iqvia_R1549373,AI Security Architect,This role sits within a broader AI security strategy function and reports to the Security Architecture leader
+quote,today: AI or agent title postings (random 30),2026,quote,words,21,1,Pworkday_iqvia_R1549373,AI Security Architect,"Build and maintain scalable AI security workflows, assessment playbooks, and decision frameworks that enable the organization to evaluate AI adoption requests"
+quote,today: AI or agent title postings (random 30),2026,quote,words,11,1,Pworkday_jll_REQ534894,AI Program Manager,running the portfolio governance “system of record” for practical AI initiatives
+quote,today: AI or agent title postings (random 30),2026,quote,words,11,1,Pworkday_jll_REQ534894,AI Program Manager,You will report to the Regional Business Governance & Compliance Director
+quote,today: AI or agent title postings (random 30),2026,quote,words,17,1,Pworkday_expedia_R-109420,Senior Content Strategist,"Govern AI-assisted content for accuracy, currency, discoverability, source traceability, and safe use by AI systems and agents."
+quote,today: AI or agent title postings (random 30),2026,quote,words,20,1,Pworkday_msd_R411511,AI Security Architect,"Support security architecture reviews and risk assessments for AI systems, AI applications, AI agents, and AI-enabled platforms across the enterprise."
+quote,today: AI or agent title postings (random 30),2026,quote,words,13,1,Pashby_plaid_3b205208-b07b-4acd-8abc-09f0fd0f88f1,"Engineering Manager, AI Applications","You will lead a team of 4 engineers, ranging from junior to staff"
+quote,today: AI or agent title postings (random 30),2026,quote,words,17,1,Pworkday_genmills_10128326,Sr. D&T Machine Learning Engineer,"Ensure all platform development and integrations adhere to enterprise security policies, data privacy regulations, and compliance standards."
+quote,today: AI or agent title postings (random 30),2026,quote,words,12,1,Pworkday_cohesity_R04801,Senior AI Sales Specialist,Own GAIA revenue number across product/infrastructure and consulting-advisory bookings for your territory
+quote,today: AI or agent title postings (random 30),2026,quote,words,17,1,Pworkday_amgen_R-241122,Principal Scientist,"Establish best practices for model reproducibility, documentation, governance, and compliance, aligned with enterprise standards and deployment frameworks"
+purpose_flags,history a: operations and systems-engineering postings,2011-2016,purpose_efficiency_automation,postings with flag,19,60,,,keyword presence
+purpose_flags,history a: operations and systems-engineering postings,2011-2016,purpose_reliability_availability,postings with flag,29,60,,,keyword presence
+purpose_flags,history a: operations and systems-engineering postings,2011-2016,purpose_scale_growth,postings with flag,51,60,,,keyword presence
+purpose_flags,history a: operations and systems-engineering postings,2011-2016,purpose_security_compliance,postings with flag,26,60,,,keyword presence
+purpose_flags,history a: operations and systems-engineering postings,2011-2016,purpose_speed_delivery,postings with flag,45,60,,,keyword presence
+purpose_flags,history b: trading systems and risk postings,,purpose_efficiency_automation,postings with flag,3,17,,,keyword presence
+purpose_flags,history b: trading systems and risk postings,,purpose_reliability_availability,postings with flag,1,17,,,keyword presence
+purpose_flags,history b: trading systems and risk postings,,purpose_scale_growth,postings with flag,4,17,,,keyword presence
+purpose_flags,history b: trading systems and risk postings,,purpose_security_compliance,postings with flag,0,17,,,keyword presence
+purpose_flags,history b: trading systems and risk postings,,purpose_speed_delivery,postings with flag,4,17,,,keyword presence
+purpose_flags,history c: grid control-room postings,,purpose_efficiency_automation,postings with flag,2,5,,,keyword presence
+purpose_flags,history c: grid control-room postings,,purpose_reliability_availability,postings with flag,3,5,,,keyword presence
+purpose_flags,history c: grid control-room postings,,purpose_scale_growth,postings with flag,1,5,,,keyword presence
+purpose_flags,history c: grid control-room postings,,purpose_security_compliance,postings with flag,4,5,,,keyword presence
+purpose_flags,history c: grid control-room postings,,purpose_speed_delivery,postings with flag,3,5,,,keyword presence
+purpose_flags,today: AI or agent title postings (random 30),,purpose_efficiency_automation,postings with flag,12,30,,,keyword presence
+purpose_flags,today: AI or agent title postings (random 30),,purpose_reliability_availability,postings with flag,17,30,,,keyword presence
+purpose_flags,today: AI or agent title postings (random 30),,purpose_scale_growth,postings with flag,25,30,,,keyword presence
+purpose_flags,today: AI or agent title postings (random 30),,purpose_security_compliance,postings with flag,18,30,,,keyword presence
+purpose_flags,today: AI or agent title postings (random 30),,purpose_speed_delivery,postings with flag,24,30,,,keyword presence

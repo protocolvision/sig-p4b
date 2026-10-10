@@ -1,7 +1,7 @@
 """Block feature coding if coder inputs name a pattern (loop-prompts/feature-coding.md, leak check; addendum A.2).
 
 Scans every file the coders receive (CODER_INPUTS, the same list as the prompt's Inputs section): all .md and
-.csv files of instruments I1-I6 except superseded "-v1" copies, clusters/, and corpus-b/filings-*.csv.
+I1-I6 write-ups (I*.md), their tables (I*-tables.csv) and corpus-b/filings-*.csv (deviation 23).
 Matches pattern and design labels only in prose: in a .csv, every cell except columns whose header contains
 "title" or "occupation"; in a .md, every line, except table cells under such a header. Common occupation
 names ("data scientist", "product manager", "brand manager") are not labels and are not matched.
@@ -16,8 +16,10 @@ TERMS = re.compile(
     r"|tool operator fade|scarcity boom|boom then speciali[sz]ation|lead-industry|lead industry diffusion"
     r"|data scien(?:ce|tist) pattern|brand management pattern|product management pattern"
     r"|engineering absorption|signature", re.I)
-CODER_INPUTS = [f"instruments/I{i}*.{ext}" for i in range(1, 7) for ext in ("md", "csv")] + [
-    "clusters/**/*.md", "clusters/**/*.csv", "corpus-b/filings-*.csv"]
+# Deviation 23: coders receive only the neutral write-ups, their tables and the filings indexes
+CODER_INPUTS = ["instruments/I1.md", "instruments/I2.md", "instruments/I3.md", "instruments/I4.md",
+                "instruments/I5.md", "instruments/I5c.md", "instruments/I6.md",
+                "instruments/I*-tables.csv", "corpus-b/filings-*.csv"]
 EXEMPT = re.compile(r"title|occupation", re.I)
 
 

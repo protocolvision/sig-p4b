@@ -1,0 +1,129 @@
+table,item,coder_or_group,metric,value,n,note
+found_clusters,cluster 0,language-artefact,label,"Mixed Asian-language duties across payments, sales, legal, and technical roles",,function family: other; mixed; label reviewed: no
+found_clusters,cluster 0,language-artefact,discovery size (tasks),111,,
+found_clusters,cluster 0,language-artefact,holdout predicted size (tasks),136,,
+found_clusters,cluster 0,language-artefact,best holdout Jaccard,0.6691,,
+found_clusters,cluster 0,language-artefact,distinct employers,23,,
+found_clusters,cluster 6,language-artefact,label,"Spanish/Portuguese maintenance, facilities, and operations procedures and reporting",,function family: manufacturing/field; technical; label reviewed: no
+found_clusters,cluster 6,language-artefact,discovery size (tasks),203,,
+found_clusters,cluster 6,language-artefact,holdout predicted size (tasks),186,,
+found_clusters,cluster 6,language-artefact,best holdout Jaccard,0.5974,,
+found_clusters,cluster 6,language-artefact,distinct employers,31,,
+found_clusters,cluster 10,language-artefact,label,"Polish-language engineering, vehicle rental, quality, and retail duties",,function family: other; mixed; label reviewed: no
+found_clusters,cluster 10,language-artefact,discovery size (tasks),68,,
+found_clusters,cluster 10,language-artefact,holdout predicted size (tasks),44,,
+found_clusters,cluster 10,language-artefact,best holdout Jaccard,0.65,,
+found_clusters,cluster 10,language-artefact,distinct employers,16,,
+found_clusters,cluster 2,work cluster,label,Configure and support SAP ERP solutions,,function family: it/security; technical; label reviewed: yes
+found_clusters,cluster 2,work cluster,discovery size (tasks),51,,
+found_clusters,cluster 2,work cluster,holdout predicted size (tasks),34,,
+found_clusters,cluster 2,work cluster,best holdout Jaccard,0.5476,,
+found_clusters,cluster 2,work cluster,distinct employers,17,,
+found_clusters,cluster 2,work cluster,first central span,"Configure, enhance, test, and deploy SAP solutions to support regulatory and business requirements.",,
+found_clusters,cluster 19,work cluster,label,"Work on-call rotations, shifts, and off-hours",,function family: operations; mixed; label reviewed: yes
+found_clusters,cluster 19,work cluster,discovery size (tasks),85,,
+found_clusters,cluster 19,work cluster,holdout predicted size (tasks),67,,
+found_clusters,cluster 19,work cluster,best holdout Jaccard,0.5714,,
+found_clusters,cluster 19,work cluster,distinct employers,52,,
+found_clusters,cluster 19,work cluster,first central span,"Create and participate in escalation, evening, weekend, and holiday on-call rotations.",,
+found_clusters,cluster 43,work cluster,label,Recruit and source talent for open roles,,function family: hr; business; label reviewed: yes
+found_clusters,cluster 43,work cluster,discovery size (tasks),123,,
+found_clusters,cluster 43,work cluster,holdout predicted size (tasks),84,,
+found_clusters,cluster 43,work cluster,best holdout Jaccard,0.6491,,
+found_clusters,cluster 43,work cluster,distinct employers,54,,
+found_clusters,cluster 43,work cluster,first central span,Develop and execute proactive recruiting and sourcing strategies that attract high-quality and diverse talent.,,
+found_clusters,cluster 67,work cluster,label,"Lead store operations, sales, and retail team",,function family: operations; business; label reviewed: yes
+found_clusters,cluster 67,work cluster,discovery size (tasks),145,,
+found_clusters,cluster 67,work cluster,holdout predicted size (tasks),120,,
+found_clusters,cluster 67,work cluster,best holdout Jaccard,0.5875,,
+found_clusters,cluster 67,work cluster,distinct employers,28,,
+found_clusters,cluster 67,work cluster,first central span,assisting in all areas of store operations as needed,,
+found_clusters,cluster 69,work cluster,label,"Plan, perform, and support internal and external audits",,function family: finance; business; label reviewed: yes
+found_clusters,cluster 69,work cluster,discovery size (tasks),61,,
+found_clusters,cluster 69,work cluster,holdout predicted size (tasks),78,,
+found_clusters,cluster 69,work cluster,best holdout Jaccard,0.6465,,
+found_clusters,cluster 69,work cluster,distinct employers,39,,
+found_clusters,cluster 69,work cluster,first central span,Assist with audit planning and execution activities,,
+found_clusters,cluster 76,work cluster,label,Design and execute software test plans and automation,,function family: software engineering; technical; label reviewed: yes
+found_clusters,cluster 76,work cluster,discovery size (tasks),123,,
+found_clusters,cluster 76,work cluster,holdout predicted size (tasks),99,,
+found_clusters,cluster 76,work cluster,best holdout Jaccard,0.5933,,
+found_clusters,cluster 76,work cluster,distinct employers,68,,
+found_clusters,cluster 76,work cluster,first central span,"Design, develop, and execute test strategies, test plans, and test cases across functional, integration, system, and regression testing.",,
+found_clusters,cluster 83,work cluster,label,Mentor engineers and provide technical leadership,,function family: software engineering; technical; label reviewed: yes
+found_clusters,cluster 83,work cluster,discovery size (tasks),114,,
+found_clusters,cluster 83,work cluster,holdout predicted size (tasks),124,,
+found_clusters,cluster 83,work cluster,best holdout Jaccard,0.5069,,
+found_clusters,cluster 83,work cluster,distinct employers,69,,
+found_clusters,cluster 83,work cluster,first central span,"Provide technical leadership and mentorship to engineers, analysts, and partner teams.",,
+found_clusters,cluster 111,work cluster,label,Assess AI systems for security risk,,function family: it/security; technical; label reviewed: yes
+found_clusters,cluster 111,work cluster,discovery size (tasks),35,,
+found_clusters,cluster 111,work cluster,holdout predicted size (tasks),53,,
+found_clusters,cluster 111,work cluster,best holdout Jaccard,0.5063,,
+found_clusters,cluster 111,work cluster,distinct employers,18,,
+found_clusters,cluster 111,work cluster,first central span,Review AI systems and integrations for security risk before and after deployment.,,
+stability,holdout ARI (non-noise in both),,value,0.8269,3861,
+stability,noise baseline ARI mean pairwise,,value,0.9639,,
+stability,discovery clusters,,value,114,,
+stability,found,,value,11,,
+stability,not found,,value,103,,
+stability,discovery tasks,,value,25122,,
+stability,holdout tasks,,value,25553,,
+stability,postings,,value,14079,,
+stability,tasks after performer filter and employer dedupe,,value,213938,,
+stability,tasks after 300-per-employer cap,,value,50675,,
+stability,noise fraction discovery,,value,0.648,,
+stability,noise fraction holdout,,value,0.635,,
+not_found,clusters not found,,count,103,,
+not_found,discovery size median,,tasks,54,,range 30-247
+not_found_ai_labelled,cluster 110,,label,Govern AI systems for compliance and responsible use,,discovery size 75; holdout predicted 55; best Jaccard 0.1711; employers 38; found False
+not_found_ai_labelled,cluster 112,,label,Build agentic AI workflows and systems,,discovery size 78; holdout predicted 62; best Jaccard 0.3304; employers 43; found False
+not_found_ai_labelled,cluster 113,,label,Identify AI use cases and deliver business AI solutions,,discovery size 207; holdout predicted 93; best Jaccard 0.168; employers 73; found False
+coder_seed_scores,PV,coder A,seed recall,0.95,20,Wilson 95% 0.76-0.99; gate pass; seed precision 1.00 (n=19)
+coder_seed_scores,PE,coder A,seed recall,1.0,18,Wilson 95% 0.82-1.00; gate pass; seed precision 0.96 (n=23)
+coder_seed_scores,RD,coder A,seed recall,1.0,16,Wilson 95% 0.81-1.00; gate pass; seed precision 1.00 (n=16)
+coder_seed_scores,negative seeds coded PV/PE/RD,coder A,count,0,56,
+coder_seed_scores,PV,coder B,seed recall,0.95,20,Wilson 95% 0.76-0.99; gate pass; seed precision 0.79 (n=24)
+coder_seed_scores,PE,coder B,seed recall,1.0,18,Wilson 95% 0.82-1.00; gate pass; seed precision 0.72 (n=29)
+coder_seed_scores,RD,coder B,seed recall,0.94,16,Wilson 95% 0.72-0.99; gate pass; seed precision 1.00 (n=15)
+coder_seed_scores,negative seeds coded PV/PE/RD,coder B,count,12,56,
+coder_agreement_410_records,PV,,kappa,0.73,410,coder A yes 20; coder B yes 28
+coder_agreement_410_records,PE,,kappa,0.71,410,coder A yes 25; coder B yes 35
+coder_agreement_410_records,RD,,kappa,0.97,410,coder A yes 16; coder B yes 15
+coder_agreement_410_records,AO,,kappa,0.84,410,coder A yes 23; coder B yes 24
+coder_agreement_410_records,OT,,kappa,0.86,410,coder A yes 330; coder B yes 313
+cluster_code_validation,records carrying cluster primary code,coder A,records,94,96,
+cluster_code_validation,records carrying cluster primary code,coder B,records,84,96,
+real_record_code_counts,PV,coder A,records,1,,
+real_record_code_counts,PV,coder B,records,4,,
+real_record_code_counts,PE,coder A,records,2,,
+real_record_code_counts,PE,coder B,records,6,,
+real_record_code_counts,RD,coder A,records,0,,
+real_record_code_counts,RD,coder B,records,0,,
+real_record_code_counts,AO,coder A,records,3,,
+real_record_code_counts,AO,coder B,records,5,,
+real_record_code_counts,OT,coder A,records,294,,
+real_record_code_counts,OT,coder B,records,287,,
+packet_codes,packet K01 (cluster 2),coder A,primary code,OT,,second AO; shares PV 0 PE 0 RD 0 AO 0.1 OT 0.9; reason: SAP configuration support and testing; a few Joule/automation builds are agent work but no rules set
+packet_codes,packet K01 (cluster 2),coder B,primary code,OT,,"second PE; shares PV 0.0 PE 0.2 RD 0.0 AO 0.05 OT 0.75; reason: SAP build, configuration, testing and support duties; ERP configuration is not a rule others rely on, with interface work as secondary"
+packet_codes,packet K02 (cluster 19),coder A,primary code,OT,,second -; shares PV 0 PE 0.02 RD 0 AO 0 OT 0.98; reason: On-call and shift availability; applying schedules; a few runbook maintenance mentions
+packet_codes,packet K02 (cluster 19),coder B,primary code,OT,,"second -; shares PV 0.0 PE 0.0 RD 0.0 AO 0.0 OT 1.0; reason: On-call rotations, shift availability and work hours; scheduling, no rule set"
+packet_codes,packet K03 (cluster 43),coder A,primary code,OT,,second -; shares PV 0 PE 0 RD 0 AO 0 OT 1; reason: Recruiting duties with no rule-setting or rule-finding
+packet_codes,packet K03 (cluster 43),coder B,primary code,OT,,second -; shares PV 0.0 PE 0.02 RD 0.0 AO 0.0 OT 0.98; reason: Recruiting and talent acquisition work; applies no rule
+packet_codes,packet K04 (cluster 67),coder A,primary code,OT,,second -; shares PV 0 PE 0 RD 0 AO 0 OT 1; reason: Retail store operations and staffing
+packet_codes,packet K04 (cluster 67),coder B,primary code,OT,,"second -; shares PV 0.0 PE 0.03 RD 0.0 AO 0.0 OT 0.97; reason: Store operations, merchandising and staff coaching; applies existing policy"
+packet_codes,packet K05 (cluster 69),coder A,primary code,OT,,second -; shares PV 0.03 PE 0 RD 0 AO 0 OT 0.97; reason: Audit support and execution; applies or tests existing controls; occasional methodology improvement
+packet_codes,packet K05 (cluster 69),coder B,primary code,OT,,"second PV; shares PV 0.25 PE 0.03 RD 0.0 AO 0.02 OT 0.7; reason: Audit support, documentation and information requests; some statements reference control issues and audit findings"
+packet_codes,packet K06 (cluster 76),coder A,primary code,OT,,second AO; shares PV 0 PE 0 RD 0 AO 0.05 OT 0.95; reason: Software test design and automation; no rules for others set
+packet_codes,packet K06 (cluster 76),coder B,primary code,OT,,"second -; shares PV 0.0 PE 0.05 RD 0.0 AO 0.05 OT 0.9; reason: Test strategy, test automation and test plans; software testing with no agent or rule-setting content"
+packet_codes,packet K07 (cluster 83),coder A,primary code,OT,,second -; shares PV 0 PE 0 RD 0 AO 0 OT 1; reason: Mentoring and technical leadership
+packet_codes,packet K07 (cluster 83),coder B,primary code,OT,,second -; shares PV 0.0 PE 0.0 RD 0.0 AO 0.0 OT 1.0; reason: Mentoring and technical leadership of engineers; no rule content
+packet_codes,packet K08 (cluster 111),coder A,primary code,OT,,second PE; shares PV 0.08 PE 0.3 RD 0 AO 0.07 OT 0.55; reason: AI security: policy and guidance writing playbooks and controls are PE; assessments and monitoring mostly OT
+packet_codes,packet K08 (cluster 111),coder B,primary code,PE,,"second PV; shares PV 0.15 PE 0.4 RD 0.05 AO 0.1 OT 0.3; reason: AI security controls, access and permission design, threat models and playbooks; several statements set controls others rely on"
+real_check_40,"rule work (PV/PE/RD) present in real records, reviewer reading",,records,3,40,
+real_check_40,exact code-set match reviewer vs A,,records,36,40,
+real_check_40,exact code-set match reviewer vs B,,records,37,40,
+real_check_40,exact code-set match A vs B,,records,35,40,
+real_check_40,any rule work present/absent agreement reviewer vs A,,records,39,40,
+real_check_40,any rule work present/absent agreement reviewer vs B,,records,39,40,
+real_check_40,any rule work present/absent agreement A vs B,,records,38,40,
