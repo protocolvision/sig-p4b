@@ -23,3 +23,9 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    [`../../triangulation-design.md`](../../triangulation-design.md). Loop v2's methods and hypotheses are
    unchanged; its strata S1–S5 draw from Corpus B. A split-half of the round-one corpus was considered and
    rejected: both halves would share round one's selection and codebook.
+
+4. **Archived copies before the browser pass.** Acquisition plan §3.5 sends `needs-browser` sources to a
+   browser. Before that, `loop-tools/wayback_fallback.py` fetched the closest existing Internet Archive copy
+   of each `needs-browser` or `failed` source (status `ok-wayback`). The text header records the snapshot
+   URL and date. An archived copy may differ from the version round one cited; claims checked against one
+   cite the snapshot. Only sources with no usable copy go to the browser.
