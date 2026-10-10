@@ -152,6 +152,27 @@ table.plain svg { display: block; }
 .arch p { margin-bottom: .4rem; }
 .hv td:first-child { white-space: nowrap; }
 table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-align: -4px; margin-right: .35rem; }
+/* opening diagram: who holds what around agents (HTML grid, hairline boxes) */
+.org { margin: 1.8rem 0 0; }
+.org .lab { font: 400 11px/1.4 var(--mono); letter-spacing: .08em; color: var(--muted); margin: 0 0 .45rem; }
+.org .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .55rem; }
+.org .bx { border: .5px solid var(--muted); padding: .5rem .6rem .55rem; font-size: .875rem; line-height: 1.35; min-width: 0; background: var(--bg); }
+.org .bx b { display: flex; align-items: center; gap: .4rem; font-weight: 600; }
+.org .bx span { display: block; color: var(--muted); font-size: .8125rem; margin-top: .15rem; }
+.org .bx svg { width: 12px; height: 12px; flex: none; }
+.org .firm { border: .5px solid var(--hair); padding: .7rem .7rem .8rem; margin-top: 1rem; }
+.org .seat { margin-top: .75rem; border: 1px dashed var(--action); padding: .6rem .8rem; text-align: center; color: var(--action); font-size: .9375rem; line-height: 1.4; }
+.org .seat span { display: block; font-size: .8125rem; color: var(--muted); }
+.org .out .bx { border-style: dashed; }
+/* figures inside findings */
+.ffig { margin: 1rem 0 .8rem; }
+.ffig canvas { display: block; width: 100%; }
+.ffig .chart svg text { font-size: 12px; }
+.lawrow { display: grid; grid-template-columns: 11rem 1fr; gap: .2rem .8rem; align-items: start; padding: .4rem 0; border-top: .5px solid var(--hair); font-size: .875rem; line-height: 1.35; }
+.lawrow .nm span { display: block; color: var(--muted); font-size: .8125rem; }
+.lawrow .dots { display: flex; flex-wrap: wrap; gap: 3px; padding-top: .2rem; min-width: 0; }
+.lawrow .dots svg { width: 10px; height: 10px; }
+@media (max-width: 520px) { .lawrow { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
 @media print { .anim .a-slide { transform: none; } .anim .a-draw { stroke-dashoffset: 0; } .anim .a-fade { opacity: 1; } }
 @media (max-width: 520px) {
@@ -169,6 +190,24 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
 <h1 id="m-title"></h1>
 <p class="dek" id="m-dek"></p>
 <nav class="contents" id="contents" aria-label="Sections"></nav>
+<figure class="org" id="org" data-anim aria-labelledby="org-cap">
+  <p class="lab">OUTSIDE THE FIRM</p>
+  <div class="row out">
+    <div class="bx a-fade" style="--d:0ms"><b>Law</b><span>will require trained overseers of AI from 2027</span></div>
+    <div class="bx a-fade" style="--d:150ms"><b>Vendors</b><span>ship agent certifications, registries and owner roles</span></div>
+  </div>
+  <div class="firm">
+    <p class="lab">INSIDE THE FIRM</p>
+    <div class="row">
+      <div class="bx a-fade" style="--d:500ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="var(--accent)" stroke-width="1"/></svg>Operators</b><span>existing staff in each function run agents</span></div>
+      <div class="bx a-fade" style="--d:700ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="var(--accent)" stroke-width="1"/></svg>Reviewers</b><span>security architects set and check AI limits</span></div>
+      <div class="bx a-fade" style="--d:900ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="var(--accent)" stroke-width="1"/></svg>Builders</b><span>AI and automation engineers build agents</span></div>
+      <div class="bx a-fade" style="--d:1100ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 2"/></svg>Overseers</b><span>named by law to oversee AI, from 2027</span></div>
+    </div>
+    <div class="seat a-fade" style="--d:1700ms">Decides when an agent’s rules change<span>no one is named for this in the public record</span></div>
+  </div>
+  <figcaption id="org-cap">Where agent work sits today. Hatched: observed in postings or speech. Dashed ring: required by law, not yet observed. The dashed seat is the gap this memo is about.</figcaption>
+</figure>
 <section class="abstract" id="abstract" aria-labelledby="abs-h">
   <p class="n" id="abs-h" style="border-top:0;padding-top:0">ABSTRACT</p>
   <p>AI agents now act under rules about what they may spend, see and say, and when a person must step in. We asked who finds, designs and changes those rules, and whether AI is reshaping firms the way DevOps did. We read 118,526 job postings, 1,167 company filings, 38 practitioner recordings, 19 laws and policies and documents from 12 vendors. The tests were fixed in advance, and blind coding was checked against hidden examples. Running agents is common, and existing staff do it. Designing agents’ limits is a minority duty whose one stable home is AI security review. Finding unwritten rules and deciding changes across functions barely appear. The law will require overseers, not rule owners, and vendors are setting the pace. Inside teams the work looks like DevOps; in hiring it looks like a scarce-skills boom. We recommend four steps: name an owner for each agent’s limits where agents already run; keep a register of agents and their limits that the firm controls; name overseers before 2027; and test the rest in a pilot and in field work in twenty firms.</p>
@@ -295,6 +334,21 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   </details>
 </section>
 </main>
+<div id="figstore" hidden>
+  <figure class="ffig" id="fig-speech" data-anim>
+    <canvas id="speech-c" role="img" aria-label="771 timestamped practitioner statements: 600 about other work, 149 about running agents, 21 about setting agents' limits, 1 about finding unwritten rules, none about deciding a rule change across functions."></canvas>
+    <figcaption>771 timestamped statements from 38 practitioner recordings, one dot each, sorted by what the speaker describes doing. One statement both runs an agent and sets its limits; it is drawn with the limits.</figcaption>
+  </figure>
+  <figure class="ffig" id="fig-law" data-anim>
+    <div id="law-rows" role="img" aria-label="111 provisions from 19 texts by family. Trading: 53 provisions, 25 on rule changes, 12 naming an owner. Grid: 7, none on changes. AI law and standards: 37, 4 on changes, none naming an owner. Lab self-policies: 13, 3 on changes, 3 naming an owner. Platform rule: 1."></div>
+    <ul class="legend" id="law-legend"></ul>
+    <figcaption>One dot per provision, 111 in all, from 19 texts read in full.</figcaption>
+  </figure>
+  <figure class="ffig" id="fig-filings" data-anim>
+    <div class="chart" id="filings-c"></div>
+    <figcaption>Share of 10-K filers using an agent phrase (“AI agent(s)”, “agentic”, “autonomous agents”, “digital workers”, “digital labor”), SEC full-text search; 2026 runs to 10 October.</figcaption>
+  </figure>
+</div>
 <footer><span id="m-foot"></span></footer>
 </div>
 
@@ -329,7 +383,8 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
      "text": "turn goals into … rules, constraints … that AI systems can execute",
      "id": "R0397 (posting, 2026)"
     },
-    "caveat": "Public texts cannot show rule changes agreed informally inside firms, and speech extraction catches about half of what is said, so rare codes are undercounted most. High confidence applies to the near-absence; the shares are moderate."
+    "caveat": "Public texts cannot show rule changes agreed informally inside firms, and speech extraction catches about half of what is said, so rare codes are undercounted most. High confidence applies to the near-absence; the shares are moderate.",
+    "figure": "fig-speech"
    },
    {
     "id": "F2",
@@ -376,7 +431,8 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
      "text": "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority",
      "id": "EU AI Act Art 26(2), C9b1da45a"
     },
-    "caveat": "High confidence applies to what the texts say. The contrast with trading is moderate: the AI-law base is four provisions, and 8 of trading's 12 named owners come from supervisory guidance rather than binding rules."
+    "caveat": "High confidence applies to what the texts say. The contrast with trading is moderate: the AI-law base is four provisions, and 8 of trading's 12 named owners come from supervisory guidance rather than binding rules.",
+    "figure": "fig-law"
    },
    {
     "id": "F5",
@@ -393,7 +449,8 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
      "text": "Sponsors provide business accountability for agents, making lifecycle decisions without technical administrative access.",
      "id": "ms-entra-owners (November 2025)"
     },
-    "caveat": "This order is common to enterprise software and does not by itself tell DevOps apart from other patterns. The counts are high confidence; the dating of the order is low to moderate."
+    "caveat": "This order is common to enterprise software and does not by itself tell DevOps apart from other patterns. The counts are high confidence; the dating of the order is low to moderate.",
+    "figure": "fig-filings"
    }
   ]
  },
@@ -818,6 +875,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
       a.appendChild(h('p', {'class': 'n', text: ('0' + (fi + 1)).slice(-2)}));
       a.appendChild(h('h3', {text: f.headline}));
       if (f.body) a.appendChild(h('p', {'class': 'ask', text: f.body}));
+      if (f.figure && $(f.figure)) a.appendChild($(f.figure));
       if (f.verdict) a.appendChild(h('p', {'class': 'ask', text: 'The test returns this verdict in ' + range(f.verdict.power) + ' of simulated runs when its pattern is the truth' +
         (f.verdict.falseSupport != null ? ', and false support is at most ' + f.verdict.falseSupport + '%.' : '.')}));
       if (f.power) a.appendChild(h('p', {'class': 'small', text: f.power}));
@@ -1133,6 +1191,97 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
     t.appendChild(h('caption', {'class': 'visually-hidden', text: 'Bundles of duties, with size and holdout overlap'}));
     var note = h('p', {'class': 'small', text: '* Rests on one posting: without Thrivent REQ-47040 it fails both stability criteria. The dashed tick marks the 0.5 threshold.'});
     t.parentNode.parentNode.insertBefore(note, t.parentNode.nextSibling);
+  })();
+
+  // ---- figures inside findings: speech sort, law provisions, filings line
+  (function () {
+    // speech: 771 dots settle from a cloud into five rows
+    var cv = $('speech-c'); if (!cv) return;
+    var ctx = cv.getContext('2d'), R = [['Other work', 600, C.hair], ['Running agents', 149, C.mu], ['Setting what agents may do', 21, C.for], ['Finding unwritten rules', 1, C.cob], ['Deciding changes across functions', 0, C.cob]];
+    var N = 771, pts = [], W, H, rows, dpr = Math.min(window.devicePixelRatio || 1, 2), played = false, raf;
+    var rng = (function (s) { return function () { s = (s * 16807) % 2147483647; return s / 2147483647; }; })(771);
+    for (var i = 0; i < N; i++) pts.push({sx: rng(), sy: rng(), c: 0});
+    var k0 = 0; R.forEach(function (r, ri) { for (var j = 0; j < r[1]; j++) pts[k0++].c = ri; });
+    function layout() {
+      W = cv.clientWidth; var narrow = W < 520, lab = narrow ? 0 : 236, x0 = lab + 4, pitch = 6.5, per = Math.max(10, Math.floor((W - x0 - 40) / pitch)), y = 6;
+      rows = [];
+      R.forEach(function (r, ri) {
+        var lines = Math.max(1, Math.ceil(r[1] / per)), top = y + (narrow ? 18 : 0);
+        rows.push({ri: ri, top: top, x0: x0, per: per, lines: lines, ly: narrow ? y + 12 : top + 8});
+        y = top + Math.max(lines * pitch, 10) + 14;
+      });
+      H = y + 4; cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + 'px'; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var cnt = [0, 0, 0, 0, 0];
+      pts.forEach(function (p) { var rw = rows[p.c], n = cnt[p.c]++; p.tx = rw.x0 + (n % rw.per) * pitch + 3; p.ty = rw.top + Math.floor(n / rw.per) * pitch + 3; });
+    }
+    function draw(k) {
+      ctx.clearRect(0, 0, W, H);
+      ctx.font = '13px Lora, Georgia, serif'; ctx.textBaseline = 'alphabetic';
+      var narrow = W < 520;
+      rows.forEach(function (rw) {
+        var r = R[rw.ri]; ctx.globalAlpha = Math.min(1, Math.max(0, (k - .55) / .45));
+        ctx.fillStyle = C.fg; ctx.fillText(r[0], 0, rw.ly);
+        ctx.fillStyle = C.mu; var cx = narrow ? ctx.measureText(r[0]).width + 8 : rw.x0 + Math.min(r[1], rw.per) * 6.5 + 10;
+        if (!narrow && r[1] === 0) cx = rw.x0;
+        ctx.fillText(String(r[1]), cx, narrow ? rw.ly : rw.ly);
+        if (r[1] === 0) { ctx.strokeStyle = C.cob; ctx.setLineDash([2, 2]); ctx.lineWidth = 1; ctx.strokeRect(rw.x0 + (narrow ? 0 : 22), rw.top - 1, 40, 8); ctx.setLineDash([]); }
+        ctx.globalAlpha = 1;
+      });
+      pts.forEach(function (p, i) {
+        var e = Math.min(1, Math.max(0, k * 1.3 - (i % 53) / 53 * .3)); e = e < .5 ? 2 * e * e : 1 - Math.pow(-2 * e + 2, 2) / 2;
+        var x = (p.sx * (W - 20) + 10) * (1 - e) + p.tx * e, y = (p.sy * (H - 20) + 10) * (1 - e) + p.ty * e;
+        ctx.fillStyle = R[p.c][2]; ctx.beginPath(); ctx.arc(x, y, p.c >= 2 ? 2.4 : 2, 0, 6.3); ctx.fill();
+        if (p.c === 3 && e > .9) { ctx.strokeStyle = C.cob; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(x, y, 5, 0, 6.3); ctx.stroke(); }
+      });
+    }
+    function play() { var t0 = performance.now(); cancelAnimationFrame(raf); (function tick(t) { var k = Math.min(1, (t - t0) / 2200); draw(k); if (k < 1) raf = requestAnimationFrame(tick); })(t0); }
+    layout(); draw(motion ? 0 : 1);
+    if (motion) { var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting && !played) { played = true; play(); io.disconnect(); } }, {threshold: .4}); io.observe(cv); }
+    window.addEventListener('resize', function () { if (cv.clientWidth !== W) { layout(); draw(1); } });
+  })();
+  (function () {
+    var L = [['Trading and markets', 'RTS 6, SEC, FINRA, PRA, FCA', 53, 25, 12], ['AI law and standards', 'EU AI Act, Colorado, NIST', 37, 4, 0], ['AI labs’ own policies', 'Anthropic, OpenAI, DeepMind', 13, 3, 3], ['Grid operations', 'NERC', 7, 0, 0], ['Platform rule', 'Amazon', 1, 0, 0]];
+    var box = $('law-rows'); if (!box) return; var di = 0;
+    function g(kind) {
+      var v = s('svg', {viewBox: '0 0 10 10', 'aria-hidden': 'true'});
+      if (kind === 'own') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.8, fill: 'var(--accent)'}));
+      else if (kind === 'chg') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.4, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 1}));
+      else v.appendChild(s('circle', {cx: 5, cy: 5, r: 1.4, fill: 'var(--muted)'}));
+      return v;
+    }
+    L.forEach(function (f) {
+      var dots = h('div', {'class': 'dots'});
+      for (var i = 0; i < f[2]; i++) { var k = i < f[4] ? 'own' : i < f[3] ? 'chg' : 'oth', d = g(k); d.classList.add('a-fade'); d.style.setProperty('--d', (k === 'oth' ? 0 : k === 'chg' ? 700 : 1400) + (di++ % 40) * 12 + 'ms'); dots.appendChild(d); }
+      var own = f[3] ? f[4] + ' of ' + f[3] + ' change provisions name an owner' : 'no provision on changing the rules';
+      box.appendChild(h('div', {'class': 'lawrow'}, [h('div', {'class': 'nm'}, [f[0], h('span', {text: f[1] + ' · ' + own})]), dots]));
+    });
+    [['own', 'Regulates rule changes and names who decides'], ['chg', 'Regulates rule changes, names no one'], ['oth', 'Other provision']].forEach(function (x) { var li = h('li'); li.appendChild(g(x[0])); li.lastChild.style.cssText = 'width:12px;height:12px'; li.appendChild(document.createTextNode(x[1])); $('law-legend').appendChild(li); });
+  })();
+  (function () {
+    var el = $('filings-c'); if (!el) return; var W0 = 0;
+    var Y = [2022, 2023, 2024, 2025, 2026], A = [0.05, 0.06, 0.12, 1.71, 6.75], F = [0, 0, 0.21, 3.8, 18.0];
+    function draw() {
+      var W = Math.round(el.clientWidth); if (!W || W === W0) return; W0 = W; el.textContent = '';
+      var narrow = W < 520, x0 = 34, x1 = W - (narrow ? 70 : 170), y0 = 14, y1 = 210, Ht = 240;
+      var X = function (i) { return x0 + (x1 - x0) * i / 4; }, Yv = function (v) { return y1 - (y1 - y0) * v / 20; };
+      var v = s('svg', {width: W, height: Ht, viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Share of 10-K filers using agent phrases, 2022 to 2026: all filers 0.05, 0.06, 0.12, 1.71, 6.75 percent; employers studied 0, 0, 0.21, 3.8, 18.0 percent.'});
+      [0, 5, 10, 15, 20].forEach(function (t) { v.appendChild(s('line', {x1: x0, x2: x1, y1: Yv(t), y2: Yv(t), stroke: 'var(--hair)', 'stroke-width': .5})); v.appendChild(s('text', {x: x0 - 6, y: Yv(t) + 4, 'text-anchor': 'end', 'class': 'mut'}, t + '%')); });
+      Y.forEach(function (y, i) { v.appendChild(s('text', {x: X(i), y: y1 + 20, 'text-anchor': 'middle', 'class': 'mut'}, narrow ? "’" + String(y).slice(2) : y)); });
+      function line(vals, col, w, lab, d) {
+        var path = vals.map(function (val, i) { return (i ? 'L' : 'M') + X(i) + ' ' + Yv(val); }).join(' ');
+        var p = s('path', {d: path, fill: 'none', stroke: col, 'stroke-width': w, pathLength: 1}); p.classList.add('a-draw'); p.style.setProperty('--d', d + 'ms'); v.appendChild(p);
+        var g = s('g'); g.classList.add('a-fade'); g.style.setProperty('--d', d + 1400 + 'ms');
+        vals.forEach(function (val, i) { g.appendChild(s('circle', {cx: X(i), cy: Yv(val), r: i === 4 ? 3.5 : 2, fill: i === 4 ? 'url(#hx-f)' : col, stroke: col, 'stroke-width': i === 4 ? 1 : 0})); });
+        g.appendChild(s('text', {x: X(4) + 9, y: Yv(vals[4]) + 4, 'font-weight': 600}, vals[4] + '%'));
+        if (!narrow) g.appendChild(s('text', {x: X(4) + 9, y: Yv(vals[4]) + 19, 'class': 'mut'}, lab));
+        v.appendChild(g);
+      }
+      line(A, 'var(--muted)', 1, 'of all 10-K filers', 300);
+      line(F, 'var(--accent)', 1.2, 'of the employers studied', 0);
+      el.appendChild(v);
+      if (narrow && !el.nextElementSibling.classList.contains('nl')) el.insertAdjacentElement('afterend', h('p', {'class': 'small nl', text: 'Forest: the employers studied (18.0%). Grey: all 10-K filers (6.75%).'}));
+    }
+    draw(); window.addEventListener('resize', draw);
   })();
 
   // ---- method walkthrough
