@@ -11,3 +11,6 @@ dist/
 
 # Third-party transcripts for the research loop (fetched locally, never committed)
 drafts/research/who-owns-the-rules/sources-v2/transcripts/
+
+# Archived job descriptions and capability models (fetched locally, never committed)
+drafts/research/who-owns-the-rules/roles/archive/

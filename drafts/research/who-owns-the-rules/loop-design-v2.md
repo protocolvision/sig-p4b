@@ -103,6 +103,17 @@ timestamp. Fields as v1, plus `speaker_relation` (`self`, `own team`, `other tea
 `performer_type` (`person`, `agent`, `both`). General claims about "companies" are kept but don't count as
 evidence of practice.
 
+## 5a. Role library
+
+For every role already emerging in the evidence, the run keeps a library in `roles/`: one file per role
+with 3–6 representative job descriptions from different employers, the capability models that define it
+(certification outlines, bodies of knowledge, competency frameworks, career ladders) and a consolidated
+activity list coded with the scheme in section 6. Source lists (`roles/sources-*.csv`) feed
+`loop-tools/archive_roles.py`, which saves full copies locally and requests Internet Archive snapshots so
+postings remain citable after they are taken down. Library activities enter the pool as stratum S1b
+(postings for new titles), kept separate from S1 (postings for existing occupations) so absorption and
+new titles can be compared.
+
 ## 6. Coding, version 2
 
 Each record gets up to two codes; both count in the analysis.
@@ -176,7 +187,8 @@ Run before the present-day analysis is interpreted.
 
 ## 10. Run order
 
-1. Fetch transcripts for a stratified random sample of the two media frames (`loop-tools/fetch_media.py`).
+1. Fetch transcripts for a stratified random sample of the two media frames (`loop-tools/fetch_media.py`),
+   and archive the role library's sources (`loop-tools/archive_roles.py --wayback`).
 2. Collect S1–S7 with the v2 rules; one collector per stratum, as in v1.
 3. Write seeds; build pools; hide seeds.
 4. Code (two coders, different models or a person); report seed recall.
