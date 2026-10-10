@@ -6,3 +6,5 @@ hdbscan==0.8.40
 numpy==2.2.3
 pandas==2.2.3
 anthropic==1.13.0
+# Local transcription (fetch_media.py manual items): Apple Silicon, ffmpeg via brew. Model: mlx-community/whisper-large-v3-turbo
+mlx-whisper==0.4.3
