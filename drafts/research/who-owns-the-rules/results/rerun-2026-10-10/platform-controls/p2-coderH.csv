@@ -1,0 +1,319 @@
+id,code,reason
+L001,neither,reading messages
+L002,neither,training staff and collecting feedback
+L003,tool_change,agent removed from sales tickets and sponsors
+L004,neither,building eval harness and monitoring
+L005,neither,general statement about safety and effectiveness
+L006,tool_change,turned off web browsing in workspace settings
+L007,neither,co-engineered model serving for determinism
+L008,neither,designing and developing applications
+L009,tool_change,configured agent to change deal stage
+L010,tool_change,tuned agent to say certain things
+L011,tool_change,trained agent on prompt examples
+L012,tool_change,designing agent prompts and tool calls
+L013,tool_change,wrote agent prompt for group tickets question
+L014,neither,prototyping and productionizing GenAI with Bedrock
+L015,decision,governance standards and intake processes for RPA
+L016,neither,architecture for security operations platform
+L017,tool_change,trained agent on direct ticket sales
+L018,neither,projects improving agent effectiveness generally
+L019,neither,humans maintaining and managing the agent
+L020,neither,building product infrastructure for model customization
+L021,decision,team governing AI bots oversight
+L022,neither,building automation and agentic workflows
+L023,decision,decided which folks agent reactivates
+L024,neither,using three instances of a tool
+L025,neither,reviewing agent outputs weekly
+L026,decision,established approved architectural patterns for building systems
+L027,neither,building infrastructure for distilled subtask versions
+L028,neither,architecting and delivering AI solutions
+L029,neither,automating a process through agents
+L030,neither,analytics for identity governance and access recommendations
+L031,tool_change,designing HITL routing and exception handling workflows
+L032,neither,writing with a report in a tool
+L033,neither,ensuring data layer quality
+L034,neither,safely integrating and operating AI solutions
+L035,neither,data pushed into Notion
+L036,decision,policy forbidding smaller models for engineers
+L037,neither,testing answers on dashboards
+L038,neither,developing search platform features
+L039,neither,spot checking outputs
+L040,tool_change,configuring IAM network and data flow controls for AI services
+L041,neither,designing and developing AI applications
+L042,neither,writing quarterly adoption reports
+L043,neither,designing advanced AI systems
+L044,neither,stance on focus of conversations
+L045,neither,designing data structures for AI use cases
+L046,neither,building and deploying agents from templates
+L047,neither,collaborating on AI solutions
+L048,neither,has three of a tool
+L049,neither,architecting distributed systems for agents
+L050,tool_change,gave agent a pool of data to use
+L051,neither,reading agent logs daily
+L052,neither,building platform for teams to manage agents
+L053,decision,priority to establish data governance policy
+L054,neither,deploying models into production
+L055,neither,MLOps versioning gating monitoring rollback practices
+L056,neither,exploring agentic tools for manual processes
+L057,neither,replacing orchestration chains with AI workflow engines
+L058,neither,one agent in production
+L059,neither,fixing things that are off with no config named
+L060,neither,creating MCP servers for reuse
+L061,neither,coaches watching agent journeys
+L062,neither,ingesting Salesforce data daily
+L063,neither,vendor generates data
+L064,neither,building and deploying agentic systems
+L065,tool_change,adjusted something at end of August
+L066,neither,implementing AI ML solutions for production
+L067,neither,integrating models into APIs and services
+L068,tool_change,scoped agent deployment to specific functions only
+L069,neither,building AI DevOps pipeline
+L070,neither,Notion agents running in several places
+L071,neither,standing up MLOps foundations and guardrails
+L072,tool_change,designing agent prompts and tool calls
+L073,tool_change,toggled recruiting agent to stop auto-sending emails
+L074,neither,translating business goals into platform capabilities
+L075,neither,first order processed through system
+L076,tool_change,architecting agents with human controls for actions
+L077,neither,daily check-in meeting
+L078,neither,building testing harness simulating users
+L079,tool_change,trained agent by hand daily early on
+L080,decision,human in the loop where needed
+L081,neither,rebuilt tool from scratch
+L082,neither,owning production architecture
+L083,neither,different agent for lapsed customers
+L084,neither,translating challenges into agentic solutions
+L085,neither,requirements process with AI-assisted tooling
+L086,tool_change,granted or revoked agent access to repos and secrets
+L087,neither,integrated with Salesforce
+L088,decision,decides whether finance agent may approve invoices
+L089,neither,translating inventions into buildable agent solutions
+L090,neither,PR volume from agent increasing
+L091,neither,built Notion agent that pushes output
+L092,neither,rolled out apps
+L093,neither,designing agents prudently
+L094,tool_change,designing agent logic tool calls and guardrails
+L095,neither,operating rhythms and SOP documentation
+L096,decision,establish engineering standards and reference implementations
+L097,neither,adding speakers in a tool
+L098,neither,deployed it first
+L099,neither,transforming telemetry into intelligence
+L100,neither,associates exceeded budget
+L101,tool_change,tightened guardrail config and added blocked-terms list
+L102,neither,distilling to smaller models
+L103,neither,uses a tool
+L104,neither,testing and deploying governed agents on platform
+L105,neither,experimenting with more agents
+L106,neither,workshop on writing requests to agent
+L107,neither,on-device deployment of models
+L108,tool_change,edits system prompt and escalation rules in admin console
+L109,neither,managing and orchestrating agents
+L110,decision,gatekeeping readiness criteria before services handover
+L111,neither,establishing platform capabilities for agents
+L112,tool_change,trained the agent
+L113,neither,picked URLs during process
+L114,neither,built with vendor
+L115,neither,continuously updating unspecified item
+L116,neither,developing operational assistants
+L117,neither,evaluating vendors and comparison briefs
+L118,neither,put in repo and used
+L119,decision,VP ruled sales agent may email but not discuss pricing
+L120,neither,integrating GenAI into segmentation platform
+L121,neither,architecting AI platform services
+L122,decision,refining gate framework based on lessons
+L123,tool_change,uploaded brand guidelines to agent
+L124,neither,building inspector agent for runs
+L125,decision,introduced autonomous sourcing as an allowed action
+L126,decision,set standards for AI-assisted development
+L127,neither,agent qualifies website visitors
+L128,tool_change,doing tuning of agent
+L129,neither,building automated testing and evaluation
+L130,neither,architecture for security operations
+L131,tool_change,trained agent on three use cases
+L132,decision,modified compliance approval process for new tools
+L133,tool_change,maintains prompts temperatures and allowed actions for agents
+L134,neither,built an agent
+L135,neither,ran same test in two tools
+L136,neither,migrating agent vector database
+L137,neither,ensuring platforms secure observable and resilient
+L138,neither,developing integrations connecting agents to systems
+L139,decision,approves expansion of agent customer data access
+L140,neither,built stuff in Replit
+L141,neither,same going in channels
+L142,neither,architecting agentic systems
+L143,neither,rolled out recently
+L144,neither,writing tests and benchmarking answers
+L145,neither,rewrote unspecified item
+L146,neither,SOPs SLAs and dashboards
+L147,neither,building agentic applications
+L148,neither,spearheading agentic solution development
+L149,neither,productionizing models
+L150,tool_change,expanded agent responses for sponsorships
+L151,tool_change,set customization slider higher on agent
+L152,tool_change,built a prompt to write prompts
+L153,neither,sandbox for experiments
+L154,neither,monitoring production environments
+L155,neither,managing agents generally
+L156,neither,deploying AI on Vertex
+L157,neither,built stuff in Replit
+L158,neither,building custom AI apps for feedback
+L159,decision,establishing guardrails and patterns
+L160,neither,created internal tool
+L161,neither,distillations running in production
+L162,neither,teams assisting
+L163,neither,distilling narrow use cases
+L164,neither,supporting LLM application development
+L165,decision,decides which agent may have customer records
+L166,decision,CISO signs off on agent write access
+L167,neither,instructs agent on which slides to keep
+L168,tool_change,reduced agent to one prompt
+L169,neither,includes dates and locations in input
+L170,decision,determines autonomy levels and authorizes exceptions
+L171,tool_change,gave prompt to agent platform
+L172,decision,manages principles and frameworks for operating AI
+L173,decision,chose to keep human in the loop
+L174,neither,developing AI analytical systems
+L175,neither,agent count growth
+L176,neither,answers legal questions about agent
+L177,decision,defines how agents are provisioned governed and decommissioned
+L178,neither,built ourselves
+L179,neither,running agents on schedules
+L180,neither,agent analyzes Slack and preempts questions
+L181,neither,monitoring production AI solutions
+L182,neither,architecting AI gateway for model access
+L183,neither,manual routing of requests
+L184,neither,ran tests on reporting models
+L185,neither,built agent in two tools
+L186,tool_change,lowered spend cap on procurement agent in dashboard
+L187,decision,defines risk tiering guardrails and exception models
+L188,neither,language universalizing remark
+L189,neither,daily review of issues answered
+L190,tool_change,updates agent instructions and tool access in platform
+L191,neither,generated letters from spreadsheet data
+L192,neither,agents running in channels
+L193,neither,contributing to GenAI platforms
+L194,neither,monitoring outputs daily
+L195,neither,designing agents for trusted outcomes
+L196,neither,building GenAI platforms and SDKs
+L197,neither,building LLM applications
+L198,decision,approves or rejects letting coding agents merge
+L199,decision,crafting SRE standards and qualification benchmarks
+L200,neither,testing it
+L201,decision,defining AI governance frameworks and policies
+L202,neither,building AI-native systems for messaging
+L203,neither,designing orchestration layer for agents
+L204,neither,dozens of agents set up
+L205,decision,establishing cross-functional AI governance including risk management
+L206,neither,integrating GenAI into solutions
+L207,neither,building evaluation and versioning platform capabilities
+L208,neither,integrating providers and vector stores
+L209,neither,building monitoring and retraining workflows
+L210,tool_change,adding voice capability to agent
+L211,decision,establishing reference architectures and coding standards
+L212,decision,owns policy on which workflows agents may automate
+L213,tool_change,trained agent on product specs
+L214,neither,built in Claude projects
+L215,neither,co-designing threat detection workflows
+L216,neither,read all messages early on
+L217,neither,built pitch deck reviewer
+L218,neither,embedding security controls into workflows
+L219,neither,reviewing daily
+L220,decision,establishing security-by-design principles for AI
+L221,tool_change,moved many processes to autonomous mode
+L222,neither,agent started support on its own
+L223,tool_change,rewrote system prompt blocking payroll fields
+L224,neither,qualified tab in use
+L225,neither,troubleshooting agentic platform issues
+L226,neither,first test in late 2025
+L227,neither,building and testing AI-assisted evidence workflows
+L228,decision,sets HR policy on screening and grants authorization
+L229,decision,defines escalation protocols and risk indicators
+L230,neither,built Notion agent
+L231,decision,putting more guardrails on clinical side
+L232,neither,has internal LLM proxy
+L233,neither,designing agents over years
+L234,neither,created internal tool
+L235,tool_change,configures permissions and API scopes for agents
+L236,neither,prompting agent to build
+L237,decision,establishes engineering practices for agentic development
+L238,tool_change,plans to add knowledge into platform AI
+L239,neither,uses app to run agent
+L240,neither,rolled out BDR agent on website
+L241,tool_change,circuit breakers in place as guardrails
+L242,neither,debating data flows and harnesses
+L243,neither,building monitoring dashboards
+L244,neither,gave team access to sandbox version
+L245,neither,driving adoption via feedback
+L246,tool_change,training the AI to be better
+L247,decision,defines governance standards for GenAI at scale
+L248,neither,maintaining activity logging and retention
+L249,decision,implements governance patterns and approvals
+L250,neither,added AI revops
+L251,tool_change,tells agent what company is
+L252,neither,applying layer to optimize
+L253,neither,building GenAI solutions
+L254,neither,hands-on agentic workflow orchestration
+L255,neither,releasing agents now
+L256,decision,code base freeze during holiday
+L257,neither,designing distributed systems for agents
+L258,neither,architecture plugs in partners
+L259,neither,uses communication agents built earlier
+L260,tool_change,builds business rules for agent
+L261,tool_change,changed guardrails
+L262,neither,verifies output personally
+L263,neither,overseeing AI ML solution design
+L264,neither,built code review benchmark
+L265,neither,linked documentation to Notion
+L266,neither,dedicated agent for inbound
+L267,neither,implementing optimization techniques
+L268,decision,legal team decides which actions agent may take
+L269,neither,building evaluation frameworks
+L270,neither,architecting agents on Salesforce
+L271,neither,building automation for engineering workflows
+L272,neither,built audit trail
+L273,neither,new agent idea each week
+L274,neither,engineers developed a tool
+L275,neither,quoting has AI built in
+L276,neither,starting with provider-facing tools
+L277,neither,bias mitigation in data steps
+L278,neither,leverages synthetic data
+L279,neither,spot checking outputs
+L280,neither,building evaluation frameworks
+L281,tool_change,agent removed from sales tickets and sponsors
+L282,neither,supporting deployed AI capabilities
+L283,neither,building retrieval algorithms
+L284,tool_change,set agent schedule to weekly
+L285,neither,version number remark
+L286,decision,establishes governance and guardrails for selling AI
+L287,neither,created German language model
+L288,neither,building full-stack AI applications
+L289,neither,preparing to use tool for calls
+L290,neither,three agents working for sales
+L291,neither,weekly summary pushed to Slack
+L292,neither,steering AI features fallback experiences
+L293,neither,building AI solutions for customers
+L294,decision,let teams experiment with agents
+L295,neither,built stuff ourselves
+L296,neither,designing forecasting tools
+L297,neither,integrating LLM frameworks into workflows
+L298,neither,implementing agentic sales workflows
+L299,neither,product team wrote help content
+L300,neither,trialed bots
+L301,decision,sets team norms for AI-assisted development
+L302,decision,defines quality bar and evaluation methodology
+L303,neither,spot checking
+L304,neither,applying LLMs to data processing
+L305,neither,watching what agent does
+L306,neither,framework for prompt reuse across units
+L307,neither,implementing bots in finance
+L308,neither,developing agent skills
+L309,neither,contributing to AI solutions
+L310,neither,pulls data from systems
+L311,neither,centralizing work to deploy agents
+L312,neither,expertise in agent prompts and guardrails
+L313,neither,verifying gateway policy and logging
+L314,neither,built cloud project for updates
+L315,decision,has operating model with approved architectures
+L316,neither,did a CSV
+L317,neither,working with NVIDIA on determinism
+L318,neither,checking for hallucinated speakers

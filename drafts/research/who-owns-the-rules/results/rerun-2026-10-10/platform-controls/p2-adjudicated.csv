@@ -1,0 +1,62 @@
+id,code,reason
+L003,neither,Referent of 'taken it off' unclear; no explicit setting or rule named
+L011,tool_change,Training the agent on a prompt changes its instructions
+L012,neither,Designing agent prompts and integrations is building the agent
+L013,tool_change,Adding a new prompt to the agent's conversation flow
+L015,neither,RPA documentation and intake processes; not agent settings or rules
+L017,tool_change,Training the agent on a use case changes its instructions
+L021,decision,Team governs AI bots; oversight of what bots may do
+L023,neither,Business decision about leads; not about agent rules
+L026,neither,Engineering patterns for building systems; not agent rules
+L031,neither,Designing review workflows is building solutions
+L036,decision,Policy restricting which models engineers may use
+L040,tool_change,Managing IAM and data flow controls for AI services
+L050,tool_change,Giving the agent a defined pool of data to use
+L053,neither,Data governance; not agent rules or settings
+L065,neither,Unclear what was adjusted
+L068,neither,Deploying agent on certain items; no setting or rule change
+L072,neither,Designing agent prompts and integrations is building the agent
+L076,neither,Architecting agents with HITL controls is building
+L079,tool_change,Daily training of the agent changes its instructions
+L080,neither,States human in the loop exists; no change or decision
+L094,neither,Designing and shipping agents incl guardrails is building
+L096,neither,Engineering standards and roadmaps; not agent rules
+L110,neither,Partner readiness gatekeeping; not agent rules
+L112,tool_change,Training the agent changes its instructions
+L122,decision,Refining approval tollgate framework for automation portfolio
+L123,tool_change,Uploading brand guidelines into the agent as instructions
+L125,neither,Introducing a use case; no setting or rule
+L126,decision,Setting standards for AI-assisted development usage
+L128,tool_change,Tuning the agent
+L131,tool_change,Training the agent on use cases changes its instructions
+L150,tool_change,Expanded agent's permitted responses for sponsorships
+L152,neither,Using an AI tool to write prompts; not agent config
+L168,tool_change,Consolidating the agent's prompt
+L171,tool_change,Putting a prompt into Agentforce
+L172,neither,General CoE principles and frameworks; not agent-specific
+L187,decision,Defining control requirements and approved-tool guardrails policy
+L199,neither,SRE standards for services; not agent rules
+L205,decision,Establishing governance and responsible AI practices for AI
+L210,tool_change,Adding a voice capability to the agent
+L211,neither,Reference architectures and coding standards; building
+L213,tool_change,Ingesting product specs into agent knowledge
+L220,decision,Setting security principles and responsible AI controls policy
+L221,tool_change,Switched agent processes to autonomous mode
+L229,neither,Metrics and risk dashboards; monitoring
+L231,decision,Organisational choice to impose more guardrails on clinical side
+L237,neither,Engineering practices; not agent rules
+L238,tool_change,Adding staff knowledge directly into platform AI
+L241,neither,States circuit breakers exist; no change or decision
+L246,tool_change,Training the AI changes its behaviour in the tool
+L247,decision,Defining governance standards for GenAI solutions
+L249,decision,Governance patterns incl approvals and change management for prompts
+L251,tool_change,Giving the agent instructions about the company
+L256,neither,Code freeze; not agent rules
+L260,tool_change,Building business rules for the agent
+L281,neither,Referent of 'taken it off' unclear; no explicit setting named
+L284,tool_change,Changing an agent setting to weekly
+L286,neither,Governance of how firm sells AI; not agent rules
+L294,neither,Letting people experiment; not agent rules
+L301,decision,Setting norms for AI-assisted development compliance
+L302,neither,Evaluation methodology; evaluating
+L315,neither,Operating model with approved architectures; building
