@@ -5,7 +5,7 @@ Prompt `speech` v1 in `loop-tools/extract_tasks.py`; post-processing `loop-tools
 - Transcripts chunked: 38 of 38 M transcript files: 30 timestamped (batch 1) and 8 without timestamps (batch 2: M013, M032, M041, M053, M054, M067, M068, M077; chunked by paragraph, `position` field e.g. "para 14-22"; scraped pages that include show-notes and ads, so some records may not be speech).
 - Chunks: 189 timestamped + 42 paragraph-position = 231 (about 1,200 words, 100-word overlap), 0 failed requests in both batches.
 - Batch 1 (timestamped, 189 chunks): Haiku 1,215, Sonnet 1,366 records; verbatim 0.973 / 0.997. Agreement (Jaccard >= 0.5, one-to-one): 813 matched; P 0.669, R 0.595, F1 0.630; exact F1 0.368; median count ratio 0.857 (gate passed); 6 chunks with exactly one model empty. Consensus 813, 771 after overlap dedupe (42 dropped).
-- Batch 2 (no timestamps, 42 chunks, reported separately): Haiku 156, Sonnet 198 records; verbatim 0.936 / 1.000. AGREE_NT
+- Batch 2 (no timestamps, 42 chunks, reported separately): Haiku 156, Sonnet 198 records; verbatim 0.936 / 1.000. Agreement: 101 matched; P 0.647, R 0.510, F1 0.571; exact F1 0.373; median count ratio 0.667 (gate 0.8-1.25 FAILED); 2 chunks with exactly one model empty.
 - **Combined consensus records after dedupe: 862** (771 + 91; batch 2 consensus 101, 10 overlap duplicates dropped). Per-transcript batch 2: {'M041': 20, 'M053': 18, 'M054': 18, 'M067': 35}. Timestamp field is empty or unreliable for batch 2.
 - Of the 862, 1 are non-verbatim (flagged); 6 are `general claim` (kept, flagged, not evidence of practice).
 
