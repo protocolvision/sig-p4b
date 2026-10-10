@@ -77,3 +77,16 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    check of the consensus set on 25 fresh passages must reach 0.7 precision and recall before use.
    Vendor filers (SIC 7370–7374, 3570–3579) supply 64% of passages and are analysed separately from
    adopters.
+
+10. **Filings leave the activity clustering; coded by passage instead.** Three filing extractions failed the
+    clean check:
+    - v1: precision 0.39;
+    - v2: prompt corrected, superseded before checking;
+    - v3 consensus: precision 0.40, recall 0.52.
+    Both models agree on product, revenue and financing statements and miss team-subject activities. The
+    cause is the source: filings seldom describe internal work, so span extraction of work activities is
+    the wrong tool. Filings are removed from I2 clustering (postings remain the activity source). They are
+    coded by passage with the fixed codebook `loop-prompts/filing-codes.md` (own use, product, reorg,
+    body, metric, controls, workforce, rule cited). These serve the purposes section 4.2 gave filings
+    (F1–F3, D2, I4 citations, diffusion). Gates: kappa 0.6 or more per code, and a clean Opus check with
+    0.7 precision and recall per code.

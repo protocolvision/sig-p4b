@@ -1,0 +1,49 @@
+doc_id,task_id,verbatim,is_target,performer_ok,note
+0001193125-26-103276_1,0001193125-26-103276_1:3,yes,yes,yes,"Resource-use list of company activities (R&D, IP, supply chain, planning, G&A); also bundles 'raising capital' (financing), accepted as mostly target"
+0001193125-26-103276_1,MISSED,,,,using our reverse translational development platform to prioritize future drug targets and to identify opportunities for monotherapy treatment and in combination with existing therapies across various indications
+0001193125-26-103276_1,MISSED,,,,"We have built and deploy a reverse translational platform and knowledge base, which we call our MbTx Platform, for the discovery and development of live biotherapeutics"
+0001193125-26-076615_0,0001193125-26-076615_0:0,yes,yes,yes,"Company function activity (publishing policies). Note: 'Our employees and personnel may use generative AI, agentic AI...' left unextracted; hedged risk-factor wording, so not counted as missed"
+0001582961-26-000019_0,MISSED,,,,"We have a highly efficient self-service customer acquisition model, which we complement with a sales force focused on inside sales, targeted outside sales and partnership opportunities to drive revenue growth"
+0001628280-25-032604_15,0001628280-25-032604_15:0,yes,yes,yes,Own engineering builds applications using its platform
+0001628280-25-032604_15,0001628280-25-032604_15:3,yes,yes,yes,Sales/partner team activity
+0001628280-25-032604_15,0001628280-25-032604_15:4,yes,no,yes,"Offering to customers / acquisition strategy, not a team activity"
+0001628280-25-032604_15,0001628280-25-032604_15:1,yes,no,yes,Vague anaphora ('done this'); no self-contained activity; centred on partner
+0001628280-25-032604_15,0001628280-25-032604_15:2,yes,yes,yes,Sales and marketing planning activity
+0000029989-26-000019_0,MISSED,,,,"multiple agencies and disciplines within Omnicom collaborate in formal client networks, such as our CSLs and GGT, as well as informal virtual client networks"
+0000796343-26-000056_0,0000796343-26-000056_0:1,yes,no,yes,"Segment-reporting restructure (corporate/accounting event), not a people/team activity"
+0000796343-26-000056_0,MISSED,,,,management evaluates results and allocates resources
+0000746838-26-000006_0,0000746838-26-000006_0:0,yes,yes,yes,Benchmarking activity by the firm
+0001650372-26-000036_4,0001650372-26-000036_4:0,yes,yes,yes,R&D organization responsibilities
+0001650372-26-000036_4,0001650372-26-000036_4:2,yes,yes,yes,Teams working with customers to gather feedback
+0001650372-26-000036_4,MISSED,,,,"It is also responsible for our customer services platforms, including billing and support, the Atlassian Marketplace, Forge platform, and certain marketing and sales systems that power our high-velocity, low-friction distribution model."
+0001650372-26-000036_4,MISSED,,,,"Research and development activities primarily include the development and release of new apps and AI agents, enhanced AI-powered functionality across existing apps, expanded cloud platform capabilities, including the Teamwork Graph, and the integration of the latest foundational AI models"
+0001193125-26-059435_0,0001193125-26-059435_0:0,yes,no,no,Describes a customer-facing product algorithm (Deal Ratings); labelled 'agent in own operations' wrongly
+0001628280-26-060909_1,0001628280-26-060909_1:0,yes,no,yes,Investment statement
+0001628280-26-060909_1,0001628280-26-060909_1:1,yes,no,yes,Product/offering development for customers
+0001628280-26-060909_1,0001628280-26-060909_1:2,yes,yes,yes,AI into own operations; 'both' would fit better but 'person' acceptable
+0001794783-26-000057_0,MISSED,,,,"Advanced predictive analytics help our dedicated, retention-focused customer care (“CCA”) team identify consumers at risk of churn and those most likely to purchase additional products."
+0001794783-26-000057_0,MISSED,,,,AI-assisted software development to enhance code quality and accelerate release velocity
+0001671933-26-000014_0,0001671933-26-000014_0:0,yes,no,yes,Product investment
+0001671933-26-000014_0,0001671933-26-000014_0:1,yes,no,yes,Revenue/business-model statement
+0001709164-26-000037_0,0001709164-26-000037_0:0,yes,no,yes,Investment statement inside risk factor
+0001535527-26-000025_0,0001535527-26-000025_0:0,yes,no,yes,Business-model / go-to-market statement
+0001535527-26-000025_0,0001535527-26-000025_0:1,yes,yes,yes,Sales team activity
+0001535527-26-000025_0,0001535527-26-000025_0:2,yes,no,yes,Accounting policy
+0001535527-26-000025_0,0001535527-26-000025_0:3,yes,no,yes,Revenue source statement
+0001193125-26-214647_0,0001193125-26-214647_0:1,yes,no,yes,Product release announcement
+0001193125-26-214647_0,0001193125-26-214647_0:2,yes,no,yes,Product release announcement
+0001193125-26-214647_0,0001193125-26-214647_0:3,yes,no,yes,Pricing/packaging release
+0001628280-26-005450_1,0001628280-26-005450_1:0,yes,no,yes,Product launch / what product does for customers
+0001628280-26-005450_1,0001628280-26-005450_1:1,yes,no,yes,Product description
+0001786352-25-000037_0,0001786352-25-000037_0:1,yes,no,yes,Product development (customer AI agents); subject is 'this asset'
+0001786352-25-000037_0,MISSED,,,,enables us not only to effectively manage risk exposure (borderline: own risk function using transaction data)
+0000884144-22-000004_0,0000884144-22-000004_0:0,yes,yes,yes,People build RPA bots for own operations; 'both' correct
+0000884144-22-000004_0,0000884144-22-000004_0:1,yes,no,yes,Business-model statement
+0000884144-22-000004_0,0000884144-22-000004_0:2,yes,yes,yes,Tracking sales/marketing activities
+0000884144-22-000004_0,0000884144-22-000004_0:3,yes,yes,yes,Account management team activity
+0000884144-22-000004_0,MISSED,,,,These bots act as digital workers that make us more efficient and eliminate errors.
+0000884144-22-000004_0,MISSED,,,,"they are connected with a sales representative, who works to close the sale, via Asure’s web site, phone, or a face-to-face meeting by discussing solutions that meet their needs"
+0001193125-26-217061_0,0001193125-26-217061_0:2,yes,no,yes,"Financing (forbearance agreements), explicitly excluded"
+0001193125-26-217061_0,MISSED,,,,"we ingest unstructured data on legislative and regulatory developments, and overlay that data with our sophisticated in-house AI and data science expertise (borderline: in-house analysts plus AI)"
+0001628280-26-052243_3,0001628280-26-052243_3:1,yes,no,yes,Investment statement
+0001193125-25-280122_0,0001193125-25-280122_0:0,yes,yes,yes,Firm runs AI in its own customer interactions; fragment but valid; 'both' ok
