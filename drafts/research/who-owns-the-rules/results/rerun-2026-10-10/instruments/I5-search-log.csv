@@ -1,0 +1,40 @@
+date,query_or_action,engine,results_kept
+2026-10-10,Microsoft Entra Agent ID owners sponsors roles,WebSearch,3 Learn pages saved
+2026-10-10,Microsoft Agent 365 admin roles,WebSearch,"2 saved (overview, blog)"
+2026-10-10,Copilot Studio security roles,WebSearch,1 saved
+2026-10-10,Salesforce Agentforce permission sets / certification,WebSearch,0 usable (JS-only pages)
+2026-10-10,ServiceNow AI Control Tower roles,WebSearch,0 usable (JS stub)
+2026-10-10,Gemini Enterprise admin roles,WebSearch,3 saved
+2026-10-10,AWS AgentCore IAM roles,WebSearch,2 saved
+2026-10-10,UiPath roles / Agent Builder,WebSearch,1 saved (Orchestrator roles; no agent human role)
+2026-10-10,Workato Agent Studio roles,WebSearch,4 saved
+2026-10-10,Workday Agent System of Record,WebSearch,1 saved (press release)
+2026-10-10,Zendesk AI agents roles,WebSearch,"1 usable, 1 JS-only"
+2026-10-10,Intercom Fin permissions,WebSearch,2 saved
+2026-10-10,OpenAI ChatGPT Enterprise roles,WebSearch,0 usable (HTTP 403)
+2026-10-10,Claude Enterprise roles,WebSearch,2 saved
+2026-10-10,Okta AI agent owner,WebSearch,1 saved; no owner wording
+2026-10-10,Entra Agent ID Build 2025 preview,WebSearch,1 coverage URL used for date; owner/sponsor preview text not found
+2026-10-10,Salesforce AI Specialist launch,WebSearch x2,0 verified (Salesforce Ben pages 403)
+2026-10-10,AWS AI Practitioner / Gen AI Developer Pro,WebSearch,1 saved (AWS blog)
+2026-10-10,Google Gen AI Leader,WebSearch,1 saved
+2026-10-10,IAPP AIGP,WebSearch,press release URL 404 to curl; date second-hand
+2026-10-10,ISACA AAIA/AAISM,WebSearch,1 saved (Infosecurity); Business Wire fetch failed
+2026-10-10,Microsoft APL-7008 / AB-900 / AB-620,WebSearch x2,3 saved
+2026-10-10,Power Virtual Agents -> Copilot Studio; Einstein Copilot -> Agentforce,WebSearch x2,dates from summaries only
+2026-10-10,"Agentic AI certifications (GSDC, GitHub, NVIDIA, Anthropic)",WebSearch,"listed, undated"
+2026-10-10,ServiceNow certification,WebSearch,null result
+2026-10-10,Zendesk certification,WebSearch,null result
+2026-10-10,Wayback prefix learn.microsoft.com/en-us/entra/agent-id/* (2025),CDX,0 captures; individual page CDX queries from=2025 also empty
+2026-10-10,text_first_seen.py ms-entra-sponsor/owner,Wayback CDX+id_,20260504172103 (earliest capture; phrase present)
+2026-10-10,text_first_seen.py ms-cs-security-roles,Wayback CDX+id_,20251221225512 (some fetches failed)
+2026-10-10,text_first_seen.py ms-a365-overview,Wayback CDX+id_,20260504110004
+2026-10-10,text_first_seen.py ms-entra-ignite,Wayback CDX+id_,20251205060522
+2026-10-10,text_first_seen.py wk-agent-studio,Wayback CDX+id_,20260614064007
+2026-10-10,text_first_seen.py zd-manage-access,Wayback CDX+id_,20260616001924
+2026-10-10,text_first_seen.py goog-agentspace-old,Wayback CDX+id_,phrase absent from latest 2025 capture
+2026-10-10,"text_first_seen.py goog-gemini-iam, aws-payments, an-roles, an-custom, ic-fin-roles",Wayback CDX+id_,phrase not in raw archived HTML
+2026-10-10,"text_first_seen.py ic-fin-teammates, okta",Wayback CDX+id_,CDX lookup failed (connection refused / 503)
+2026-10-10,FAILED CAPTURE: ms-cs-authoring-roles (404),curl,not used as sources
+2026-10-10,"FAILED CAPTURE: sf-admin-blog, sf-exam-guide, sf-trailhead-cert, sf-agentforce-builder, sn-aict-roles, zd-ai-roles (error pages or loader stubs)",curl,not used as sources
+2026-10-10,"FAILED CAPTURE: oai-roles, oai-wsagents, sf-announce-ai-spec (HTTP 403)",curl,not used as sources

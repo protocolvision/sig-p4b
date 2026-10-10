@@ -1,0 +1,30 @@
+date,query,engine,results_kept
+2026-10-10,Microsoft Entra Agent ID agent identity owners sponsors roles,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Microsoft Agent 365 admin roles owner sponsor agent registry,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Copilot Studio security roles environment maker admin documentation,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Salesforce Agentforce permission sets Agentforce Specialist certification,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,ServiceNow AI Control Tower roles AI agent roles docs,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Gemini Enterprise admin roles IAM Agentspace administrator,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Agentforce Specialist certification announced Salesforce AI Specialist exam launch,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Agentforce admin permission set Manage AI Agents,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Amazon Bedrock AgentCore IAM roles permissions human roles agent,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,UiPath agentic automation roles Agent Builder permissions,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Workato Agent Studio roles permissions agent owner,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Workday Agent System of Record agent manager role,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Zendesk AI agents admin role permissions,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Intercom Fin AI agent permissions teammate roles,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,ChatGPT Enterprise workspace roles owner admin custom GPT agent,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Claude Enterprise roles primary owner owner admin,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,ServiceNow certification AI agents exam,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,UiPath Agentic Automation Associate certification launch,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Microsoft Agent 365 announced Ignite 2025,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Workday Agent System of Record announcement press release,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Microsoft Entra Agent ID announced Build 2025,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Google Agentspace Gemini Enterprise rename,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Okta Ping CyberArk IBM watsonx AI agent owner role,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,ServiceNow AI Agent Studio admin role sn_aia,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Zendesk certification AI agents,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Intercom Academy Fin certification,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,Microsoft AB-620 AB-900 AB-730 exam beta launch,WebSearch (standard),see I5-vendor-roles.csv; search snippets used only to locate URLs
+2026-10-10,"Wayback CDX per URL (limit=1, from=2020)",web.archive.org CDX,values where returned; ERR/timeouts recorded as NF
+2026-10-10,"Direct fetch blocked or JS-only: openai (403), salesforce help, servicenow docs, zendesk AI roles",curl,raw text not captured; quote=NF
