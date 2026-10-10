@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Report Template Draft</title>
+<style>
+/* Layout: one 42rem text column. Findings first; each later page renders only if its data has content.
+   One typeface (the site's Lora/Charter/Georgia stack). Paper, ink, one forest accent. Hard = solid, soft = frayed/dashed. */
+:root {
+  color-scheme: light;
+  --bg: #fbfbf8;          /* paper, slight green bias */
+  --fg: #1d2320;          /* ink */
+  --muted: #586059;       /* 5.9:1 on paper, 4.9:1 on accent-soft */
+  --rule: #dfe3dc;        /* hairlines only, never the only carrier of meaning */
+  --line: #8a938c;        /* chart axes and guides: 3:1 on paper */
+  --fill: #f1f3ee;
+  --accent: #0f6e56;      /* forest */
+  --accent-soft: #d6e9e2;
+  --on-accent: #ffffff;   /* text on an accent fill */
+  --warn: #a8481b;        /* contradicts / caveat: always paired with a shape and a word */
+  --font: Lora, Charter, Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --line: #69736b; --fill: #1b211e;
+  --accent: #46b996; --accent-soft: #1d3a32; --on-accent: #0b0f0d; --warn: #e48a5c;
+} }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --line: #69736b; --fill: #1b211e;
+  --accent: #46b996; --accent-soft: #1d3a32; --on-accent: #0b0f0d; --warn: #e48a5c;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.65 var(--font); font-variant-numeric: lining-nums tabular-nums; }
+.wrap { max-width: 42rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 1.5rem 4rem; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+a { color: var(--accent); text-underline-offset: .15em; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: .4rem 0 .8rem; text-wrap: balance; }
+h2 { font-size: 1.35rem; line-height: 1.3; margin: 0 0 .6rem; text-wrap: balance; }
+h3 { font-size: 1.05rem; margin: 2rem 0 .4rem; }
+p { margin: 0 0 1rem; }
+.muted { color: var(--muted); }
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; color: var(--muted); font-size: .9rem; }
+.rope { display: block; width: 100%; height: 14px; margin: .6rem 0 1.2rem; }
+.rope path { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; }
+.rope path.frayed { stroke: var(--muted); stroke-width: 1.2; }
+nav.pages { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg); border-bottom: 1px solid var(--rule); display: flex; gap: .25rem 1rem; overflow-x: auto; padding-block: .1rem; margin-bottom: 1.5rem; font-size: .92rem; }
+nav.pages a { color: var(--muted); text-decoration: none; padding: .6rem .1rem; white-space: nowrap; }
+nav.pages a:hover, nav.pages a[aria-current] { color: var(--fg); text-decoration: underline; text-underline-offset: .35em; text-decoration-color: var(--accent); }
+section.page { padding-top: 2.5rem; border-top: 1px solid var(--rule); margin-top: 2.5rem; scroll-margin-top: 3rem; }
+section.page.first { border-top: 0; margin-top: 0; padding-top: 0; }
+.pageno { color: var(--muted); font-size: .88rem; margin-bottom: .3rem; }
+.ph { display: inline-block; font-size: .72rem; letter-spacing: .06em; font-weight: 700; color: var(--warn); border: 1px solid var(--warn); border-radius: 3px; padding: 0 .35rem; line-height: 1.5; vertical-align: .15em; }
+.slot { border: 1px dashed var(--muted); border-radius: 4px; padding: .8rem 1rem; color: var(--muted); margin-bottom: 1rem; }
+figure { margin: 1.25rem 0; padding: 0; }
+figcaption { font-size: .9rem; color: var(--muted); margin-top: .5rem; }
+.fig-head { display: flex; flex-wrap: wrap; gap: .25rem .75rem; align-items: baseline; justify-content: space-between; margin-bottom: .5rem; }
+.fig-head b { font-weight: 600; }
+.scroll { overflow-x: auto; max-width: 100%; position: relative; }
+svg text { font-family: var(--font); fill: var(--fg); }
+svg .mut { fill: var(--muted); }
+.mark { display: inline-flex; align-items: center; gap: .4rem; font-size: .88rem; white-space: nowrap; }
+.mark svg { width: 18px; height: 18px; flex: none; }
+.g-strong { fill: var(--accent); } .g-single { fill: none; stroke: var(--accent); stroke-width: 2; } .g-dot { fill: var(--accent); }
+.g-early { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 3 2.5; }
+.g-none { stroke: var(--muted); stroke-width: 2; stroke-linecap: round; } .g-contra { stroke: var(--warn); stroke-width: 2.5; stroke-linecap: round; fill: none; }
+
+/* 1 findings: a numbered list of statements; no cards */
+.findings { list-style: none; padding: 0; margin: 1.25rem 0 0; counter-reset: f; }
+.finding { counter-increment: f; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: 0 .6rem; padding: 1.1rem 0; border-top: 1px solid var(--rule); }
+.finding:first-child { border-top: 0; padding-top: .2rem; }
+.finding::before { content: counter(f); font-weight: 700; color: var(--muted); font-size: 1.05rem; line-height: 1.5; }
+.finding > div { min-width: 0; }
+.finding .stmt { font-size: 1.12rem; font-weight: 600; line-height: 1.45; margin: 0 0 .35rem; }
+.finding .meta { display: flex; flex-wrap: wrap; gap: .2rem 1rem; align-items: center; font-size: .9rem; color: var(--muted); margin-bottom: .5rem; }
+.finding .meta .mark { color: var(--fg); font-weight: 600; }
+.finding blockquote { margin: .5rem 0 0; padding-left: .9rem; border-left: 2px solid var(--accent); font-size: .98rem; }
+.finding blockquote p { margin: 0; }
+.finding cite { display: block; font-style: normal; font-size: .85rem; color: var(--muted); margin-top: .15rem; }
+.finding .verdict { font-size: .92rem; margin: .5rem 0 0; }
+.finding .verdict b { font-weight: 700; }
+.fcaveat { font-size: .9rem; margin: .5rem 0 0; padding-left: .9rem; border-left: 2px dashed var(--warn); }
+.fcaveat b { color: var(--warn); font-weight: 600; }
+.conf-key { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; list-style: none; padding: 0; margin: .6rem 0 0; color: var(--muted); }
+
+/* 2 grid */
+.gridwrap table { border-collapse: collapse; width: 100%; }
+.gridwrap th, .gridwrap td { padding: .45rem .2rem; text-align: center; border-bottom: 1px solid var(--rule); font-weight: 400; }
+.gridwrap th[scope=row] { text-align: left; font-size: .95rem; line-height: 1.35; min-width: 7.5rem; padding-right: .5rem; }
+.gridwrap thead th { font-size: .82rem; color: var(--muted); vertical-align: bottom; }
+.gridwrap td svg { width: 22px; height: 22px; display: block; margin: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; margin: .8rem 0 0; padding: 0; list-style: none; font-size: .88rem; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: .4rem; }
+.legend svg { width: 18px; height: 18px; flex: none; }
+.untested { font-size: .92rem; color: var(--muted); margin-top: .9rem; }
+
+/* 3 feature profile */
+.prof { display: grid; gap: .1rem; list-style: none; padding: 0; margin: 0; }
+.prow { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 3rem; align-items: center; gap: .5rem; padding: .3rem .4rem; border-radius: 3px; }
+.prow.present { box-shadow: inset 0 0 0 2px var(--accent); background: var(--accent-soft); margin-top: .6rem; }
+.prow .nm { font-size: .92rem; line-height: 1.3; min-width: 0; }
+.prow .sc { font-size: .85rem; text-align: right; color: var(--muted); }
+.prow svg { width: 100%; height: 22px; display: block; }
+.fhead { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 3rem; gap: .5rem; padding: 0 .4rem; font-size: .75rem; color: var(--muted); }
+.fhead svg { width: 100%; height: 14px; display: block; }
+.fkey { columns: 2 14rem; column-gap: 1.5rem; font-size: .85rem; color: var(--muted); padding: 0; list-style: none; margin: .8rem 0 0; }
+.fkey li { break-inside: avoid; padding: .1rem 0; } .fkey b { color: var(--fg); font-weight: 600; margin-right: .35rem; }
+@media (max-width: 34rem) {
+  .prow, .fhead { grid-template-columns: minmax(0, 1fr) 3rem; }
+  .prow .nm { grid-column: 1; } .prow .sc { grid-column: 2; grid-row: 1; } .prow svg { grid-column: 1 / -1; }
+  .fhead .h-name { display: none; } .fhead svg { grid-column: 1 / -1; grid-row: 2; } .fhead .h-score { grid-column: 2; grid-row: 1; }
+}
+
+/* head to head and timeline: SVG drawn at the container's real width so text stays at its set size */
+.chart svg { width: 100%; height: auto; display: block; }
+.ev { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 1.5rem; font-size: .88rem; }
+.ev li { display: flex; gap: .5rem; } .ev b { flex: none; min-width: 2.2rem; color: var(--muted); font-weight: 600; }
+@media (max-width: 34rem) { .ev { grid-template-columns: 1fr; } }
+
+/* changes */
+.chg { list-style: none; padding: 0; margin: 0; }
+.chg li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .2rem 1rem; padding: .6rem 0; border-top: 1px solid var(--rule); }
+.chg .tag { font-size: .85rem; display: flex; align-items: center; gap: .45rem; color: var(--fg); font-weight: 600; }
+.chg .tag svg { width: 18px; height: 18px; flex: none; }
+@media (max-width: 34rem) { .chg li { grid-template-columns: 1fr; } }
+
+/* next tests */
+.next { padding-left: 1.3rem; margin: 0; }
+.next li { margin-bottom: .8rem; }
+.next .why { display: block; font-size: .92rem; color: var(--muted); }
+
+/* method and sources */
+.mnote { font-size: .95rem; }
+.mnote h3 { margin-top: 1.4rem; font-size: 1rem; }
+.mnote ul { padding-left: 1.2rem; margin: .3rem 0 1rem; }
+.mnote li { margin-bottom: .35rem; }
+details { border-top: 1px solid var(--rule); padding: .7rem 0; }
+details:last-of-type { border-bottom: 1px solid var(--rule); }
+summary { cursor: pointer; font-weight: 600; padding: .2rem 0; }
+details ol, details ul { padding-left: 1.2rem; margin: .5rem 0 0; }
+details li { margin-bottom: .45rem; font-size: .96rem; }
+.src { border-collapse: collapse; width: 100%; min-width: 26rem; font-size: .88rem; }
+.src th, .src td { text-align: left; padding: .4rem .6rem .4rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.src th { color: var(--muted); font-weight: 600; }
+.src td:first-child { white-space: nowrap; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+.visually-hidden { position: absolute !important; left: 0; top: 0; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span id="m-series"></span><span id="m-date"></span></header>
+<svg class="rope" viewBox="0 0 400 14" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 7 H250"/>
+  <path class="frayed" d="M250 7 L270 5 L290 9 L312 6 L334 9 L356 5 L378 8 L400 6"/>
+  <path class="frayed" d="M250 7 L274 9 L296 5 L320 8 L344 4 L370 9 L400 8" opacity=".6"/>
+</svg>
+<h1 id="m-title"></h1>
+<p class="lede muted" id="m-sub"></p>
+
+<nav class="pages" aria-label="Report pages">
+  <a href="#p-findings">Findings</a><a href="#p-evidence">Evidence</a><a href="#p-patterns">Pattern match</a><a href="#p-changes">Since round one</a><a href="#p-next">What we test next</a><a href="#appendix">Method and sources</a>
+</nav>
+
+<main>
+<!-- Sections other than Findings and Method render only when their data has content (see design-notes.md). -->
+<section class="page" id="p-findings">
+  <div class="pageno"></div>
+  <h2>What we found</h2>
+  <p class="slot">PROSE SLOT. Two or three sentences: the main finding in plain words and what it means for the reader.</p>
+  <ol class="findings" id="findings"></ol>
+  <ul class="conf-key legend" id="conf-key" aria-label="Confidence marks"></ul>
+</section>
+
+<section class="page" id="p-evidence">
+  <div class="pageno"></div>
+  <h2>What each instrument found</h2>
+  <p class="slot">PROSE SLOT. One paragraph on how to read the grid: strong means three or more instruments with different data; single means one.</p>
+  <figure>
+    <div class="fig-head"><b>Hypotheses with desk evidence, by instrument</b><span class="ph">PLACEHOLDER</span></div>
+    <div class="scroll gridwrap" id="grid" tabindex="0" role="region" aria-label="Hypotheses by instrument grid"></div>
+    <ul class="legend" id="grid-legend"></ul>
+    <p class="untested" id="untested" hidden></p>
+  </figure>
+</section>
+
+<section class="page" id="p-patterns">
+  <div class="pageno"></div>
+  <h2>How the present matches the historical patterns</h2>
+  <p class="slot">PROSE SLOT. Explain that coders saw features, not pattern names, and that a script scored the match.</p>
+  <figure id="fig-profiles">
+    <div class="fig-head"><b>Feature profiles</b><span class="ph">PLACEHOLDER</span></div>
+    <ul id="profiles" class="prof" aria-label="Feature profiles by pattern"></ul>
+    <ul class="fkey" id="fkey" aria-label="Feature key"></ul>
+    <ul class="legend" id="prof-legend"></ul>
+    <figcaption id="prof-cap"></figcaption>
+  </figure>
+
+  <div id="blk-h2h">
+    <h3>Head to head: <span id="h2h-names"></span></h3>
+    <figure>
+      <div class="fig-head"><b id="h2h-title"></b><span class="ph">PLACEHOLDER</span></div>
+      <div class="chart" id="h2h"></div>
+      <ul class="visually-hidden" id="h2h-sr"></ul>
+      <figcaption id="h2h-cap"></figcaption>
+    </figure>
+  </div>
+
+  <div id="blk-tl">
+    <h3>Timeline on a shared axis</h3>
+    <figure>
+      <div class="fig-head"><b id="tl-title"></b><span class="ph">PLACEHOLDER</span></div>
+      <div class="chart" id="tl"></div>
+      <ul class="ev" id="tl-list"></ul>
+      <figcaption id="tl-cap"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="page" id="p-changes">
+  <div class="pageno"></div>
+  <h2>What changed since round one</h2>
+  <p class="slot">PROSE SLOT. One line on how the comparison was made, then the list.</p>
+  <ul class="chg" id="changes"></ul>
+</section>
+
+<section class="page" id="p-next">
+  <div class="pageno"></div>
+  <h2>What we test next</h2>
+  <p class="slot">PROSE SLOT. One line on the field plan: what it is for and when it runs.</p>
+  <ol class="next" id="next"></ol>
+</section>
+
+<section class="page" id="appendix">
+  <h2>Method and sources</h2>
+  <div class="mnote">
+    <p class="slot">PROSE SLOT. Method in two sentences.</p>
+    <div id="m-tests"></div>
+    <h3>Corpus and coverage <span class="ph">PLACEHOLDER</span></h3>
+    <p id="m-funnel"></p>
+    <p id="m-cov"></p>
+    <ul id="m-caveat"></ul>
+  </div>
+  <details id="d-dev"><summary>Deviations from the pre-registered design <span class="ph">PLACEHOLDER</span></summary><ol id="dev"></ol></details>
+  <details id="d-method"><summary>Method in steps <span class="ph">PLACEHOLDER</span></summary><ol id="method"></ol></details>
+  <details id="d-src"><summary>Sources appendix <span class="ph">PLACEHOLDER</span></summary>
+    <div class="scroll" tabindex="0" role="region" aria-label="Sources table"><table class="src"><thead><tr><th scope="col">Corpus id</th><th scope="col">Type</th><th scope="col">Date</th><th scope="col">Used by</th></tr></thead><tbody id="src"></tbody></table></div>
+  </details>
+</section>
+</main>
+<footer><span id="m-foot"></span></footer>
+</div>
+
+<script type="application/json" id="report-data">
+{
+  "meta": {
+    "series": "PLACEHOLDER series name",
+    "date": "PLACEHOLDER date",
+    "title": "PLACEHOLDER report title",
+    "subtitle": "PLACEHOLDER one-sentence subtitle. About seven minutes.",
+    "footer": "PLACEHOLDER: all values on this page are invented to show the layout. None is a finding."
+  },
+  "findings": [
+    {"id": "F1", "statement": "PLACEHOLDER main finding, stated as what was observed.", "evidence_summary": "PLACEHOLDER: what the instruments saw, in one line.",
+     "instruments": ["I1", "I2", "I5"], "sources": 42, "confidence": "high",
+     "quote": {"text": "PLACEHOLDER representative quote from a source.", "id": "C-0001"}, "caveat": null},
+    {"id": "F2", "statement": "PLACEHOLDER second finding.", "evidence_summary": "PLACEHOLDER evidence line.",
+     "instruments": ["I3", "I6"], "sources": 17, "confidence": "moderate",
+     "quote": {"text": "PLACEHOLDER quote.", "id": "C-0003"}, "caveat": "PLACEHOLDER caveat that changes how this finding reads, e.g. a sector the corpus misses."},
+    {"id": "F3", "statement": "PLACEHOLDER third finding, an early sign.", "evidence_summary": "PLACEHOLDER evidence line.",
+     "instruments": ["I4"], "sources": 6, "confidence": "low",
+     "quote": {"text": "PLACEHOLDER quote.", "id": "C-0002"}, "caveat": null}
+  ],
+  "verdict": {
+    "outcome": "inconclusive",
+    "label": "Inconclusive",
+    "statement": "PLACEHOLDER one sentence. Used only when the outcome is decisive, as a finding.",
+    "hypothesis": "H-DevOps",
+    "power": [5, 8],
+    "falseSupport": 5,
+    "instruments": ["I1", "I2", "I3", "I4", "I5", "I6"],
+    "confidence": "moderate"
+  },
+  "grid": {
+    "instruments": [
+      {"id": "I1", "name": "Labour market"}, {"id": "I2", "name": "Activity analysis"}, {"id": "I3", "name": "Lead industry"},
+      {"id": "I4", "name": "Rules that require roles"}, {"id": "I5", "name": "Vendor signals"}, {"id": "I6", "name": "Practitioner speech"}
+    ],
+    "hypotheses": [
+      {"id": "H-A", "label": "PLACEHOLDER hypothesis A", "cells": ["strong", "strong", "single", "none", "strong", "none"]},
+      {"id": "H-B", "label": "PLACEHOLDER hypothesis B", "cells": ["none", "none", "none", "none", "none", "none"]},
+      {"id": "H-C", "label": "PLACEHOLDER hypothesis C", "cells": ["none", "single", "contradicts", "contradicts", "none", "none"]},
+      {"id": "H-D", "label": "PLACEHOLDER hypothesis D", "cells": ["strong", "single", "strong", "single", "none", "strong"]}
+    ]
+  },
+  "profiles": {
+    "scale": "0 absent, 1 early sign, 2 observed",
+    "scoreLabel": "match",
+    "caption": "PLACEHOLDER: what the score is and the margin a pattern needs to clear.",
+    "features": [
+      {"id":"F01","name":"PLACEHOLDER feature 1"},{"id":"F02","name":"PLACEHOLDER feature 2"},{"id":"F03","name":"PLACEHOLDER feature 3"},
+      {"id":"F04","name":"PLACEHOLDER feature 4"},{"id":"F05","name":"PLACEHOLDER feature 5"},{"id":"F06","name":"PLACEHOLDER feature 6"},
+      {"id":"F07","name":"PLACEHOLDER feature 7"},{"id":"F08","name":"PLACEHOLDER feature 8"},{"id":"F09","name":"PLACEHOLDER feature 9"},
+      {"id":"F10","name":"PLACEHOLDER feature 10"},{"id":"F11","name":"PLACEHOLDER feature 11"},{"id":"F12","name":"PLACEHOLDER feature 12"},
+      {"id":"F13","name":"PLACEHOLDER feature 13"},{"id":"F14","name":"PLACEHOLDER feature 14"},{"id":"F15","name":"PLACEHOLDER feature 15"}
+    ],
+    "patterns": [
+      {"id":"P1","name":"PLACEHOLDER pattern 1","values":[2,2,2,0,0,2,0,0,2,0,0,0,2,0,0],"score":null},
+      {"id":"P2","name":"PLACEHOLDER pattern 2","values":[0,2,0,2,2,0,0,2,0,0,2,0,0,0,2],"score":null},
+      {"id":"P3","name":"PLACEHOLDER pattern 3","values":[0,0,2,2,0,0,2,0,0,2,0,2,0,0,0],"score":null},
+      {"id":"P4","name":"PLACEHOLDER pattern 4","values":[2,0,0,0,2,2,0,0,0,0,2,0,2,2,0],"score":null},
+      {"id":"P5","name":"PLACEHOLDER pattern 5","values":[0,0,0,2,0,0,2,2,0,2,0,0,0,2,2],"score":null},
+      {"id":"P6","name":"PLACEHOLDER pattern 6","values":[2,0,0,0,0,2,0,0,2,0,0,2,0,0,2],"score":null},
+      {"id":"P7","name":"PLACEHOLDER pattern 7","values":[0,2,0,0,2,0,2,0,0,2,0,0,2,0,0],"score":null}
+    ],
+    "present": {"name": "Present (PLACEHOLDER coding)", "values": [1,2,0,1,2,0,1,0,2,0,1,0,2,0,1], "score": null}
+  },
+  "headToHead": {
+    "a": "Pattern A", "b": "Pattern B", "k": 3, "power": "PLACEHOLDER power statement, e.g. power 73–75% at q = 0.2.",
+    "features": [
+      {"id":"F01","name":"PLACEHOLDER feature 1","value":1},
+      {"id":"F02","name":"PLACEHOLDER feature 2","value":1},
+      {"id":"F03","name":"PLACEHOLDER feature 3","value":-1},
+      {"id":"F04","name":"PLACEHOLDER feature 4","value":1},
+      {"id":"F05","name":"PLACEHOLDER feature 5","value":1},
+      {"id":"F06","name":"PLACEHOLDER feature 6","value":1}
+    ]
+  },
+  "timeline": {
+    "title": "PLACEHOLDER historical pattern beside the present",
+    "historicalLabel": "PLACEHOLDER historical pattern",
+    "presentLabel": "Present",
+    "axis": {"min": -4, "max": 14, "unit": "years from origin", "nowYear": 3},
+    "historical": [
+      {"year": -3, "text": "PLACEHOLDER milestone one"},
+      {"year": 0, "text": "PLACEHOLDER milestone two"},
+      {"year": 2, "text": "PLACEHOLDER milestone three"},
+      {"year": 5, "text": "PLACEHOLDER milestone four"},
+      {"year": 9, "text": "PLACEHOLDER milestone five"}
+    ],
+    "present": [
+      {"year": -1, "text": "PLACEHOLDER present event one"},
+      {"year": 1, "text": "PLACEHOLDER present event two"},
+      {"year": 3, "text": "PLACEHOLDER present event three"}
+    ],
+    "caption": "PLACEHOLDER caption. Years after the present's last dated event are not yet observable."
+  },
+  "changes": [
+    {"status": "replicated", "text": "PLACEHOLDER round one finding that held."},
+    {"status": "revised", "text": "PLACEHOLDER round one finding that changed, with the reason."},
+    {"status": "round-one-only", "text": "PLACEHOLDER round one finding that no instrument supports."}
+  ],
+  "nextTests": [
+    {"test": "PLACEHOLDER field test: what we will observe, where.", "why": "PLACEHOLDER: which finding or hypothesis it sharpens (e.g. F2, H-B).", "when": "PLACEHOLDER date"},
+    {"test": "PLACEHOLDER field test two.", "why": "PLACEHOLDER reason.", "when": null}
+  ],
+  "funnel": [
+    {"stage": "identified", "count": 1000},
+    {"stage": "acquired", "count": 600},
+    {"stage": "usable after screening", "count": 400},
+    {"stage": "coded", "count": 200}
+  ],
+  "coverage": {
+    "sectors": [
+      {"name": "PLACEHOLDER sector 1", "status": "covered"}, {"name": "PLACEHOLDER sector 2", "status": "covered"},
+      {"name": "PLACEHOLDER sector 3", "status": "partial"}, {"name": "PLACEHOLDER sector 4", "status": "partial"},
+      {"name": "PLACEHOLDER sector 5", "status": "missing"}, {"name": "PLACEHOLDER sector 6", "status": "missing"}
+    ],
+    "caveat": ["PLACEHOLDER: a coverage limit that does not change any finding. A limit that does goes on that finding's caveat."]
+  },
+  "deviations": [
+    "PLACEHOLDER deviation 1: what was planned, what was done, why.",
+    "PLACEHOLDER deviation 2: what was planned, what was done, why."
+  ],
+  "method": [
+    "PLACEHOLDER step 1: signatures written first.",
+    "PLACEHOLDER step 2: blind feature coding.",
+    "PLACEHOLDER step 3: scoring by script."
+  ],
+  "sources": [
+    {"id": "C-0001", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I1"},
+    {"id": "C-0002", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I2, I4"},
+    {"id": "C-0003", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I6"}
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById('report-data').textContent);
+  var NS = 'http://www.w3.org/2000/svg';
+  function $(id) { return document.getElementById(id); }
+  function has(a) { return Array.isArray(a) && a.length > 0; }
+  function h(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    for (var k in (attrs || {})) { if (k === 'text') e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function (c) { e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); });
+    return e;
+  }
+  function s(tag, attrs, text) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in (attrs || {})) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function svgIcon(kind) {
+    var v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+    if (kind === 'strong' || kind === 'high' || kind === 'covered') v.appendChild(s('circle', {cx: 12, cy: 12, r: 8, 'class': 'g-strong'}));
+    else if (kind === 'single' || kind === 'moderate') { v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, 'class': 'g-single'})); v.appendChild(s('circle', {cx: 12, cy: 12, r: 2.5, 'class': 'g-dot'})); }
+    else if (kind === 'low') v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, 'class': 'g-early'}));
+    else if (kind === 'none') v.appendChild(s('line', {x1: 7, y1: 12, x2: 17, y2: 12, 'class': 'g-none'}));
+    else if (kind === 'contradicts') v.appendChild(s('path', {d: 'M6 6 L18 18 M18 6 L6 18', 'class': 'g-contra'}));
+    return v;
+  }
+  function range(p) { return Array.isArray(p) ? (p[0] === p[1] ? p[0] + '%' : p[0] + '–' + p[1] + '%') : p + '%'; }
+  var INST = {}; (D.grid && D.grid.instruments || []).forEach(function (i) { INST[i.id] = i.name; });
+  var CONF = {high: 'High confidence', moderate: 'Moderate confidence', low: 'Early sign'};
+  function hide(id) { $(id).hidden = true; }
+
+  // meta
+  var M = D.meta;
+  document.title = M.title;
+  $('m-series').textContent = M.series; $('m-date').textContent = M.date;
+  $('m-title').textContent = M.title; $('m-sub').textContent = M.subtitle; $('m-foot').textContent = M.footer;
+
+  // decisive tests become findings; undecided ones become one line each in Method
+  var V = D.verdict, H2 = D.headToHead, tests = [];
+  var decisive = V && V.outcome && V.outcome !== 'inconclusive';
+  var h2hSum = H2 && has(H2.features) ? H2.features.reduce(function (a, f) { return a + f.value; }, 0) : null;
+  var h2hDecisive = h2hSum != null && Math.abs(h2hSum) > H2.k;
+
+  // 1 findings
+  (function () {
+    var list = (D.findings || []).slice();
+    if (decisive) list.unshift({statement: V.statement, evidence_summary: null, instruments: V.instruments || [], confidence: V.confidence, verdict: V});
+    if (h2hDecisive) list.push({statement: 'Between ' + H2.a + ' and ' + H2.b + ', the evidence favours ' + (h2hSum > 0 ? H2.a : H2.b) + '.',
+      evidence_summary: 'Head-to-head on ' + H2.features.length + ' separating features (see Pattern match).', instruments: [], confidence: null, power: H2.power});
+    list.forEach(function (f) {
+      var body = h('div');
+      body.appendChild(h('p', {'class': 'stmt', text: f.statement}));
+      var meta = h('div', {'class': 'meta'});
+      if (f.confidence) { var mk = h('span', {'class': 'mark'}); mk.appendChild(svgIcon(f.confidence)); mk.appendChild(document.createTextNode(CONF[f.confidence])); meta.appendChild(mk); }
+      var ev = [];
+      if (has(f.instruments)) ev.push(f.instruments.map(function (i) { return INST[i] || i; }).join(', '));
+      if (f.sources != null) ev.push(f.sources + (f.sources === 1 ? ' source' : ' sources'));
+      if (ev.length) meta.appendChild(h('span', {text: ev.join(' · ')}));
+      body.appendChild(meta);
+      if (f.evidence_summary) body.appendChild(h('p', {text: f.evidence_summary, style: 'margin:0'}));
+      if (f.verdict) body.appendChild(h('p', {'class': 'verdict'}, [h('b', {text: 'Verdict: ' + f.verdict.label + '.'}),
+        ' The test returns this verdict in ' + range(f.verdict.power) + ' of simulated runs when its pattern is the truth' +
+        (f.verdict.falseSupport != null ? '; false support at most ' + f.verdict.falseSupport + '%.' : '.')]));
+      if (f.power) body.appendChild(h('p', {'class': 'verdict', text: f.power}));
+      if (f.quote && f.quote.text) body.appendChild(h('blockquote', {}, [h('p', {text: '“' + f.quote.text + '”'}), h('cite', {text: f.quote.id})]));
+      if (f.caveat) body.appendChild(h('p', {'class': 'fcaveat'}, [h('b', {text: 'Read with: '}), f.caveat]));
+      $('findings').appendChild(h('li', {'class': 'finding'}, [body]));
+    });
+    ['high', 'moderate', 'low'].forEach(function (k) { var li = h('li'); li.appendChild(svgIcon(k)); li.appendChild(document.createTextNode(CONF[k])); $('conf-key').appendChild(li); });
+  })();
+
+  if (V && V.outcome === 'inconclusive') tests.push('Pattern verdict for ' + V.hypothesis + ': inconclusive. When ' + V.hypothesis + ' is the truth, the test returns “Supported” in only ' + range(V.power) + ' of simulated runs, so this result is not evidence against it.');
+  if (h2hSum != null && !h2hDecisive) tests.push('Head-to-head, ' + H2.a + ' vs ' + H2.b + ': sum ' + (h2hSum > 0 ? '+' : '') + h2hSum + ', inside the ±' + H2.k + ' band, so the two are not separated. ' + H2.power);
+
+  // 2 grid: rows with evidence only
+  (function () {
+    var G = D.grid, rows = (G && G.hypotheses || []).filter(function (r) { return r.cells.some(function (c) { return c !== 'none'; }); });
+    var rest = (G && G.hypotheses || []).filter(function (r) { return rows.indexOf(r) < 0; });
+    if (!rows.length) { hide('p-evidence'); return; }
+    var short = {strong: 'strong', single: 'single instrument', none: 'none', contradicts: 'contradicts'};
+    var t = h('table'); t.appendChild(h('caption', {'class': 'visually-hidden', text: 'Hypotheses by instrument'}));
+    var hr = h('tr'); hr.appendChild(h('th', {scope: 'col', text: 'Hypothesis', style: 'text-align:left'}));
+    G.instruments.forEach(function (i) { hr.appendChild(h('th', {scope: 'col'}, [h('abbr', {title: i.name, text: i.id})])); });
+    t.appendChild(h('thead', {}, [hr]));
+    var tb = h('tbody');
+    rows.forEach(function (hy) {
+      var r = h('tr'); r.appendChild(h('th', {scope: 'row', text: hy.label}));
+      hy.cells.forEach(function (c, i) { var td = h('td'); td.appendChild(svgIcon(c)); td.appendChild(h('span', {'class': 'visually-hidden', text: G.instruments[i].name + ': ' + short[c]})); r.appendChild(td); });
+      tb.appendChild(r);
+    });
+    t.appendChild(tb); $('grid').appendChild(t);
+    var LABEL = {strong: 'Strong (3+ instruments, different data)', single: 'Single instrument', none: 'No desk evidence', contradicts: 'Contradicts'};
+    ['strong', 'single', 'none', 'contradicts'].forEach(function (k) { var li = h('li'); li.appendChild(svgIcon(k)); li.appendChild(document.createTextNode(LABEL[k])); $('grid-legend').appendChild(li); });
+    var names = h('li', {text: G.instruments.map(function (i) { return i.id + ' ' + i.name; }).join('; ')}); names.style.flexBasis = '100%';
+    $('grid-legend').appendChild(names);
+    if (rest.length) { $('untested').textContent = 'Not tested by desk evidence (see What we test next): ' + rest.map(function (r) { return r.label; }).join('; ') + '.'; $('untested').hidden = false; }
+  })();
+
+  // redraw-on-resize helper for width-dependent SVGs
+  var drawers = [];
+  function onWidth(el, draw) { var last = 0; function go() { var w = Math.round(el.clientWidth); if (w && w !== last) { last = w; el.textContent = ''; draw(w); } } drawers.push(go); go(); }
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { drawers.forEach(function (d) { d(); }); }, 120); });
+
+  // 3a profiles (dot matrix, one SVG row per pattern)
+  var P = D.profiles, showProf = P && has(P.patterns) && P.present && has(P.present.values);
+  if (showProf) (function () {
+    var n = P.features.length, W = n * 20, H = 22;
+    function guides(v, y1, y2) { for (var i = 5; i < n; i += 5) v.appendChild(s('line', {x1: i * 20, x2: i * 20, y1: y1, y2: y2, stroke: 'var(--rule)', 'stroke-width': 1})); }
+    function row(p, cls) {
+      var r = h('li', {'class': 'prow' + (cls ? ' ' + cls : '')});
+      r.appendChild(h('div', {'class': 'nm', text: p.name}));
+      var txt = p.values.map(function (x, i) { return P.features[i].id + ' ' + ['absent', 'early sign', 'observed'][x]; }).join(', ');
+      var v = s('svg', {viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': p.name + ': ' + txt + (p.score != null ? '. ' + P.scoreLabel + ' ' + p.score : ''), preserveAspectRatio: 'xMinYMid meet'});
+      guides(v, 0, H);
+      v.appendChild(s('line', {x1: 4, x2: W - 4, y1: 11, y2: 11, stroke: 'var(--rule)', 'stroke-width': 1}));
+      p.values.forEach(function (x, i) {
+        var cx = i * 20 + 10;
+        if (x === 2) v.appendChild(s('circle', {cx: cx, cy: 11, r: 6.5, fill: 'var(--accent)'}));
+        else if (x === 1) v.appendChild(s('circle', {cx: cx, cy: 11, r: 5.5, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2, 'stroke-dasharray': '3 2'}));
+        else v.appendChild(s('circle', {cx: cx, cy: 11, r: 2, fill: 'var(--muted)'}));
+      });
+      r.appendChild(v);
+      r.appendChild(h('div', {'class': 'sc', 'aria-hidden': 'true', text: p.score == null ? '' : String(p.score)}));
+      return r;
+    }
+    // header: feature numbers every five columns, so a dot can be found without counting
+    var hv = s('svg', {viewBox: '0 0 ' + W + ' 14', preserveAspectRatio: 'xMinYMid meet', 'aria-hidden': 'true'});
+    for (var i = 0; i < n; i++) if (i === 0 || (i + 1) % 5 === 0) hv.appendChild(s('text', {x: i * 20 + 10, y: 11, 'font-size': 10, 'text-anchor': 'middle', 'class': 'mut'}, P.features[i].id));
+    var anyScore = P.patterns.concat([P.present]).some(function (p) { return p.score != null; });
+    $('profiles').appendChild(h('li', {'class': 'fhead', 'aria-hidden': 'true'}, [h('span', {'class': 'h-name', text: 'Pattern'}), hv, h('span', {'class': 'h-score', text: anyScore ? P.scoreLabel : '', style: 'text-align:right'})]));
+    P.patterns.forEach(function (p) { $('profiles').appendChild(row(p)); });
+    $('profiles').appendChild(row(P.present, 'present'));
+    P.features.forEach(function (f) { $('fkey').appendChild(h('li', {}, [h('b', {text: f.id}), f.name])); });
+    [['strong', 'Observed'], ['early', 'Early sign (needs more years)'], ['none', 'Absent']].forEach(function (k) {
+      var li = h('li'), v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+      if (k[0] === 'strong') v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, fill: 'var(--accent)'}));
+      else if (k[0] === 'early') v.appendChild(s('circle', {cx: 12, cy: 12, r: 6, 'class': 'g-early'}));
+      else v.appendChild(s('circle', {cx: 12, cy: 12, r: 2.5, fill: 'var(--muted)'}));
+      li.appendChild(v); li.appendChild(document.createTextNode(k[1])); $('prof-legend').appendChild(li);
+    });
+    $('prof-cap').textContent = P.caption || '';
+  })(); else hide('fig-profiles');
+
+  // 3b head to head: drawn only when it decides
+  if (h2hDecisive) (function () {
+    var F = H2.features, n = F.length, k = H2.k, sum = h2hSum;
+    $('h2h-names').textContent = H2.a + ' vs ' + H2.b;
+    $('h2h-title').textContent = n + ' separating features';
+    F.forEach(function (f) { $('h2h-sr').appendChild(h('li', {text: f.id + ' ' + f.name + ': ' + (f.value > 0 ? 'favours ' + H2.a : f.value < 0 ? 'favours ' + H2.b : 'no difference')})); });
+    onWidth($('h2h'), function (W) {
+      var narrow = W < 480, labW = narrow ? 0 : 170, x0 = labW + 10, x1 = W - 10, mid = (x0 + x1) / 2, half = (x1 - x0) / 2;
+      var rowH = narrow ? 44 : 30, top = 30, sumTop = top + n * rowH + 30, Ht = sumTop + 82;
+      var v = s('svg', {width: W, height: Ht, viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Head to head: ' + H2.a + ' vs ' + H2.b + '. Sum ' + sum + ', decision band plus or minus ' + k + '. Per-feature values follow as a list.'});
+      v.appendChild(s('text', {x: x0, y: 14, 'font-size': 13, 'class': 'mut'}, '← ' + H2.b));
+      v.appendChild(s('text', {x: x1, y: 14, 'font-size': 13, 'text-anchor': 'end', 'class': 'mut'}, H2.a + ' →'));
+      F.forEach(function (f, i) {
+        var y = top + i * rowH + (narrow ? 30 : rowH / 2);
+        v.appendChild(s('text', narrow ? {x: 0, y: y - 13, 'font-size': 13} : {x: 0, y: y + 4, 'font-size': 13}, f.id + ' ' + f.name));
+        v.appendChild(s('line', {x1: x0, x2: x1, y1: y, y2: y, stroke: 'var(--rule)', 'stroke-width': 1}));
+        var cx = mid + f.value * half * 0.8;
+        if (f.value !== 0) v.appendChild(s('line', {x1: mid, x2: cx, y1: y, y2: y, stroke: 'var(--accent)', 'stroke-width': 3, 'stroke-linecap': 'round'}));
+        v.appendChild(s('circle', {cx: cx, cy: y, r: 7, fill: f.value === 0 ? 'var(--bg)' : 'var(--accent)', stroke: 'var(--accent)', 'stroke-width': 2}));
+      });
+      // centre line: one piece per row on phones, so it never runs through the labels above each row
+      if (narrow) F.forEach(function (f, i) { var y = top + i * rowH + 30; v.insertBefore(s('line', {x1: mid, x2: mid, y1: y - 10, y2: y + 10, stroke: 'var(--fg)', 'stroke-width': 1.5}), v.firstChild); });
+      else v.insertBefore(s('line', {x1: mid, x2: mid, y1: top, y2: top + n * rowH + 4, stroke: 'var(--fg)', 'stroke-width': 1.5}), v.firstChild);
+      var max = Math.max(n, k + 1), sx = function (val) { return mid + val / max * half; };
+      var ay = sumTop + 30;
+      v.appendChild(s('text', {x: narrow ? 0 : 0, y: narrow ? sumTop : ay + 4, 'font-size': 13, 'font-weight': 700}, 'Sum of ' + n + ' features'));
+      v.appendChild(s('rect', {x: sx(-k), y: ay - 14, width: sx(k) - sx(-k), height: 28, fill: 'var(--fill)', stroke: 'var(--line)', 'stroke-dasharray': '4 3'}));
+      v.appendChild(s('text', {x: mid, y: ay - 19, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, 'not separated: within ±' + k));
+      v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--fg)', 'stroke-width': 1.5}));
+      var step = (x1 - x0) / (2 * max) < 18 ? 2 : 1;
+      for (var t = -max; t <= max; t += step) {
+        v.appendChild(s('line', {x1: sx(t), x2: sx(t), y1: ay + 14, y2: ay + 19, stroke: 'var(--line)'}));
+        v.appendChild(s('text', {x: sx(t), y: ay + 33, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, (t > 0 ? '+' : '') + t));
+      }
+      v.appendChild(s('circle', {cx: sx(sum), cy: ay, r: 11, fill: 'var(--accent)', stroke: 'var(--bg)', 'stroke-width': 2}));
+      v.appendChild(s('text', {x: sx(sum), y: ay + 4, 'font-size': 12, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:var(--on-accent)'}, (sum > 0 ? '+' : '') + sum));
+      $('h2h').appendChild(v);
+    });
+    $('h2h-cap').textContent = 'Sum ' + (sum > 0 ? '+' : '') + sum + '; decision band ±' + k + ': the evidence favours ' + (sum > 0 ? H2.a : H2.b) + '. ' + H2.power;
+  })(); else hide('blk-h2h');
+
+  // 3c timeline
+  var T = D.timeline, showTl = T && (has(T.historical) || has(T.present));
+  if (showTl) (function () {
+    var A = T.axis;
+    $('tl-title').textContent = T.title; $('tl-cap').textContent = T.caption || '';
+    onWidth($('tl'), function (W) {
+      var x0 = 12, x1 = W - 12, X = function (y) { return x0 + (y - A.min) / (A.max - A.min) * (x1 - x0); };
+      var yH = 50, yP = 128, ay = yP + 44, Ht = ay + 40;
+      var v = s('svg', {width: W, height: Ht, viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': T.title + ', in ' + A.unit + '. Events are listed below the chart.'});
+      v.appendChild(s('text', {x: x0, y: 16, 'font-size': 13, 'class': 'mut'}, T.historicalLabel || 'Historical pattern'));
+      v.appendChild(s('text', {x: x0, y: yP - 22, 'font-size': 13, 'class': 'mut'}, T.presentLabel || 'Present'));
+      v.appendChild(s('line', {x1: x0, x2: x1, y1: yH, y2: yH, stroke: 'var(--fg)', 'stroke-width': 2}));
+      v.appendChild(s('line', {x1: x0, x2: X(A.nowYear), y1: yP, y2: yP, stroke: 'var(--fg)', 'stroke-width': 2}));
+      v.appendChild(s('line', {x1: X(A.nowYear), x2: x1, y1: yP, y2: yP, stroke: 'var(--line)', 'stroke-width': 1.5, 'stroke-dasharray': '2 5', 'stroke-linecap': 'round'}));
+      v.appendChild(s('line', {x1: X(0), x2: X(0), y1: yH - 18, y2: yP + 16, stroke: 'var(--accent)', 'stroke-width': 1, 'stroke-dasharray': '3 3'}));
+      v.appendChild(s('text', {x: X(0) + 4, y: yH - 20, 'font-size': 12, style: 'fill:var(--accent)'}, 'year 0'));
+      v.appendChild(s('line', {x1: X(A.nowYear), x2: X(A.nowYear), y1: yP - 16, y2: yP + 16, stroke: 'var(--warn)', 'stroke-width': 1.5}));
+      v.appendChild(s('text', {x: X(A.nowYear) + 5, y: yP + 26, 'font-size': 12, style: 'fill:var(--warn)'}, 'now'));
+      v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--line)'}));
+      var span = A.max - A.min, step = (x1 - x0) / span < 22 ? (span > 20 ? 5 : 4) : 2;
+      for (var t = Math.ceil(A.min / step) * step; t <= A.max; t += step) {
+        v.appendChild(s('line', {x1: X(t), x2: X(t), y1: ay, y2: ay + 5, stroke: 'var(--line)'}));
+        v.appendChild(s('text', {x: X(t), y: ay + 19, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, (t > 0 ? '+' : '') + t));
+      }
+      v.appendChild(s('text', {x: x1, y: ay + 35, 'font-size': 12, 'text-anchor': 'end', 'class': 'mut'}, A.unit));
+      function marks(list, y, pre, solid) {
+        (list || []).forEach(function (e, i) {
+          v.appendChild(s('circle', {cx: X(e.year), cy: y, r: 10, fill: solid ? 'var(--accent)' : 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 2}));
+          v.appendChild(s('text', {x: X(e.year), y: y + 4, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:' + (solid ? 'var(--on-accent)' : 'var(--accent)')}, pre + (i + 1)));
+        });
+      }
+      marks(T.historical, yH, 'H', true); marks(T.present, yP, 'P', false);
+      $('tl').appendChild(v);
+    });
+    function li(pre, list) { (list || []).forEach(function (e, i) { $('tl-list').appendChild(h('li', {}, [h('b', {text: pre + (i + 1)}), 'Year ' + (e.year > 0 ? '+' : '') + e.year + ': ' + e.text])); }); }
+    li('H', T.historical); li('P', T.present);
+  })(); else hide('blk-tl');
+  if (!showProf && !h2hDecisive && !showTl) hide('p-patterns');
+
+  // changes
+  if (has(D.changes)) (function () {
+    var N = {replicated: 'Replicated', revised: 'Revised', 'round-one-only': 'Round one only'};
+    D.changes.forEach(function (c) {
+      var tag = h('span', {'class': 'tag'}), v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+      if (c.status === 'replicated') v.appendChild(s('circle', {cx: 12, cy: 12, r: 8, 'class': 'g-strong'}));
+      else if (c.status === 'revised') v.appendChild(s('path', {d: 'M5 12 Q9 5 12 12 T19 12', fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.2, 'stroke-linecap': 'round'}));
+      else v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 2, 'stroke-dasharray': '3 3'}));
+      tag.appendChild(v); tag.appendChild(document.createTextNode(N[c.status]));
+      $('changes').appendChild(h('li', {}, [tag, h('div', {text: c.text})]));
+    });
+  })(); else hide('p-changes');
+
+  // what we test next
+  if (has(D.nextTests)) D.nextTests.forEach(function (n) {
+    $('next').appendChild(h('li', {}, [h('span', {text: n.test + (n.when ? ' (' + n.when + ')' : '')}), h('span', {'class': 'why', text: n.why})]));
+  }); else hide('p-next');
+
+  // method: undecided tests, corpus, coverage, caveats that change no finding
+  tests.forEach(function (t) { $('m-tests').appendChild(h('p', {text: t})); });
+  if (has(D.funnel)) $('m-funnel').textContent = 'Sources: ' + D.funnel.map(function (f) { return f.count.toLocaleString('en') + ' ' + f.stage; }).join(' → ') + '.';
+  if (D.coverage && has(D.coverage.sectors)) {
+    var by = {covered: [], partial: [], missing: []};
+    D.coverage.sectors.forEach(function (c) { by[c.status].push(c.name); });
+    $('m-cov').textContent = [['covered', 'Sectors covered'], ['partial', 'partly covered'], ['missing', 'not in the corpus']].filter(function (k) { return by[k[0]].length; })
+      .map(function (k) { return k[1] + ': ' + by[k[0]].join(', '); }).join('; ') + '.';
+  }
+  ((D.coverage && D.coverage.caveat) || []).forEach(function (t) { $('m-caveat').appendChild(h('li', {text: t})); });
+  if (has(D.deviations)) D.deviations.forEach(function (t) { $('dev').appendChild(h('li', {text: t})); }); else hide('d-dev');
+  if (has(D.method)) D.method.forEach(function (t) { $('method').appendChild(h('li', {text: t})); }); else hide('d-method');
+  (D.sources || []).forEach(function (r) { var tr = h('tr'); [r.id, r.type, r.date, r.use].forEach(function (c) { tr.appendChild(h('td', {text: c})); }); $('src').appendChild(tr); });
+
+  // number the visible pages, drop nav links to collapsed ones
+  var secs = [].filter.call(document.querySelectorAll('section.page'), function (x) { return !x.hidden && x.id !== 'appendix'; });
+  secs.forEach(function (x, i) { x.querySelector('.pageno').textContent = 'Page ' + (i + 1) + ' of ' + secs.length; if (i === 0) x.classList.add('first'); });
+  document.querySelectorAll('nav.pages a').forEach(function (a) { var t = $(a.getAttribute('href').slice(1)); if (t && t.hidden) a.hidden = true; });
+
+  // current page in nav
+  if ('IntersectionObserver' in window) {
+    var links = {}; document.querySelectorAll('nav.pages a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { for (var k in links) links[k].removeAttribute('aria-current'); if (links[e.target.id]) links[e.target.id].setAttribute('aria-current', 'location'); } }); }, {rootMargin: '-20% 0px -70% 0px'});
+    document.querySelectorAll('section.page').forEach(function (sec) { io.observe(sec); });
+  }
+})();
+</script>
+</body>
+</html>
