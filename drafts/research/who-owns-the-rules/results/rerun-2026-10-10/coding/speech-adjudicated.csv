@@ -1,0 +1,178 @@
+id,code1,code2,reason
+M059_c04:4,AO,,infra to build distilled models: building agents
+M073_c08:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M016_c02:11,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c07:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c04:6,PE,,builds business rules: sets what the process/agents may do
+M073_c02:10,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M052_c02:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c04:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c06:0,AO,,iterated to version 65: tuning
+M004_c01:7,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M065_c01:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M084_c00:2,AO,,first test of agent system: testing
+M081_c00:2,AO,,custom AI apps: building
+M073_c02:11,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M024_c02:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M030_c00:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M023_c06:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M017_c04:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c09:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:24,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M001_c04:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c07:2,AO,,applied agents to segment: deploying agent
+M059_c02:9,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c06:11,AO,,adding voice to agent: building
+M030_c00:0,AO,,building and deploying agentic systems
+M016_c01:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M067_p03:8,AO,,"caught agent's wrong conclusions: monitoring agent output, no rule named"
+M072_c06:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c00:6,AO,,deployed ~20 agents
+M054_p03:9,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M023_c01:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c05:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:23,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M053_p00:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c04:4,AO,,data layer quality for agents: supplying content
+M073_c07:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M059_c04:11,AO,,vendor generates data: supplying content
+M064_c02:4,AO,,testing harness for agent: testing
+M017_c04:7,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M067_p06:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M048_c04:1,AO,,testing it: agent testing
+M010_c05:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M001_c00:4,AO,,trialled bots: agent evaluation
+M023_c02:2,AO,,built digital sweeper: building
+M073_c06:5,AO,,daily review with colleague of agent: monitoring
+M054_p03:5,AO,,"scoping what agents are used for: agent deployment, no rule"
+M017_c04:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M004_c00:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c09:12,AO,,rebuilt tool: building
+M073_c00:11,AO,,deployed agent for sales/tickets/sponsors
+M050_c03:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M052_c01:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M001_c00:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M014_c02:4,AO,,AI built into quoting: building
+M073_c01:9,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M048_c02:1,AO,,designing agents
+M073_c08:2,AO,,tells it what the company is: prompting
+M023_c01:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M017_c07:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M064_c02:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M065_c07:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M046_c01:8,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c07:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M021_c00:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M064_c03:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c05:6,AO,,built pitch deck reviewer: building
+M040_c04:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M017_c07:5,AO,,GenAI layer to optimise: building
+M073_c01:11,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c03:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M016_c01:10,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:4,AO,,new agent idea weekly: building
+M067_p01:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M059_c01:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M064_c01:2,PE,,code freeze over holidays: limit on what people may change
+M073_c05:6,AO,,deployed agent
+M014_c01:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M017_c09:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M076_c00:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:20,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c01:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c03:11,AO,,puts dates/locations in: supplying content to agent
+M065_c06:7,AO,,shared AI tool in repo: building
+M001_c01:0,AO,,built with vendor
+M073_c01:12,AO,,built AI tools in-house
+M073_c06:1,AO,,"manual routing replaced by agent: agent operation, no hand-off rule set"
+M067_p08:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c06:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c09:0,AO,,built AI tools in-house
+M017_c04:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M030_c01:5,AO,,steps against bias in data: supplying/curating agent data
+M014_c02:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c05:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c00:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M001_c00:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c01:8,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M065_c01:2,AO,,created AI code review benchmark: testing
+M041_p03:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c03:2,AO,,preparing to deploy agent
+M072_c13:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M024_c01:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M028_c00:7,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M054_p06:4,AO,,other team built own screening AI: building
+M048_c01:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c05:4,AO,,built AI tools in Replit
+M041_p04:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M084_c01:1,AO,,"built an audit trail into the system: agent build, no permission or gate set"
+M023_c03:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c05:7,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M059_c03:2,AO,,tracking agent's PR output: monitoring
+M073_c07:1,AO,,keeps agent always open: monitoring
+M048_c03:2,AO,,designing forecasting tools: building
+M067_p08:11,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M024_c06:2,AO,,experimenting with agents
+M067_p06:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c02:6,AO,,pulls data for agent: supplying content
+M073_c00:1,AO,,uses app to run agent
+M040_c07:4,AO,,centralising work to deploy agents
+M073_c08:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c06:10,AO,,rolled out agent
+M021_c00:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M046_c02:4,AO,,provider-facing AI tools: building
+M073_c01:10,AO,,added AI revops agent
+M073_c07:2,AO,,watching what agent does: monitoring
+M024_c03:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M017_c10:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M016_c02:13,PE,,lets staff experiment: sets what people may do
+M021_c00:7,PE,,changed the guard rails: changes what agents may do
+M016_c02:12,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c06:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c15:2,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M021_c03:0,AO,,humans maintain the system: fixing/maintaining
+M073_c07:11,AO,,built tools in-house
+M073_c02:16,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M067_p07:8,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c03:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M028_c00:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M040_c01:0,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:13,AO,,rolled out five apps
+M059_c02:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c05:11,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M010_c07:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:7,AO,,runs three agent instances
+M073_c01:0,AO,,deployed agent for sales/tickets/sponsors
+M073_c03:9,AO,,enters speakers: supplying content to agent
+M073_c02:5,AO,,shaping message content: agent prompting/content
+M065_c06:2,PE,,modified compliance approval process for new tools: approval gate changed
+M021_c01:0,AO,,built German language model
+M001_c02:6,PE,AO,granted named teams access to test/sandbox agent: permission set (plus agent testing)
+M065_c04:6,PE,,started labelling PRs: convention/interface others rely on
+M024_c03:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:14,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M067_p03:3,AO,,A/B testing: tuning
+M046_c02:3,AO,,testing deployed agent for safety/efficacy: agent testing
+M072_c07:1,AO,,"assigning agents to reactivate leads: deployment, no rule change stated"
+M004_c01:8,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M014_c03:7,PE,,sandbox where people may experiment: bounded permission
+M023_c04:0,AO,,architecture to swap partners: building
+M073_c08:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M041_p05:5,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M041_p01:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M084_c00:3,AO,,first order through agent system: testing
+M016_c03:6,PV,,associates exceeded tool budget: exception against a named limit
+M021_c02:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M023_c00:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M084_c00:0,AO,,agentic tools for manual processes: building
+M017_c09:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M021_c00:1,PE,,centre of excellence manages principles and frameworks: owns policies others follow
+M073_c01:1,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M059_c04:2,AO,,distilled smaller models: building
+M040_c03:6,AO,,verifies AI output: monitoring
+M073_c01:3,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M072_c07:6,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c03:7,AO,,prepared CSV for agent: supplying content
+M024_c02:4,OT,,"tool use, adoption, background or outcome; no agent build or rule set"
+M073_c01:8,AO,,rolled out agent as inbound BDR

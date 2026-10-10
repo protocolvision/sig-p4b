@@ -92,3 +92,4 @@ Branch `rerun-2026-10-10`. Runbook: [`../../RERUN.md`](../../RERUN.md).
 - Blind Opus check of 40 real records: rule work in 3 of 40; presence-of-rule-work agreement 39/40 with each coder; no hidden rule work among the 35 OT records; A missed 1 PV, B 1 arguable PE over-code. No systematic under-coding.
 - Speech coding: A (Sonnet) and B (Haiku) on 862 records; kappa PV 0.28, PE 0.66, RD 0.33, AO 0.56 (A 118 vs B 205), OT 0.58. Coder A defaulted unflagged records to OT. Deviation 22: Opus adjudicates 137 disagreements plus 40 both-OT checks, blind to coder.
 - I1 built (Sonnet). Concerns before use: rest20 not weighted (a 20% sample pooled with fully enumerated groups); lexical flag not yet validated (400/831 study-occupation postings flagged); US rule ad hoc. Opus review and fix running.
+- Speech adjudication (Opus): final codes on 862 records: OT 667, AO 170, PE 24, PV 2, RD 0. Both-OT miss rate 2/40 (5%).
