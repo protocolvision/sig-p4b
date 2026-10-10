@@ -1,0 +1,18 @@
+type,name,url,first_date,date_source,notes
+tooling,Arize Phoenix,https://github.com/Arize-ai/phoenix,2022-11-09,GitHub API created_at,LLM/agent observability; 11777 stars; licence NOASSERTION at API (README today names agents heavily; at creation it was LLM observability) - 1st of 3 under agent-README rule
+tooling,Guardrails AI,https://github.com/guardrails-ai/guardrails,2023-01-29,GitHub API created_at,LLM output guardrails; Apache-2.0; README has no 'agent' mention - counts only under lenient (LLM-app) reading
+tooling,Helicone,https://github.com/Helicone/helicone,2023-01-31,GitHub API created_at,LLM observability gateway; Apache-2.0; README mentions agents 4 times - weak fit
+tooling,NeMo Guardrails,https://github.com/NVIDIA-NeMo/Guardrails,2023-04-18,GitHub API created_at,programmable guardrails for LLM apps; licence NOASSERTION; README has no 'agent' mention
+tooling,Langfuse,https://github.com/langfuse/langfuse,2023-05-18,GitHub API created_at,agent evals and observability; 35608 stars; licence NOASSERTION at API (MIT core + EE) - 2nd under agent-README rule
+tooling,AgentOps,https://github.com/AgentOps-AI/agentops,2023-08-15,GitHub API created_at,agent monitoring; MIT; 5884 stars - 3rd under agent-README rule
+tooling,Microsoft Agent Governance Toolkit,https://github.com/microsoft/agent-governance-toolkit,2026-03-02,GitHub API created_at,agent policy and governance; MIT; 6415 stars; latest of its kind seen; not in the early-three
+conference,MLOps World,https://mlopsworld.com,2023-10-25,confs.tech data/conferences/2023/data.json startDate (this edition; not confirmed first edition),ML production not agent specific; shown only as the nearest earlier listing - not counted
+conference,Global Agentic AI & LLM Bootcamp,https://www.globalbigdataconference.com/fremont/global-agentic-ai-and-llm-bootcamp/event-145.html,2025-05-16,confs.tech data/conferences/2025/data.json startDate; no Internet Archive check,build/training oriented; 1st conference record
+conference,AgentCon Milwaukee,https://globalai.community/chapters/milwaukee/events/agentcon-milwaukee,2025-12-02,confs.tech data/conferences/2025/data.json startDate; no Internet Archive check,builder community event; 2nd
+conference,AgentCon Vancouver,https://globalai.community/chapters/vancouver/events/agentcon-vancouver,2025-12-11,confs.tech data/conferences/2025/data.json startDate; no Internet Archive check,builder community event; 3rd = conference date under A.2 rule
+conference,AgentCon Bangkok,https://agentcon.city/bangkok,2026-02-21,confs.tech data/conferences/2026/data.json startDate,4th
+conference,Replay (Temporal),https://replay.temporal.io,2026-05-05,confs.tech data/conferences/2026/data.json startDate,vendor durable execution for agents; 5th
+community,AI Agent Builders Berlin (Dataiku),https://www.meetup.com/ai-agent-builders-berlin-by-dataiku/,,page opened: no founded date shown,1961 members; 17 past events; topics include oversight and safety controls in production; founded date NOT obtained
+community,AI Agents (Emergence AI),https://www.meetup.com/meetup-group-eqfaspll/,,page opened: no founded date shown,127 members; 4 past events; production agent teams; a search snippet (not verified by me) said founded 2024-11-26
+community,Agentic AI London,https://www.meetup.com/agentic-ai-london/,,page opened: no founded date shown,2674 members; Meetup #1 listed 'Wed Jan 28' (year not shown; search snippet said founded 2025-07-11 - unverified); topics include operations and governance
+community,Agentic AI Delhi NCR,https://www.meetup.com/delhi-ncr-aaif-meetup/,,page opened: no founded date shown,47 members; no past events; fails inclusion threshold
