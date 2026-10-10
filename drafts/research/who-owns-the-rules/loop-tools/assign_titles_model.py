@@ -37,17 +37,22 @@ SYSTEM = (
     "list of candidate occupations. Choose the single candidate whose occupation best matches the work the "
     "title describes. Choose \"none\" if no candidate is a reasonable match; do not pick the least bad one. "
     "A department may be given as context. Judge by the work, not by a shared word: \"Product Manager\" is not a designer because both say "
-    "\"product\". Answer with the candidate's code exactly as listed, or \"none\"."
+    "\"product\". Answer with the NUMBER of the best candidate (1-10) as listed, or 0 if none fits."
 )
 
 
+# One fixed schema for every request: per-request enums each need a grammar compilation, and the API
+# allows 50 compilations per minute (first run: about 85% of requests errored on that limit).
+SCHEMA = {
+    "type": "object",
+    "properties": {"choice": {"type": "integer", "enum": list(range(0, 11))}},
+    "required": ["choice"],
+    "additionalProperties": False,
+}
+
+
 def schema(codes):
-    return {
-        "type": "object",
-        "properties": {"code": {"type": "string", "enum": list(codes) + ["none"]}},
-        "required": ["code"],
-        "additionalProperties": False,
-    }
+    return SCHEMA
 
 
 def candidates(m, norm, k=N_CAND, must=""):
@@ -153,8 +158,10 @@ def collect(a):
                 failed.append({"id": res.custom_id, "type": msg.stop_reason})
                 continue
             text = next(b.text for b in msg.content if b.type == "text")
-            code = json.loads(text)["code"]
-            if code != "none" and code not in meta[res.custom_id]["candidates"]:
+            choice = json.loads(text)["choice"]
+            cands = meta[res.custom_id]["candidates"]
+            code = "none" if choice == 0 else (cands[choice - 1] if choice <= len(cands) else None)
+            if code is None:
                 failed.append({"id": res.custom_id, "type": "code-not-in-candidates"})
                 continue
             answer[res.custom_id] = code
