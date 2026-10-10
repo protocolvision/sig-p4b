@@ -36,3 +36,14 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
    hypotheses or codebook in its context, only the 50 sampled records and their source texts. It judges
    verbatim match, whether each span is a task, the performer label, and missed tasks (precision and a recall
    estimate). Limitation: a model checking models can share their blind spots; field work is the human check.
+
+6. **Seeds and the recall gate (loop v2 section 6), changed before any coding.** Section 6 calls for 20 seeds
+   (10 PV, 5 RD, 5 PE) and a recall gate of 0.7. Two Opus reviews (`review/pipeline-review.md` C8 and
+   `review/seeds-v2-review.md`) found that this tests recall only, cannot fail a coder whose true recall is
+   0.5 with any reliability, and that the seeds could be identified by format and length. Changes:
+   - 20 seeds per positive code and 60 negatives (AO, applies-an-existing-rule, unrelated);
+   - precision is reported too;
+   - a code's absence is interpretable only if seed recall is 0.7 or more AND its Wilson 95% lower bound is
+     0.5 or more;
+   - seeds take real-record format at merge;
+   - the key is held outside git until coding ends, with its SHA-256 committed in `log.md` beforehand.
