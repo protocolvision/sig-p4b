@@ -7,6 +7,48 @@ Research draft, v4 (after review rounds 1–4) · 10 October 2026 · Protocols f
 > search-result summaries of the named page; facts marked **(M)** are from memory. Open each source before
 > quoting it. No archived job posting has been retrieved yet (see section 10).
 
+## Summary
+
+**Lineages at a glance.** Work moves between roles more often than roles appear from nothing.
+
+| Lineage | Before | The new role | What it became |
+| --- | --- | --- | --- |
+| Product | Advertising, sales, manufacturing | Brand man (1931) | Product manager, program manager, product ops |
+| Planning | Planning programmers, budget clerks | Spreadsheet analyst (1979–85), no new title | FP&A, analytics engineer, revenue operations |
+| Web | System administrators | Webmaster (1993) | Split: developers, operations, SEO, content |
+| Security | EDP auditors, security managers | CISO (1995) | A disclosed owner of cyber risk (2023); chief trust officer |
+| Operations | System administrators | SRE (2003), DevOps (2009) | Platform engineering (2019–22) |
+| Public voice | Community managers, PR, customer service | Social media manager (2007–08) | Social care, community and content teams |
+| Data | Statisticians, BI analysts | Data scientist (2008) | ML engineer, MLOps, AI engineer |
+| Model work | — | Prompt engineer (2022–23) | Absorbed: AI engineer, context engineering |
+| Counter-cases | — | CKO, Y2K office, e-business director, Chief Digital Officer, growth hacker, metaverse lead | Faded or folded into existing roles |
+
+**What the lineages suggest.** A role emerges when a cost lands between functions and someone senior asks
+who answers for it. It lasts only if three things hold: the trade-off is permanent rather than a
+migration; nobody already owns it; and something outside the role keeps asking, with a number the role
+controls. Otherwise the work moves into existing roles, as most of it has.
+
+**The question set.** Every lasting role answered a question of one shape:
+
+> *[A cost] keeps landing between [these functions]. Who answers for it, and what number will they own?*
+
+For protocols, five questions in order. The first is the one to ask a COO; the rest decide what its answer
+means.
+
+1. **Time to amend.** When a person or an agent runs into one of our rules and the rule is wrong, how long
+   does it take for someone with the authority to change it, and who is that?
+2. **Wait and override.** For our ten most-used approvals and limits, how long does work wait on each, how
+   often is each overridden, and who can change it?
+3. **Permanence.** Would this conflict still exist if our agent rollout finished tomorrow?
+4. **Incumbency.** Who already owns each piece (finance, security, legal, sales), and does anyone own how
+   the pieces change together?
+5. **Renewal.** What outside force will keep asking: audits, customers' security reviews, incidents, or the
+   EU AI Act's oversight duties from December 2027?
+
+**Verdict, moderate confidence.** A standalone protocol role is the less likely outcome; the duties will
+more often land in an existing structure (section 8). A distinct role is likely where question 1's answer
+is slow, recurring and owned by no one.
+
 ## 1. The problem
 
 Companies putting agents to work are already hiring for it. "AI engineer" topped LinkedIn's 2026 list of
