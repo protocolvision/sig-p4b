@@ -1,4 +1,4 @@
-"""Apply the pre-registered pattern-scoring rules (addenda A.1–A.4, reading rule, feature-coding.md) to the two
+"""Apply the pre-registered (corrected after the blind findings writer flagged the superseded >8-of-21 rule; same verdict) pattern-scoring rules (addenda A.1–A.4, reading rule, feature-coding.md) to the two
 blind feature coders' outputs. Writes results/rerun-2026-10-10/pattern-match/result.md."""
 import csv, pathlib
 RUN = pathlib.Path(__file__).resolve().parent.parent / "results" / "rerun-2026-10-10"
@@ -6,15 +6,17 @@ V = {"yes": 1.0, "partial": 0.5, "no": 0.0}
 def load(n): return {r["feature_id"]: r["value"].strip().lower() for r in csv.DictReader(open(RUN / "pattern-match" / f"coder-{n}.csv"))}
 S, H = load("sonnet"), load("haiku")
 feats = sorted(S)
-out_left = [f for f in feats if S[f] == "insufficient" or H.get(f) == "insufficient"]
-scored = [f for f in feats if f not in out_left]
+# A.2: 15 scored features; N05, N07, N10, N11, N14 and N24 are reported feature by feature only
+SCORED15 = ["N01", "N02", "N03", "N04a", "N06a", "N08", "N09", "N12", "N13", "N15", "N19", "N20", "N21", "N22", "N23"]
+out_left = [f for f in SCORED15 if S.get(f) == "insufficient" or H.get(f) == "insufficient"]
+scored = [f for f in SCORED15 if f not in out_left]
 dis = sum(S[f] != H[f] for f in scored) / len(scored) if scored else 1
 lines = ["# Pattern-match result (blind feature coding, scored by rule)", "",
          "| Feature | Sonnet | Haiku |", "| --- | --- | --- |"] + [f"| {f} | {S[f]} | {H.get(f)} |" for f in feats]
-lines += ["", f"Features left out (either coder 'insufficient'): {len(out_left)} — {', '.join(out_left)}.",
-          f"Scored features: {len(scored)}. Coder disagreement rate on scored features: {dis:.2f}.", ""]
-if len(out_left) > 8:
-    lines += ["**Pattern verdict: unreliable** (more than 8 of the features left out; feature-coding.md scoring rules). "
+lines += ["", f"Of the 15 scored features (A.2), left out because either coder marked them insufficient: {len(out_left)} — {', '.join(out_left)}.",
+          f"Remaining scored features: {len(scored)}. Coder disagreement rate on them: {dis:.2f} (unreliable above 0.35, A.3).", ""]
+if len(out_left) > 5 or dis > 0.35:
+    lines += [f"**Pattern verdict: unreliable** ({'more than 5 of 15 scored features left out' if len(out_left) > 5 else ''}{' and ' if len(out_left) > 5 and dis > 0.35 else ''}{'coder disagreement above 0.35' if dis > 0.35 else ''}; A.2 point 9, A.3, feature-coding.md). "
               "Per the rule, only feature-level results are given. This is the outcome the A.2–A.4 power analysis anticipated "
               "for about three years of evidence; it is not evidence for or against any pattern.", ""]
 # Stage 2 head-to-head (A.3): DevOps vs scarcity on the separating features still scored

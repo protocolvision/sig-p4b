@@ -316,3 +316,9 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     adjudication of every disagreement (as in deviation 22). "Confirmed" means AO, PE or RD in the final
     code. The "either coder" and "both coders" rules are replaced by this single rule, and agreement (kappa)
     is reported.
+
+25. **Pattern-scoring script corrected after the blind findings writer flagged it.** `score_patterns.py`
+    first applied the superseded rule (more than 8 of 21 features left out) and computed disagreement over
+    all coded features. It now applies A.2 point 9 (more than 5 of the 15 scored features) and computes
+    disagreement on the remaining scored features (0.40, above A.3's 0.35). The verdict is unchanged
+    (unreliable), with two triggers instead of one.
