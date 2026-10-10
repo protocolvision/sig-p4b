@@ -238,3 +238,284 @@ when this was written.
 4. **Interpretive features.** N20, N22 and N23 depend on how sources state purpose and framing. Their
    coding definitions are written in the feature-coding prompt before coding starts and are not changed
    afterwards.
+
+### Amendment A.2 (same day, still before any present-day coding)
+
+Answers the collection-pipeline review (`results/rerun-2026-10-10/review/pipeline-review.md`), findings
+C4, C6 and C7. No present-day evidence had been coded when this was written. Changed files:
+`loop-tools/pattern_power.py`, `loop-tools/leak_check.py`, `loop-prompts/feature-coding.md`. New outputs:
+`results/rerun-2026-10-10/pattern-power-v2-q0.2.md` and `pattern-power-v2-q0.3.md`. The A.1 outputs
+(`pattern-power-q0.2.md`, `-q0.3.md`) are kept as the record of the superseded rule.
+
+**Scoring (C4)**
+
+1. **Noise.** When a feature is chosen for noise (probability q), a 0 or 1 now always moves inward to 0.5,
+   and a 0.5 moves to 0 or 1 at random. Before, the code drew ±0.5 and clipped, so an extreme value moved
+   only half the time it was chosen, and the real noise on yes/no cells was about q/2. (C4.1)
+2. **NF in truth presents.** When a pattern is the simulated truth, each feature it grades NF takes a
+   random value from {0, 0.5, 1}. The same applies to each parent's NF cells in a blend. NF is never
+   entered as "no". Before, all NF cells carried `value = no` and became fabricated observations. (C4.2)
+3. **Comparable scores.** Every pattern is scored on one common feature set: the observable-now features
+   graded (not NF) in at least 5 of the 7 patterns. That gives 15 features: N01, N02, N03, N04a, N06a,
+   N08, N09, N12, N13, N15, N19, N20, N21, N22 and N23.
+   - Not scored, because they are graded in too few patterns: N05 (4 of 7), N07 (3), N10 (3), N11 (2),
+     N14 (3), N16a (3) and N24 (2). They are still coded and reported feature by feature, except N16a
+     (point 6).
+   - Where a common feature is NF for a pattern, that cell is missing for the pattern. The raw score is
+     standardised: 1 − mean |present − profile| over the cells the pattern grades.
+   - Missing cells: SRE N04a; Mandated officer N23; Lead-industry N03, N13 and N04a; Engineering
+     absorption N12, N13 and N21.
+   - Each pattern's raw score is then converted to a mid-rank percentile against that pattern's own
+     null: 20,000 uniform random presents over the same features, seed 20261012. Ranks, "supported",
+     "partly supported" (section 6.3, as amended by A.3(e)) and margins all use these percentiles. Margins
+     are in percentile points.
+   - Reason: patterns were scored on 14–20 features of their own. NF worked as a free pass, and random or
+     ambiguous evidence favoured patterns with many NF or partial cells. (C4.3)
+   - Null check (uniform presents, one coder, no noise; 10,000 draws; 1/7 = 14.3%):
+
+     | Pattern | Top share, A.2 rule | Top share, A.1 rule |
+     | --- | --- | --- |
+     | DevOps | 13.3% | 10.0% |
+     | SRE | 13.3% | 13.2% |
+     | Mandated officer | 16.1% | 27.6% |
+     | Tool-operator fade | 12.4% | 10.5% |
+     | Scarcity boom | 11.1% | 6.9% |
+     | Lead-industry | 15.1% | 13.0% |
+     | Engineering absorption | 18.6% | 18.8% |
+
+     Under A.2 the range is 11–19%, against 7–28% under A.1. The tilt is smaller but not gone, because
+     the 15 features are shared and correlated across profiles. Engineering absorption, not DevOps, is
+     now the most favoured pattern under the null.
+4. **Coders.** The simulation and the scoring rule now use two coders. Each coder's values get their own
+   noise and are scored separately (raw score, then percentile). A pattern's score is the mean of the two
+   coders' percentiles. Values are never averaged into "partial". Before, averaging pulled every
+   disagreement toward 0.5, which fed the tilt in point 3. (C4.3)
+5. **Blends.** The margin must satisfy four conditions, each at the 5% false-support bound:
+   - when any pattern is the truth, no other pattern is supported;
+   - under the feature-wise average blend of any two patterns, no pattern is supported (off-grid values
+     0.25 and 0.75 move 0.5 toward the middle when chosen for noise);
+   - under the 50/50 random mixture of any two patterns (each feature taken from one parent at random),
+     no pattern is supported;
+   - under the uniform null, no pattern is supported.
+
+   There are 2,000 runs per truth, per pair and blend type, and for the null. The margin is the smallest
+   value, in steps of 0.01, that meets all four. The mixture blend is the binding condition at both
+   values of q (Engineering absorption at 5.0%). Before, only the average blend was tested, with 500 runs
+   per pair. (C4.4)
+
+**Feature sources (C7)**
+
+6. **Every feature now names its source.** The prompt's new table "Where each feature is answered" names
+   the file and column for each feature. These instrument outputs must carry the named columns before
+   coding starts:
+   - `I1-postings.csv`: `posting_id`, `employer`, `sector`, `firm_type`, `posted_date`, `title`,
+     `onet_code`, `onet_family`, `agent_duty`, `agent_title`, `duty_families`, `duties_text`,
+     `requirements_text`, `purpose_statement`, `seniority`.
+   - `I1-titles-by-year.csv`: `year`, `title`, `agent_title`, `postings`, `employers`,
+     `share_agent_duty_postings`.
+   - `I1-coverage.csv`: `half_year`, `employers_covered`, `share`.
+   - `I2-tasks.csv`: `task`, `source_type`, `doc_date`, `performer`, `org_unit`, `cluster_id`.
+   - `I2-clusters.csv`: `cluster_id`, `label`, `stable`, `n`, `onet_families`.
+   - `I6-speech.csv`: `item_id`, `date`, `employer`, `employer_software_native`, `speaker_seniority`,
+     `speaker_org_unit`, `speaker_path`, `in_company_agent_work`, `firm_cited_as_model`, `measure_named`,
+     `measure_origin`, `team_named`, `role_purpose_quote`, `framing_quote`, `quote`. Loop v2 S7 outputs are
+     mapped to these names before coding.
+   - `corpus-b/filings-index.csv` gains `sic` and `software_native`: SIC 3570–3579, 3670–3679 or
+     7370–7379 from EDGAR, or a frame employer of type venture-backed software.
+   - I4 and I5 use their existing columns.
+
+   The three features without a source are decided as follows.
+   - **N03 and N13: a collection step is added (I5c, an extension of I5).** Both are in the scored set,
+     and their sources are public.
+     - Output: `instruments/I5-community-tooling.csv`, with columns `record_id`, `record_type`
+       (community | open_tooling), `name`, `url`, `event_date`, `date_basis`, `owner_type` (independent |
+       vendor | foundation | university), `size`, `licence`, `inclusion_note` and `collected_at`. Every
+       query goes to `I5-search-log.csv`.
+     - Query terms, and no others: the six filing phrases of section 4.2, plus "LLM agents".
+     - Communities, from two sources. (a) Meetup.com group search on each term: dated by the group's
+       earliest listed past event; included if the group has 3 or more past events and 50 or more
+       members. (b) Conference listings in the open `tech-conferences/conference-data` repository
+       (confs.tech): events whose name or topic contains a term, dated by their first edition, confirmed
+       by the earliest Internet Archive capture of the event page.
+     - Open tooling: GitHub search (repository topics and descriptions) on each term, dated by the
+       repository's `created_at`. Included if it has an OSI-approved licence, 1,000 or more stars at
+       collection, and a README describing a tool to build, run, monitor or govern AI agents.
+     - Exclusions, for both: academic multi-agent research groups, game agents, and trading or crypto
+       bots.
+     - The date of each type is the **third-earliest** record, so that one outlier cannot set the order.
+       The vendor certification date is the earliest `launch_date` in `I5-certifications.csv`. The
+       regulation date is the earliest `effective_date` of a binding text in `I4-required-functions.csv`
+       whose required function is agent work.
+     - Collected by Sonnet and checked by a fresh Opus reviewer, under the standing rule of 10 October.
+   - **N16a: dropped.** It is graded in only 3 of 7 patterns, so it is outside the common set (point 3).
+     Pay extraction would change no score, so none is added. It is removed from the prompt, which now has
+     21 coded features.
+   - **Truncation rule (N01, N08, N04a, N12, N23).** If the first practice description falls within 12
+     months of the corpus start for its source type, coders mark all five "insufficient" ("truncated").
+     Corpus starts: postings, the first half-year with 30% or more employer coverage; speech, 1 January
+     2024; filings, 1 January 2022; vendor documents, the earliest I5 capture. Reason: the corpus window,
+     not history, would otherwise set these answers. (C7)
+7. **Coverage (C6).** N06a, N21, and any statement about the order in which kinds of firm took up agent
+   work (D6), are coded only from sources that cover big tech: filings, practitioner speech and vendor
+   documents. The board crawl (`I1*`) is not used for them, and the prompt says so (its "Coverage rule").
+   N21's question now reads "first agent-work roles or teams" rather than "postings", to match. Reason:
+   the board crawl misses Amazon, Apple, Alphabet, Microsoft, Meta, Oracle and most utilities. N20, N22
+   and N23 keep their wording and definitions. Only their source rows were added, and N23 falls under the
+   truncation rule.
+8. **Leak check (C7).** `leak_check.py` was rewritten.
+   - Labels are matched only in prose. In `.csv` files, every column except those whose header contains
+     "title" or "occupation" is checked. In `.md` files, every line is checked, except table cells under
+     such headers.
+   - `product manag`, `data scientist` and `brand manag` are replaced with the label phrases "product
+     management pattern", "data scientist pattern" and "brand management pattern". "Boom then
+     specialisation" and "lead industry diffusion" are added. Common occupation names are no longer
+     matched.
+   - The check scans every file coders receive: all `.md` and `.csv` files of I1–I6 (including all I3, I5
+     and I6 files), `clusters/` and `corpus-b/filings-*.csv`. Superseded `-v1` copies are skipped, and
+     coders do not receive them.
+   - I3's raw period-posting text moves to `history/I3-period-postings.csv`, which coders do not receive.
+   - A hit in an agent's prose is rewritten neutrally. A label inside a quoted source passage is replaced
+     by "[label removed]".
+   - The check was tested on synthetic files. It flags labels in prose and passes titles, occupation
+     columns and occupation names. On the current inputs (I4, I5, filings) it reports clean.
+
+**Result (`pattern_power.py`, q = 0.2 and 0.3, 15 features, two coders)**
+
+9. Margins and power:
+
+   | Truth | Supported when true, q = 0.2 | Supported when true, q = 0.3 | Ideal gap | Nearest |
+   | --- | --- | --- | --- | --- |
+   | DevOps | **0%** | **2%** | 0.05 | Scarcity boom |
+   | SRE | 5% | 11% | 0.09 | Scarcity boom |
+   | Mandated officer | 29% | 34% | 0.21 | Tool-operator / Lead-industry |
+   | Tool-operator fade | 1% | 2% | 0.09 | Scarcity boom |
+   | Scarcity boom | 0% | 0% | 0.04 | DevOps |
+   | Lead-industry | 12% | 14% | 0.16 | Scarcity boom |
+   | Engineering absorption | 24% | 28% | 0.21 | Tool-operator fade |
+
+   - Margins: **0.29** at q = 0.2 and **0.27** at q = 0.3, in percentile points.
+   - False support at these margins, worst case per pattern: other truths 0.0%; average blend ≤ 1.3%;
+     mixture blend ≤ 5.0%; null ≤ 2.6%. The per-pattern figures are in the two output files.
+   - Every pattern comes top in 100% of runs when it is the truth, at both values of q.
+   - Every pattern's ideal (noiseless) gap is below the margin, so under A.3(d) every pattern is in a
+     family. DevOps and Scarcity boom form one family. Within it, the features that separate them are
+     N20, N21 and N22 (yes against no), and N04a, N15 and N23 (half a step).
+   - Simulated coder disagreement is 0.33 at q = 0.2 and 0.43 at q = 0.3.
+
+   **Margin selection, restating A.1 point 3.** Let d be the coders' per-feature disagreement on the
+   scored features.
+   - d ≤ 0.25: margin **0.29**.
+   - 0.25 < d ≤ 0.35: margin **0.29**, the larger of the two calibrated margins. The q = 0.3 margin
+     (0.27) is not used here. One-coder noise of q = 0.2 already gives a disagreement of about 0.33, which
+     falls inside this band, and at q = 0.2 a margin of 0.27 lets false support exceed 5%.
+   - d > 0.35: the pattern verdict is reported as unreliable, and only feature-level results are given.
+   - If any scored features are "insufficient", both margins are recalculated with `pattern_power.py q
+     --drop …` on the remaining features. The same bands apply: m(0.2) for d ≤ 0.25, and the larger of
+     m(0.2) and m(0.3) for the middle band.
+   - The verdict is unreliable if more than 5 of the 15 scored features are left out. This replaces "8 of
+     22", keeping about the same one-third share.
+   - Sensitivity, not pre-registered: if the truncation rule removes all five exposed features, 10
+     remain. The margins are then 0.30 at q = 0.2 and 0.27 at q = 0.3, and DevOps power is 1% and 3%.
+
+10. **DevOps power is below 60% after the fixes: 0% at q = 0.2 and 2% at q = 0.3.** Nothing was tuned to
+    raise it.
+
+    The cause is the percentile step. A present identical to the DevOps profile puts DevOps near the
+    100th percentile. It also puts Scarcity boom near the 95th, because the two profiles agree on 9 of
+    the 15 features, so the ideal gap is only 0.05. Meanwhile the null and the mixture blends need a gap
+    of 0.27–0.29.
+
+    Diagnostic only, not adopted: ranking the same 15-feature, two-coder raw scores without the
+    percentile step gives a margin of 0.23 and DevOps power of about 51% at q = 0.2. Any return to raw
+    scores would need its own amendment before coding.
+
+    **What the verdict can show.**
+    - Which pattern comes top. When a pattern is the truth it comes top in 100% of runs. Under the null,
+      DevOps comes top in about 13% of runs.
+    - "Supported" for Mandated officer, Engineering absorption and Lead-industry, at a 5% false-support
+      bound.
+    - Feature by feature, whether the present matches DevOps or Scarcity boom on N20, N21 and N22.
+
+    **What the verdict cannot show.**
+    - It cannot declare H-DevOps "supported". A result of "not supported" for H-DevOps is therefore not
+      evidence against it.
+    - It cannot separate DevOps from Scarcity boom by score.
+    - It cannot tell a single pattern from a 50/50 mixture of two.
+    - Any claim that the present is DevOps-like must rest on top rank, the family-level verdict and the
+      separating features, reported as "not yet distinguishable" under A.3(d), with a date to re-check.
+
+## Addendum A.3 (10 October 2026, still before any present-day coding)
+
+A two-stage test replaces the single seven-way ranking as the primary test of H-DevOps. A.2's fixes all
+stay: the common 15 features, missing NF cells, per-pattern null percentiles, the noise fix, NF
+randomisation, two coders scored separately, and both blends plus the null. The seven-way ranking and its
+margins (A.2 point 9) are reported as a secondary result.
+
+- Code: `python3 loop-tools/pattern_power.py stages`.
+- Output: `results/rerun-2026-10-10/pattern-power-v3.md` (q = 0.2 and 0.3, 2,000 runs per condition,
+  seed 20261011).
+
+**Stage 1: families**
+
+1. **Family rule.** It was set before the distances were looked at.
+   - The ideal distance between two patterns is the mean |difference| over the common features both
+     grade.
+   - Two patterns are linked when their distance is at most half the median of the 21 pairwise distances.
+   - Families are the connected groups of linked patterns.
+2. **What the rule gives.** The median distance is 0.429, so the threshold is 0.214. The closest pair is
+   DevOps and Scarcity boom, at 0.300. The next are Tool-operator and Scarcity boom, and Tool-operator and
+   Engineering absorption, both at 0.333. No pair is linked, so **all seven families are single
+   patterns**; the expected DevOps and Scarcity boom family does not form. The rule is not changed to
+   produce it.
+3. **Scoring and margin.** A family's score is its best member's two-coder percentile. A family is
+   supported when it is top by at least the margin. Support counts as false when the truth is outside the
+   family, when it is a blend whose two parents are not both in the family, or when it is the null; each
+   is bounded at 5%. Because every family is a single pattern, Stage 1 is the A.2 ranking:
+   - margins 0.29 at q = 0.2 and 0.27 at q = 0.3;
+   - DevOps family supported when DevOps is true: **0% at q = 0.2, 2% at q = 0.3**;
+   - DevOps family supported when Scarcity boom is true: 0.0% at both.
+
+**Stage 2: DevOps against Scarcity boom**
+
+4. **Features.** Stage 2 uses the features graded in both patterns whose values differ by 0.5 or more:
+   N15, N04a, N20, N21, N22 and N23. With the truncation rule applied, N04a and N23 drop out, leaving N15,
+   N20, N21 and N22.
+5. **Statistic.** For each feature, +1 if a coder's value is closer to DevOps, −1 if closer to Scarcity
+   boom, and 0 if tied. The sum is taken for each coder, and the two sums are averaged.
+6. **Decision rule.** "DevOps over Scarcity" if the mean sum is at least k; "Scarcity over DevOps" if it
+   is at most −k; otherwise "not distinguishable".
+   - k is the smallest value, in steps of 0.5, at which each wrong call has 5% probability or less. The
+     conditions tested are DevOps true, Scarcity boom true, and the average and mixture blends of the two.
+   - **k = 4** with all six features, and **k = 3** with the truncation rule applied, at both values of q.
+     The mixture blend binds.
+7. **Power.**
+
+   | Features | q | DevOps over Scarcity, DevOps true | Scarcity over DevOps, Scarcity true |
+   | --- | --- | --- | --- |
+   | All six | 0.2 | 73% | 82% |
+   | All six | 0.3 | **47%** | 60% |
+   | Truncated (four) | 0.2 | 75% | 67% |
+   | Truncated (four) | 0.3 | **55%** | 44% |
+
+   In every row, the wrong call has 0% probability when the truth is the other pattern.
+
+**Verdicts**
+
+8. **H-DevOps verdicts under A.3.**
+   - **supported**: Stage 1 picks the DevOps family and Stage 2 says DevOps over Scarcity;
+   - **family only**: Stage 1 picks the family and Stage 2 is not distinguishable;
+   - **not supported**: Stage 1 picks another family, or Stage 2 says Scarcity.
+
+   When no family is supported at the Stage 1 margin, the verdict is "not supported" and is reported as
+   uninformative.
+9. **What this gives, stated plainly.**
+   - **Stage 2 power is below 60% at q = 0.3**: 47%, or 55% with truncation. It is 73–75% at q = 0.2.
+   - The combined test cannot support H-DevOps. With the family rule as fixed, Stage 1 never picks a
+     DevOps family that includes Scarcity boom. When DevOps is the truth, the A.3 verdict "supported" has
+     probability **0% at q = 0.2 and 2% at q = 0.3**, and "family only" has 0%.
+   - False "supported" stays below 2.4% under every other truth, blend and the null.
+   - Stage 2 on its own would separate DevOps from Scarcity boom at q = 0.2. Under this addendum it is
+     reached only through Stage 1, so it does not change the verdict.
+   - A "not supported" verdict for H-DevOps is not evidence against it.
+   - Nothing was tuned. A different family rule would be a new amendment, and must be fixed before
+     coding.
