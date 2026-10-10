@@ -1,6 +1,6 @@
 # Research design: who owns the rules when agents join the business?
 
-Protocols for Business · version 1 · 10 October 2026 · status: ready for a first blind run
+Protocols for Business · version 1 · 10 October 2026 · status: the activity-first loop ([`loop-design.md`](loop-design.md)) ran on 10 October 2026; its successor, [`loop-design-v2.md`](loop-design-v2.md), adds a calibration test, practitioner speech and rule-change events, and supersedes the methods below where they differ
 
 ## 1. The problem
 
@@ -75,7 +75,8 @@ effort.
 | H4 | Agent management titles peak and fold into existing managers' jobs by 2028–29, as prompt engineering did; protocol work does not fold the same way, because it survives a swap of the agent technology | Agent management titles keep growing through 2029 as a distinct occupation, or protocol work shows the same fade pattern | R4: agent management is the durable role and protocol work is part of it |
 | H5 | BPM matches the pattern of an institutional expression of the AI safety movement on mechanisms and business-case framing, but not on carriers, forcing lever or profession; it is a managerial translation of the agent-control strand, from a separate lineage | Movement organizations or people are found carrying BPM-like practice into deploying firms, or the mechanism overlap is weak | R5: privacy-led AI governance is the movement's institutional expression in firms, and BPM is unrelated |
 | H6 | A distinct role forms only in a middle band: enough of the knowledge is written down to be claimed and taught (a rule register, an amendment rule, a metric), while judgment about trade-offs across functions stays with a person | Distinct roles form where nothing is written down, or persist where everything has become automated checks | R6: tacit knowledge is irrelevant; budgets and regulation decide |
-| H7 | "Time to amend" (days from when a rule's overrides or workarounds cross a threshold to a recorded decision to change or keep it, counting open cases) can be measured from existing records and differs between firms with and without an owner | Needs field data; **out of scope for desk research** and left for a case study | — |
+| H7 | "Time to amend" (days from when a rule's overrides or workarounds cross a threshold to a recorded decision to change or keep it, counting open cases) can be measured from existing records and differs between firms with and without an owner | Needs internal records; desk research can only collect published rule-change events (stratum S6 in loop v2) and practitioners' own accounts (S7) | — |
+| H8 | Desk research on public written sources detects roles that operate a new tool or channel, and misses roles whose authority comes from an internal agreement on a trade-off until that agreement is published | Tested in loop v2, section 8: refuted if practitioner recordings give no earlier view of the agreement than written sources for SRE, DevOps and the CISO | R8: public written sources are a fair early signal of all role types |
 
 ## 6. Methods
 
@@ -175,8 +176,9 @@ The run writes to `results/run-YYYY-MM-DD/`:
 
 ## 11. Limits
 
-- Desk research cannot measure time to amend (H7) or observe how roles work inside firms; that needs case
-  studies.
+- Desk research cannot measure time to amend (H7) or observe how roles work inside firms. Loop v2 uses
+  recorded practitioner speech (podcasts, talks) in place of interviews; it shows how people describe their
+  work, not what they do.
 - Job-posting data for 2025–2026 is partly behind paywalls.
 - The run's network access may block some sources; it must grade claims accordingly rather than fill gaps
   from memory.

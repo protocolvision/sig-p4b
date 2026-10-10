@@ -8,3 +8,6 @@ __pycache__/
 dist/
 .dev.vars
 .wrangler/
+
+# Third-party transcripts for the research loop (fetched locally, never committed)
+drafts/research/who-owns-the-rules/sources-v2/transcripts/
