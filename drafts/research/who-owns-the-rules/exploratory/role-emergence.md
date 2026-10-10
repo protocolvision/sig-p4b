@@ -51,7 +51,7 @@ month. The first measures the cost; the other four test the three conditions abo
    function's rule, who decides, and how long does that take?
 5. **Renewal** (condition 3). Who outside the company already asks about these rules, and how often:
    auditors (in US-listed companies, IT change controls on agents that approve money), customers' security
-   reviews, regulators (the EU AI Act's oversight duties from December 2027, date to confirm, where agents
+   reviews, regulators (the EU AI Act's oversight duties from 2 December 2027, where agents
    fall under its high-risk list)?
 
 **Verdict, moderate confidence.** A distinct role is a candidate only where all five answers point the
@@ -232,7 +232,7 @@ usually short-lived, though roles tied to infrastructure, like database administ
 | 2024 | US agencies required to name Chief AI Officers | Forming now |
 | 2025 | Prompt engineering "obsolete"; context engineering named; FDE postings up about 800% | Model work, Agents |
 | 2026 | AI engineer tops LinkedIn's fastest-growing titles | Forming now |
-| Dec 2027 | EU AI Act: companies using high-risk AI systems must assign trained human overseers (S, date to confirm)[^aiact] | Forming now |
+| Dec 2027 | EU AI Act: companies using high-risk AI systems must assign trained human overseers (S)[^aiact] | Forming now |
 
 ## 5. Roles that didn't last
 
@@ -398,7 +398,7 @@ The verdict is at the end of section 9, after the question that tests it.
 | What each agent may see, do and spend | Yes: access against safety | Yes: security, identity and access management | Incidents, audits | Absorbed into security |
 | Day-to-day oversight of agents in each team | No: a skill that spreads | Each manager | Nothing outside the team | Becomes a skill, as prompting did |
 | "Get our agents deployed" | No: a migration | Chief AI Officer, forward-deployed engineers | A sponsor | Transition role; ends when deployment is routine |
-| Which business rules become enforced in systems, and how they change together as the business grows | Yes: revenue against risk, speed against control | Split: finance, security, legal and sales each own pieces; no one owns how they change together | Deals waiting on approvals, incidents traced to rules, and from December 2027 (date to confirm) EU oversight duties | Candidate for a role, or a mandate for an existing structure |
+| Which business rules become enforced in systems, and how they change together as the business grows | Yes: revenue against risk, speed against control | Split: finance, security, legal and sales each own pieces; no one owns how they change together | Deals waiting on approvals, incidents traced to rules, and from December 2027 EU oversight duties | Candidate for a role, or a mandate for an existing structure |
 
 **Where the fourth gap could land.**
 
@@ -457,7 +457,7 @@ That is the likelier outcome in most companies, as it was for the DPO.
   postings, newspaper classifieds, P&G's archives for the McElroy memo, and Hammerbacher's 2009 chapter.
 - **Posting counts over time.** Indeed Hiring Lab, LinkedIn Economic Graph or Lightcast for "DevOps
   engineer" (2010–15), "prompt engineer" (2022–25), and any "agent operations" or "AI controls" titles now.
-- **Regulation.** Confirm the EU AI Act's post-Omnibus dates and the exact Article 26(2) wording.
+- **Regulation.** The post-Omnibus date (Annex III from 2 December 2027, Regulation (EU) 2026/1744) and the Article 26(2) wording are now supported by two search summaries; check both against EUR-Lex.
 - **Counter-evidence.** Companies that tried a dedicated "AI governance" or "agent operations" team and
   folded it back into engineering.
 
@@ -524,7 +524,7 @@ That is the likelier outcome in most companies, as it was for the DPO.
 [^grc]: "GRC Engineering Manifesto," https://grc.engineering/; Vanta, "The 8 Values of GRC Engineering," https://www.vanta.com/collection/grc/grc-engineering-values. (S)
 [^forrester]: Forrester, "The State of Agentic AI in 2026: Companies Are Chasing, Few Are Catching," https://www.forrester.com/blogs/the-state-of-agentic-ai-in-2026-companies-are-chasing-few-are-catching/. (S)
 [^gartner]: Gartner, "Gartner Announces Top Predictions for Data and Analytics in 2026," 11 March 2026, https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026; Itential, "Gartner Predicts 2026: AI Agents Will Reshape Infrastructure & Ops," https://www.itential.com/resource/analyst-report/gartner-predicts-2026-ai-agents-will-reshape-infrastructure-operations/. (S)
-[^aiact]: Regulation (EU) 2024/1689 (AI Act), Article 26, as summarized at https://artificialintelligenceact.eu/article/26/; post-Omnibus application dates as reported by *Data Protection Report*, July 2026, https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/. (S)
+[^aiact]: Regulation (EU) 2024/1689 (AI Act), Article 26, as summarized at https://artificialintelligenceact.eu/article/26/; post-Omnibus application dates as reported by *Data Protection Report*, July 2026, https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/; White & Case, "EU AI Omnibus Enters into Force, Amending the AI Act," July 2026, https://www.whitecase.com/insight-alert/eu-ai-omnibus-enters-force-amending-ai-act. (S)
 [^autor]: David Autor, Caroline Chin, Anna Salomons and Bryan Seegmiller, "New Frontiers: The Origins and Content of New Work, 1940–2018," *Quarterly Journal of Economics* 139, no. 3 (2024), https://economics.mit.edu/sites/default/files/2022-11/ACSS-NewFrontiers-20220814.pdf; the 2026 replication is reported at https://www.nakedcapitalism.com/2026/09/new-jobs-in-140-years-of-data-why-the-ai-displacement-fear-is-overstated-and-what-to-worry-about-instead.html. (S)
 [^cko]: "Chief Knowledge Officer," *Wikipedia*, https://en.wikipedia.org/wiki/Chief_knowledge_officer; Michael J. Earl and Ian A. Scott, "What Is a Chief Knowledge Officer?," *Sloan Management Review* 40, no. 2 (1999), https://sloanreview.mit.edu/article/what-is-a-chief-knowledge-officer. (S)
 [^y2k]: "President's Y2K Council Disbands," *Nextgov*, April 2000, https://nextgov.com/people/2000/04/presidents-y2k-council-disbands/241668. (S)

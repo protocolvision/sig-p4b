@@ -1,7 +1,8 @@
-# Predicting the role: five frameworks, where they diverge, and what they agree on
+# Predicting the role: six frameworks, where they diverge, and what they agree on
 
 Research draft · 10 October 2026 · Protocols for Business · companion to
-[`role-emergence.md`](role-emergence.md) and [`business-protocol-lead-critique.md`](business-protocol-lead-critique.md)
+[`role-emergence.md`](role-emergence.md), [`business-protocol-lead-critique.md`](business-protocol-lead-critique.md)
+and [`bpm-and-ai-safety.md`](bpm-and-ai-safety.md)
 
 > **Status.** Working notes. Sources were found through web search; the pages themselves could not be
 > opened from this environment. (S) means a search result supported the point; (M) means from memory;
@@ -10,7 +11,7 @@ Research draft · 10 October 2026 · Protocols for Business · companion to
 
 ## Summary
 
-People have predicted new roles in five main ways. Each answers a different question, and each predicts
+People have predicted new roles in six main ways. Each answers a different question, and each predicts
 something different for protocol work:
 
 | Framework | The question it asks | Its prediction for protocol work, 2027–2029 |
@@ -20,8 +21,9 @@ something different for protocol work:
 | 3. Task economics (Autor, Acemoglu and Restrepo, Atalay, Lin) | Which new tasks appear, and inside which jobs? | Mostly absorbed within existing titles, as 88% of task change has been. A new title only in dense, diverse labour markets and AI-heavy firms |
 | 4. Decision rights (Agrawal, Gans and Goldfarb) | When prediction gets cheap, where do judgment and decision rights move? | A judgment owner for the payoffs in rule decisions (how much risk for how much speed), plus transition roles for redesigning interdependent decisions |
 | 5. Institutional markers (Wilensky; occupation statistics) | Has the work built the institutions that lasting roles build? | Not yet: no body of knowledge, association or certification for protocol work. Adjacent work with institutions (AI governance, GRC engineering) absorbs it first |
+| 6. Movements into offices (Dobbin, Edelman, Lounsbury) | Is a movement pushing the work into firms, through which profession and which lever? | An added duty for privacy and legal in most firms; dedicated seats only where a movement organization is present and a lever forces it. If an office forms, it survives on a business case that dilutes the goal |
 
-**Where they converge.** All five put the durable part of the work in the same place: judgment about rules
+**Where they converge.** All six put the durable part of the work in the same place: judgment about rules
 that cross functions, held by practitioners whose authority comes from structure. And they converge on
 knowledge as the deciding asset. A role forms when enough of the tacit knowledge behind Business Protocol
 Management is written down to be claimed and taught (a register, an amendment rule, a metric), while the
@@ -61,7 +63,7 @@ have is institutional: lasting roles built an association, a body of knowledge, 
 programmes before they got an official code. Titles with none of these (prompt engineer, Chief Metaverse
 Officer) faded. That is our inference from a few cases, not an established finding.
 
-## 2. Five frameworks applied to protocol work
+## 2. Six frameworks applied to protocol work
 
 ### 2.1 Jurisdiction: who can claim the tasks?
 
@@ -156,15 +158,36 @@ likely only if protocol work builds its own markers: a body of knowledge that pr
 titles adopt, then training, then an association. Barley's point adds that, even then, the role will look
 different in each company.
 
+### 2.6 Movements into offices: who carries the work in, and what forces it?
+
+**The claim.** Social movements have repeatedly become offices inside firms: civil-rights law became
+personnel and then human resources departments, environmentalism became EHS functions, privacy advocacy
+became the Chief Privacy Officer. Professionals inside firms define what a vague mandate means in practice,
+and later justify the new office "in purely economic terms" [seen].[^dobbinsutton] Courts then defer to the
+structures firms built (Edelman, S).[^edelmanmov] A movement organization's local presence decides whether
+the work gets a dedicated, full-time role or becomes an added duty (Lounsbury, S).[^lounsburymov] Offices
+without an outside lever were cut when the politics turned: responsible AI teams (2022–24), trust and safety
+(2023), chief diversity and sustainability officers (from 2023) (S).
+
+**Applied.** The nearest movement is AI safety. It has built institutions in labs, governments and
+standards, but not in deploying firms, where privacy and legal hold most AI governance work (IAPP and
+Credo AI, *AI Governance Profession Report 2025*: privacy 22%, legal and compliance 22%, S). The full test
+is in [`bpm-and-ai-safety.md`](bpm-and-ai-safety.md).
+
+**Prediction.** Mostly an added duty, held by privacy, legal or GRC. Dedicated seats where a movement is
+present (AI-native firms) and where a lever forces one (EU AI Act Art. 26 oversight from December 2027).
+An office that forms will survive by making the business case and will be diluted by it; its early
+holders will be displaced by credentialed professionals as it formalizes (Augustine and King, S).
+
 ## 3. Where the predictions diverge
 
-| | Jurisdiction | Integration | Task economics | Decision rights | Institutional markers |
-| --- | --- | --- | --- | --- | --- |
-| Distinct role by 2029? | Only if the abstraction wins | Yes, where cross-functional change is frequent | Rarely | Yes, as judgment owner | Not unless institutions form |
-| Who holds it | The winning profession | An integrator, competence-based | Existing titles | Whoever owns the payoffs | Adjacent fields first |
-| Level | Depends on the settlement | Practitioner | Unchanged | Delegated by the CFO or COO | — |
-| What decides it | Contest of abstractions | Interdependence and uncertainty | Complementarity, location | Where judgment remains | Body of knowledge, training, association |
-| Its blind spot | Says little about employers | Ignores power | Thin on bundling and politics | Assumes rights move efficiently | Slow, after the fact |
+| | Jurisdiction | Integration | Task economics | Decision rights | Institutional markers | Movements into offices |
+| --- | --- | --- | --- | --- | --- | --- |
+| Distinct role by 2029? | Only if the abstraction wins | Yes, where cross-functional change is frequent | Rarely | Yes, as judgment owner | Not unless institutions form | Only with a movement present and a lever |
+| Who holds it | The winning profession | An integrator, competence-based | Existing titles | Whoever owns the payoffs | Adjacent fields first | Privacy and legal; enthusiasts first, then professionals |
+| Level | Depends on the settlement | Practitioner | Unchanged | Delegated by the CFO or COO | — | Officer title, practitioner work |
+| What decides it | Contest of abstractions | Interdependence and uncertainty | Complementarity, location | Where judgment remains | Body of knowledge, training, association | Carriers, lever, business case |
+| Its blind spot | Says little about employers | Ignores power | Thin on bundling and politics | Assumes rights move efficiently | Slow, after the fact | Assumes a movement; AI safety is small and lab-centred |
 
 The sharpest disagreement is between task economics (absorbed in existing titles) and integration
 (a new integrating role). Both can be right: integration describes the companies where cross-functional
@@ -244,6 +267,8 @@ Following the lesson that forecasts should be scored, these are stated so they c
 | End 2028 | Agent rules about money appear in audit findings or IT change-control scope in US-listed firms | Jurisdiction (accountants' claim) | Audit and SOX guidance; practitioner surveys |
 | End 2028 | At least one AI-native firm in a dense labour market posts a role owning cross-functional rule changes | Task economics (Lin), integration | Postings, under any title |
 | End 2029 | No association or certification for protocol work exists unless the research group or a peer builds one | Institutional markers | Association and certification launches |
+| End 2027 | A privacy-led body publishes an agent-oversight or Art. 26 guide before any operations body does | Movements into offices | IAPP publications |
+| End 2028 | At least one non-lab firm publishes a scaling-policy-style document for its own agents, with an amendment rule | Movements into offices | Company publications |
 
 ## 7. Assumptions to pressure-test
 
@@ -282,6 +307,9 @@ Following the lesson that forecasts should be scored, these are stated so they c
 [^wilensky]: Harold L. Wilensky, "The Professionalization of Everyone?," *American Journal of Sociology* 70, no. 2 (1964): 137–58. (S; issue M)
 [^barley]: Stephen R. Barley, "Technology as an Occasion for Structuring: Evidence from Observations of CT Scanners and the Social Order of Radiology Departments," *Administrative Science Quarterly* 31, no. 1 (1986): 78–108; Stephen R. Barley and Julian E. Orr, eds., *Between Craft and Science: Technical Work in the United States* (Ithaca, NY: ILR Press, 1997). (S)
 [^bechky]: Beth A. Bechky, "Object Lessons: Workplace Artifacts as Representations of Occupational Jurisdiction," *American Journal of Sociology* 109, no. 3 (2003): 720–52. (S)
+[^dobbinsutton]: Frank Dobbin and John R. Sutton, "The Strength of a Weak State: The Rights Revolution and the Rise of Human Resources Management Divisions," *American Journal of Sociology* 104, no. 2 (1998): 441–76. (S)
+[^edelmanmov]: Lauren B. Edelman et al., "When Organizations Rule: Judicial Deference to Institutionalized Employment Structures," *American Journal of Sociology* 117, no. 3 (2011): 888–954. (S)
+[^lounsburymov]: Michael Lounsbury, "Institutional Sources of Practice Variation: Staffing College and University Recycling Programs," *Administrative Science Quarterly* 46, no. 1 (2001): 29–56. (S)
 [^polanyi]: Michael Polanyi, *The Tacit Dimension* (Garden City, NY: Doubleday, 1966), 4. (S)
 [^nonaka]: Ikujiro Nonaka and Hirotaka Takeuchi, *The Knowledge-Creating Company* (New York: Oxford University Press, 1995). (S; publisher M)
 [^collins]: Harry Collins, *Tacit and Explicit Knowledge* (Chicago: University of Chicago Press, 2010). (S)
