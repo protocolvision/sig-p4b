@@ -217,3 +217,24 @@ when this was written.
    - (e) Section 6.3's fixed 0.15 is replaced by (c). Section 6.4 still applies.
 4. The simulation script and its output are committed with the round-2 signatures, before step 2 of
    section 6.
+
+### Amendment A.1 (same day, still before any present-day coding)
+
+1. **Calibration.** The rule in A.3(c) gave a margin of 0.01: it simulated only presents that were noisy
+   copies of one pattern. It now also requires that no pattern reaches "supported" in more than 5% of runs
+   when the truth is a 50/50 blend of any two patterns, or a random profile
+   (`loop-tools/pattern_power.py`).
+2. **Result on round-2 signatures** (22 features observable now):
+   - q = 0.2: margin **0.17**; when DevOps is the truth it is supported in 91% of runs.
+   - q = 0.3: margin **0.20**; 62%.
+   - With the round-2 features, every pattern's ideal margin is above both thresholds, so there are no
+     families.
+   - Outputs: `results/rerun-2026-10-10/pattern-power-q0.2.md` and `pattern-power-q0.3.md`.
+3. **Which margin applies is fixed now.** The present-day feature coding uses two coders (section 6.2).
+   - If their per-feature disagreement rate is 0.25 or less, the margin is 0.17.
+   - If it is above 0.25, the margin is 0.20.
+   - If it is above 0.35, the pattern verdict is reported as unreliable and only the feature-level results
+     are given.
+4. **Interpretive features.** N20, N22 and N23 depend on how sources state purpose and framing. Their
+   coding definitions are written in the feature-coding prompt before coding starts and are not changed
+   afterwards.

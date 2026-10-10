@@ -585,3 +585,127 @@ H026 (Strata 2011) metadata only (S); H030 → `p2-katz-1997-hearing`; H036 → 
 H038 → `p3-a16z-parsons-2023`; H039 → `p3-gradient-goodside-2023`; H041 → `p3-twiml-goodside-2023`;
 H045 → `p3-interconnects-goodside-2024`; H049 → `p3-edge-kipparent-1996`. H022 (Varian, McKinsey) and the
 McKinsey 2011 big data report timed out and were not used.
+
+---
+
+## 10. Round 2 (2026-10-10): early-observable features
+
+Requested after a power check: with only features observable within about 3 years, a present that matched
+DevOps exactly beat scarcity-boom by just 0.05. Round-1 rows are unchanged. `signatures.csv` now has a
+`round` column: 1 for round-1 rows, 2 for these. Same rules as before: dated sources read on 2026-10-10,
+no memory, no present-day or round-one files opened. **N04b and N06b repeat N04 and N06** so the script can
+use the early/late pairs; do not count them twice. N16b is new: the split alone, without the salary
+condition.
+
+### Table (value and grade)
+
+| Feature | DevOps | SRE | Mandated officer | Tool-operator fade | Scarcity boom then specialisation | Lead-industry diffusion | Engineering absorption |
+|---|---|---|---|---|---|---|---|
+| N04a title volume rose within ~3 years of first use | yes P | no NF | partial P | yes P | partial P | no NF | no P |
+| N04b title rose then fragmented or was renamed within ~10 years (same as N04) | partial P | no NF | no NF | partial P | yes P | no R | no P |
+| N16a title appeared with a salary premium over its parent occupations | no NF | no NF | no NF | partial R | partial P | no NF | no P |
+| N16b title later split into narrower titles | partial P | no NF | no NF | partial P | yes P | partial R | no P |
+| N06a first adopters were mostly software-native firms | yes P | yes P | no P | partial P | yes P | no P | partial P |
+| N06b later spread to enterprises and then regulated sectors (same as N06) | yes P | partial P | no P | no NF | partial P | no R | partial P |
+| N20 first holders were mostly retitled existing staff, not new hires from outside the occupation | yes P | partial P | partial P | no P | no P | partial P | no P |
+| N21 first postings sat in an operations or IT organisation, not research or analytics | yes P | yes P | partial P | partial P | no P | no P | no NF |
+| N22 stated purpose was coordinating existing functions, not providing a new scarce capability | yes P | partial P | no P | no P | no P | yes P | no P |
+| N23 early practitioner talks framed the work as culture or process change, not a new technique | yes P | partial P | no NF | no P | partial P | yes P | no P |
+| N24 vendors relabelled existing products for the practice within ~3 years | yes P | no NF | no NF | no NF | yes P | no NF | no NF |
+
+### Evidence by feature
+
+**N04a (title volume rose within ~3 years of first use).**
+- DevOps, yes: "devops engineer" had 134 SimplyHired results (Mar 2011); "devops" had 1,671 (Nov 2012); Puppet Labs reported "Job listings for 'DevOps' are up by 75 percent" (Mar 2013). All within about 3 years of the 2009 name (`dv-wb-simplyhired-devops-engineer-2011`, `dv-wb-simplyhired-devops-2012`, `dv-sodr-2013-blog`; P).
+- SRE: no growth outside Google within 3 years of 2003 found (NF).
+- Mandated officer, partial: CPO only. IBM joined "the increasing number of companies that are appointing" CPOs, under 75 by Nov 2000, months after DoubleClick (Mar 2000) (`p2-cw-ibm-cpo-2000`; P).
+- Tool-operator fade, yes:
+  - Prompt engineer: job ads "just starting to pop up" (Feb 2023), a job that "didn't exist a year ago" (Jul 2023) (`p3-dailymaverick-2023-02-19`, `p3-semafor-2023-07`; P).
+  - Webmaster: word 1993, standard mailbox by May 1997, about 4 years (`p3-rfc2142-1997`; P).
+- Data scientist, partial: title 2008. Used as an established term by Jun 2010 (`p4-loukides-2010-what-is-ds`), but the first volume count is 806 postings at $110k in Jan 2012, about 3.5 years after 2008 (`p4-wb-indeed-ds-110k-2012`; P).
+- Lead-industry diffusion: NF.
+- Engineering absorption, no: there is no title (P).
+
+**N16a (title appeared with a salary premium over its parent occupations).**
+- DevOps: no salary evidence found (NF).
+- Data scientist, partial:
+  - Premium shown, but late. Jan 2012: 806 postings at $110k (absolute; no parent comparison).
+  - Mar 2014: data scientists $135K, "almost twice as much as data analysts ($76K)" (`r2-kdnuggets-salary-2014`, self-selected poll of 230 people).
+  - 2012–13 Strata survey: median $100k (`r2-oreilly-ds-salary-2013`).
+  - All of these are 4–6 years after the title, outside the 3-year window.
+- Tool-operator fade, partial: prompt engineer "zeitweise hohe Gehälter" promised (`p3-iwkoeln-prompt`; R). Webmaster: $30–70k, no premium shown (R).
+- Others: NF, or no title.
+
+**N16b (later split into narrower titles).**
+- DevOps, partial: platform engineering (2023), arguably a successor rather than a split (P).
+- Data scientist, yes: ML engineer (2017), analytics engineer (2019) (P).
+- Tool-operator fade, partial: webmaster split into SEO, web developer, online marketer (2020; P); prompt engineer folded rather than split.
+- Lead-industry diffusion, partial: brand management turned into product marketing and product management in tech (`p5-bringthedonuts-mcelroy`; R).
+
+**N06a (first adopters mostly software-native).**
+- DevOps, yes: first adopters were Flickr/Yahoo (2009); 2011 posters were ThePlatform, Symantec, MuleSoft, Yelp, HP and Path. Caveat: Debois's own 2008 case was a government data-centre move in a "Large Enterprise context" (P).
+- SRE, yes: Google, then Twitter, LinkedIn, Groupon and Dropbox (P).
+- Data scientist, yes: Facebook, LinkedIn, bit.ly (P). **This feature does not separate DevOps from data scientist.**
+- Mandated officer, no: banks (P).
+- Lead-industry diffusion, no: P&G (P).
+- Tool-operator fade, partial: prompt engineer at Scale AI and Anthropic, but the webmaster's documented early adopter is SGI and the wider record is Fortune 500 and government (P/R).
+- Engineering absorption, partial: Marcotte's clients were media firms; OPA users include Netflix and Pinterest alongside Goldman Sachs and T-Mobile (P).
+
+**N20 (first holders mostly retitled existing staff).**
+- DevOps, yes:
+  - Early titles are hybrids with existing ones: "Systems Engineer (DevOps)", "Devops/Sr. Systems Engineer", "Systems Engineer/DevOps/Site Operations Engineer" (2011–12 postings; P).
+  - In 2014, 55% of DevOps-department respondents were "DevOps engineers or systems engineers" (`dv-sodr-2014`; P).
+  - Buytaert (2014): "giving a systems engineer the title DevOps engineer" (`dv-infoq-5yrs`; P).
+- SRE, partial: the 2003 "Production Team" became SRE, and some staff moved over ("began his career as a System Engineer but transitioned"). But Google hired SRE mostly as software engineers: "50–60% are Google Software Engineers" (`sre-book-intro`, `sre-srecon14-program`; P).
+- Mandated officer, partial:
+  - Retitled insiders: Katz (security head → CISO) and Pearson ("worked at IBM ... since 1993" → CPO).
+  - Outside hire: Polonetsky came from city government to DoubleClick.
+  - (P)
+- Tool-operator fade, no: Goodside was a former data scientist, and Semafor describes "a wave of mostly young people" (P).
+- Data scientist, no: "the best data scientists tend to be 'hard scientists,' particularly physicists" (`p4-loukides-2010-what-is-ds`; P).
+- Lead-industry diffusion, partial: the memo asks for "additional men" and promotion from assistant to brand man (P).
+- Engineering absorption, no: there are no title holders (P).
+
+**N21 (first postings in an operations/IT organisation).**
+- DevOps, yes: "Site uptime" (Home Depot 2012); "first level support for all incoming production software" (Amazon 2014); "responsible for our production platform" (Reputation.com 2014). In 2014, DevOps engineer titles sat in IT Operations (129) and Development (144) departments, not research (P).
+- SRE, yes: "Production Team"; "traditionally operations functions" (P).
+- Mandated officer, partial: the CISO ran Citibank's "Global Information security Program"; the CCO and DPO sit in compliance or legal (P).
+- Tool-operator fade, partial: a 2009 webmaster posting is filed under "MIS - Info"; the prompt engineer at Scale AI does red-teaming and research-style work (P).
+- Data scientist, no: Facebook "Data team", "Chief Scientist" titles (P).
+- Lead-industry diffusion, no: the Promotion Department (P).
+- Engineering absorption: NF.
+
+**N22 (purpose: coordinating existing functions).**
+- DevOps, yes: "Dev and Ops Cooperation"; "bringing the best of both worlds together" (P).
+- SRE, partial: SRE resolves "the structural conflict" between product development and operations, but through a scarce hire ("our hiring pool is necessarily small") (P).
+- Data scientist, no: "Data scientist roles have grown over 650 percent since 2012, but currently 35,000 people in the US have data science skills" (P).
+- Lead-industry diffusion, yes: the brand man takes responsibility from Division and District Managers and coordinates advertising, field work and sales (P).
+- Mandated officer, no: oversight under a mandate (P).
+- Tool-operator fade, no: a new capability with a new tool (P).
+- Engineering absorption, no: engineering work inside existing roles (P).
+
+**N23 (early talks framed as culture or process).**
+- DevOps, yes: Velocity 2009 on "the culture and technology needed to make it possible"; devopsdays 2009 talks on Kanban, agile, and "dismantling the 'we vs. them' view" (P).
+- SRE, partial: framed as organisational design ("ask a software engineer to design an operations team"), but LISA'06 was mostly about technologies (P).
+- Data scientist, partial: Loukides (2010) is mostly technique (Hadoop, R, "data jiujitsu"); Patil (2011) is about "building the data and analytics groups" (P).
+- Lead-industry diffusion, yes: the 1931 memo is wholly organisational (P; a memo, not a talk).
+- Tool-operator fade, no: "The Art and Craft of Prompt Engineering", "Mental Models for Advanced ChatGPT Prompting" (P).
+- Engineering absorption, no: media queries; "decouple policy" (P).
+- Mandated officer: NF.
+
+**N24 (vendors relabelled existing products within ~3 years).**
+- DevOps, yes: Puppet Labs' homepage in Jun 2010 has no "DevOps"; by Jun 2011 it reads "Your DevOps team can now share a common approach to configurations" and lists "DevOps Groups" (`r2-wb-puppetlabs-20100625`, `r2-wb-puppetlabs-20110615`; P).
+- Data scientist, yes: the EMC Greenplum homepage (Oct 2011) has a "Data Scientists" section ("What Is a Data Scientist?"), about 3 years after the 2008 title (`r2-wb-greenplum-20111015`; P). **This feature does not separate DevOps from data scientist.**
+- Others: NF.
+
+### Separation within ~3 years (features N04a, N16a, N06a, N20–N24)
+
+- DevOps vs data scientist: separated by N20, N21 and N22 (yes vs no); weakly by N04a, N16a and N23 (yes or no vs partial). N06a and N24 do not separate them.
+- SRE vs lead-industry diffusion: N06a and N21 (yes vs no); N22 and N23 run the other way (partial vs yes).
+- Tool-operator fade vs engineering absorption: N04a (yes vs no), N16a and N21 (partial vs no or NF). N06a, N20, N22 and N23 do not separate them.
+
+### Candidate features
+
+- N20–N24 were all kept; none was replaced.
+- N24 is kept but has weak value: it was sourced only for DevOps and data scientist, and both are yes.
+- N20, N22 and N23 depend on how a source states its purpose or framing. They are more interpretive than the round-1 features, so present-day coders will need tight definitions.

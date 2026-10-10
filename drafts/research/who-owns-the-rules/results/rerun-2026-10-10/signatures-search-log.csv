@@ -44,3 +44,6 @@ date,query,engine,results_kept
 2026-10-10,"responsive web designer",onet-keyword-search,1
 2026-10-10,"policy as code",onet-keyword-search,0
 2026-10-10,"repos open-policy-agent/opa; chef/chef; puppetlabs/puppet; prometheus/prometheus",github-api,2
+2026-10-10,"puppetlabs.com/ and opscode.com/ (2010-2012); bls.gov/oes/2011/may/oes152041.htm; oes151071.htm",wayback-cdx,6
+2026-10-10,"cloudera.com, sas.com (Jun 2011), greenplum.com (Oct 2011) homepages",wayback-snapshot,1
+2026-10-10,"2012 OR 2013 data scientist salary compared with statisticians OR analysts premium survey Dice OR Burtch OR O'Reilly",WebSearch,2

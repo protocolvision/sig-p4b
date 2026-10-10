@@ -1,134 +1,211 @@
-pattern,feature_id,feature,value,grade
-DevOps,N01,practice described >=2 years before a common title,yes,P
-DevOps,N02,duties from two previously separate functions merged,yes,P
-DevOps,N03,community before tooling before certification before regulation,partial,P
-DevOps,N04,title rose then fragmented or was renamed within ~10 years,partial,P
-DevOps,N05,"shared metrics originated with practitioners, not regulators",yes,P
-DevOps,N06,diffusion from software-native to enterprise to regulated sectors,yes,P
-DevOps,N07,more postings carry the practice as a duty/skill than as a title,partial,P
-DevOps,N08,title and practice appeared together,no,P
-DevOps,N09,single-firm origin,no,P
-DevOps,N10,authority from an owned number,no,P
-DevOps,N11,title tied to a legal text,no,NF
-DevOps,N12,senior/executive at first appearance,no,P
-DevOps,N13,certification/statute before practitioner community,no,P
-DevOps,N14,title boom within 2-3 years of a new tool,partial,P
-DevOps,N15,duties are operating a tool,partial,P
-DevOps,N16,salary-premium title boom then split into narrower titles,no,NF
-DevOps,N17,mature in one industry long before others,partial,P
-DevOps,N18,carried by people moving between industries,no,NF
-DevOps,N19,"no new title, team or metric (absorbed into engineering)",no,P
-SRE,N01,practice described >=2 years before a common title,no,P
-SRE,N02,duties from two previously separate functions merged,yes,P
-SRE,N03,community before tooling before certification before regulation,partial,P
-SRE,N04,title rose then fragmented or was renamed within ~10 years,no,NF
-SRE,N05,"shared metrics originated with practitioners, not regulators",yes,P
-SRE,N06,diffusion from software-native to enterprise to regulated sectors,partial,P
-SRE,N07,more postings carry the practice as a duty/skill than as a title,no,NF
-SRE,N08,title and practice appeared together,yes,P
-SRE,N09,single-firm origin,yes,P
-SRE,N10,authority from an owned number,yes,P
-SRE,N11,title tied to a legal text,no,NF
-SRE,N12,senior/executive at first appearance,no,P
-SRE,N13,certification/statute before practitioner community,no,P
-SRE,N14,title boom within 2-3 years of a new tool,no,NF
-SRE,N15,duties are operating a tool,no,P
-SRE,N16,salary-premium title boom then split into narrower titles,no,NF
-SRE,N17,mature in one industry long before others,partial,P
-SRE,N18,carried by people moving between industries,partial,P
-SRE,N19,"no new title, team or metric (absorbed into engineering)",no,P
-Mandated officer,N01,practice described >=2 years before a common title,partial,P
-Mandated officer,N02,duties from two previously separate functions merged,no,P
-Mandated officer,N03,community before tooling before certification before regulation,partial,P
-Mandated officer,N04,title rose then fragmented or was renamed within ~10 years,no,NF
-Mandated officer,N05,"shared metrics originated with practitioners, not regulators",no,NF
-Mandated officer,N06,diffusion from software-native to enterprise to regulated sectors,no,P
-Mandated officer,N07,more postings carry the practice as a duty/skill than as a title,no,NF
-Mandated officer,N08,title and practice appeared together,partial,P
-Mandated officer,N09,single-firm origin,partial,P
-Mandated officer,N10,authority from an owned number,no,NF
-Mandated officer,N11,title tied to a legal text,yes,P
-Mandated officer,N12,senior/executive at first appearance,yes,P
-Mandated officer,N13,certification/statute before practitioner community,partial,P
-Mandated officer,N14,title boom within 2-3 years of a new tool,no,NF
-Mandated officer,N15,duties are operating a tool,no,P
-Mandated officer,N16,salary-premium title boom then split into narrower titles,no,NF
-Mandated officer,N17,mature in one industry long before others,partial,P
-Mandated officer,N18,carried by people moving between industries,no,NF
-Mandated officer,N19,"no new title, team or metric (absorbed into engineering)",no,P
-Tool-operator fade,N01,practice described >=2 years before a common title,partial,P
-Tool-operator fade,N02,duties from two previously separate functions merged,partial,P
-Tool-operator fade,N03,community before tooling before certification before regulation,no,P
-Tool-operator fade,N04,title rose then fragmented or was renamed within ~10 years,partial,P
-Tool-operator fade,N05,"shared metrics originated with practitioners, not regulators",no,NF
-Tool-operator fade,N06,diffusion from software-native to enterprise to regulated sectors,no,NF
-Tool-operator fade,N07,more postings carry the practice as a duty/skill than as a title,partial,R
-Tool-operator fade,N08,title and practice appeared together,partial,P
-Tool-operator fade,N09,single-firm origin,no,P
-Tool-operator fade,N10,authority from an owned number,no,NF
-Tool-operator fade,N11,title tied to a legal text,no,NF
-Tool-operator fade,N12,senior/executive at first appearance,no,P
-Tool-operator fade,N13,certification/statute before practitioner community,no,P
-Tool-operator fade,N14,title boom within 2-3 years of a new tool,yes,P
-Tool-operator fade,N15,duties are operating a tool,yes,R
-Tool-operator fade,N16,salary-premium title boom then split into narrower titles,partial,R
-Tool-operator fade,N17,mature in one industry long before others,no,NF
-Tool-operator fade,N18,carried by people moving between industries,no,NF
-Tool-operator fade,N19,"no new title, team or metric (absorbed into engineering)",no,P
-Scarcity boom then specialisation,N01,practice described >=2 years before a common title,yes,P
-Scarcity boom then specialisation,N02,duties from two previously separate functions merged,yes,P
-Scarcity boom then specialisation,N03,community before tooling before certification before regulation,partial,P
-Scarcity boom then specialisation,N04,title rose then fragmented or was renamed within ~10 years,yes,P
-Scarcity boom then specialisation,N05,"shared metrics originated with practitioners, not regulators",no,NF
-Scarcity boom then specialisation,N06,diffusion from software-native to enterprise to regulated sectors,partial,P
-Scarcity boom then specialisation,N07,more postings carry the practice as a duty/skill than as a title,no,NF
-Scarcity boom then specialisation,N08,title and practice appeared together,no,P
-Scarcity boom then specialisation,N09,single-firm origin,no,P
-Scarcity boom then specialisation,N10,authority from an owned number,no,NF
-Scarcity boom then specialisation,N11,title tied to a legal text,no,P
-Scarcity boom then specialisation,N12,senior/executive at first appearance,no,P
-Scarcity boom then specialisation,N13,certification/statute before practitioner community,no,P
-Scarcity boom then specialisation,N14,title boom within 2-3 years of a new tool,no,NF
-Scarcity boom then specialisation,N15,duties are operating a tool,no,P
-Scarcity boom then specialisation,N16,salary-premium title boom then split into narrower titles,yes,P
-Scarcity boom then specialisation,N17,mature in one industry long before others,no,NF
-Scarcity boom then specialisation,N18,carried by people moving between industries,partial,P
-Scarcity boom then specialisation,N19,"no new title, team or metric (absorbed into engineering)",no,P
-Lead-industry diffusion,N01,practice described >=2 years before a common title,yes,P
-Lead-industry diffusion,N02,duties from two previously separate functions merged,yes,P
-Lead-industry diffusion,N03,community before tooling before certification before regulation,no,NF
-Lead-industry diffusion,N04,title rose then fragmented or was renamed within ~10 years,no,R
-Lead-industry diffusion,N05,"shared metrics originated with practitioners, not regulators",partial,P
-Lead-industry diffusion,N06,diffusion from software-native to enterprise to regulated sectors,no,R
-Lead-industry diffusion,N07,more postings carry the practice as a duty/skill than as a title,no,NF
-Lead-industry diffusion,N08,title and practice appeared together,partial,P
-Lead-industry diffusion,N09,single-firm origin,yes,P
-Lead-industry diffusion,N10,authority from an owned number,partial,P
-Lead-industry diffusion,N11,title tied to a legal text,no,NF
-Lead-industry diffusion,N12,senior/executive at first appearance,no,P
-Lead-industry diffusion,N13,certification/statute before practitioner community,no,NF
-Lead-industry diffusion,N14,title boom within 2-3 years of a new tool,no,NF
-Lead-industry diffusion,N15,duties are operating a tool,no,P
-Lead-industry diffusion,N16,salary-premium title boom then split into narrower titles,no,NF
-Lead-industry diffusion,N17,mature in one industry long before others,yes,R
-Lead-industry diffusion,N18,carried by people moving between industries,yes,P
-Lead-industry diffusion,N19,"no new title, team or metric (absorbed into engineering)",no,P
-Engineering absorption,N01,practice described >=2 years before a common title,no,P
-Engineering absorption,N02,duties from two previously separate functions merged,partial,P
-Engineering absorption,N03,community before tooling before certification before regulation,no,P
-Engineering absorption,N04,title rose then fragmented or was renamed within ~10 years,no,P
-Engineering absorption,N05,"shared metrics originated with practitioners, not regulators",no,P
-Engineering absorption,N06,diffusion from software-native to enterprise to regulated sectors,partial,P
-Engineering absorption,N07,more postings carry the practice as a duty/skill than as a title,partial,P
-Engineering absorption,N08,title and practice appeared together,no,P
-Engineering absorption,N09,single-firm origin,partial,P
-Engineering absorption,N10,authority from an owned number,no,NF
-Engineering absorption,N11,title tied to a legal text,no,NF
-Engineering absorption,N12,senior/executive at first appearance,no,NF
-Engineering absorption,N13,certification/statute before practitioner community,no,NF
-Engineering absorption,N14,title boom within 2-3 years of a new tool,no,P
-Engineering absorption,N15,duties are operating a tool,partial,P
-Engineering absorption,N16,salary-premium title boom then split into narrower titles,no,NF
-Engineering absorption,N17,mature in one industry long before others,no,NF
-Engineering absorption,N18,carried by people moving between industries,no,NF
-Engineering absorption,N19,"no new title, team or metric (absorbed into engineering)",yes,P
+pattern,feature_id,feature,value,grade,round
+DevOps,N01,practice described >=2 years before a common title,yes,P,1
+DevOps,N02,duties from two previously separate functions merged,yes,P,1
+DevOps,N03,community before tooling before certification before regulation,partial,P,1
+DevOps,N04,title rose then fragmented or was renamed within ~10 years,partial,P,1
+DevOps,N05,"shared metrics originated with practitioners, not regulators",yes,P,1
+DevOps,N06,diffusion from software-native to enterprise to regulated sectors,yes,P,1
+DevOps,N07,more postings carry the practice as a duty/skill than as a title,partial,P,1
+DevOps,N08,title and practice appeared together,no,P,1
+DevOps,N09,single-firm origin,no,P,1
+DevOps,N10,authority from an owned number,no,P,1
+DevOps,N11,title tied to a legal text,no,NF,1
+DevOps,N12,senior/executive at first appearance,no,P,1
+DevOps,N13,certification/statute before practitioner community,no,P,1
+DevOps,N14,title boom within 2-3 years of a new tool,partial,P,1
+DevOps,N15,duties are operating a tool,partial,P,1
+DevOps,N16,salary-premium title boom then split into narrower titles,no,NF,1
+DevOps,N17,mature in one industry long before others,partial,P,1
+DevOps,N18,carried by people moving between industries,no,NF,1
+DevOps,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+SRE,N01,practice described >=2 years before a common title,no,P,1
+SRE,N02,duties from two previously separate functions merged,yes,P,1
+SRE,N03,community before tooling before certification before regulation,partial,P,1
+SRE,N04,title rose then fragmented or was renamed within ~10 years,no,NF,1
+SRE,N05,"shared metrics originated with practitioners, not regulators",yes,P,1
+SRE,N06,diffusion from software-native to enterprise to regulated sectors,partial,P,1
+SRE,N07,more postings carry the practice as a duty/skill than as a title,no,NF,1
+SRE,N08,title and practice appeared together,yes,P,1
+SRE,N09,single-firm origin,yes,P,1
+SRE,N10,authority from an owned number,yes,P,1
+SRE,N11,title tied to a legal text,no,NF,1
+SRE,N12,senior/executive at first appearance,no,P,1
+SRE,N13,certification/statute before practitioner community,no,P,1
+SRE,N14,title boom within 2-3 years of a new tool,no,NF,1
+SRE,N15,duties are operating a tool,no,P,1
+SRE,N16,salary-premium title boom then split into narrower titles,no,NF,1
+SRE,N17,mature in one industry long before others,partial,P,1
+SRE,N18,carried by people moving between industries,partial,P,1
+SRE,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+Mandated officer,N01,practice described >=2 years before a common title,partial,P,1
+Mandated officer,N02,duties from two previously separate functions merged,no,P,1
+Mandated officer,N03,community before tooling before certification before regulation,partial,P,1
+Mandated officer,N04,title rose then fragmented or was renamed within ~10 years,no,NF,1
+Mandated officer,N05,"shared metrics originated with practitioners, not regulators",no,NF,1
+Mandated officer,N06,diffusion from software-native to enterprise to regulated sectors,no,P,1
+Mandated officer,N07,more postings carry the practice as a duty/skill than as a title,no,NF,1
+Mandated officer,N08,title and practice appeared together,partial,P,1
+Mandated officer,N09,single-firm origin,partial,P,1
+Mandated officer,N10,authority from an owned number,no,NF,1
+Mandated officer,N11,title tied to a legal text,yes,P,1
+Mandated officer,N12,senior/executive at first appearance,yes,P,1
+Mandated officer,N13,certification/statute before practitioner community,partial,P,1
+Mandated officer,N14,title boom within 2-3 years of a new tool,no,NF,1
+Mandated officer,N15,duties are operating a tool,no,P,1
+Mandated officer,N16,salary-premium title boom then split into narrower titles,no,NF,1
+Mandated officer,N17,mature in one industry long before others,partial,P,1
+Mandated officer,N18,carried by people moving between industries,no,NF,1
+Mandated officer,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+Tool-operator fade,N01,practice described >=2 years before a common title,partial,P,1
+Tool-operator fade,N02,duties from two previously separate functions merged,partial,P,1
+Tool-operator fade,N03,community before tooling before certification before regulation,no,P,1
+Tool-operator fade,N04,title rose then fragmented or was renamed within ~10 years,partial,P,1
+Tool-operator fade,N05,"shared metrics originated with practitioners, not regulators",no,NF,1
+Tool-operator fade,N06,diffusion from software-native to enterprise to regulated sectors,no,NF,1
+Tool-operator fade,N07,more postings carry the practice as a duty/skill than as a title,partial,R,1
+Tool-operator fade,N08,title and practice appeared together,partial,P,1
+Tool-operator fade,N09,single-firm origin,no,P,1
+Tool-operator fade,N10,authority from an owned number,no,NF,1
+Tool-operator fade,N11,title tied to a legal text,no,NF,1
+Tool-operator fade,N12,senior/executive at first appearance,no,P,1
+Tool-operator fade,N13,certification/statute before practitioner community,no,P,1
+Tool-operator fade,N14,title boom within 2-3 years of a new tool,yes,P,1
+Tool-operator fade,N15,duties are operating a tool,yes,R,1
+Tool-operator fade,N16,salary-premium title boom then split into narrower titles,partial,R,1
+Tool-operator fade,N17,mature in one industry long before others,no,NF,1
+Tool-operator fade,N18,carried by people moving between industries,no,NF,1
+Tool-operator fade,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+Scarcity boom then specialisation,N01,practice described >=2 years before a common title,yes,P,1
+Scarcity boom then specialisation,N02,duties from two previously separate functions merged,yes,P,1
+Scarcity boom then specialisation,N03,community before tooling before certification before regulation,partial,P,1
+Scarcity boom then specialisation,N04,title rose then fragmented or was renamed within ~10 years,yes,P,1
+Scarcity boom then specialisation,N05,"shared metrics originated with practitioners, not regulators",no,NF,1
+Scarcity boom then specialisation,N06,diffusion from software-native to enterprise to regulated sectors,partial,P,1
+Scarcity boom then specialisation,N07,more postings carry the practice as a duty/skill than as a title,no,NF,1
+Scarcity boom then specialisation,N08,title and practice appeared together,no,P,1
+Scarcity boom then specialisation,N09,single-firm origin,no,P,1
+Scarcity boom then specialisation,N10,authority from an owned number,no,NF,1
+Scarcity boom then specialisation,N11,title tied to a legal text,no,P,1
+Scarcity boom then specialisation,N12,senior/executive at first appearance,no,P,1
+Scarcity boom then specialisation,N13,certification/statute before practitioner community,no,P,1
+Scarcity boom then specialisation,N14,title boom within 2-3 years of a new tool,no,NF,1
+Scarcity boom then specialisation,N15,duties are operating a tool,no,P,1
+Scarcity boom then specialisation,N16,salary-premium title boom then split into narrower titles,yes,P,1
+Scarcity boom then specialisation,N17,mature in one industry long before others,no,NF,1
+Scarcity boom then specialisation,N18,carried by people moving between industries,partial,P,1
+Scarcity boom then specialisation,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+Lead-industry diffusion,N01,practice described >=2 years before a common title,yes,P,1
+Lead-industry diffusion,N02,duties from two previously separate functions merged,yes,P,1
+Lead-industry diffusion,N03,community before tooling before certification before regulation,no,NF,1
+Lead-industry diffusion,N04,title rose then fragmented or was renamed within ~10 years,no,R,1
+Lead-industry diffusion,N05,"shared metrics originated with practitioners, not regulators",partial,P,1
+Lead-industry diffusion,N06,diffusion from software-native to enterprise to regulated sectors,no,R,1
+Lead-industry diffusion,N07,more postings carry the practice as a duty/skill than as a title,no,NF,1
+Lead-industry diffusion,N08,title and practice appeared together,partial,P,1
+Lead-industry diffusion,N09,single-firm origin,yes,P,1
+Lead-industry diffusion,N10,authority from an owned number,partial,P,1
+Lead-industry diffusion,N11,title tied to a legal text,no,NF,1
+Lead-industry diffusion,N12,senior/executive at first appearance,no,P,1
+Lead-industry diffusion,N13,certification/statute before practitioner community,no,NF,1
+Lead-industry diffusion,N14,title boom within 2-3 years of a new tool,no,NF,1
+Lead-industry diffusion,N15,duties are operating a tool,no,P,1
+Lead-industry diffusion,N16,salary-premium title boom then split into narrower titles,no,NF,1
+Lead-industry diffusion,N17,mature in one industry long before others,yes,R,1
+Lead-industry diffusion,N18,carried by people moving between industries,yes,P,1
+Lead-industry diffusion,N19,"no new title, team or metric (absorbed into engineering)",no,P,1
+Engineering absorption,N01,practice described >=2 years before a common title,no,P,1
+Engineering absorption,N02,duties from two previously separate functions merged,partial,P,1
+Engineering absorption,N03,community before tooling before certification before regulation,no,P,1
+Engineering absorption,N04,title rose then fragmented or was renamed within ~10 years,no,P,1
+Engineering absorption,N05,"shared metrics originated with practitioners, not regulators",no,P,1
+Engineering absorption,N06,diffusion from software-native to enterprise to regulated sectors,partial,P,1
+Engineering absorption,N07,more postings carry the practice as a duty/skill than as a title,partial,P,1
+Engineering absorption,N08,title and practice appeared together,no,P,1
+Engineering absorption,N09,single-firm origin,partial,P,1
+Engineering absorption,N10,authority from an owned number,no,NF,1
+Engineering absorption,N11,title tied to a legal text,no,NF,1
+Engineering absorption,N12,senior/executive at first appearance,no,NF,1
+Engineering absorption,N13,certification/statute before practitioner community,no,NF,1
+Engineering absorption,N14,title boom within 2-3 years of a new tool,no,P,1
+Engineering absorption,N15,duties are operating a tool,partial,P,1
+Engineering absorption,N16,salary-premium title boom then split into narrower titles,no,NF,1
+Engineering absorption,N17,mature in one industry long before others,no,NF,1
+Engineering absorption,N18,carried by people moving between industries,no,NF,1
+Engineering absorption,N19,"no new title, team or metric (absorbed into engineering)",yes,P,1
+DevOps,N04a,title volume rose within ~3 years of first use,yes,P,2
+DevOps,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),partial,P,2
+DevOps,N16a,title appeared with a salary premium over its parent occupations,no,NF,2
+DevOps,N16b,title later split into narrower titles,partial,P,2
+DevOps,N06a,first adopters were mostly software-native firms,yes,P,2
+DevOps,N06b,later spread to enterprises and then regulated sectors (same as N06),yes,P,2
+DevOps,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",yes,P,2
+DevOps,N21,"first postings sat in an operations or IT organisation, not research or analytics",yes,P,2
+DevOps,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",yes,P,2
+DevOps,N23,"early practitioner talks framed the work as culture or process change, not a new technique",yes,P,2
+DevOps,N24,vendors relabelled existing products for the practice within ~3 years,yes,P,2
+SRE,N04a,title volume rose within ~3 years of first use,no,NF,2
+SRE,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),no,NF,2
+SRE,N16a,title appeared with a salary premium over its parent occupations,no,NF,2
+SRE,N16b,title later split into narrower titles,no,NF,2
+SRE,N06a,first adopters were mostly software-native firms,yes,P,2
+SRE,N06b,later spread to enterprises and then regulated sectors (same as N06),partial,P,2
+SRE,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",partial,P,2
+SRE,N21,"first postings sat in an operations or IT organisation, not research or analytics",yes,P,2
+SRE,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",partial,P,2
+SRE,N23,"early practitioner talks framed the work as culture or process change, not a new technique",partial,P,2
+SRE,N24,vendors relabelled existing products for the practice within ~3 years,no,NF,2
+Mandated officer,N04a,title volume rose within ~3 years of first use,partial,P,2
+Mandated officer,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),no,NF,2
+Mandated officer,N16a,title appeared with a salary premium over its parent occupations,no,NF,2
+Mandated officer,N16b,title later split into narrower titles,no,NF,2
+Mandated officer,N06a,first adopters were mostly software-native firms,no,P,2
+Mandated officer,N06b,later spread to enterprises and then regulated sectors (same as N06),no,P,2
+Mandated officer,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",partial,P,2
+Mandated officer,N21,"first postings sat in an operations or IT organisation, not research or analytics",partial,P,2
+Mandated officer,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",no,P,2
+Mandated officer,N23,"early practitioner talks framed the work as culture or process change, not a new technique",no,NF,2
+Mandated officer,N24,vendors relabelled existing products for the practice within ~3 years,no,NF,2
+Tool-operator fade,N04a,title volume rose within ~3 years of first use,yes,P,2
+Tool-operator fade,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),partial,P,2
+Tool-operator fade,N16a,title appeared with a salary premium over its parent occupations,partial,R,2
+Tool-operator fade,N16b,title later split into narrower titles,partial,P,2
+Tool-operator fade,N06a,first adopters were mostly software-native firms,partial,P,2
+Tool-operator fade,N06b,later spread to enterprises and then regulated sectors (same as N06),no,NF,2
+Tool-operator fade,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",no,P,2
+Tool-operator fade,N21,"first postings sat in an operations or IT organisation, not research or analytics",partial,P,2
+Tool-operator fade,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",no,P,2
+Tool-operator fade,N23,"early practitioner talks framed the work as culture or process change, not a new technique",no,P,2
+Tool-operator fade,N24,vendors relabelled existing products for the practice within ~3 years,no,NF,2
+Scarcity boom then specialisation,N04a,title volume rose within ~3 years of first use,partial,P,2
+Scarcity boom then specialisation,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),yes,P,2
+Scarcity boom then specialisation,N16a,title appeared with a salary premium over its parent occupations,partial,P,2
+Scarcity boom then specialisation,N16b,title later split into narrower titles,yes,P,2
+Scarcity boom then specialisation,N06a,first adopters were mostly software-native firms,yes,P,2
+Scarcity boom then specialisation,N06b,later spread to enterprises and then regulated sectors (same as N06),partial,P,2
+Scarcity boom then specialisation,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",no,P,2
+Scarcity boom then specialisation,N21,"first postings sat in an operations or IT organisation, not research or analytics",no,P,2
+Scarcity boom then specialisation,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",no,P,2
+Scarcity boom then specialisation,N23,"early practitioner talks framed the work as culture or process change, not a new technique",partial,P,2
+Scarcity boom then specialisation,N24,vendors relabelled existing products for the practice within ~3 years,yes,P,2
+Lead-industry diffusion,N04a,title volume rose within ~3 years of first use,no,NF,2
+Lead-industry diffusion,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),no,R,2
+Lead-industry diffusion,N16a,title appeared with a salary premium over its parent occupations,no,NF,2
+Lead-industry diffusion,N16b,title later split into narrower titles,partial,R,2
+Lead-industry diffusion,N06a,first adopters were mostly software-native firms,no,P,2
+Lead-industry diffusion,N06b,later spread to enterprises and then regulated sectors (same as N06),no,R,2
+Lead-industry diffusion,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",partial,P,2
+Lead-industry diffusion,N21,"first postings sat in an operations or IT organisation, not research or analytics",no,P,2
+Lead-industry diffusion,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",yes,P,2
+Lead-industry diffusion,N23,"early practitioner talks framed the work as culture or process change, not a new technique",yes,P,2
+Lead-industry diffusion,N24,vendors relabelled existing products for the practice within ~3 years,no,NF,2
+Engineering absorption,N04a,title volume rose within ~3 years of first use,no,P,2
+Engineering absorption,N04b,title rose then fragmented or was renamed within ~10 years (same as N04),no,P,2
+Engineering absorption,N16a,title appeared with a salary premium over its parent occupations,no,P,2
+Engineering absorption,N16b,title later split into narrower titles,no,P,2
+Engineering absorption,N06a,first adopters were mostly software-native firms,partial,P,2
+Engineering absorption,N06b,later spread to enterprises and then regulated sectors (same as N06),partial,P,2
+Engineering absorption,N20,"first holders were mostly retitled existing staff, not new hires from outside the occupation",no,P,2
+Engineering absorption,N21,"first postings sat in an operations or IT organisation, not research or analytics",no,NF,2
+Engineering absorption,N22,"stated purpose was coordinating existing functions, not providing a new scarce capability",no,P,2
+Engineering absorption,N23,"early practitioner talks framed the work as culture or process change, not a new technique",no,P,2
+Engineering absorption,N24,vendors relabelled existing products for the practice within ~3 years,no,NF,2
