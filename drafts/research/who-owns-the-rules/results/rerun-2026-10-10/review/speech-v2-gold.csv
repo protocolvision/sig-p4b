@@ -1,0 +1,177 @@
+doc_id,gold_n,quote
+M021_c03,1,"we still have a large amount of, you know, humans looking after it, maintaining it, managing it"
+M021_c03,2,I've got part of my team now governing our AI bots in co-pilot in our service management area
+M048_c00,1,We are designing these agents very prudently in our ecosystem to make sure that they're 100% right and that the judgment is consistent.
+M048_c00,2,We are one of those companies that are obviously leaning in heavily on our investments with AI to augment our current technology and enhance it.
+M010_c06,1,I asked it to do some stuff and it came back with some very weird looking things.
+M010_c06,2,"I've been telling my teams for a while now, particularly the partners, it's like, you really need to move away from thinking that the report is your purpose"
+M010_c06,3,We've done a little bit in some journals.
+M065_c04,1,we try to measure the impact all the time
+M065_c04,2,"the first approach was like, you know what, let's not measure. let's get adoption."
+M065_c04,3,we opened the flow
+M065_c04,4,"You take three subscriptions to whatever tools you want and everything, we'll pay."
+M065_c04,5,the only thing that we were asking for is to consolidate the use cases where it was working
+M065_c04,6,"we compiled a list of like, hey, here, not mature."
+M065_c04,7,"The adoption at that time was mostly measured in terms of how many subscriptions people have, do they consume their tokens"
+M065_c04,8,we started to be a bit more precise
+M065_c04,9,we started to flag our PRs with some specific labels.
+M072_c08,1,"the vendors kind of lied and said, just turn the product on, it'll get you revenue."
+M072_c08,2,we inherited a bunch of reps from Adobe
+M072_c08,3,what we learned from sending hundreds of thousands is it doesn't matter
+M072_c08,4,We've tried both.
+M072_c08,5,"We've tried to say, hey, it's digital Amelia or digital Jason."
+M072_c08,6,We've tried to fake it.
+M072_c08,7,now we just send it. We just send it and no one cares.
+M072_c19,1,I'm still trying to figure out the AI versus the com.
+M023_c04,1,I get so much energy by talking to a founder or a CTO of a small startup
+M023_c04,2,"In our case, we build an architecture that we can plug in and out different partners based on what's happening."
+M023_c04,3,"we started the journey many, many years ago"
+M023_c04,4,some of those things we had to change over the years because our business also changed
+M023_c04,5,"Before, we had all the product teams organized based on the customer shopping journey."
+M023_c04,6,now they're more focused on really three big sort of groups
+M023_c04,7,"everything that's driving innovation, driving customer experiences, driving competitive advantage, is done through these product teams"
+M010_c04,1,"I've used that in the past to help look at what's the best way to structure the job descriptions, give some role clarity"
+M010_c04,2,I've dragged data out and stopped servers working
+M010_c04,3,we extract using Excel
+M010_c04,4,What we've done is built very strong relationships with our data architects who sit in our tech functions
+M010_c04,5,we've built our own little mini warehouse within the warehouse for our financial data
+M010_c04,6,we build the right kind of business rules and they're all documented
+M010_c04,7,"we've got all the data governance and everything that's That's run by our tech functions, which we work with them on as well"
+M030_c01,1,some of us in the financial industry are shying away completely from open source
+M030_c01,2,we will explore vendors and partners because they might have that expertise and those controls that we are seeking
+M030_c01,3,"we do go with those partners such as Azure, Microsoft, right? Or AWS or GCP"
+M030_c01,4,everybody is moving at lightning speed right now
+M030_c01,5,We're establishing those guardrails and those patterns.
+M030_c01,6,I have got an AI operating model with approved architectures for a building.
+M030_c01,7,we are shifting things on a very large scale
+M030_c01,8,I just visited the bank just last week
+M030_c01,9,"we have got many, many steps we take to make sure that we don't propagate those biases in our data"
+M030_c01,10,We leverage synthetic data.
+M030_c01,11,"when it comes to the actual decision, we do want that human in the look"
+M028_c00,1,"I teach at the university in Amsterdam, Vrij Universiteit, in compliance and integrity management"
+M028_c00,2,lead a risk and compliance team completely focused on VISA
+M028_c00,3,"the majority of our clients we help are in the space of innovating, launching new products, going to new markets"
+M028_c00,4,We also have a business in regular compliance risk management and that's focusing on getting it more effective and efficient
+M028_c00,5,we help to identify the root causes and the impact and also find solutions how to get it solved
+M028_c00,6,we tried to discuss the topic three layers
+M073_c09,1,when we implemented this now we have great Salesforce data
+M073_c09,2,artisan sees that we're outbounding them
+M073_c09,3,we've written about it and tweeted about it
+M073_c09,4,we we have built a bunch of stuff ourselves in Replet
+M073_c09,5,I mainly picked replet in the beginning cuz it was an end toend solution
+M073_c09,6,all the leaders in vibe coding basically use cloud code
+M073_c09,7,where there was nothing to buy we built
+M073_c09,8,what we did until uh through last year was we hired an agency
+M073_c09,9,"We paid them about $15,000 a month or more."
+M073_c09,10,after a while I just vibecoded a speaker application
+M073_c09,11,We do content review with AI agent.
+M073_c09,12,We built a startup valuation calculator.
+M073_c09,13,I launched that this week.
+M073_c09,14,I rebuilt it from scratch in replet.
+M073_c09,15,we built a whole new version of our Saster website
+M072_c18,1,I literally had a third conversation with the founder just crossing a hundred million
+M072_c18,2,we did some meetups
+M072_c18,3,we did the first bigger one in 2015
+M072_c18,4,we did take a break in 2020
+M072_c18,5,but we did in 2021
+M072_c18,6,we've done seven in Europe
+M072_c18,7,the one I did with Ben Chestnut right after they got acquired
+M072_c18,8,I just had Ben McGinnis on the podcast.
+M072_c18,9,just play with the tools we built
+M072_c18,10,I'm still trying to figure out the AI versus the com.
+M072_c10,1,people are posting on LinkedIn that they want to hire these GTM engineers
+M072_c10,2,Even with Virginia and Vercel that basically grew the resource at home
+M010_c02,1,So we did some scenarios
+M010_c02,2,"obviously we do the usual budgets, the rolling forecasts."
+M010_c02,3,We've also got a consolidated 10-year plan process that we facilitate across the business.
+M010_c02,4,"when I started it five years ago, when I inherited the process"
+M010_c02,5,"We bring it all together, including our property division, our IT division"
+M010_c02,6,we do the strategic workforce plan as well now.
+M010_c02,7,"So we've created a shortage of people, really."
+M010_c02,8,"The assumptions underneath it, which our team own when we build it out"
+M024_c04,1,"half my job was spent just saying, No, it's not ready for that yet."
+M024_c04,2,We've kind of created four use case categories
+M024_c04,3,we've got a whole category in partnership with our R&D and engineering team to be able to do that
+M024_c04,4,we're doing a major upgrade on a legacy ERP
+M024_c04,5,we're using it to both reverse engineer what the code was doing as well as make the first pass and what the upgraded code should look like
+M024_c04,6,we were really thoughtful around working collaboratively with those groups across Cargill and finding use cases that would solve real problems
+M024_c04,7,We've been working with AI for years.
+M024_c04,8,"We've been using AI to analyze, I'll be a little graphic, Peter, the waste of chickens in order to fine-tune their nutrition"
+M024_c04,9,we ingested and trained on all of our product specs
+M024_c04,10,We're checking to make sure that the sales teams are tapping in
+M024_c04,11,we put the data and the analytics in the hands of the product teams
+M017_c02,1,coming back to us trying to cut cost
+M017_c02,2,we are always very conscious that we do not do stuff that has a negative impact on the consumer preference of our product
+M017_c02,3,when we drive these savings transformations
+M017_c02,4,part of our transformation is really focusing on the services and indirect side
+M017_c02,5,we're driving efficiency through the system
+M017_c02,6,"the way that we have managed through these geopolitical crises, the input cost increases over the last five years"
+M017_c02,7,"us connecting with the business and helping the business, for example, in pricing strategies"
+M017_c02,8,"We're already now, together with our business, talking about pricing strategies for 27."
+M016_c05,1,I think we're all still trying to figure it out.
+M016_c05,2,"Many times when you see companies come out with, here's great success with AI, here's great success with agents."
+M014_c01,1,I'm the guy who makes sure that it all comes together
+M014_c01,2,we came together initially as well and it was through technology
+M014_c01,3,we kind of created this centralized or center of excellence
+M014_c01,4,we navigated our way through that
+M014_c01,5,"one of the things we've been very, very careful of from a messaging standpoint internally"
+M014_c01,6,externally as well making sure that we are not positioning ourselves as hey we're moving towards ai
+M014_c01,7,we are absolutely taking advantage of what ai brings enriching the roles
+M014_c01,8,taking data entry out of as much as we possibly can
+M014_c01,9,the one thing i think we've been pretty maniacal around is can we actually have these roles performed
+M084_c01,1,"we did kind of our first test of that back in probably late November, early December of 2025"
+M084_c01,2,we were able to kind of get our first order through the system
+M084_c01,3,we built in an audit trail
+M084_c01,4,"over time, we've turned a lot of this onto autonomous"
+M084_c01,5,"we build, say, an agent profile"
+M084_c01,6,So that's why we build guardrails.
+M084_c01,7,now we'd have to actually build another agent that would inspect at the very end of an agent run
+M084_c01,8,when we developed this program
+M084_c01,9,all of the interaction that our users do is within Salesforce
+M084_c01,10,a lot of the use of AI that people deploy is the fun human work
+M084_c01,11,using AI to do my admin is amazing
+M023_c02,1,the data platforms we built
+M023_c02,2,"a lot of companies I know are trying to move fast with AI, but their data really is not a good place"
+M023_c02,3,"in our early days, we focused a lot on just the AI and machine learning"
+M023_c02,4,We used machine learning algorithms based on the data to build a nice recommendation engine
+M023_c02,5,We used machine learning and AI capabilities to drive digital merchandising improvements.
+M023_c02,6,our engineers developed something called a digital sweeper
+M023_c02,7,we take pictures of cars
+M023_c02,8,we drive the car into a studio
+M023_c02,9,We're able to patent that because nobody else has it.
+M023_c02,10,We are also one of the early companies to start testing and embracing the GNAI.
+M023_c02,11,Our teams were using GNAI long before the chat GPT or GNAI became a big hot topic
+M023_c02,12,"our teams are always looking for ways to embrace new technologies, new tools, new capabilities"
+M023_c02,13,"one of the teams figured out, hey, we have all this massive amount of customer reviews"
+M023_c02,14,we had that in production
+M023_c02,15,One area that we are taking advantage of is really around our internal knowledge base
+M023_c02,16,we created an internal GNI-based tool called ROADS
+M073_c00,1,there's at least two leading vendors that we said no to
+M073_c00,2,we've got about 11 core agents we use and about 20 total
+M073_c00,3,most of them we've bought
+M073_c00,4,we've actually built some ourselves on Replet
+M073_c00,5,we came into the beginning of this year basically using no AI at Sasser other than Chat GBT and Claude
+M073_c00,6,we use an app called Deli to do an AI agent on Saster
+M073_c00,7,"We've done over 100,000 conversations."
+M073_c00,8,we used it for everything
+M073_c00,9,We then we started adding marketing tools. We added Gamma and Higsfield
+M073_c00,10,then we added our GTM tools like Artisan and Qualified Momentum and others
+M073_c00,11,we've gone from zero agents at the end of the year to about 20 today
+M073_c00,12,"we've done what everyone on the internet says, which is replace them with AI"
+M073_c00,13,we have to manage these agents
+M073_c00,14,We have a SAS university where I built a bunch of courses.
+M073_c00,15,I'm redoing them in the AI age
+M073_c00,16,I went around a lot of websites
+M073_c00,17,We've taken it off for sales and tickets and sponsors
+M073_c00,18,We've we've put it in the buckets and the parts of Saster that are general
+M073_c00,19,I just asked them 5 minutes ago
+M086_c01,1,no CIO wanted their data out on the cloud
+M086_c01,2,"when you're in working and trying to transform, help companies transform"
+M086_c01,3,"when I first met Edmund, our data scientist, co-founder"
+M086_c01,4,in that call I had with him
+M086_c01,5,I spent some time a lot with a company called Bloom Energy on the energy space
+M086_c03,1,"a lot of companies, everyone's willing to get some AI and play with it in a sandbox just to learn on it"
+M086_c03,2,not a lot of companies have been ready to take it and move it into production
+M086_c03,3,I saw this article that I read recently that was sent to me by one of our investors
+M086_c03,4,"We are now starting to see companies say, all right, we can't afford not to do this."
+M086_c03,5,I was out to dinner with someone.

@@ -116,3 +116,10 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     both 0.7 gates; if several pass, the one with higher recall; if none, speech records are reported
     with their measured precision and recall as limits. Speech is descriptive only in any case (H-cal
     refuted).
+    **Outcome (blind review, 25 new chunks, 176 gold activities):** consensus P 0.90 / R 0.49; Haiku-only
+    0.78 / 0.63; Sonnet-only 0.74 / 0.67; union 0.70 / 0.77 (precision just under the gate). No variant
+    passes both gates. Rule 13 says only "report measured limits", so the dataset choice is recorded here:
+    **consensus**, the variant already in use under deviation 12, chosen for precision because speech is
+    descriptive only and false records would create false descriptions. Every speech count is reported
+    as a lower bound (recall about 0.5). The choice was made after seeing the scores; the alternative
+    (union) is noted.

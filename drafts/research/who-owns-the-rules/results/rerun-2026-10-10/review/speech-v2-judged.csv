@@ -1,0 +1,331 @@
+rid,doc_id,verbatim,is_target,relation_ok,performer_ok,covers_gold_n,note
+M021_c03_r0,M021_c03,1,1,1,1,2,
+M021_c03_r1,M021_c03,1,1,1,1,1,
+M021_c03_r2,M021_c03,1,1,1,1,2,
+M021_c03_r3,M021_c03,1,0,1,1,,"observation of roles emerging, not an activity"
+M021_c03_r4,M021_c03,1,1,1,1,1,
+M048_c00_r0,M048_c00,1,0,1,1,,product pitch (what BlackLine does for customers)
+M048_c00_r1,M048_c00,1,1,1,1,2,
+M048_c00_r2,M048_c00,1,1,1,1,1,truncated
+M048_c00_r3,M048_c00,1,0,1,1,,product pitch
+M048_c00_r4,M048_c00,1,1,1,1,1,
+M048_c00_r5,M048_c00,1,0,1,1,,product pitch
+M048_c00_r6,M048_c00,1,0,1,1,,product pitch
+M048_c00_r7,M048_c00,1,1,1,1,2,
+M048_c00_r8,M048_c00,1,0,1,1,,product pitch
+M010_c06_r0,M010_c06,1,0,1,1,,"possession/state, not an activity"
+M010_c06_r1,M010_c06,1,0,0,1,,"said by host (Glenn), not the guest"
+M010_c06_r2,M010_c06,1,0,1,1,,"possession/state, not an activity"
+M010_c06_r3,M010_c06,1,1,1,1,3,
+M010_c06_r4,M010_c06,1,1,1,1,1,truncated
+M010_c06_r5,M010_c06,1,1,1,1,3,
+M010_c06_r6,M010_c06,1,1,1,1,1,
+M010_c06_r7,M010_c06,1,1,1,1,2,truncated before content of message
+M065_c04_r0,M065_c04,1,1,1,1,6,
+M065_c04_r1,M065_c04,1,1,1,1,1,
+M065_c04_r2,M065_c04,1,1,1,1,1,
+M065_c04_r3,M065_c04,1,1,1,1,9,
+M065_c04_r4,M065_c04,1,1,1,1,3,
+M065_c04_r5,M065_c04,1,1,1,1,9,
+M065_c04_r6,M065_c04,1,1,1,1,8,
+M065_c04_r7,M065_c04,1,0,1,1,,"stance (trust), not an activity"
+M065_c04_r8,M065_c04,1,1,1,1,8,
+M065_c04_r9,M065_c04,1,1,1,1,6,
+M065_c04_r10,M065_c04,1,1,1,1,4,
+M065_c04_r11,M065_c04,1,1,1,1,3,
+M072_c08_r0,M072_c08,1,0,0,1,,"hypothetical whiteboard illustration with the host, not a real activity"
+M072_c08_r1,M072_c08,1,1,1,0,5,team experiment; performer person/both rather than agent
+M072_c08_r2,M072_c08,1,1,1,1,6,
+M072_c08_r3,M072_c08,1,0,1,1,,"claim about junior SDRs (people), not companies; not target"
+M072_c08_r4,M072_c08,1,1,1,1,3,
+M072_c08_r5,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r6,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r7,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r8,M072_c08,1,1,1,1,7,
+M072_c08_r9,M072_c08,1,0,1,1,,"claim about best founders/SDRs (people), not companies"
+M072_c08_r10,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r11,M072_c08,1,0,1,1,,"receiving replies, not an activity of the team"
+M072_c08_r12,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r13,M072_c08,1,0,0,1,,hypothetical illustration
+M072_c08_r14,M072_c08,1,1,1,0,6,performer agent wrong; team experiment
+M072_c08_r15,M072_c08,1,1,1,1,4,
+M072_c08_r16,M072_c08,1,0,0,1,,hypothetical illustration (duplicate)
+M072_c08_r17,M072_c08,1,1,1,0,4,performer agent wrong
+M072_c08_r18,M072_c08,1,0,0,1,,hypothetical illustration (duplicate)
+M072_c08_r19,M072_c08,1,1,1,1,7,
+M072_c08_r20,M072_c08,1,1,1,1,7,
+M072_c08_r21,M072_c08,1,1,1,1,7,
+M072_c08_r22,M072_c08,1,1,1,1,3,
+M072_c08_r23,M072_c08,1,0,0,1,,hypothetical illustration (duplicate)
+M072_c08_r24,M072_c08,1,0,0,1,,hypothetical illustration (duplicate)
+M072_c08_r25,M072_c08,1,0,0,1,,hypothetical illustration (duplicate)
+M072_c08_r26,M072_c08,1,1,1,1,2,
+M072_c19_r0,M072_c19,1,1,1,1,1,
+M072_c19_r1,M072_c19,1,0,1,1,,"waiting/desire, not an activity"
+M072_c19_r2,M072_c19,1,1,1,1,1,
+M016_c06_r0,M016_c06,1,0,0,1,,"host/podcast outro, not the guest"
+M016_c06_r1,M016_c06,1,0,0,1,,"host activity, not the guest"
+M016_c06_r2,M016_c06,1,0,0,1,,"host's organisation, not the guest"
+M023_c04_r0,M023_c04,1,1,1,1,2,
+M023_c04_r1,M023_c04,1,1,1,1,2,
+M023_c04_r2,M023_c04,1,0,1,1,,description of org structure (state)
+M023_c04_r3,M023_c04,1,0,1,1,,state (headcount of teams)
+M023_c04_r4,M023_c04,1,0,1,1,,"growth outcome, not an activity"
+M023_c04_r5,M023_c04,1,1,1,1,3,
+M023_c04_r6,M023_c04,1,1,1,1,5,
+M023_c04_r7,M023_c04,1,0,1,1,,stance/commitment
+M023_c04_r8,M023_c04,1,1,1,1,4,
+M023_c04_r9,M023_c04,1,0,1,1,,state (team size)
+M023_c04_r10,M023_c04,1,1,1,1,5,
+M023_c04_r11,M023_c04,1,0,1,1,,"mindset, not activity"
+M010_c04_r0,M010_c04,1,0,1,1,,state of data flows (borderline)
+M010_c04_r1,M010_c04,1,1,1,1,2,
+M010_c04_r2,M010_c04,1,1,1,0,5,performer should be person
+M010_c04_r3,M010_c04,1,1,1,1,5,
+M010_c04_r4,M010_c04,1,1,1,1,1,
+M010_c04_r5,M010_c04,1,1,1,1,2,
+M010_c04_r6,M010_c04,1,0,1,1,,possession/state
+M010_c04_r7,M010_c04,1,1,1,1,4,
+M010_c04_r8,M010_c04,1,0,1,1,,list of tools (state)
+M010_c04_r9,M010_c04,0,1,1,1,4,not verbatim: drops 'What we've done is' and changes to 'we've built'
+M010_c04_r10,M010_c04,1,0,1,1,,possession; truncated mid-sentence
+M010_c04_r11,M010_c04,1,1,1,1,6,
+M010_c04_r12,M010_c04,1,1,1,1,6,
+M010_c04_r13,M010_c04,1,0,1,1,,state (committees exist)
+M010_c04_r14,M010_c04,1,1,1,1,3,
+M010_c04_r15,M010_c04,1,1,1,1,1,
+M010_c04_r16,M010_c04,1,0,0,1,,"said by host, not the guest"
+M010_c04_r17,M010_c04,1,0,1,1,,"describes experts' input, not the team's activity"
+M010_c04_r18,M010_c04,1,1,1,1,3,
+M030_c01_r0,M030_c01,1,1,1,1,9,
+M030_c01_r1,M030_c01,1,1,0,1,2,"speaker's own bank; own team, not general claim"
+M030_c01_r2,M030_c01,1,1,1,1,7,
+M030_c01_r3,M030_c01,1,1,1,1,5,
+M030_c01_r4,M030_c01,1,1,1,1,8,
+M030_c01_r5,M030_c01,1,1,1,1,9,
+M030_c01_r6,M030_c01,1,1,1,1,3,
+M030_c01_r7,M030_c01,1,1,0,1,3,"speaker's own bank; own team, not general claim"
+M030_c01_r8,M030_c01,1,0,1,1,,"obligation, not activity"
+M030_c01_r9,M030_c01,1,0,1,1,,"obligation, not activity"
+M030_c01_r10,M030_c01,1,1,1,1,9,
+M030_c01_r11,M030_c01,1,1,1,1,9,
+M030_c01_r12,M030_c01,1,1,1,1,1,
+M030_c01_r13,M030_c01,1,1,0,1,6,first person 'I' = self
+M030_c01_r14,M030_c01,1,1,1,1,10,
+M030_c01_r15,M030_c01,1,1,1,1,10,
+M030_c01_r16,M030_c01,1,1,1,1,5,
+M030_c01_r17,M030_c01,1,1,1,1,6,
+M030_c01_r18,M030_c01,1,1,1,1,9,
+M028_c00_r0,M028_c00,1,1,1,1,6,
+M028_c00_r1,M028_c00,1,1,1,1,1,
+M028_c00_r2,M028_c00,1,0,1,1,,biographical past employment
+M028_c00_r3,M028_c00,1,1,1,1,5,
+M028_c00_r4,M028_c00,1,0,1,1,,biographical past role
+M028_c00_r5,M028_c00,1,1,1,1,3,
+M028_c00_r6,M028_c00,1,1,1,1,4,truncated
+M028_c00_r7,M028_c00,1,1,1,1,3,
+M028_c00_r8,M028_c00,1,0,1,1,,biographical tenure
+M028_c00_r9,M028_c00,1,1,1,1,5,
+M028_c00_r10,M028_c00,1,1,1,1,4,
+M028_c00_r11,M028_c00,1,1,1,1,2,includes biographical tenure plus leading team
+M028_c00_r12,M028_c00,1,0,0,1,,Leanne Joseph (moderator) is not a listed speaker
+M028_c00_r13,M028_c00,1,1,1,1,2,
+M028_c00_r14,M028_c00,1,1,1,1,1,
+M028_c00_r15,M028_c00,1,0,1,1,,biographical
+M073_c09_r0,M073_c09,1,1,1,1,10,
+M073_c09_r1,M073_c09,1,1,1,1,13,
+M073_c09_r2,M073_c09,1,1,1,1,11,
+M073_c09_r3,M073_c09,1,1,1,1,10,
+M073_c09_r4,M073_c09,1,1,1,1,10,
+M073_c09_r5,M073_c09,1,1,1,1,10,
+M073_c09_r6,M073_c09,1,1,1,1,15,
+M073_c09_r7,M073_c09,1,1,1,1,10,
+M073_c09_r8,M073_c09,1,1,1,1,12,
+M073_c09_r9,M073_c09,1,1,1,1,4,
+M073_c09_r10,M073_c09,1,1,1,1,8,
+M073_c09_r11,M073_c09,1,1,1,1,9,
+M073_c09_r12,M073_c09,1,1,1,1,13,
+M073_c09_r13,M073_c09,1,1,1,1,4,
+M073_c09_r14,M073_c09,1,1,1,1,12,
+M073_c09_r15,M073_c09,1,1,1,1,15,
+M073_c09_r16,M073_c09,1,0,1,1,,"receiving submissions, not an activity"
+M073_c09_r17,M073_c09,1,1,1,1,8,
+M073_c09_r18,M073_c09,1,1,1,1,14,
+M073_c09_r19,M073_c09,1,1,1,1,14,
+M073_c09_r20,M073_c09,1,0,1,1,,"usage count by external users, not team activity"
+M073_c09_r21,M073_c09,1,1,1,1,10,
+M018_c08_r0,M018_c08,1,0,1,1,,hypothetical about lawyers generally
+M018_c08_r1,M018_c08,1,0,1,1,,hypothetical
+M018_c08_r2,M018_c08,1,0,1,1,,observation of job market
+M072_c18_r0,M072_c18,1,1,1,1,1,
+M072_c18_r1,M072_c18,1,1,1,1,6,
+M072_c18_r2,M072_c18,1,1,1,1,9,fragment
+M072_c18_r3,M072_c18,1,1,1,1,9,"two-word fragment, barely informative"
+M072_c18_r4,M072_c18,1,1,1,1,7,
+M072_c18_r5,M072_c18,1,0,1,1,,"waiting/desire, not an activity"
+M072_c18_r6,M072_c18,1,1,1,1,6,
+M072_c18_r7,M072_c18,1,0,1,1,,state (two websites)
+M072_c18_r8,M072_c18,1,1,1,1,2,
+M072_c18_r9,M072_c18,1,1,1,1,3,
+M072_c18_r10,M072_c18,1,1,1,1,5,
+M072_c18_r11,M072_c18,1,0,1,1,,status claim
+M072_c18_r12,M072_c18,1,1,1,1,3,
+M072_c18_r13,M072_c18,1,1,1,1,7,
+M072_c18_r14,M072_c18,1,1,1,1,5,
+M072_c18_r15,M072_c18,1,0,1,1,,waiting/desire
+M072_c18_r16,M072_c18,1,1,1,1,4,
+M072_c18_r17,M072_c18,1,1,1,1,4,
+M072_c18_r18,M072_c18,1,1,1,1,8,
+M072_c18_r19,M072_c18,0,1,1,1,1,not verbatim: drops 'literally'
+M072_c18_r20,M072_c18,1,1,1,1,10,
+M072_c18_r21,M072_c18,1,0,1,1,,unclear fragment
+M072_c10_r0,M072_c10,1,0,1,1,,not an activity
+M072_c10_r1,M072_c10,1,0,1,1,,staffing state
+M072_c10_r2,M072_c10,1,0,1,1,,staffing state
+M010_c02_r0,M010_c02,1,1,1,1,1,
+M010_c02_r1,M010_c02,1,1,1,1,5,
+M010_c02_r2,M010_c02,1,1,1,1,8,
+M010_c02_r3,M010_c02,1,1,1,1,2,
+M010_c02_r4,M010_c02,1,0,1,1,,possession
+M010_c02_r5,M010_c02,1,1,1,1,4,
+M010_c02_r6,M010_c02,1,1,1,1,6,
+M010_c02_r7,M010_c02,1,1,1,1,3,
+M010_c02_r8,M010_c02,1,1,1,1,6,
+M010_c02_r9,M010_c02,1,1,1,1,5,
+M010_c02_r10,M010_c02,1,1,1,1,1,
+M010_c02_r11,M010_c02,1,1,1,1,2,
+M010_c02_r12,M010_c02,1,1,1,1,3,
+M024_c04_r0,M024_c04,1,1,1,1,6,
+M024_c04_r1,M024_c04,1,1,1,1,10,
+M024_c04_r2,M024_c04,1,1,1,1,7,
+M024_c04_r3,M024_c04,1,0,1,1,,status of use cases
+M024_c04_r4,M024_c04,1,1,1,1,8,
+M024_c04_r5,M024_c04,1,1,1,1,2,
+M024_c04_r6,M024_c04,1,1,1,1,3,
+M024_c04_r7,M024_c04,0,0,1,1,,"not verbatim, garbled fragment with no subject"
+M024_c04_r8,M024_c04,1,1,1,1,11,truncated
+M024_c04_r9,M024_c04,1,1,1,1,4,
+M024_c04_r10,M024_c04,1,1,1,1,7,
+M024_c04_r11,M024_c04,1,1,1,1,5,badly truncated
+M024_c04_r12,M024_c04,1,1,1,1,11,truncated
+M024_c04_r13,M024_c04,1,1,1,1,5,badly truncated
+M024_c04_r14,M024_c04,1,0,1,1,,status of use cases
+M024_c04_r15,M024_c04,1,1,1,1,2,
+M024_c04_r16,M024_c04,1,1,1,1,10,
+M024_c04_r17,M024_c04,1,1,1,1,8,
+M024_c04_r18,M024_c04,1,1,1,1,9,
+M024_c04_r19,M024_c04,1,1,1,1,9,
+M017_c02_r0,M017_c02,1,1,1,1,6,
+M017_c02_r1,M017_c02,1,1,1,1,5,
+M017_c02_r2,M017_c02,1,0,0,1,,host's own healthcare story
+M017_c02_r3,M017_c02,1,1,1,1,5,mixes activity with prediction ('we will reinvest')
+M017_c02_r4,M017_c02,1,1,1,1,6,
+M017_c02_r5,M017_c02,1,1,1,1,8,
+M017_c02_r6,M017_c02,1,1,1,1,5,
+M017_c02_r7,M017_c02,1,1,1,1,3,
+M017_c02_r8,M017_c02,1,1,1,1,8,
+M017_c02_r9,M017_c02,1,1,1,1,2,
+M017_c02_r10,M017_c02,1,0,1,1,,biographical
+M017_c02_r11,M017_c02,1,1,1,1,7,
+M017_c02_r12,M017_c02,1,1,1,1,4,
+M017_c02_r13,M017_c02,1,1,1,1,4,
+M017_c02_r14,M017_c02,1,0,1,1,,biographical
+M016_c05_r0,M016_c05,1,0,1,1,,outcome/observation rather than activity (borderline)
+M016_c05_r1,M016_c05,1,0,1,1,,outcome/observation rather than activity (borderline)
+M014_c01_r0,M014_c01,1,1,1,1,7,
+M014_c01_r1,M014_c01,1,1,1,1,7,
+M014_c01_r2,M014_c01,1,1,1,1,1,
+M014_c01_r3,M014_c01,1,1,1,1,7,
+M014_c01_r4,M014_c01,1,1,1,1,3,
+M014_c01_r5,M014_c01,1,1,1,1,4,
+M014_c01_r6,M014_c01,1,1,1,1,3,
+M014_c01_r7,M014_c01,1,1,1,1,7,
+M014_c01_r8,M014_c01,1,1,1,1,8,
+M014_c01_r9,M014_c01,1,1,1,1,5,
+M014_c01_r10,M014_c01,1,1,1,1,5,
+M014_c01_r11,M014_c01,1,1,1,1,4,
+M084_c01_r0,M084_c01,1,1,1,1,3,
+M084_c01_r1,M084_c01,1,1,1,1,7,
+M084_c01_r2,M084_c01,1,1,1,1,7,
+M084_c01_r3,M084_c01,1,1,1,1,9,
+M084_c01_r4,M084_c01,1,0,1,1,,"a finding, not an activity"
+M084_c01_r5,M084_c01,1,1,1,1,1,
+M084_c01_r6,M084_c01,1,1,1,1,4,
+M084_c01_r7,M084_c01,1,1,1,1,,own customer service staff working with the agent; missed in my gold list
+M084_c01_r8,M084_c01,1,1,1,1,6,
+M084_c01_r9,M084_c01,1,1,1,1,8,
+M084_c01_r10,M084_c01,1,1,1,1,11,
+M084_c01_r11,M084_c01,1,1,1,1,4,agent's activity in their deployed system
+M084_c01_r12,M084_c01,1,1,1,1,1,
+M084_c01_r13,M084_c01,1,1,1,1,3,
+M084_c01_r14,M084_c01,1,1,1,1,4,
+M084_c01_r15,M084_c01,1,0,1,1,,framed as perception ('feel like ... we've trained'); fragment
+M084_c01_r16,M084_c01,1,1,1,1,2,
+M084_c01_r17,M084_c01,1,1,0,1,5,"own team practice, not a general claim"
+M084_c01_r18,M084_c01,1,1,1,0,,deploying agentic missions; not in my gold list; performer is team not agent
+M023_c02_r0,M023_c02,1,1,1,1,6,
+M023_c02_r1,M023_c02,1,1,1,1,11,
+M023_c02_r2,M023_c02,1,1,1,1,3,
+M023_c02_r3,M023_c02,1,1,1,1,14,
+M023_c02_r4,M023_c02,1,1,1,1,8,
+M023_c02_r5,M023_c02,1,1,1,1,4,
+M023_c02_r6,M023_c02,1,1,1,1,9,
+M023_c02_r7,M023_c02,1,1,1,1,7,
+M023_c02_r8,M023_c02,1,0,1,1,,"a finding about benefit, not an activity"
+M023_c02_r9,M023_c02,1,1,1,1,4,
+M023_c02_r10,M023_c02,1,1,1,1,3,elaborates focus of early AI efforts
+M023_c02_r11,M023_c02,1,1,1,1,7,
+M023_c02_r12,M023_c02,1,1,1,1,10,
+M023_c02_r13,M023_c02,1,1,1,1,11,
+M023_c02_r14,M023_c02,1,1,1,1,6,
+M023_c02_r15,M023_c02,1,1,1,1,5,elaborates merchandising work
+M023_c02_r16,M023_c02,1,1,1,1,,summary restatement; not in my gold list
+M023_c02_r17,M023_c02,1,1,1,1,16,
+M023_c02_r18,M023_c02,1,1,1,1,15,
+M023_c02_r19,M023_c02,1,1,1,1,5,
+M023_c02_r20,M023_c02,1,1,1,1,9,
+M023_c02_r21,M023_c02,1,1,1,1,5,
+M023_c02_r22,M023_c02,1,1,1,1,6,
+M023_c02_r23,M023_c02,1,1,1,1,,summary restatement; not in my gold list
+M023_c02_r24,M023_c02,1,1,1,1,16,
+M023_c02_r25,M023_c02,1,1,1,1,14,
+M023_c02_r26,M023_c02,1,1,1,1,12,
+M023_c02_r27,M023_c02,1,1,1,1,6,
+M023_c02_r28,M023_c02,1,1,1,1,1,
+M023_c02_r29,M023_c02,1,1,1,1,8,
+M073_c00_r0,M073_c00,1,1,1,1,8,
+M073_c00_r1,M073_c00,1,1,1,1,11,
+M073_c00_r2,M073_c00,1,1,1,1,15,truncated
+M073_c00_r3,M073_c00,1,1,1,1,11,
+M073_c00_r4,M073_c00,1,1,1,1,2,
+M073_c00_r5,M073_c00,1,1,1,1,12,
+M073_c00_r6,M073_c00,1,1,1,1,9,
+M073_c00_r7,M073_c00,1,1,1,1,1,
+M073_c00_r8,M073_c00,1,1,1,0,17,team removed the agent from those uses; performer not agent
+M073_c00_r9,M073_c00,1,1,1,1,17,
+M073_c00_r10,M073_c00,1,1,1,1,7,
+M073_c00_r11,M073_c00,1,1,1,1,13,
+M073_c00_r12,M073_c00,1,1,1,1,9,
+M073_c00_r13,M073_c00,1,1,1,1,6,
+M073_c00_r14,M073_c00,1,1,1,1,4,
+M073_c00_r15,M073_c00,1,1,1,1,14,
+M073_c00_r16,M073_c00,1,1,1,1,14,
+M073_c00_r17,M073_c00,1,1,1,1,8,
+M073_c00_r18,M073_c00,1,1,1,1,7,
+M073_c00_r19,M073_c00,1,1,1,1,15,truncated
+M073_c00_r20,M073_c00,1,1,1,1,1,
+M073_c00_r21,M073_c00,1,1,1,1,9,
+M073_c00_r22,M073_c00,1,1,1,1,6,
+M073_c00_r23,M073_c00,1,1,1,1,12,
+M073_c00_r24,M073_c00,1,1,1,1,13,
+M073_c00_r25,M073_c00,1,1,1,0,18,team placed the agent; performer not agent
+M086_c01_r0,M086_c01,1,1,1,1,5,
+M086_c01_r1,M086_c01,1,1,1,1,5,
+M086_c01_r2,M086_c01,1,0,1,1,,"an expectation he held, not an activity"
+M086_c01_r3,M086_c01,1,0,1,1,,observation
+M086_c01_r4,M086_c01,1,0,1,1,,"generic process description, not a claim about what companies do in practice"
+M086_c03_r0,M086_c03,1,0,1,1,,"thinking of articles, not an activity"
+M086_c03_r1,M086_c03,1,1,1,1,3,
+M086_c03_r2,M086_c03,1,1,1,1,5,
+M086_c03_r3,M086_c03,1,1,0,1,4,claim about companies; should be general claim
+M086_c03_r4,M086_c03,1,1,1,1,5,

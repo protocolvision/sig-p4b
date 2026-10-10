@@ -56,7 +56,8 @@ def main():
 
     def good(rid):
         j = judged.get(rid, {})
-        return j.get("verbatim") == "yes" and j.get("is_target") == "yes"
+        yes = lambda v: str(v).strip().lower() in ("yes", "y", "1", "true")
+        return yes(j.get("verbatim")) and yes(j.get("is_target"))
 
     n_gold = sum(len(v) for v in gold.values())
     rows = []
