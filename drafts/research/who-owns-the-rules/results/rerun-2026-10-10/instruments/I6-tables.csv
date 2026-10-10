@@ -1,0 +1,117 @@
+table,row,column,n
+code_x_function,AO,HR and people ops,5
+code_x_function,AO,"IT, identity and security",11
+code_x_function,AO,customer support/CX,26
+code_x_function,AO,engineering and platform,10
+code_x_function,AO,finance,17
+code_x_function,AO,general operations leadership (COO),4
+code_x_function,AO,legal and legal ops,1
+code_x_function,AO,procurement,3
+code_x_function,AO,risk and compliance,4
+code_x_function,AO,"sales, RevOps and go-to-market",89
+code_x_function,OT,HR and people ops,32
+code_x_function,OT,"IT, identity and security",83
+code_x_function,OT,customer support/CX,54
+code_x_function,OT,engineering and platform,79
+code_x_function,OT,finance,103
+code_x_function,OT,general operations leadership (COO),11
+code_x_function,OT,legal and legal ops,28
+code_x_function,OT,procurement,110
+code_x_function,OT,risk and compliance,41
+code_x_function,OT,"sales, RevOps and go-to-market",126
+code_x_function,PE,HR and people ops,3
+code_x_function,PE,"IT, identity and security",5
+code_x_function,PE,customer support/CX,1
+code_x_function,PE,engineering and platform,4
+code_x_function,PE,finance,2
+code_x_function,PE,general operations leadership (COO),2
+code_x_function,PE,procurement,2
+code_x_function,PE,risk and compliance,4
+code_x_function,PE,"sales, RevOps and go-to-market",1
+code_x_function,PV,customer support/CX,1
+code_x_function,PV,procurement,1
+code_x_performer_type,AO,agent,37
+code_x_performer_type,AO,both,39
+code_x_performer_type,AO,person,94
+code_x_performer_type,OT,agent,37
+code_x_performer_type,OT,both,100
+code_x_performer_type,OT,person,530
+code_x_performer_type,PE,agent,1
+code_x_performer_type,PE,both,2
+code_x_performer_type,PE,person,21
+code_x_performer_type,PV,person,2
+code_x_speaker_relation,AO,other team,1
+code_x_speaker_relation,AO,own team,104
+code_x_speaker_relation,AO,self,65
+code_x_speaker_relation,OT,general claim,6
+code_x_speaker_relation,OT,other team,9
+code_x_speaker_relation,OT,own team,437
+code_x_speaker_relation,OT,self,215
+code_x_speaker_relation,PE,own team,18
+code_x_speaker_relation,PE,self,6
+code_x_speaker_relation,PV,own team,2
+code_x_vendor_or_consultant,AO,practitioner,154
+code_x_vendor_or_consultant,AO,vendor/consultant,16
+code_x_vendor_or_consultant,OT,practitioner,580
+code_x_vendor_or_consultant,OT,vendor/consultant,87
+code_x_vendor_or_consultant,PE,practitioner,23
+code_x_vendor_or_consultant,PE,vendor/consultant,1
+code_x_vendor_or_consultant,PV,practitioner,1
+code_x_vendor_or_consultant,PV,vendor/consultant,1
+combo_label_x_function,AO,HR and people ops,5
+combo_label_x_function,AO,"IT, identity and security",11
+combo_label_x_function,AO,customer support/CX,25
+combo_label_x_function,AO,engineering and platform,10
+combo_label_x_function,AO,finance,17
+combo_label_x_function,AO,general operations leadership (COO),4
+combo_label_x_function,AO,legal and legal ops,1
+combo_label_x_function,AO,procurement,3
+combo_label_x_function,AO,risk and compliance,4
+combo_label_x_function,AO,"sales, RevOps and go-to-market",89
+combo_label_x_function,AO+PE,customer support/CX,1
+combo_label_x_function,OT,HR and people ops,32
+combo_label_x_function,OT,"IT, identity and security",83
+combo_label_x_function,OT,customer support/CX,54
+combo_label_x_function,OT,engineering and platform,79
+combo_label_x_function,OT,finance,103
+combo_label_x_function,OT,general operations leadership (COO),11
+combo_label_x_function,OT,legal and legal ops,28
+combo_label_x_function,OT,procurement,110
+combo_label_x_function,OT,risk and compliance,41
+combo_label_x_function,OT,"sales, RevOps and go-to-market",126
+combo_label_x_function,PE,HR and people ops,3
+combo_label_x_function,PE,"IT, identity and security",5
+combo_label_x_function,PE,engineering and platform,4
+combo_label_x_function,PE,finance,2
+combo_label_x_function,PE,general operations leadership (COO),2
+combo_label_x_function,PE,procurement,2
+combo_label_x_function,PE,risk and compliance,4
+combo_label_x_function,PE,"sales, RevOps and go-to-market",1
+combo_label_x_function,PV,customer support/CX,1
+combo_label_x_function,PV,procurement,1
+transcripts_with_records_by_vendor,practitioner,,27
+transcripts_with_records_by_vendor,vendor/consultant,,7
+who_does_the_work_staffing,existing staff given new duties,,7
+who_does_the_work_staffing,new hires,,3
+who_does_the_work_staffing,new hires and existing staff upskilled,,1
+who_does_the_work_staffing,not described,,23
+who_does_the_work_team_location,central body between functions,,5
+who_does_the_work_team_location,not described,,23
+who_does_the_work_team_location,spread across individual team members,,1
+who_does_the_work_team_location,within one function,,5
+who_does_the_work_framing,coordinates existing functions,,5
+who_does_the_work_framing,new specialist capability,,3
+who_does_the_work_framing,not described,,26
+who_speaker_coding,M016,new hires and existing staff upskilled | within one function | new specialist capability,1
+who_speaker_coding,M021,existing staff given new duties | within one function | new specialist capability,1
+who_speaker_coding,M024,new hires | central body between functions | coordinates existing functions,1
+who_speaker_coding,M030,not described | central body between functions | coordinates existing functions,1
+who_speaker_coding,M010,existing staff given new duties | central body between functions | coordinates existing functions,1
+who_speaker_coding,M065,existing staff given new duties | central body between functions | coordinates existing functions,1
+who_speaker_coding,M014,not described | central body between functions | new specialist capability,1
+who_speaker_coding,M040,existing staff given new duties | within one function | coordinates existing functions,1
+who_speaker_coding,M048,new hires | not described | not described,1
+who_speaker_coding,M023,new hires | not described | not described,1
+who_speaker_coding,M054,existing staff given new duties | spread across individual team members | not described,1
+who_speaker_coding,M072,existing staff given new duties | within one function | not described,1
+who_speaker_coding,M073,existing staff given new duties | within one function | not described,1
