@@ -1,0 +1,687 @@
+{
+  "iteration": 5,
+  "clusters": [
+    {
+      "cluster_id": "C1",
+      "description": "Running live service agents day to day: translating procedures into agent workflows, owning the content they draw on, writing what they must never answer and when they hand off, testing changes, reviewing conversations and stepping into live ones",
+      "record_ids": [
+        "R1666",
+        "R3379",
+        "R5303",
+        "R1802",
+        "R5876",
+        "R3481",
+        "R1502",
+        "R9622",
+        "R3583",
+        "R4295",
+        "R7901",
+        "R4703",
+        "R5250",
+        "R4550",
+        "R1050",
+        "R4041",
+        "R8782",
+        "R4091",
+        "R9635",
+        "R9479",
+        "R9416",
+        "R1600",
+        "R9500",
+        "R1848",
+        "R9678",
+        "R2848",
+        "R1024",
+        "R8233",
+        "R4652"
+      ],
+      "bundling_evidence": "Five postings carry most of this bundle under one person: D844 (owns the agent, its content, its guardrails and weekly conversation review: R5303, R3481, R9635, R1848), D826/D638 (translate SOPs into agent workflows, monitor and tune, own escalation paths: R3379, R9622, R9678, R1600), D775 (watch live conversations, decide when to intervene, QA new features: R4703, R5250, R1024), D282 and D324 (test and publish updates, triage broken or misrouted intents: R4041, R4652, R3583). Vendor admin guides attach the same knobs (handoff triggers R9416, escalation subagent R5876, routing R9479, escalation prompt R7901, test batches R1802, knowledge feed R8233, automated guardrail R8782) to an admin or knowledge manager. Shared decision: what the agent may answer and when it hands to a human.",
+      "roles": [
+        {
+          "role": "AI agent operations specialist (owner of one or more live agents in support, sales ops or IT)",
+          "exists_today": true,
+          "existing_title": "AI Agent Operations Specialist / AI Operations Specialist / AI Operations Analyst",
+          "seniority_at_first_hire": "Entry to mid level (2-3 years in R9500); senior variant at 5-8 years owning a portfolio (R4550)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "The guardrail and escalation decisions (R9635, R9678, R9416) and the content the agent draws on (R3481, R8233) do not go away when the agent improves; they are the business rules the agent runs on. Live intervention (R5250) and manual batch testing (R4295 shrinking) are the transitional parts."
+        },
+        {
+          "role": "Knowledge manager for agent content",
+          "exists_today": true,
+          "existing_title": "Knowledge manager",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting but likely merged into the agent operations role",
+          "reason": "R8233 and R3481 show content ownership moving into the agent owner's remit."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C2",
+      "description": "Answering customer and employee service requests that agents now resolve, with people taking transfers, sensitive or rights-related cases, and fixing AI drafts and summaries",
+      "record_ids": [
+        "R1065",
+        "R8227",
+        "R9407",
+        "R9631",
+        "R4669",
+        "R9196",
+        "R1025",
+        "R2388",
+        "R5827",
+        "R3527",
+        "R9869",
+        "R3869",
+        "R4217",
+        "R9946",
+        "R5851",
+        "R6765",
+        "R7722",
+        "R6205",
+        "R7862"
+      ],
+      "bundling_evidence": "Same object (inbound service conversations) and same split of performers across many docs: agents resolve the routine volume (R3527, R7722, R6205, R2388, R2520-type, R1065, R9631), humans take transfers and sensitive topics (R6765, R3869, R4669) and repair AI output (R9946, R7862, R9196). D598 ties the bundle to a rule set the human must know (recognising invoked federal rights, R8227; access to a human, R4669). D338 shows the knowledge moving from experienced agents into the model (R5827).",
+      "roles": [
+        {
+          "role": "Escalation-tier service representative (handles what the agent transfers, plus rights and sensitive cases)",
+          "exists_today": true,
+          "existing_title": "Customer service representative / HR service representative (tier 2)",
+          "seniority_at_first_hire": "Mid level; fewer entry-level seats (R5851, R9869 shrinking)",
+          "lasting_or_transitional": "Lasting but much smaller",
+          "reason": "The tier that remains is defined by what the agent may not handle (R3869, R8227), so it persists while headcount shrinks (R5851, R4217)."
+        },
+        {
+          "role": "Frontline tier-1 responder",
+          "exists_today": true,
+          "existing_title": "Customer service agent / help desk agent",
+          "seniority_at_first_hire": "Entry level",
+          "lasting_or_transitional": "Transitional",
+          "reason": "R3527, R7722, R6205, R1065 show routine volume handled end to end by agents."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C3",
+      "description": "Qualifying, researching and contacting leads with agents, while the best sellers set what good looks like, an engineer keeps the lead agent running, and sellers work the hand-offs",
+      "record_ids": [
+        "R9984",
+        "R7498",
+        "R2422",
+        "R9658",
+        "R4439",
+        "R4179",
+        "R9758",
+        "R1877",
+        "R9524",
+        "R4593",
+        "R7643",
+        "R5812",
+        "R3171",
+        "R2486",
+        "R4964",
+        "R9959",
+        "R8323",
+        "R6123",
+        "R8946"
+      ],
+      "bundling_evidence": "Same object (leads and accounts) and same hand-off decision across docs: agent researches, engages and decides whether to hand to a seller (R2422, R4964, R5812, R7643, R8323, R9524); the best SDR writes the agent's prompt and an engineer maintains it (R9959, R1877, D103); top reps define a good brief (R4593, D706); a supervisor steps in (R9758); a GTM Engineer builds routing workflows and cuts what does not work (R7498, R9984, R3171, D974); an admin grounds the agent in the company's sales process (R8946, R4179).",
+      "roles": [
+        {
+          "role": "GTM engineer (builds and measures agent-driven pipeline workflows)",
+          "exists_today": true,
+          "existing_title": "GTM Engineer",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R9984 gives the role a decision right (cut or change what isn't working) and a measure (rep time saved, pipeline influenced)."
+        },
+        {
+          "role": "Senior seller as standard-setter for the agent",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Senior individual contributor",
+          "lasting_or_transitional": "Transitional to lasting",
+          "reason": "R9959 and R4593 make the best seller the source of the agent's qualification practice; today it is a side duty, not a title."
+        },
+        {
+          "role": "SDR / lead qualifier",
+          "exists_today": true,
+          "existing_title": "Sales development representative",
+          "seniority_at_first_hire": "Entry level",
+          "lasting_or_transitional": "Transitional",
+          "reason": "R2486 (10-person team to 1), R9524 scripted lead generation automated."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C4",
+      "description": "Building agents and automations inside one business function: turning that function's workflows into agents, keeping them running, and overseeing the AI systems the function uses",
+      "record_ids": [
+        "R7558",
+        "R8739",
+        "R5399",
+        "R3348",
+        "R3287",
+        "R1631",
+        "R2768",
+        "R7764",
+        "R8825",
+        "R1163",
+        "R6393",
+        "R4720",
+        "R5762"
+      ],
+      "bundling_evidence": "Same performer type across near-identical postings: People Process & AI Automation Specialist (R3287), AI & Automation Specialist, People Operations (R2768), People Operations & Automation Specialist with ongoing oversight of the team's AI systems (R3348), AI Automation Engineer, Finance & Accounting (R7558), automation finance role (R8739), and forward deployed engineers who build and govern agents for customers (R8825, R4720, R7764, R1631). Same knowledge: domain process experience plus agent tooling (R7558 4+ years finance; R3287 1-3 years process optimisation; R5399/R5762 AI engineers integrating into workflows).",
+      "roles": [
+        {
+          "role": "Function-embedded automation specialist (HR, finance)",
+          "exists_today": true,
+          "existing_title": "People Operations & Automation Specialist; AI Automation Engineer, Finance & Accounting",
+          "seniority_at_first_hire": "Junior to mid level (1-3 years in R3287; 4+ in R7558)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "Each function keeps its own rules and data; the postings put build plus oversight (R3348) in one seat inside the function rather than in central IT."
+        },
+        {
+          "role": "Forward deployed engineer for agent platforms",
+          "exists_today": true,
+          "existing_title": "Forward Deployed Engineer",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Transitional",
+          "reason": "Exists while vendors need to hand-build each customer's agents (R8825, R7764); expected to shrink as configuration moves to customer admins (see C1, C7)."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C5",
+      "description": "Delegating code changes to agents and reviewing, approving and rolling them out, including who may change production and the post-incident review when an agent breaks something",
+      "record_ids": [
+        "R4431",
+        "R6017",
+        "R5137",
+        "R9845",
+        "R8424",
+        "R1042",
+        "R1434",
+        "R3469",
+        "R7252",
+        "R5362",
+        "R5585",
+        "R8231",
+        "R5427",
+        "R7434",
+        "R8043",
+        "R4413",
+        "R4556",
+        "R6220",
+        "R4523",
+        "R2464",
+        "R5416",
+        "R5050",
+        "R6438",
+        "R2928",
+        "R3286",
+        "R2641",
+        "R7721"
+      ],
+      "bundling_evidence": "Same decision (whether to merge or run a change) across engineering docs: review every agent change (R4431, R5137, R5416), separation between the requester and the approver (R3469), approving workflow runs on agent PRs (R5427), automatic AI review on protected branches (R6017), peer review for production access (R4556), postmortem of an agent incident (R8231). Same performer delegates work (R9845, R5050, R2641) while bulk migrations and upgrades are automated (R7252, R4413, R2464, R4820, R1434). Shared knowledge: the codebase and when the agent needs correction (R2641).",
+      "roles": [
+        {
+          "role": "Software engineer as reviewer and delegator of agent work",
+          "exists_today": true,
+          "existing_title": "Software engineer (senior)",
+          "seniority_at_first_hire": "Senior; junior demand falls (R6654, R7721 senior growing)",
+          "lasting_or_transitional": "Lasting, absorbed",
+          "reason": "Review is growing (R4431, R5137) and stays with engineers who hold merge rights; no new title appears in the records."
+        },
+        {
+          "role": "Engineer owning fleet-wide agent changes (migration driver)",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Senior",
+          "lasting_or_transitional": "Transitional",
+          "reason": "R6438 migration drivers approve their own PRs; R4413 fleet management runs bulk changes; a programme role while migrations last."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C6",
+      "description": "Triaging alerts and incidents with agents that classify, gather signals and suggest next steps, while analysts and on-call engineers review determinations and feed the agent organisational context",
+      "record_ids": [
+        "R5326",
+        "R4858",
+        "R9975",
+        "R8757",
+        "R6522",
+        "R1256"
+      ],
+      "bundling_evidence": "Same performer and knowledge across five docs: security analysts review the phishing agent's verdicts and write feedback it stores (R6522, R8757, R5326 shrinking), on-call engineers share work with an SRE agent and a support copilot (R1256, R9975), service desk incident summaries (R4858). Shared knowledge in every record: organisational context, incident history, internal wiki.",
+      "roles": [
+        {
+          "role": "Analyst/on-call engineer who coaches the triage agent",
+          "exists_today": true,
+          "existing_title": "Security analyst / site reliability engineer",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting, absorbed",
+          "reason": "The new duty (R8757 writing business context for the agent) attaches to the existing analyst; no separate title in the records."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C7",
+      "description": "Admitting, registering, permissioning and retiring agents: giving each one a human owner and a business sponsor, deciding what data and tools it can reach, approving it for publication and reviewing it through its lifecycle",
+      "record_ids": [
+        "R4736",
+        "R7070",
+        "R8529",
+        "R8345",
+        "R8440",
+        "R2839",
+        "R7760",
+        "R9271",
+        "R7194",
+        "R9237",
+        "R6186",
+        "R3363",
+        "R6638",
+        "R1437",
+        "R1002",
+        "R9637",
+        "R7818"
+      ],
+      "bundling_evidence": "Same object (agent identity and access) and same decisions across identity and platform docs: assign a human owner (R7070), find and register shadow agents (R8529), time-bound permissions (R1437), sponsor decides renewal and access (R8345, R9271) with a technical owner (R6638), security groups for agent skills (R6186), connectors and permissions for employee-built agents (R9237, R1002, R2839), approve requested agents (R3363), AI steward approving AI systems and risk assessments (R4736), onboarding agents with defined roles and responsibilities (R7818), overseeing agentic frameworks and monitoring tools (R8440, R7194).",
+      "roles": [
+        {
+          "role": "Business sponsor of an agent (accountable for why it exists and what it may access)",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Manager level (business side)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R8345 and R9271 separate business accountability from technical administration (R6638); vendors now build this split into products."
+        },
+        {
+          "role": "Agent identity and access administrator",
+          "exists_today": true,
+          "existing_title": "Identity and access management administrator / platform administrator",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting, absorbed into IAM and platform admin",
+          "reason": "R7070, R1437, R3363 extend existing admin consoles."
+        },
+        {
+          "role": "AI steward / AI portfolio owner",
+          "exists_today": true,
+          "existing_title": "AI steward (ServiceNow term)",
+          "seniority_at_first_hire": "Senior",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R4736 and R7818 give one person approval over the agent portfolio and its roles; the need grows with agent count."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C8",
+      "description": "Writing the policy an agent approves against and deciding the cases it cannot: expenses, purchase order changes, sourcing events, supplier negotiations, intake reviews and step-level confirmations",
+      "record_ids": [
+        "R7560",
+        "R7348",
+        "R9877",
+        "R9830",
+        "R6656",
+        "R1155",
+        "R4915",
+        "R8950",
+        "R1474",
+        "R2799",
+        "R2791",
+        "R9692",
+        "R2949",
+        "R8449",
+        "R1491"
+      ],
+      "bundling_evidence": "Same decision type (approve or reject against a written policy) and same split: agent decides clear cases (R7560, R6656, R2791, R7348, R1474, R9830), a person decides ambiguous or high-stakes ones (R8449, R1491, R1155, R9877, R2799), and someone sets the bounds the agent works within (R9692 buyer sets budget and concessions; R2949 admin configures the decision checklist). Shared knowledge: business policy documents, expense policy, sourcing policy (R7560, R6656, R7348).",
+      "roles": [
+        {
+          "role": "Owner of approval and spend policy as the agent reads it",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Mid to senior (procurement or finance operations)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R6656 and R7560 run directly on uploaded policy documents, so whoever writes the policy now writes the agent's rules; no posting in the pool names this seat."
+        },
+        {
+          "role": "Buyer / approver for exceptions",
+          "exists_today": true,
+          "existing_title": "Buyer; procurement specialist; approver",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting but shrinking",
+          "reason": "R8449 and R2799 are marked shrinking as clear cases are automated."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C9",
+      "description": "Running transaction processing and the financial close with agents that match, classify, reconcile and flag, while accountants approve matches, handle exceptions, override errors and judge unusual terms",
+      "record_ids": [
+        "R8468",
+        "R9142",
+        "R8511",
+        "R3499",
+        "R7298",
+        "R2515",
+        "R7514",
+        "R5155",
+        "R1762",
+        "R7224",
+        "R1896",
+        "R9248",
+        "R8174",
+        "R7763",
+        "R6952",
+        "R2771",
+        "R8187",
+        "R2394",
+        "R9679",
+        "R2339",
+        "R1960",
+        "R1324",
+        "R4845"
+      ],
+      "bundling_evidence": "Same function, object and decision across finance docs: agents match and classify (R1762, R2771, R1324, R6952, R4845, R9830-type), accountants approve in bulk and handle exceptions (R8174), override errors (R2515), and finance experts judge flagged terms (R1896 ASC 606). Close automation is pushed by managers (R9248). Shrinking task lists (R3499, R1960, R9142) and growing advisory (R2394). External auditors adapt to technology-assisted evidence (R8511, R7514, R8187). Shared knowledge: tolerance rules, accounting standards, IT controls.",
+      "roles": [
+        {
+          "role": "Accountant as exception handler and reviewer of agent output",
+          "exists_today": true,
+          "existing_title": "Accountant / senior accountant",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting, absorbed",
+          "reason": "R8174 and R2515 give existing accountants the approve/override decision; low-value work shrinks (R1960)."
+        },
+        {
+          "role": "Accounting operations lead who sets matching and tolerance rules",
+          "exists_today": true,
+          "existing_title": "Senior Manager, Accounting Operations",
+          "seniority_at_first_hire": "Senior manager",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R9248 and R1762 (tolerance rules) put rule-setting with the person accountable for the close."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C10",
+      "description": "Doing legal work with AI under professional rules: playbook-driven redlining and review, AI-drafted documents, reviewing output before relying on it, client consent, vendor diligence, firm policy and how to bill for it",
+      "record_ids": [
+        "R1615",
+        "R3736",
+        "R7276",
+        "R6665",
+        "R3924",
+        "R1170",
+        "R3312",
+        "R9042",
+        "R6915",
+        "R7451",
+        "R1948",
+        "R6267",
+        "R8749",
+        "R1803",
+        "R5057",
+        "R7193",
+        "R5843",
+        "R2023",
+        "R5076",
+        "R1593",
+        "R5239",
+        "R8271",
+        "R7199",
+        "R5100",
+        "R1294"
+      ],
+      "bundling_evidence": "D314 (ABA opinion) bundles review, consent, billing, vendor diligence, training and firm policy under the supervising lawyer (R1615, R7193, R3924, R8271, R7199, R5100); D708 adds billing (R8749). Playbook docs bundle translation of a firm's positions into agent rules with approval of each redline (R6915, R1803, R5057, R6665). D979 Principal Legal Engineer builds agents and reusable prompts for attorneys (R3312, R5076, R1593); a contract specialist maintains the AI review system (R1294). Shared knowledge: the commercial playbook and confidentiality rules.",
+      "roles": [
+        {
+          "role": "Legal engineer (turns playbooks and positions into agents and prompts for lawyers)",
+          "exists_today": true,
+          "existing_title": "Legal Engineer / Principal Legal Engineer",
+          "seniority_at_first_hire": "Senior (Principal in R3312)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R6915 and R3312 show the playbook becoming the agent's rule set; someone with legal judgment must own it."
+        },
+        {
+          "role": "Supervising lawyer for AI use",
+          "exists_today": true,
+          "existing_title": "Partner / general counsel / managing lawyer",
+          "seniority_at_first_hire": "Senior",
+          "lasting_or_transitional": "Lasting, absorbed",
+          "reason": "R6267 and R5100 add AI duties to existing supervisory obligations."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "cluster_id": "C11",
+      "description": "Using algorithmic tools to source, screen, schedule, rate, allocate and promote workers, and the human oversight, review on request, impact assessment and worker information the law requires around them",
+      "record_ids": [
+        "R6277",
+        "R6158",
+        "R4592",
+        "R7896",
+        "R2206",
+        "R8405",
+        "R3457",
+        "R3738",
+        "R9039",
+        "R4131",
+        "R4332",
+        "R4494",
+        "R3947",
+        "R3807",
+        "R4761",
+        "R7863",
+        "R5394",
+        "R7138",
+        "R1139",
+        "R8307",
+        "R5725",
+        "R4922",
+        "R5423",
+        "R1161",
+        "R3967",
+        "R9009",
+        "R7853",
+        "R4031"
+      ],
+      "bundling_evidence": "Same object (workers and candidates) and same legal frame. D274 (EU AI Act) bundles high-risk employment uses (R4761, R8405, R3807, R5725) with oversight duties assigned to named people (R5394, R7863, R1139, R4332, R3967, R9039) and informing workers (R7896). D285 adds human review at the worker's request and human-only termination (R9009, R6158, R3738). D607 adds adverse impact assessment (R4131). Recruiting docs show the automated side (R7138, R5423, R3457, R4592, R7853, R4031, R8307, R4922) and the recruiter who guides it (R2206, R1161).",
+      "roles": [
+        {
+          "role": "Overseer of HR AI decisions (competent, trained person assigned to monitor, override and review)",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Mid to senior HR / employee relations",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R5394, R7863 and R9009 are legal obligations, so the seat must exist wherever the tools are used; today it is assigned to existing HR staff."
+        },
+        {
+          "role": "Recruiter as guide of a sourcing/screening agent",
+          "exists_today": true,
+          "existing_title": "Recruiter",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Lasting, absorbed",
+          "reason": "R2206 recruiter guides the assistant; R1161 recruiter decides move forward or decline."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C12",
+      "description": "Supervising a regulated firm's AI use as a whole: inventorying use cases, writing supervisory procedures for AI and vendors, testing and logging agents, defining who owns AI risk, and explaining automated decisions to customers",
+      "record_ids": [
+        "R9071",
+        "R6956",
+        "R8958",
+        "R1820",
+        "R4881",
+        "R3950",
+        "R9596",
+        "R6175",
+        "R6694",
+        "R5937",
+        "R3461",
+        "R2160",
+        "R1085",
+        "R4263",
+        "R1340",
+        "R8466",
+        "R3637",
+        "R8665",
+        "R7991",
+        "R7460",
+        "R4013",
+        "R6210",
+        "R8577",
+        "R9530"
+      ],
+      "bundling_evidence": "D219 (FINRA) lists the firm's use cases (R9071, R1820, R3950, R6175, R6694 ...) as the inventory its supervisory system must cover, then the duties (R8958 supervisory procedures, R4263 human-in-the-loop controls, R7991 testing and output logs). D240 (NIST) asks firms to define AI risk roles and lines of communication (R2160, R4013, R7460). D886 (BoE/FCA) tracks how far decisions are delegated (R6956, R1085, R1340, R3637). D449 (CFPB) requires specific reasons for automated credit denials (R8665, R5937, R9530).",
+      "roles": [
+        {
+          "role": "AI risk and supervision lead in a regulated firm",
+          "exists_today": true,
+          "existing_title": "Head of AI governance / AI risk officer (model risk management)",
+          "seniority_at_first_hire": "Senior",
+          "lasting_or_transitional": "Lasting",
+          "reason": "Regulators name the duties (R8958, R4263, R4013) but leave the owner to the firm; the bundle sits on top of existing compliance and model risk functions."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C13",
+      "description": "Configuring one's own AI use at work: breaking work into delegable pieces, prompting, checking and fixing outputs, assigning roles to tools, and handing off small admin tasks",
+      "record_ids": [
+        "R9819",
+        "R6396",
+        "R3844",
+        "R4820",
+        "R6737",
+        "R1640",
+        "R7594",
+        "R6954",
+        "R6843",
+        "R7335",
+        "R3791",
+        "R8222",
+        "R4148",
+        "R9867",
+        "R8444",
+        "R6367",
+        "R5899",
+        "R7467",
+        "R3724",
+        "R5212",
+        "R6357",
+        "R5157",
+        "R4921",
+        "R5764",
+        "R3226",
+        "R1691",
+        "R4894",
+        "R9906",
+        "R7576"
+      ],
+      "bundling_evidence": "Same performer (individual professionals using AI) and same activity across research docs: prompting, checking and fixing (R7335, R4148, R3791, R3226), discretising work (R8444), assigning roles to tools and remediating AI contributions (R7467, R9906, R1640), delegating complete tasks (R6737) and admin (R9867, R4921-type), with drafting tasks shifting (R9819, R7594, R6396). D119 and D968 measure which of these tasks workers want automated (R6843, R5157, R8222, R6367).",
+      "roles": [
+        {
+          "role": "Every knowledge worker (no separate role)",
+          "exists_today": true,
+          "existing_title": "Existing occupations",
+          "seniority_at_first_hire": "Any",
+          "lasting_or_transitional": "Absorbed",
+          "reason": "R2263-type evidence and R3724 show these skills become part of existing jobs rather than a title."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "cluster_id": "C14",
+      "description": "Deciding the human-agent mix: which work goes to agents, which roles are not backfilled, who is redeployed, how many agents a role needs, and the resulting fall in entry-level hiring and in routine tasks in postings",
+      "record_ids": [
+        "R1191",
+        "R9045",
+        "R4054",
+        "R2505",
+        "R9974",
+        "R7847",
+        "R5906",
+        "R6654",
+        "R2122",
+        "R4973",
+        "R7923",
+        "R1642",
+        "R6160",
+        "R8403",
+        "R5377",
+        "R2877",
+        "R2263",
+        "R2520",
+        "R4522",
+        "R8995",
+        "R6675",
+        "R6498",
+        "R5995"
+      ],
+      "bundling_evidence": "Same performer (employers) and same decision (headcount and allocation) across docs: Salesforce redeploying support engineers and not backfilling (R2505, R8403, R1642), choosing which work suits agents (R9974), how many agents for which roles (R6160), employers cutting junior hiring (R7847, R6654, R8995) and shifting posting composition (R4973, R4054, R4522, R2263), freelance and routine task demand falling (R6498, R5995, R2122, R9045, R7923, R5377).",
+      "roles": [
+        {
+          "role": "Workforce planner for a mixed human-agent workforce",
+          "exists_today": false,
+          "existing_title": "",
+          "seniority_at_first_hire": "Senior (HR business partner or operations leader)",
+          "lasting_or_transitional": "Lasting",
+          "reason": "R6160 and R9974 are recurring decisions that no record assigns to a stable title; Salesforce's case (R8403) shows a named leader doing it ad hoc."
+        },
+        {
+          "role": "Forward deployed engineer formed from redeployed support staff",
+          "exists_today": true,
+          "existing_title": "Forward deployed engineer",
+          "seniority_at_first_hire": "Mid level",
+          "lasting_or_transitional": "Transitional",
+          "reason": "R1642 redeploys support engineers to make customer AI deployments meet outcomes; tied to the deployment wave."
+        }
+      ],
+      "confidence": "low"
+    }
+  ],
+  "unclustered": [
+    "R3624"
+  ],
+  "outlook": {
+    "distinct_roles_by_2030": [
+      "C1",
+      "C7",
+      "C3",
+      "C10"
+    ],
+    "absorbed": [
+      "C5",
+      "C6",
+      "C9",
+      "C11",
+      "C12",
+      "C4",
+      "C13",
+      "C14",
+      "C8"
+    ],
+    "automated": [
+      "C2 (tier-1 share)",
+      "C3 (SDR share)",
+      "C9 (transaction matching and reconciliation)",
+      "C14 (routine information-processing tasks)"
+    ],
+    "reasons": "Distinct by 2030: C1 already has stable titles in several postings (R9500, R5303, R1666, R4550) with its own decisions (what the agent must never answer and when it escalates, R9635, R9678) and content ownership (R3481, R8233), and seniority tiers are forming (2-3 years in R9500 vs 5-8 years portfolio in R4550). C7 gets distinct seats because vendors hard-code a human owner and a business sponsor per agent (R7070, R8345, R9271) and an approver for the agent portfolio (R4736, R3363); the sponsor half is the newest and least titled. C3's GTM Engineer is titled with a measure and a decision right (R9984, R7498). C10's legal engineer is titled at principal level (R3312) and the playbook-to-agent translation (R6915) needs legal judgment. Absorbed: code review and delegation stay with engineers holding merge rights (R4431, R5137, R3469); alert triage coaching attaches to existing analysts (R8757, R6522); accountants take the approve and override step (R8174, R2515); HR and regulated-firm oversight duties are legal obligations assigned to existing HR, compliance and model risk staff (R5394, R9009, R8958, R4013); function-embedded automation specialists (R3287, R3348, R7558) likely fold into function operations teams once tools are configurable by admins (R9237, R1002); approval policy ownership (C8, R6656, R7560) is likely absorbed into finance and procurement operations, though it may surface as its own seat because no record names who writes the policy the agent reads. Individual AI use (C13) is a skill, not a role (R2263, R7335). Workforce mix decisions (C14, R6160, R9974) land with HR and operations leaders. Automated: tier-1 service resolution (R3527, R7722, R6205, R1065), SDR qualification and outreach (R2486, R7643, R9524), matching, classification and reconciliation (R1762, R2771, R1324, R6952), routine information-processing micro-tasks (R9045, R7923, R5377) and manual batch testing of agents (R4295). Forward deployed engineering (R8825, R1642) and migration driving (R6438) look transitional. R3624 is unclustered: a single cross-industry survey line with no performer, decision, knowledge or doc partner."
+  }
+}
