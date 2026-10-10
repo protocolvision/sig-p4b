@@ -18,7 +18,10 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | Loop v2 design | Pre-registered: calibration test, practitioner speech (podcasts, talks), rule-change events, seeded cases |
 | Media frames for v2 | `sources-v2/`: current practitioners and historical recordings |
 | Industry analogue (S8) | Run 10 October 2026: trading and the grid nearest (tied); findings, red team and gatekeeper check in `results/industry-2026-10-10/`; report updated |
-| Loop v2 run | Not yet run |
+| Role library | `roles/`: 8 emergent and 5 analogue roles with postings, capability models and coded activities (search-summary grade) |
+| Corpus and rerun | Planned: `corpus/` (manifest of every cited source, acquisition plan, `acquire.py`) and `RERUN.md`; needs a machine with network access |
+| Recommendation | Provisional: `recommendation-draft.md`; final after the rerun |
+| Loop v2 run | Not yet run (part of the rerun) |
 | Post or practice-guide changes | Waiting on the review |
 
 ## Files
@@ -41,6 +44,8 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | [`exploratory/bpm-and-ai-safety.md`](exploratory/bpm-and-ai-safety.md) | Test of whether BPM is the AI safety movement's institutional expression in deploying firms; seven conditions from how earlier movements became offices |
 
 ## How to run
+
+**End-to-end rerun (next).** Follow [`RERUN.md`](RERUN.md) on a computer with network and browser access: build the corpus, verify the first round, rerun every study from the corpus, then update the report, executive summary and recommendation.
 
 **Loop v2 (next).**
 
