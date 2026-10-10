@@ -73,8 +73,32 @@ PROMPTS = {
         "- \"remain committed to organic initiatives and a programmatic approach to growth through tuck-in "
         "acquisitions and divestitures\" (a priority and M&A)"
     ),
+    # Speech prompt v1 (loop-design-v2.md section 5, stratum S7). Names no codes and none of our terms.
+    "speech": (
+        "You read one excerpt from a transcript of a talk or conversation. Each line starts with a "
+        "[HH:MM:SS] timestamp; a header gives the speakers' names, roles and organisations. List every "
+        "activity that a speaker says THEY or THEIR TEAM do, did, are doing or have started, as stated in "
+        "the excerpt. This includes work in which they direct, configure, supervise or run software or "
+        "agents. Copy each one exactly, character for character, from the transcript (never use \"...\"; "
+        "do not copy the timestamp), one activity per item, as a complete clause.\n\n"
+        "For each item give:\n"
+        "- speaker: the speaker's name if you can identify who is talking from the excerpt, else \"unknown\";\n"
+        "- speaker_relation: self (the speaker does it), own team (the speaker's team or organisation does "
+        "it), other team (a named group other than the speaker's own does it), or general claim (a "
+        "statement about what companies, teams or people in general do);\n"
+        "- performer_type: person (people do the work), agent (software or an AI agent does the work), or "
+        "both;\n"
+        "- timestamp: the nearest preceding [HH:MM:SS] timestamp in the excerpt, written as HH:MM:SS.\n\n"
+        "Do NOT include:\n"
+        "- questions asked by a host or interviewer;\n"
+        "- what a product or tool can do, is designed to do or will do for customers (a pitch);\n"
+        "- predictions, hopes, intentions and plans (will, going to, expect, might, could);\n"
+        "- opinions, advice and recommendations about what others should do.\n\n"
+        "Statements about what companies in general do may be returned only with speaker_relation = "
+        "general claim. If no activity qualifies, return an empty list."
+    ),
 }
-PROMPT_VERSION = {"posting": "v1", "filing": "v3"}
+PROMPT_VERSION = {"posting": "v1", "filing": "v3", "speech": "v1"}
 
 def make_schema(performers):
     return {
@@ -99,7 +123,19 @@ def make_schema(performers):
 
 
 # Postings keep the original performer values; the filing schema (v3) drops product capability.
-SCHEMAS = {"posting": make_schema(["person", "software or agent", "both", "unclear"]),
+def make_speech_schema():
+    s = make_schema(["person", "agent", "both"])
+    item = s["properties"]["tasks"]["items"]
+    item["properties"].pop("performer")
+    item["properties"]["speaker"] = {"type": "string"}
+    item["properties"]["speaker_relation"] = {"type": "string", "enum": ["self", "own team", "other team", "general claim"]}
+    item["properties"]["performer_type"] = {"type": "string", "enum": ["person", "agent", "both"]}
+    item["properties"]["timestamp"] = {"type": "string", "description": "HH:MM:SS"}
+    item["required"] = ["span", "speaker", "speaker_relation", "performer_type", "timestamp"]
+    return s
+
+
+SCHEMAS = {"speech": make_speech_schema(), "posting": make_schema(["person", "software or agent", "both", "unclear"]),
            "filing": make_schema(["person", "agent in own operations", "both", "unclear"])}
 
 
@@ -164,7 +200,9 @@ def collect(a):
         while client.messages.batches.retrieve(bid).processing_status != "ended":
             time.sleep(60)
     docs = {doc["id"]: doc for doc in load_docs(state["input"])}
-    texts = {i: norm(doc["text"]) for i, doc in docs.items()}
+    # Speech: clauses run across transcript lines, so timestamps are removed before the verbatim check.
+    texts = {i: norm(re.sub(r"\[\d\d:\d\d:\d\d\]\s*", "", doc["text"]) if doc.get("kind") == "speech" else doc["text"])
+             for i, doc in docs.items()}
     n_docs = n_tasks = n_verbatim = 0
     failed, rows = [], []
     for bid in state["batches"]:
@@ -182,10 +220,15 @@ def collect(a):
                 verbatim = norm(t["span"]) in texts.get(res.custom_id, "")
                 n_tasks += 1
                 n_verbatim += verbatim
-                rows.append({"doc_id": res.custom_id, "task_id": f"{res.custom_id}:{k}",
-                             "span": t["span"], "performer": t["performer"],
-                             "verbatim": verbatim, "model": state["model"],
-                             "prompt_version": state.get("prompt_version")})
+                row = {"doc_id": res.custom_id, "task_id": f"{res.custom_id}:{k}",
+                       "span": t["span"], "performer": t.get("performer"),
+                       "verbatim": verbatim, "model": state["model"],
+                       "prompt_version": state.get("prompt_version")}
+                # Speech schema carries extra fields (speaker, speaker_relation, performer_type, timestamp).
+                row.update({f: v for f, v in t.items() if f not in ("span", "performer")})
+                if docs.get(res.custom_id, {}).get("kind") == "speech":
+                    row.pop("performer")
+                rows.append(row)
     # Undeduplicated spans, one row per extraction: used by agree().
     with open(d / "tasks-raw.jsonl", "w") as out:
         for r in rows:

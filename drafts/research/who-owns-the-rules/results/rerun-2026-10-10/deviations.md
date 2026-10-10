@@ -99,3 +99,11 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     - The clean Opus check (40 passages, at least 5 positives per code) measures precision and recall of
       these consensus values.
     - A code that fails kappa or the clean check is reported as unreliable and not used for F1–F3.
+
+12. **Speech uses consensus extraction, as filings did (deviation 9).** Haiku and Sonnet extracted all 189
+    chunks of 30 timestamped transcripts:
+    - Jaccard F1 0.63 (gate 0.7); count ratio 0.857 (passes);
+    - per the rule set before the run, only records found by both models are used: 813, or 771 after
+      overlap dedupe;
+    - a clean Opus check on 25 chunks must reach 0.7 precision and recall.
+    The 8 transcript pages without timestamps are extracted too, with paragraph positions.
