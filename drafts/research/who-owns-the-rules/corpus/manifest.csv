@@ -1526,10 +1526,12 @@ Ce93ca4ff,rule-change-event,html,https://www.ftc.gov/news-events/news/press-rele
 Ce994ecf7,rule-change-event,pdf,https://static.nhtsa.gov/odi/inv/2024/INIM-RQ24009-12199.pdf,corpus/planned.csv,0
 Cec194d8e,rule-change-event,pdf,https://static.nhtsa.gov/odi/rcl/2025/RCLRPT-25E084-7732.pdf,corpus/planned.csv,0
 Cf41e599a,rule-change-event,html,https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc/,corpus/planned.csv,0
+C1b071d1a,rule-text,html,https://leg.colorado.gov/bills/sb26-189,corpus/planned.csv,0
 C217f8b25,rule-text,html,https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589,corpus/planned.csv,0
 C25f47316,rule-text,pdf,https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/introducing-the-frontier-safety-framework/fsf-technical-report.pdf,corpus/planned.csv,0
 C2b7df1f2,rule-text,html,https://sellercentral.amazon.com/seller-forums/discussions/t/84e3f6b1-42f7-4cf3-a189-a5cc8d78d838,corpus/planned.csv,0
 C3c1aad5c,rule-text,pdf,https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf,corpus/planned.csv,0
+C430560ff,rule-text,html,https://leg.colorado.gov/laws/session-laws/SB26-189/131/download,corpus/planned.csv,0
 C459235e1,rule-text,html,https://developer.mastercard.com/merchant-cloud/documentation/tutorials-and-guides/agentic-commerce-guide/21/,corpus/planned.csv,0
 C4c17f4ad,rule-text,pdf,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf,corpus/planned.csv,0
 C5162f8e9,rule-text,html,https://www.anthropic.com/responsible-scaling-policy,corpus/planned.csv,0
@@ -1541,6 +1543,7 @@ C88fe07c0,rule-text,pdf,https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf,c
 C8b5bc20b,rule-text,html,https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744,corpus/planned.csv,0
 C9ae49a11,rule-text,html,https://deepmind.google/frontier-safety/,corpus/planned.csv,0
 C9b1da45a,rule-text,html,https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng,corpus/planned.csv,0
+C9e5e0522,rule-text,html,https://www.law.cornell.edu/cfr/text/17/240.15c3-5,corpus/planned.csv,0
 Cb1d56448,rule-text,pdf,https://www.nerc.com/pa/Stand/Reliability%20Standards/PER-005-2.pdf,corpus/planned.csv,0
 Cd06596d1,rule-text,pdf,https://www-cdn.anthropic.com/files/4zrzovbb/website/c11e84981d0a7281a1b229f3fa6af0da66eaf43f.pdf,corpus/planned.csv,0
 Cd3aaca50,rule-text,pdf,https://www-cdn.anthropic.com/17310f6d70ae5627f55313ed067afc1a762a4068.pdf,corpus/planned.csv,0

@@ -163,6 +163,7 @@ C1a94b08f,industry-check,html,https://www.talentify.io/job/yield-and-monetizatio
 C1ab012de,industry-timeline,html,https://www.chase.com/personal/investments/learning-and-insights/article/history-of-nasdaq,ok,665668,69ee40c1aa86,2026-10-10,https://www.chase.com/personal/investments/learning-and-insights/article/history-of-nasdaq,,
 C1ab47dc5,activity-evidence,html,https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1,ok,113949,93379d40a3c2,2026-10-10,https://engineering.atspotify.com/2025/11/spotifys-background-coding-agent-part-1,,
 C1ac741bd,role-library,html,https://web.hiredigital.com/hiring-guides/conversational-ai-designer,ok,72263,4f74c4caa1c7,2026-10-10,https://web.hiredigital.com/hiring-guides/conversational-ai-designer,,
+C1b071d1a,rule-text,html,https://leg.colorado.gov/bills/sb26-189,ok,123414,0775c0ecd315,2026-10-10,https://leg.colorado.gov/bills/sb26-189,,
 C1b12bbb8,role-library,html,https://iapp.org/about/iapp-launches-new-ai-governance-professional-certification,failed,,,2026-10-10,,,HTTP 404
 C1b26f417,activity-evidence,html,https://zapier.com/blog/how-zapier-uses-ai/,ok,1214760,6bf9a9143669,2026-10-10,https://zapier.com/blog/how-zapier-uses-ai/,,
 C1b4368e8,exploratory,html,https://carnegieendowment.org/research/2024/09/if-then-commitments-for-ai-risk-reduction,ok,413349,02a6a4293dd1,2026-10-10,https://carnegieendowment.org/research/2024/09/if-then-commitments-for-ai-risk-reduction,,
@@ -408,6 +409,7 @@ C42bf8579,capability-model,html,https://sfia-online.org/en/sfia-9/skills,ok,2298
 C42cdf582,research-report,pdf,https://assets.contentstack.io/v3/assets/bltd4dd5b2d705252bc/bltd8a5a0d8513d9837/organizational_digital_governance_report_2024.pdf,ok,101734375,0bf0347c3310,2026-10-10,https://assets.contentstack.io/v3/assets/bltd4dd5b2d705252bc/bltd8a5a0d8513d9837/organizational_digital_governance_report_2024.pdf,,
 C42f65c27,role-library,html,https://findajob.dwp.gov.uk/details/17130955,needs-browser,1682,d154b5f9fb63,2026-10-10,https://findajob.dwp.gov.uk/details/17130955,,little text extracted; likely JavaScript or login
 C42fe0304,role-library,html,https://www.indexventures.com/startup-jobs/notion/ai-conversation-designer-customer-support/,failed,,,2026-10-10,,,HTTP 404
+C430560ff,rule-text,html,https://leg.colorado.gov/laws/session-laws/SB26-189/131/download,ok,142316,08716faa2ef8,2026-10-10,https://leg.colorado.gov/laws/session-laws/SB26-189/131/download,,
 C436639de,media-historical,html,https://jedi.be/blog/2011/devopsdays-downunder-2011-keynote/,ok,24193,084a0274f59d,2026-10-10,https://jedi.be/blog/2011/devopsdays-downunder-2011-keynote/,,
 C4369c7b9,research-report-proxy,html,https://captaincompliance.com/education/iapp-salary-and-jobs-report-2025-26-privacy-ai-governance-and-digital-responsibility/,ok,124440,299588d2d0c6,2026-10-10,https://captaincompliance.com/education/iapp-salary-and-jobs-report-2025-26-privacy-ai-governance-and-digital-responsibility/,,
 C439f4616,activity-evidence,job-posting,https://www.indeed.com/q-ai-agent-manager-jobs.html,ok,1020232,4650f0c4152b,2026-10-10,https://www.indeed.com/q-ai-agent-manager-jobs.html,,
@@ -899,6 +901,7 @@ C9d2cbf24,activity-evidence,html,https://blogs.microsoft.com/blog/2025/04/23/the
 C9d9893cf,media-current,video,https://www.youtube.com/watch?v=D1NbIiaoWdI,ok,74495,c10c4b8677be,2026-10-10,,,captions
 C9df66d71,other,podcast,https://share.transistor.fm/s/ccdb8a5e/transcript.txt,ok,28930,6f50ae527a85,2026-10-10,https://share.transistor.fm/s/ccdb8a5e/transcript.txt,,
 C9e36288e,job-posting,job-posting,https://job-boards.greenhouse.io/logicgate/jobs/4731981005,ok,209664,b51d1f1642ca,2026-10-10,https://www.logicgate.ai/company/careers/?gh_jid=4731981005,,
+C9e5e0522,rule-text,html,https://www.law.cornell.edu/cfr/text/17/240.15c3-5,ok,42210,7f3cbb44d04d,2026-10-10,https://www.law.cornell.edu/cfr/text/17/240.15c3-5,,
 C9e85091d,other,podcast,https://artofprocurement.libsyn.com/876-ai-with-purpose-designing-procurements-next-chapter-w-gal-de-martelaere,needs-browser,58244,9f66860d7f19,2026-10-10,https://artofprocurement.libsyn.com/876-ai-with-purpose-designing-procurements-next-chapter-w-gal-de-martelaere,,little text extracted; likely JavaScript or login; wayback: HTTP Error 429: Too Many Requests
 C9e9100ba,role-library,html,https://learn.microsoft.com/credentials/applied-skills/create-agents-in-microsoft-copilot-studio,ok,30427,b63764afd0bc,2026-10-10,https://learn.microsoft.com/en-us/credentials/applied-skills/create-agents-in-microsoft-copilot-studio/,,
 C9e96262d,industry-factsheet,html,https://ebsco.com/research-starters/power-and-energy/northeastern-blackout-2003,ok,133512,8dbf9672b833,2026-10-10,https://www.ebsco.com/research-starters/power-and-energy/northeastern-blackout-2003,,

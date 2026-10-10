@@ -132,3 +132,89 @@ law/supervisory "yes" rows finds 5-6 over-codings (rows 25, 27, 28, 34, 38, plus
 broad definition (recording, documentation, regulator procedures) and missing addressee information. Errors go
 both ways (rows 11 and 95 are under-coded), so the net count is wrong in a way that cannot be predicted. On
 `names_role` the error is directional: designated individuals are counted in trading rules but not in the AI Act.
+
+## Re-review
+
+Re-reviewed 10 October 2026 against the revised `instruments/I4-required-functions.csv` (111 rows, 18 columns),
+`instruments/I4-coverage.md` (revision 2) and the corpus texts. Row numbers are CSV line numbers in the revised file
+(header = line 1); they do not match the row numbers above. Quotes were re-checked by script for all 111 rows: 101 match
+directly, and the 10 NIST rows (86-89, 93-98) match only across interleaved table columns, as the note column says.
+
+**Verdict: pass, with one small remaining fix (OpenAI ownership, below).** No new critical problems.
+
+### Fix-by-fix status
+
+1. **Versions merged: applied, one cell left.** Anthropic is down to 6 rows, DeepMind to 3 and OpenAI to 4, with
+   `versions` and `change_history` filled (checked: row 101 is correctly marked absent in v1.0 and present from v2.0).
+   Anthropic ownership now sits only in the change-process row (102); the RSO row (100) is `regulates_changes = no`.
+   **Not done for OpenAI:** rows 107 (Leadership) and 109 (Updates to the framework) both code
+   `regulates_changes = yes` with Leadership as `change_owner`, so OpenAI's change ownership is counted twice. This breaks
+   the coverage file's own rule ("one row per policy"). Row 107's quote is about deployment go/no-go and residual risk,
+   which the definition excludes. Fix: row 107 `regulates_changes = no`, `change_owner = none named`.
+2. **`rule_type`, `binding`, `addressee`: applied.** The enums differ from the ones proposed (`investment firm`,
+   `grid entity`, `lab itself` instead of one "deploying/operating firm" value), but they carry the same information and
+   the AI Act provider rows (56, 57, 61, 62, 70) are now separate from the deployer rows (64-69). Two gaps, neither
+   critical: (a) PRA SS5/18 is coded `binding = comply-or-explain`, which the text does not support (it says "The PRA
+   expects"; no comply-or-explain wording); code it `no` like the FCA and FINRA guidance, or add a "supervisory
+   expectation" value; (b) the coverage file does not yet state that the I4 primary count is binding rows addressed to
+   operating firms, with labs, NIST and Amazon as a separate set.
+3. **`owns_rule_changes` split: applied.** `regulates_changes` and `change_owner` replace it; the compound labels are
+   gone. Over-coded rows fixed: Art 9 (56), Art 11 (57), Art 25 (63), RTS 6 Art 21(5) (26), DeepMind council (110) are
+   now `no`; Art 43(4) (70) and NIST MANAGE 4.1 (93) stay `regulates_changes = yes` with no owner, which is what the
+   fix allowed. Under-coded rows fixed: Art 8 (11) yes, Art 1(c) (3) no, OpenAI Leadership now an owner (but see fix 1).
+   Left as is: `change_owner` is free text, not the proposed type enum. It is countable ("none named" against everything
+   else: 16 rows have a named owner), so this is not blocking. Row 9 (RTS 6 Art 5(7) change log) stays `yes` under the
+   new definition's "a change log that records the approver"; that is a stated choice, but it sits close to the dropped
+   "recording" criterion.
+4. **`names_role`: applied as one binary rule instead of the four-level scale.** The rule is now the same in all sources:
+   AI Act Art 26(2) (65) and 14 (59, 60), NERC System Operators (79, 85), RTS 6 "trader in charge" (21) and Colorado's
+   "individual designated by the deployer" (76) are all `yes`. The directional bias found earlier is gone. Two
+   remaining inconsistencies, not critical: PRA 2.3 (43, "define lines of responsibility") is `yes`, while the same kind
+   of provision is `no` in RTS 6 Art 1(a) (2), AI Act Art 17(1)(m) (62) and NIST GOVERN 2.1 (86); and NIST GV-4.1-003
+   (95) is `yes` although the functions are only examples ("e.g."). The coverage file says an empty `role_title` with
+   `yes` marks an untitled designation, but no row is coded that way (untitled designations such as rows 7, 14, 65 and
+   76 have their wording in `role_title`); so titled and untitled roles cannot be told apart. Correct the sentence.
+5. **Missing texts: applied.** SEC 15c3-5 is coded at every paragraph listed ((b), (c)(1), (c)(2)(iii)-(iv), (d), (e)(1)-(2);
+   rows 27-33). FINRA RN 15-09 and 16-21, PRA SS5/18, NERC PER-003-2, FCA SYSC 27.7 and both FCA reviews are coded
+   (rows 34-54, 85). Colorado is now coded from the signed act (`CO-SB26-189-act`, Ch. 131; header and three quotes
+   checked against the text), and C1b071d1a is recorded as a duplicate. Outstanding, already listed in the coverage
+   file: add the act to `index.csv`/`manifest.csv`; California SB 53 is still absent.
+6. **Deployer-side provisions: applied.** AI Act Art 26(1) (64), 26(7) (68), Art 27 (69), NERC PER-005-2 R2 (80) and R5 (83),
+   and the Colorado developer notice of material updates (77) are coded.
+
+Earlier minor issues: the Art 17(1)(m) duplicate is gone; the NIST MS-4.2-005 paraphrase (97) is corrected; the
+coverage file is current (lists SEC 15c3-5 and C1b071d1a correctly).
+
+### Sample check
+
+Random sample of 15 rows, stratified so that 6 come from newly coded texts (Python `random.seed(20261011)`):
+rows 3, 6, 7, 18, 28 (SEC), 35, 37, 38 (FINRA 15-09), 42 (PRA), 57, 74, 75, 85 (NERC PER-003-2), 95, 101. Because the
+draw included no FCA or Colorado row, rows 48 (FCA 2018 review 5.7), 76 and 77 (Colorado act) were also checked by
+hand; they are outside the accuracy counts.
+
+| field | correct | errors |
+| --- | --- | --- |
+| quote exists in source | 15/15 | none |
+| rule_type | 15/15 | none |
+| binding | 14/15 | row 42 (PRA SS5/18 coded comply-or-explain; text says "expects") |
+| addressee | 15/15 | none |
+| names_role (one rule) | 14/15 | row 95 (NIST GV-4.1-003: oversight functions given only as "e.g.") |
+| regulates_changes | 15/15 | none (rows 28 and 37, limit-setting and parameter changes, are consistent with RTS 6 Art 8) |
+| change_owner | 15/15 | none |
+
+Extra rows: 48 and 76 are correct on all fields. Row 77 (Colorado developer notice of material updates,
+`regulates_changes = yes`) can be argued either way: it is a notice after the change, not approval of it, but "material
+update" is defined to include model parameters and default settings (6-1-1701(14)). Keep it, with the note.
+
+### Remaining fixes
+
+Critical: none that would change the primary (binding, operating-firm) counts.
+
+Required before I4 is used (small):
+- Row 107: set `regulates_changes = no` and `change_owner = none named`, so that OpenAI change ownership is counted once (row 109). This finishes fix 1.
+
+Recommended:
+- PRA SS5/18 rows 42-47: change `binding` from comply-or-explain to `no` (or a "supervisory expectation" value).
+- Align `names_role` for generic "define lines of responsibility" provisions (row 43 against rows 2, 62 and 86), and row 95.
+- Correct the `role_title` sentence in `I4-coverage.md`, and state the primary-analysis restriction there.
+- Add `CO-SB26-189-act` to `index.csv` and `manifest.csv`.
