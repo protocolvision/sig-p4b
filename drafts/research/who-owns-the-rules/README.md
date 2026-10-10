@@ -17,7 +17,7 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | Red team and calibration | Done; both undercut what v1 can conclude |
 | Loop v2 design | Pre-registered: calibration test, practitioner speech (podcasts, talks), rule-change events, seeded cases |
 | Media frames for v2 | `sources-v2/`: current practitioners and historical recordings |
-| Industry analogue (S8) | Pre-registered in `industry-analogue-design.md`; run 10 October 2026: `results/industry-2026-10-10/` |
+| Industry analogue (S8) | Run 10 October 2026: trading and the grid nearest (tied); findings, red team and gatekeeper check in `results/industry-2026-10-10/`; report updated |
 | Loop v2 run | Not yet run |
 | Post or practice-guide changes | Waiting on the review |
 
