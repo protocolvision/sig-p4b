@@ -610,28 +610,31 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   "items": []
  },
  "next": {
-  "headline": "Field work in twenty firms will show who decides rule changes out of public view, and whether this is DevOps again",
-  "dek": "Sixteen adopters across software-native and incumbent, regulated and unregulated firms, plus four vendors, drawn at random within strata.",
-  "prose": [],
+  "headline": "Public sources show who edits an agent’s rules but not who signs off; the next step is to look inside twenty firms",
+  "dek": null,
+  "prose": [
+   "Everything above comes from public sources: job postings, company filings, recorded talks, laws and vendor documentation. They show the edit, made by an admin in a tool’s settings. They cannot show the sign-off, which happens in meetings, tickets and chat inside the firm. So the next step is field work: interviews and records inside twenty firms, chosen at random from public signals. Sixteen use agents heavily, split evenly between software companies and older incumbents and between regulated and unregulated sectors; four are vendors that design agent products.",
+   "In each firm we will do four things, each answering a question this memo leaves open."
+  ],
   "items": [
    {
-    "test": "Observe who first held agent work, where it sits and why people say it exists: existing staff coordinating functions, or a scarce new capability.",
-    "why": "Decides whether agent work is forming the way DevOps did.",
+    "test": "Trace the last few changes to an agent’s rules, from the request to the edit in the tool: who asked, who decided, who approved and who made the change.",
+    "why": "Shows who actually decides rule changes, and whether that decision is written down anywhere.",
     "when": null
    },
    {
-    "test": "Collect recorded decisions on agent rule changes that cross two functions, and who made them.",
-    "why": "Shows whether rule changes are decided out of public view, and by whom.",
+    "test": "Find out who first took on agent work, where they sit and why the work was given to them.",
+    "why": "Settles whether this is DevOps again (existing staff taking it on to coordinate) or a scarce skill being hired in.",
     "when": null
    },
    {
-    "test": "Measure the time from a rule getting in the way to the change being made, from change logs.",
-    "why": "Tests whether time to change a rule is the right measure of this work.",
+    "test": "Read the change logs and permission settings of the agent tools, and time how long a change takes from the first complaint to the fix.",
+    "why": "Tests whether the time to change a rule is a useful measure of this work.",
     "when": null
    },
    {
-    "test": "Check whether a number set in advance is the reason an agent's permissions change.",
-    "why": "Tests whether owning a number gives someone the right to change an agent's rules.",
+    "test": "Check whether a target set in advance, such as an error or escalation rate, is the reason an agent’s permissions change.",
+    "why": "Tests whether owning a number is what gives someone the right to change an agent’s rules.",
     "when": null
    }
   ]
@@ -1158,7 +1161,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   (function () {
     var secs = [['abstract', 'Abstract', ''], ['p-findings', 'Findings', 'No visible owner for rule changes'], ['p-method', 'Method', 'Eight stable bundles of work'],
       ['p-patterns', 'Is it DevOps?', 'DevOps inside, a boom in hiring'], ['p-arch', 'Emerging roles', 'Reviewer, operator, builder, overseer'],
-      ['p-tools', 'Where rules change', 'Admins edit, no one named decides'], ['p-rec', 'Recommendation', 'Name an owner first'], ['p-next', 'Field work', 'What twenty firms will settle'], ['p-closing', 'Limits and sources', 'What this rests on']]
+      ['p-tools', 'Where rules change', 'Admins edit, no one named decides'], ['p-rec', 'Recommendation', 'Name an owner first'], ['p-next', 'Next step', 'Look inside twenty firms'], ['p-closing', 'Limits and sources', 'What this rests on']]
       .filter(function (x) { return $(x[0]) && !$(x[0]).hidden; });
     var nav = $('contents'), ol = h('ol'), links = {};
     secs.forEach(function (x) { var a = h('a', {href: '#' + x[0]}, [h('span', {'class': 'tp', text: x[1]})].concat(x[2] ? [h('span', {'class': 'ld', text: x[2]})] : [])); links[x[0]] = a; ol.appendChild(h('li', {}, [a])); });
