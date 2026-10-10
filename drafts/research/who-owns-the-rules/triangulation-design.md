@@ -519,3 +519,90 @@ margins (A.2 point 9) are reported as a secondary result.
    - A "not supported" verdict for H-DevOps is not evidence against it.
    - Nothing was tuned. A different family rule would be a new amendment, and must be fixed before
      coding.
+
+## Addendum A.4 (10 October 2026, before any present-day coding): final scoring amendment
+
+This is the last change to scoring. Whatever power it gives is accepted and reported, and the scoring
+rules are fixed after it. It replaces A.3's Stage 1. A.3's Stage 2, its verdict wording, and all of A.2's
+fixes stay. The seven-way ranking is still reported as a secondary result.
+
+- Code: `python3 loop-tools/pattern_power.py a4`.
+- Output: `results/rerun-2026-10-10/pattern-power-v4.md` (2,000 runs per condition, seed 20261011).
+
+1. **The family is the hypothesis pattern and its nearest pattern: DevOps and Scarcity boom.**
+   - In the committed signature profiles, Scarcity boom is nearest to DevOps (0.300), and this is the
+     closest of all 21 pairs.
+   - The reason is fixed in advance. The hypothesis names DevOps, and its nearest neighbour is the one
+     rival the features cannot separate in a seven-way ranking. Present-day evidence plays no part.
+   - This replaces A.3's distance-threshold rule, which formed no families.
+2. **Stage 1 statistic.**
+   - The pair score is the larger of the DevOps and Scarcity boom percentiles (two-coder means, as in
+     A.2). It is compared with the best of the other five patterns.
+   - The pair passes when its score is at least the margin above that best.
+   - The margin is set under A.2's simulation rules: noise fix, NF randomisation, both blends, the null,
+     and a 5% bound on false support.
+   - False support means the pair passes when the truth is one of the other five, a blend involving any
+     of them, or the null.
+   - Margins: **0.31** at q = 0.2 and **0.30** at q = 0.3. The mixture blend binds, at 4.8%.
+3. **Stage 2** is unchanged from A.3. It uses N15, N04a, N20, N21, N22 and N23 with k = 4. With the
+   truncation rule applied, it uses N15, N20, N21 and N22 with k = 3.
+4. **Verdicts** are as in A.3, with "family" meaning the pair:
+   - **supported**: the pair passes and Stage 2 says DevOps over Scarcity;
+   - **family only**: the pair passes and Stage 2 is not distinguishable;
+   - **not supported**: the pair does not pass, or Stage 2 says Scarcity.
+5. **Results.**
+   - **Stage 1 power** (pair passes): **5%** at q = 0.2 and **8%** at q = 0.3 when DevOps is true; **0%**
+     and **1%** when Scarcity boom is true.
+   - **Verdict probabilities when DevOps is true:**
+
+     | q | Stage 2 features | supported | family only | not supported |
+     | --- | --- | --- | --- | --- |
+     | 0.2 | six | 4.3% | 0.8% | 94.9% |
+     | 0.2 | four (truncated) | 4.5% | 0.5% | 94.9% |
+     | 0.3 | six | 4.9% | 2.8% | 92.3% |
+     | 0.3 | four (truncated) | 5.9% | 1.8% | 92.4% |
+
+     In every row, the "not supported" verdicts come from the pair not passing Stage 1. Stage 2 says
+     "Scarcity" in 0.0% of runs.
+   - **False support for the pair:**
+     - when SRE, Mandated officer, Tool-operator fade, Lead-industry diffusion or Engineering absorption
+       is the truth: 0.0% each, at both q;
+     - worst average blend involving another pattern: 0.2% at q = 0.2 and 0.4% at q = 0.3;
+     - worst mixture blend: 4.8% at both;
+     - null: 1.4% at q = 0.2 and 0.9% at q = 0.3.
+   - Under every other truth, the probability of "supported" is 0.0%.
+6. **Stated plainly: combined "supported" power is far below 60%.** When DevOps is true it is 4–6% at
+   both values of q, with or without truncation.
+   - The limit is Stage 1. When DevOps is true, the DevOps percentile and the best other pattern's
+     percentile both sit near the top of their null distributions. Taking the larger of two percentiles
+     also raises the pair's score under the null and the blends, which pushes the margin up to 0.30–0.31.
+   - Stage 2 alone (A.3 point 7) would call DevOps over Scarcity in 47–75% of runs. It is reached only
+     after Stage 1.
+   - **What the verdict can show.** If the pair passes and Stage 2 says DevOps, the present matches
+     DevOps rather than the other five patterns and Scarcity boom, with every false-support rate at or
+     below 5%. The feature-level results for the Stage 2 features, and the secondary seven-way ranking,
+     are always reported.
+   - **What it cannot show.** A "not supported" verdict for H-DevOps is not evidence against it: that
+     verdict is returned in about 92–95% of runs when DevOps is the truth. The test cannot refute
+     H-DevOps. It can support it only rarely.
+   - This is accepted as the final pre-registered scoring. Nothing was tuned, and no further amendment
+     to scoring follows.
+
+### Reading rule for A.4 verdicts (orchestrator, same day, before any present-day coding)
+
+A.4 is the final scoring amendment; no score, feature or threshold changes after it. Its power is low: when
+DevOps is the truth, the pair fails Stage 1 in 92–95% of simulated runs. A failed Stage 1 therefore cannot
+be read as evidence against H-DevOps. The verdicts are reported as follows:
+
+| Outcome | Reported as |
+| --- | --- |
+| Pair passes Stage 1, Stage 2 calls DevOps | **Supported** (false support ≤5%) |
+| Pair passes Stage 1, Stage 2 not distinguishable | **DevOps-or-scarcity family** |
+| Pair passes Stage 1, Stage 2 calls Scarcity boom | **Not supported: scarcity pattern** |
+| Another pattern clears the Stage 1 margin over the pair | **Not supported: that pattern** |
+| Nothing clears the margin | **Inconclusive** (the expected outcome under every truth, given power) |
+
+In addition, the Stage 2 head-to-head is reported on its own, as a conditional result ("between DevOps and
+the scarcity pattern, the evidence favours …"). With six features its power is 73–75% at q = 0.2, with no
+wrong calls in simulation. The report states the power of every verdict next to it. Feature-level results
+(all 21 coded features) are reported in full whatever the verdict, and are the main input to the field plan.

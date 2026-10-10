@@ -25,6 +25,8 @@ Reads results/rerun-2026-10-10/signatures.csv (value and grade columns). Rules f
 Usage: python3 loop-tools/pattern_power.py Q [--drop N01,N08,...] [--out NAME]
        python3 loop-tools/pattern_power.py stages   (A.3 two-stage test, q = 0.2 and 0.3;
        writes results/rerun-2026-10-10/pattern-power-v3.md)
+       python3 loop-tools/pattern_power.py a4       (A.4 final: pair Stage 1 + A.3 Stage 2;
+       writes results/rerun-2026-10-10/pattern-power-v4.md)
   writes results/rerun-2026-10-10/pattern-power-v2-q<Q>.md (or NAME). --drop removes features (used to
   recalibrate on the features actually scored, after "insufficient" codes are known).
 """
@@ -358,8 +360,84 @@ def stages(q, runs=RUNS):
     return L
 
 
+# ---------------------------------------------------------------- Addendum A.4: final scoring
+def a4(q, runs=RUNS):
+    """Stage 1: the pair (DevOps, its nearest pattern Scarcity boom) scored as max of the two percentiles,
+    against the best of the other five. Stage 2 as in A.3."""
+    prof, graded, allf = load()
+    pats = list(prof)
+    feats = [f for f in allf if sum(graded[p][f] for p in pats) >= COMMON_MIN]
+    a, b = PAIR
+    others = [p for p in pats if p not in PAIR]
+    s2 = s2_features(prof, graded, feats)
+    s2t = [f for f in s2 if f not in TRUNCATED]
+    M = Model(prof, graded, feats, q)
+    rng = random.Random(SEED)
+
+    def one(x):
+        c1, c2 = M.code(x, rng), M.code(x, rng)
+        ps = {p: (M.pct(c1, p) + M.pct(c2, p)) / 2 for p in pats}
+        return (max(ps[a], ps[b]) - max(ps[p] for p in others),
+                (s2_stat(c1, prof, s2) + s2_stat(c2, prof, s2)) / 2,
+                (s2_stat(c1, prof, s2t) + s2_stat(c2, prof, s2t)) / 2)
+
+    pairs = [(x, y) for i, x in enumerate(pats) for y in pats[i + 1:]]
+    truth = {t: [one(M.truth(t, rng)) for _ in range(runs)] for t in pats}
+    avg = {pr: [one(M.blend_avg(*pr, rng)) for _ in range(runs)] for pr in pairs}
+    mix = {pr: [one(M.blend_mix(*pr, rng)) for _ in range(runs)] for pr in pairs}
+    nul = [one(M.null(rng)) for _ in range(runs)]
+    false_pairs = [pr for pr in pairs if not (pr[0] in PAIR and pr[1] in PAIR)]
+
+    def rate(rs, m):
+        return sum(r[0] >= m - 1e-9 for r in rs) / runs
+
+    def false_rates(m):
+        return {"truths": {t: rate(truth[t], m) for t in others},
+                "average blend": max(rate(avg[pr], m) for pr in false_pairs),
+                "mixture blend": max(rate(mix[pr], m) for pr in false_pairs),
+                "null": rate(nul, m)}
+
+    def worst(m):
+        fr = false_rates(m)
+        return max(max(fr["truths"].values()), fr["average blend"], fr["mixture blend"], fr["null"])
+
+    m = next((x for x in MARGINS if worst(x) <= FALSE_MAX), None)
+    K = {1: 4.0, 2: 3.0}  # A.3: k = 4 on six features, k = 3 on the four left after truncation
+    L = [f"## q = {q}", "",
+         f"Two coders, {runs} runs per condition, seed {SEED}; percentile null {NREF} presents, seed "
+         f"{REF_SEED}. Pair = {{DevOps, Scarcity boom}}; pair score = max of the two percentiles, compared "
+         "with the best of the other five.", ""]
+    if m is None:
+        return L + ["**No Stage 1 margin up to 1.00 meets the 5% bound.**", ""]
+    fr = false_rates(m)
+    L += [f"**Stage 1 margin: {m:.2f}** (worst false-support rate {worst(m):.1%}).", "",
+          f"Stage 1 power (pair passes): DevOps true **{rate(truth[a], m):.0%}**; Scarcity boom true "
+          f"**{rate(truth[b], m):.0%}**; average blend of the two {rate(avg[tuple(sorted(PAIR, key=pats.index))], m):.0%}; "
+          f"mixture blend of the two {rate(mix[tuple(sorted(PAIR, key=pats.index))], m):.0%}.", "",
+          "False support for the pair: " + "; ".join(f"{t} true {v:.1%}" for t, v in fr["truths"].items())
+          + f"; worst average blend involving another pattern {fr['average blend']:.1%}; worst mixture blend "
+          f"{fr['mixture blend']:.1%}; null {fr['null']:.1%}.", "",
+          "| Truth | Stage 2 set | k | supported | family only | not supported: Stage 2 says Scarcity "
+          "| not supported: pair not picked |", "| --- | --- | --- | --- | --- | --- | --- |"]
+    for t in PAIR + tuple(others):
+        for idx, lab in ((1, "six features"), (2, "truncated (four)")):
+            k, rs = K[idx], truth[t]
+            sup = sum(r[0] >= m - 1e-9 and r[idx] >= k for r in rs) / runs
+            fam = sum(r[0] >= m - 1e-9 and -k < r[idx] < k for r in rs) / runs
+            sc = sum(r[0] >= m - 1e-9 and r[idx] <= -k for r in rs) / runs
+            L.append(f"| {fname((t,))} | {lab} | {k:g} | {sup:.1%} | {fam:.1%} | {sc:.1%} | {1 - sup - fam - sc:.1%} |")
+    return L + [""]
+
+
 def main():
     args = sys.argv[1:]
+    if args and args[0] == "a4":
+        L = ["# Pattern-matching power check, v4 (addendum A.4, final)", ""]
+        for q in (0.2, 0.3):
+            L += a4(q)
+        (RUN / "pattern-power-v4.md").write_text("\n".join(L))
+        print("\n".join(L))
+        return
     if args and args[0] == "stages":
         L = []
         for q in (0.2, 0.3):
