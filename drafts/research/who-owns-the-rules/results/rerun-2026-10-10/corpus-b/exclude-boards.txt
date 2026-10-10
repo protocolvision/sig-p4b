@@ -1,0 +1,13 @@
+# Boards excluded from all Corpus B analysis (review/crawl-identity-check.md, Opus, 10 October 2026)
+# Wrong company or not real postings. One board key per line: <ats>-<board_id>
+workday-prudential
+workday-applied
+workday-western
+workday-taylor
+workday-williams
+workday-condenast
+ashby-demo.flocksafety-sandbox.com
+smartrecruiters-glean
+smartrecruiters-celanese
+smartrecruiters-insightinc
+smartrecruiters-uber
