@@ -1,0 +1,411 @@
+id,code1,code2,reason
+R0001,OT,,Recruiting work; applies no rule others rely on
+R0002,PE,,"Drafts access policy for agents (read/write scope, time-boxed grants)"
+R0003,OT,,"Generic ""auditing processes""; no rule shown"
+R0004,RD,,Recommends whether to change an approval threshold on AP payments (CFO decision)
+R0005,PV,,Reviews agent-initiated bank-detail changes; names approvers bypassed
+R0006,PV,,Reviews agent-flagged refunds a human overrode; names a threshold pattern
+R0007,AO,,Supplying data to an AI agent
+R0008,PE,,"Authors error-budget policy: freeze conditions, exceptions, override approvers"
+R0009,OT,,Project exhibits and lists
+R0010,OT,,Technical mentorship
+R0011,OT,,Full-cycle recruitment
+R0012,OT,,Describes a commercial agreement; no rule set by the author
+R0013,OT,,Store team motivation and brand standards
+R0014,OT,,Product launch news
+R0015,PV,,Reviews incidents where on-call never paged; names the shared cause (escalation gap)
+R0016,PE,,Describes a transaction limit that auto-declines and notifies; limit is set
+R0017,OT,,Security testing and preparedness statement
+R0018,OT,,Product launch news
+R0019,PV,,Purchase approvals outside automated workflow traced to three units (workaround)
+R0020,OT,,Product upgrades
+R0021,OT,,Incident response and surge support
+R0022,AO,,Investing in prompt engineering and evaluation for AI features
+R0023,OT,,Root-cause analysis of performance bottlenecks
+R0024,OT,,Security review of AI services before deployment; applies existing gate
+R0025,OT,,Data model validation and translation for business stakeholders
+R0026,OT,,Responding to audit requests
+R0027,OT,,Audit readiness of records
+R0028,OT,,Unclear statement about discussion layers
+R0029,OT,,Recruiting pipeline using AI sourcing tools; no rule
+R0030,OT,,Reviews and approves documents; no rule shown
+R0031,OT,,Vendor partnership remark
+R0032,OT,,Builds core infrastructure components
+R0033,OT,,SAP engineering role description
+R0034,OT,,Regulator information requests
+R0035,PE,,"Defines which refund actions agent may take alone, which need a lead, and dollar limits"
+R0036,OT,,Shipment records
+R0037,OT,,Work hours
+R0038,OT,,Uses AI tools for security assessment; no rule set
+R0039,OT,,Business plan coordination
+R0040,OT,,Personal history remark
+R0041,OT,,GenAI tool availability
+R0042,OT,,Operating a business with agents; no rule shown
+R0043,OT,,Escalation duty applying existing policy
+R0044,OT,,Approves invoices within tolerance per existing policy
+R0045,OT,,Mentoring and design guidance
+R0046,OT,,Engineering development emphasis
+R0047,OT,,Business cases and funding models; no rule set
+R0048,OT,,Equipment maintenance
+R0049,OT,,Project monitoring and corrective actions
+R0050,OT,,Team leadership
+R0051,OT,,Generic technical application
+R0052,PV,,Evaluates whether agents stay within finance-approved spending limits (compliance check against named limit)
+R0053,OT,,SAP QM key-user duties
+R0054,PV,,Finds gaps between AI-related controls and their operation; drives root-cause remediation
+R0055,OT,,Presenting to stakeholders
+R0056,PE,,Filing states limits on transactions agents may execute without human approval
+R0057,OT,,Statutory filings and audits
+R0058,OT,,Evaluates cyber implications of AI
+R0059,OT,,UAT and test scenarios
+R0060,OT,,Shift handover communication
+R0061,OT,,Customer complaint handling
+R0062,OT,,Platform strategy statement
+R0063,AO,,Tracks clauses a redlining agent gets accepted without lawyer (monitoring agent output)
+R0064,OT,,Product launch news
+R0065,OT,,Relationship management
+R0066,OT,,Product investment statement
+R0067,OT,,Shift availability
+R0068,OT,,Third-party model hosting statement
+R0069,OT,,After-hours on-call attendance
+R0070,PE,,"Writes paging and declaration rules: who is paged when, who takes command"
+R0071,OT,,Vague remark
+R0072,OT,,Sales opportunity work
+R0073,OT,,Sourcing and contracting
+R0074,PE,,Filing describes identity platform rule blocking segregation-of-duties conflicts
+R0075,AO,,Tuning an agent by adding examples after misclassification; rules described as source
+R0076,OT,,Overtime requirement
+R0077,OT,,Hedging remark
+R0078,OT,,Code reviews and team work
+R0079,OT,,R&D investment statement
+R0080,PE,,Specifies when onboarding agent must refer a file to a human (hand-off condition)
+R0081,OT,,Tool licences
+R0082,OT,,SAP migration projects
+R0083,OT,,Offer package design
+R0084,OT,,Sales relationship work
+R0085,PV,,Maps who approves access outside role catalog and for which systems
+R0086,OT,,HR shared services strategy
+R0087,OT,,Savings tracking
+R0088,PE,,Describes human-in-the-loop exception handoff for document processing
+R0089,OT,,Product AI availability
+R0090,OT,,SAP test catalog
+R0091,OT,,Leadership succession
+R0092,PE,,Virtual agent hand-off condition: transfer after two failures or security mention
+R0093,OT,,Inventory strategy
+R0094,RD,,Team decided to drop quarterly admin review and move to continuous checks (CISO and platform lead)
+R0095,OT,,On-call rotation
+R0096,OT,,Information requests
+R0097,OT,,Scheduling
+R0098,OT,,Mentoring
+R0099,OT,,Incident leadership statement
+R0100,OT,,Digital channel investment
+R0101,OT,,Mentoring and partnering
+R0102,OT,,"Applies an existing limit: agent pings, person approves per policy"
+R0103,RD,,Management elected to keep a daily disbursement limit after review with treasury and operations
+R0104,OT,,Availability
+R0105,OT,,Test strategy work
+R0106,OT,,Naming remark
+R0107,OT,,Root-cause work
+R0108,AO,,Rewrites agent prompt to apply tolerance and reruns invoices
+R0109,PV,,Reviews six months of invoice-agent exceptions; controller's team grants them
+R0110,OT,,Hiring plan
+R0111,PE,,"Sets claims agent escalation threshold ($2,000 to adjuster) in its config"
+R0112,OT,,Vague process redesign remark
+R0113,OT,,Journal entries and reconciliation
+R0114,PV,,Governance committee approves changes to agent permissions; maps who may approve
+R0115,OT,,Commercial analysis
+R0116,RD,,Dropped manager sign-off on contractor onboarding because IT check covers it; HR agreed
+R0117,OT,,Lean process improvement
+R0118,PE,,"Manager approval above expense thresholds, enforced by tool (approval gate)"
+R0119,OT,,Customer release notes
+R0120,OT,,Tech stack statement
+R0121,OT,,Hiring strategy
+R0122,OT,,Regulatory reporting
+R0123,OT,,Project risk management
+R0124,OT,,Customer service
+R0125,PV,,Assesses control environment effectiveness and gaps in cyber governance
+R0126,PV,,Analyzes agent handoff reversals; documents which leads approve each type
+R0127,PE,,"Read-only agent access, time-limited write grants approved by controller"
+R0128,OT,,Roadmap alignment
+R0129,OT,,Contracts and purchase orders
+R0130,OT,,Remark on agent use cases
+R0131,OT,,Automated API tests
+R0132,OT,,Product knowledge and training
+R0133,AO,,Watches agent dashboards; fixes retry logic on rate limits
+R0134,AO,,Monitors agent accuracy against ops thresholds and retrains on corrected outputs
+R0135,OT,,Remark on bots in finance
+R0136,OT,,Recruitment
+R0137,OT,,On-call shift ownership
+R0138,PV,,Reviews overrides of underwriting decisions to see which criteria underwriters apply
+R0139,RD,,Decide whether to raise error-budget threshold that triggers launch freeze (with product)
+R0140,OT,,Reverse mentoring remark
+R0141,RD,,Chairs committee deciding whether AI vendors keep customer-data access under current terms
+R0142,OT,,Contract review
+R0143,OT,,Selection criteria input for security platforms
+R0144,OT,,Process simplification statement
+R0145,OT,,Recruiting software use
+R0146,OT,,Metrics cadence for sales
+R0147,PE,RD,Owns discount approval thresholds for quoting agent
+R0148,OT,,Investment statement
+R0149,OT,,Bakery merchandising
+R0150,OT,,Service launch statement
+R0151,OT,,Retention strategy
+R0152,OT,,Roadmap research and advocacy
+R0153,OT,,Engagement team participation
+R0154,OT,,AI education
+R0155,OT,,Test scripts
+R0156,OT,,Remark on customer chat agents
+R0157,OT,,Ad data analysis (Korean)
+R0158,OT,,Workplace safety
+R0159,PV,,Runs access reviews and attestations; maps who can access what
+R0160,OT,,Store cleanliness
+R0161,OT,,Investment planning statement
+R0162,OT,,AI investment statement
+R0163,OT,,Crypto payments statement
+R0164,OT,,Evaluates AI technologies
+R0165,OT,,Customer success monitoring
+R0166,OT,,Remark
+R0167,OT,,Sales process statement
+R0168,OT,,SAP Fiori administration
+R0169,OT,,Sales training
+R0170,OT,,Security capability agenda
+R0171,OT,,Retail task
+R0172,AO,,Engineers instrument agent runs and alert when usage nears per-unit budgets
+R0173,AO,,Nightly test of agent against finance approval matrix; fixes breaks
+R0174,OT,,Escalates field concerns to superintendents
+R0175,OT,,Store replenishment
+R0176,OT,,Legal dispute statement
+R0177,OT,,Personal remark
+R0178,AO,,"Builds core agent infrastructure (runtime, tool layer, control plane)"
+R0179,AO,,Tunes retrieval and refreshes policy articles an HR agent cites
+R0180,OT,,TA audit planning
+R0181,OT,,Screening agent applies visa criteria; human confirms unsure cases (existing rule)
+R0182,RD,,"Kept agent refund limit; support wanted higher, finance refused"
+R0183,OT,,Standards body representation
+R0184,PV,,Studies procurement-agent escalations; finds those approved without quote
+R0185,AO,,Writes and maintains support-agent prompts from supplied tone and refund policy
+R0186,OT,,Sales training
+R0187,OT,,Pricing history
+R0188,PE,,Wrote the rules for when finance agent must stop and ask controller
+R0189,OT,,Applies and updates policies
+R0190,OT,,Partner go-to-market work
+R0191,OT,,Grants one-off access exceptions within IAM workflow and logs them
+R0192,OT,,Agent usage statement
+R0193,PV,PE,Reviewed staff who approved entries above posting limit; updated limit table
+R0194,OT,,Document review
+R0195,OT,,Backroom audits
+R0196,OT,,Route constraints
+R0197,OT,,Product features statement
+R0198,RD,,Approve or retire spend limits for procurement agents with Finance and Security
+R0199,OT,,Audit support
+R0200,PV,,Investigates manual overrides of collections agent schedule; recommends changes
+R0201,OT,,Remark
+R0202,OT,,Research and analysis
+R0203,OT,,Payroll management
+R0204,PV,,Reads postmortems of error-budget overruns; logs skipped pre-deploy checks
+R0205,PE,,Decides which systems agents may touch and what needs a human
+R0206,PE,,"Sets what sourcing agent may sign ($5,000 cap, approved list)"
+R0207,OT,,Data ecosystem remark
+R0208,OT,,Lease paperwork
+R0209,PE,,Incorporates AI security requirements into designs and user stories
+R0210,OT,,Vague remark
+R0211,OT,,Operating and compliance procedures statement
+R0212,PV,,Overrides audit agent's expense escalations when receipt is valid (override of agent decision)
+R0213,OT,,Leadership debate remark
+R0214,OT,,Product coding
+R0215,OT,,Payroll close remark
+R0216,OT,,Automated tests
+R0217,PV,,Audits service-account exceptions; identifies who approved outside the workflow
+R0218,OT,,Test tooling
+R0219,OT,,Mentoring
+R0220,OT,,Training remark
+R0221,PE,RD,Declined bot access to payroll data; permission decision with security and HR named
+R0222,PE,,Sets purchasing limits and vendor restrictions for procurement agent; routes exceptions
+R0223,PE,,"States what support agents may refund (return window), a rule for agents"
+R0224,RD,,"Decided, with compliance and engineering, to retire the manual attestation requirement"
+R0225,OT,,Infrastructure troubleshooting
+R0226,OT,,Logistics supervision
+R0227,OT,,Cost reduction statement
+R0228,OT,,Relationship management
+R0229,PE,,Platform team sets incident commander hand-off procedure between regions
+R0230,OT,,Support duties
+R0231,OT,,Revenue statement
+R0232,OT,,Store talent input
+R0233,OT,,SAP testing
+R0234,OT,,Clinical benefit review
+R0235,OT,,Data pipelines
+R0236,OT,,Remark on service management
+R0237,OT,,Test leadership
+R0238,OT,,Data transfer mechanism statement
+R0239,OT,,Market opportunity statement
+R0240,OT,,Volume remark
+R0241,OT,,Loan negotiation
+R0242,OT,,Applies existing rate card to reject invoices
+R0243,OT,,Sales remark
+R0244,OT,,Marketplace launch
+R0245,OT,,Support tier statement
+R0246,OT,,Personal history
+R0247,OT,,SAP architecture input
+R0248,OT,,Mentoring
+R0249,OT,,Talent frameworks
+R0250,OT,,Collaboration
+R0251,OT,,Remark
+R0252,OT,,Remark
+R0253,PE,,Agent routes non-standard NDAs to speaker by legal ops rule; speaker accepts or returns per clause list
+R0254,PE,,Maintains never-answer topics for HR assistant and specifies hand-off to advisor
+R0255,OT,,Remark on tool use
+R0256,OT,,Profile statement
+R0257,OT,,Audit support
+R0258,OT,,Model release cadence
+R0259,OT,,Cross-team solutions
+R0260,PE,,Builds systems to track and manage which access each AI agent holds
+R0261,OT,,Retail expansion
+R0262,PE,,Approves standard role requests; anything else goes to security (escalation condition)
+R0263,OT,,Reporting tools
+R0264,OT,,Partner list
+R0265,OT,,Personal history
+R0266,AO,,"Rewrites claims-intake prompt to state $2,000 threshold; tests on sample emails"
+R0267,OT,,Revenue statement
+R0268,OT,,Team description
+R0269,OT,,Shop team leadership
+R0270,PV,,Agent cannot approve over $10k but three teams route around it (workaround)
+R0271,OT,,Remark
+R0272,OT,,Roadmap statement
+R0273,AO,,Reads transcripts of agent refusals and adjusts prompt
+R0274,OT,,Remark
+R0275,PE,,"Procurement agent routes requests over $2,500 to a manager for approval"
+R0276,OT,,Store coverage
+R0277,OT,,Engineer mentoring
+R0278,AO,,Maintains knowledge articles and answer templates used by service desk virtual agent
+R0279,OT,,Real estate issues
+R0280,OT,,Hiring point-of-view artifact
+R0281,OT,,On-call rotation
+R0282,OT,,Referral demand and capacity planning
+R0283,OT,,Data analysis
+R0284,OT,,Talent pipelines
+R0285,OT,,Business Central migration
+R0286,OT,,Testing strategy and documentation
+R0287,OT,,Market launch work
+R0288,OT,,Vendor pricing negotiation
+R0289,OT,,Mission statement
+R0290,OT,,Trade classification data
+R0291,OT,,AI notetaker remark
+R0292,OT,,Data pipelines
+R0293,OT,,Remark on notes tool
+R0294,OT,,Engineer development
+R0295,OT,,Onboarding remark
+R0296,PV,,Works with auditors on design and operating effectiveness of controls; bridges gaps with process owners
+R0297,OT,,Requirements translation
+R0298,RD,,Eliminated manual review of low-risk agent-processed renewals after legal consultation
+R0299,OT,,AI security expertise
+R0300,OT,,Facilities statement
+R0301,OT,,IP filings
+R0302,AO,,Fixes enrichment agent's failing tool calls after scope was revoked
+R0303,OT,,Remark
+R0304,OT,,Audit service line description
+R0305,PV,,Checks agent refunds against cap monthly and reports to finance
+R0306,PV,,Internal audit reviews exceptions to agent limits and reports approvers
+R0307,OT,,Investment statement
+R0308,OT,,Customer growth statement
+R0309,OT,,Store policy implementation
+R0310,OT,,AI use disclosure
+R0311,OT,,Rejects deals over discount matrix and explains to rep (applies existing rule)
+R0312,OT,,Audits and true-ups
+R0313,OT,,Demo remark
+R0314,OT,,Close process
+R0315,OT,,AI use disclosure
+R0316,OT,,Customer culture statement
+R0317,OT,,Platform name
+R0318,OT,,Usage count remark
+R0319,OT,,Resource planning
+R0320,OT,,Testing enhancements
+R0321,OT,,Test scenarios
+R0322,OT,,Customer inquiries
+R0323,OT,,Phone assistance
+R0324,OT,,Engineering bar statement
+R0325,AO,,Writes regression tests for contract agent's hand-off to lawyer
+R0326,OT,,Safety culture
+R0327,OT,,Remark
+R0328,OT,,Marketing statement
+R0329,OT,,Mailroom services
+R0330,PV,,Records which changes the change advisory board approved (who approves changes)
+R0331,OT,,Architecture reviews
+R0332,AO,,Swaps models behind sourcing assistant and reruns evals on vendor-list compliance
+R0333,OT,,CRM integrations
+R0334,OT,,AV support
+R0335,OT,,Use case categories remark
+R0336,OT,,Mentoring
+R0337,OT,,Remark
+R0338,OT,,Investment statement
+R0339,OT,,Customer service
+R0340,PV,,Analyzes incidents where operators paused agents; documents conditions cited
+R0341,OT,,Account strategy
+R0342,PE,AO,Architects multi-agent escalation and hand-off logic (interfaces between agents)
+R0343,OT,,Store standards
+R0344,OT,,Remark
+R0345,OT,,Leadership updates
+R0346,OT,,AI workforce statement
+R0347,OT,,Reviews escalations above threshold and applies refund policy (existing rule)
+R0348,OT,,Team leadership
+R0349,OT,,Engineering initiatives
+R0350,RD,,"Board and CFO raised procurement agents' no-approval limit from $2,500 to $10,000"
+R0351,OT,,Compliance alert review
+R0352,OT,,Roles remark
+R0353,OT,,Intern sessions
+R0354,OT,,Risk statement
+R0355,OT,,Efficiency initiatives
+R0356,OT,,Remark
+R0357,OT,,Remark on team structure
+R0358,OT,,Product description
+R0359,PE,,Sets approval tiers for automated payments; highest tier needs two officers
+R0360,RD,,Quarterly review with SRE and product to retire paging thresholds that add noise
+R0361,AO,,Monitors collections agent latency and cost; flags anomalies against finance limit
+R0362,OT,,Opportunity work
+R0363,RD,,Raised number of tickets triage bot may close alone; legal signed off on retention
+R0364,OT,,Quality attributes
+R0365,OT,,Mentoring
+R0366,OT,,Sales enablement
+R0367,PV,,Traces discount approvals made outside CPQ; maps who can approve what
+R0368,OT,,Tool evaluation
+R0369,OT,,Consulting statement
+R0370,PV,,Post-incident reviews of outages over reliability budget share; findings to CTO
+R0371,OT,,Scientific results
+R0372,OT,,Lead qualification
+R0373,OT,,Product inspection
+R0374,PE,,Security team defines which tools and data each agent may call; approves expansion
+R0375,OT,,Advice-seeking remark
+R0376,OT,,Distillation count remark
+R0377,AO,,Creates evaluation sets for procurement agent and tracks accuracy
+R0378,OT,,Enforces team-card spend caps (applies existing limit)
+R0379,OT,,Store opening and closing
+R0380,OT,,Solution design
+R0381,OT,,Security activities
+R0382,OT,,Test design
+R0383,OT,,Associate training
+R0384,OT,,Company history
+R0385,OT,,Product statement
+R0386,OT,,Company description
+R0387,OT,,Remark
+R0388,OT,,Investment statement
+R0389,OT,,GIS work
+R0390,OT,,Sales presentations
+R0391,AO,,Applied AI team builds and tunes reply assistant models within compliance content policy
+R0392,OT,,Sales leadership
+R0393,AO,,Fine-tunes foundation models for security tasks
+R0394,OT,,Remark
+R0395,OT,,Product release
+R0396,PE,,AI agent escalates claims above its authority to a human adjuster (escalation condition)
+R0397,PE,AO,Turns goals into rules and constraints that AI systems read and execute
+R0398,OT,,Growth investment statement
+R0399,PE,,Designs compliance guidelines shared across business units
+R0400,OT,,Remark on fixes
+R0401,OT,,Staff training
+R0402,OT,,Capital project automation
+R0403,OT,,Call rotation
+R0404,OT,,Financial gain statement
+R0405,OT,,Remark
+R0406,OT,,Benefits billing
+R0407,OT,,Remark
+R0408,OT,,Threat modelling for GenAI attacks
+R0409,PE,,"Wrote payment budget policy: freeze conditions, what ships, who approves exceptions"
+R0410,PV,,Reads returned tickets to find what the agent keyed on; writes up the gap

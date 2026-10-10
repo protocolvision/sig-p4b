@@ -1,0 +1,9 @@
+packet,primary_code,second_code,share_PV,share_PE,share_RD,share_AO,share_OT,reason
+K01,OT,AO,0,0,0,0.1,0.9,SAP configuration support and testing; a few Joule/automation builds are agent work but no rules set
+K02,OT,,0,0.02,0,0,0.98,On-call and shift availability; applying schedules; a few runbook maintenance mentions
+K03,OT,,0,0,0,0,1,Recruiting duties with no rule-setting or rule-finding
+K04,OT,,0,0,0,0,1,Retail store operations and staffing
+K05,OT,,0.03,0,0,0,0.97,Audit support and execution; applies or tests existing controls; occasional methodology improvement
+K06,OT,AO,0,0,0,0.05,0.95,Software test design and automation; no rules for others set
+K07,OT,,0,0,0,0,1,Mentoring and technical leadership
+K08,OT,PE,0.08,0.3,0,0.07,0.55,AI security: policy and guidance writing playbooks and controls are PE; assessments and monitoring mostly OT
