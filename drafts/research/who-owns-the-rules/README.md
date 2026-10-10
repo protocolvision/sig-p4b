@@ -17,6 +17,7 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | Red team and calibration | Done; both undercut what v1 can conclude |
 | Loop v2 design | Pre-registered: calibration test, practitioner speech (podcasts, talks), rule-change events, seeded cases |
 | Media frames for v2 | `sources-v2/`: current practitioners and historical recordings |
+| Industry analogue (S8) | Pre-registered in `industry-analogue-design.md`; run 10 October 2026: `results/industry-2026-10-10/` |
 | Loop v2 run | Not yet run |
 | Post or practice-guide changes | Waiting on the review |
 
@@ -28,6 +29,7 @@ fits, including whether it is the AI safety movement's expression inside ordinar
 | [`agent-brief.md`](agent-brief.md) | Self-contained instructions for an agent with no prior context to run the design |
 | [`loop-design.md`](loop-design.md) | v1 activity-first loop, pre-registered and run on 10 October 2026 |
 | [`loop-design-v2.md`](loop-design-v2.md) | v2 loop: fixes from the red team and the calibration check; podcasts and talks in place of interviews |
+| [`industry-analogue-design.md`](industry-analogue-design.md) | S8: choosing the industry that best shows software's near future, and coding how its rule work was organised over time |
 | `loop-prompts/` | Agent prompts: v1 templates and [`v2.md`](loop-prompts/v2.md) |
 | `loop-tools/` | `pool.py`, `analyze.py` (v1); `fetch_media.py` (fetches captions and transcript pages for a stratified sample; run on a laptop) |
 | `sources-v2/` | `media-current.csv` and `media-historical.csv`: sampling frames of podcast episodes and videos. Transcripts are fetched locally and never committed |

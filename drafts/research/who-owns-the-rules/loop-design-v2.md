@@ -84,6 +84,7 @@ a part of it; R4, nobody does PV or RD, in speech or in writing.
 | S5 Vendor documentation | Product and admin guides | Capped at 15% of the pool; labelled "assumed work" |
 | S6 Rule-change events | Incident postmortems, policy changelogs, published internal policies for agents, expense or approval policies rewritten for agents, audit findings, enforcement actions, lab scaling-policy revisions | New: where agreements and rule changes become visible |
 | S7 Practitioner speech | Podcast episodes and YouTube talks by people running functions that use agents: frame in `sources-v2/media-current.csv` | New: replaces interviews |
+| S8 Industry analogues | Industries where rule work for automated actors is already regulated, scored for resemblance to agent-run business; the closest is studied in depth. Design: [`industry-analogue-design.md`](industry-analogue-design.md) | New: shows what rule work becomes once a forcing lever applies |
 | H Historical recordings | Talks and podcasts from the formation of SRE, DevOps, social media management, data science, the CISO, prompt engineering and the chief knowledge officer: frame in `sources-v2/media-historical.csv` | New: calibration only, never pooled with S1–S7 |
 
 **Sampling the media frames.** The frames were built by searching for speakers by role and function, not by
