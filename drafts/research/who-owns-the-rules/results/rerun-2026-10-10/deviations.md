@@ -123,3 +123,26 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     descriptive only and false records would create false descriptions. Every speech count is reported
     as a lower bound (recall about 0.5). The choice was made after seeing the scores; the alternative
     (union) is noted.
+
+14. **Posting selection for extraction, fixed before any posting is extracted** (design section 5 says
+    "all postings in the ten S1 occupations and all new-title postings; a stratified 20% of the rest").
+    - **Universe:** all crawled postings except the 11 boards in `corpus-b/exclude-boards.txt`. Postings
+      are deduplicated on (ats, board_id, id).
+    - **Study occupations:** postings whose title maps by override to one of the ten S1 occupations.
+    - **New-title postings:** the title (case-insensitive, whole words) contains any of: AI, A.I., agent,
+      agents, agentic, LLM, GenAI, "generative AI", "machine learning", automation, "prompt", copilot,
+      "intelligent automation", RPA, "AI governance", "responsible AI", "model risk". The list is fixed
+      here and includes broad terms on purpose; it identifies candidate agent-work titles, and I1
+      reports them by term.
+      - "Agent" also catches support, sales and insurance agents. These are kept and reported separately
+        as the "agent (human)" term group: titles where "agent" is not next to AI, agentic, autonomous,
+        virtual or digital.
+    - **The rest:** a 20% random sample stratified by O*NET major group (first two digits) × employer
+      type (Fortune 500 or VC software), with seed 20261019.
+    - **Extraction:**
+      - Haiku extracts all selected postings; Sonnet extracts a 10% random subsample (seed 20261020).
+      - Gates as for filings: Jaccard ≥ 0.5 one-to-one, F1 0.7, count ratio [0.8, 1.25].
+      - A clean Opus check on 25 postings (seed 20261021) needs precision and recall of 0.7.
+      - **If agreement fails, the fallback is decided now:** Sonnet extracts all selected postings, and
+        the clean check judges Sonnet-only. Consensus is not used for postings, because consensus cost
+        recall in speech.
