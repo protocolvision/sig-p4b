@@ -1,216 +1,232 @@
 # Who owns the rules? How new roles emerge, and the question protocol thinking has to ask
 
-Research draft · 10 October 2026 · Protocols for Business · for review before any post
+Research draft, v2 (after review round 1) · 10 October 2026 · Protocols for Business · for review before any post
 
-> **Status.** Working notes, not for publication. Every source below was found through web search on
-> 10 October 2026, but this environment could not open the pages themselves. Facts marked **(S)** come
-> from search-result summaries of the named page; facts marked **(M)** are from memory. Open each source
-> before quoting it. Nothing here has been checked against an archived job posting yet (see section 8).
+> **Status.** Working notes, not for publication. Sources were found through web search on 10 October
+> 2026, but this environment could not open the pages themselves. Facts marked **(S)** come from
+> search-result summaries of the named page; facts marked **(M)** are from memory. Open each source before
+> quoting it. No archived job posting has been retrieved yet (see section 9).
 
 ## 1. The problem
 
 Companies putting agents to work are already hiring for it. "AI engineer" topped LinkedIn's 2026 list of
 fastest-growing US job titles, with postings up 143% in 2025 (S).[^linkedin] Forward-deployed engineer
 postings rose about 800% between January and September 2025 by one Indeed and *Financial Times* count
-(S).[^fde] US federal agencies were required to name a Chief AI Officer in 2024 (S).[^m2410] Analysts
+(S).[^fde] US federal agencies have had to name a Chief AI Officer since 2024 (S).[^caio] Analysts
 recommend a named owner for every agent (S).[^forrester]
 
 None of these roles owns the rules agents act under: who may approve, spend, see and release what, and
-how those rules change. The group's job template, the Protocol Operations Lead, bets that someone should.
-This note asks whether history supports that bet, and what question a business would have to ask for such
-a role to exist.
+how those rules change. The group's job template, now the [Business Protocol Lead](../../blyg-src/threads/job-protocol-operations-lead.md),
+bets that someone should. This note asks whether history supports that bet, and what question a business
+would have to ask for such a role to exist.
 
-The method: trace eight roles that emerged with a new technology or a new kind of risk, find the business
-question that made companies converge on hiring for each, and see which roles lasted, which split up, and
-which dissolved back into everyone's job.
+The method: trace eight roles from their predecessors through their origin to their successors, name the
+business question that made employers hire at each stage, and see which roles lasted, which split, and
+which were absorbed into other roles.
 
 ## 2. Eight lineages
 
-### 2.1 Brand man → product manager (1931)
+Each table runs from the work's earlier home to its later ones. The question is the one an executive
+would have asked at that stage, as we reconstruct it.
 
-- **The question.** Why is our own Camay soap losing to our own Ivory, and who is answerable for it?
-- **Before.** Advertising, sales and manufacturing each touched every brand; nobody owned one brand's
-  results.
-- **Trigger.** Neil McElroy, a 26-year-old Procter & Gamble advertising manager on Camay, wrote a memo on
-  13 May 1931 asking for staff accountable for one brand "from top to bottom" (S).[^mcelroy]
-- **The first job description.** The memo is effectively one. Secondary accounts list the duties: study
-  the brand's market and competitors, track sales, manage product, advertising and promotion, test in the
-  field and talk to customers, and keep the brand profitable. One account says each man would carry no
-  more than two brands (S).[^mcelroy] Accounts disagree on its length (800 words, or three pages).
-- **What happened.** It lasted and spread: brand management became the consumer-goods standard, and
-  product management in software descends from it.
+### 2.1 Product management: from brand man to product ops
 
-### 2.2 The spreadsheet analyst (1979)
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | to 1931 | Advertising, sales and manufacturing each held a piece of every brand | — | (S)[^mcelroy] |
+| Origin | 1931 | Brand man, P&G | Our own Camay is losing to our own Ivory. Who answers for one brand's results? | McElroy memo, 13 May 1931 (S)[^mcelroy] |
+| Branch | 1940s–80s | Product manager in technology (HP; Intuit, founded 1983 by ex-P&G brand manager Scott Cook) | Engineers build what interests them. Who makes sure we build what customers will pay for? | Secondary only; HP date vague (S, M)[^pmhistory] |
+| Branch | late 1980s | Program manager, Microsoft (Excel for Mac) | Developers are shipping features nobody can use. Who owns the spec and the trade-offs? | Credited to Jabe Blumenthal; Spolsky says Charles Simonyi used the title earlier (S)[^programmanager] |
+| Successor | 2013–2020s | Product operations | Our PMs spend half their time on tooling and data. Who runs the product machine? | Vendor growth figures only (S)[^productops] |
 
-- **The question.** What happens to the plan if one assumption changes?
-- **Before.** Recalculating a model by hand. Dan Bricklin had the idea for VisiCalc at Harvard Business
-  School in 1978, watching a professor erase and rewrite a chain of figures on a blackboard after changing
-  one number (S).[^visicalc]
-- **Trigger.** VisiCalc shipped in October 1979; Lotus 1-2-3 (1983) and Excel (1985) followed (M).
-  Bricklin claimed it turned 20 hours of weekly work into 15 minutes for some users (S, his own account).[^visicalc]
-- **What happened.** No new title. The work moved: bookkeeping and accounting clerk jobs fell after 1980
-  while accountant jobs grew, as NPR's *Planet Money* reported in 2015 (S; the exact figures of 400,000
-  and 600,000 could not be confirmed).[^planetmoney] Scenario modelling became the core of financial
-  planning and analysis.
-- **Lesson.** A tool can create a large body of new work without creating a new role. It raised the
-  value of an existing one.
+- **The first job description.** McElroy's memo is effectively one. Secondary accounts list the duties:
+  study the brand's market and competitors, track sales, manage product, advertising and promotion, test
+  in the field and talk to customers, and keep the brand profitable, with each man carrying no more than
+  two brands (S).[^mcelroy] Its length is disputed (800 words, or three pages). The memo itself, in P&G's
+  archives, has not been seen.
+- **Outcome.** Lasted, and keeps branching. Each branch answers the same question (who owns the result
+  across functions?) in a new medium.
 
-### 2.3 Webmaster (1993 to the mid-2000s)
+### 2.2 Planning and analysis: from planning programmers to FP&A, analytics engineering and RevOps
 
-- **The question.** Who is responsible for our website?
-- **Trigger.** The web. Merriam-Webster dates the word to 1993 (S).[^webmaster] An Internet standard
-  in 1997 (RFC 2142) made `webmaster@` a conventional mailbox for any web host (M).
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | 1970s | Mainframe corporate planning models run by specialist programmers; budget clerks | Each planning run costs programmer time and days. Can we afford to test only one scenario? | IFPS, late 1970s; about 2,000 firms using or testing planning models by 1976 (S)[^planningmodels] |
+| Origin | 1979–85 | The spreadsheet analyst (VisiCalc 1979, Lotus 1-2-3 1983, Excel 1985) | What happens to the plan if one assumption changes? | Bricklin's blackboard story (S)[^visicalc]; product dates (M) |
+| Successor | 1980s–2000s | Financial planning and analysis (FP&A) | Which scenario do we commit to, and what are the risks? | (S)[^fpa] |
+| Branch | 2018–19 | Analytics engineer | Our analysts can't trust the numbers they model. Who builds and tests the data underneath? | Term circulating in the dbt community in 2018; first formal write-up early 2019 (S)[^analyticseng] |
+| Branch | 2018– | Revenue operations (from sales operations) | Marketing, sales and customer success each report their own numbers. Who owns the funnel between them? | Earliest known use of "Revenue Operations" in 2018 (S)[^revops]. The common "Xerox in the 1970s" origin rests on one unreliable vendor blog. |
+
+- **Outcome.** The spreadsheet created no new title at first. It moved work: bookkeeping and accounting
+  clerk jobs fell after 1980 while accountant jobs grew, as NPR's *Planet Money* reported in 2015 (S; the
+  often-quoted 400,000 and 600,000 figures are unconfirmed).[^planetmoney] New titles came forty years
+  later, when the data under the models and the conflicts between revenue teams needed owners.
+
+### 2.3 The web: from sysadmin to webmaster to its successors
+
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | to 1993 | Unix system administrators | — | (S)[^webmasterhist] |
+| Origin | 1993–96 | Webmaster | Who is responsible for our website? | Word first recorded 1993 (S)[^webmaster]. In a 1996 *Web Week* survey, 35% of respondents held the official title, up from none a year earlier (S)[^webmasterhist] |
+| Split | late 1990s–2000s | Front-end and back-end developer, operations, SEO specialist, content manager, later UX | Our site is now our storefront. Who answers for search traffic, versus outages, versus off-brand content? | (S)[^webmaster] |
+| Fade | 2015–2020 | — | — | Google renamed Webmaster Tools to Search Console (2015, M) and Webmaster Central to Search Central (2020, S)[^webmasterhist] |
+
 - **The job description.** A 1998 webmaster's typical duties: server administration, hand-coded HTML,
   basic graphic design, writing content, and submitting the site to search engines such as AltaVista and
-  Yahoo! (S).[^webmaster]
-- **What happened.** It split. Front-end and back-end development, operations, search optimization and
-  content management each took a piece (S).[^webmaster] The title survives mostly in small organizations.
-  Google renamed Webmaster Tools to Search Console in 2015 (M).
-- **Lesson.** A role defined by a technology, not a conflict, dissolves once the technology becomes
-  ordinary and complex enough to need specialists.
+  Yahoo! (S).[^webmaster] RFC 2142 (1997) recorded `webmaster@` as an existing de facto mailbox convention
+  (S).[^rfc2142]
+- **Outcome.** Split. The work grew; the single owner didn't survive it.
 
-### 2.4 Chief Information Security Officer (1995)
+### 2.4 Security: from EDP auditor to CISO to named, disclosed owner
 
-- **The question.** Who is accountable to the board when our network is breached?
-- **Before.** Security sat inside IT operations.
-- **Trigger.** Vladimir Levin stole about $10 million from Citibank through its systems in 1994; all but
-  $400,000 was recovered. Citicorp's board told its chief executive to hire a security executive, and in
-  1995 Steve Katz became the first person to hold the title Chief Information Security Officer (S).[^katz]
-- **What happened.** It lasted and climbed. About half of Fortune 1000 companies had a CISO by 2010, and
-  industry sources claim near-universal coverage of large companies by 2022 (S; vendor figures with
-  differing methods).[^cisoshare]
-- **Lesson.** A visible loss plus a board asking "who answers for this?" creates a role fast, and the
-  role sits near the top.
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | 1970s–80s | EDP auditor; bank "data security officer"; security manager under the CIO | Our auditors keep finding the same control gaps. Who fixes them? | ISACA retrospective by a former bank data security officer (S)[^isaca] |
+| Origin | 1994 or 1995 | Chief Information Security Officer, Citicorp (Steve Katz) | We lost $10 million to a hacker. Who is accountable to the board? | Levin theft; board told the CEO to hire a security executive (S)[^katz] |
+| Spread | 2000s–2010s | CISO, mostly reporting to the CIO at first | — | About half of the Fortune 1000 by 2010 (S, vendor figures)[^cisoshare] |
+| Successor | 2023– | A named, disclosed owner of cyber risk | The board must now state who manages cyber risk. Whose name and qualifications go in the 10-K? | SEC Regulation S-K Item 106, adopted 26 July 2023; 62% of first-year filers named a CISO-type role (S)[^item106] |
+| Branch | 2015– | Chief trust officer | Customers' security reviews are stalling deals. Who owns trust as a sales asset? | Forrester, 2022 (S)[^trust] |
 
-### 2.5 Site reliability engineering (2003) and DevOps (2009)
+- **Personal liability.** In October 2023 the SEC sued SolarWinds and its CISO personally; most of the case
+  was dismissed in July 2024 and the SEC dropped the rest in November 2025 (S).[^solarwinds]
+- **Outcome.** Lasted and climbed. Regulation now requires companies to name the owner.
 
-- **The question.** How do we ship changes quickly without breaking the service?
-- **Before.** Developers were rewarded for launching features, operations staff for keeping the service
-  up. Because most outages follow a change, Google's SRE book calls the two teams' goals "fundamentally in
-  tension" (S).[^sre]
-- **Trigger, SRE.** Ben Treynor Sloss joined Google in 2003 to run a seven-person production team and
-  staffed it with software engineers: "SRE is what happens when you ask a software engineer to design an
-  operations team" (S).[^sre] The design rule: operational work is capped at 50% of an SRE's time (S).
-- **Trigger, DevOps.** John Allspaw and Paul Hammond's talk "10+ Deploys per Day" at Velocity in 2009;
-  Patrick Debois watched it remotely and organized the first devopsdays in Ghent that autumn (S).[^devops]
-- **The pushback.** Jez Humble wrote in 2012 that "there is no such thing as a devops team": DevOps is a
-  way for development and operations to work together, and a separate team in between is release
-  management under a new name (S).[^humble] Companies hired "DevOps engineers" anyway.
-- **What happened.** SRE lasted as a role with an explicit contract (error budgets, the 50% cap). DevOps
-  became both a practice and a widely used job title, against its founders' advice.
-- **Lesson.** The role that lasted was the one that turned a standing conflict into a rule with a number
-  attached.
+### 2.5 Operations: from sysadmin to SRE and DevOps to platform engineering
 
-### 2.6 Social media manager (2008)
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | to 2003 | System administrators | Ops headcount grows in step with traffic. Can we afford that? | SRE book, "The Sysadmin Approach to Service Management" (S)[^sre] |
+| Origin | 2003 | Site reliability engineer, Google | How do we ship changes quickly without breaking the service? | Treynor Sloss: "SRE is what happens when you ask a software engineer to design an operations team"; ops work capped at 50% (S)[^sre] |
+| Origin | 2008–09 | DevOps (practice, then title) | Developers are paid to change things, operations to keep them stable. How do we stop the two fighting? | Shafer's "Agile Infrastructure" session, Toronto, August 2008; "10+ Deploys per Day", Velocity 2009; first devopsdays, Ghent, 2009 (S)[^devops] |
+| Pushback | 2012 | — | — | Humble: "there is no such thing as a devops team" (S)[^humble] |
+| Successor | 2019–22 | Platform engineer | Every team rebuilds its own pipeline. Who cuts the duplicated cost and cognitive load? | *Team Topologies* (2019); Gartner Hype Cycle 2022 (S)[^platform] |
 
-- **The question.** Who speaks for the company, in public and in real time, when customers talk about us
-  to each other?
-- **Trigger.** Twitter and Facebook pages made complaints public. At Comcast, Frank Eliason began answering
-  customers as @comcastcares in 2008; by 2009 he had 11 people working for him (S).[^comcast] Ford hired
-  Scott Monty in July 2008 as its first head of social media (S).[^ford]
-- **The job description.** Monty's mandate was to make Ford the leading social automotive brand. His
-  formal title was "Global Digital & Multimedia Communications Manager" (S).[^ford]
-- **What happened.** It lasted and multiplied into community, content and social care roles.
-- **Lesson.** The title trails the work. The first holders did the job under existing titles.
+- **Outcome.** SRE lasted as a role with an explicit contract (error budgets, the 50% cap). DevOps became
+  both a practice and a title, against its founders' advice. Platform engineering builds on DevOps rather
+  than replacing it.
 
-### 2.7 Data scientist (2008)
+### 2.6 Public voice: from community manager to social media manager to social care
 
-- **The question.** What can we learn from all the data our product produces, and who turns it into
-  decisions?
-- **Trigger.** DJ Patil at LinkedIn and Jeff Hammerbacher at Facebook coined the title in 2008 for their
-  own teams. Hammerbacher's team had been hired as "data analyst" or "research scientist" depending on
-  academic background (S).[^datascience] Davenport and Patil called it "the sexiest job of the 21st
-  century" in *Harvard Business Review* in October 2012.[^hbr]
-- **What happened.** It lasted. The US Standard Occupational Classification added "Data Scientists"
-  (15-2051) in 2018, with about 106,000 employed by May 2021 (S).[^soc]
-- **Lesson.** Official recognition came ten years after the title.
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | 1980s–2000s | Bulletin-board sysops; online community managers (AOL, The WELL from 1991, games); PR; customer service | — | (S)[^community] |
+| Origin | 2007–08 | Social customer service at Comcast (Frank Eliason) | Customers complain in public faster than our call centre can respond. Who answers? | Informal from September 2007, official February 2008; 11 staff by 2009 (S)[^comcast] |
+| Origin | 2008 | Head of social media, Ford (Scott Monty) | Who speaks for the company in public, in real time? | Hired July 2008; formal title "Global Digital & Multimedia Communications Manager" (S)[^ford] |
+| Spread | 2010s | Social media manager; social care teams | — | About 64,000 US social media managers in 2022, by Revelio Labs' own count (S)[^revelio] |
 
-### 2.8 Prompt engineer (2022 to 2025)
+- **Outcome.** Lasted and multiplied. The first holders did the work under existing titles.
 
-- **The question.** How do we get reliable work out of these models?
-- **The job description.** Anthropic's 2023 posting for a "Prompt Engineer and Librarian" offered
-  $175,000 to $335,000 and noted that the field "is arguably less than two years old" (S).[^anthropic]
-- **What happened.** It dissolved. The *Wall Street Journal* called it "suddenly obsolete" in April 2025;
-  Microsoft's Jared Spataro said models now ask follow-up questions, removing the need for "the perfect
-  prompt", and Indeed's count of about 3,000 postings was flat (S).[^wsj]
-- **Lesson.** When the skill becomes general literacy and the tools improve, the role folds back into
-  everyone's job, within two years.
+### 2.7 Data: from statistician to data scientist to ML and AI engineer
 
-### Roles forming now
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Before | 1989–2000s | Statistician; business intelligence analyst | Our warehouse reports what happened. Who can tell us why? | Jeff Wu proposed renaming statisticians "data scientists" in 1997; "business intelligence" popularised from 1989, origin disputed (S)[^datahist] |
+| Origin | 2008 | Data scientist (LinkedIn, Facebook) | What can we learn from the data our product produces, at web scale? | Patil and Hammerbacher; Hammerbacher's 2009 chapter in *Beautiful Data* says "research scientist" didn't fit (S)[^datascience] |
+| Recognition | 2012, 2018 | — | — | HBR, October 2012[^hbr]; US occupational code 15-2051 in 2018 (S)[^soc] |
+| Successor | mid-2010s | Machine learning engineer; MLOps (about 2020) | Our models never leave the notebook. Who gets them into production? | (S)[^mle] |
+| Successor | 2023 | AI engineer | Who builds products on top of models? | swyx's essay "The Rise of the AI Engineer" (2023; month M) (S)[^aieng] |
 
-| Role | Since | The question behind it | Status |
+- **Outcome.** Lasted, then branched toward production and products.
+
+### 2.8 Model work: from prompt engineer to context engineering and AI engineering
+
+| Stage | Years | Role | The business question | Evidence |
+| --- | --- | --- | --- | --- |
+| Origin | December 2022 | Staff prompt engineer, Scale AI (Riley Goodside) | How do we get reliable work out of these models? | Alexandr Wang called him the first person hired with the title (S)[^goodside] |
+| Peak | 2023 | Prompt engineer | — | Anthropic's posting at $175,000–$335,000: the field "is arguably less than two years old" (S)[^anthropic] |
+| Absorbed | 2025 | — | — | WSJ, April 2025: "suddenly obsolete"; Indeed postings flat at about 3,000 (S)[^wsj] |
+| Successor | June 2025 | Context engineering (practice) | Our agents fail because they lack the right information at each step. Who designs what they see? | Tobi Lütke's preference for the term, endorsed by Andrej Karpathy (S)[^context] |
+| Successor | 2023– | AI engineer; AI trainer | — | (S)[^aieng] |
+
+- **Outcome.** Absorbed within about two years. The skill became general literacy; the harder work moved
+  to AI engineers and to context design.
+
+## 3. Roles forming now
+
+| Role | Since | The business question | Status |
 | --- | --- | --- | --- |
 | Forward-deployed engineer | Palantir, about 2011; surge 2025 | How do we get our AI working inside each customer's operations? | Growing fast (S)[^fde] |
 | AI engineer | 2023 | Who builds products on models? | #1 fastest-growing US title, 2026 (S)[^linkedin] |
-| Chief AI Officer | Mandated in US federal agencies, March 2024 | Who coordinates AI use and manages its risk? | M-24-10 was replaced in April 2025 (M, verify)[^m2410] |
-| Named agent owner | 2025–2026 | Who manages each agent's lifecycle? | Analyst recommendation, not yet a title (S)[^forrester] |
-| Agent supervisor | 2026 | Who oversees agents doing work people used to do? | Gartner expects infrastructure staff to supervise agents (S)[^gartner] |
+| Chief AI Officer | US federal agencies, 2024 | Who coordinates AI use and manages its risk? | Kept by M-25-21 (April 2025) as a "change agent and AI advocate" (S)[^caio] |
+| GRC engineer | about 2024 | Our compliance evidence is collected by hand once a year. Who turns controls into code? | A manifesto and vendor career guides; sources disagree on whether it's a title or a capability (S)[^grc] |
+| Named agent owner | 2025–26 | Who manages each agent's lifecycle? | Analyst recommendation, not a title (S)[^forrester] |
+| Agent supervisor | 2026 | Who oversees agents doing work people used to do? | Gartner expects infrastructure staff to shift to supervising agents (S)[^gartner] |
 
-## 3. Timeline
+## 4. Timeline
 
-| Year | Event | Role |
+| Year | Event | Lineage |
 | --- | --- | --- |
-| 1931 | McElroy's "brand man" memo at P&G | Product manager |
-| 1979 | VisiCalc ships | Financial analyst (no new title) |
-| 1993 | "Webmaster" first recorded | Webmaster |
-| 1995 | Steve Katz named the first CISO at Citicorp | CISO |
-| 1997 | RFC 2142 makes `webmaster@` a standard mailbox (M) | Webmaster |
-| 2003 | Treynor Sloss starts SRE at Google | SRE |
-| 2008 | Patil and Hammerbacher coin "data scientist"; @comcastcares; Ford's head of social media | Data scientist, social media manager |
-| 2009 | "10+ Deploys per Day"; first devopsdays | DevOps |
-| 2011 | Palantir's forward-deployed engineers (S) | FDE |
-| 2012 | Humble: "no such thing as a devops team"; HBR on data scientists | DevOps, data scientist |
-| 2015 | Google renames Webmaster Tools (M) | Webmaster fades |
-| 2018 | "Data Scientists" enters the US occupational classification | Data scientist |
-| 2023 | Anthropic's prompt engineer posting | Prompt engineer |
-| 2024 | US agencies required to name Chief AI Officers | CAIO |
-| 2025 | WSJ: prompt engineering obsolete; FDE postings up about 800% | Prompt engineer fades; FDE grows |
-| 2026 | AI engineer tops LinkedIn's fastest-growing titles | AI engineer |
+| 1931 | McElroy's "brand man" memo at P&G | Product |
+| 1976 | About 2,000 firms using corporate planning models | Planning |
+| 1979 | VisiCalc ships | Planning |
+| late 1980s | Program manager role at Microsoft | Product |
+| 1993 | "Webmaster" first recorded | Web |
+| 1994/95 | Steve Katz becomes the first CISO, at Citicorp | Security |
+| 1996 | 35% of *Web Week* respondents hold the title webmaster | Web |
+| 1997 | RFC 2142 records `webmaster@`; Wu proposes "data scientist" for statisticians | Web, Data |
+| 2003 | Treynor Sloss starts SRE at Google | Operations |
+| 2007–08 | Comcast's social care; Ford's head of social media | Public voice |
+| 2008 | Patil and Hammerbacher name the data scientist; "Agile Infrastructure" in Toronto | Data, Operations |
+| 2009 | "10+ Deploys per Day"; first devopsdays | Operations |
+| 2011 | Palantir's forward-deployed engineers | Agents |
+| 2012 | Humble: "no such thing as a devops team"; HBR on data scientists | Operations, Data |
+| 2018 | "Data Scientists" enters the US occupational classification; "revenue operations" and "analytics engineer" appear | Data, Planning |
+| 2019 | *Team Topologies* defines platform teams | Operations |
+| 2020 | Google renames Webmaster Central | Web |
+| Dec 2022 | First staff prompt engineer, at Scale AI | Model work |
+| 2023 | SEC Item 106 requires a named owner of cyber risk; Anthropic's prompt engineer posting; "AI engineer" | Security, Model work |
+| 2024 | US agencies required to name Chief AI Officers | Agents |
+| 2025 | Prompt engineering "obsolete"; context engineering named; FDE postings up about 800% | Model work, Agents |
+| 2026 | AI engineer tops LinkedIn's fastest-growing titles | Agents |
+| Dec 2027 | EU AI Act deployer obligations for high-risk systems apply, including human oversight by people with the necessary competence, training and authority (S)[^aiact] | Agents |
 
-## 4. What makes a role emerge, and what makes it last
+## 5. What makes a role emerge, and what makes it last
 
-| Role | Business question | New capability | Accountability gap | Outcome |
-| --- | --- | --- | --- | --- |
-| Brand man | Who answers for one brand's results? | Mass advertising | Between advertising, sales, production | Lasted |
-| Spreadsheet analyst | What if one assumption changes? | Spreadsheet | None | No new title; existing role grew |
-| Webmaster | Who runs our website? | The web | Small | Split into specialties |
-| CISO | Who answers to the board for a breach? | Networked banking | Large, made visible by a loss | Lasted, moved up |
-| SRE / DevOps | How do we ship fast without outages? | Web-scale software | Between development and operations | SRE lasted; DevOps became a practice and a title |
-| Social media manager | Who speaks for us in public, in real time? | Social platforms | Between PR, marketing, customer service | Lasted, multiplied |
-| Data scientist | Who turns our data into decisions? | Cheap storage and compute | Between engineering and analysis | Lasted |
-| Prompt engineer | How do we get reliable work from models? | Large language models | Small | Dissolved |
+| Lineage | New capability | The gap between functions | What happened to the role |
+| --- | --- | --- | --- |
+| Product | Mass advertising | Advertising, sales, production | Lasted; keeps branching |
+| Planning | Spreadsheet | None at first | No new title for decades; work moved to existing roles |
+| Web | The web | Small at first | Split into specialties |
+| Security | Networked banking | Large, made visible by a loss | Lasted, climbed, now legally named |
+| Operations | Web-scale software | Development against operations | SRE lasted; DevOps became practice and title; platform teams followed |
+| Public voice | Social platforms | PR, marketing, customer service | Lasted, multiplied |
+| Data | Cheap storage and compute | Engineering against analysis | Lasted, then branched |
+| Model work | Large language models | Small | Absorbed into AI engineering and context design |
 
 Three conditions recur.
 
-1. **A capability makes a new kind of work cheap.** Every case has one. On its own, it produces new
-   *work*, not a new *role* (the spreadsheet, the prompt).
-2. **A cost lands between existing functions, and nobody answers for it.** Camay losing to Ivory, a
-   breach, outages after releases, public complaints. The roles that lasted were answers to "who is
-   accountable?", asked by a board or a senior executive after a visible cost.
-3. **The judgment stays hard after the tools mature.** The webmaster's and the prompt engineer's skills
-   became ordinary literacy, and the roles dissolved. Roles that referee a standing conflict between two
-   functions (brand against brand, speed against reliability, revenue against risk) lasted, because the
-   conflict does not go away.
+1. **A capability makes a new kind of work cheap.** Every lineage has one. On its own it creates new work,
+   not a new role.
+2. **A cost lands between existing functions, and someone senior asks who answers for it.** Camay losing
+   to Ivory, a $10 million theft, outages after releases, public complaints. Roles that answer that
+   question last.
+3. **The work survives the tools maturing, and it involves a conflict that never goes away.** The work never
+   disappears. When it is a skill (HTML, prompting), it moves into many existing roles, as the webmaster's and
+   the prompt engineer's work did. When it is a standing conflict between functions (brand against brand,
+   speed against reliability, revenue team against revenue team), a role that referees it lasts.
 
-Two further patterns:
+Three further patterns:
 
-- **The question is about a cost or a conflict, never about the technology.** McElroy did not ask how to
-  use radio advertising; he asked who answers for Camay.
-- **The title trails the work by years.** Monty did the job as a communications manager; Patil's and
-  Hammerbacher's people were analysts and research scientists; the official classification came a decade
-  after "data scientist". Regulation can skip the wait: Sarbanes-Oxley section 404 (2002) made internal
-  controls an audited duty, and the 2024 federal memo created Chief AI Officers by order.
+- **The question names a cost or a conflict, never the technology.** McElroy didn't ask how to use radio
+  advertising; he asked who answers for Camay.
+- **The title trails the work by years.** Eliason and Monty did the work under other titles; Facebook's
+  data scientists were first hired as analysts and research scientists; official classification took ten
+  years.
+- **Regulation eventually names the owner.** Sarbanes-Oxley section 404 (2002) made internal controls an
+  audited duty; SEC Item 106 (2023) made companies name who manages cyber risk; the 2024 federal memo
+  created Chief AI Officers; the EU AI Act will require named, competent human oversight of high-risk AI
+  from December 2027.
 
-## 5. The case that it's all engineering
+## 6. The case that it's all engineering
 
 The strongest version of the challenge:
 
 - **Protocols in this sense are code.** Permissions, spending limits, approval workflows and output checks
-  are built by engineers. SRE itself is the precedent: an operations problem solved by hiring software
-  engineers, not by inventing a new profession.
-- **The most recent analogue dissolved.** Prompt engineering went from a $335,000 posting to "obsolete"
-  in two years. "Protocol thinking" may follow the same arc: a skill every engineer and manager learns.
-- **Engineering is absorbing risk work.** Gartner predicts that by 2028, half of content risk roles will
+  are built by engineers. SRE is the precedent: an operations problem solved by hiring software engineers.
+  GRC engineering and platform engineering show the same move in compliance and infrastructure.
+- **The most recent analogue was absorbed in two years.** Prompt engineering went from a $335,000 posting
+  to "obsolete". Protocol thinking may become a skill every engineer and manager learns.
+- **Engineering is absorbing risk work.** Gartner predicts that by 2028 half of content risk roles will
   move from legal and cybersecurity into AI engineering (S).[^gartner] AI engineer is the fastest-growing
   title.
 - **The DevOps founders warned against exactly this.** Humble's objection to a "devops team" applies to a
@@ -218,106 +234,117 @@ The strongest version of the challenge:
 
 Where the challenge is weaker:
 
-- **Engineering builds rules but doesn't decide them.** Which discount limit, whose approval, what data
-  may leave: these trade revenue against risk. Engineering can't settle that conflict by itself, any more
-  than it settled development against operations without SRE's error budget.
-- **Security is engineered too, and the CISO still exists.** A function can be implemented in code and
-  still need an accountable owner above it.
+- **Engineering builds rules but doesn't decide them.** Which discount limit, whose approval, what data may
+  leave: these trade revenue against risk. Engineering didn't settle development against operations either,
+  until SRE's error budget turned the conflict into a number.
+- **Security is engineered too, and the CISO still exists.** Since 2023 US listed companies must name who
+  owns cyber risk. A function built in code can still need an accountable owner.
 - **New roles are already forming around agents.** Forward-deployed engineers, Chief AI Officers and named
-  agent owners all exist because someone has to answer for agents in the business. The question is
-  whether rule ownership becomes one of them, or a duty inside one.
+  agent owners exist because someone must answer for agents in the business. The open question is whether
+  rule ownership becomes one of them, or a duty inside one.
 
-**Verdict, moderate confidence.** A standalone "protocol" role is less likely than the duties landing
-inside an existing or newly forming role: revenue operations, internal controls, a Chief AI Officer's
-office, or platform engineering. A distinct role is likely only where condition 2 holds strongly: agents
-are slowed or exposed by rules no one owns, at a cost the board can see.
+**Verdict, moderate confidence.** A standalone "protocol" role is less likely than the duties landing in
+an existing or forming role: revenue operations, internal controls and GRC engineering, a Chief AI
+Officer's office, or platform engineering. A distinct role is likely only where agents are slowed or
+exposed by rules no one owns, at a cost the board can see.
 
-## 6. Applying the pattern to protocols
-
-Which accountability gap could produce a role?
+## 7. Applying the pattern to protocols
 
 | Candidate gap | Who might absorb it | Likely outcome |
 | --- | --- | --- |
 | What each agent may see, do and spend | Security, identity and access management | Absorbed into security |
-| Day-to-day oversight of agents in each team | Every manager | Becomes a skill, like prompting |
-| Which business rules become enforced in systems, and how they change as the business grows | Nobody today: security, finance, legal, sales and engineering each hold a piece | Candidate for a new role, or a mandate for RevOps or internal controls |
+| Day-to-day oversight of agents in each team | Every manager | Becomes a skill, as prompting did |
+| Which business rules become enforced in systems, and how they change as the business grows | Nobody today: security, finance, legal, sales and engineering each hold a piece | Candidate for a role, or a mandate for RevOps, internal controls or platform engineering |
 
-The third gap is the only one that meets all three conditions: agents make enforced rules cheap to run
-(condition 1), the cost of slow or wrong rules falls between revenue and risk functions (condition 2),
-and the trade-off between speed and control never goes away (condition 3). The group's Protocol
-Operations Lead template is written for that gap. It reports to the COO for the same reason the brand man
-reported to the business, not to advertising.
+Only the third gap meets all three conditions: agents make enforced rules cheap to run (1); the cost of
+slow or wrong rules falls between revenue and risk functions (2); and the trade-off between speed and
+control never goes away (3).
 
-## 7. The question a business needs to ask today
+## 8. The question a business needs to ask today
 
-Each lasting role began with a question that named a cost and asked who answers for it. The equivalent
-for protocols:
+Each lasting role began with a question that named a cost and asked who answers for it. The equivalent for
+protocols:
 
-> **Our agents can act faster than we can approve. Who decides which of our rules a system should
-> enforce, and who answers when a rule slows growth or lets damage through?**
+> **Our agents can act faster than we can approve. Who decides which of our rules a system should enforce,
+> and who answers when a rule slows growth or lets damage through?**
 
 How the answer points to a structure:
 
 - **"The CTO" or "engineering"** → no new role; protocol thinking becomes an engineering skill.
 - **"The CISO"** → security absorbs it, and the rules lean toward restriction.
-- **"The COO", or each function separately** → the gap is real. If the cost is measurable (deals waiting
-  on sign-offs, agents held back from launch, incidents traced to unowned rules), expect a role, under
-  whatever title the company already uses.
+- **"The COO", or each function separately** → the gap is real. If the cost is measurable (deals waiting on
+  sign-offs, agents held back from launch, incidents traced to unowned rules), expect a role, under whatever
+  title the company already uses.
 
-If no executive can answer, the business has its version of McElroy's memo to write.
+## 9. Gaps and next research steps
 
-## 8. Gaps and next research steps
+- **Archived job postings.** None retrieved. Try the Wayback Machine for early career pages (Google SRE,
+  LinkedIn and Facebook data teams, Ford), the `misc.jobs.offered` Usenet archive for 1990s webmaster
+  postings, newspaper classifieds, P&G's archives for the McElroy memo, and Hammerbacher's 2009 chapter.
+- **Posting counts over time.** Indeed Hiring Lab, LinkedIn Economic Graph or Lightcast for "DevOps
+  engineer" (2010–15), "prompt engineer" (2022–25), and any "agent operations" or "AI controls" titles now.
+- **Regulation.** Confirm the EU AI Act's post-Omnibus dates and the exact Article 26(2) wording.
+- **Counter-evidence.** Companies that tried a dedicated "AI governance" or "agent operations" team and
+  folded it back into engineering.
 
-- **Archived job postings.** None was retrieved. Sources to try: the Wayback Machine for early career
-  pages (Google SRE, LinkedIn and Facebook data teams, Ford), the `misc.jobs.offered` Usenet archive for
-  1990s webmaster postings, newspaper classified archives, P&G's corporate archives for the full McElroy
-  memo, and Hammerbacher's 2009 essay "Information Platforms and the Rise of the Data Scientist" in
-  *Beautiful Data*.
-- **Posting counts over time.** Indeed Hiring Lab, LinkedIn Economic Graph and Lightcast data for
-  "DevOps engineer" (2010–2015), "prompt engineer" (2022–2025), and any "agent operations" or "AI
-  controls" titles now.
-- **Regulation.** Check whether the EU AI Act's deployer obligations (from memory, Article 26 requires
-  human oversight by people with "the necessary competence, training and authority") are creating
-  oversight roles in European companies, as SOX did for internal controls.
-- **Counter-evidence.** Look for companies that tried a dedicated "AI governance" or "agent operations"
-  team and folded it back into engineering.
+## 10. Assumptions to pressure-test
 
-## 9. Assumptions to pressure-test
-
-- [ ] **Survivorship.** The eight roles were chosen because they are well documented. Failed roles leave
-  fewer traces, so the dissolution rate may be understated.
-- [ ] **Hindsight framing.** Each "business question" is a reconstruction. McElroy's memo asked for staff;
-  the question is our reading of it.
-- [ ] **Vendor numbers.** CISO coverage, FDE growth and LinkedIn rankings come from industry sources with
-  their own methods and interests.
-- [ ] **The 60% claim.** Autor and colleagues estimate that about 60% of 2018 US employment was in job
-  titles that did not exist in 1940 (S).[^autor] A 2026 replication counts people rather than titles and
-  finds about 9% (S). New titles are common; new occupations that employ many people are rarer.
+- [ ] **Survivorship.** The eight lineages are well documented because they succeeded or became famous.
+  Failed roles leave fewer traces.
+- [ ] **Reconstructed questions.** Each business question is our reading. McElroy's memo asked for staff.
+- [ ] **Vendor numbers.** CISO coverage, FDE growth, product-ops growth and LinkedIn rankings come from
+  industry sources with their own methods and interests.
+- [ ] **New titles versus new occupations.** Autor and colleagues estimate about 60% of 2018 US employment
+  was in titles that did not exist in 1940; a 2026 replication counting people rather than titles finds
+  about 9% (S).[^autor]
 - [ ] **US-centric.** All eight lineages are American or US-reported.
 
 ## Notes
 
-Status markers: (S) from a search-result summary of the named page, not opened; (M) from memory.
+(S) from a search-result summary of the named page, not opened. (M) from memory.
 
 [^mcelroy]: Neil H. McElroy, memorandum to Procter & Gamble management, 13 May 1931, as described in Ken Norton, "Product Management Was Born in 1931 (Maybe, Sort Of)," *Bring the Donuts*, https://www.bringthedonuts.com/essays/product-management-mcelroy-memo-turns-ninety/; and "Brand Men & the History of Product Management," *Productside*, https://productside.com/brand-men-the-history-of-product-management/. (S)
+[^pmhistory]: "History of Product Management," *Product Manager Academy*, https://productmanageracademy.substack.com/p/114-history-of-product-management; "The History and Evolution of Product Management," *Miles Education*, https://mileseducation.com/blog/accounting/the-history-and-evolution-of-product-management. (S)
+[^programmanager]: Scott Berkun, *The Art of Project Management* (O'Reilly, 2005), ch. 1, https://www.oreilly.com/library/view/the-art-of/0596007868/0596007868_artprojectmgmt-CHP-1-SECT-4.html; Joel Spolsky, "How to Be a Program Manager," *Joel on Software*, 9 March 2009, https://www.joelonsoftware.com/2009/03/09/how-to-be-a-program-manager/. (S)
+[^productops]: "Lessons from Over 5 Years in Product Ops," *Product-Led Alliance*, https://www.productledalliance.com/lessons-from-over-5-years-in-product-ops/. (S, vendor figures)
+[^planningmodels]: Thomas H. Naylor and Daniel R. Gattis, "Corporate Planning Models," *California Management Review* 18, no. 4 (1976), https://cmr.berkeley.edu/1976/08/18-4-corporate-planning-models/; "IFPS," *Wikipedia*, https://en.wikipedia.org/wiki/IFPS. (S)
 [^visicalc]: "VisiCalc," *Wikipedia*, https://en.wikipedia.org/wiki/VisiCalc; "How VisiCalc's Spreadsheets Changed the World," *The New Stack*, https://thenewstack.io/how-visicalcs-spreadsheets-changed-the-world/. (S)
-[^planetmoney]: Jacob Goldstein et al., "Episode 606: Spreadsheets!," *Planet Money*, NPR, February 2015, transcript at https://www.npr.org/transcripts/389027988; "How the Electronic Spreadsheet Revolutionized Business," NPR, 27 February 2015, https://www.npr.org/2015/02/27/389585340/how-the-electronic-spreadsheet-revolutionized-business. (S)
+[^fpa]: "FP&A," *Wikipedia*, https://en.wikipedia.org/wiki/FP%26A. (S)
+[^analyticseng]: "Emerging Data Roles: The Analytics Engineer," *Data Council*, https://www.datacouncil.ai/blog/emerging-data-roles-the-analytics-engineer. (S)
+[^revops]: "Revenue Operations," *EverybodyWiki*, https://en.everybodywiki.com/Revenue_Operations; on the Xerox claim, "The Evolution to Revenue Operations," *Traction Complete*, https://tractioncomplete.com/articles/the-evolution-to-revenue-operations. (S)
+[^planetmoney]: "Episode 606: Spreadsheets!," *Planet Money*, NPR, February 2015, transcript at https://www.npr.org/transcripts/389027988; "How the Electronic Spreadsheet Revolutionized Business," NPR, 27 February 2015, https://www.npr.org/2015/02/27/389585340/how-the-electronic-spreadsheet-revolutionized-business. (S)
 [^webmaster]: "Webmaster," *Wikipedia*, https://en.wikipedia.org/wiki/Webmaster; "What Happened to the Webmaster," *The History of the Web*, https://thehistoryoftheweb.com/postscript/what-happened-to-the-webmaster/. (S)
-[^katz]: "CISO Conversations: Steve Katz, the World's First CISO," *SecurityWeek*, https://www.securityweek.com/ciso-conversations-steve-katz-worlds-first-ciso/; "Steve Katz Dies; Cybersecurity Innovator Known as 'World's First CISO'," *SC Media*, https://www.scworld.com/news/steve-katz-dies-cybersecurity-innovator-known-as-worlds-first-ciso. (S)
-[^cisoshare]: "38% of the Fortune 500 Do Not Have a CISO," *Help Net Security*, 1 October 2019, https://www.helpnetsecurity.com/2019/10/01/fortune-500-ciso/; Cybersecurity Ventures, "CISO 500 Demographic Study," https://cybersecurityventures.com/ciso-500-demographic-study/. (S)
+[^webmasterhist]: "Job Profile: Webmaster," *Certification Magazine*, https://certmag.com/articles/job-profile-job-webmaster-constantly-evolved-since-1990s; "Webmaster," *Mewayz Wiki*, https://wiki.mewayz.com/wiki/Webmaster. (S)
+[^rfc2142]: D. Crocker, "Mailbox Names for Common Services, Roles and Functions," RFC 2142, May 1997, https://www.rfc-editor.org/info/rfc2142. (S)
+[^isaca]: "Information Security Matters: Fifty Years of Information Security—A Recollection," *ISACA Journal* 1 (2019), https://www.isaca.org/resources/isaca-journal/issues/2019/volume-1/information-security-matters-fifty-years-of-information-securitya-recollection. (S)
+[^katz]: "CISO Conversations: Steve Katz, the World's First CISO," *SecurityWeek*, https://www.securityweek.com/ciso-conversations-steve-katz-worlds-first-ciso/; "The Past, Present and Future of Chief Information Security Officers," *Cybersecurity Ventures*, https://cybersecurityventures.com/the-past-present-and-future-of-chief-information-security-officers-cisos/. (S)
+[^cisoshare]: "38% of the Fortune 500 Do Not Have a CISO," *Help Net Security*, 1 October 2019, https://www.helpnetsecurity.com/2019/10/01/fortune-500-ciso/; "C-Suite Shuffle: The CISO's Evolving Role and Reporting Structure," *CSO*, https://www.csoonline.com/article/572253/c-suite-shuffle-the-ciso-s-evolving-role-and-reporting-structure.html. (S)
+[^item106]: DLA Piper, "Updates to Form 10-K for Fiscal Year 2023," February 2024, https://www.dlapiper.com/insights/publications/2024/02/updates-to-form-10-k-for-fiscal-year-2023. (S)
+[^trust]: "The Rise of the Chief Trust Officer: Where Does the CISO Fit?," *CSO*, https://www.csoonline.com/article/4085479/the-rise-of-the-chief-trust-officer-where-does-the-ciso-fit.html. (S)
+[^solarwinds]: "SolarWinds Dismissed: What the SEC's U-Turn Signals for Cyber Enforcement," *Harvard Law School Forum on Corporate Governance*, 7 December 2025, https://corpgov.law.harvard.edu/2025/12/07/solarwinds-dismissed-what-the-secs-u-turn-signals-for-cyber-enforcement/. (S)
 [^sre]: Benjamin Treynor Sloss, "Introduction," in *Site Reliability Engineering: How Google Runs Production Systems*, ed. Betsy Beyer et al. (O'Reilly, 2016), https://sre.google/sre-book/introduction/. (S)
-[^devops]: "The Incredible True Story of How DevOps Got Its Name," *New Relic*, https://blog.newrelic.com/engineering/devops-name/; "The Origins of DevOps: What's in a Name?," *DevOps.com*, https://devops.com/the-origins-of-devops-whats-in-a-name/. (S)
+[^devops]: "The Origins of DevOps: What's in a Name?," *DevOps.com*, https://devops.com/the-origins-of-devops-whats-in-a-name/; "The Incredible True Story of How DevOps Got Its Name," *New Relic*, https://blog.newrelic.com/engineering/devops-name/. (S)
 [^humble]: Jez Humble, "There's No Such Thing as a 'Devops Team'," *Continuous Delivery*, October 2012, https://continuousdelivery.com/2012/10/theres-no-such-thing-as-a-devops-team/. (S)
-[^comcast]: "Comcast: Twitter Has Changed the Culture of Our Company," *TechCrunch*, 20 October 2009, https://techcrunch.com/2009/10/20/comcast-twitter-has-changed-the-culture-of-our-company; "Frank Eliason," *Wikipedia*, https://en.wikipedia.org/wiki/Frank_Eliason. (S)
+[^platform]: "How Team Topologies Supports Platform Engineering," *The New Stack*, https://thenewstack.io/how-team-topologies-supports-platform-engineering/; "SRE vs DevOps vs Platform Engineering," *Humanitec*, https://humanitec.com/blog/sre-vs-devops-vs-platform-engineering. (S)
+[^community]: "Online Community Manager," *Wikipedia*, https://en.wikipedia.org/wiki/Online_community_manager; "The WELL," *Wikipedia*, https://en.wikipedia.org/wiki/The_WELL. (S)
+[^comcast]: "Comcast: Twitter Has Changed the Culture of Our Company," *TechCrunch*, 20 October 2009, https://techcrunch.com/2009/10/20/comcast-twitter-has-changed-the-culture-of-our-company; "Frank Eliason," *Technical.ly*, https://technical.ly/startups/frank-eliason-comcast/. (S)
 [^ford]: "Ford's Big Twitter," *Campaign*, https://www.campaignlive.co.uk/article/ford-s-big-twitter/4xy465k56zzvwwat1zxsp6mgnv; Neville Hobson, "FIR Interview: Scott Monty, Head of Social Media, Ford Motor Company," 12 December 2008, https://nevillehobson.com/2008/12/12/fir-interview-scott-monty-head-of-social-media-ford-motor-company/. (S)
-[^datascience]: "Jeff Hammerbacher," *Wikipedia*, https://en.wikipedia.org/wiki/Jeff_Hammerbacher; "The Evolution of the Data Scientist Job Title," *Xcede*, https://www.xcede.com/blog/the-evolution-of-the-data-scientist-job-title. (S)
+[^revelio]: Revelio Labs, "How Social Media Manager Went from Intern-Tier to Full-On Career," https://www.reveliolabs.com/news/social/how-social-media-manager-went-from-inter-tier-to-full-on-career/. (S)
+[^datahist]: "50 Years of Data Science" survey literature, https://arxiv.org/pdf/2007.03606; "Disputed History of the Term Business Intelligence," *Software Memories*, 2 December 2007, https://www.softwarememories.com/2007/12/02/disputed-history-of-the-term-business-intelligence. (S)
+[^datascience]: Jeff Hammerbacher, "Information Platforms and the Rise of the Data Scientist," in *Beautiful Data*, ed. Toby Segaran and Jeff Hammerbacher (O'Reilly, 2009), as summarized at https://arxiv.org/pdf/2311.03292; "Jeff Hammerbacher," *Wikipedia*, https://en.wikipedia.org/wiki/Jeff_Hammerbacher. (S)
 [^hbr]: Thomas H. Davenport and D. J. Patil, "Data Scientist: The Sexiest Job of the 21st Century," *Harvard Business Review*, October 2012. (S)
 [^soc]: U.S. Bureau of Labor Statistics, "Employment and Wages for Newly Defined Occupations, May 2021," *The Economics Daily*, 2022, https://www.bls.gov/opub/ted/2022/employment-and-wages-for-newly-defined-occupations-may-2021.htm. (S)
+[^mle]: "Where Do Machine Learning Engineers Work?," *Gradient Flow*, https://gradientflow.com/where-do-machine-learning-engineers-work/. (S)
+[^aieng]: swyx (Shawn Wang), "The Rise of the AI Engineer," *Latent Space*, 2023, as discussed at https://podcast.scrimba.com/146. (S; month from memory)
+[^goodside]: "Riley Goodside," *PromptLayer Glossary*, https://www.promptlayer.com/glossary/riley-goodside; https://news.pedaily.cn/202212/505153.shtml. (S)
 [^anthropic]: "Prompt Engineer and Librarian," Anthropic job posting, 2023, as reported in *Fortune*, 9 March 2023, https://www.fortune.com/2023/03/09/new-ai-jobs-chatgpt-like-assistants. (S)
 [^wsj]: "The Hottest AI Job of 2023 Is Already Obsolete," *Wall Street Journal*, April 2025, as reported in *Entrepreneur*, https://www.entrepreneur.com/business-news/ai-is-taking-over-for-prompt-engineers/490762. (S)
+[^context]: "Shopify CEO and Ex-OpenAI Researcher Agree That Context Engineering Beats Prompt Engineering," *The Decoder*, June 2025, https://the-decoder.com/shopify-ceo-and-ex-openai-researcher-agree-that-context-engineering-beats-prompt-engineering/. (S)
 [^fde]: "Forward-Deployed Engineers Emerge as One of AI's Fastest-Growing Jobs," *PYMNTS*, 2026, https://www.pymnts.com/news/artificial-intelligence/2026/forward-deployed-engineers-emerge-as-one-of-ais-fastest-growing-jobs/; Bloomberry, "What I Learned Analyzing 1K Forward Deployed Engineer Jobs," https://bloomberry.com/blog/i-analyzed-1000-forward-deployed-engineer-jobs-what-i-learned/. (S)
 [^linkedin]: LinkedIn News, "LinkedIn Jobs on the Rise 2026: The 25 Fastest-Growing Roles in the U.S.," https://www.linkedin.com/pulse/linkedin-jobs-rise-2026-25-fastest-growing-roles-us-linkedin-news-dlb1c. (S)
-[^m2410]: Office of Management and Budget, Memorandum M-24-10, "Advancing Governance, Innovation, and Risk Management for Agency Use of Artificial Intelligence," 28 March 2024, as summarized by Crowell & Moring, https://www.crowell.com/en/insights/client-alerts/omb-releases-final-guidance-memo-on-the-governments-use-of-ai. Replacement by M-25-21 in April 2025 is from memory. (S, M)
+[^caio]: Office of Management and Budget, Memorandum M-24-10, 28 March 2024, as summarized by Crowell & Moring, https://www.crowell.com/en/insights/client-alerts/omb-releases-final-guidance-memo-on-the-governments-use-of-ai; Memorandum M-25-21, "Accelerating Federal Use of AI through Innovation, Governance, and Public Trust," April 2025, https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf. (S)
+[^grc]: "GRC Engineering Manifesto," https://grc.engineering/; Vanta, "The 8 Values of GRC Engineering," https://www.vanta.com/collection/grc/grc-engineering-values. (S)
 [^forrester]: Forrester, "The State of Agentic AI in 2026: Companies Are Chasing, Few Are Catching," https://www.forrester.com/blogs/the-state-of-agentic-ai-in-2026-companies-are-chasing-few-are-catching/. (S)
 [^gartner]: Gartner, "Gartner Announces Top Predictions for Data and Analytics in 2026," 11 March 2026, https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026; Itential, "Gartner Predicts 2026: AI Agents Will Reshape Infrastructure & Ops," https://www.itential.com/resource/analyst-report/gartner-predicts-2026-ai-agents-will-reshape-infrastructure-operations/. (S)
+[^aiact]: Regulation (EU) 2024/1689 (AI Act), Article 26, as summarized at https://artificialintelligenceact.eu/article/26/; post-Omnibus application dates as reported by *Data Protection Report*, July 2026, https://www.dataprotectionreport.com/2026/07/the-eu-ai-act-when-does-it-become-enforceable-now/. (S)
 [^autor]: David Autor, Caroline Chin, Anna Salomons and Bryan Seegmiller, "New Frontiers: The Origins and Content of New Work, 1940–2018," *Quarterly Journal of Economics* 139, no. 3 (2024), https://economics.mit.edu/sites/default/files/2022-11/ACSS-NewFrontiers-20220814.pdf; the 2026 replication is reported at https://www.nakedcapitalism.com/2026/09/new-jobs-in-140-years-of-data-why-the-ai-displacement-fear-is-overstated-and-what-to-worry-about-instead.html. (S)
