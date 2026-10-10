@@ -1,0 +1,201 @@
+sid,title,assigned_code,verdict,best_code,reason
+mo29,Securities Client Service Administrator,43-4011.00,correct,,Client service admin in securities ops matches brokerage clerk
+ov4,"Staff Software Engineer, Backend Platforms",15-1252.00,correct,,Backend software engineer
+mo31,3rd Shift Mechanical Engineering Technician,17-3027.00,correct,,Mechanical engineering technician
+mo69,Senior Software Engineer - Verification AI Infrastructure,15-1252.00,correct,,Software engineer
+mo15,Representante Técnico de Ventas-Bovinos Leche y Carne. (Torreon),NONE,none_wrong,41-4011.00,Technical sales rep for veterinary/livestock products
+mo87,Bilingual Spanish Retail Sales Consultant,41-2031.00,correct,,Retail sales
+mo96,"Sr Scientist, Biology",19-1029.04,correct,,Biology scientist
+mo22,Administration & Co-Pay Assistant - 6-Month Contract,43-6013.00,correct,,Co-pay/admin assistant in medical setting
+mo18,Formateur (F/H) - Marrakech - Allemand,NONE,none_wrong,13-1151.00,Trainer (likely German-language call-centre trainer)
+mo2,Medical Assistant,31-9092.00,correct,,Exact match
+ov31,Principal Product Engineer - Cloud and Hyperscale Platforms,15-1252.00,correct,,Cloud platform product engineer; software developer reasonable
+mo39,Forklift Operator - Mid shift Dry,53-7051.00,correct,,Forklift operator
+mo38,Principal AI Engineer - Enterprise AI Solutions,15-1252.00,correct,,AI engineer building software
+mo67,"MTS Equipment Technical & Automation Program Manager, TCP Operation",11-9199.00,acceptable,,Engineering/automation program manager; 11-9041 Architectural and Engineering Managers closer
+mo86,Advanced Mil HPC Static Project Engr II (Onsite),17-2141.00,acceptable,,Military structural/static analysis engineer; 17-2011 Aerospace Engineers possibly closer
+mo35,"Sr Associate, SW Eng (Fircosoft)",NONE,none_wrong,15-1252.00,Software engineer
+mo36,Onboarding Specialist (Spiff),NONE,none_wrong,43-4051.00,Customer onboarding for SaaS product
+mo33,Retail Store Associate Part time Seasonal Winners/HomeSense - Northern Ave Plaza,41-2031.00,correct,,Retail store associate
+ov26,Senior Linux Platform Engineer,15-1252.00,acceptable,,Linux platform/systems engineering; 15-1244 or 15-1299.08 closer
+mo91,Advisory Solution Consultant - State Government,41-4012.00,wrong,41-9031.00,"Presales solution consultant for software; sales engineer, technical not non-technical"
+ov3,Indirect Procurement & Direct Procurement Specialist,13-1023.00,correct,,Procurement specialist
+ov10,"Software Engineer 3 - Kubernetes Platform - Reston, VA - Hybrid - Freewheel",15-1252.00,correct,,Software engineer
+mo73,Project Engineer,17-2112.00,acceptable,,"Generic project engineer; industrial engineer defensible, domain unspecified"
+mo45,Ingénieur Systèmes  F/H,NONE,none_wrong,15-1299.08,Systems engineer
+mo9,CDL A Local Delivery Truck Driver-Earn up to $90k/year,53-3032.00,correct,,CDL-A truck driver
+mo78,Sr Administrative Assistant,43-6014.00,correct,,Administrative assistant
+mo43,Product Management Engineer,NONE,none_wrong,11-9199.00,"Product management role; no product-manager occupation, catch-all fits"
+mo9,"Dermatology Health & Science Specialist AA - Los Angeles E, CA",NONE,none_wrong,41-4011.00,Pharma field sales (dermatology specialist rep)
+mo2,Opérateur Logistique (H/F),NONE,none_wrong,53-7062.00,Logistics/warehouse operator
+mo20,Systems Engineer,15-1299.08,correct,,Systems engineer
+mo21,"Professional, PDS Projects",11-9199.00,wrong,13-1082.00,"Non-manager project professional; title vague, not a manager"
+mo44,"Sachkundige Person / Qualified Person für Klinische Prüfpräparate (Bulk Drug Product) (all genders) (Vollzeit, unbefristet)",NONE,none_wrong,11-3051.01,EU Qualified Person certifying clinical trial product batches; QA release
+mo44,Manufacturing Program Manager,11-3051.00,correct,,Manufacturing program manager; production manager defensible
+ov9,Compliance Analyst,13-1041.00,correct,,Compliance analyst
+ov48,Country Controller- Electrophysiology- Issy-les-Moulineaux H/F,11-3031.01,correct,,Country controller
+mo40,Shipping Truck Loader - $20.49 per hour,53-7062.00,correct,,Hand loader
+ov38,"Associate DevSecOps Engineer, Platform and Tooling",15-1252.00,acceptable,,DevSecOps; 15-1299.05 Information Security Engineers arguably closer
+mo19,Systems Engineer – HPC & GPU Infrastructure,15-1299.08,correct,,Systems engineer HPC infrastructure
+ov47,Assistant Controller,11-3031.01,correct,,Assistant controller
+mo29,"Site Identification Lead, IQVIA Biotech",NONE,none_wrong,11-9121.01,Clinical trial site identification/feasibility lead
+ov13,"Senior Splunk Platform Engineer, AVP",15-1252.00,acceptable,,Splunk platform admin/engineering; 15-1244 closer
+ov27,"Sr. Analyst, Financial Controls & Compliance",13-1041.00,correct,,Financial controls compliance analyst
+mo1,Welder,51-4121.00,correct,,Welder
+mo90,Senior Banker - Central Coast area,13-2072.00,correct,,Banker; loan officer defensible
+ov32,SOX and Compliance Analyst,13-1041.00,correct,,SOX compliance; compliance officer about as good as auditor
+mo77,Utilization Review Clinician - ABA,21-1014.00,acceptable,,"Utilization review not counseling; 21-1019 Counselors, All Other similar"
+ov5,Business Controller Intern,11-3031.01,wrong,13-2051.00,"Business controlling intern = financial analysis, not a controller manager"
+mo47,Finance Manager - Beverly Hills BMW,11-3031.00,wrong,13-2072.00,"Auto dealership F&I manager arranges customer financing, not a corporate financial manager"
+mo47,STAFF ENG-HBM-LAYOUT,NONE,none_wrong,17-2072.00,IC/HBM layout engineer (semiconductor)
+mo20,"Manager, AIR SaaS Platform Verification",NONE,none_wrong,11-3021.00,Manager of software platform verification
+mo17,Intern-Quality Control,19-4099.01,correct,,Quality control intern
+mo11,Laboratory Robotics Operator,51-9199.00,wrong,19-4099.00,Operates lab automation; lab technician rather than production worker
+mo12,Designated Selling Associate - SKIMS - Town Center at Boca Raton,NONE,none_wrong,41-2031.00,Retail selling associate
+mo99,PIV/MFA Program Lead,11-9199.00,wrong,15-1299.09,IT identity/authentication (PIV/MFA) program lead
+ov28,HR Compliance Analyst - Cigna Healthcare,13-1041.00,correct,,HR compliance analyst
+mo42,Seasonal: 4am Inbound (Stocking) (T0253),NONE,none_wrong,53-7065.00,Retail stocking; same as mo71 which was coded
+mo100,Senior Account Executive,41-3031.00,acceptable,,"Account executive, industry unspecified; 41-3091 services sales more general"
+mo30,Field Service Engineer,49-2011.00,acceptable,,"Field service engineer, equipment unspecified; 49-2094 more general"
+mo6,"Lead Designer, Accessories Product Design, Bags",27-1022.00,correct,,Accessories/bag designer
+mo71,Seasonal: Overnight Inbound (Stocking) (T2526),53-7065.00,correct,,Stocker
+ov16,Staff Backend Engineer - Ads Platform,15-1252.00,correct,,Software engineer
+mo66,"Senior Engineering Manager, LMTS - Qualified",11-3021.00,correct,,Software engineering manager
+mo45,Relationship Banker - Village District Financial Center,43-4141.00,correct,,Personal/relationship banker is a sample title of new accounts clerks
+mo18,Supply Chain Scheduler,13-1081.00,wrong,43-5061.00,Scheduler = production/planning clerk rather than logistician
+ov20,Sr. Technical Engineer – Planview Platform,15-1252.00,acceptable,,Planview platform config/admin; 15-1299.08 or 15-1211 closer
+mo34,Clinical Laboratory Scientist I - 3rd Shift,29-2011.00,correct,,Clinical lab scientist
+mo28,Réceptionnaire,NONE,none_wrong,43-5071.00,French receiving clerk (goods reception)
+mo36,"Part Time Sales Associate, Tommy Hilfiger - Street (FTC)",41-2031.00,correct,,Retail sales
+ov19,"Compliance Analyst, Expert Network",13-1041.00,correct,,Compliance analyst
+mo23,Monteur / Elektromonteur (w/m/d),NONE,none_wrong,47-2111.00,Electrical fitter/electrician
+mo15,Corporate Internship - Global Marketing and External Affairs - Summer 2027,13-1161.00,correct,,Marketing intern
+mo14,CTA 2 - Sponsor Dedicated - Israel,NONE,none_wrong,11-9121.01,Clinical trial assistant
+mo27,Responsable technique projet (H/F),NONE,none_wrong,11-9041.00,Technical project lead (engineering)
+ov36,Senior HR Operations Specialist,13-1071.00,correct,,HR specialist
+mo24,Outside Sales Rep,41-4012.00,correct,,Outside sales rep
+mo34,"Chef, Analyse de marché et de Renseignements commerciaux",NONE,none_wrong,11-2021.00,Head of market analysis and business intelligence
+mo88,Treasury Manager,11-9199.00,wrong,11-3031.01,Treasury manager = treasurer
+mo33,SUPERVISOR DE PROMOCION MEDICA,NONE,none_wrong,41-1012.00,Supervisor of pharma sales reps
+mo84,"Key Account Specialist, Rapid Diagnostics - Ho Chi Minh",41-4012.00,acceptable,,Diagnostics are technical/scientific products; 41-4011 better
+mo65,Beauty Sales Consultant,41-2031.00,correct,,Retail beauty sales
+ov42,Procurement Specialist,13-1023.00,correct,,Procurement specialist
+mo25,Lead Research Scientist,NONE,none_ok,,Scientist with no domain given
+mo89,"Military Family Life Counselor (MFLC), West of Mississippi Region",21-1013.00,correct,,Family counselor; MFT defensible
+mo83,Sr Software Development Engineer (US Federal),15-1252.00,correct,,Software engineer
+ov15,Software Engineer – IMC Platform and Cluster Infrastructure,15-1252.00,correct,,Software engineer
+mo1,Tweede Apotheker Boots Den Haag,NONE,none_wrong,29-1051.00,Pharmacist (Dutch)
+ov33,"Senior Analyst, US Trade Compliance",13-1041.00,correct,,Trade compliance analyst
+ov40,Senior AI Cloud Platform Engineer,15-1252.00,correct,,Cloud platform engineer
+ov44,"Cloud Platform Engineer - Azure API, Officer",15-1252.00,correct,,Cloud platform engineer
+mo26,Market Associate,NONE,none_wrong,13-1161.00,Business development/market associate
+ov25,Staff Frontend Engineer - UI Platform - Seattle,15-1252.00,correct,,Frontend engineer
+ov22,"Staff / Senior Software Engineer, Security Fusion Platform",15-1252.00,correct,,Software engineer
+mo16,Stagiaire Ingénieur(e) mécanique (H/F),NONE,none_wrong,17-2141.00,Mechanical engineering intern
+mo46,Enterprise Solution Specialist III,NONE,none_ok,,Ambiguous between IT and sales specialist
+mo42,Investment Associate,13-2099.01,acceptable,,Investment associate; 13-2051 Financial and Investment Analysts better
+mo57,Senior Systems Software Engineer- EDA Infrastructure,15-1252.00,correct,,Systems software engineer
+mo68,Solutions Engineer,41-9031.00,correct,,Solutions engineer = sales engineer
+mo93,"Buyer, Procurement",13-1023.00,correct,,Buyer
+mo25,"Director, Search & Evaluation Project Management - Neuroscience",11-9199.00,correct,,Pharma search & evaluation director; catch-all defensible
+mo31,Üzletfejlesztési menedzser (Cisco security),NONE,none_wrong,11-2022.00,Business development manager (Hungarian)
+ov8,Project Engineer / Technical Project Manager - Advanced Platforms,15-1252.00,acceptable,,Technical project manager; 15-1299.09 IT Project Managers closer
+mo4,Fraud Analyst,13-2099.04,correct,,Fraud analyst
+mo38,Associate Sales Development (Thai & English Speaker),NONE,none_wrong,41-3091.00,Sales development rep
+mo37,Senior Business Sales Representative - Strategic Accounts,41-4012.00,correct,,Business sales rep
+mo3,Banco de talentos PCD,NONE,none_ok,,"Talent pool posting for disabled candidates, no occupation"
+mo43,"Director, Government Affairs",11-9199.00,wrong,11-2032.00,Government affairs director = public relations/government relations manager
+ov11,Financial Controller - Statutory Reporting,11-3031.01,correct,,Financial controller
+mo35,Master Technician,49-3092.00,wrong,49-3023.00,Master technician typically automotive; RV not supported
+mo75,SailPoint Engineer,15-1299.05,correct,,SailPoint identity security engineer
+mo13,Graduate Project Engineer,NONE,none_wrong,17-2199.00,"Graduate engineer, domain unspecified"
+mo24,LVN - 33 hours / week - Evernorth - Arlington TX,NONE,none_wrong,29-2061.00,LVN
+mo30,Support Engineering Data Intern- 12 Month Placement,NONE,none_wrong,15-2051.00,Data intern in support engineering (low confidence)
+mo94,"Product Leader, Digital Planning",11-9199.00,correct,,"Product leader; no product-manager occupation, catch-all fits"
+mo52,Senior Developer 1,15-1252.00,correct,,Developer
+mo11,"Level 3 Application Engineering / Product Specialist, Officer",NONE,none_wrong,15-1252.00,Application engineering at a bank
+mo46,Stockroom Retail Assistant (Athlete) - PT 32 HRS - NIKE ROOSENDAAL,53-7062.00,acceptable,,Stockroom; 53-7065 Stockers and Order Fillers closer
+mo53,Pharmacy Technician,29-2052.00,correct,,Pharmacy technician
+mo10,Terminal Operator I,NONE,none_wrong,51-8093.00,Petroleum terminal operator (likely)
+mo76,"Manager, IT",11-3021.00,correct,,IT manager
+mo92,Sr Lead - Cloud Data Platform Engg,15-1299.08,acceptable,,Cloud data platform; 15-1243 Database Architects closer
+mo48,"Professional (Senior) Sales Representative, Pain - Lower Manhattan, NY",41-4011.00,correct,,Pharma sales rep
+ov35,"Lead Software Engineer, Platform Engineering, ITC",15-1252.00,correct,,Software engineer
+mo82,Senior Staff Software Engineer (Secure Agentic AI),15-1252.00,correct,,Software engineer
+mo6,San Isidro Canales escritos,NONE,none_wrong,43-4051.00,Written-channel customer service (chat/email)
+mo63,Facilities Manager,11-3013.00,correct,,Facilities manager
+mo60,Zonal Claims Executive,13-1031.00,correct,,Claims executive
+mo8,"Compute Country Lead, Korea",NONE,none_wrong,11-2022.00,"Country lead for compute business, sales leadership"
+mo58,Process QE Technician,17-3026.00,correct,,Quality engineering technician
+mo8,SCADA DB Modelling Engineer,15-1251.00,acceptable,,SCADA database modelling; 15-1243 or 17-2071 arguably closer
+mo10,Electronic Security Systems Engineer,17-2072.00,correct,,Electronic security systems engineer
+ov49,MRO Maintenance Controller,11-3031.01,wrong,49-1011.00,"Aviation MRO maintenance controller coordinates maintenance, not finance"
+mo7,Infrastructure & Energy Transaction Counsel,NONE,none_wrong,23-1011.00,Transaction counsel = lawyer
+ov41,Finance Controller Manager,11-3031.01,correct,,Finance controller
+ov12,"Software Engineer, Platform",15-1252.00,correct,,Software engineer
+ov46,Principal Software Development Engineer - Cloud Platform,15-1252.00,correct,,Software engineer
+mo22,Senior Scientist,NONE,none_ok,,Scientist with no domain given
+mo79,Senior Field Engineer - ECH SME - US Remote,17-2072.00,acceptable,,"Field engineer, domain unclear; field service roles may sit elsewhere"
+mo17,Senior Premier Solutions Specialist,NONE,none_ok,,Ambiguous specialist title (support vs sales)
+ov45,Cloud Platform Engineer,15-1252.00,correct,,Cloud platform engineer
+mo32,Monteur,NONE,none_wrong,49-9071.00,Fitter/installer (German/Dutch)
+mo50,Démonstrateur (m/f/d*) - Tommy Hilfiger & Calvin Klein - Galeries Lafayette Nice Cap 3000 - CDD 35h,NONE,none_wrong,41-9011.00,Brand demonstrator/promoter in department store
+mo40,Success Guide - German or Italian  speaker,NONE,none_wrong,43-4051.00,Customer success/support guide
+mo97,Senior Technician,17-3029.00,correct,,Generic technician; catch-all as good as any
+ov30,"Senior Specialist, Europe Controllers",11-3031.01,wrong,13-2011.00,"Specialist in controllers team is an accountant, not a controller"
+mo28,Senior Quantity Surveyor,13-1051.00,correct,,Quantity surveyor = cost estimator
+mo55,"Sr. Account Executive, Advanced Pulmonary Conditions – Accredo - KS/NE/CO/NM/UT/WY - Remote",41-4012.00,acceptable,,Specialty pharmacy sales; 41-4011 better
+ov39,Platform Engineer,15-1252.00,correct,,Platform engineer
+mo12,Team Lead,11-9199.00,wrong,NONE,Team lead with no domain; manager catch-all unjustified
+ov21,Manager - Legal Entity Controller,11-3031.01,correct,,Legal entity controller
+mo56,Electronic Technician I (Shift B) (Conversion),49-2094.00,correct,,Electronics technician
+mo3,Senior EMC & RF Test Technician - 1st Shift,17-3029.00,acceptable,,EMC/RF test tech; 17-3023 Electrical and Electronic Engineering Technicians better
+mo39,GCP Presales Specialist,NONE,none_wrong,41-9031.00,Cloud presales = sales engineer
+mo70,Millwright,49-9044.00,correct,,Millwright
+ov34,Staff Software Engineer - Customer Engagement & Docs Platform,15-1252.00,correct,,Software engineer
+ov1,"Software Engineer, Developer Platform",15-1252.00,correct,,Software engineer
+ov17,GTM Compliance Analyst,13-1041.00,correct,,Trade compliance analyst
+ov14,Trade Compliance Analyst,13-1041.00,correct,,Trade compliance analyst
+ov6,"Sr Software Engineer, AI Agent Platform",15-1252.00,correct,,Software engineer
+mo61,Principal Partner Account Manager - MSPs,41-4012.00,acceptable,,Tech channel account manager; 41-4011 better
+mo59,Full-Time Beauty Lead Advisor - Sephora,41-2031.00,correct,,Beauty retail advisor
+mo49,Phlebotomist,31-9097.00,correct,,Phlebotomist
+mo13,Sr Financial Analyst,13-2051.00,correct,,Financial analyst
+mo23,Partner Solutions Architecture Manager,11-3021.00,correct,,Manager of solutions architects
+mo26,Junior Sales Operations Specialist,41-9099.00,wrong,13-1199.00,"Sales operations is business operations support, not selling"
+mo41,Enterprise Corporate Sales Account Executive - Healthcare & Life Sciences,41-4011.00,correct,,Enterprise sales AE
+mo72,Etch Process Engineer,17-2199.06,correct,,Semiconductor process engineer
+mo54,Solutions Architect - Presales | Elastic,15-1299.08,correct,,Solutions architect
+ov23,Specialist – Regional Sourcing & Procurement,13-1023.00,correct,,Procurement specialist
+mo7,Senior Advisory AI Foundry Architect,17-1011.00,wrong,41-9031.00,"Presales AI architect in sales, not a building architect"
+mo98,Production Technician I,49-9043.00,wrong,51-9199.00,"Production technician is production worker, not machinery maintenance"
+mo32,"Security Engineer, Offensive Security",15-1299.04,correct,,Offensive security engineer
+mo51,"Specialty Representative/Sr Specialty Representative - Cardiovascular - Macon, GA",41-4012.00,acceptable,,Pharma rep; 41-4011 better (cf. mo48)
+mo14,"Senior Marketing Specialist - Loyalty Marketing (Hybrid - Seattle, WA)",13-1161.00,correct,,Marketing specialist
+mo5,Especialista em Atendimento ao Cliente | São Paulo/SP (Presencial) | Multicanal | Site de Empregos,NONE,none_wrong,43-4051.00,Customer service specialist (Portuguese)
+ov7,Sr. ServiceNow Platform Engineer/Architect,15-1252.00,correct,,ServiceNow platform engineer
+ov29,Purchasing Controller  (temp role for 6 months),11-3031.01,wrong,13-2051.00,"Purchasing controlling = cost analysis, not treasurer/controller manager"
+mo16,Lagermitarbeiter:in (m/w/d),51-9199.00,wrong,53-7062.00,Warehouse worker
+mo21,Superviseur (H/F) - Bilingue - Français/Anglais,NONE,none_wrong,43-1011.00,Bilingual (call-centre) supervisor
+ov50,"Senior Software Engineer, Data Enablement Platform",15-1252.00,correct,,Software engineer
+mo50,A Tech,15-1232.00,wrong,49-3023.00,"A Tech = A-level automotive technician, not IT support"
+mo62,Lab Specimen Processor,29-2012.00,correct,,Specimen processing; lab technician defensible
+mo80,Staff R&D Engineer,17-2199.00,correct,,"R&D engineer, generic"
+mo27,Director Customer Logistics - Ecommerce,11-3071.00,correct,,Logistics director
+mo95,Senior  Finance Analyst,13-2051.00,correct,,Finance analyst
+mo48,Especialista em Gestão de Incidentes,NONE,none_wrong,15-1244.00,IT incident management specialist
+mo41,EE Architect (Server),NONE,none_wrong,17-2061.00,Server hardware electrical architect
+mo74,Home Health Physical Therapist-PRN,29-1123.00,correct,,Physical therapist
+mo85,"Senior Engineer, Research Science Engineering",15-1221.00,acceptable,,Research engineering role; 15-1252 possibly closer
+mo4,Senior M&E Executive,NONE,none_wrong,17-2141.00,Mechanical & electrical building services engineer
+mo64,Xfinity Retail Sales Consultant,41-2031.00,correct,,Retail sales
+ov2,"AP Manager, Controller",11-3031.01,correct,,AP manager/controller
+mo37,Senior Technician-AutoNation Chevrolet Waco-$33,NONE,none_wrong,49-3023.00,Automotive service technician
+ov37,"Analyst, Commercial Compliance Europe",13-1041.00,correct,,Compliance analyst
+mo19,"Outcomes Architect, Italy (Customer Success)",NONE,none_wrong,13-1111.00,Customer success value/outcomes consultant
+mo81,Seasonal sales floor associate,41-2031.00,correct,,Retail sales
+mo49,Méréstechnológiai mérnök,NONE,none_wrong,17-2199.00,Measurement technology engineer (Hungarian)
+ov24,QSR Controller,11-3031.01,correct,,Restaurant finance controller
+ov43,ServiceNow Platform Engineer - Insurance Smart Apps,15-1252.00,correct,,ServiceNow platform engineer
+mo5,"Sr. Analyst, Interconnected Strategy",43-9199.00,wrong,13-1111.00,"Strategy analyst, not office support"
+ov18,Procurement Svc Delivery Sr Specialist,13-1023.00,correct,,Procurement specialist
