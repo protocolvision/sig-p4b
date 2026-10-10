@@ -90,3 +90,12 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     body, metric, controls, workforce, rule cited). These serve the purposes section 4.2 gave filings
     (F1–F3, D2, I4 citations, diffusion). Gates: kappa 0.6 or more per code, and a clean Opus check with
     0.7 precision and recall per code.
+
+11. **Passage coding: full second coder and consensus values.** On the 10% overlap (222 passages), own_use
+    (kappa 0.77), product (0.79) and controls (0.67) pass. reorg, body, metric, workforce and rule_cited
+    fail, but each has 0–12 positives in the overlap, too few for kappa. Before any further results:
+    - Sonnet codes all 2,216 passages, and kappa is recomputed on the full set with the gate unchanged (0.6).
+    - Each code's final value is yes only when both models say yes.
+    - The clean Opus check (40 passages, at least 5 positives per code) measures precision and recall of
+      these consensus values.
+    - A code that fails kappa or the clean check is reported as unreliable and not used for F1–F3.
