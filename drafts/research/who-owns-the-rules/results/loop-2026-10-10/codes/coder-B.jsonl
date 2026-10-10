@@ -1,0 +1,298 @@
+{"id": "R8468", "primary": "OT", "secondary": "", "note": "Agent performs payroll data check; no rule work described"}
+{"id": "R9142", "primary": "OT", "secondary": "", "note": "Finance staff writing SQL queries"}
+{"id": "R4431", "primary": "AO", "secondary": "", "note": "Engineers review agent-written pull requests"}
+{"id": "R7560", "primary": "OT", "secondary": "PE", "note": "AI applies policy in approvals; executing, not designing the gate"}
+{"id": "R6277", "primary": "OT", "secondary": "", "note": "Monitoring software rates employees"}
+{"id": "R6158", "primary": "OT", "secondary": "PE", "note": "Human must take termination decisions; decision act, rule implied"}
+{"id": "R7558", "primary": "AO", "secondary": "", "note": "Applying AI automation to finance operations"}
+{"id": "R9819", "primary": "OT", "secondary": "", "note": "Less time on email"}
+{"id": "R1666", "primary": "OT", "secondary": "", "note": "Human handles escalated frustrated customers"}
+{"id": "R4736", "primary": "AO", "secondary": "PE", "note": "Steward approves AI systems and manages their risk"}
+{"id": "R6017", "primary": "AO", "secondary": "PE", "note": "Rulesets configure automatic AI code review"}
+{"id": "R5137", "primary": "AO", "secondary": "", "note": "Engineers review agent-generated PRs"}
+{"id": "R1615", "primary": "AO", "secondary": "", "note": "Lawyers review and correct AI output"}
+{"id": "R9845", "primary": "OT", "secondary": "AO", "note": "Choosing tasks to delegate to AI"}
+{"id": "R7348", "primary": "OT", "secondary": "PE", "note": "Agent applies sourcing policy; executing rules"}
+{"id": "R3379", "primary": "AO", "secondary": "PE", "note": "Translating SOPs into agent workflows"}
+{"id": "R1065", "primary": "OT", "secondary": "", "note": "Agent answers HR inquiries"}
+{"id": "R4592", "primary": "OT", "secondary": "", "note": "Sub-agent sends outreach"}
+{"id": "R8227", "primary": "OT", "secondary": "AO", "note": "Chatbots fail to recognize rights; failure reported, no inference work"}
+{"id": "R7070", "primary": "AO", "secondary": "PE", "note": "Assigning human owners to agent identities"}
+{"id": "R8424", "primary": "OT", "secondary": "", "note": "Coding with Copilot"}
+{"id": "R9071", "primary": "OT", "secondary": "", "note": "Generic workflow automation"}
+{"id": "R1191", "primary": "OT", "secondary": "", "note": "Agents automate workstreams"}
+{"id": "R6396", "primary": "OT", "secondary": "", "note": "AI covers revision decisions for publications"}
+{"id": "R7896", "primary": "OT", "secondary": "", "note": "Employer informs workers about AI system"}
+{"id": "R8511", "primary": "OT", "secondary": "", "note": "Auditors analyze electronic data"}
+{"id": "R9984", "primary": "OT", "secondary": "RD", "note": "Tracking sales workflow metrics; no cross-functional trade-off"}
+{"id": "R9877", "primary": "AO", "secondary": "", "note": "Purchaser reviews agent-proposed PO changes"}
+{"id": "R1042", "primary": "OT", "secondary": "", "note": "Exploration activities with Copilot"}
+{"id": "R1434", "primary": "OT", "secondary": "", "note": "Claude Code automates UI tasks"}
+{"id": "R3844", "primary": "OT", "secondary": "", "note": "Information analysis shrinking"}
+{"id": "R3736", "primary": "OT", "secondary": "", "note": "Billing rule for lawyers"}
+{"id": "R9830", "primary": "OT", "secondary": "PE", "note": "Agent flags expenses against policy"}
+{"id": "R5303", "primary": "AO", "secondary": "", "note": "Owns customer-facing AI agent accuracy and handoffs"}
+{"id": "R2206", "primary": "AO", "secondary": "", "note": "Recruiters guide the assistant"}
+{"id": "R8405", "primary": "OT", "secondary": "", "note": "AI monitors worker performance"}
+{"id": "R4820", "primary": "OT", "secondary": "", "note": "Claude automates coding via API"}
+{"id": "R6956", "primary": "OT", "secondary": "PE", "note": "Split of decisions between AI and humans described"}
+{"id": "R6737", "primary": "OT", "secondary": "AO", "note": "Users delegate whole tasks to Claude"}
+{"id": "R1802", "primary": "AO", "secondary": "", "note": "Building test batches for an agent"}
+{"id": "R3499", "primary": "OT", "secondary": "", "note": "Reconciliation tasks shrinking"}
+{"id": "R8529", "primary": "AO", "secondary": "PE", "note": "Finding shadow agents, registering as managed identities"}
+{"id": "R9407", "primary": "OT", "secondary": "", "note": "Support agents resolve issues with AI"}
+{"id": "R7276", "primary": "OT", "secondary": "", "note": "Staff self-check drafts before Legal"}
+{"id": "R5326", "primary": "OT", "secondary": "", "note": "Analysts' manual follow-up shrinking"}
+{"id": "R7498", "primary": "OT", "secondary": "", "note": "Building sales automation workflows"}
+{"id": "R6665", "primary": "OT", "secondary": "", "note": "Claude redlines contracts with playbook"}
+{"id": "R3469", "primary": "AO", "secondary": "PE", "note": "Second-person approval of agent PRs"}
+{"id": "R6656", "primary": "OT", "secondary": "PE", "note": "Agent approves low-risk expenses under policy"}
+{"id": "R1640", "primary": "AO", "secondary": "", "note": "Workers manage AI outputs"}
+{"id": "R7252", "primary": "OT", "secondary": "", "note": "LLM pipeline migrates test files"}
+{"id": "R3457", "primary": "OT", "secondary": "", "note": "Sub-agent evaluates candidates"}
+{"id": "R9631", "primary": "OT", "secondary": "", "note": "Employees self-serve with agents"}
+{"id": "R8345", "primary": "AO", "secondary": "", "note": "Sponsor decides agent lifecycle"}
+{"id": "R8440", "primary": "AO", "secondary": "", "note": "Overseeing design of agentic systems"}
+{"id": "R4669", "primary": "OT", "secondary": "", "note": "Human reps for unresolved chatbot requests"}
+{"id": "R3738", "primary": "AO", "secondary": "", "note": "Overseeing and overriding automated decisions"}
+{"id": "R5876", "primary": "AO", "secondary": "PE", "note": "Configuring agent escalation subagent"}
+{"id": "R9045", "primary": "OT", "secondary": "", "note": "Text classification automated"}
+{"id": "R3924", "primary": "OT", "secondary": "", "note": "Billing for reviewing AI output"}
+{"id": "R1170", "primary": "OT", "secondary": "", "note": "Legal builds routing phone tree"}
+{"id": "R4054", "primary": "OT", "secondary": "", "note": "Employers use AI in recruitment"}
+{"id": "R7298", "primary": "OT", "secondary": "", "note": "Finance staff query data via agent"}
+{"id": "R4858", "primary": "OT", "secondary": "", "note": "AI summarizes incidents"}
+{"id": "R8958", "primary": "PE", "secondary": "AO", "note": "Writing supervisory procedures covering AI agents"}
+{"id": "R2505", "primary": "OT", "secondary": "", "note": "Redeploying engineers, not backfilling roles"}
+{"id": "R7594", "primary": "OT", "secondary": "", "note": "Writing communications with AI"}
+{"id": "R9975", "primary": "OT", "secondary": "", "note": "Answering support questions with copilot"}
+{"id": "R2422", "primary": "OT", "secondary": "", "note": "Agent researches leads"}
+{"id": "R1820", "primary": "OT", "secondary": "", "note": "AI retrieves policies"}
+{"id": "R9974", "primary": "AO", "secondary": "", "note": "Choosing which work suits agents"}
+{"id": "R7847", "primary": "OT", "secondary": "", "note": "Junior hiring shrinking"}
+{"id": "R9039", "primary": "AO", "secondary": "", "note": "Human halts high-risk AI system"}
+{"id": "R3312", "primary": "AO", "secondary": "", "note": "Creating agents and improving prompts"}
+{"id": "R2515", "primary": "AO", "secondary": "", "note": "Accountants override AI errors"}
+{"id": "R9042", "primary": "OT", "secondary": "", "note": "Legal reviews marketing content by risk level"}
+{"id": "R6915", "primary": "PE", "secondary": "AO", "note": "Encoding playbook positions and risk tolerances for agent"}
+{"id": "R7514", "primary": "OT", "secondary": "", "note": "Auditors evaluate electronic evidence and IT controls"}
+{"id": "R3481", "primary": "AO", "secondary": "", "note": "Owns content the AI agent draws from"}
+{"id": "R6954", "primary": "OT", "secondary": "", "note": "AI scores survey sentiment"}
+{"id": "R9196", "primary": "OT", "secondary": "", "note": "Agent-assist drafts responses"}
+{"id": "R5362", "primary": "OT", "secondary": "", "note": "Broader technical tasks with Claude"}
+{"id": "R7451", "primary": "OT", "secondary": "", "note": "Drafting contracts with GPT-4"}
+{"id": "R6843", "primary": "OT", "secondary": "", "note": "Scheduling appointments automatable"}
+{"id": "R1948", "primary": "OT", "secondary": "", "note": "Drafting memos with GPT-4"}
+{"id": "R9658", "primary": "OT", "secondary": "", "note": "Assistant prepares meeting briefs"}
+{"id": "R7335", "primary": "AO", "secondary": "", "note": "Prompting, checking, fixing LLM outputs"}
+{"id": "R8739", "primary": "AO", "secondary": "", "note": "Implementing AI tools for close processes"}
+{"id": "R2839", "primary": "PE", "secondary": "AO", "note": "Data policies govern agent capabilities"}
+{"id": "R4131", "primary": "OT", "secondary": "AO", "note": "Assessing adverse impact of algorithmic tools"}
+{"id": "R3791", "primary": "AO", "secondary": "", "note": "Reviewing quality of AI output"}
+{"id": "R1155", "primary": "AO", "secondary": "PE", "note": "User confirms or denies agent actions"}
+{"id": "R6267", "primary": "OT", "secondary": "", "note": "Supervising lawyers' compliance using GAI"}
+{"id": "R7760", "primary": "AO", "secondary": "", "note": "Configuring an agent in Workday"}
+{"id": "R4881", "primary": "OT", "secondary": "", "note": "Translation by GenAI"}
+{"id": "R5155", "primary": "OT", "secondary": "", "note": "Agent prepares collection calls"}
+{"id": "R5906", "primary": "OT", "secondary": "", "note": "Computer-intensive work exposure"}
+{"id": "R8222", "primary": "OT", "secondary": "", "note": "Sales information tasks"}
+{"id": "R1762", "primary": "OT", "secondary": "", "note": "Agent matches transactions using tolerance rules"}
+{"id": "R3950", "primary": "OT", "secondary": "", "note": "Chatbot question answering"}
+{"id": "R7224", "primary": "OT", "secondary": "", "note": "Agent recommends dispute actions"}
+{"id": "R4915", "primary": "OT", "secondary": "", "note": "Copilot classifies vendor emails"}
+{"id": "R5585", "primary": "OT", "secondary": "", "note": "Developers complete more tasks"}
+{"id": "R4439", "primary": "OT", "secondary": "", "note": "Agents answer off-script questions"}
+{"id": "R8749", "primary": "OT", "secondary": "", "note": "Billing rule on time saved"}
+{"id": "R4179", "primary": "AO", "secondary": "", "note": "Enabling and tailoring SDR agent"}
+{"id": "R1803", "primary": "AO", "secondary": "", "note": "Human approves agent's redlines"}
+{"id": "R8231", "primary": "AO", "secondary": "PV", "note": "Postmortem on agent incident"}
+{"id": "R1502", "primary": "AO", "secondary": "", "note": "Changing agent guidance and workflows"}
+{"id": "R5399", "primary": "AO", "secondary": "", "note": "Integrating AI into workflows"}
+{"id": "R6654", "primary": "OT", "secondary": "", "note": "Early-career employment decline"}
+{"id": "R1025", "primary": "OT", "secondary": "", "note": "Chatbots as primary channel guidance"}
+{"id": "R4148", "primary": "AO", "secondary": "", "note": "Writing prompts"}
+{"id": "R4332", "primary": "AO", "secondary": "", "note": "Overseers guard against automation bias"}
+{"id": "R5057", "primary": "OT", "secondary": "", "note": "Agent generates first-pass redline"}
+{"id": "R9271", "primary": "PE", "secondary": "AO", "note": "Requesting access packages for agents"}
+{"id": "R4494", "primary": "OT", "secondary": "", "note": "HR screens resumes with AI"}
+{"id": "R9622", "primary": "AO", "secondary": "", "note": "Deploy, monitor, fine-tune agents"}
+{"id": "R9596", "primary": "OT", "secondary": "", "note": "GenAI pattern recognition"}
+{"id": "R2122", "primary": "OT", "secondary": "", "note": "Freelance work declines"}
+{"id": "R3583", "primary": "AO", "secondary": "", "note": "Troubleshooting misrouted intents and API errors"}
+{"id": "R7193", "primary": "OT", "secondary": "", "note": "Client consent for GAI use"}
+{"id": "R4295", "primary": "AO", "secondary": "", "note": "Automated batch testing of agent"}
+{"id": "R7901", "primary": "AO", "secondary": "PE", "note": "Prompting agent on when to escalate"}
+{"id": "R2388", "primary": "OT", "secondary": "", "note": "Bot answers support emails"}
+{"id": "R5827", "primary": "OT", "secondary": "", "note": "AI spreads best practices"}
+{"id": "R7194", "primary": "AO", "secondary": "", "note": "Integrating model monitoring tools"}
+{"id": "R5427", "primary": "AO", "secondary": "PE", "note": "Inspecting agent PR before running workflows"}
+{"id": "R4703", "primary": "AO", "secondary": "", "note": "Watching live AI conversations"}
+{"id": "R7434", "primary": "OT", "secondary": "", "note": "Project management decreases"}
+{"id": "R8950", "primary": "OT", "secondary": "", "note": "Procurement uses GenAI"}
+{"id": "R9867", "primary": "OT", "secondary": "", "note": "AI handles admin tasks"}
+{"id": "R3947", "primary": "OT", "secondary": "", "note": "Generating job descriptions"}
+{"id": "R1896", "primary": "OT", "secondary": "AO", "note": "Experts review terms flagged by agent"}
+{"id": "R3807", "primary": "OT", "secondary": "", "note": "AI allocates tasks"}
+{"id": "R6175", "primary": "OT", "secondary": "", "note": "GenAI coding"}
+{"id": "R4761", "primary": "OT", "secondary": "", "note": "AI selects candidates"}
+{"id": "R9758", "primary": "AO", "secondary": "", "note": "Supervisors review agent interactions, step in"}
+{"id": "R5250", "primary": "AO", "secondary": "", "note": "Deciding when to intervene in AI conversations"}
+{"id": "R1877", "primary": "AO", "secondary": "", "note": "Maintaining lead agent"}
+{"id": "R9524", "primary": "OT", "secondary": "", "note": "Chatbot handles lead generation"}
+{"id": "R9248", "primary": "OT", "secondary": "", "note": "Driving close automation"}
+{"id": "R4550", "primary": "AO", "secondary": "", "note": "Owning portfolio of agent workflows"}
+{"id": "R4973", "primary": "OT", "secondary": "", "note": "Job post composition shifts"}
+{"id": "R9237", "primary": "PE", "secondary": "AO", "note": "Provisioning connectors, tools, permissions for agents"}
+{"id": "R6694", "primary": "OT", "secondary": "", "note": "Agents act without approval"}
+{"id": "R5937", "primary": "OT", "secondary": "", "note": "Algorithms make credit decisions"}
+{"id": "R8444", "primary": "OT", "secondary": "", "note": "Workers discretize activity"}
+{"id": "R3348", "primary": "AO", "secondary": "", "note": "Oversight of AI systems"}
+{"id": "R1050", "primary": "AO", "secondary": "", "note": "Building agents and plugins"}
+{"id": "R3287", "primary": "AO", "secondary": "", "note": "Turning workflows into agents"}
+{"id": "R4041", "primary": "AO", "secondary": "", "note": "Testing and publishing AI tool updates"}
+{"id": "R8174", "primary": "AO", "secondary": "", "note": "Approving agent reconciliation matches"}
+{"id": "R8043", "primary": "AO", "secondary": "", "note": "Approving each agent step"}
+{"id": "R3527", "primary": "OT", "secondary": "", "note": "AI handles service chats"}
+{"id": "R6367", "primary": "OT", "secondary": "", "note": "Information gathering with Copilot"}
+{"id": "R5899", "primary": "OT", "secondary": "", "note": "Proposing solutions with AI"}
+{"id": "R3461", "primary": "OT", "secondary": "", "note": "GenAI recommendations"}
+{"id": "R2160", "primary": "OT", "secondary": "PE", "note": "Defining AI risk roles across functions"}
+{"id": "R8782", "primary": "AO", "secondary": "", "note": "Guardrail checks chatbot responses"}
+{"id": "R7863", "primary": "OT", "secondary": "", "note": "AI literacy for overseers"}
+{"id": "R5394", "primary": "AO", "secondary": "PE", "note": "Assigning human oversight of AI system"}
+{"id": "R1474", "primary": "OT", "secondary": "", "note": "Chatbot negotiates with suppliers"}
+{"id": "R7138", "primary": "OT", "secondary": "", "note": "Recruiting agent tasks"}
+{"id": "R1085", "primary": "OT", "secondary": "", "note": "Autonomous decision-making share"}
+{"id": "R7923", "primary": "OT", "secondary": "", "note": "Parsing XML"}
+{"id": "R1631", "primary": "OT", "secondary": "", "note": "Internal tooling and customer advocacy"}
+{"id": "R7763", "primary": "OT", "secondary": "", "note": "Compliance and tax tasks pruned"}
+{"id": "R4091", "primary": "AO", "secondary": "", "note": "Resolving agent escalations"}
+{"id": "R2768", "primary": "AO", "secondary": "", "note": "Designing and deploying agents"}
+{"id": "R9635", "primary": "PE", "secondary": "AO", "note": "Setting what agent must never answer and escalation rules"}
+{"id": "R7764", "primary": "OT", "secondary": "", "note": "Delivering customer solutions"}
+{"id": "R4593", "primary": "AO", "secondary": "", "note": "Top reps define good assistant output"}
+{"id": "R4413", "primary": "OT", "secondary": "", "note": "Automated dependency PRs"}
+{"id": "R9479", "primary": "AO", "secondary": "", "note": "Routing conversations to AI agent"}
+{"id": "R7643", "primary": "OT", "secondary": "", "note": "Agent sends outreach, manages opt-outs"}
+{"id": "R4263", "primary": "PE", "secondary": "AO", "note": "Implementing human-in-the-loop controls for agents"}
+{"id": "R7467", "primary": "AO", "secondary": "", "note": "Assigning roles to AI tools"}
+{"id": "R1642", "primary": "AO", "secondary": "", "note": "Ensuring AI meets business outcomes"}
+{"id": "R6186", "primary": "PE", "secondary": "AO", "note": "Security groups control who uses agent skills"}
+{"id": "R9416", "primary": "AO", "secondary": "PE", "note": "Configuring agent handoff triggers"}
+{"id": "R5812", "primary": "OT", "secondary": "", "note": "Assistant responds to leads"}
+{"id": "R1139", "primary": "AO", "secondary": "", "note": "Monitoring high-risk AI system"}
+{"id": "R9869", "primary": "OT", "secondary": "", "note": "Service activities decline"}
+{"id": "R3869", "primary": "OT", "secondary": "PE", "note": "Agent routes sensitive topics to humans"}
+{"id": "R6952", "primary": "OT", "secondary": "", "note": "Agent reconciles and tests controls"}
+{"id": "R4556", "primary": "PE", "secondary": "", "note": "Requiring peer review for production access"}
+{"id": "R3171", "primary": "OT", "secondary": "", "note": "Piloting and iterating sales tools"}
+{"id": "R2771", "primary": "OT", "secondary": "", "note": "Transaction classification automated"}
+{"id": "R1600", "primary": "AO", "secondary": "", "note": "Supporting daily agent operations"}
+{"id": "R8187", "primary": "OT", "secondary": "", "note": "Auditors investigate flagged items"}
+{"id": "R2799", "primary": "OT", "secondary": "", "note": "Humans review only judgment issues"}
+{"id": "R2394", "primary": "OT", "secondary": "", "note": "Accountants support more clients"}
+{"id": "R6220", "primary": "OT", "secondary": "", "note": "Extra projects with Claude"}
+{"id": "R8307", "primary": "OT", "secondary": "", "note": "Resume scanners prioritize keywords"}
+{"id": "R6160", "primary": "AO", "secondary": "", "note": "Humans guide agents"}
+{"id": "R4217", "primary": "OT", "secondary": "", "note": "Employees create tickets"}
+{"id": "R1340", "primary": "OT", "secondary": "", "note": "Automated decisions share"}
+{"id": "R3724", "primary": "OT", "secondary": "", "note": "Coordinating and training others"}
+{"id": "R8757", "primary": "AO", "secondary": "", "note": "Writing feedback for agent memory"}
+{"id": "R4523", "primary": "OT", "secondary": "", "note": "Agent verifies own work"}
+{"id": "R8466", "primary": "OT", "secondary": "", "note": "Querying databases"}
+{"id": "R9500", "primary": "AO", "secondary": "", "note": "Improving AI tool workflows"}
+{"id": "R3363", "primary": "AO", "secondary": "PE", "note": "Admins approve agents for catalog"}
+{"id": "R3637", "primary": "OT", "secondary": "", "note": "AI in operations and IT"}
+{"id": "R2464", "primary": "OT", "secondary": "", "note": "Java upgrades with AI"}
+{"id": "R9946", "primary": "AO", "secondary": "", "note": "Editing AI call summaries"}
+{"id": "R2791", "primary": "OT", "secondary": "PE", "note": "Agents approve in-policy expenses"}
+{"id": "R8403", "primary": "OT", "secondary": "", "note": "Identifying engineers for redeployment"}
+{"id": "R8825", "primary": "AO", "secondary": "", "note": "Building Agentforce agents"}
+{"id": "R9692", "primary": "PE", "secondary": "AO", "note": "Buyers set negotiation limits for bot"}
+{"id": "R5851", "primary": "OT", "secondary": "", "note": "Customer service agents replaced"}
+{"id": "R5843", "primary": "OT", "secondary": "", "note": "Drafting handbook with GPT-4"}
+{"id": "R2023", "primary": "OT", "secondary": "", "note": "Billing rule"}
+{"id": "R5377", "primary": "OT", "secondary": "", "note": "Basic calculations"}
+{"id": "R1163", "primary": "AO", "secondary": "", "note": "Upgrading chatbots"}
+{"id": "R1848", "primary": "AO", "secondary": "PV", "note": "Reviewing AI conversations for errors and avoidable escalations"}
+{"id": "R2877", "primary": "OT", "secondary": "", "note": "Reactive troubleshooting"}
+{"id": "R6393", "primary": "OT", "secondary": "", "note": "Agents handle employee cases"}
+{"id": "R2263", "primary": "OT", "secondary": "", "note": "Occupations incorporate AI skills"}
+{"id": "R4720", "primary": "AO", "secondary": "", "note": "DevOps and governance for agent deployments"}
+{"id": "R3624", "primary": "OT", "secondary": "", "note": "AI automates tedious tasks"}
+{"id": "R2520", "primary": "OT", "secondary": "", "note": "Agent answers support questions"}
+{"id": "R8665", "primary": "OT", "secondary": "", "note": "Adverse action disclosures"}
+{"id": "R5212", "primary": "OT", "secondary": "", "note": "Correcting software errors"}
+{"id": "R6765", "primary": "OT", "secondary": "", "note": "Human takes transferred HR conversations"}
+{"id": "R4522", "primary": "OT", "secondary": "AO", "note": "Building or using AI tools"}
+{"id": "R9679", "primary": "OT", "secondary": "", "note": "Transactions tasks pruned"}
+{"id": "R2339", "primary": "OT", "secondary": "", "note": "Transactions tasks pruned"}
+{"id": "R2949", "primary": "AO", "secondary": "PE", "note": "Configuring approval assistance agent"}
+{"id": "R5416", "primary": "AO", "secondary": "", "note": "Reviewing LLM-generated changes"}
+{"id": "R8995", "primary": "OT", "secondary": "", "note": "Younger worker hiring slows"}
+{"id": "R9678", "primary": "AO", "secondary": "PE", "note": "Managing agent-to-human escalation paths"}
+{"id": "R5725", "primary": "OT", "secondary": "", "note": "AI makes employment decisions"}
+{"id": "R2848", "primary": "OT", "secondary": "", "note": "Agents handle field requests"}
+{"id": "R6357", "primary": "OT", "secondary": "", "note": "Travel agent residual tasks"}
+{"id": "R1960", "primary": "OT", "secondary": "", "note": "Accountants shift time"}
+{"id": "R1024", "primary": "AO", "secondary": "", "note": "QA-testing AI features"}
+{"id": "R5076", "primary": "AO", "secondary": "", "note": "Turning prompts and agents into reusable resources"}
+{"id": "R4922", "primary": "OT", "secondary": "", "note": "Chatbots reject candidates"}
+{"id": "R6638", "primary": "AO", "secondary": "PE", "note": "Owner configures agent settings and credentials"}
+{"id": "R1437", "primary": "PE", "secondary": "AO", "note": "Approving and enforcing time-bound agent permissions"}
+{"id": "R5423", "primary": "OT", "secondary": "", "note": "Sub-agent sources candidates"}
+{"id": "R6522", "primary": "AO", "secondary": "", "note": "Analysts review agent determinations"}
+{"id": "R7991", "primary": "AO", "secondary": "", "note": "Testing and monitoring GenAI tools"}
+{"id": "R7460", "primary": "OT", "secondary": "PE", "note": "Separating AI development from testing"}
+{"id": "R4013", "primary": "OT", "secondary": "PE", "note": "Documenting AI risk roles"}
+{"id": "R5157", "primary": "OT", "secondary": "", "note": "Emergency call files"}
+{"id": "R4921", "primary": "OT", "secondary": "", "note": "Logging call summaries"}
+{"id": "R1593", "primary": "OT", "secondary": "", "note": "Enabling attorneys"}
+{"id": "R1161", "primary": "OT", "secondary": "", "note": "Recruiter reviews candidates"}
+{"id": "R3967", "primary": "AO", "secondary": "", "note": "Overriding high-risk AI output"}
+{"id": "R5050", "primary": "OT", "secondary": "AO", "note": "Starting agent work from Slack"}
+{"id": "R1256", "primary": "OT", "secondary": "", "note": "Incident investigation"}
+{"id": "R9009", "primary": "AO", "secondary": "", "note": "Human review of automated decisions"}
+{"id": "R5239", "primary": "OT", "secondary": "", "note": "Billing GAI fees"}
+{"id": "R1002", "primary": "PE", "secondary": "AO", "note": "Admin toggle permits agent building"}
+{"id": "R6438", "primary": "OT", "secondary": "PE", "note": "Drivers approve own PRs; approval gate relaxed"}
+{"id": "R6675", "primary": "OT", "secondary": "", "note": "Clerical work"}
+{"id": "R7722", "primary": "OT", "secondary": "", "note": "AI agent resolves issues"}
+{"id": "R8271", "primary": "OT", "secondary": "", "note": "Due diligence on GAI vendors"}
+{"id": "R8449", "primary": "OT", "secondary": "PE", "note": "Humans decide ambiguous approval requests"}
+{"id": "R2928", "primary": "OT", "secondary": "", "note": "Manual migration of remainder"}
+{"id": "R5764", "primary": "OT", "secondary": "", "note": "Product development with AI"}
+{"id": "R3226", "primary": "AO", "secondary": "", "note": "Handling LLM outputs"}
+{"id": "R7199", "primary": "OT", "secondary": "", "note": "GAI training programs"}
+{"id": "R7853", "primary": "OT", "secondary": "", "note": "Assistant schedules interviews"}
+{"id": "R2486", "primary": "OT", "secondary": "", "note": "Lead qualification"}
+{"id": "R6205", "primary": "OT", "secondary": "", "note": "AI resolves driver inquiries"}
+{"id": "R3286", "primary": "OT", "secondary": "", "note": "Collaboration declines"}
+{"id": "R9637", "primary": "OT", "secondary": "PE", "note": "Agent acts with worker's permissions"}
+{"id": "R4964", "primary": "OT", "secondary": "PE", "note": "Agent applies seller hand-off rules"}
+{"id": "R1691", "primary": "OT", "secondary": "", "note": "Conversation types shift"}
+{"id": "R4031", "primary": "OT", "secondary": "", "note": "Managers update succession plans"}
+{"id": "R9959", "primary": "AO", "secondary": "", "note": "Writing agent's prompt"}
+{"id": "R4894", "primary": "OT", "secondary": "", "note": "Agent drafts release notes"}
+{"id": "R8323", "primary": "OT", "secondary": "", "note": "Agent scores prospects"}
+{"id": "R7818", "primary": "AO", "secondary": "PE", "note": "Onboarding agents, defining roles"}
+{"id": "R8233", "primary": "AO", "secondary": "", "note": "Documenting knowledge for AI agent"}
+{"id": "R9906", "primary": "AO", "secondary": "", "note": "Modifying AI contributions"}
+{"id": "R6210", "primary": "OT", "secondary": "", "note": "Content generation"}
+{"id": "R1491", "primary": "AO", "secondary": "PE", "note": "Teammate approval step before agent continues"}
+{"id": "R2641", "primary": "AO", "secondary": "", "note": "Interrupting agent"}
+{"id": "R7721", "primary": "OT", "secondary": "", "note": "Senior software development"}
+{"id": "R6498", "primary": "OT", "secondary": "", "note": "Freelance jobs decline"}
+{"id": "R6123", "primary": "OT", "secondary": "", "note": "Sellers work handed-over leads"}
+{"id": "R5100", "primary": "PE", "secondary": "", "note": "Policies on permissible GAI use"}
+{"id": "R5762", "primary": "AO", "secondary": "", "note": "Building AI products and agents"}
+{"id": "R8577", "primary": "OT", "secondary": "", "note": "Summarization"}
+{"id": "R7862", "primary": "AO", "secondary": "", "note": "Fixing AI assistant errors"}
+{"id": "R1324", "primary": "OT", "secondary": "", "note": "Agent processes invoices"}
+{"id": "R7576", "primary": "OT", "secondary": "", "note": "Itinerary tasks covered"}
+{"id": "R9530", "primary": "OT", "secondary": "", "note": "Adverse action reason selection"}
+{"id": "R5995", "primary": "OT", "secondary": "", "note": "Image creation jobs decline"}
+{"id": "R4845", "primary": "OT", "secondary": "", "note": "Agent converts contracts to data"}
+{"id": "R4652", "primary": "AO", "secondary": "", "note": "Triaging errors and broken intents"}
+{"id": "R1294", "primary": "AO", "secondary": "", "note": "Maintaining legal AI review system"}
+{"id": "R8946", "primary": "AO", "secondary": "", "note": "Filling agent grounding settings"}
