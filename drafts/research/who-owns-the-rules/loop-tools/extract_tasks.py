@@ -32,13 +32,36 @@ PROMPTS = {
         "education, benefits, pay, and descriptions of the company or team. If the posting lists no tasks, "
         "return an empty list."
     ),
+    # Filing prompt v2 (10 October 2026), after the clean check of v1 found precision 0.39
+    # (results/rerun-2026-10-10/review/extraction-check-filings.md). v1 is in git history.
     "filing": (
-        "You read one passage from a company's annual or quarterly report. List every activity the passage "
-        "says the company, its people or its systems perform, have started, or have stopped. Copy each one "
-        "exactly as written, one activity per item. Leave out forecasts, general risk statements that name "
-        "no activity, and legal boilerplate. If there are none, return an empty list."
+        "You read one passage from a company's annual or quarterly report. List every activity that THIS "
+        "company, its employees, or software it runs on its own operations has actually performed, is "
+        "performing, has started or has stopped, as stated in the passage. Copy each one exactly, character "
+        "for character (keep quotes, capitals and punctuation; never use \"...\"), one complete clause per "
+        "item.\n\n"
+        "Do NOT include:\n"
+        "- what a product or platform can do, is designed to do, or enables customers to do (\"X enables\", "
+        "\"customers can\", \"allows organizations to\"), unless the passage says the company itself runs it "
+        "on its own operations or delivers it as a service it performs;\n"
+        "- actions by customers, partners, competitors, regulators, merchants, acquired companies before the "
+        "acquisition, or the market;\n"
+        "- forecasts, intentions and plans (expect, intend, plan, will, potential, may, could);\n"
+        "- goals, priorities or commitments (focused on, committed to, our strategy is);\n"
+        "- risk statements, hypotheticals, accounting definitions, and legal or non-GAAP boilerplate.\n\n"
+        "Before you output an item, check that its grammatical subject is the company (we, the Company, a "
+        "named subsidiary), its people, or its internal systems, and that the verb describes something done, "
+        "not something possible. If none qualify, return an empty list.\n\n"
+        "Examples of what NOT to extract:\n"
+        "- \"the AI agents can operate independently to perform tasks across various business functions\" "
+        "(a product capability)\n"
+        "- \"traditional and non-traditional competitors use other, new data sources and technologies\" "
+        "(competitors' actions)\n"
+        "- \"we are focused on expanding profitability, free cash flows and capital return\" (a goal)\n"
+        "- \"We intend to continue to invest in our research and development capabilities\" (an intention)"
     ),
 }
+PROMPT_VERSION = {"posting": "v1", "filing": "v2"}
 
 SCHEMA = {
     "type": "object",
@@ -83,7 +106,8 @@ def submit(a):
     bad = [doc["id"] for doc in docs if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", doc["id"])]
     if bad:
         sys.exit(f"{len(bad)} ids are not valid batch custom_ids ([A-Za-z0-9_-], 1-64 chars), e.g. {bad[0]}")
-    state ={"model": a.model, "input": str(pathlib.Path(a.input).resolve()), "batches": []}
+    state = {"model": a.model, "input": str(pathlib.Path(a.input).resolve()), "batches": [],
+             "prompt_version": PROMPT_VERSION}
     for i in range(0, len(docs), BATCH_SIZE):
         chunk = docs[i : i + BATCH_SIZE]
         reqs = [
@@ -141,7 +165,8 @@ def collect(a):
                     n_verbatim += verbatim
                     out.write(json.dumps({"doc_id": res.custom_id, "task_id": f"{res.custom_id}:{k}",
                                           "span": t["span"], "performer": t["performer"],
-                                          "verbatim": verbatim, "model": state["model"]}) + "\n")
+                                          "verbatim": verbatim, "model": state["model"],
+                                          "prompt_version": state.get("prompt_version")}) + "\n")
     report = {"model": state["model"], "docs": n_docs, "tasks": n_tasks,
               "verbatim_rate": round(n_verbatim / n_tasks, 4) if n_tasks else None, "failed": failed}
     (d / "report.json").write_text(json.dumps(report, indent=1))
