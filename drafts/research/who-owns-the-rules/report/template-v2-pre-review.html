@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Research report template v2 (placeholder data)</title>
+<style>
+/* Layout: one 42rem text column, five numbered pages (a real sequence), figures at column width; wide matrices scroll inside their own box.
+   One typeface (the site's Lora/Charter/Georgia stack). Paper, ink, one forest accent. Hard = solid, soft = frayed/dashed. */
+:root {
+  color-scheme: light;
+  --bg: #fbfbf8;          /* paper, slight green bias */
+  --fg: #1d2320;          /* ink */
+  --muted: #5d655f;
+  --rule: #dfe3dc;
+  --fill: #f1f3ee;
+  --accent: #0f6e56;      /* forest */
+  --accent-soft: #d6e9e2;
+  --warn: #a8481b;        /* contradicts / missing: always paired with a shape and a word */
+  --warn-soft: #f4e2d8;
+  --font: Lora, Charter, Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --fill: #1b211e;
+  --accent: #46b996; --accent-soft: #1d3a32; --warn: #e48a5c; --warn-soft: #3a261b;
+} }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121614; --fg: #e5e9e3; --muted: #9aa49c; --rule: #2b332e; --fill: #1b211e;
+  --accent: #46b996; --accent-soft: #1d3a32; --warn: #e48a5c; --warn-soft: #3a261b;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.65 var(--font); font-variant-numeric: lining-nums tabular-nums; }
+.wrap { max-width: 42rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 1.5rem 4rem; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+a { color: var(--accent); text-underline-offset: .15em; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: .4rem 0 .8rem; text-wrap: balance; }
+h2 { font-size: 1.35rem; line-height: 1.3; margin: 0 0 .6rem; text-wrap: balance; }
+h3 { font-size: 1.05rem; margin: 2rem 0 .4rem; }
+p { margin: 0 0 1rem; }
+.small { font-size: .9rem; } .muted { color: var(--muted); }
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; color: var(--muted); font-size: .9rem; }
+.rope { display: block; width: 100%; height: 14px; margin: .6rem 0 1.2rem; }
+.rope path { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; }
+.rope path.frayed { stroke: var(--muted); stroke-width: 1.2; }
+nav.pages { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg); border-bottom: 1px solid var(--rule); display: flex; gap: .25rem 1rem; overflow-x: auto; padding-block: .1rem; margin-bottom: 1.5rem; font-size: .92rem; }
+nav.pages a { color: var(--muted); text-decoration: none; padding: .6rem .1rem; white-space: nowrap; }
+nav.pages a:hover, nav.pages a[aria-current="true"] { color: var(--fg); text-decoration: underline; text-underline-offset: .35em; text-decoration-color: var(--accent); }
+section.page { padding-top: 2.5rem; border-top: 1px solid var(--rule); margin-top: 2.5rem; scroll-margin-top: 3rem; }
+section.page:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.pageno { color: var(--muted); font-size: .88rem; margin-bottom: .3rem; }
+.ph { display: inline-block; font-size: .72rem; letter-spacing: .06em; font-weight: 700; color: var(--warn); border: 1px solid var(--warn); border-radius: 3px; padding: 0 .35rem; line-height: 1.5; vertical-align: .15em; }
+.slot { border: 1px dashed var(--muted); border-radius: 4px; padding: .8rem 1rem; color: var(--muted); margin-bottom: 1rem; }
+figure { margin: 1.25rem 0; padding: 0; }
+figcaption { font-size: .9rem; color: var(--muted); margin-top: .5rem; }
+.fig-head { display: flex; flex-wrap: wrap; gap: .25rem .75rem; align-items: baseline; justify-content: space-between; margin-bottom: .5rem; }
+.fig-head b { font-weight: 600; }
+.scroll { overflow-x: auto; max-width: 100%; }
+svg text { font-family: var(--font); fill: var(--fg); }
+svg .mut { fill: var(--muted); }
+
+/* 1 verdict card */
+.vcard { border: 1px solid var(--fg); border-radius: 4px; }
+.vrow { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,2fr) minmax(0,1fr); gap: .5rem 1rem; align-items: center; padding: .8rem 1rem; border-top: 1px solid var(--rule); }
+.vrow:first-child { border-top: 0; }
+.vrow.on { background: var(--accent-soft); }
+.vrow .name { font-weight: 600; line-height: 1.35; }
+.vrow .name small { display: block; font-weight: 400; color: var(--muted); font-size: .82rem; }
+.meter { position: relative; height: 10px; background: var(--fill); border-radius: 2px; box-shadow: inset 0 0 0 1px var(--rule); }
+.meter i { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 2px; }
+.vrow .nums { font-size: .86rem; color: var(--muted); display: flex; flex-direction: column; gap: .1rem; }
+.vrow .lbl { display: flex; justify-content: space-between; font-size: .82rem; color: var(--muted); margin-bottom: .2rem; }
+.fs { font-size: .86rem; }
+.fs b { display: block; font-weight: 600; color: var(--fg); }
+@media (max-width: 34rem) { .vrow { grid-template-columns: 1fr; } .vrow .fs b { display: inline; } }
+
+/* 2 grid */
+.gridwrap table { border-collapse: collapse; width: 100%; min-width: 26rem; }
+.gridwrap th, .gridwrap td { padding: .45rem .3rem; text-align: center; border-bottom: 1px solid var(--rule); font-weight: 400; }
+.gridwrap th[scope=row] { text-align: left; font-size: .95rem; line-height: 1.35; min-width: 11rem; padding-right: .6rem; }
+.gridwrap thead th { font-size: .82rem; color: var(--muted); vertical-align: bottom; }
+.gridwrap td svg { width: 22px; height: 22px; display: block; margin: auto; }
+.gridwrap .res { font-size: .82rem; text-align: left; white-space: nowrap; }
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.25rem; margin: .8rem 0 0; padding: 0; list-style: none; font-size: .88rem; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: .4rem; }
+.legend svg { width: 18px; height: 18px; flex: none; }
+.g-strong { fill: var(--accent); } .g-single { fill: none; stroke: var(--accent); stroke-width: 2; } .g-dot { fill: var(--accent); }
+.g-none { stroke: var(--muted); stroke-width: 2; stroke-linecap: round; } .g-contra { stroke: var(--warn); stroke-width: 2.5; stroke-linecap: round; fill: none; }
+
+/* 3 feature profile */
+.prof { display: grid; gap: .1rem; }
+.prow { display: grid; grid-template-columns: 11rem 1fr 3.2rem; align-items: center; gap: .5rem; padding: .3rem .4rem; border-radius: 3px; }
+.prow.present { box-shadow: inset 0 0 0 2px var(--accent); background: var(--accent-soft); margin-top: .6rem; }
+.prow .nm { font-size: .92rem; line-height: 1.3; }
+.prow .sc { font-size: .85rem; text-align: right; color: var(--muted); }
+.prow svg { width: 100%; height: 22px; display: block; }
+.fhead { display: grid; grid-template-columns: 11rem 1fr 3.2rem; gap: .5rem; padding: 0 .4rem; font-size: .75rem; color: var(--muted); }
+.fkey { columns: 2 14rem; column-gap: 1.5rem; font-size: .85rem; color: var(--muted); padding: 0; list-style: none; margin: .8rem 0 0; }
+.fkey li { break-inside: avoid; padding: .1rem 0; } .fkey b { color: var(--fg); font-weight: 600; margin-right: .35rem; }
+@media (max-width: 34rem) { .prow, .fhead { grid-template-columns: 1fr 3rem; } .prow .nm { grid-column: 1; } .prow .sc { grid-column: 2; grid-row: 1; } .prow svg { grid-column: 1 / -1; } .fhead span:first-child { display: none; } }
+
+/* 4 head to head and 5 timeline use svg */
+.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ev { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 1.5rem; font-size: .88rem; }
+.ev li { display: flex; gap: .5rem; } .ev b { flex: none; min-width: 2.2rem; color: var(--muted); font-weight: 600; }
+@media (max-width: 34rem) { .ev { grid-template-columns: 1fr; } }
+
+/* 6 funnel & coverage */
+.funnel { display: grid; gap: .4rem; }
+.frow { display: grid; grid-template-columns: minmax(0,1fr); gap: .15rem; }
+.frow .bar { height: 26px; background: var(--accent); border-radius: 2px; display: flex; align-items: center; padding-left: .5rem; color: var(--bg); font-weight: 700; font-size: .88rem; min-width: 3.2rem; }
+.frow .lab { font-size: .88rem; color: var(--muted); }
+.cov { display: grid; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); gap: .4rem .8rem; list-style: none; padding: 0; margin: .6rem 0 0; font-size: .9rem; }
+.cov li { display: flex; align-items: center; gap: .5rem; } .cov svg { width: 18px; height: 18px; flex: none; }
+.caveat { border-left: 3px solid var(--warn); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+.caveat h3 { margin-top: 0; }
+
+/* 7 changes */
+.chg { list-style: none; padding: 0; margin: 0; }
+.chg li { display: grid; grid-template-columns: 9.5rem 1fr; gap: .2rem 1rem; padding: .6rem 0; border-top: 1px solid var(--rule); }
+.chg .tag { font-size: .85rem; display: flex; align-items: center; gap: .45rem; color: var(--fg); font-weight: 600; }
+.chg .tag svg { width: 18px; height: 18px; flex: none; }
+@media (max-width: 34rem) { .chg li { grid-template-columns: 1fr; } }
+
+/* 8 drawer & sources */
+details { border-top: 1px solid var(--rule); padding: .7rem 0; }
+details:last-of-type { border-bottom: 1px solid var(--rule); }
+summary { cursor: pointer; font-weight: 600; padding: .2rem 0; }
+details ol, details ul { padding-left: 1.2rem; margin: .5rem 0 0; }
+details li { margin-bottom: .45rem; font-size: .96rem; }
+.src { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: .88rem; }
+.src th, .src td { text-align: left; padding: .4rem .6rem .4rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.src th { color: var(--muted); font-weight: 600; }
+.src td:first-child { font-variant-numeric: tabular-nums; white-space: nowrap; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span id="m-series"></span><span id="m-date"></span></header>
+<svg class="rope" viewBox="0 0 400 14" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 7 H250"/>
+  <path class="frayed" d="M250 7 L270 5 L290 9 L312 6 L334 9 L356 5 L378 8 L400 6"/>
+  <path class="frayed" d="M250 7 L274 9 L296 5 L320 8 L344 4 L370 9 L400 8" opacity=".6"/>
+</svg>
+<h1 id="m-title"></h1>
+<p class="lede muted" id="m-sub"></p>
+
+<nav class="pages" aria-label="Report pages">
+  <a href="#p1">1 Verdict</a><a href="#p2">2 Evidence</a><a href="#p3">3 Pattern match</a><a href="#p4">4 Corpus</a><a href="#p5">5 Since round one</a><a href="#appendix">Method and sources</a>
+</nav>
+
+<main>
+<!-- PAGE 1 -->
+<section class="page" id="p1">
+  <div class="pageno">Page 1 of 5</div>
+  <h2>Verdict, with the power of the test</h2>
+  <p class="slot">PROSE SLOT. Two or three sentences stating the verdict and what the test could and could not show. Replace this paragraph in the final report.</p>
+  <figure>
+    <div class="fig-head"><b>Four possible verdicts</b><span class="ph">PLACEHOLDER</span></div>
+    <div class="vcard" id="verdicts" role="list"></div>
+    <figcaption>Power is how often the verdict is returned when its pattern is the truth. False support is how often the "supported" verdict is returned when it is not. Each verdict is shown with both.</figcaption>
+  </figure>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="p2">
+  <div class="pageno">Page 2 of 5</div>
+  <h2>What each instrument found</h2>
+  <p class="slot">PROSE SLOT. One paragraph on how to read the grid: strong means three or more instruments with different data; single means one.</p>
+  <figure>
+    <div class="fig-head"><b>Hypotheses by instrument</b><span class="ph">PLACEHOLDER</span></div>
+    <div class="scroll gridwrap" id="grid" tabindex="0" role="region" aria-label="Hypotheses by instrument grid, scrolls sideways on narrow screens"></div>
+    <ul class="legend" id="grid-legend"></ul>
+  </figure>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="p3">
+  <div class="pageno">Page 3 of 5</div>
+  <h2>How the present matches the historical patterns</h2>
+  <p class="slot">PROSE SLOT. Explain that coders saw features, not pattern names, and that a script scored the match.</p>
+  <figure>
+    <div class="fig-head"><b>Feature profiles</b><span class="ph">PLACEHOLDER</span></div>
+    <div id="profiles" class="prof" role="table" aria-label="Feature profiles by pattern"></div>
+    <ul class="fkey" id="fkey"></ul>
+    <ul class="legend" id="prof-legend"></ul>
+  </figure>
+
+  <h3>Head to head: <span id="h2h-names"></span></h3>
+  <figure>
+    <div class="fig-head"><b id="h2h-title">Six separating features</b><span class="ph">PLACEHOLDER</span></div>
+    <div class="chart" id="h2h"></div>
+    <figcaption id="h2h-cap"></figcaption>
+  </figure>
+
+  <h3>Timeline on a shared axis</h3>
+  <figure>
+    <div class="fig-head"><b id="tl-title"></b><span class="ph">PLACEHOLDER</span></div>
+    <div class="chart" id="tl"></div>
+    <ul class="ev" id="tl-list"></ul>
+    <figcaption id="tl-cap"></figcaption>
+  </figure>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="p4">
+  <div class="pageno">Page 4 of 5</div>
+  <h2>What we read, and what is missing</h2>
+  <p class="slot">PROSE SLOT. How the corpus was built, and why its gaps matter for the verdict.</p>
+  <figure>
+    <div class="fig-head"><b>Corpus funnel</b><span class="ph">PLACEHOLDER</span></div>
+    <div class="funnel" id="funnel"></div>
+  </figure>
+  <figure>
+    <div class="fig-head"><b>Sector coverage</b><span class="ph">PLACEHOLDER</span></div>
+    <ul class="cov" id="cov"></ul>
+    <div class="caveat"><h3>Coverage caveat <span class="ph">PLACEHOLDER</span></h3><div id="caveat"></div></div>
+  </figure>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page" id="p5">
+  <div class="pageno">Page 5 of 5</div>
+  <h2>What changed since round one</h2>
+  <p class="slot">PROSE SLOT. One line on how the comparison was made, then the list.</p>
+  <figure>
+    <div class="fig-head"><b>Round one findings, rechecked</b><span class="ph">PLACEHOLDER</span></div>
+    <ul class="chg" id="changes"></ul>
+  </figure>
+  <p class="slot">PROSE SLOT. Limits and what to do next.</p>
+</section>
+
+<section class="page" id="appendix">
+  <h2>Deviations, method and sources</h2>
+  <details id="d-dev"><summary>Deviations from the pre-registered design <span class="ph">PLACEHOLDER</span></summary><ol id="dev"></ol></details>
+  <details id="d-method"><summary>Method in brief <span class="ph">PLACEHOLDER</span></summary><ol id="method"></ol></details>
+  <details id="d-src" open><summary>Sources appendix <span class="ph">PLACEHOLDER</span></summary>
+    <div class="scroll" tabindex="0" role="region" aria-label="Sources table, scrolls sideways on narrow screens"><table class="src"><thead><tr><th scope="col">Corpus id</th><th scope="col">Type</th><th scope="col">Date</th><th scope="col">Used by</th></tr></thead><tbody id="src"></tbody></table></div>
+  </details>
+</section>
+</main>
+<footer><span id="m-foot"></span></footer>
+</div>
+
+<script type="application/json" id="report-data">
+{
+  "meta": {
+    "series": "PLACEHOLDER series name",
+    "date": "PLACEHOLDER date",
+    "title": "PLACEHOLDER report title",
+    "subtitle": "PLACEHOLDER one-sentence subtitle. Five pages, about seven minutes.",
+    "footer": "PLACEHOLDER: all values on this page are invented to show the layout. None is a finding."
+  },
+  "verdicts": {
+    "current": null,
+    "items": [
+      {"id": "supported", "label": "Supported", "rule": "Pair passes; Stage 2 calls the hypothesis pattern", "power": 10, "falseSupport": 5},
+      {"id": "family", "label": "DevOps-or-scarcity family", "rule": "Pair passes; Stage 2 cannot separate", "power": 20, "falseSupport": 5},
+      {"id": "not-supported", "label": "Not supported: X", "rule": "Another pattern, or the rival, clears the margin", "power": 30, "falseSupport": 5},
+      {"id": "inconclusive", "label": "Inconclusive", "rule": "Nothing clears the margin", "power": 40, "falseSupport": 5}
+    ]
+  },
+  "grid": {
+    "instruments": [
+      {"id": "I1", "name": "Labour market"}, {"id": "I2", "name": "Activity analysis"}, {"id": "I3", "name": "Lead industry"},
+      {"id": "I4", "name": "Rules that require roles"}, {"id": "I5", "name": "Vendor signals"}, {"id": "I6", "name": "Practitioner speech"}
+    ],
+    "hypotheses": [
+      {"id": "H-A", "label": "PLACEHOLDER hypothesis A", "cells": ["strong", "strong", "single", "none", "strong", "none"]},
+      {"id": "H-B", "label": "PLACEHOLDER hypothesis B", "cells": ["single", "none", "none", "contradicts", "none", "single"]},
+      {"id": "H-C", "label": "PLACEHOLDER hypothesis C", "cells": ["none", "single", "contradicts", "contradicts", "none", "none"]},
+      {"id": "H-D", "label": "PLACEHOLDER hypothesis D", "cells": ["strong", "single", "strong", "single", "none", "strong"]}
+    ]
+  },
+  "profiles": {
+    "scale": "0 absent, 1 early sign, 2 observed",
+    "scoreLabel": "match",
+    "features": [
+      {"id":"F01","name":"PLACEHOLDER feature 1"},{"id":"F02","name":"PLACEHOLDER feature 2"},{"id":"F03","name":"PLACEHOLDER feature 3"},
+      {"id":"F04","name":"PLACEHOLDER feature 4"},{"id":"F05","name":"PLACEHOLDER feature 5"},{"id":"F06","name":"PLACEHOLDER feature 6"},
+      {"id":"F07","name":"PLACEHOLDER feature 7"},{"id":"F08","name":"PLACEHOLDER feature 8"},{"id":"F09","name":"PLACEHOLDER feature 9"},
+      {"id":"F10","name":"PLACEHOLDER feature 10"},{"id":"F11","name":"PLACEHOLDER feature 11"},{"id":"F12","name":"PLACEHOLDER feature 12"},
+      {"id":"F13","name":"PLACEHOLDER feature 13"},{"id":"F14","name":"PLACEHOLDER feature 14"},{"id":"F15","name":"PLACEHOLDER feature 15"}
+    ],
+    "patterns": [
+      {"id":"P1","name":"PLACEHOLDER pattern 1","values":[2,2,2,0,0,2,0,0,2,0,0,0,2,0,0],"score":null},
+      {"id":"P2","name":"PLACEHOLDER pattern 2","values":[0,2,0,2,2,0,0,2,0,0,2,0,0,0,2],"score":null},
+      {"id":"P3","name":"PLACEHOLDER pattern 3","values":[0,0,2,2,0,0,2,0,0,2,0,2,0,0,0],"score":null},
+      {"id":"P4","name":"PLACEHOLDER pattern 4","values":[2,0,0,0,2,2,0,0,0,0,2,0,2,2,0],"score":null},
+      {"id":"P5","name":"PLACEHOLDER pattern 5","values":[0,0,0,2,0,0,2,2,0,2,0,0,0,2,2],"score":null},
+      {"id":"P6","name":"PLACEHOLDER pattern 6","values":[2,0,0,0,0,2,0,0,2,0,0,2,0,0,2],"score":null},
+      {"id":"P7","name":"PLACEHOLDER pattern 7","values":[0,2,0,0,2,0,2,0,0,2,0,0,2,0,0],"score":null}
+    ],
+    "present": {"name": "Present (PLACEHOLDER coding)", "values": [1,2,0,1,2,0,1,0,2,0,1,0,2,0,1], "score": null}
+  },
+  "headToHead": {
+    "a": "Pattern A", "b": "Pattern B", "k": 3, "power": "PLACEHOLDER power statement",
+    "features": [
+      {"id":"F01","name":"PLACEHOLDER feature 1","value":1},
+      {"id":"F02","name":"PLACEHOLDER feature 2","value":0},
+      {"id":"F03","name":"PLACEHOLDER feature 3","value":-1},
+      {"id":"F04","name":"PLACEHOLDER feature 4","value":1},
+      {"id":"F05","name":"PLACEHOLDER feature 5","value":0},
+      {"id":"F06","name":"PLACEHOLDER feature 6","value":0}
+    ]
+  },
+  "timeline": {
+    "title": "PLACEHOLDER historical pattern beside the present",
+    "axis": {"min": -4, "max": 14, "unit": "years from origin", "nowYear": 3},
+    "historical": [
+      {"year": -3, "text": "PLACEHOLDER milestone one"},
+      {"year": 0, "text": "PLACEHOLDER milestone two"},
+      {"year": 2, "text": "PLACEHOLDER milestone three"},
+      {"year": 5, "text": "PLACEHOLDER milestone four"},
+      {"year": 9, "text": "PLACEHOLDER milestone five"}
+    ],
+    "present": [
+      {"year": -1, "text": "PLACEHOLDER present event one"},
+      {"year": 1, "text": "PLACEHOLDER present event two"},
+      {"year": 3, "text": "PLACEHOLDER present event three"}
+    ],
+    "caption": "PLACEHOLDER caption. Years after the present's last dated event are not yet observable."
+  },
+  "funnel": [
+    {"stage": "PLACEHOLDER sources identified", "count": 1000},
+    {"stage": "PLACEHOLDER sources acquired", "count": 600},
+    {"stage": "PLACEHOLDER usable after screening", "count": 400},
+    {"stage": "PLACEHOLDER coded", "count": 200}
+  ],
+  "coverage": {
+    "sectors": [
+      {"name": "PLACEHOLDER sector 1", "status": "covered"}, {"name": "PLACEHOLDER sector 2", "status": "covered"},
+      {"name": "PLACEHOLDER sector 3", "status": "partial"}, {"name": "PLACEHOLDER sector 4", "status": "partial"},
+      {"name": "PLACEHOLDER sector 5", "status": "missing"}, {"name": "PLACEHOLDER sector 6", "status": "missing"}
+    ],
+    "caveat": ["PLACEHOLDER: what the acquired sources do not include.", "PLACEHOLDER: how the missing part could change a result."]
+  },
+  "changes": [
+    {"status": "replicated", "text": "PLACEHOLDER round one finding that held."},
+    {"status": "revised", "text": "PLACEHOLDER round one finding that changed, with the reason."},
+    {"status": "round-one-only", "text": "PLACEHOLDER round one finding that no instrument supports."}
+  ],
+  "deviations": [
+    "PLACEHOLDER deviation 1: what was planned, what was done, why.",
+    "PLACEHOLDER deviation 2: what was planned, what was done, why."
+  ],
+  "method": [
+    "PLACEHOLDER step 1: signatures written first.",
+    "PLACEHOLDER step 2: blind feature coding.",
+    "PLACEHOLDER step 3: scoring by script."
+  ],
+  "sources": [
+    {"id": "C-0001", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I1"},
+    {"id": "C-0002", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I2, I4"},
+    {"id": "C-0003", "type": "PLACEHOLDER type", "date": "0000-00-00", "use": "I6"}
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById('report-data').textContent);
+  var NS = 'http://www.w3.org/2000/svg';
+  function $(id) { return document.getElementById(id); }
+  function h(tag, attrs, kids) {
+    var e = document.createElement(tag);
+    for (var k in (attrs || {})) { if (k === 'text') e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function (c) { e.appendChild(c); });
+    return e;
+  }
+  function s(tag, attrs, text) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in (attrs || {})) e.setAttribute(k, attrs[k]);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function svgIcon(kind, size) {
+    var v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+    if (kind === 'strong') v.appendChild(s('circle', {cx: 12, cy: 12, r: 8, 'class': 'g-strong'}));
+    else if (kind === 'single') { v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, 'class': 'g-single'})); v.appendChild(s('circle', {cx: 12, cy: 12, r: 2.5, 'class': 'g-dot'})); }
+    else if (kind === 'none') v.appendChild(s('line', {x1: 7, y1: 12, x2: 17, y2: 12, 'class': 'g-none'}));
+    else if (kind === 'contradicts') v.appendChild(s('path', {d: 'M6 6 L18 18 M18 6 L6 18', 'class': 'g-contra'}));
+    return v;
+  }
+
+  // meta
+  var M = D.meta;
+  document.title = M.title;
+  $('m-series').textContent = M.series; $('m-date').textContent = M.date;
+  $('m-title').textContent = M.title; $('m-sub').textContent = M.subtitle; $('m-foot').textContent = M.footer;
+
+  // 1 verdicts
+  D.verdicts.items.forEach(function (v) {
+    var on = D.verdicts.current === v.id;
+    var row = h('div', {'class': 'vrow' + (on ? ' on' : ''), role: 'listitem'});
+    row.appendChild(h('div', {'class': 'name'}, [document.createTextNode(v.label + (on ? ' (this report)' : '')), h('small', {text: v.rule})]));
+    var mw = h('div');
+    mw.appendChild(h('div', {'class': 'lbl'}, [h('span', {text: 'Power'}), h('span', {text: v.power + '%'})]));
+    var m = h('div', {'class': 'meter', role: 'img', 'aria-label': 'Power ' + v.power + ' percent'});
+    m.appendChild(h('i', {style: 'width:' + v.power + '%'}));
+    mw.appendChild(m);
+    row.appendChild(mw);
+    row.appendChild(h('div', {'class': 'fs'}, [h('b', {text: 'False support'}), document.createTextNode(' up to ' + v.falseSupport + '%')]));
+    $('verdicts').appendChild(row);
+  });
+
+  // 2 grid
+  var LABEL = {strong: 'Strong (3+ instruments, different data)', single: 'Single instrument', none: 'No support', contradicts: 'Contradicts'};
+  var short = {strong: 'strong', single: 'single instrument', none: 'none', contradicts: 'contradicts'};
+  (function () {
+    var t = h('table'); var cap = h('caption', {'class': 'visually-hidden', text: 'Hypotheses by instrument'}); t.appendChild(cap);
+    var hr = h('tr'); hr.appendChild(h('th', {scope: 'col', 'class': 'visually-hidden', text: 'Hypothesis'}));
+    D.grid.instruments.forEach(function (i) { var th = h('th', {scope: 'col', title: i.name}); th.appendChild(document.createTextNode(i.id)); hr.appendChild(th); });
+    t.appendChild(h('thead', {}, [hr]));
+    var tb = h('tbody');
+    D.grid.hypotheses.forEach(function (hy) {
+      var r = h('tr'); r.appendChild(h('th', {scope: 'row', text: hy.label}));
+      hy.cells.forEach(function (c, i) {
+        var td = h('td'); td.appendChild(svgIcon(c)); td.appendChild(h('span', {'class': 'visually-hidden', text: D.grid.instruments[i].name + ': ' + short[c]})); r.appendChild(td);
+      });
+      tb.appendChild(r);
+    });
+    t.appendChild(tb); $('grid').appendChild(t);
+    ['strong', 'single', 'none', 'contradicts'].forEach(function (k) { var li = h('li'); li.appendChild(svgIcon(k)); li.appendChild(document.createTextNode(LABEL[k])); $('grid-legend').appendChild(li); });
+    var names = h('li', {'class': ''}, []); names.style.flexBasis = '100%';
+    names.textContent = D.grid.instruments.map(function (i) { return i.id + ' ' + i.name; }).join('; ');
+    $('grid-legend').appendChild(names);
+  })();
+
+  // 3 profiles (dot matrix, one SVG row per pattern)
+  (function () {
+    var P = D.profiles, n = P.features.length, W = n * 20, H = 22;
+    function row(p, cls) {
+      var r = h('div', {'class': 'prow' + (cls ? ' ' + cls : ''), role: 'row'});
+      r.appendChild(h('div', {'class': 'nm', role: 'rowheader', text: p.name}));
+      var v = s('svg', {viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'preserveAspectRatio': 'xMinYMid meet'});
+      var txt = p.values.map(function (x, i) { return P.features[i].id + ' ' + ['absent', 'early sign', 'observed'][x]; }).join(', ');
+      v.appendChild(s('title', {}, p.name + ': ' + txt));
+      v.appendChild(s('line', {x1: 4, x2: W - 4, y1: 11, y2: 11, stroke: 'var(--rule)', 'stroke-width': 1}));
+      p.values.forEach(function (x, i) {
+        var cx = i * 20 + 10;
+        if (x === 2) v.appendChild(s('circle', {cx: cx, cy: 11, r: 6.5, fill: 'var(--accent)'}));
+        else if (x === 1) v.appendChild(s('circle', {cx: cx, cy: 11, r: 5.5, fill: 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 1.8, 'stroke-dasharray': '3 2'}));
+        else v.appendChild(s('circle', {cx: cx, cy: 11, r: 1.6, fill: 'var(--muted)'}));
+      });
+      r.appendChild(v);
+      r.appendChild(h('div', {'class': 'sc', text: p.score == null ? '--' : String(p.score)}));
+      return r;
+    }
+    var head = h('div', {'class': 'fhead', 'aria-hidden': 'true'}, [h('span', {text: 'Pattern'}), h('span', {text: P.features[0].id + ' to ' + P.features[n - 1].id + ' (left to right)'}), h('span', {text: P.scoreLabel, style: 'text-align:right'})]);
+    $('profiles').appendChild(head);
+    P.patterns.forEach(function (p) { $('profiles').appendChild(row(p)); });
+    $('profiles').appendChild(row(P.present, 'present'));
+    P.features.forEach(function (f) { var li = h('li'); li.appendChild(h('b', {text: f.id})); li.appendChild(document.createTextNode(f.name)); $('fkey').appendChild(li); });
+    [['strong', 'Observed'], ['early', 'Early sign (needs more years)'], ['none', 'Absent']].forEach(function (k) {
+      var li = h('li'), v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+      if (k[0] === 'strong') v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, fill: 'var(--accent)'}));
+      else if (k[0] === 'early') v.appendChild(s('circle', {cx: 12, cy: 12, r: 6, fill: 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 2, 'stroke-dasharray': '3 2'}));
+      else v.appendChild(s('circle', {cx: 12, cy: 12, r: 2, fill: 'var(--muted)'}));
+      li.appendChild(v); li.appendChild(document.createTextNode(k[1])); $('prof-legend').appendChild(li);
+    });
+  })();
+
+  // 4 head to head
+  (function () {
+    var H2 = D.headToHead, F = H2.features, n = F.length;
+    var sum = F.reduce(function (a, f) { return a + f.value; }, 0);
+    var k = H2.k;
+    $('h2h-names').textContent = H2.a + ' vs ' + H2.b;
+    var W = 560, padL = 0, labW = 150, x0 = labW + 20, x1 = W - 12, mid = (x0 + x1) / 2, half = (x1 - x0) / 2;
+    var rowH = 30, top = 34, sumTop = top + n * rowH + 36, Ht = sumTop + 76;
+    var v = s('svg', {viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Head to head: ' + H2.a + ' vs ' + H2.b + '. Sum ' + sum + ', decision band plus or minus ' + k + '.'});
+    v.appendChild(s('text', {x: x0, y: 14, 'font-size': 12, 'class': 'mut'}, '← ' + H2.b));
+    v.appendChild(s('text', {x: x1, y: 14, 'font-size': 12, 'text-anchor': 'end', 'class': 'mut'}, H2.a + ' →'));
+    F.forEach(function (f, i) {
+      var y = top + i * rowH + rowH / 2;
+      v.appendChild(s('text', {x: 0, y: y + 4, 'font-size': 13}, f.id + ' ' + f.name.replace('PLACEHOLDER ', '')));
+      v.appendChild(s('line', {x1: x0, x2: x1, y1: y, y2: y, stroke: 'var(--rule)', 'stroke-width': 1}));
+      [-1, 0, 1].forEach(function (p) { v.appendChild(s('circle', {cx: mid + p * half * 0.8, cy: y, r: 2, fill: 'var(--rule)'})); });
+      var cx = mid + f.value * half * 0.8;
+      if (f.value !== 0) v.appendChild(s('line', {x1: mid, x2: cx, y1: y, y2: y, stroke: 'var(--accent)', 'stroke-width': 3, 'stroke-linecap': 'round'}));
+      v.appendChild(s('circle', {cx: cx, cy: y, r: 7, fill: f.value === 0 ? 'var(--bg)' : 'var(--accent)', stroke: 'var(--accent)', 'stroke-width': 2}));
+      v.appendChild(s('title', {}, f.name + ': ' + (f.value > 0 ? 'favours ' + H2.a : f.value < 0 ? 'favours ' + H2.b : 'no difference')));
+    });
+    v.appendChild(s('line', {x1: mid, x2: mid, y1: top - 4, y2: top + n * rowH, stroke: 'var(--fg)', 'stroke-width': 1.5}));
+    // sum axis
+    var max = Math.max(n, k + 1), sx = function (val) { return mid + val / max * half; };
+    var ay = sumTop + 24;
+    v.appendChild(s('text', {x: 0, y: ay + 4, 'font-size': 13, 'font-weight': 700}, 'Sum of ' + n + ' features'));
+    v.appendChild(s('rect', {x: sx(-k), y: ay - 16, width: sx(k) - sx(-k), height: 32, fill: 'var(--fill)', stroke: 'var(--muted)', 'stroke-dasharray': '4 3'}));
+    v.appendChild(s('text', {x: mid, y: ay - 22, 'font-size': 12, 'text-anchor': 'middle', 'class': 'mut'}, 'not distinguishable: within ±' + k));
+    v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--fg)', 'stroke-width': 1.5}));
+    for (var t = -max; t <= max; t += (max > 8 ? 2 : 1)) {
+      v.appendChild(s('line', {x1: sx(t), x2: sx(t), y1: ay + 16, y2: ay + 21, stroke: 'var(--muted)'}));
+      v.appendChild(s('text', {x: sx(t), y: ay + 35, 'font-size': 11, 'text-anchor': 'middle', 'class': 'mut'}, (t > 0 ? '+' : '') + t));
+    }
+    v.appendChild(s('circle', {cx: sx(sum), cy: ay, r: 9, fill: 'var(--accent)', stroke: 'var(--bg)', 'stroke-width': 2}));
+    v.appendChild(s('text', {x: sx(sum), y: ay - 0 + 4, 'font-size': 11, 'text-anchor': 'middle', fill: '#fff', 'font-weight': 700, style: 'fill:#fff'}, (sum > 0 ? '+' : '') + sum));
+    $('h2h').appendChild(v);
+    var call = sum > k ? 'favours ' + H2.a : sum < -k ? 'favours ' + H2.b : 'does not separate the two';
+    $('h2h-cap').textContent = 'Sum ' + (sum > 0 ? '+' : '') + sum + '; decision band ±' + k + ': the evidence ' + call + '. ' + H2.power;
+  })();
+
+  // 5 timeline
+  (function () {
+    var T = D.timeline, A = T.axis, W = 560, x0 = 10, x1 = W - 10;
+    var X = function (y) { return x0 + (y - A.min) / (A.max - A.min) * (x1 - x0); };
+    var laneH = 64, Ht = 40 + laneH * 2 + 40, yH = 62, yP = 62 + laneH;
+    var v = s('svg', {viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Timeline of ' + T.title + ' beside the present, in ' + A.unit});
+    v.appendChild(s('text', {x: x0, y: 14, 'font-size': 12, 'class': 'mut'}, 'Historical pattern'));
+    v.appendChild(s('text', {x: x0, y: yH + 36, 'font-size': 12, 'class': 'mut'}, 'Present'));
+    // lane lines
+    v.appendChild(s('line', {x1: x0, x2: x1, y1: yH, y2: yH, stroke: 'var(--fg)', 'stroke-width': 2}));
+    v.appendChild(s('line', {x1: x0, x2: X(A.nowYear), y1: yP, y2: yP, stroke: 'var(--fg)', 'stroke-width': 2}));
+    v.appendChild(s('line', {x1: X(A.nowYear), x2: x1, y1: yP, y2: yP, stroke: 'var(--muted)', 'stroke-width': 1.5, 'stroke-dasharray': '2 5', 'stroke-linecap': 'round'}));
+    // zero line
+    v.appendChild(s('line', {x1: X(0), x2: X(0), y1: 22, y2: yP + 22, stroke: 'var(--accent)', 'stroke-width': 1, 'stroke-dasharray': '3 3'}));
+    v.appendChild(s('text', {x: X(0) + 4, y: 22, 'font-size': 11, fill: 'var(--accent)', style: 'fill:var(--accent)'}, 'year 0'));
+    // now
+    v.appendChild(s('line', {x1: X(A.nowYear), x2: X(A.nowYear), y1: yP - 16, y2: yP + 22, stroke: 'var(--warn)', 'stroke-width': 1.5}));
+    v.appendChild(s('text', {x: X(A.nowYear) + 5, y: yP + 20, 'font-size': 11, style: 'fill:var(--warn)'}, 'now'));
+    // axis
+    var ay = yP + 46;
+    v.appendChild(s('line', {x1: x0, x2: x1, y1: ay, y2: ay, stroke: 'var(--muted)'}));
+    for (var t = Math.ceil(A.min / 2) * 2; t <= A.max; t += 2) {
+      v.appendChild(s('line', {x1: X(t), x2: X(t), y1: ay, y2: ay + 5, stroke: 'var(--muted)'}));
+      v.appendChild(s('text', {x: X(t), y: ay + 18, 'font-size': 11, 'text-anchor': 'middle', 'class': 'mut'}, (t > 0 ? '+' : '') + t));
+    }
+    v.appendChild(s('text', {x: x1, y: ay + 18 + 14, 'font-size': 11, 'text-anchor': 'end', 'class': 'mut'}, A.unit));
+    function marks(list, y, pre, solid) {
+      list.forEach(function (e, i) {
+        var g = s('g');
+        g.appendChild(s('circle', {cx: X(e.year), cy: y, r: 9, fill: solid ? 'var(--accent)' : 'var(--bg)', stroke: 'var(--accent)', 'stroke-width': 2}));
+        g.appendChild(s('text', {x: X(e.year), y: y + 4, 'font-size': 11, 'text-anchor': 'middle', 'font-weight': 700, style: 'fill:' + (solid ? '#fff' : 'var(--accent)')}, pre + (i + 1)));
+        g.appendChild(s('title', {}, pre + (i + 1) + ', year ' + e.year + ': ' + e.text));
+        v.appendChild(g);
+      });
+    }
+    marks(T.historical, yH, 'H', true); marks(T.present, yP, 'P', false);
+    $('tl').appendChild(v);
+    $('tl-title').textContent = T.title; $('tl-cap').textContent = T.caption;
+    function li(pre, list) { list.forEach(function (e, i) { var l = h('li'); l.appendChild(h('b', {text: pre + (i + 1)})); l.appendChild(document.createTextNode('Year ' + (e.year > 0 ? '+' : '') + e.year + ': ' + e.text)); $('tl-list').appendChild(l); }); }
+    li('H', T.historical); li('P', T.present);
+  })();
+
+  // 6 funnel and coverage
+  (function () {
+    var max = Math.max.apply(null, D.funnel.map(function (f) { return f.count; }));
+    D.funnel.forEach(function (f) {
+      var r = h('div', {'class': 'frow'});
+      r.appendChild(h('div', {'class': 'lab', text: f.stage}));
+      r.appendChild(h('div', {'class': 'bar', style: 'width:' + Math.max(f.count / max * 100, 8) + '%', text: f.count.toLocaleString('en')}));
+      $('funnel').appendChild(r);
+    });
+    var STAT = {covered: 'Covered', partial: 'Partly covered', missing: 'Missing'};
+    D.coverage.sectors.forEach(function (c) {
+      var li = h('li'), v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+      if (c.status === 'covered') v.appendChild(s('circle', {cx: 12, cy: 12, r: 8, 'class': 'g-strong'}));
+      else if (c.status === 'partial') { v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, 'class': 'g-single'})); v.appendChild(s('path', {d: 'M12 5 A7 7 0 0 1 12 19 Z', 'class': 'g-strong'})); }
+      else v.appendChild(s('path', {d: 'M6 6 L18 18 M18 6 L6 18', 'class': 'g-contra'}));
+      li.appendChild(v); li.appendChild(h('span', {text: c.name + ' (' + STAT[c.status].toLowerCase() + ')'})); $('cov').appendChild(li);
+    });
+    D.coverage.caveat.forEach(function (t) { $('caveat').appendChild(h('p', {text: t})); });
+  })();
+
+  // 7 changes
+  (function () {
+    var N = {replicated: 'Replicated', revised: 'Revised', 'round-one-only': 'Round one only'};
+    D.changes.forEach(function (c) {
+      var li = h('li'), tag = h('span', {'class': 'tag'}), v = s('svg', {viewBox: '0 0 24 24', 'aria-hidden': 'true'});
+      if (c.status === 'replicated') v.appendChild(s('circle', {cx: 12, cy: 12, r: 8, 'class': 'g-strong'}));
+      else if (c.status === 'revised') { v.appendChild(s('path', {d: 'M5 12 Q9 5 12 12 T19 12', fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.2, 'stroke-linecap': 'round'})); }
+      else v.appendChild(s('circle', {cx: 12, cy: 12, r: 7, fill: 'none', stroke: 'var(--muted)', 'stroke-width': 2, 'stroke-dasharray': '3 3'}));
+      tag.appendChild(v); tag.appendChild(document.createTextNode(N[c.status]));
+      li.appendChild(tag); li.appendChild(h('div', {text: c.text})); $('changes').appendChild(li);
+    });
+  })();
+
+  // 8 drawers and sources
+  D.deviations.forEach(function (t) { $('dev').appendChild(h('li', {text: t})); });
+  D.method.forEach(function (t) { $('method').appendChild(h('li', {text: t})); });
+  D.sources.forEach(function (r) { var tr = h('tr'); [r.id, r.type, r.date, r.use].forEach(function (c) { tr.appendChild(h('td', {text: c})); }); $('src').appendChild(tr); });
+
+  // current page in nav
+  if ('IntersectionObserver' in window) {
+    var links = {}; document.querySelectorAll('nav.pages a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { for (var k in links) links[k].removeAttribute('aria-current'); if (links[e.target.id]) links[e.target.id].setAttribute('aria-current', 'true'); } }); }, {rootMargin: '-20% 0px -70% 0px'});
+    document.querySelectorAll('section.page').forEach(function (sec) { io.observe(sec); });
+  }
+})();
+</script>
+</body>
+</html>
