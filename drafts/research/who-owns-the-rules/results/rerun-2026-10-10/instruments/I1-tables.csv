@@ -1,0 +1,674 @@
+measure,slice,value,n,weighting,flag_precision
+lexical_flag_validation_count,ref=coderA|tp,1.0,200,none,
+lexical_flag_validation_count,ref=coderA|fp,20.0,200,none,
+lexical_flag_validation_count,ref=coderA|fn,3.0,200,none,
+lexical_flag_validation_count,ref=coderA|tn,176.0,200,none,
+lexical_flag_validation_precision,ref=coderA,0.0476,21,none,
+lexical_flag_validation_recall,ref=coderA,0.25,4,none,
+lexical_flag_validation_count,ref=coderB|tp,3.0,200,none,
+lexical_flag_validation_count,ref=coderB|fp,18.0,200,none,
+lexical_flag_validation_count,ref=coderB|fn,4.0,200,none,
+lexical_flag_validation_count,ref=coderB|tn,175.0,200,none,
+lexical_flag_validation_precision,ref=coderB,0.1429,21,none,
+lexical_flag_validation_recall,ref=coderB,0.4286,7,none,
+lexical_flag_validation_count,ref=both|tp,1.0,200,none,
+lexical_flag_validation_count,ref=both|fp,20.0,200,none,
+lexical_flag_validation_count,ref=both|fn,3.0,200,none,
+lexical_flag_validation_count,ref=both|tn,176.0,200,none,
+lexical_flag_validation_precision,ref=both,0.0476,21,none,
+lexical_flag_validation_recall,ref=both,0.25,4,none,
+lexical_flag_validation_count,ref=either|tp,3.0,200,none,
+lexical_flag_validation_count,ref=either|fp,18.0,200,none,
+lexical_flag_validation_count,ref=either|fn,4.0,200,none,
+lexical_flag_validation_count,ref=either|tn,175.0,200,none,
+lexical_flag_validation_precision,ref=either,0.1429,21,none,
+lexical_flag_validation_recall,ref=either,0.4286,7,none,
+coder_agreement_agent_duty,A_vs_B,0.985,200,none,
+lexical_flag_false_positives_with_term,term=agentic,1.0,18,none,
+lexical_flag_flagged_records_with_term,term=agentic,1.0,21,none,
+lexical_flag_false_positives_with_term,term=ai,13.0,18,none,
+lexical_flag_flagged_records_with_term,term=ai,16.0,21,none,
+lexical_flag_false_positives_with_term,term=automation,5.0,18,none,
+lexical_flag_flagged_records_with_term,term=automation,5.0,21,none,
+lexical_flag_false_positives_with_term,term=generative ai,1.0,18,none,
+lexical_flag_flagged_records_with_term,term=generative ai,1.0,21,none,
+lexical_flag_false_positives_with_term,term=machine learning,1.0,18,none,
+lexical_flag_flagged_records_with_term,term=machine learning,1.0,21,none,
+language_artefact_clusters,"0,1,6,7,8,9,10,11",8.0,114,none,
+rest20_strata,all,39.0,106510,none,
+rest20_sampling_fraction,min,0.1667,21307,none,
+rest20_sampling_fraction,max,1.0,21307,none,
+rest20_sampling_fraction,overall,0.2,106510,none,
+rest20_weight,mean,4.9988,21307,none,
+titled_postings_in_mapping_universe,all,110715.0,110715,none,
+selected_postings,all,25512.0,25512,unweighted,
+selected_postings,all,110715.0,25512,sampling-weighted,
+selected_postings,group=S1,831.0,831,unweighted,
+selected_postings,group=S1,831.0,831,sampling-weighted,
+selected_postings,group=newtitle,2945.0,2945,unweighted,
+selected_postings,group=newtitle,2945.0,2945,sampling-weighted,
+selected_postings,group=newtitle-agent-human,429.0,429,unweighted,
+selected_postings,group=newtitle-agent-human,429.0,429,sampling-weighted,
+selected_postings,group=rest20,21307.0,21307,unweighted,
+selected_postings,group=rest20,106510.0,21307,sampling-weighted,
+postings_with_extracted_tasks,all,25220.0,25512,unweighted,
+us_class_postings,us,15080.0,25512,unweighted,
+us_class_postings,us,66580.9,25512,sampling-weighted,
+us_class_postings_v1_rule,us,14974.0,25512,unweighted,
+us_class_postings,non-us,8215.0,25512,unweighted,
+us_class_postings,non-us,34261.9,25512,sampling-weighted,
+us_class_postings_v1_rule,non-us,8281.0,25512,unweighted,
+us_class_postings,unknown,2217.0,25512,unweighted,
+us_class_postings,unknown,9872.2,25512,sampling-weighted,
+us_class_postings_v1_rule,unknown,2257.0,25512,unweighted,
+newtitle_postings_by_term,newtitle|agent,1.0,1,none,
+newtitle_postings_by_term,newtitle|agentic,155.0,155,none,
+newtitle_postings_by_term,newtitle|ai,1838.0,1838,none,
+newtitle_postings_by_term,newtitle|automation,656.0,656,none,
+newtitle_postings_by_term,newtitle|copilot,4.0,4,none,
+newtitle_postings_by_term,newtitle|genai,49.0,49,none,
+newtitle_postings_by_term,newtitle|generative ai,22.0,22,none,
+newtitle_postings_by_term,newtitle|intelligent automation,3.0,3,none,
+newtitle_postings_by_term,newtitle|llm,12.0,12,none,
+newtitle_postings_by_term,newtitle|machine learning,191.0,191,none,
+newtitle_postings_by_term,newtitle|model risk,6.0,6,none,
+newtitle_postings_by_term,newtitle|prompt,1.0,1,none,
+newtitle_postings_by_term,newtitle|responsible ai,3.0,3,none,
+newtitle_postings_by_term,newtitle|rpa,4.0,4,none,
+newtitle_postings_by_term,newtitle-agent-human|agent,405.0,405,none,
+newtitle_postings_by_term,newtitle-agent-human|agents,24.0,24,none,
+new_title_postings,all,2945.0,2945,unweighted,
+new_title_postings,all,6.4906,2945,employer-weighted,
+existing_with_ai_duty[study_occupation],all,400.0,831,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],all,400.0,831,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],all,1.1384,831,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],all,831.0,831,sampling-weighted,
+absorption_ratio[study_occupation],all,0.1358,2945,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],all,0.1358,2945,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],all,0.1754,2945,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],all,0.4813,831,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],all,0.4813,831,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],all,0.5514,831,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],all,3288.0,22138,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],all,14832.6,22138,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],all,30.1714,22138,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],all,107341.0,22138,sampling-weighted,
+absorption_ratio[all_non_new_title],all,1.1165,2945,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],all,5.0365,2945,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],all,4.6485,2945,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],all,0.1485,22138,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],all,0.1382,22138,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],all,0.1584,22138,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=fortune500,2572.0,2572,unweighted,
+new_title_postings,type=fortune500,4.3893,2572,employer-weighted,
+existing_with_ai_duty[study_occupation],type=fortune500,348.0,721,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500,348.0,721,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500,0.8249,721,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=fortune500,721.0,721,sampling-weighted,
+absorption_ratio[study_occupation],type=fortune500,0.1353,2572,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500,0.1353,2572,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500,0.1879,2572,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500,0.4827,721,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500,0.4827,721,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500,0.5462,721,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500,2889.0,21075,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500,13053.6,21075,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500,20.03,21075,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=fortune500,102484.0,21075,sampling-weighted,
+absorption_ratio[all_non_new_title],type=fortune500,1.1233,2572,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500,5.0753,2572,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500,4.5634,2572,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500,0.1371,21075,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500,0.1274,21075,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500,0.1246,21075,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=venture-backed-software,373.0,373,unweighted,
+new_title_postings,type=venture-backed-software,2.1012,373,employer-weighted,
+existing_with_ai_duty[study_occupation],type=venture-backed-software,52.0,110,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software,52.0,110,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software,0.3135,110,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=venture-backed-software,110.0,110,sampling-weighted,
+absorption_ratio[study_occupation],type=venture-backed-software,0.1394,373,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software,0.1394,373,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software,0.1492,373,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software,0.4727,110,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software,0.4727,110,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software,0.5657,110,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software,399.0,1063,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software,1778.9,1063,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software,10.1414,1063,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=venture-backed-software,4857.0,1063,sampling-weighted,
+absorption_ratio[all_non_new_title],type=venture-backed-software,1.0697,373,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software,4.7693,373,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software,4.8264,373,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software,0.3754,1063,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software,0.3663,1063,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software,0.3407,1063,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,us=non-us,1245.0,1245,unweighted,
+new_title_postings,us=non-us,2.0207,1245,employer-weighted,
+existing_with_ai_duty[study_occupation],us=non-us,152.0,327,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],us=non-us,152.0,327,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],us=non-us,0.2998,327,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],us=non-us,327.0,327,sampling-weighted,
+absorption_ratio[study_occupation],us=non-us,0.1221,1245,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],us=non-us,0.1221,1245,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],us=non-us,0.1484,1245,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=non-us,0.4648,327,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=non-us,0.4648,327,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=non-us,0.4865,327,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=non-us,1444.0,6841,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=non-us,6611.1,6841,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=non-us,10.6585,6841,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],us=non-us,32887.9,6841,sampling-weighted,
+absorption_ratio[all_non_new_title],us=non-us,1.1598,1245,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],us=non-us,5.3101,1245,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],us=non-us,5.2747,1245,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=non-us,0.2111,6841,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=non-us,0.201,6841,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=non-us,0.2071,6841,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,us=us,1620.0,1620,unweighted,
+new_title_postings,us=us,4.2387,1620,employer-weighted,
+existing_with_ai_duty[study_occupation],us=us,237.0,463,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],us=us,237.0,463,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],us=us,0.818,463,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],us=us,463.0,463,sampling-weighted,
+absorption_ratio[study_occupation],us=us,0.1463,1620,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],us=us,0.1463,1620,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],us=us,0.193,1620,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=us,0.5119,463,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=us,0.5119,463,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],us=us,0.6242,463,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=us,1734.0,13341,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=us,7719.5,13341,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],us=us,18.4595,13341,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],us=us,64841.9,13341,sampling-weighted,
+absorption_ratio[all_non_new_title],us=us,1.0704,1620,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],us=us,4.7651,1620,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],us=us,4.355,1620,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=us,0.13,13341,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=us,0.1191,13341,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],us=us,0.1502,13341,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=fortune500|us=non-us,1100.0,1100,unweighted,
+new_title_postings,type=fortune500|us=non-us,1.3287,1100,employer-weighted,
+existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,137.0,288,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,137.0,288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.2348,288,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=fortune500|us=non-us,288.0,288,sampling-weighted,
+absorption_ratio[study_occupation],type=fortune500|us=non-us,0.1245,1100,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500|us=non-us,0.1245,1100,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500|us=non-us,0.1767,1100,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.4757,288,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.4757,288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.4854,288,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,1294.0,6429,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,5922.3,6429,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,6.8103,6429,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=fortune500|us=non-us,30992.6,6429,sampling-weighted,
+absorption_ratio[all_non_new_title],type=fortune500|us=non-us,1.1764,1100,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500|us=non-us,5.3839,1100,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500|us=non-us,5.1254,1100,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,0.2013,6429,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,0.1911,6429,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,0.1732,6429,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=fortune500|us=us,1400.0,1400,unweighted,
+new_title_postings,type=fortune500|us=us,2.9551,1400,employer-weighted,
+existing_with_ai_duty[study_occupation],type=fortune500|us=us,200.0,396,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500|us=us,200.0,396,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.5695,396,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=fortune500|us=us,396.0,396,sampling-weighted,
+absorption_ratio[study_occupation],type=fortune500|us=us,0.1429,1400,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500|us=us,0.1429,1400,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=fortune500|us=us,0.1927,1400,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.5051,396,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.5051,396,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.6169,396,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,1490.0,12727,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,6650.3,12727,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,12.3065,12727,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=fortune500|us=us,62045.1,12727,sampling-weighted,
+absorption_ratio[all_non_new_title],type=fortune500|us=us,1.0643,1400,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500|us=us,4.7502,1400,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=fortune500|us=us,4.1645,1400,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,0.1171,12727,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,0.1072,12727,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,0.1153,12727,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=venture-backed-software|us=non-us,145.0,145,unweighted,
+new_title_postings,type=venture-backed-software|us=non-us,0.6919,145,employer-weighted,
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,15.0,39,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,15.0,39,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.065,39,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=venture-backed-software|us=non-us,39.0,39,sampling-weighted,
+absorption_ratio[study_occupation],type=venture-backed-software|us=non-us,0.1034,145,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software|us=non-us,0.1034,145,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software|us=non-us,0.094,145,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.3846,39,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.3846,39,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.4904,39,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,150.0,412,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,688.8,412,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,3.8482,412,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=venture-backed-software|us=non-us,1895.3,412,sampling-weighted,
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=non-us,1.0345,145,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=non-us,4.7502,145,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=non-us,5.5615,145,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,0.3641,412,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,0.3634,412,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,0.3168,412,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+new_title_postings,type=venture-backed-software|us=us,220.0,220,unweighted,
+new_title_postings,type=venture-backed-software|us=us,1.2836,220,employer-weighted,
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,37.0,67,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,37.0,67,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.2485,67,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[study_occupation],type=venture-backed-software|us=us,67.0,67,sampling-weighted,
+absorption_ratio[study_occupation],type=venture-backed-software|us=us,0.1682,220,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software|us=us,0.1682,220,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[study_occupation],type=venture-backed-software|us=us,0.1936,220,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.5522,67,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.5522,67,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.6416,67,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,244.0,614,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,1069.2,614,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,6.1529,614,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_postings[all_non_new_title],type=venture-backed-software|us=us,2796.8,614,sampling-weighted,
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=us,1.1091,220,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=us,4.8599,220,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=us,4.7934,220,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,0.3974,614,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,0.3823,614,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,0.3808,614,employer-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_with_ai_duty,group=newtitle,0.8771,2945,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_with_ai_duty,group=newtitle-agent-human,0.1562,429,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_with_ai_duty,group=S1,0.4813,831,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+share_with_ai_duty,group=rest20,0.1355,21307,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=a.i.,5.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=a.i.,5.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=agent rule,617.7,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=agent rule,6.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=agentic,1157.9,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=agentic,94.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=ai,8575.5,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=ai,4329.1,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=automation,7016.7,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=automation,4230.9,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=copilot,273.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=copilot,10.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=genai,222.9,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=genai,15.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=generative ai,478.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=generative ai,77.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=intelligent automation,101.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=intelligent automation,0.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=llm,473.7,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=llm,15.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=machine learning,838.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=machine learning,307.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=model risk,69.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=model risk,30.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=prompt,1483.2,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=prompt,1251.2,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=responsible ai,236.9,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=responsible ai,10.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_with_term[all_non_new_title],term=rpa,53.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+existing_flagged_only_by_term[all_non_new_title],term=rpa,0.0,3288,sampling-weighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+employers_with_ai_duty_existing[study_occupation],all,95.0,198,employer,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+employers_with_ai_duty_existing[all_non_new_title],all,173.0,198,employer,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+employers_with_new_title,all,161.0,198,employer,
+cross_function_share[primary],new_title,0.0061,165,unweighted,
+cross_function_share[primary],new_title,0.0061,165,sampling-weighted,
+cross_function_share[primary],new_title,0.0191,165,employer-weighted,
+cross_function_count[primary],new_title,1.0,165,unweighted,
+cross_function_count[primary],new_title,1.0,165,sampling-weighted,
+postings_in_primary_clusters,new_title,165.0,2945,unweighted,
+postings_in_primary_clusters,new_title,165.0,2945,sampling-weighted,
+cross_function_share[primary],other_postings,0.0034,873,unweighted,
+cross_function_share[primary],other_postings,0.0027,873,sampling-weighted,
+cross_function_share[primary],other_postings,0.005,873,employer-weighted,
+cross_function_count[primary],other_postings,3.0,873,unweighted,
+cross_function_count[primary],other_postings,11.0,873,sampling-weighted,
+postings_in_primary_clusters,other_postings,873.0,22567,unweighted,
+postings_in_primary_clusters,other_postings,4083.4,22567,sampling-weighted,
+cross_function_share[primary],other_study_occupation,0.0149,67,unweighted,
+cross_function_share[primary],other_study_occupation,0.0149,67,sampling-weighted,
+cross_function_share[primary],other_study_occupation,0.0058,67,employer-weighted,
+cross_function_count[primary],other_study_occupation,1.0,67,unweighted,
+cross_function_count[primary],other_study_occupation,1.0,67,sampling-weighted,
+postings_in_primary_clusters,other_study_occupation,67.0,831,unweighted,
+postings_in_primary_clusters,other_study_occupation,67.0,831,sampling-weighted,
+cross_function_share[primary],other_rest_sample,0.0025,803,unweighted,
+cross_function_share[primary],other_rest_sample,0.0025,803,sampling-weighted,
+cross_function_share[primary],other_rest_sample,0.005,803,employer-weighted,
+cross_function_count[primary],other_rest_sample,2.0,803,unweighted,
+cross_function_count[primary],other_rest_sample,10.0,803,sampling-weighted,
+postings_in_primary_clusters,other_rest_sample,803.0,21307,unweighted,
+postings_in_primary_clusters,other_rest_sample,4013.4,21307,sampling-weighted,
+cross_function_share[primary],new_title_human_agent,0.0,3,unweighted,
+cross_function_share[primary],new_title_human_agent,0.0,3,sampling-weighted,
+cross_function_share[primary],new_title_human_agent,0.0,3,employer-weighted,
+cross_function_count[primary],new_title_human_agent,0.0,3,unweighted,
+cross_function_count[primary],new_title_human_agent,0.0,3,sampling-weighted,
+postings_in_primary_clusters,new_title_human_agent,3.0,429,unweighted,
+postings_in_primary_clusters,new_title_human_agent,3.0,429,sampling-weighted,
+cross_function_share[primary],new_title|type=fortune500,0.008,125,unweighted,
+cross_function_share[primary],new_title|type=fortune500,0.008,125,sampling-weighted,
+cross_function_share[primary],other_postings|type=fortune500,0.0039,761,unweighted,
+cross_function_share[primary],other_postings|type=fortune500,0.0031,761,sampling-weighted,
+cross_function_share[primary],new_title|type=venture-backed-software,0.0,40,unweighted,
+cross_function_share[primary],new_title|type=venture-backed-software,0.0,40,sampling-weighted,
+cross_function_share[primary],other_postings|type=venture-backed-software,0.0,112,unweighted,
+cross_function_share[primary],other_postings|type=venture-backed-software,0.0,112,sampling-weighted,
+cross_function_share[secondary],new_title,0.0846,934,unweighted,
+cross_function_share[secondary],new_title,0.0846,934,sampling-weighted,
+cross_function_share[secondary],new_title,0.1671,934,employer-weighted,
+cross_function_count[secondary],new_title,79.0,934,unweighted,
+cross_function_count[secondary],new_title,79.0,934,sampling-weighted,
+postings_in_secondary_clusters,new_title,934.0,2945,unweighted,
+postings_in_secondary_clusters,new_title,934.0,2945,sampling-weighted,
+cross_function_share[secondary],other_postings,0.0841,6276,unweighted,
+cross_function_share[secondary],other_postings,0.0829,6276,sampling-weighted,
+cross_function_share[secondary],other_postings,0.1472,6276,employer-weighted,
+cross_function_count[secondary],other_postings,528.0,6276,unweighted,
+cross_function_count[secondary],other_postings,2472.4,6276,sampling-weighted,
+postings_in_secondary_clusters,other_postings,6276.0,22567,unweighted,
+postings_in_secondary_clusters,other_postings,29833.0,22567,sampling-weighted,
+cross_function_share[secondary],other_study_occupation,0.1226,310,unweighted,
+cross_function_share[secondary],other_study_occupation,0.1226,310,sampling-weighted,
+cross_function_share[secondary],other_study_occupation,0.1799,310,employer-weighted,
+cross_function_count[secondary],other_study_occupation,38.0,310,unweighted,
+cross_function_count[secondary],other_study_occupation,38.0,310,sampling-weighted,
+postings_in_secondary_clusters,other_study_occupation,310.0,831,unweighted,
+postings_in_secondary_clusters,other_study_occupation,310.0,831,sampling-weighted,
+cross_function_share[secondary],other_rest_sample,0.0825,5892,unweighted,
+cross_function_share[secondary],other_rest_sample,0.0825,5892,sampling-weighted,
+cross_function_share[secondary],other_rest_sample,0.147,5892,employer-weighted,
+cross_function_count[secondary],other_rest_sample,486.0,5892,unweighted,
+cross_function_count[secondary],other_rest_sample,2430.4,5892,sampling-weighted,
+postings_in_secondary_clusters,other_rest_sample,5892.0,21307,unweighted,
+postings_in_secondary_clusters,other_rest_sample,29449.0,21307,sampling-weighted,
+cross_function_share[secondary],new_title_human_agent,0.0541,74,unweighted,
+cross_function_share[secondary],new_title_human_agent,0.0541,74,sampling-weighted,
+cross_function_share[secondary],new_title_human_agent,0.0419,74,employer-weighted,
+cross_function_count[secondary],new_title_human_agent,4.0,74,unweighted,
+cross_function_count[secondary],new_title_human_agent,4.0,74,sampling-weighted,
+postings_in_secondary_clusters,new_title_human_agent,74.0,429,unweighted,
+postings_in_secondary_clusters,new_title_human_agent,74.0,429,sampling-weighted,
+cross_function_share[secondary],new_title|type=fortune500,0.078,756,unweighted,
+cross_function_share[secondary],new_title|type=fortune500,0.078,756,sampling-weighted,
+cross_function_share[secondary],other_postings|type=fortune500,0.0809,5651,unweighted,
+cross_function_share[secondary],other_postings|type=fortune500,0.0798,5651,sampling-weighted,
+cross_function_share[secondary],new_title|type=venture-backed-software,0.1124,178,unweighted,
+cross_function_share[secondary],new_title|type=venture-backed-software,0.1124,178,sampling-weighted,
+cross_function_share[secondary],other_postings|type=venture-backed-software,0.1136,625,unweighted,
+cross_function_share[secondary],other_postings|type=venture-backed-software,0.1113,625,sampling-weighted,
+postings_with_pooled_tasks,all,14079.0,25512,unweighted,
+employers,employer_type=fortune500,166.0,166,employer,
+new_title_postings_per_employer_mean,employer_type=fortune500,15.494,166,employer,
+new_title_postings_per_employer_median,employer_type=fortune500,4.0,166,employer,
+employers_with_ge1_new_title,employer_type=fortune500,131.0,166,employer,
+share_employers_with_ge1_new_title,employer_type=fortune500,0.7892,166,employer,
+new_title_postings_total,employer_type=fortune500,2572.0,24060,none,
+new_title_share_of_postings,employer_type=fortune500,0.1069,24060,unweighted,
+new_title_share_of_postings,employer_type=fortune500,0.0244,24060,sampling-weighted,
+employers,employer_type=venture-backed-software,32.0,32,employer,
+new_title_postings_per_employer_mean,employer_type=venture-backed-software,11.6562,32,employer,
+new_title_postings_per_employer_median,employer_type=venture-backed-software,5.0,32,employer,
+employers_with_ge1_new_title,employer_type=venture-backed-software,30.0,32,employer,
+share_employers_with_ge1_new_title,employer_type=venture-backed-software,0.9375,32,employer,
+new_title_postings_total,employer_type=venture-backed-software,373.0,1452,none,
+new_title_share_of_postings,employer_type=venture-backed-software,0.2569,1452,unweighted,
+new_title_share_of_postings,employer_type=venture-backed-software,0.0711,1452,sampling-weighted,
+employers,"sector=Finance, insurance, real estate",29.0,29,employer,
+new_title_postings_per_employer_mean,"sector=Finance, insurance, real estate",9.6207,29,employer,
+new_title_postings_per_employer_median,"sector=Finance, insurance, real estate",4.0,29,employer,
+employers_with_ge1_new_title,"sector=Finance, insurance, real estate",26.0,29,employer,
+share_employers_with_ge1_new_title,"sector=Finance, insurance, real estate",0.8966,29,employer,
+new_title_postings_total,"sector=Finance, insurance, real estate",279.0,3158,none,
+new_title_share_of_postings,"sector=Finance, insurance, real estate",0.0883,3158,unweighted,
+new_title_share_of_postings,"sector=Finance, insurance, real estate",0.0202,3158,sampling-weighted,
+employers,sector=Manufacturing,45.0,45,employer,
+new_title_postings_per_employer_mean,sector=Manufacturing,16.4222,45,employer,
+new_title_postings_per_employer_median,sector=Manufacturing,5.0,45,employer,
+employers_with_ge1_new_title,sector=Manufacturing,38.0,45,employer,
+share_employers_with_ge1_new_title,sector=Manufacturing,0.8444,45,employer,
+new_title_postings_total,sector=Manufacturing,739.0,7211,none,
+new_title_share_of_postings,sector=Manufacturing,0.1025,7211,unweighted,
+new_title_share_of_postings,sector=Manufacturing,0.0231,7211,sampling-weighted,
+employers,"sector=Mining, construction, agriculture",6.0,6,employer,
+new_title_postings_per_employer_mean,"sector=Mining, construction, agriculture",1.6667,6,employer,
+new_title_postings_per_employer_median,"sector=Mining, construction, agriculture",0.5,6,employer,
+employers_with_ge1_new_title,"sector=Mining, construction, agriculture",3.0,6,employer,
+share_employers_with_ge1_new_title,"sector=Mining, construction, agriculture",0.5,6,employer,
+new_title_postings_total,"sector=Mining, construction, agriculture",10.0,490,none,
+new_title_share_of_postings,"sector=Mining, construction, agriculture",0.0204,490,unweighted,
+new_title_share_of_postings,"sector=Mining, construction, agriculture",0.0043,490,sampling-weighted,
+employers,sector=Mutuals and private (no SEC filing),8.0,8,employer,
+new_title_postings_per_employer_mean,sector=Mutuals and private (no SEC filing),0.875,8,employer,
+new_title_postings_per_employer_median,sector=Mutuals and private (no SEC filing),0.5,8,employer,
+employers_with_ge1_new_title,sector=Mutuals and private (no SEC filing),4.0,8,employer,
+share_employers_with_ge1_new_title,sector=Mutuals and private (no SEC filing),0.5,8,employer,
+new_title_postings_total,sector=Mutuals and private (no SEC filing),7.0,235,none,
+new_title_share_of_postings,sector=Mutuals and private (no SEC filing),0.0298,235,unweighted,
+new_title_share_of_postings,sector=Mutuals and private (no SEC filing),0.0063,235,sampling-weighted,
+employers,sector=Retail and wholesale,32.0,32,employer,
+new_title_postings_per_employer_mean,sector=Retail and wholesale,4.875,32,employer,
+new_title_postings_per_employer_median,sector=Retail and wholesale,1.0,32,employer,
+employers_with_ge1_new_title,sector=Retail and wholesale,23.0,32,employer,
+share_employers_with_ge1_new_title,sector=Retail and wholesale,0.7188,32,employer,
+new_title_postings_total,sector=Retail and wholesale,156.0,4623,none,
+new_title_share_of_postings,sector=Retail and wholesale,0.0337,4623,unweighted,
+new_title_share_of_postings,sector=Retail and wholesale,0.0071,4623,sampling-weighted,
+employers,sector=Services (other),17.0,17,employer,
+new_title_postings_per_employer_mean,sector=Services (other),11.2941,17,employer,
+new_title_postings_per_employer_median,sector=Services (other),6.0,17,employer,
+employers_with_ge1_new_title,sector=Services (other),12.0,17,employer,
+share_employers_with_ge1_new_title,sector=Services (other),0.7059,17,employer,
+new_title_postings_total,sector=Services (other),192.0,2575,none,
+new_title_share_of_postings,sector=Services (other),0.0746,2575,unweighted,
+new_title_share_of_postings,sector=Services (other),0.0172,2575,sampling-weighted,
+employers,"sector=Tech (SIC 357x, 367x, 737x)",19.0,19,employer,
+new_title_postings_per_employer_mean,"sector=Tech (SIC 357x, 367x, 737x)",60.6842,19,employer,
+new_title_postings_per_employer_median,"sector=Tech (SIC 357x, 367x, 737x)",48.0,19,employer,
+employers_with_ge1_new_title,"sector=Tech (SIC 357x, 367x, 737x)",18.0,19,employer,
+share_employers_with_ge1_new_title,"sector=Tech (SIC 357x, 367x, 737x)",0.9474,19,employer,
+new_title_postings_total,"sector=Tech (SIC 357x, 367x, 737x)",1153.0,4797,none,
+new_title_share_of_postings,"sector=Tech (SIC 357x, 367x, 737x)",0.2404,4797,unweighted,
+new_title_share_of_postings,"sector=Tech (SIC 357x, 367x, 737x)",0.0628,4797,sampling-weighted,
+employers,sector=Transport and telecom,6.0,6,employer,
+new_title_postings_per_employer_mean,sector=Transport and telecom,4.8333,6,employer,
+new_title_postings_per_employer_median,sector=Transport and telecom,5.5,6,employer,
+employers_with_ge1_new_title,sector=Transport and telecom,5.0,6,employer,
+share_employers_with_ge1_new_title,sector=Transport and telecom,0.8333,6,employer,
+new_title_postings_total,sector=Transport and telecom,29.0,505,none,
+new_title_share_of_postings,sector=Transport and telecom,0.0574,505,unweighted,
+new_title_share_of_postings,sector=Transport and telecom,0.0124,505,sampling-weighted,
+employers,sector=Utilities,4.0,4,employer,
+new_title_postings_per_employer_mean,sector=Utilities,1.75,4,employer,
+new_title_postings_per_employer_median,sector=Utilities,1.0,4,employer,
+employers_with_ge1_new_title,sector=Utilities,2.0,4,employer,
+share_employers_with_ge1_new_title,sector=Utilities,0.5,4,employer,
+new_title_postings_total,sector=Utilities,7.0,466,none,
+new_title_share_of_postings,sector=Utilities,0.015,466,unweighted,
+new_title_share_of_postings,sector=Utilities,0.0031,466,sampling-weighted,
+employers,sector=VC software (not SEC filers),32.0,32,employer,
+new_title_postings_per_employer_mean,sector=VC software (not SEC filers),11.6562,32,employer,
+new_title_postings_per_employer_median,sector=VC software (not SEC filers),5.0,32,employer,
+employers_with_ge1_new_title,sector=VC software (not SEC filers),30.0,32,employer,
+share_employers_with_ge1_new_title,sector=VC software (not SEC filers),0.9375,32,employer,
+new_title_postings_total,sector=VC software (not SEC filers),373.0,1452,none,
+new_title_share_of_postings,sector=VC software (not SEC filers),0.2569,1452,unweighted,
+new_title_share_of_postings,sector=VC software (not SEC filers),0.0711,1452,sampling-weighted,
+employers,all,198.0,198,employer,
+employers_with_ge1_new_title,all,161.0,198,employer,
+share_employers_with_ge1_new_title,all,0.8131,198,employer,
+new_title_postings_per_employer_mean,all,14.8737,198,employer,
+new_title_postings_per_employer_median,all,4.0,198,employer,
+new_title_postings_per_employer_max,all,286.0,198,employer,
+new_title_share_of_postings,all,0.1154,25512,unweighted,
+new_title_share_of_postings,all,0.0266,25512,sampling-weighted,
+new_title_postings_by_term,employer_type=fortune500|term=agentic,130.0,130,none,
+new_title_postings_by_term,employer_type=fortune500|term=ai,1542.0,1542,none,
+new_title_postings_by_term,employer_type=fortune500|term=automation,646.0,646,none,
+new_title_postings_by_term,employer_type=fortune500|term=copilot,4.0,4,none,
+new_title_postings_by_term,employer_type=fortune500|term=genai,46.0,46,none,
+new_title_postings_by_term,employer_type=fortune500|term=generative ai,21.0,21,none,
+new_title_postings_by_term,employer_type=fortune500|term=intelligent automation,3.0,3,none,
+new_title_postings_by_term,employer_type=fortune500|term=llm,11.0,11,none,
+new_title_postings_by_term,employer_type=fortune500|term=machine learning,156.0,156,none,
+new_title_postings_by_term,employer_type=fortune500|term=model risk,6.0,6,none,
+new_title_postings_by_term,employer_type=fortune500|term=responsible ai,3.0,3,none,
+new_title_postings_by_term,employer_type=fortune500|term=rpa,4.0,4,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=agent,1.0,1,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=agentic,25.0,25,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=ai,296.0,296,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=automation,10.0,10,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=genai,3.0,3,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=generative ai,1.0,1,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=llm,1.0,1,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=machine learning,35.0,35,none,
+new_title_postings_by_term,employer_type=venture-backed-software|term=prompt,1.0,1,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=agentic",15.0,15,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=ai",157.0,157,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=automation",76.0,76,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=copilot",2.0,2,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=genai",15.0,15,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=generative ai",3.0,3,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=llm",1.0,1,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=machine learning",6.0,6,none,
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=model risk",4.0,4,none,
+new_title_postings_by_term,sector=Manufacturing|term=agentic,17.0,17,none,
+new_title_postings_by_term,sector=Manufacturing|term=ai,382.0,382,none,
+new_title_postings_by_term,sector=Manufacturing|term=automation,296.0,296,none,
+new_title_postings_by_term,sector=Manufacturing|term=genai,5.0,5,none,
+new_title_postings_by_term,sector=Manufacturing|term=generative ai,3.0,3,none,
+new_title_postings_by_term,sector=Manufacturing|term=intelligent automation,1.0,1,none,
+new_title_postings_by_term,sector=Manufacturing|term=machine learning,31.0,31,none,
+new_title_postings_by_term,sector=Manufacturing|term=responsible ai,3.0,3,none,
+new_title_postings_by_term,sector=Manufacturing|term=rpa,1.0,1,none,
+new_title_postings_by_term,"sector=Mining, construction, agriculture|term=ai",7.0,7,none,
+new_title_postings_by_term,"sector=Mining, construction, agriculture|term=automation",3.0,3,none,
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=ai,3.0,3,none,
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=automation,2.0,2,none,
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=model risk,2.0,2,none,
+new_title_postings_by_term,sector=Retail and wholesale|term=agentic,3.0,3,none,
+new_title_postings_by_term,sector=Retail and wholesale|term=ai,80.0,80,none,
+new_title_postings_by_term,sector=Retail and wholesale|term=automation,54.0,54,none,
+new_title_postings_by_term,sector=Retail and wholesale|term=genai,1.0,1,none,
+new_title_postings_by_term,sector=Retail and wholesale|term=machine learning,18.0,18,none,
+new_title_postings_by_term,sector=Services (other)|term=agentic,13.0,13,none,
+new_title_postings_by_term,sector=Services (other)|term=ai,119.0,119,none,
+new_title_postings_by_term,sector=Services (other)|term=automation,20.0,20,none,
+new_title_postings_by_term,sector=Services (other)|term=genai,17.0,17,none,
+new_title_postings_by_term,sector=Services (other)|term=generative ai,3.0,3,none,
+new_title_postings_by_term,sector=Services (other)|term=llm,1.0,1,none,
+new_title_postings_by_term,sector=Services (other)|term=machine learning,18.0,18,none,
+new_title_postings_by_term,sector=Services (other)|term=rpa,1.0,1,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=agentic",79.0,79,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=ai",779.0,779,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=automation",187.0,187,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=copilot",2.0,2,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=genai",8.0,8,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=generative ai",12.0,12,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=intelligent automation",2.0,2,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=llm",9.0,9,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=machine learning",73.0,73,none,
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=rpa",2.0,2,none,
+new_title_postings_by_term,sector=Transport and telecom|term=agentic,3.0,3,none,
+new_title_postings_by_term,sector=Transport and telecom|term=ai,11.0,11,none,
+new_title_postings_by_term,sector=Transport and telecom|term=automation,5.0,5,none,
+new_title_postings_by_term,sector=Transport and telecom|term=machine learning,10.0,10,none,
+new_title_postings_by_term,sector=Utilities|term=ai,4.0,4,none,
+new_title_postings_by_term,sector=Utilities|term=automation,3.0,3,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=agent,1.0,1,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=agentic,25.0,25,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=ai,296.0,296,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=automation,10.0,10,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=genai,3.0,3,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=generative ai,1.0,1,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=llm,1.0,1,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=machine learning,35.0,35,none,
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=prompt,1.0,1,none,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=11,0.1542,452,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=13,0.0188,55,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=15,0.6196,1816,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=17,0.0966,283,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=19,0.0201,59,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=21,0.0003,1,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=23,0.0038,11,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=25,0.0014,4,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=27,0.0092,27,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=29,0.0017,5,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=31,0.0007,2,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=35,0.0003,1,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=39,0.001,3,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=41,0.0365,107,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=43,0.0027,8,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=47,0.0003,1,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=49,0.031,91,unweighted,
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=51,0.0017,5,unweighted,
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=11,0.1528,127,unweighted,
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=13,0.2214,184,unweighted,
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=15,0.6041,502,unweighted,
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=43,0.0193,16,unweighted,
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=49,0.0024,2,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=11,0.1238,2530,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=11,0.1238,2530,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=13,0.0958,1957,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=13,0.0958,1957,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=15,0.1387,2835,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=15,0.1388,2835,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=17,0.1032,2108,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=17,0.1032,2108,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=19,0.0206,421,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=19,0.0206,421,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=21,0.0043,87,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=21,0.0043,87,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=23,0.0064,131,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=23,0.0064,131,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=25,0.0037,75,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=25,0.0037,75,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=27,0.0105,215,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=27,0.0105,215,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=29,0.0449,917,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=29,0.0449,917,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=31,0.0092,188,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=31,0.0092,188,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=33,0.0081,165,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=33,0.0081,165,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=35,0.0133,271,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=35,0.0132,271,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=37,0.011,224,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=37,0.011,224,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=39,0.0046,93,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=39,0.0046,93,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=41,0.2019,4126,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=41,0.202,4126,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=43,0.0271,554,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=43,0.0271,554,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=45,0.0005,10,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=45,0.0005,10,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=47,0.006,123,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=47,0.006,123,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=49,0.0637,1301,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=49,0.0636,1301,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=51,0.0405,827,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=51,0.0404,827,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=53,0.0593,1212,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=53,0.0593,1212,sampling-weighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=55,0.0031,64,unweighted,
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=55,0.0031,64,sampling-weighted,
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=11,0.9115,452,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=13,0.8727,55,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=15,0.8981,1816,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=17,0.7986,283,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=19,0.8136,59,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=21,1.0,1,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=23,0.9091,11,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=25,0.5,4,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=27,0.9259,27,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=29,1.0,5,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=31,1.0,2,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=35,1.0,1,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=39,0.6667,3,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=41,0.7477,107,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=43,0.875,8,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=47,0.0,1,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=49,0.7802,91,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=51,0.4,5,unweighted,"task-level precision 0.05 vs coder A, 0.14 vs coder B (200 real posting records)"

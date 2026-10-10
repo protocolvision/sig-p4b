@@ -1,0 +1,453 @@
+measure,slice,value,n,weighting
+language_artefact_clusters,"0,1,6,7,8,9,10,11",8.0,114,none
+selected_postings,all,25512.0,25512,none
+selected_postings,group=S1,831.0,831,none
+selected_postings,group=newtitle,2790.0,2790,none
+selected_postings,group=newtitle-agent-human,584.0,584,none
+selected_postings,group=rest20,21307.0,21307,none
+postings_with_extracted_tasks,all,25220.0,25512,none
+us_class_postings,all,14974.0,25512,none
+us_class_postings,us,14974.0,25512,none
+us_class_postings,non-us,8281.0,25512,none
+us_class_postings,unknown,2257.0,25512,none
+newtitle_postings_by_term,newtitle|agent,1.0,1,none
+newtitle_postings_by_term,newtitle|ai,1838.0,1838,none
+newtitle_postings_by_term,newtitle|automation,656.0,656,none
+newtitle_postings_by_term,newtitle|copilot,4.0,4,none
+newtitle_postings_by_term,newtitle|genai,49.0,49,none
+newtitle_postings_by_term,newtitle|generative ai,22.0,22,none
+newtitle_postings_by_term,newtitle|intelligent automation,3.0,3,none
+newtitle_postings_by_term,newtitle|llm,12.0,12,none
+newtitle_postings_by_term,newtitle|machine learning,191.0,191,none
+newtitle_postings_by_term,newtitle|model risk,6.0,6,none
+newtitle_postings_by_term,newtitle|prompt,1.0,1,none
+newtitle_postings_by_term,newtitle|responsible ai,3.0,3,none
+newtitle_postings_by_term,newtitle|rpa,4.0,4,none
+newtitle_postings_by_term,newtitle-agent-human|agent,405.0,405,none
+newtitle_postings_by_term,newtitle-agent-human|agentic,155.0,155,none
+newtitle_postings_by_term,newtitle-agent-human|agents,24.0,24,none
+existing_with_ai_duty[study_occupation],all,400.0,831,unweighted
+existing_with_ai_duty[study_occupation],all,3.8628,831,employer-weighted
+new_title_postings,all,2790.0,2790,unweighted
+new_title_postings,all,21.8253,2790,employer-weighted
+absorption_ratio[study_occupation],all,0.1434,2790,unweighted
+absorption_ratio[study_occupation],all,0.177,2790,employer-weighted
+share_existing_with_ai_duty[study_occupation],all,0.4813,831,unweighted
+share_existing_with_ai_duty[study_occupation],all,0.5107,831,employer-weighted
+existing_with_ai_duty[all_non_new_title],all,3288.0,22138,unweighted
+existing_with_ai_duty[all_non_new_title],all,26.8705,22138,employer-weighted
+new_title_postings,all,2790.0,2790,unweighted
+new_title_postings,all,21.8253,2790,employer-weighted
+absorption_ratio[all_non_new_title],all,1.1785,2790,unweighted
+absorption_ratio[all_non_new_title],all,1.2312,2790,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],all,0.1485,22138,unweighted
+share_existing_with_ai_duty[all_non_new_title],all,0.1567,22138,employer-weighted
+existing_with_ai_duty[study_occupation],type=fortune500,348.0,721,unweighted
+existing_with_ai_duty[study_occupation],type=fortune500,2.7603,721,employer-weighted
+new_title_postings,type=fortune500,2442.0,2442,unweighted
+new_title_postings,type=fortune500,15.3421,2442,employer-weighted
+absorption_ratio[study_occupation],type=fortune500,0.1425,2442,unweighted
+absorption_ratio[study_occupation],type=fortune500,0.1799,2442,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=fortune500,0.4827,721,unweighted
+share_existing_with_ai_duty[study_occupation],type=fortune500,0.4944,721,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=fortune500,2889.0,21075,unweighted
+existing_with_ai_duty[all_non_new_title],type=fortune500,18.4372,21075,employer-weighted
+new_title_postings,type=fortune500,2442.0,2442,unweighted
+new_title_postings,type=fortune500,15.3421,2442,employer-weighted
+absorption_ratio[all_non_new_title],type=fortune500,1.183,2442,unweighted
+absorption_ratio[all_non_new_title],type=fortune500,1.2017,2442,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500,0.1371,21075,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500,0.1253,21075,employer-weighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software,52.0,110,unweighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software,1.1025,110,employer-weighted
+new_title_postings,type=venture-backed-software,348.0,348,unweighted
+new_title_postings,type=venture-backed-software,6.4832,348,employer-weighted
+absorption_ratio[study_occupation],type=venture-backed-software,0.1494,348,unweighted
+absorption_ratio[study_occupation],type=venture-backed-software,0.1701,348,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software,0.4727,110,unweighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software,0.5567,110,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software,399.0,1063,unweighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software,8.4333,1063,employer-weighted
+new_title_postings,type=venture-backed-software,348.0,348,unweighted
+new_title_postings,type=venture-backed-software,6.4832,348,employer-weighted
+absorption_ratio[all_non_new_title],type=venture-backed-software,1.1466,348,unweighted
+absorption_ratio[all_non_new_title],type=venture-backed-software,1.3008,348,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software,0.3754,1063,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software,0.3453,1063,employer-weighted
+existing_with_ai_duty[study_occupation],us=non-us,152.0,320,unweighted
+existing_with_ai_duty[study_occupation],us=non-us,1.1434,320,employer-weighted
+new_title_postings,us=non-us,1188.0,1188,unweighted
+new_title_postings,us=non-us,7.0991,1188,employer-weighted
+absorption_ratio[study_occupation],us=non-us,0.1279,1188,unweighted
+absorption_ratio[study_occupation],us=non-us,0.1611,1188,employer-weighted
+share_existing_with_ai_duty[study_occupation],us=non-us,0.475,320,unweighted
+share_existing_with_ai_duty[study_occupation],us=non-us,0.4851,320,employer-weighted
+existing_with_ai_duty[all_non_new_title],us=non-us,1451.0,6909,unweighted
+existing_with_ai_duty[all_non_new_title],us=non-us,9.3916,6909,employer-weighted
+new_title_postings,us=non-us,1188.0,1188,unweighted
+new_title_postings,us=non-us,7.0991,1188,employer-weighted
+absorption_ratio[all_non_new_title],us=non-us,1.2214,1188,unweighted
+absorption_ratio[all_non_new_title],us=non-us,1.3229,1188,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],us=non-us,0.21,6909,unweighted
+share_existing_with_ai_duty[all_non_new_title],us=non-us,0.2083,6909,employer-weighted
+existing_with_ai_duty[study_occupation],us=us,237.0,466,unweighted
+existing_with_ai_duty[study_occupation],us=us,2.6262,466,employer-weighted
+new_title_postings,us=us,1519.0,1519,unweighted
+new_title_postings,us=us,13.68,1519,employer-weighted
+absorption_ratio[study_occupation],us=us,0.156,1519,unweighted
+absorption_ratio[study_occupation],us=us,0.192,1519,employer-weighted
+share_existing_with_ai_duty[study_occupation],us=us,0.5086,466,unweighted
+share_existing_with_ai_duty[study_occupation],us=us,0.5672,466,employer-weighted
+existing_with_ai_duty[all_non_new_title],us=us,1729.0,13238,unweighted
+existing_with_ai_duty[all_non_new_title],us=us,16.5147,13238,employer-weighted
+new_title_postings,us=us,1519.0,1519,unweighted
+new_title_postings,us=us,13.68,1519,employer-weighted
+absorption_ratio[all_non_new_title],us=us,1.1382,1519,unweighted
+absorption_ratio[all_non_new_title],us=us,1.2072,1519,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],us=us,0.1306,13238,unweighted
+share_existing_with_ai_duty[all_non_new_title],us=us,0.1488,13238,employer-weighted
+existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,137.0,281,unweighted
+existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.9191,281,employer-weighted
+new_title_postings,type=fortune500|us=non-us,1046.0,1046,unweighted
+new_title_postings,type=fortune500|us=non-us,4.8953,1046,employer-weighted
+absorption_ratio[study_occupation],type=fortune500|us=non-us,0.131,1046,unweighted
+absorption_ratio[study_occupation],type=fortune500|us=non-us,0.1878,1046,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.4875,281,unweighted
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=non-us,0.4849,281,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,1301.0,6497,unweighted
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,6.3033,6497,employer-weighted
+new_title_postings,type=fortune500|us=non-us,1046.0,1046,unweighted
+new_title_postings,type=fortune500|us=non-us,4.8953,1046,employer-weighted
+absorption_ratio[all_non_new_title],type=fortune500|us=non-us,1.2438,1046,unweighted
+absorption_ratio[all_non_new_title],type=fortune500|us=non-us,1.2876,1046,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,0.2002,6497,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=non-us,0.1795,6497,employer-weighted
+existing_with_ai_duty[study_occupation],type=fortune500|us=us,200.0,399,unweighted
+existing_with_ai_duty[study_occupation],type=fortune500|us=us,1.748,399,employer-weighted
+new_title_postings,type=fortune500|us=us,1321.0,1321,unweighted
+new_title_postings,type=fortune500|us=us,9.8647,1321,employer-weighted
+absorption_ratio[study_occupation],type=fortune500|us=us,0.1514,1321,unweighted
+absorption_ratio[study_occupation],type=fortune500|us=us,0.1772,1321,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.5013,399,unweighted
+share_existing_with_ai_duty[study_occupation],type=fortune500|us=us,0.539,399,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,1485.0,12624,unweighted
+existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,11.2802,12624,employer-weighted
+new_title_postings,type=fortune500|us=us,1321.0,1321,unweighted
+new_title_postings,type=fortune500|us=us,9.8647,1321,employer-weighted
+absorption_ratio[all_non_new_title],type=fortune500|us=us,1.1241,1321,unweighted
+absorption_ratio[all_non_new_title],type=fortune500|us=us,1.1435,1321,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,0.1176,12624,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=fortune500|us=us,0.1154,12624,employer-weighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,15.0,39,unweighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.2243,39,employer-weighted
+new_title_postings,type=venture-backed-software|us=non-us,142.0,142,unweighted
+new_title_postings,type=venture-backed-software|us=non-us,2.2037,142,employer-weighted
+absorption_ratio[study_occupation],type=venture-backed-software|us=non-us,0.1056,142,unweighted
+absorption_ratio[study_occupation],type=venture-backed-software|us=non-us,0.1018,142,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.3846,39,unweighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=non-us,0.4859,39,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,150.0,412,unweighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,3.0884,412,employer-weighted
+new_title_postings,type=venture-backed-software|us=non-us,142.0,142,unweighted
+new_title_postings,type=venture-backed-software|us=non-us,2.2037,142,employer-weighted
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=non-us,1.0563,142,unweighted
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=non-us,1.4014,142,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,0.3641,412,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=non-us,0.3097,412,employer-weighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,37.0,67,unweighted
+existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.8782,67,employer-weighted
+new_title_postings,type=venture-backed-software|us=us,198.0,198,unweighted
+new_title_postings,type=venture-backed-software|us=us,3.8152,198,employer-weighted
+absorption_ratio[study_occupation],type=venture-backed-software|us=us,0.1869,198,unweighted
+absorption_ratio[study_occupation],type=venture-backed-software|us=us,0.2302,198,employer-weighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.5522,67,unweighted
+share_existing_with_ai_duty[study_occupation],type=venture-backed-software|us=us,0.6332,67,employer-weighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,244.0,614,unweighted
+existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,5.2346,614,employer-weighted
+new_title_postings,type=venture-backed-software|us=us,198.0,198,unweighted
+new_title_postings,type=venture-backed-software|us=us,3.8152,198,employer-weighted
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=us,1.2323,198,unweighted
+absorption_ratio[all_non_new_title],type=venture-backed-software|us=us,1.372,198,employer-weighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,0.3974,614,unweighted
+share_existing_with_ai_duty[all_non_new_title],type=venture-backed-software|us=us,0.3955,614,employer-weighted
+share_new_title_with_ai_duty,all,0.8728,2790,unweighted
+share_new_title_human_agent_with_ai_duty,all,0.3682,584,unweighted
+employers_with_ai_duty_existing[study_occupation],all,95.0,198,employer
+employers_with_ai_duty_existing[all_non_new_title],all,173.0,198,employer
+employers_with_new_title,all,161.0,198,employer
+cross_function_share[primary],new_title,0.0063,158,unweighted
+cross_function_share[primary],new_title,0.0168,158,employer-weighted
+cross_function_count[primary],new_title,1.0,158,unweighted
+postings_in_primary_clusters,new_title,158.0,2790,unweighted
+cross_function_share[primary],other_postings,0.0034,880,unweighted
+cross_function_share[primary],other_postings,0.0055,880,employer-weighted
+cross_function_count[primary],other_postings,3.0,880,unweighted
+postings_in_primary_clusters,other_postings,880.0,22722,unweighted
+cross_function_share[primary],other_study_occupation,0.0149,67,unweighted
+cross_function_share[primary],other_study_occupation,0.0087,67,employer-weighted
+cross_function_count[primary],other_study_occupation,1.0,67,unweighted
+postings_in_primary_clusters,other_study_occupation,67.0,831,unweighted
+cross_function_share[primary],other_rest_sample,0.0025,803,unweighted
+cross_function_share[primary],other_rest_sample,0.0053,803,employer-weighted
+cross_function_count[primary],other_rest_sample,2.0,803,unweighted
+postings_in_primary_clusters,other_rest_sample,803.0,21307,unweighted
+cross_function_share[primary],new_title_human_agent,0.0,10,unweighted
+cross_function_share[primary],new_title_human_agent,0.0,10,employer-weighted
+cross_function_count[primary],new_title_human_agent,0.0,10,unweighted
+postings_in_primary_clusters,new_title_human_agent,10.0,584,unweighted
+cross_function_share[primary],new_title|type=fortune500,0.0081,123,unweighted
+cross_function_share[primary],other_postings|type=fortune500,0.0039,763,unweighted
+cross_function_share[primary],new_title|type=venture-backed-software,0.0,35,unweighted
+cross_function_share[primary],other_postings|type=venture-backed-software,0.0,117,unweighted
+cross_function_share[secondary],new_title,0.0824,886,unweighted
+cross_function_share[secondary],new_title,0.151,886,employer-weighted
+cross_function_count[secondary],new_title,73.0,886,unweighted
+postings_in_secondary_clusters,new_title,886.0,2790,unweighted
+cross_function_share[secondary],other_postings,0.0844,6324,unweighted
+cross_function_share[secondary],other_postings,0.1467,6324,employer-weighted
+cross_function_count[secondary],other_postings,534.0,6324,unweighted
+postings_in_secondary_clusters,other_postings,6324.0,22722,unweighted
+cross_function_share[secondary],other_study_occupation,0.1226,310,unweighted
+cross_function_share[secondary],other_study_occupation,0.1932,310,employer-weighted
+cross_function_count[secondary],other_study_occupation,38.0,310,unweighted
+postings_in_secondary_clusters,other_study_occupation,310.0,831,unweighted
+cross_function_share[secondary],other_rest_sample,0.0825,5892,unweighted
+cross_function_share[secondary],other_rest_sample,0.1434,5892,employer-weighted
+cross_function_count[secondary],other_rest_sample,486.0,5892,unweighted
+postings_in_secondary_clusters,other_rest_sample,5892.0,21307,unweighted
+cross_function_share[secondary],new_title_human_agent,0.082,122,unweighted
+cross_function_share[secondary],new_title_human_agent,0.1805,122,employer-weighted
+cross_function_count[secondary],new_title_human_agent,10.0,122,unweighted
+postings_in_secondary_clusters,new_title_human_agent,122.0,584,unweighted
+cross_function_share[secondary],new_title|type=fortune500,0.0775,723,unweighted
+cross_function_share[secondary],other_postings|type=fortune500,0.0809,5684,unweighted
+cross_function_share[secondary],new_title|type=venture-backed-software,0.1043,163,unweighted
+cross_function_share[secondary],other_postings|type=venture-backed-software,0.1156,640,unweighted
+postings_with_pooled_tasks,all,14079.0,25512,none
+employers,employer_type=fortune500,166.0,166,employer
+new_title_postings_per_employer_mean,employer_type=fortune500,14.7108,166,employer
+new_title_postings_per_employer_median,employer_type=fortune500,4.0,166,employer
+employers_with_ge1_new_title,employer_type=fortune500,131.0,166,employer
+share_employers_with_ge1_new_title,employer_type=fortune500,0.7892,166,employer
+new_title_postings_total,employer_type=fortune500,2442.0,24060,none
+new_title_share_of_selected_postings,employer_type=fortune500,0.1015,24060,none
+employers,employer_type=venture-backed-software,32.0,32,employer
+new_title_postings_per_employer_mean,employer_type=venture-backed-software,10.875,32,employer
+new_title_postings_per_employer_median,employer_type=venture-backed-software,5.0,32,employer
+employers_with_ge1_new_title,employer_type=venture-backed-software,30.0,32,employer
+share_employers_with_ge1_new_title,employer_type=venture-backed-software,0.9375,32,employer
+new_title_postings_total,employer_type=venture-backed-software,348.0,1452,none
+new_title_share_of_selected_postings,employer_type=venture-backed-software,0.2397,1452,none
+employers,"sector=Finance, insurance, real estate",29.0,29,employer
+new_title_postings_per_employer_mean,"sector=Finance, insurance, real estate",9.1034,29,employer
+new_title_postings_per_employer_median,"sector=Finance, insurance, real estate",4.0,29,employer
+employers_with_ge1_new_title,"sector=Finance, insurance, real estate",26.0,29,employer
+share_employers_with_ge1_new_title,"sector=Finance, insurance, real estate",0.8966,29,employer
+new_title_postings_total,"sector=Finance, insurance, real estate",264.0,3158,none
+new_title_share_of_selected_postings,"sector=Finance, insurance, real estate",0.0836,3158,none
+employers,sector=Manufacturing,44.0,44,employer
+new_title_postings_per_employer_mean,sector=Manufacturing,15.8182,44,employer
+new_title_postings_per_employer_median,sector=Manufacturing,5.0,44,employer
+employers_with_ge1_new_title,sector=Manufacturing,37.0,44,employer
+share_employers_with_ge1_new_title,sector=Manufacturing,0.8409,44,employer
+new_title_postings_total,sector=Manufacturing,696.0,6775,none
+new_title_share_of_selected_postings,sector=Manufacturing,0.1027,6775,none
+employers,"sector=Mining, construction, agriculture",6.0,6,employer
+new_title_postings_per_employer_mean,"sector=Mining, construction, agriculture",1.6667,6,employer
+new_title_postings_per_employer_median,"sector=Mining, construction, agriculture",0.5,6,employer
+employers_with_ge1_new_title,"sector=Mining, construction, agriculture",3.0,6,employer
+share_employers_with_ge1_new_title,"sector=Mining, construction, agriculture",0.5,6,employer
+new_title_postings_total,"sector=Mining, construction, agriculture",10.0,490,none
+new_title_share_of_selected_postings,"sector=Mining, construction, agriculture",0.0204,490,none
+employers,sector=Mutuals and private (no SEC filing),8.0,8,employer
+new_title_postings_per_employer_mean,sector=Mutuals and private (no SEC filing),0.875,8,employer
+new_title_postings_per_employer_median,sector=Mutuals and private (no SEC filing),0.5,8,employer
+employers_with_ge1_new_title,sector=Mutuals and private (no SEC filing),4.0,8,employer
+share_employers_with_ge1_new_title,sector=Mutuals and private (no SEC filing),0.5,8,employer
+new_title_postings_total,sector=Mutuals and private (no SEC filing),7.0,235,none
+new_title_share_of_selected_postings,sector=Mutuals and private (no SEC filing),0.0298,235,none
+employers,sector=Retail and wholesale,33.0,33,employer
+new_title_postings_per_employer_mean,sector=Retail and wholesale,5.4242,33,employer
+new_title_postings_per_employer_median,sector=Retail and wholesale,1.0,33,employer
+employers_with_ge1_new_title,sector=Retail and wholesale,24.0,33,employer
+share_employers_with_ge1_new_title,sector=Retail and wholesale,0.7273,33,employer
+new_title_postings_total,sector=Retail and wholesale,179.0,5059,none
+new_title_share_of_selected_postings,sector=Retail and wholesale,0.0354,5059,none
+employers,sector=Services (other),17.0,17,employer
+new_title_postings_per_employer_mean,sector=Services (other),10.5294,17,employer
+new_title_postings_per_employer_median,sector=Services (other),5.0,17,employer
+employers_with_ge1_new_title,sector=Services (other),12.0,17,employer
+share_employers_with_ge1_new_title,sector=Services (other),0.7059,17,employer
+new_title_postings_total,sector=Services (other),179.0,2575,none
+new_title_share_of_selected_postings,sector=Services (other),0.0695,2575,none
+employers,"sector=Tech (SIC 357x, 367x, 737x)",19.0,19,employer
+new_title_postings_per_employer_mean,"sector=Tech (SIC 357x, 367x, 737x)",56.5263,19,employer
+new_title_postings_per_employer_median,"sector=Tech (SIC 357x, 367x, 737x)",46.0,19,employer
+employers_with_ge1_new_title,"sector=Tech (SIC 357x, 367x, 737x)",18.0,19,employer
+share_employers_with_ge1_new_title,"sector=Tech (SIC 357x, 367x, 737x)",0.9474,19,employer
+new_title_postings_total,"sector=Tech (SIC 357x, 367x, 737x)",1074.0,4797,none
+new_title_share_of_selected_postings,"sector=Tech (SIC 357x, 367x, 737x)",0.2239,4797,none
+employers,sector=Transport and telecom,6.0,6,employer
+new_title_postings_per_employer_mean,sector=Transport and telecom,4.3333,6,employer
+new_title_postings_per_employer_median,sector=Transport and telecom,4.5,6,employer
+employers_with_ge1_new_title,sector=Transport and telecom,5.0,6,employer
+share_employers_with_ge1_new_title,sector=Transport and telecom,0.8333,6,employer
+new_title_postings_total,sector=Transport and telecom,26.0,505,none
+new_title_share_of_selected_postings,sector=Transport and telecom,0.0515,505,none
+employers,sector=Utilities,4.0,4,employer
+new_title_postings_per_employer_mean,sector=Utilities,1.75,4,employer
+new_title_postings_per_employer_median,sector=Utilities,1.0,4,employer
+employers_with_ge1_new_title,sector=Utilities,2.0,4,employer
+share_employers_with_ge1_new_title,sector=Utilities,0.5,4,employer
+new_title_postings_total,sector=Utilities,7.0,466,none
+new_title_share_of_selected_postings,sector=Utilities,0.015,466,none
+employers,sector=VC software (not SEC filers),32.0,32,employer
+new_title_postings_per_employer_mean,sector=VC software (not SEC filers),10.875,32,employer
+new_title_postings_per_employer_median,sector=VC software (not SEC filers),5.0,32,employer
+employers_with_ge1_new_title,sector=VC software (not SEC filers),30.0,32,employer
+share_employers_with_ge1_new_title,sector=VC software (not SEC filers),0.9375,32,employer
+new_title_postings_total,sector=VC software (not SEC filers),348.0,1452,none
+new_title_share_of_selected_postings,sector=VC software (not SEC filers),0.2397,1452,none
+employers,all,198.0,198,employer
+employers_with_ge1_new_title,all,161.0,198,employer
+share_employers_with_ge1_new_title,all,0.8131,198,employer
+new_title_postings_per_employer_mean,all,14.0909,198,employer
+new_title_postings_per_employer_median,all,4.0,198,employer
+new_title_postings_per_employer_max,all,262.0,198,employer
+new_title_postings_by_term,employer_type=fortune500|term=ai,1542.0,1542,none
+new_title_postings_by_term,employer_type=fortune500|term=automation,646.0,646,none
+new_title_postings_by_term,employer_type=fortune500|term=copilot,4.0,4,none
+new_title_postings_by_term,employer_type=fortune500|term=genai,46.0,46,none
+new_title_postings_by_term,employer_type=fortune500|term=generative ai,21.0,21,none
+new_title_postings_by_term,employer_type=fortune500|term=intelligent automation,3.0,3,none
+new_title_postings_by_term,employer_type=fortune500|term=llm,11.0,11,none
+new_title_postings_by_term,employer_type=fortune500|term=machine learning,156.0,156,none
+new_title_postings_by_term,employer_type=fortune500|term=model risk,6.0,6,none
+new_title_postings_by_term,employer_type=fortune500|term=responsible ai,3.0,3,none
+new_title_postings_by_term,employer_type=fortune500|term=rpa,4.0,4,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=agent,1.0,1,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=ai,296.0,296,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=automation,10.0,10,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=genai,3.0,3,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=generative ai,1.0,1,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=llm,1.0,1,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=machine learning,35.0,35,none
+new_title_postings_by_term,employer_type=venture-backed-software|term=prompt,1.0,1,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=ai",157.0,157,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=automation",76.0,76,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=copilot",2.0,2,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=genai",15.0,15,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=generative ai",3.0,3,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=llm",1.0,1,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=machine learning",6.0,6,none
+new_title_postings_by_term,"sector=Finance, insurance, real estate|term=model risk",4.0,4,none
+new_title_postings_by_term,sector=Manufacturing|term=ai,377.0,377,none
+new_title_postings_by_term,sector=Manufacturing|term=automation,275.0,275,none
+new_title_postings_by_term,sector=Manufacturing|term=genai,5.0,5,none
+new_title_postings_by_term,sector=Manufacturing|term=generative ai,3.0,3,none
+new_title_postings_by_term,sector=Manufacturing|term=intelligent automation,1.0,1,none
+new_title_postings_by_term,sector=Manufacturing|term=machine learning,31.0,31,none
+new_title_postings_by_term,sector=Manufacturing|term=responsible ai,3.0,3,none
+new_title_postings_by_term,sector=Manufacturing|term=rpa,1.0,1,none
+new_title_postings_by_term,"sector=Mining, construction, agriculture|term=ai",7.0,7,none
+new_title_postings_by_term,"sector=Mining, construction, agriculture|term=automation",3.0,3,none
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=ai,3.0,3,none
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=automation,2.0,2,none
+new_title_postings_by_term,sector=Mutuals and private (no SEC filing)|term=model risk,2.0,2,none
+new_title_postings_by_term,sector=Retail and wholesale|term=ai,85.0,85,none
+new_title_postings_by_term,sector=Retail and wholesale|term=automation,75.0,75,none
+new_title_postings_by_term,sector=Retail and wholesale|term=genai,1.0,1,none
+new_title_postings_by_term,sector=Retail and wholesale|term=machine learning,18.0,18,none
+new_title_postings_by_term,sector=Services (other)|term=ai,119.0,119,none
+new_title_postings_by_term,sector=Services (other)|term=automation,20.0,20,none
+new_title_postings_by_term,sector=Services (other)|term=genai,17.0,17,none
+new_title_postings_by_term,sector=Services (other)|term=generative ai,3.0,3,none
+new_title_postings_by_term,sector=Services (other)|term=llm,1.0,1,none
+new_title_postings_by_term,sector=Services (other)|term=machine learning,18.0,18,none
+new_title_postings_by_term,sector=Services (other)|term=rpa,1.0,1,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=ai",779.0,779,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=automation",187.0,187,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=copilot",2.0,2,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=genai",8.0,8,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=generative ai",12.0,12,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=intelligent automation",2.0,2,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=llm",9.0,9,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=machine learning",73.0,73,none
+new_title_postings_by_term,"sector=Tech (SIC 357x, 367x, 737x)|term=rpa",2.0,2,none
+new_title_postings_by_term,sector=Transport and telecom|term=ai,11.0,11,none
+new_title_postings_by_term,sector=Transport and telecom|term=automation,5.0,5,none
+new_title_postings_by_term,sector=Transport and telecom|term=machine learning,10.0,10,none
+new_title_postings_by_term,sector=Utilities|term=ai,4.0,4,none
+new_title_postings_by_term,sector=Utilities|term=automation,3.0,3,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=agent,1.0,1,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=ai,296.0,296,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=automation,10.0,10,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=genai,3.0,3,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=generative ai,1.0,1,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=llm,1.0,1,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=machine learning,35.0,35,none
+new_title_postings_by_term,sector=VC software (not SEC filers)|term=prompt,1.0,1,none
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=15,0.6167,1712,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=11,0.1509,419,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=17,0.1019,283,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=41,0.0335,93,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=49,0.0328,91,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=19,0.0205,57,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=13,0.0195,54,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=27,0.0094,26,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=23,0.004,11,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=43,0.0029,8,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=51,0.0018,5,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=29,0.0018,5,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=25,0.0014,4,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=39,0.0011,3,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=31,0.0007,2,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=35,0.0004,1,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=21,0.0004,1,unweighted
+major_group_share[descriptive; major group correct ~83%],new_title|major_group=47,0.0004,1,unweighted
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=15,0.6041,502,unweighted
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=13,0.2214,184,unweighted
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=11,0.1528,127,unweighted
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=43,0.0193,16,unweighted
+major_group_share[descriptive; major group correct ~83%],study_occupation|major_group=49,0.0024,2,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=41,0.2019,4126,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=15,0.1387,2835,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=11,0.1238,2530,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=17,0.1032,2108,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=13,0.0958,1957,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=49,0.0637,1301,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=53,0.0593,1212,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=29,0.0449,917,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=51,0.0405,827,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=43,0.0271,554,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=19,0.0206,421,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=35,0.0133,271,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=37,0.011,224,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=27,0.0105,215,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=31,0.0092,188,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=33,0.0081,165,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=23,0.0064,131,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=47,0.006,123,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=39,0.0046,93,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=21,0.0043,87,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=25,0.0037,75,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=55,0.0031,64,unweighted
+major_group_share[descriptive; major group correct ~83%],rest_sample|major_group=45,0.0005,10,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=11,0.9069,419,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=13,0.8704,54,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=15,0.8949,1712,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=17,0.7986,283,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=19,0.807,57,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=21,1.0,1,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=23,0.9091,11,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=25,0.5,4,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=27,0.9231,26,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=29,1.0,5,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=31,1.0,2,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=35,1.0,1,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=39,0.6667,3,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=41,0.7204,93,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=43,0.875,8,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=47,0.0,1,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=49,0.7802,91,unweighted
+major_group_new_title_ai_duty_share[descriptive; ~83%],major_group=51,0.4,5,unweighted

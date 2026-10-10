@@ -322,3 +322,17 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
     all coded features. It now applies A.2 point 9 (more than 5 of the 15 scored features) and computes
     disagreement on the remaining scored features (0.40, above A.3's 0.35). The verdict is unchanged
     (unreliable), with two triggers instead of one.
+
+26. **Corrections after the red team (`red-team.md`).**
+    - **Grouping bug.** "agentic" titles were sent to the human-agent group because the code tested whether
+      the matched term *starts with* "agent". That is contrary to deviation 14, which lists agentic as a
+      new-title term. They are regrouped as new-title, and I1 and the two-phase estimate are rerun. The
+      regrouped postings were not in the phase-2 sample, so they take the new-title confirmation rate; this
+      is stated.
+    - **Speech pages.** The 8 untimestamped transcript pages were pooled into the speech counts, contrary to
+      the log. I6 counts are now reported for timestamped speech, with the pages separate.
+    - **I5c search.** The tooling search departed from A.2 (function-based search, different columns),
+      with no deviation entry until now.
+    - **Verdicts.** Verdicts are re-derived strictly by the pre-registered rules in the final findings
+      (H-absorb, the phase-change unit, H-federated, H3), and the red team's narrower wordings are adopted
+      where they hold.
