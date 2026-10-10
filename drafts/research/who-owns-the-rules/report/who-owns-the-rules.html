@@ -147,6 +147,47 @@ figcaption { font-size: .88rem; color: var(--muted); margin-top: .5rem; max-widt
 footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem; font-size: .86rem; color: var(--muted); }
 @media (max-width: 34rem) { h1 { font-size: 1.9rem; } .waffle { grid-template-columns: repeat(20, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .loop .st { animation: none; } .loop .flow { display: none; } }
+/* Industry ranking */
+.rank svg { width: 100%; height: auto; display: block; }
+.rank text { font-family: var(--body); font-size: 12px; fill: var(--ink); }
+.rank .ax { fill: var(--muted); font-size: 11px; }
+/* Trading timeline */
+.ttl svg { width: 100%; min-width: 680px; height: auto; display: block; }
+.ttl text { font-family: var(--body); font-size: 11.5px; fill: var(--ink); }
+.ttl .ax { fill: var(--muted); font-size: 11px; }
+.ttl .yr { font: 500 11px var(--mono); fill: var(--muted); }
+/* Staged org chart */
+.stages { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 1rem; }
+.stages button { font: 600 .85rem var(--body); padding: .45rem .8rem; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); border-radius: 4px; cursor: pointer; }
+.stages button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.org2 { min-width: 760px; font-size: .82rem; line-height: 1.3; display: grid; gap: .7rem; }
+.org2 .tier { display: grid; grid-template-columns: 9rem 1fr; gap: .8rem; align-items: start; }
+.org2 .tier > .lab { font: 500 .72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: .45rem; }
+.org2 .boxes { display: flex; flex-wrap: wrap; gap: .5rem; }
+.org2 .n { padding: .45rem .55rem; border: 1px solid var(--ink); background: var(--paper); max-width: 15rem; transition: opacity .5s ease, background-color .5s ease, border-color .5s ease; }
+.org2 .n small { display: block; color: var(--muted); margin-top: .15rem; }
+.org2 .n.pv { box-shadow: inset 3px 0 0 var(--agent); }
+.org2 .n.pe { box-shadow: inset 3px 0 0 var(--accent); }
+.org2 .n.rd { box-shadow: inset 3px 0 0 var(--warn); }
+.org2 .n.gap { border: 1.5px dashed var(--warn); }
+.org2 .n[data-s="1"], .org2 .n[data-s="2"] { opacity: .22; border-style: dashed; }
+.org2[data-stage="1"] .n[data-s="1"], .org2[data-stage="2"] .n[data-s="1"], .org2[data-stage="2"] .n[data-s="2"] { opacity: 1; border-style: solid; background: var(--fill); }
+.org2[data-stage="1"] .n.gap0, .org2[data-stage="2"] .n.gap0 { opacity: .22; }
+.org2[data-stage="2"] .n.gap1 { opacity: .22; }
+.org2 .n.gap1 { opacity: .22; }
+.org2[data-stage="1"] .n.gap1 { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .org2 .n { transition: none; } }
+
+/* Two-lane trading timeline */
+.lanes { display: grid; grid-template-columns: 3.4rem 1fr 1fr; min-width: 640px; font-size: .86rem; line-height: 1.35; }
+.lanes > div { padding: .45rem .6rem; border-top: 1px solid var(--rule); min-width: 0; }
+.lanes .h { font: 600 .74rem var(--body); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); border-top: 0; }
+.lanes .y { font: 500 .8rem var(--mono); color: var(--muted); }
+.lanes .ev { color: var(--ink); }
+.lanes .ev.inc::before { content: ""; display: inline-block; width: .55rem; height: .55rem; background: var(--warn); transform: rotate(45deg); margin-right: .45rem; }
+.lanes .st { border-left: 3px solid var(--rule); }
+.lanes .st.pv { border-left-color: var(--agent); } .lanes .st.pe { border-left-color: var(--accent); } .lanes .st.rd { border-left-color: var(--warn); }
+.lanes .st small, .lanes .ev small { color: var(--muted); }
 </style>
 
 <div class="wrap">
@@ -154,41 +195,39 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 
 <div class="col">
 <h1>Who owns the rules when agents join the business?</h1>
-<p class="lede">Companies are giving AI agents real work: answering customers, approving expenses, redlining contracts. Every agent acts under rules: what it may see, spend and say, and when a person must step in. We asked which human activities are changing as a result, which bundle into jobs, and whether finding and changing those rules is becoming anyone's job.</p>
+<p class="lede">Companies are giving AI agents real work: answering customers, approving expenses, redlining contracts. Every agent acts under rules: what it may see, spend and say, and when a person must step in. We asked which human activities change as a result, which bundle into jobs, and how companies will organise the work of finding, designing and changing those rules.</p>
+<p>Three studies: an activity-first scan of 298 records about work with agents; a calibration of that method against past roles; and a comparison with the industry that most resembles where agent-run business is heading.</p>
 </div>
 
 <div class="figs" aria-label="Key figures">
-  <div><b>298</b><span>activity records from 144 documents</span></div>
-  <div><b>5</b><span>source types, entered in random order</span></div>
-  <div><b>5</b><span>independent clustering rounds</span></div>
-  <div><b>0.95</b><span>agreement between two blind coders (Cohen's kappa)</span></div>
-  <div><b>0</b><span>records of finding unwritten rules as the main activity</span></div>
+  <div><b>298</b><span>activity records about work with agents</span></div>
+  <div><b>10</b><span>industries scored for resemblance</span></div>
+  <div><b>135</b><span>dated events in three industry timelines</span></div>
+  <div><b>0–6</b><span>years from a visible failure to new rules, in trading and the grid</span></div>
 </div>
 
 <div class="col">
 <h2>Summary of findings</h2>
 <ol class="findings">
-  <li><div><b>Running agents is the work most visibly forming into jobs.</b> A bundle of running live service agents (writing what they must never answer and when they hand off, reviewing conversations, owning answer accuracy) was named a likely distinct role in every round after job postings entered the pool. Posted titles exist ("AI agent operations specialist") at two to three years' experience, with a senior version at five to eight. Across all clusters, though, agent work stays spread inside functions: no cluster holds more than 29% of it. <span class="conf">Low to medium confidence</span></div></li>
-  <li><div><b>Rule design for agents is thin, and it does not cluster into one role.</b> Designing or changing the rules agents act under was the main activity in 13 of 298 records (40 counting secondary codes). Its largest share, 46%, sits in admitting and permissioning agents, short of our pre-set 60% test; counting secondary codes it spreads over eight clusters. None of the 13 records shows a person in a company doing the work: most are vendor descriptions or rules saying what firms should do. <span class="conf">High confidence it doesn't cluster</span></div></li>
-  <li><div><b>Finding unwritten rules, and deciding rule changes across functions, don't appear in the coded record.</b> Neither coder found a single record where either was the main activity. The red team found likely examples that the study's wording flattened, such as a support bot that invented a company policy and a postmortem of an agent incident. Absence here says more about public sources and our definitions than about companies. <span class="conf">High confidence about the sources; low about practice</span></div></li>
-  <li><div><b>Products assume rule owners that firms may not have named.</b> Agent platforms build in a business sponsor for each agent, and approval agents run on a written policy, but no record names who writes that policy. These are hypotheses for fieldwork, not roles. <span class="conf">Low confidence</span></div></li>
-  <li><div><b>Entry-level work is where activity shrinks fastest</b> (tier-one service, lead qualification, transaction matching), while the new agent roles start at junior to mid level. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>Today, running agents is the work forming into jobs; rule work is not.</b> Posted titles exist for running live service agents. Designing the rules agents act under is a thin duty spread across functions, and finding unwritten rules or deciding rule changes across functions doesn't appear in public documents at all. <span class="conf">Low to medium confidence</span></div></li>
+  <li><div><b>That silence is expected, and weak evidence.</b> Applied early to past roles, the same method would have missed brand management, the CISO and site reliability engineering, whose authority came from internal agreements that stayed private for years. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>Algorithmic trading is the nearest industry, then the electricity grid.</b> Both have software acting on its own at machine speed, under rules encoded in systems and set by regulators. Hospitals, our first idea, ranked last. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>Trading organised rule work in three layers.</b> A mid-level risk and control team monitors and holds the kill switch; the people who design and change algorithms are registered or certified; the CEO or a named senior manager answers for the controls, with each function signing off changes. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>Every structure inside firms followed a lever, and incidents set the clock.</b> Laws came within 0–6 years of visible failures (the 2010 Flash Crash, Knight Capital in 2012, the 2003 blackout). Where no lever applied, as with retail pricing engines, no structure formed. <span class="conf">Medium confidence</span></div></li>
 </ol>
-<p class="small muted" style="margin-top:1rem">The clusters did not meet our pre-set stability test, and several follow the type of source more than the work. Treat every finding as provisional; page 5 sets out the red team's objections.</p>
+<p class="small muted" style="margin-top:1rem">All evidence comes from search-engine summaries; no source page could be opened. Two red-team reviews argued against each study; their objections are on page 5.</p>
 </div>
 
-<!-- Page 2 -->
 <section class="page" id="design">
-<div class="pageno">Page 2 · Research design</div>
+<div class="pageno">Page 2 · How we studied it</div>
 <div class="col">
-<h2>How the study worked</h2>
-<p>Our earlier work started from job titles and our own idea of "protocol work", which invites confirmation. This study starts from evidence of changing <em>activities</em>, lets independent agents group the ones that travel together, and only then asks where rule work falls. The design and decision rules were committed before any evidence was collected.</p>
+<h2>Three studies, each designed against our own bias</h2>
+<p>Our early work started from job titles and our own idea of "protocol work", which invites confirmation. Each study below fixed its questions, rules and thresholds in the repository before collecting evidence.</p>
 </div>
-
 <figure class="loop">
 <div class="figbox">
 <svg viewBox="0 0 900 330" role="img" aria-labelledby="loopT loopD">
-  <title id="loopT">The study loop</title>
+  <title id="loopT">The activity loop</title>
   <desc id="loopD">Five collectors gather activity records from five source types. The sources enter a pool one at a time in a random order. After each addition a fresh clustering agent groups the pooled records. Two coders label every record without seeing any clusters. A script compares the rounds and a red-team agent argues against the results.</desc>
   <text x="20" y="22" class="sub">EVIDENCE (one collector each)</text>
   <g>
@@ -223,177 +262,144 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
   </g>
 </svg>
 </div>
-<figcaption>The loop. Evidence accumulates from round to round; conclusions don't. Each round's clusterer is a new agent that sees only the pooled records, so no round can reinforce the last one.</figcaption>
+<figcaption>Study 1, the activity loop. Evidence accumulates from round to round; conclusions don't. Our vocabulary was banned from every collector's and clusterer's instructions.</figcaption>
 </figure>
-
-<div class="col">
-<h3>Controls against our own bias</h3>
-</div>
 <div class="controls">
-  <div><b>Our vocabulary was banned</b><span>Collectors and clusterers never saw "protocol" or our other terms, and didn't open our files.</span></div>
-  <div><b>Activities, not roles</b><span>Each record is a verb phrase in the source's words; collectors made no role predictions.</span></div>
-  <div><b>Broad sources, with quotas</b><span>Five source types; at most half about governance; at least ten about shrinking or moving work each.</span></div>
-  <div><b>Independent rounds</b><span>Five clusterings on pools of 60 to 298 records, in a random source order drawn in advance.</span></div>
-  <div><b>Blind coding</b><span>Two coders labelled every record without seeing any clusters.</span></div>
-  <div><b>Rules fixed in advance</b><span>Tests for "clusters together", "dispersed" and "stable" were written before the run; a red team argued the opposite.</span></div>
-</div>
-
-<div class="col">
-<h3>What the coders looked for</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>Code</th><th>Activity</th><th>Our term</th></tr></thead>
-<tbody>
-<tr><td>PV</td><td>Finding the rules, written or unwritten, that actually govern work, from workarounds, overrides, escalations and where agents stall</td><td>Protocol vision</td></tr>
-<tr><td>PE</td><td>Designing, encoding, changing or testing the rules that limit what people and agents may do: permissions, limits, approval gates, interfaces</td><td>Protocol engineering</td></tr>
-<tr><td>RD</td><td>Deciding whether a rule should change by weighing a trade-off across functions, and owning that decision</td><td>Rule decisions</td></tr>
-<tr><td>AO</td><td>Building, configuring, supervising or fixing agents themselves</td><td>Agent operations</td></tr>
-</tbody></table></div>
+  <div><b>1. Activity loop</b><span>298 activity records from five source types; five independent clustering rounds; two blind coders labelling rule finding, rule design, rule decisions and agent operations.</span></div>
+  <div><b>2. Calibration</b><span>Would the same method have spotted past roles early? We reconstructed its verdicts for eleven roles, from the brand man (1931) to the prompt engineer (2022).</span></div>
+  <div><b>3. Industry analogue</b><span>Ten industries scored on eight weighted dimensions by two independent scorers from cited fact sheets; dated timelines of rule work for the top two and a control.</span></div>
+  <div><b>Red teams</b><span>A separate agent argued against studies 1 and 3 using the same files; a counter-example search tested the industry claims.</span></div>
 </div>
 </section>
 
-<!-- Page 3 -->
-<section class="page" id="activities">
-<div class="pageno">Page 3 · What is changing</div>
+<section class="page" id="software">
+<div class="pageno">Page 3 · What is changing in software</div>
 <div class="col">
 <h2>Agents do the work; people supervise; few touch the rules</h2>
-<p>Of the 298 records, 109 describe new activities and 79 work being automated. Only 19 say where work moved from one group of people to another, which limits what any study of public sources can say about ownership.</p>
+<p>Two coders agreed on 291 of 298 records. Supervising and configuring agents is seven times as common as designing the rules agents act under, and neither coder found any record whose main activity was finding unwritten rules or deciding rule changes across functions.</p>
 </div>
-
-<figure class="chart">
-<div id="changeChart"></div>
-<div class="legend" id="changeLegend"></div>
-<figcaption>Activity records by source and type of change. Each source describes change differently: postings and vendor documents mostly describe new work, practitioner accounts and regulation mostly describe automation, and research on work is the only source with much shrinking or moving work.</figcaption>
-</figure>
-
 <figure>
 <div class="waffle" id="waffle" aria-label="298 records by agreed code"></div>
 <div class="legend">
-  <span><i style="background:var(--accent)"></i>Rule design (PE) · 13</span>
-  <span><i style="background:var(--agent)"></i>Agent operations (AO) · 90</span>
+  <span><i style="background:var(--accent)"></i>Rule design · 13</span>
+  <span><i style="background:var(--agent)"></i>Agent operations · 90</span>
   <span><i style="background:var(--other)"></i>Other work · 188</span>
   <span><i style="background:var(--warn)"></i>Coders disagreed · 7</span>
-  <span>Finding rules (PV) · 0 &nbsp;·&nbsp; Rule decisions (RD) · 0</span>
+  <span>Finding rules · 0 &nbsp;·&nbsp; Rule decisions · 0</span>
 </div>
-<figcaption>Every record, coloured by the code both coders agreed on. Supervising and configuring agents is seven times as common as designing the rules they act under.</figcaption>
 </figure>
+<div class="col"><p>The final round grouped the records into 14 bundles of work. Each dot is one record; blue marks rule design as the main (filled) or a secondary (ring) activity.</p></div>
+<div class="cmap" id="cmap"></div>
+<div class="col" style="margin-top:1.2rem">
+<p class="small muted">Running live service agents was named a likely distinct role in four of five rounds; building agents inside one function (legal engineer, GTM engineer) in four; admitting and permissioning agents in one. The clustering failed our pre-set stability test, and several bundles follow their source type, so these are provisional.</p>
+</div>
 </section>
 
-<!-- Page 4 -->
-<section class="page" id="clusters">
-<div class="pageno">Page 4 · How activities bundle, and where rule work sits</div>
+<section class="page" id="industry">
+<div class="pageno">Page 4 · Looking outside software</div>
 <div class="col">
-<h2>Fourteen bundles of work, and the roles they support</h2>
-<p>The final round grouped all 298 records into 14 clusters by shared documents, performers, decisions and knowledge. Each dot is one record.</p>
+<h2>The nearest industry: algorithmic trading</h2>
+<p>Software that acts on its own, with rules encoded in systems and set by outsiders, exists already in some industries. We scored ten on how closely they resemble agent-run business.</p>
 </div>
-<div class="cmap" id="cmap"></div>
-<div class="legend" style="margin-top:.9rem">
-  <span><i style="background:var(--accent);border-radius:50%"></i>Rule design, main activity</span>
-  <span><i style="background:var(--paper);box-shadow:inset 0 0 0 2px var(--accent);border-radius:50%"></i>Rule design, secondary</span>
-  <span><i style="background:var(--agent);border-radius:50%"></i>Agent operations</span>
-  <span><i style="background:var(--other);border-radius:50%"></i>Other work</span>
-</div>
+<figure class="rank"><div id="rankChart"></div>
+<figcaption>Mean of two independent scorers (maximum 64); ticks show each scorer. Rank correlation between scorers 0.85. Hospitals rank last because physicians own the decisions and software rarely acts alone.</figcaption></figure>
 
-<div class="col" style="margin-top:1.8rem">
-<h3>Where rule work sits in a company</h3>
-<p>Placing the final clusters' roles on an org chart shows where the evidence puts rule work for agents: a central function admits and permissions agents, and each function writes the rules its own agents follow. This is the arrangement that vendor documents and regulations assume. Whether companies staff it this way is untested. Solid boxes are roles with posted titles in the evidence; dashed boxes have no stable title. A blue edge marks roles that hold rule-design records.</p>
+<div class="col"><h3>How trading organised its rule work</h3></div>
+<figure class="ttl"><div class="figbox"><div class="lanes" id="tradeTl"></div></div>
+<figcaption>Selected events from a 55-event timeline. Colour shows the layer: green for noticing deviations, blue for designing limits, amber for deciding changes. Each structure inside firms followed an exchange rule or a law, and most followed a visible failure.</figcaption></figure>
+
+<div class="col">
+<h3>What a company running agents may look like</h3>
+<p>Translating trading's structures to agent-run business gives three stages. Choose one to see which structures exist. Green edges mark noticing deviations, blue designing rules, amber deciding changes.</p>
+</div>
+<div class="stages" role="group" aria-label="Stage">
+  <button type="button" id="st0" data-stage="0" aria-pressed="true">Today</button>
+  <button type="button" id="st1" data-stage="1" aria-pressed="false">After a costly incident</button>
+  <button type="button" id="st2" data-stage="2" aria-pressed="false">After sector rules</button>
 </div>
 <figure>
 <div class="figbox">
-<div class="org" role="img" aria-label="Org chart of where rule work for agents sits">
-  <div class="exec">Executive team</div>
-  <div class="row">
-    <div class="fn"><div class="head">Customer service</div><div class="role rule">AI agent operations specialist<small>never-answer and hand-off rules; 2–3 yrs</small></div></div>
-    <div class="fn"><div class="head">Sales</div><div class="role">GTM engineer<small>builds lead agents</small></div><div class="role untitled">Senior seller<small>sets the agent's standard</small></div></div>
-    <div class="fn"><div class="head">Finance and procurement</div><div class="role rule untitled">Approval-policy owner<small>writes what approval agents read</small></div><div class="role">Accounting operations lead<small>matching tolerances</small></div></div>
-    <div class="fn"><div class="head">IT and security</div><div class="role rule">Identity and access admin<small>agent permissions</small></div><div class="role rule">AI steward<small>approves agents for use</small></div></div>
-    <div class="fn"><div class="head">Legal</div><div class="role rule">Legal engineer<small>playbooks into agent rules</small></div></div>
-    <div class="fn"><div class="head">HR</div><div class="role untitled">Overseer of HR AI decisions<small>required by EU AI Act</small></div></div>
-    <div class="fn"><div class="head">Risk and compliance</div><div class="role rule">AI risk and supervision lead<small>supervisory procedures</small></div></div>
-    <div class="fn"><div class="head">Engineering</div><div class="role rule">Senior engineer<small>reviews agent changes, production access</small></div></div>
-  </div>
-  <div class="span">Business sponsor for each agent: a duty for managers in every function <small class="muted">(no stable title)</small></div>
-  <div class="gap"><b>Unassigned in the evidence:</b> finding the unwritten rules work runs on, and deciding rule changes that cross functions. 0 of 298 records.</div>
+<div class="org2" id="org2" data-stage="0" role="img" aria-label="Staged org chart of rule work for agents">
+  <div class="tier"><div class="lab">Outside the firm</div><div class="boxes">
+    <div class="n pe" data-s="1">Gatekeeper rules<small>card networks, platforms limit and log agent actions</small></div>
+    <div class="n pe" data-s="1">Industry standards body<small>agent operating controls, before law</small></div>
+    <div class="n rd" data-s="2">Sector regulator<small>requires inventory, kill switch, certification</small></div>
+  </div></div>
+  <div class="tier"><div class="lab">Board and executives</div><div class="boxes">
+    <div class="n rd" data-s="2">Named executive<small>certifies agent controls every year</small></div>
+    <div class="n rd" data-s="2">Agent change committee<small>business, risk, compliance and technology each sign off</small></div>
+  </div></div>
+  <div class="tier"><div class="lab">Under the COO</div><div class="boxes">
+    <div class="n pv" data-s="1">Agent risk and control team<small>monitors actions, holds the kill switch, reviews exceptions; mid-level</small></div>
+    <div class="n pv" data-s="1">Agent inventory<small>every agent, its limits and a named operator; defines a material change</small></div>
+  </div></div>
+  <div class="tier"><div class="lab">In each function</div><div class="boxes">
+    <div class="n pe" data-s="0">Agent operations specialists<small>write never-answer and hand-off rules</small></div>
+    <div class="n pe" data-s="0">Legal and GTM engineers<small>turn playbooks into agent rules</small></div>
+    <div class="n pe" data-s="0">Identity and access admins<small>agent permissions</small></div>
+    <div class="n pe" data-s="2">Certified agent designers<small>registered, like algorithm developers since 2017</small></div>
+  </div></div>
+  <div class="tier"><div class="lab">Unassigned</div><div class="boxes">
+    <div class="n gap gap0" data-s="0">Finding unwritten rules; deciding changes across functions<small>no owner in today's evidence</small></div>
+  </div></div>
 </div>
 </div>
-<figcaption>Roles from the final clustering, placed by the function the records name. Titles are as posted or as the clusterer inferred them. The approval-policy owner and business sponsor rest on product documentation alone.</figcaption>
+<figcaption>Our translation, not a finding. In trading, the tacit work of finding the rules became the inventory, and cross-functional decisions went to a named executive and a committee, never to a practitioner.</figcaption>
 </figure>
-
-<div class="col">
-<h3>Which roles the rounds predicted</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>Bundle of work</th><th>Named a likely distinct role</th><th>First hired at</th><th>Status</th></tr></thead>
-<tbody>
-<tr><td>Running live service agents</td><td class="num">4 of 5 rounds</td><td>Junior to mid</td><td>Posted titles exist</td></tr>
-<tr><td>Building agents inside one function (legal engineer, GTM engineer, department automation specialist)</td><td class="num">4 of 5</td><td>Mid to senior</td><td>Posted titles exist</td></tr>
-<tr><td>Deploying agents into customer or company systems (forward-deployed engineer)</td><td class="num">3 of 5</td><td>Mid</td><td>Judged transitional in round 5</td></tr>
-<tr><td>Admitting and permissioning agents</td><td class="num">1 of 5</td><td>Mid; sponsor at manager level</td><td>Absorbed into IT; sponsor untitled</td></tr>
-<tr><td>Deciding the human–agent mix</td><td class="num">1 of 5</td><td>Senior</td><td>Absorbed into leadership</td></tr>
-</tbody></table></div>
-<p class="small muted">Cluster stability between rounds (adjusted Rand index): 0.73, 0.56, 0.59, 0.66. Our pre-set test for "stable" was 0.6 or more on both of the last two transitions. The 3→4 transition missed it, so under our own rules the clustering is unstable and the role predictions are provisional.</p>
-</div>
 </section>
 
-<!-- Page 5 -->
-<section class="page" id="cases">
-<div class="pageno">Page 5 · Role case studies and what they imply</div>
+<section class="page" id="meaning">
+<div class="pageno">Page 5 · Role histories and what they imply</div>
 <div class="col">
 <h2>How earlier roles formed</h2>
-<p>Our earlier research traced eight role histories. Seven cases mark the patterns that matter here: who held the role first, where their authority came from, and whether it lasted.</p>
 </div>
 <figure class="tl">
 <div class="figbox" id="timeline"></div>
-<figcaption>Filled markers: the role lasted. Open markers: it split, folded or was absorbed. Dashed: too early to tell. Height shows seniority at the start.</figcaption>
+<figcaption>Filled: the role lasted. Open: it split, folded or was absorbed. Dashed: too early to tell. Height shows seniority at the start. Sources: our exploratory lineages, partly from memory.</figcaption>
 </figure>
 <div class="col">
 <div class="tablewrap"><table>
-<thead><tr><th>Role</th><th>First holders</th><th>Authority came from</th><th>Outcome</th><th>Lesson</th></tr></thead>
+<thead><tr><th>Role</th><th>First holders</th><th>Authority came from</th><th>Outcome</th></tr></thead>
 <tbody>
-<tr><td>Brand man, P&amp;G, 1931</td><td>Junior</td><td>Answering for one brand's profit</td><td>Lasted</td><td>A practitioner with a number</td></tr>
-<tr><td>Webmaster, 1993</td><td>Whoever knew HTML</td><td>Knowing the tool</td><td>Split</td><td>Tool skills become literacy</td></tr>
-<tr><td>CISO, 1995</td><td>Senior</td><td>A board mandate after a loss</td><td>Lasted</td><td>A visible loss can create a senior seat</td></tr>
-<tr><td>Site reliability engineer, 2003</td><td>Mid, under a senior lead</td><td>An error-budget policy signed in advance</td><td>Lasted</td><td>Authority from a signed rule, not rank</td></tr>
-<tr><td>Social media manager, 2008</td><td>Junior to mid</td><td>Running a new platform channel</td><td>Lasted, multiplied</td><td>Platform operators can last</td></tr>
-<tr><td>Data protection officer, 2018</td><td>Existing staff (62% in one survey)</td><td>GDPR</td><td>Mostly a duty, often outsourced</td><td>A mandate renews a duty, not a role</td></tr>
-<tr><td>Prompt engineer, 2022</td><td>Mid</td><td>Knowing the model</td><td>Absorbed</td><td>Skills tied to one technology fold</td></tr>
+<tr><td>Brand man, 1931</td><td>Junior</td><td>Answering for one brand's profit</td><td>Lasted</td></tr>
+<tr><td>CISO, 1995</td><td>Senior</td><td>A board mandate after a loss</td><td>Lasted</td></tr>
+<tr><td>Site reliability engineer, 2003</td><td>Mid, under a senior lead</td><td>An error budget signed in advance</td><td>Lasted</td></tr>
+<tr><td>Social media manager, 2008</td><td>Junior to mid</td><td>Running a new channel</td><td>Lasted</td></tr>
+<tr><td>Algorithm developer, registered 2017</td><td>Mid, under a supervisor</td><td>A regulator's registration rule</td><td>In force</td></tr>
+<tr><td>Data protection officer, 2018</td><td>Existing staff</td><td>GDPR</td><td>Mostly a duty</td></tr>
+<tr><td>Prompt engineer, 2022</td><td>Mid</td><td>Knowing the model</td><td>Absorbed</td></tr>
 </tbody></table></div>
 
 <h3>What this means for protocol vision and protocol engineering</h3>
-<p><b>The agent operations specialist sits between two histories.</b> Like the social media manager, it is a junior-to-mid operating role with posted titles. Like the prompt engineer, it is named after a technology. The case studies suggest it lasts if it comes to own a number (one posting makes the holder accountable for answer accuracy) and folds if it stays a tool skill.</p>
-<p><b>Protocol engineering looks set to be a duty, not a job.</b> Vendor documents and regulations assign it to agent operations, identity and access, legal engineering and risk roles, much as data protection became a duty of existing staff. If that holds in practice, the likeliest path is a specialty within these roles, not a new title.</p>
-<p><b>Protocol vision is not yet visible as work.</b> No public source here describes anyone finding unwritten rules from overrides and workarounds, or deciding rule changes across functions. Either nobody does it, or it is tacit work that public documents don't describe. The next run looks where tacit work gets described: podcasts and recorded talks by people who run functions with agents, and published rule-change events such as postmortems and policy revisions.</p>
+<p><b>Protocol engineering becomes a certified specialty, not a job title.</b> Trading registered the people who design and change algorithms, at mid level, inside existing desks. Today's agent evidence already shows rule design as a duty inside service, legal, sales and IT roles.</p>
+<p><b>Protocol vision becomes the inventory, then monitoring.</b> When trading's stakes rose, regulators required firms to list every algorithm, its limits and its operator, and to define a material change. Finding unwritten rules is the work of building that list; keeping it true is the work of a risk and control team.</p>
+<p><b>Cross-functional rule decisions belong to a named executive and a committee.</b> No case we found gave them to a practitioner in a large firm. A protocol lead prepares these decisions; it does not own them.</p>
+<p><b>Outside regulated sectors, expect duties until an incident.</b> The likeliest first levers are a costly agent failure, card networks' rules for agents that buy, and the EU AI Act's oversight duties from December 2027.</p>
+
 <div class="note" id="redteam">
-<p><b>Red-team review.</b> A separate agent argued against the results using the same files. Its strongest objections:</p>
-<ul class="small">
-<li><b>The clusters follow the sources.</b> Regulated supervision is 24 of 24 regulation records; admitting agents is 15 of 17 vendor records. Items listed in one document were counted as bundled work.</li>
-<li><b>No rule-design record shows a person doing the work.</b> They are vendor statements, rules for what firms should do, or single secondary reports.</li>
-<li><b>The coders were not independent enough.</b> Both were the same model; 85 of their 298 notes match word for word.</li>
-<li><b>The design could hardly find rule-finding work.</b> The definition needed a stated purpose that summaries rarely give.</li>
-</ul>
-<p>What survives, in its view: rule finding and rule decisions are absent from summary-grade public sources (high confidence about the sources, low about practice); rule design does not cluster, and the clustering is unstable (high); whether rule finding and rule design would share a cluster is untested, not refuted.</p>
+<p><b>Red-team reviews.</b> <span id="rtText">Study 1: clusters followed their source types; no rule-design record showed a person doing the work; the coders were the same model; the clustering was unstable. Study 3: pending.</span></p>
 </div>
 
 <h3>Limits and assumptions to pressure-test</h3>
 <ul class="small">
-  <li>Every record rests on search-engine summaries; no source page could be opened.</li>
-  <li>All agents share one model and may have seen our project instructions; independence is of context, not judgment.</li>
-  <li>The question points collectors at work around agents, so the evidence can't show what happens elsewhere.</li>
-  <li>The case studies come from our exploratory research, partly from memory; seniority at the start is the least certain column.</li>
-  <li>We build Business Protocol Management, so findings that rule work matters suit us. The main finding here runs against our earlier view.</li>
+  <li>Every fact rests on search-engine summaries; quotes, dates and figures need checking against originals.</li>
+  <li>All agents share one model and its knowledge of how past roles and industries turned out.</li>
+  <li>Trading's automated actions are uniform and measured in money; agents act across many kinds of work.</li>
+  <li>We chose the industry dimensions and weights; a different weighting could change the ranking.</li>
+  <li>We build Business Protocol Management, so findings that rule work matters suit us. The main findings here run against our earlier view of a single protocol role.</li>
 </ul>
-<h3>Next run</h3>
-<p class="small">Open primary documents and drop aggregator pages; sample job postings at random instead of searching for "agent"; add a source type of rule-change events (postmortems, audit findings, policy revisions); stop counting items in one document as bundled work; seed known cases of rule finding to test whether coders can see it; use a different model or a person as the second coder; and code podcast episodes and recorded talks by people who run functions with agents, where tacit work is more likely to be described.</p>
-<p class="small"><b>Calibration.</b> Applied early to past roles, this method would have called brand management, the CISO and site reliability engineering "absorbed", and the prompt engineer a distinct role: roughly half right either way. It misses roles whose authority came from an internal agreement on a trade-off, which stays out of public documents for years. The next run tests that blind spot on historical recordings before interpreting the present.</p>
+<h3>Next</h3>
+<p class="small">Run loop v2: postings sampled without AI search terms, rule-change events, podcast episodes and recorded talks by people running functions with agents, seeded test cases for the coders, a second coder from a different model, and the calibration test on historical recordings.</p>
 </div>
 </section>
 
 <footer>
-<p>Protocols for Business, Protocol Institute. Design, prompts, evidence, codes, clusters and scripts are in the project repository under <span style="font-family:var(--mono)">drafts/research/who-owns-the-rules/</span>: <span style="font-family:var(--mono)">loop-design.md</span> (pre-registered), <span style="font-family:var(--mono)">results/loop-2026-10-10/</span> (ledger, pools, clusters, codes, analysis, red team).</p>
+<p>Protocols for Business, Protocol Institute. Designs, prompts, evidence, codes, scores, timelines and scripts are in the project repository under <span style="font-family:var(--mono)">drafts/research/who-owns-the-rules/</span>.</p>
 </footer>
 </div>
 
 <script>
 (function () {
-  var css = getComputedStyle(document.documentElement);
   function v(n) { return 'var(--' + n + ')'; }
   var NS = 'http://www.w3.org/2000/svg';
   function el(tag, attrs, parent, text) {
@@ -404,53 +410,16 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
     return e;
   }
 
-  // Change by source (stacked bars, to scale: 60 records = full width)
-  var kinds = [['new', 'New', v('accent')], ['growing', 'Growing', v('accent-tint')], ['moving', 'Moving', v('warn')], ['shrinking', 'Shrinking', v('muted')], ['automated', 'Automated', v('agent')], ['unclear', 'Unclear', v('other')]];
-  var rows = [
-    ['Job postings', {new: 34, growing: 10, moving: 1, shrinking: 8, automated: 5, unclear: 0}],
-    ['Practitioner accounts', {new: 14, growing: 5, moving: 7, shrinking: 5, automated: 28, unclear: 1}],
-    ['Regulation and audit', {new: 18, growing: 5, moving: 3, shrinking: 5, automated: 22, unclear: 7}],
-    ['Research on work', {new: 10, growing: 14, moving: 6, shrinking: 12, automated: 7, unclear: 11}],
-    ['Vendor documentation', {new: 33, growing: 0, moving: 2, shrinking: 4, automated: 17, unclear: 4}]
-  ];
-  var W = 640, L = 150, R = 20, bh = 22, gap = 12, top = 8;
-  var H = top + rows.length * (bh + gap) + 26;
-  var svg = el('svg', {viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Stacked bars of activity records by source and type of change'});
-  var scale = (W - L - R) / 60;
-  rows.forEach(function (r, i) {
-    var y = top + i * (bh + gap), x = L;
-    el('text', {x: L - 10, y: y + bh / 2 + 4, 'text-anchor': 'end'}, svg, r[0]);
-    kinds.forEach(function (k) {
-      var n = r[1][k[0]];
-      if (!n) return;
-      var w = n * scale;
-      var rect = el('rect', {x: x, y: y, width: w, height: bh, fill: k[2]}, svg);
-      el('title', {}, rect, r[0] + ': ' + k[1] + ' ' + n);
-      if (w > 18) el('text', {x: x + w / 2, y: y + bh / 2 + 4, 'text-anchor': 'middle', style: 'font-size:11px;fill:' + (k[0] === 'new' || k[0] === 'automated' || k[0] === 'shrinking' ? v('paper') : v('ink'))}, svg, n);
-      x += w;
-    });
-  });
-  var ay = top + rows.length * (bh + gap) + 4;
-  [0, 15, 30, 45, 60].forEach(function (t) {
-    var x = L + t * scale;
-    el('line', {x1: x, x2: x, y1: ay - 4, y2: ay, stroke: v('muted')}, svg);
-    el('text', {x: x, y: ay + 14, 'text-anchor': 'middle', class: 'ax'}, svg, t);
-  });
-  el('text', {x: L - 10, y: ay + 14, 'text-anchor': 'end', class: 'ax'}, svg, 'records');
-  document.getElementById('changeChart').appendChild(svg);
-  var lg = document.getElementById('changeLegend');
-  kinds.forEach(function (k) { var s = document.createElement('span'); s.innerHTML = '<i style="background:' + k[2] + '"></i>' + k[1]; lg.appendChild(s); });
-
-  // Waffle: 13 PE, 90 AO, 188 OT, 7 disagreed
+  // Waffle: 13 rule design, 90 agent operations, 188 other, 7 disagreed
   var wf = document.getElementById('waffle');
   [['E', 13], ['A', 90], ['', 188], ['x', 7]].forEach(function (p) {
     for (var i = 0; i < p[1]; i++) { var c = document.createElement('i'); if (p[0]) c.className = p[0]; wf.appendChild(c); }
   });
 
-  // Cluster map (iteration 5). Letters: E rule design main, e rule design secondary, A agent ops, o other, x coders disagreed.
+  // Cluster map (final round). E rule design main, e rule design secondary, A agent ops, o other, x disagreed.
   var C = {
     C1: ['Running live service agents', 'EeeeeeAAAAAAAAAAAAAAAAAAAAAoo', 'AI agent operations specialist (posted)'],
-    C7: ['Admitting, permissioning and retiring agents', 'EEEEEEeeeeeeeAAAA', 'Identity admin and AI steward (posted); business sponsor (untitled)'],
+    C7: ['Admitting, permissioning and retiring agents', 'EEEEEEeeeeeeeAAAA', 'Identity admin, AI steward; sponsor untitled'],
     C3: ['Lead work with agents', 'AAAAAAooooooooooooo', 'GTM engineer (posted)'],
     C10: ['Legal work under professional rules', 'EEAAAAAoooooooooooooooooo', 'Legal engineer (posted)'],
     C8: ['Writing the policy approval agents read', 'EeeeeeeAAoooooo', 'Approval-policy owner (untitled)'],
@@ -458,7 +427,7 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
     C5: ['Code changes through agents', 'EeeeeAAAAAAoooooooooooooooo', 'Senior software engineer'],
     C6: ['Alert and incident triage', 'AAoooo', 'Security analyst, SRE'],
     C9: ['Transaction processing and close', 'AAoooooooooooooooooooox', 'Accountant, accounting operations lead'],
-    C11: ['HR algorithmic tools and required oversight', 'eeAAAAAAAoooooooooooooooooox', 'Recruiter; HR AI overseer (untitled)'],
+    C11: ['HR algorithmic tools and required oversight', 'eeAAAAAAAoooooooooooooooooox', 'Recruiter; HR AI overseer'],
     C12: ['Supervising a regulated firm’s AI use', 'EEeeAooooooooooooooooooo', 'AI risk and supervision lead'],
     C13: ['Configuring one’s own AI use', 'AAAAAAoooooooooooooooooooooox', 'Every knowledge worker'],
     C14: ['Deciding the human–agent mix', 'AAoooooooooooooooooooox', 'Leaders, workforce planners'],
@@ -487,25 +456,79 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
     cm.appendChild(d);
   });
 
-  // Timeline of case studies
+  // Industry ranking: mean bar with each scorer's tick (max 64)
+  var R = [
+    ['Algorithmic trading', 60, 59], ['Electricity grid', 55, 59], ['Commercial aviation', 55, 53], ['Retail banking', 51, 54],
+    ['Automated driving', 47, 47], ['Pharmaceutical manufacturing', 47, 43], ['Nuclear power', 44, 44], ['Insurance', 45, 42],
+    ['E-commerce (control)', 42, 44], ['Hospital clinical care', 39, 39]
+  ];
+  var W = 640, L = 210, Rm = 40, bh = 16, gap = 9, top = 6;
+  var H = top + R.length * (bh + gap) + 24;
+  var svg = el('svg', {viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Industries ranked by resemblance to agent-run business'});
+  var sc = (W - L - Rm) / 64;
+  R.forEach(function (r, i) {
+    var y = top + i * (bh + gap), m = (r[1] + r[2]) / 2;
+    el('text', {x: L - 10, y: y + bh / 2 + 4, 'text-anchor': 'end', style: i < 2 ? 'font-weight:600' : ''}, svg, r[0]);
+    el('rect', {x: L, y: y, width: m * sc, height: bh, fill: i < 2 ? v('accent') : v('other')}, svg);
+    [r[1], r[2]].forEach(function (s) { el('line', {x1: L + s * sc, x2: L + s * sc, y1: y - 2, y2: y + bh + 2, stroke: v('ink'), 'stroke-width': 1.2}, svg); });
+    el('text', {x: L + Math.max(r[1], r[2]) * sc + 8, y: y + bh / 2 + 4, class: 'ax'}, svg, m.toFixed(1));
+  });
+  var ay = top + R.length * (bh + gap) + 2;
+  [0, 16, 32, 48, 64].forEach(function (t) {
+    el('line', {x1: L + t * sc, x2: L + t * sc, y1: ay - 3, y2: ay + 1, stroke: v('muted')}, svg);
+    el('text', {x: L + t * sc, y: ay + 14, 'text-anchor': 'middle', class: 'ax'}, svg, t);
+  });
+  document.getElementById('rankChart').appendChild(svg);
+
+  // Two-lane trading timeline
   var T = [
-    [1931, 'Brand man', 0, true, 10, -10, 'start'], [1993, 'Webmaster', 0.5, false, 0, 22, 'middle'], [1995, 'CISO', 2, true, 0, -12, 'middle'],
-    [2003, 'SRE', 1, true, 0, -12, 'middle'], [2008, 'Social media mgr', 0.5, true, 0, 22, 'middle'], [2018, 'DPO', 1, false, -4, -12, 'end'], [2022, 'Prompt engineer', 1, false, 4, -12, 'start'], [2025, 'Agent ops specialist', 0.5, null, 0, 22, 'end']
+    ['1987', 'Market crash; automated program trading examined', '', ''],
+    ['1988', '', 'Market-wide circuit breakers', 'pe'],
+    ['2004', '', 'CEO certifies compliance procedures yearly <small>exchange rule</small>', 'rd'],
+    ['2009', 'High-frequency firms reach about 70% of US equity volume', '', ''],
+    ['2010', 'Flash Crash, 6 May', 'Market access rule: pre-trade limits under the firm’s control; CEO certifies them yearly <small>law</small>', 'pe'],
+    ['2012', 'Knight Capital loses about $440m in 45 minutes', 'EU guidance: firms need skilled staff for automated trading', 'pe'],
+    ['2016', '', 'UK certification function for algorithmic trading; US rule that algorithm developers register, from 2017 <small>law, exchange rule</small>', 'pe'],
+    ['2018', '', 'EU and UK: kill switch, algorithm inventory, multi-function approval of changes; board approval and a named senior manager <small>law, guidance</small>', 'rd'],
+    ['2021', '', 'Banks advertise heads of first-line e-trading risk and control <small>no new lever</small>', 'pv'],
+    ['2024', 'UK fines Citigroup £61.7m over a 2022 trading error', '', ''],
+    ['2025', '', 'Retreat: UK consults on cutting certification roles; SEC withdraws pending proposals', '']
+  ];
+  var tl = document.getElementById('tradeTl');
+  tl.innerHTML = '<div class="h">Year</div><div class="h">What happened</div><div class="h">Structure created</div>';
+  T.forEach(function (t) {
+    tl.insertAdjacentHTML('beforeend', '<div class="y">' + t[0] + '</div><div class="ev' + (t[1] ? ' inc' : '') + '">' + t[1] + '</div><div class="st ' + t[3] + '">' + t[2] + '</div>');
+  });
+
+  // Staged org chart
+  var org = document.getElementById('org2');
+  ['st0', 'st1', 'st2'].forEach(function (id) {
+    var b = document.getElementById(id);
+    b.addEventListener('click', function () {
+      org.setAttribute('data-stage', b.getAttribute('data-stage'));
+      ['st0', 'st1', 'st2'].forEach(function (o) { document.getElementById(o).setAttribute('aria-pressed', o === id ? 'true' : 'false'); });
+    });
+  });
+
+  // Role history timeline
+  var RT = [
+    [1931, 'Brand man', 0, true, 10, -10, 'start'], [1995, 'CISO', 2, true, 0, -12, 'middle'],
+    [2003, 'SRE', 1, true, 0, -12, 'middle'], [2008, 'Social media mgr', 0.5, true, 0, 22, 'middle'],
+    [2017, 'Algorithm developer', 1, true, -6, -12, 'end'], [2018, 'DPO', 0.5, false, 0, 22, 'middle'],
+    [2022, 'Prompt engineer', 1, false, 4, -12, 'start'], [2025, 'Agent ops specialist', 0.5, null, 0, 22, 'middle']
   ];
   var TW = 760, TL = 40, TR = 30, TH = 190, base = 150;
-  var ts = el('svg', {viewBox: '0 0 ' + TW + ' ' + TH, role: 'img', 'aria-label': 'Timeline of role case studies from 1931 to 2025'});
+  var ts = el('svg', {viewBox: '0 0 ' + TW + ' ' + TH, role: 'img', 'aria-label': 'Timeline of role histories from 1931 to 2025'});
   function tx(y) { return y < 1990 ? TL + (y - 1925) / (1990 - 1925) * 120 : TL + 140 + (y - 1990) / (2030 - 1990) * (TW - TL - TR - 140); }
   el('line', {x1: TL, x2: TW - TR, y1: base, y2: base, stroke: v('muted')}, ts);
   el('line', {x1: TL + 128, x2: TL + 136, y1: base - 5, y2: base + 5, stroke: v('muted')}, ts);
   el('line', {x1: TL + 132, x2: TL + 140, y1: base - 5, y2: base + 5, stroke: v('muted')}, ts);
   [1930, 1990, 2000, 2010, 2020, 2030].forEach(function (y) { el('text', {x: tx(y), y: base + 18, 'text-anchor': 'middle', class: 'ax'}, ts, y); });
   [['Junior', 0], ['Mid', 1], ['Senior', 2]].forEach(function (s) { el('text', {x: 4, y: base - 30 - s[1] * 42 + 4, class: 'ax'}, ts, s[0]); });
-  T.forEach(function (t, i) {
+  RT.forEach(function (t) {
     var x = tx(t[0]), y = base - 30 - t[2] * 42;
     el('line', {x1: x, x2: x, y1: base, y2: y, stroke: v('rule')}, ts);
-    var fill = t[3] === true ? v('accent') : v('paper');
-    var stroke = t[3] === null ? v('agent') : v('accent');
-    el('circle', {cx: x, cy: y, r: 6, fill: fill, stroke: stroke, 'stroke-width': 2, 'stroke-dasharray': t[3] === null ? '3 2' : ''}, ts);
+    el('circle', {cx: x, cy: y, r: 6, fill: t[3] === true ? v('accent') : v('paper'), stroke: t[3] === null ? v('agent') : v('accent'), 'stroke-width': 2, 'stroke-dasharray': t[3] === null ? '3 2' : ''}, ts);
     el('text', {x: x + t[4], y: y + t[5], 'text-anchor': t[6]}, ts, t[1] + ' ' + t[0]);
   });
   document.getElementById('timeline').appendChild(ts);
