@@ -203,7 +203,7 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
   <div><b>298</b><span>activity records about work with agents</span></div>
   <div><b>10</b><span>industries scored for resemblance</span></div>
   <div><b>135</b><span>dated events in three industry timelines</span></div>
-  <div><b>0–6</b><span>years from a visible failure to new rules, in trading and the grid</span></div>
+  <div><b>88%</b><span>of 20,000 weightings rank trading or the grid first</span></div>
 </div>
 
 <div class="col">
@@ -211,9 +211,9 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <ol class="findings">
   <li><div><b>Today, running agents is the work forming into jobs; rule work is not.</b> Posted titles exist for running live service agents. Designing the rules agents act under is a thin duty spread across functions, and finding unwritten rules or deciding rule changes across functions doesn't appear in public documents at all. <span class="conf">Low to medium confidence</span></div></li>
   <li><div><b>That silence is expected, and weak evidence.</b> Applied early to past roles, the same method would have missed brand management, the CISO and site reliability engineering, whose authority came from internal agreements that stayed private for years. <span class="conf">Medium confidence</span></div></li>
-  <li><div><b>Algorithmic trading is the nearest industry, then the electricity grid.</b> Both have software acting on its own at machine speed, under rules encoded in systems and set by regulators. Hospitals, our first idea, ranked last. <span class="conf">Medium confidence</span></div></li>
-  <li><div><b>Trading organised rule work in three layers.</b> A mid-level risk and control team monitors and holds the kill switch; the people who design and change algorithms are registered or certified; the CEO or a named senior manager answers for the controls, with each function signing off changes. <span class="conf">Medium confidence</span></div></li>
-  <li><div><b>Every structure inside firms followed a lever, and incidents set the clock.</b> Laws came within 0–6 years of visible failures (the 2010 Flash Crash, Knight Capital in 2012, the 2003 blackout). Where no lever applied, as with retail pricing engines, no structure formed. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>Algorithmic trading and the electricity grid are the nearest industries, effectively tied.</b> Both have software acting on its own at machine speed, under rules encoded in systems and set from outside. Hospitals, our first idea, ranked last. <span class="conf">High for the pair; low for either alone</span></div></li>
+  <li><div><b>In large regulated trading firms, rule work settled into three forms.</b> A mid-level risk and control team monitors and holds the kill switch; the people who design and change algorithms are registered or certified; the CEO or a named senior manager answers for the controls. The grid instead wrote its rules through industry committees, and smaller organisations let individuals own rule changes. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>The kind of outside pressure shapes the structure.</b> Law produced named persons and certification; industry bodies produced committees and standards; where no pressure applied, as with retail pricing engines, no structure formed. Our pre-registered claim that structures form only after a law did not hold. <span class="conf">Medium confidence</span></div></li>
 </ol>
 <p class="small muted" style="margin-top:1rem">All evidence comes from search-engine summaries; no source page could be opened. Two red-team reviews argued against each study; their objections are on page 5.</p>
 </div>
@@ -298,15 +298,15 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <section class="page" id="industry">
 <div class="pageno">Page 4 · Looking outside software</div>
 <div class="col">
-<h2>The nearest industry: algorithmic trading</h2>
+<h2>The nearest industries: algorithmic trading and the grid</h2>
 <p>Software that acts on its own, with rules encoded in systems and set by outsiders, exists already in some industries. We scored ten on how closely they resemble agent-run business.</p>
 </div>
 <figure class="rank"><div id="rankChart"></div>
-<figcaption>Mean of two independent scorers (maximum 64); ticks show each scorer. Rank correlation between scorers 0.85. Hospitals rank last because physicians own the decisions and software rarely acts alone.</figcaption></figure>
+<figcaption>Mean of two independent scorers (maximum 64); ticks show each scorer. Rank correlation between scorers 0.85. The top two are effectively tied: two defensible score changes put the grid first. Hospitals rank last because physicians own the decisions and software rarely acts alone.</figcaption></figure>
 
 <div class="col"><h3>How trading organised its rule work</h3></div>
 <figure class="ttl"><div class="figbox"><div class="lanes" id="tradeTl"></div></div>
-<figcaption>Selected events from a 55-event timeline. Colour shows the layer: green for noticing deviations, blue for designing limits, amber for deciding changes. Each structure inside firms followed an exchange rule or a law, and most followed a visible failure.</figcaption></figure>
+<figcaption>Selected events from a 55-event timeline. Colour shows the layer: green for noticing deviations, blue for designing limits, amber for deciding changes. Most structures inside firms followed an exchange rule or a law; some industry controls came before the failures that are usually credited with them.</figcaption></figure>
 
 <div class="col">
 <h3>What a company running agents may look like</h3>
@@ -344,7 +344,7 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
   </div></div>
 </div>
 </div>
-<figcaption>Our translation, not a finding. In trading, the tacit work of finding the rules became the inventory, and cross-functional decisions went to a named executive and a committee, never to a practitioner.</figcaption>
+<figcaption>Our translation, not a finding, and strongest for regulated finance. In trading, the tacit work of finding the rules became the inventory, and cross-functional decisions went to a named executive and a committee. Most other businesses may look more like retail: no internal decider until outside rules arrive.</figcaption>
 </figure>
 </section>
 
@@ -373,11 +373,11 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <h3>What this means for protocol vision and protocol engineering</h3>
 <p><b>Protocol engineering becomes a certified specialty, not a job title.</b> Trading registered the people who design and change algorithms, at mid level, inside existing desks. Today's agent evidence already shows rule design as a duty inside service, legal, sales and IT roles.</p>
 <p><b>Protocol vision becomes the inventory, then monitoring.</b> When trading's stakes rose, regulators required firms to list every algorithm, its limits and its operator, and to define a material change. Finding unwritten rules is the work of building that list; keeping it true is the work of a risk and control team.</p>
-<p><b>Cross-functional rule decisions belong to a named executive and a committee.</b> No case we found gave them to a practitioner in a large firm. A protocol lead prepares these decisions; it does not own them.</p>
-<p><b>Outside regulated sectors, expect duties until an incident.</b> The likeliest first levers are a costly agent failure, card networks' rules for agents that buy, and the EU AI Act's oversight duties from December 2027.</p>
+<p><b>In large firms, cross-functional rule decisions sit with a named executive or a committee.</b> A protocol lead there prepares these decisions rather than owning them. Smaller and community organisations let individuals own them.</p>
+<p><b>Outside regulated finance, expect duties until outside rules arrive.</b> The candidates are rules from payment networks and platforms that agents act through, a costly agent failure, and the EU AI Act's oversight duties (dates differ between sources).</p>
 
 <div class="note" id="redteam">
-<p><b>Red-team reviews.</b> <span id="rtText">Study 1: clusters followed their source types; no rule-design record showed a person doing the work; the coders were the same model; the clustering was unstable. Study 3: pending.</span></p>
+<p><b>Red-team reviews.</b> <span id="rtText">Study 1: clusters followed their source types; no rule-design record showed a person doing the work; the coders were the same model; the clustering was unstable. Study 3: trading and the grid are effectively tied, and with the grid as the analogue the "only after a law" claim fails; the three-forms claim fails its own test, since individuals own cross-functional rule changes in some organisations; "incidents set the clock" was added after the fact; and trading has features agent-run business lacks: one unit of action (an order), a closed population of registered firms, and exchanges as chokepoints. What survives: the pair as the nearest analogue; finance regulators reusing their templates (an inventory, a defined material change, a kill function, a named senior owner) for agents; and pressure shaping form.</span></p>
 </div>
 
 <h3>Limits and assumptions to pressure-test</h3>

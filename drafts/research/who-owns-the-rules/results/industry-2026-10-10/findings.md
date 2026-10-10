@@ -13,19 +13,27 @@ software rarely acts on its own. Agreement: rank correlation 0.85; identical cel
 within one point (`scoring.md`). Seventeen and fifteen of 80 cells were thin, mostly D5 (which functions sign
 off a rule change), which no fact sheet could document well.
 
-## 2. Hypotheses, against the pre-registered tests
+## 2. Hypotheses, against the pre-registered tests (revised after the red team)
+
+The first draft of this section was more favourable than the pre-registered tests allow; `red-team.md`
+shows why. The verdicts below apply the tests as written.
 
 | ID | Verdict | Evidence |
 | --- | --- | --- |
-| H-lever | **Supported for structures inside firms; partly for industry bodies.** In trading, no role or committee inside firms precedes a lever: the first, a chief compliance officer with annual CEO certification (2004), follows an exchange rule; later ones follow law (2010, 2016, 2018). In the grid, voluntary industry bodies came first (UCPTE 1951, NAPSIC 1963, NERC 1968 after the 1965 blackout) and law only in 2005–07. In the control industry, structures exist only where a gatekeeper (card networks) or law (EU Digital Services Act, New York's warehouse law) imposed them. The counter-example search found voluntary rule bodies in lightly regulated sectors, each under a gatekeeper's private rules, a crisis or a threat of regulation | `timeline-*.csv`, `counterexamples.md` |
-| H-layers | **Supported in trading, partly in the grid.** Trading: noticing deviations is real-time monitoring with a kill switch, run by mid-level e-trading risk and control teams; designing limits is practitioner work, now registered (US Series 57 from 2017) or certified (UK, 2016); deciding changes sits with the CEO (annual certification, US 2010), the board and a named senior manager (UK, 2018), through a multi-function approval process (EU, 2018). Grid: noticing is certified operators at reliability coordinators (entry level) plus reporting systems; designing settings is practitioner engineering under standards written by committees; deciding is industry-body boards and the regulator, with a named person inside utilities only for cyber security (2008). Counter-examples to "practitioners don't own cross-functional rule decisions" exist only outside large mature firms or for routine tuning | as above |
-| H-bridge | **Supported.** The certified roles are tied to the domain: a registered securities trader who designs algorithms; a certified system operator. Neither is a general technical role | as above |
-| H-lag | **Not supported as stated; restated.** Lags from the spread of automation range from 1 year (US trading, 2009 to 2010) to five decades (grid). Lags from a visible incident are short: the 2010 Flash Crash to the market-access rule (same year); Knight Capital (2012) to algorithm-developer registration (2016); the 2003 blackout to mandatory standards (2005–07). Incidents set the clock, not the technology | as above |
-| H-control | **Partly refuted.** E-commerce has no internal decider for pricing rules and no structure for robot or quota rules except where law imposes one; but fraud rules (card-network standards) and marketplace rules (a legally required head of compliance, 2023) gained structures from outside | `timeline-ecommerce-logistics.csv` |
+| H-lever | **Not supported as stated.** In trading the test could hardly fail (levers are coded from 1987–89), and it leaned on lever types added during coding (exchange rule, industry body, gatekeeper rule). In the grid, voluntary industry bodies (UCPTE 1951, NAPSIC 1963, NERC 1968) preceded any law by decades, which refutes it if the grid is the analogue. Several counter-examples formed without a gatekeeper, crisis or threat (airline revenue management, Google's search-quality process). **What survives (moderate):** the kind of outside pressure shapes the form a structure takes: law produced named persons and certification; industry bodies produced committees and voluntary standards | `timeline-*.csv`, `counterexamples.md`, `red-team.md` |
+| H-layers | **Refuted by its own test.** The counter-example search found three moderate-to-strong cases of individuals owning cross-functional rule decisions (Mozilla's root store manager, Progressive's state product managers, Wikipedia's edit-filter managers); the test needed two. The trading rows also disagree with the hypothesis in places (rule design is mostly coded as systems; the US decider is a CEO certifying alone, with no committee). **What survives (moderate):** in large regulated firms, cross-functional rule decisions sit with named executives, boards or committees | as above |
+| H-bridge | **Supported, weakly.** The certified roles are domain-tied (a registered securities trader who designs algorithms; a certified system operator); two industries are a small base | as above |
+| H-lag | **Not supported; no restatement holds.** Lags depend on the start date chosen (1 year from 2009; 33 or more from 1976; five decades in the grid). "Incidents set the clock" was added after the fact and fails in places: industry controls (FIA, April 2010) preceded the Flash Crash; the 1987 crash produced no role inside firms for 17 years. **Low confidence** | as above |
+| H-control | **Partly refuted.** No internal decider for pricing rules; but fraud and marketplace rules gained structures, some under outside rules and some (the Merchant Risk Council, Amazon's counterfeit unit) with no coded lever | `timeline-ecommerce-logistics.csv` |
 
-**One added finding: levers can reverse.** Since 2025 the UK has consulted on cutting certification
-functions, the SEC withdrew a plan to extend system-integrity rules to broker-dealers, and supervisors are
-adding AI to existing reviews rather than creating roles (timeline, 2025–26).
+**Choice of analogue (revised).** Trading and the grid are effectively tied: one of the two ranks first in
+88% of 20,000 random weightings, and two defensible score changes put the grid first. Trading alone as
+the analogue is low confidence; the pair is high confidence. The weights are not the problem: trading
+still leads with equal weights and with any single dimension dropped.
+
+**Levers can reverse (moderate).** Since 2025 the UK has consulted on cutting certification functions,
+the SEC withdrew a plan to extend system-integrity rules to broker-dealers, and supervisors are adding AI
+to existing reviews rather than creating roles.
 
 ## 3. Translation to companies running agents (interpretation, not finding)
 
@@ -48,11 +56,13 @@ How trading organised rule work for automated actors, and the counterpart for ag
    people who design and change algorithms, at mid level, under a supervising principal. The agent
    counterpart is a certified specialty inside existing functions, consistent with v1's finding that rule
    design is a duty, not a job.
-3. **Deciding rule changes never belonged to a practitioner.** In both analogues it sits with a named
-   executive, a board or a committee where each function signs off. A "Business Protocol Lead" should
-   prepare those decisions, not own them.
-4. **The clock is an incident.** Structures followed visible failures within 0–6 years. Until a "Knight
-   Capital moment" for agents, expect duties, not roles, outside regulated sectors.
+3. **In large regulated firms, deciding rule changes sits above practitioners.** In trading it sits with a
+   named executive, a board or a committee where each function signs off. Smaller and community
+   organisations let individuals own such decisions (Mozilla, Wikipedia). A "Business Protocol Lead" in a
+   large firm should prepare those decisions; in a small firm it may own them.
+4. **The pressure, not the technology, shapes the structure.** Law produced named persons and
+   certification; industry bodies produced committees and standards. Outside regulated finance, agent
+   rule work is more likely to follow the control industry: no internal decider until outside rules arrive.
 5. **Private gatekeepers may move first.** Card networks, app stores and browsers set rules for automated
    actors without law. Payment networks' rules for agents that buy are a candidate first lever (to verify).
 
