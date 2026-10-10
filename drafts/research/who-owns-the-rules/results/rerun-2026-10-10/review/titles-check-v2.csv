@@ -1,0 +1,201 @@
+sid,title,assigned_code,verdict,major_ok,best_code,reason
+as086,Delivery Driver - Class D,53-3032.00,acceptable,yes,,Class D = non-CDL; light truck driver (53-3033) fits better
+as051,OCONUS Military and Family Life Counselor - Japan,21-1014.00,correct,yes,,MFLC provides licensed non-medical counseling
+no047,Technical Support Associate  Abbott Rapid Diagnostics | Denmark 12 Month Contract,NONE,none_wrong,n/a,15-1232.00,technical support role
+as058,Commission Sales - Stylist - Montgomery Mall,41-2031.00,correct,yes,,commission retail sales
+no009,Operations Analyst,NONE,none_wrong,n/a,13-1111.00,generic business operations analyst
+as077,Universal Banker - Part Time (20 hrs.) - Saturday Required - McLean North,41-3031.00,correct,yes,,universal/personal banker sells bank products; teller duties secondary
+as032,Senior Indirect Commodity Manager,35-1012.00,wrong,no,11-3061.00,"indirect procurement commodity manager, not food service"
+ov030,"Senior Security Engineer, Platform Security",15-1252.00,acceptable,yes,,security engineer; 15-1299.05 Information Security Engineers better
+as013,Sr. Professional Medical Representative,41-4011.00,correct,yes,,pharma/medical sales rep
+as059,Escalation Manager,11-9199.00,correct,yes,,escalation management has no specific code
+as040,Meat Department Lead,35-1012.00,wrong,no,41-1011.00,"grocery meat department lead is retail supervisor, not food prep/serving"
+as068,Ambassador - Lazio,41-9011.00,correct,yes,,brand ambassador/promoter
+no043,Performance Analyst,NONE,none_wrong,n/a,13-1111.00,performance analysis; management analyst reasonable
+ov014,"AV Engineer, Platform & Automation",15-1252.00,acceptable,yes,,AV (antivirus/audio-visual) ambiguous; computer occupation group right
+as017,Certified Peer Support Specialist - Bronx/Brooklyn/Queens,21-1093.00,correct,yes,,peer support specialist
+as029,"Mechanical Engineer II - Test Equipment, Onsite (Tewksbury/Andover, MA)",17-2141.00,correct,yes,,mechanical engineer
+ov017,"Staff Data Analyst, Block Compliance",13-1041.00,wrong,no,15-2051.01,data analyst role; compliance is the domain not the occupation
+no046,"Analyst, People Services",NONE,none_wrong,n/a,13-1071.00,HR/people services analyst
+no041,Supply Chain Early Career Program (ECP) Associate,NONE,none_wrong,n/a,13-1081.00,supply chain associate
+no048,DC Coordinator,NONE,none_wrong,n/a,43-5061.00,distribution center operations coordinator
+as090,Coggin Toyota Sales Consultant,41-2031.00,correct,yes,,auto sales consultant is retail salesperson
+as007,Production Runner- The Truth,27-4099.00,correct,yes,,film/TV production runner; no better specific code
+as082,IT Software & Services Procurement Manager,13-1022.00,wrong,no,11-3061.00,"procurement manager for IT, not retail buyer"
+no035,Schülerpraktikum (m/w/d) am Standort in Eschbach,NONE,none_ok,n/a,,"school work-experience placement, not an occupation"
+as037,Account Executive / Inside Sales (US Remote),41-3091.00,correct,yes,,inside sales of services
+no021,Delegad@ Wound Care - Madrid,NONE,none_wrong,n/a,41-4011.00,medical device sales delegate
+as093,Senior Software Engineer (Mainframe Developer),15-1252.00,correct,yes,,software engineer
+as018,Engagement Manager,11-1021.00,wrong,no,13-1082.00,"client engagement/project lead, not general operations manager"
+as061,Clinical Care Nurse,29-1141.00,correct,yes,,nurse
+as064,FPGA Electrical Design Engineer II (Onsite),17-2071.00,acceptable,yes,,FPGA design better as 17-2061 Computer Hardware Engineers
+as019,"Digital Paid Media Specialist, EMEA",41-3011.00,wrong,no,13-1161.00,"paid media specialist buys/manages ads, does not sell ad space"
+ov006,Sr. Infrastructure Engineer – Data Platforms (Python + Cloud),15-1252.00,acceptable,yes,,infrastructure engineer; 15-1244/15-1299.08 arguably better
+no030,Intern - People Development Assistant,NONE,none_wrong,n/a,13-1151.00,training/development intern
+as027,"Solutions Consultant, HVAC Controls",17-2141.00,wrong,no,41-9031.00,presales solutions consultant = sales engineer
+ov046,Senior System Software Engineer — CPU Platform Firmware Lead,15-1252.00,correct,yes,,firmware/system software engineer
+no039,Proposal Developer 2,NONE,none_wrong,n/a,27-3042.00,proposal writer
+as034,Line Cook- Punch Line Philly,35-2014.00,correct,yes,,line cook
+ov032,"Sr Systems Engineer - AWS, Kubernetes, Automation, Platform Engineering",15-1252.00,acceptable,yes,,cloud/platform systems engineer; 15-1299.08 or 15-1244 better
+as022,Cyber Underwriter,13-2053.00,correct,yes,,underwriter
+no008,Collections Representative,NONE,none_wrong,n/a,43-3011.00,collections rep
+ov050,"Software Engineer, Growth Platform",15-1252.00,correct,yes,,software engineer
+as045,"AVP, Corporate Development",11-3031.00,correct,yes,,corporate development (M&A) finance role; 13-2051 also defensible
+as100,Splunk Enterprise and Enterprise Security Administrator,15-1244.00,correct,yes,,SIEM platform administration
+ov003,Lead Platform Engineer,15-1252.00,acceptable,yes,,platform engineer; 15-1299.08/15-1244 equally or more apt
+ov038,Project Procurement Inspector Specialist,13-1023.00,correct,yes,,procurement specialist with inspection duties
+as096,Software Developer,15-1252.00,correct,yes,,software developer
+no022,Payroll Intern,NONE,none_wrong,n/a,43-3051.00,payroll intern
+as072,"Staff Software Engineer, Metadata",15-1252.00,correct,yes,,software engineer
+as055,Warehouse Associate I,53-7062.00,correct,yes,,warehouse associate
+no005,"Senior Executive Underwriter, Excess Casualty",NONE,none_wrong,n/a,13-2053.00,insurance underwriter
+ov002,Procurement Specialist Trainee - part time,13-1023.00,correct,yes,,procurement specialist
+ov029,Senior Specialist Procurement - Plastics,13-1023.00,correct,yes,,procurement specialist
+ov028,"Senior Analyst, People Operations Training Compliance",13-1041.00,acceptable,yes,,HR training compliance; 13-1071/13-1151 better
+ov009,"Senior Software Engineer, Agentic App Platform - Moveworks",15-1252.00,correct,yes,,software engineer
+as047,"Director, Market Access Lead - Rare Diseases (Europe Region)",11-2021.00,correct,yes,,pharma market access leadership
+as056,"QCx Project Engagement Lead, Data Centre",17-2199.00,correct,yes,,data centre QC/commissioning engineering lead
+no038,Shift Supervisor,NONE,none_wrong,n/a,41-1011.00,shift supervisor (retail/food most likely); context missing
+as009,Senior Product Manager,11-3021.00,correct,yes,,product manager; 11-2021 equally plausible
+ov036,"Head of Technical Accounting and External Reporting, ESG Controller",11-3031.01,correct,yes,,controller
+as002,Manual Machinist,51-4041.00,correct,yes,,machinist
+ov011,Platform Engineer (L1 / L2 / Senior PE),15-1252.00,acceptable,yes,,platform engineer; 15-1299.08/15-1244 equally or more apt
+ov037,Trade Compliance & Logistics Analyst,13-1041.00,correct,yes,,trade compliance analyst
+as036,Hospital Dialysis Registered Nurse (Part Time),29-1141.00,correct,yes,,RN
+no045,Medical Claims Review Associate Analyst,NONE,none_wrong,n/a,13-1031.00,medical claims reviewer
+no012,Commercial Outcomes Architect (Customer Success),NONE,none_wrong,n/a,41-3091.00,customer success/value consulting in sales org
+no011,Senior Consultant - Health Technology Assessment - Portugal (hybrid/home-based),NONE,none_wrong,n/a,13-1111.00,health technology assessment consultant
+ov034,"Staff+ Software Engineer, Platform Ecosystem",15-1252.00,correct,yes,,software engineer
+no031,"Specialist, Meeting Compliance & Disclosure (Japanese Speaker)",NONE,none_wrong,n/a,13-1041.00,compliance specialist
+no025,Supply Chain Intern/Co-op 2027,NONE,none_wrong,n/a,13-1081.00,supply chain intern
+as028,Field Service Representative (Silvus Technologies),49-9071.00,wrong,yes,49-2022.00,"field service for radio/telecom equipment, not general maintenance"
+as079,Servicio al cliente Bogotá ES,41-3091.00,wrong,no,43-4051.00,"customer service, not sales"
+ov005,Vice President - Sales and Revenue Operations,11-2022.00,correct,yes,,sales VP
+ov018,"Senior Software Engineer, Platform Engineering",15-1252.00,correct,yes,,software engineer
+ov027,"Senior Software Engineer, Device & Cloud Platform",15-1252.00,correct,yes,,software engineer
+as005,Direct Sales Agent Specialist (1025),41-3091.00,correct,yes,,direct sales agent
+as095,"Property Management Lead, San Antonio TX",11-9141.00,correct,yes,,property management
+as011,Seasonal Stockroom Operations Associate,53-7065.00,correct,yes,,stockroom associate
+as012,"Senior Manager, Solution Architect, Tech Partnership",15-1299.08,correct,yes,,solution architect
+ov019,"Senior Platform Engineer, Vice President",15-1252.00,acceptable,yes,,platform engineer; 15-1299.08/15-1244 equally or more apt
+as071,Conseillers Clients (F/H) - Service Client - Cotonou - Français,41-9099.00,wrong,no,43-4051.00,customer service advisors
+as035,"SkillBridge, Data Center Critical Facilities Engineer - Trainee",17-2199.00,wrong,no,49-9071.00,data center critical facilities tech maintains mechanical/electrical plant
+as063,Bix Produce Non-CDL Delivery Driver,53-3033.00,correct,yes,,non-CDL delivery driver
+no023,"Senior Specialist, Operations Quality",NONE,none_wrong,n/a,13-1111.00,operations quality specialist; vague
+as074,Assistant Quality Engineer,17-2112.02,acceptable,yes,,quality engineer usually 17-2112.00
+as067,MI Systems Maintainer Integrator II,15-1244.00,correct,yes,,systems maintainer/integrator
+as076,Account Manager - Industrial Automation,41-4011.00,correct,yes,,technical B2B sales
+as080,Sales Associate - San Diego Harley-Davidson,41-2031.00,correct,yes,,retail sales
+ov004,Senior Systems Engineer – Boeing Platforms (Hybrid),15-1252.00,wrong,no,17-2011.00,"aerospace systems engineering at Boeing, not software dev"
+as020,Product Marketing Manager - SASE,11-2021.00,correct,yes,,product marketing manager
+as089,"26010491 Pharmacist, Home Infusion - Evernorth - Hybrid or Remote",29-1051.00,correct,yes,,pharmacist
+ov010,"Senior Forward Deployed Engineer, Adobe Experience Platform",15-1252.00,correct,yes,,forward deployed software engineer
+as038,Benefits Analyst - Health & Welfare,13-1141.00,correct,yes,,benefits analyst
+as069,Guest Advocate (Cashier or Front of Store Attendant/Cart Attendant) (T3427),41-2011.00,correct,yes,,cashier
+no028,Lead Fraud Investigator,NONE,none_wrong,n/a,13-2099.04,fraud investigator
+no007,"Senior Specialist, Quality & Regulatory Affairs",NONE,none_wrong,n/a,13-1041.07,regulatory affairs specialist
+no040,Category Management Specialist,NONE,none_wrong,n/a,13-1022.00,category management (buying/assortment)
+no017,"Associate: Global Research, Commodity Analyst",NONE,none_wrong,n/a,13-2051.00,commodity research analyst
+no044,Product Ops Associate,NONE,none_wrong,n/a,13-1111.00,product operations; vague
+ov024,Procurement Support Specialist – Simplified Acquisition Procedures (SAP),13-1023.00,correct,yes,,procurement specialist
+ov025,Staff Data Platform Software Engineer - Persistence,15-1252.00,correct,yes,,software engineer
+as041,Fraud Specialist I,13-2099.04,correct,yes,,fraud specialist
+ov033,Senior System Software Engineer - DRIVEOS Platform Team,15-1252.00,correct,yes,,software engineer
+ov021,Senior Platform Engineer,15-1252.00,acceptable,yes,,platform engineer; 15-1299.08/15-1244 equally or more apt
+as033,Associate Consultant,19-1029.00,wrong,no,13-1111.00,"generic consultant, nothing biological"
+as001,Solution Engineer (Pre-Sales) - All Levels,15-1299.08,wrong,no,41-9031.00,presales solution engineer = sales engineer
+as025,Risk Manager,13-2054.00,correct,yes,,risk manager
+ov045,"Platform Data Engineer - (DataBricks, PySpark, AWS)",15-1252.00,acceptable,yes,,data engineer; 15-1243 Database Architects arguably better
+as031,Seasonal Customer Experience Specialist - Nordstrom Local West Village,41-2031.00,correct,yes,,retail customer experience
+as098,Transformation Success Engineer (DevSecOps),15-1299.05,acceptable,yes,,customer-facing DevSecOps engineer; 15-1299.08/15-1252 fit as well
+no014,"Senior Claims Examiner, Management Liability",NONE,none_wrong,n/a,13-1031.00,claims examiner
+ov042,Compliance Analyst 2 - PCI (Hybrid - Seattle),13-1041.00,correct,yes,,compliance analyst
+as014,Beauty Sales - Trish McEvoy - NorthPark Center,41-2031.00,correct,yes,,retail beauty sales
+ov013,Principal Software Development Engineer - AI Platform,15-1252.00,correct,yes,,software engineer
+as053,Assistant Store Manager,41-1011.00,correct,yes,,assistant store manager
+as057,Regional Master Field Controls Engineer,17-2071.00,correct,yes,,controls engineer
+as016,"VP,  Product Manager - Market Data",11-2021.00,correct,yes,,product manager
+ov047,"Manager, Assistant Controller",11-3031.01,correct,yes,,assistant controller
+as044,Beauty Sales - La Prairie - Santa Anita,41-2031.00,correct,yes,,retail beauty sales
+as039,Imagery Analyst,19-4099.03,correct,yes,,imagery analyst; 33-3021.06 also defensible
+ov031,Infrastructure Engineer II – Data Platforms,15-1252.00,acceptable,yes,,infrastructure engineer; 15-1244/15-1299.08 arguably better
+as043,Sr Manager - Category (Indirect Procurement),11-3061.00,correct,yes,,purchasing manager
+as092,Quality Technician III,51-9061.00,correct,yes,,quality technician
+ov035,Senior Platform Software Engineer,15-1252.00,correct,yes,,software engineer
+no004,"OnSite Specialist - Las Vegas, NV",NONE,none_ok,n/a,,too vague to code
+as087,"New College Grad - ENGINEER, TD IE OPS",17-2112.00,correct,yes,,industrial engineer
+as054,Senior Financial Crimes Compliance Controls Strategist,13-1041.00,correct,yes,,financial crimes compliance
+no029,ILS2: Demand and Provision Planner ( Contingency ),NONE,none_wrong,n/a,13-1081.00,demand/supply planner
+as084,Facility Digital System Engineer,17-2071.00,correct,yes,,facility digital/controls systems engineer
+ov016,Legal Compliance Lead Analyst - Cigna Healthcare,13-1041.00,correct,yes,,compliance analyst
+ov012,Systems and Platform Engineer,15-1252.00,acceptable,yes,,systems/platform engineer; 15-1244/15-1299.08 better
+as052,"Home Health Registered Nurse, PRN",29-1141.00,correct,yes,,RN
+as008,ESS Test Tech 2 (Lighting),49-2094.00,wrong,no,17-3023.00,"test technician, not repairer"
+as078,Associate Customer Account Representative,41-3091.00,wrong,no,43-4051.00,customer account representative = customer service
+as081,Risk Operations Manager,11-9199.00,correct,yes,,risk operations manager
+as024,Assistant Production Supervisor - CVG100 - 402 Sunday through Tuesdays (Wednesdays),51-1011.00,correct,yes,,production supervisor
+no001,Intern - Kite Commercial - Early Pipeline Strategy & Franchise Operations,NONE,none_wrong,n/a,13-1111.00,commercial strategy intern
+no016,"Senior Growth Marketing Manager, Paid Social",NONE,none_wrong,n/a,11-2021.00,marketing manager
+no032,Process Optimization Specialist,NONE,none_wrong,n/a,13-1111.00,process optimization
+ov044,AML Program Assessment Senior Compliance Analyst - AVP (Hybrid),13-1041.00,correct,yes,,AML compliance analyst
+as003,Senior Property Executive Cum FSM,41-9021.00,wrong,no,11-9141.00,"property/facility services management, not broker"
+as085,Restaurant Manager,11-9051.00,correct,yes,,restaurant manager
+no049,Partner Solutions Engineer,NONE,none_wrong,n/a,41-9031.00,partner solutions engineer = presales engineer
+as060,Energy Services Analyst,13-1081.02,wrong,yes,13-1199.00,"energy services analysis, not logistics"
+as066,Personal Shopper,41-2031.00,correct,yes,,personal shopper
+no003,LTSS Service Care Manager,NONE,none_wrong,n/a,21-1022.00,LTSS care/case manager
+ov001,Data Platform Engineer officer,15-1252.00,acceptable,yes,,data platform engineer; 15-1243 arguably better
+ov022,Senior Systems Engineer – Boeing Platforms (Onsite),15-1252.00,wrong,no,17-2011.00,aerospace systems engineering at Boeing
+as099,Senior Software Development Engineer in Test - NPI Bring-up SDET,15-1253.00,correct,yes,,SDET
+as050,Product Manufacturing Engineer - Military Engines,17-2112.03,correct,yes,,manufacturing engineer
+ov023,Senior. Platform DevOps Engineer (Onsite),15-1252.00,acceptable,yes,,DevOps/platform; 15-1299.08/15-1244 equally or more apt
+as091,EMPLOYE MAGASIN POLYVALENT ( H/F),41-2031.00,correct,yes,,general retail store employee
+no015,Commercial Professionals - Expression of Interest,NONE,none_ok,n/a,,"talent pool posting, not a job"
+no013,"Implementation Consultant I, Commercial",NONE,none_wrong,n/a,15-1211.00,software implementation consultant
+ov043,Senior Cloud Platform Engineer,15-1252.00,acceptable,yes,,cloud platform engineer; 15-1299.08/15-1244 equally or more apt
+ov007,"Senior System Software Engineer, RTL-to-GDS Flow Platform",15-1252.00,correct,yes,,EDA flow software engineer
+no037,Phoenix Toxicology Techno Trainee - 3rd Shift,NONE,none_wrong,n/a,29-2012.00,toxicology lab technician trainee
+as049,General Manager,11-1021.00,correct,yes,,general manager
+as048,Werkstudent (m/w/d) Werkscontrolling,13-2031.00,acceptable,yes,,plant controlling student; 13-2011/13-2051 at least as apt
+as015,Sr CRM Account Executive - Financial Services,41-3031.00,acceptable,yes,,sells CRM software; 41-3091 better than financial services sales
+ov049,Sr. Software Engineer - Boeing Platforms Displays (Onsite),15-1252.00,correct,yes,,software engineer
+as075,Respiratory  Therapist Telehealth,29-1126.00,correct,yes,,respiratory therapist
+as010,Channel Sales Executive (Silicon Valley/San Jose),41-4012.00,acceptable,yes,,channel sales likely tech products; 41-4011 better
+no036,Supply Planner,NONE,none_wrong,n/a,13-1081.00,supply planner
+as004,Seasonal Beauty Advisor - Sephora,41-9011.00,wrong,yes,41-2031.00,Sephora beauty advisor is retail sales
+ov008,"Staff Software Engineer, Kubernetes Platform",15-1252.00,correct,yes,,software engineer
+as030,GE Vernova Gas Power Engineering - Fall 2027 Intern,17-2141.00,correct,yes,,power engineering intern
+no026,Staff Technical Writer,NONE,none_wrong,n/a,27-3042.00,technical writer
+no033,Talent Acquisition Specialist,NONE,none_wrong,n/a,13-1071.00,recruiter
+no002,"Associate Director, Precision Medicine (Clinical Diagnostics)",NONE,none_wrong,n/a,11-9121.00,diagnostics science management
+as083,ENGINEER - PLN Operation Intelligence,17-2199.00,correct,yes,,"engineering role, unspecified"
+no006,CK128 Exception Hires (Friends and Family Only),NONE,none_ok,n/a,,"hiring-program label, not a job"
+as046,代谢事业部项目管理负责人PMO,13-1082.00,correct,yes,,PMO lead
+as026,Cable Test Technician-2nd shift,49-9052.00,wrong,no,51-9061.00,"cable test in manufacturing, not line installation"
+as073,F135 Depot Support Equipment (SE) Fleet Manager (Onsite),11-3071.00,correct,yes,,equipment fleet manager
+as023,Bartender - Ziggys,35-3011.00,correct,yes,,bartender
+no024,Human Resources Business Partner - St Joseph Plant,NONE,none_wrong,n/a,13-1071.00,HR business partner
+as065,Accounts Payable Clerk,43-3031.00,correct,yes,,AP clerk
+ov040,Senior Software Engineer - Embedded Platform,15-1252.00,correct,yes,,embedded software engineer
+no020,Banco de Talentos Ecolab Brasil | Todas as Regiões,NONE,none_ok,n/a,,talent pool posting
+no042,Equipment Associate,NONE,none_ok,n/a,,too vague to code
+as094,Ethics & Compliance Manager,11-9199.02,correct,yes,,compliance manager
+ov039,"Staff Software Engineer, AI Native Web Platform",15-1252.00,correct,yes,,software engineer
+as006,Entry-Level Auto Body Prepper,49-3021.00,correct,yes,,auto body prep
+as021,Security Access Administrator,43-9061.00,wrong,no,15-1212.00,"IT access/IAM administration, not office clerk"
+no034,FY27 NCG Hiring,NONE,none_ok,n/a,,hiring-program label
+as070,Alterations & Tailor Shop - Tailor - Valley Fair,39-9099.00,wrong,no,51-6052.00,tailor has specific code
+as097,Primary Care Physician,29-1215.00,correct,yes,,primary care physician
+ov041,Senior Systems Engineer – SOA CAAS Mainline Platform (Onsite),15-1252.00,acceptable,yes,,avionics systems engineering; 15-1299.08 better
+ov015,"Software Engineer II - Embedded Platform Software, Onsite",15-1252.00,correct,yes,,embedded software engineer
+as062,Test Engineering Internship 2027,17-2199.00,correct,yes,,test engineering intern
+no018,Technical Support Advisor (German - speaking) On-site MA05,NONE,none_wrong,n/a,15-1232.00,technical support
+ov048,Financial Stock Controller Assistant (m/f/d*) – Tommy Hilfiger & Calvin Klein – Stage Janvier 2027 (6 mois),11-3031.01,wrong,no,13-2011.00,"assistant/intern in inventory accounting, not a controller manager"
+ov026,Senior Sustainability Analyst - Environmental Compliance & Analytics,13-1041.00,acceptable,yes,,environmental compliance analyst; 13-1199.05 Sustainability Specialists also fits
+no027,Professional Services Specialist - Dedicated Account,NONE,none_ok,n/a,,too vague to code
+ov020,Senior Operations Integration & TACSRT Support Lead,11-1021.00,wrong,no,13-1111.00,"operations integration support lead, not top executive"
+no050,Study Delivery Sr Mgr (Study Delivery Lead),NONE,none_wrong,n/a,11-9121.01,clinical study delivery management
+no019,MBA Intern,NONE,none_ok,n/a,,"MBA intern, no occupation"
+as088,NPO Product Manager (HBM),11-2021.00,correct,yes,,semiconductor product manager
+no010,"Lead Specialist, EDC",NONE,none_wrong,n/a,15-2051.02,EDC clinical data management
+as042,"Regulatory & Start Up Specialist 2, cFSP",19-1099.00,wrong,no,13-1041.07,clinical regulatory/start-up specialist

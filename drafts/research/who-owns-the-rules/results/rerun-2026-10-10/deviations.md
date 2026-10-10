@@ -204,3 +204,26 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
       code is reported per code. This is the information lost by cluster-level coding.
     - Cluster-level shares replace record counts in every finding that cites codebook counts, and the
       report says so.
+
+18. **Occupation codes: descriptive only after two failed checks; cross-function merging measured from task
+    clusters.**
+    - **The checks.** Both mappings failed the gate (error ≤ 10%), each judged by a clean Opus check of 200
+      titles:
+      - v1 top-10 candidates: assigned 16% error, none 90% wrong;
+      - v2 two-stage: assigned 21% error, major group correct 82%; none 82% wrong; overrides 10% error.
+      A third round is not run.
+    - **Decided before I1 uses any code:**
+      1. Detailed O*NET codes are not used for any inference. They are reported only as description,
+         with the measured error.
+      2. Major groups are used descriptively, with their measured accuracy (about 83%) stated beside every
+         figure.
+      3. The study-occupation group (overrides, 10% error, all errors non-finance "controller" titles
+         already excluded in v2) and the new-title term groups (deviation 14) stay as the basis of the
+         absorption comparison. Neither depends on model codes.
+      4. N02 and D2 (duties from two previously separate functions in one posting) are measured from TASK
+         content. Each found cluster gets a function family in its blind label step (finance,
+         sales/RevOps, customer support, HR, legal, procurement, IT/security, software engineering,
+         data/ML, operations, other). A posting "combines functions" when its tasks fall in clusters of two
+         or more families, at least one of them business and at least one technical. The rate is reported
+         over time and by group.
+      5. "None" titles are treated as unknown, not as a category.
