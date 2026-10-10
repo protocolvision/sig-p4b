@@ -10,7 +10,7 @@ Research draft, v4 (after review rounds 1–4) · 10 October 2026 · Protocols f
 ## 1. The problem
 
 Companies putting agents to work are already hiring for it. "AI engineer" topped LinkedIn's 2026 list of
-fastest-growing US job titles, with postings up 143% in 2025 (S).[^linkedin] Forward-deployed engineer
+fastest-growing US job titles, measured by members' job starts from 2023 to 2025 (S).[^linkedin] Forward-deployed engineer
 postings rose about 800% between January and September 2025 by one Indeed and *Financial Times* count
 (S).[^fde] US federal agencies have had to name a Chief AI Officer since 2024 (S).[^caio] Analysts
 recommend a named owner for every agent (S).[^forrester]
@@ -42,7 +42,7 @@ would have asked at that stage, as we reconstruct it.
 - **The first job description.** McElroy's memo is effectively one. Secondary accounts list the duties:
   study the brand's market and competitors, track sales, manage product, advertising and promotion, test
   in the field and talk to customers, and keep the brand profitable, with each man carrying no more than
-  two brands (S).[^mcelroy] Its length is disputed (800 words, or three pages). The memo itself, in P&G's
+  two brands (this last detail unconfirmed).[^mcelroy] Accounts describe it as three pages, breaking P&G's one-page-memo rule. The memo itself, in P&G's
   archives, has not been seen.
 - **Outcome.** Lasted, and keeps branching. Each branch answers the same question (who owns the result
   across functions?) in a new medium.
@@ -51,8 +51,8 @@ would have asked at that stage, as we reconstruct it.
 
 | Stage | Years | Role | The business question | Evidence |
 | --- | --- | --- | --- | --- |
-| Before | 1970s | Mainframe corporate planning models run by specialist programmers; budget clerks | Each run costs days, so we test one scenario. Who answers when the untested one happens? | IFPS, late 1970s; about 2,000 firms using or testing planning models by 1976 (S)[^planningmodels] |
-| Origin | 1979–85 | The spreadsheet analyst (VisiCalc 1979, Lotus 1-2-3 1983, Excel 1985) | What happens to the plan if one assumption changes? (No "who": no new title followed.) | Bricklin's blackboard story (S)[^visicalc]; product dates (M) |
+| Before | 1970s | Mainframe corporate planning models run by specialist programmers; budget clerks | Each run costs days, so we test one scenario. Who answers when the untested one happens? | IFPS, late 1970s; nearly 2,000 firms in the US, Canada and Europe using or developing planning models, per a 1976 survey (S)[^planningmodels] |
+| Origin | 1979–85 | The spreadsheet analyst (VisiCalc 1979, Lotus 1-2-3 1983, Excel 1985 for the Mac, 1987 for Windows) | What happens to the plan if one assumption changes? (No "who": no new title followed.) | Bricklin's blackboard story (S)[^visicalc]; product dates (S) |
 | Successor | 1980s–2000s | Financial planning and analysis (FP&A) | Each unit defends its own forecast. Who owns the one plan we commit to? | (S)[^fpa] |
 | Branch | 2018–19 | Analytics engineer | Our analysts can't trust the numbers they model. Who builds and tests the data underneath? | Term circulating in the dbt community in 2018; first formal write-up early 2019 (S)[^analyticseng] |
 | Branch | 2018– | Revenue operations (from sales operations) | Marketing, sales and customer success each report their own numbers. Who owns the funnel between them? | Earliest known use of "Revenue Operations" in 2018 (S)[^revops]. The common "Xerox in the 1970s" origin rests on one unreliable vendor blog. |
@@ -69,7 +69,7 @@ would have asked at that stage, as we reconstruct it.
 | Before | to 1993 | Unix system administrators | — | (S)[^webmasterhist] |
 | Origin | 1993–96 | Webmaster | Who is responsible for our website? (Names the technology; the role later split.) | Word first recorded 1993 (S)[^webmaster]. In a 1996 *Web Week* survey, 35% of respondents held the official title, up from none a year earlier (S)[^webmasterhist] |
 | Split | late 1990s–2000s | Front-end and back-end developer, operations, SEO specialist, content manager, later UX | Our site is now our storefront. Who answers for search traffic, versus outages, versus off-brand content? | (S)[^webmaster] |
-| Fade | 2015–2020 | — | — | Google renamed Webmaster Tools to Search Console (2015, M) and Webmaster Central to Search Central (2020, S)[^webmasterhist] |
+| Fade | 2015–2020 | — | — | Google renamed Webmaster Tools to Search Console (2015, S) and Webmaster Central to Search Central (2020, S)[^webmasterhist] |
 
 - **The job description.** A 1998 webmaster's typical duties: server administration, hand-coded HTML,
   basic graphic design, writing content, and submitting the site to search engines such as AltaVista and
@@ -82,10 +82,10 @@ would have asked at that stage, as we reconstruct it.
 | Stage | Years | Role | The business question | Evidence |
 | --- | --- | --- | --- | --- |
 | Before | 1970s–80s | EDP auditor; bank "data security officer"; security manager under the CIO | Our auditors keep finding the same control gaps. Who fixes them? | ISACA retrospective by a former bank data security officer (S)[^isaca] |
-| Origin | 1994 or 1995 | Chief Information Security Officer, Citicorp (Steve Katz) | We lost $10 million to a hacker. Who is accountable to the board? | Levin theft; board told the CEO to hire a security executive (S)[^katz] |
-| Spread | 2000s–2010s | CISO, mostly reporting to the CIO at first | — | About half of the Fortune 1000 by 2010 (S, vendor figures)[^cisoshare] |
-| Successor | 2023– | A named, disclosed owner of cyber risk | The board must now state who manages cyber risk. Whose name and qualifications go in the 10-K? | SEC Regulation S-K Item 106, adopted 26 July 2023; 62% of first-year filers named a CISO-type role (S)[^item106] |
-| Branch | 2015– | Chief trust officer | Customers' security reviews are stalling deals. Who owns trust as a sales asset? | Forrester, 2022 (S)[^trust] |
+| Origin | 1995 | Chief Information Security Officer, Citicorp (Steve Katz) | A hacker moved $10 million out of customer accounts. Who is accountable to the board? | Levin theft (1994; all but $400,000 recovered); board told the CEO to hire a security executive (S)[^katz] |
+| Spread | 2000s–2010s | CISO, mostly reporting to the CIO at first | — | Fewer than half of the Fortune 1000 had a full-time CISO in 2010 (CMU CyLab); about 62% of the Fortune 500 had one by 2019 (S)[^cisoshare] |
+| Successor | 2023– | A named, disclosed owner of cyber risk | The board must now state who manages cyber risk. Whose name and qualifications go in the 10-K? | SEC Regulation S-K Item 106, adopted 26 July 2023; in early 2024 filings, 85% named a CISO or similar role and 62% a dedicated information-security leader (S)[^item106] |
+| Branch | 2010s– | Chief trust officer | Customers' security reviews are stalling deals. Who owns trust as a sales asset? | Forrester (S)[^trust] |
 
 - **Personal liability.** In October 2023 the SEC sued SolarWinds and its CISO personally; most of the case
   was dismissed in July 2024 and the SEC dropped the rest in November 2025 (S).[^solarwinds]
@@ -110,8 +110,8 @@ would have asked at that stage, as we reconstruct it.
 | Stage | Years | Role | The business question | Evidence |
 | --- | --- | --- | --- | --- |
 | Before | 1980s–2000s | Bulletin-board sysops; online community managers (AOL, The WELL from 1991, games); PR; customer service | — | (S)[^community] |
-| Origin | 2007–08 | Social customer service at Comcast (Frank Eliason) | Customers complain in public faster than our call centre can respond. Who answers? | Informal from September 2007, official February 2008; 11 staff by 2009 (S)[^comcast] |
-| Origin | 2008 | Head of social media, Ford (Scott Monty) | Bloggers and customers shape our brand before PR can respond. Who speaks for the company in public, in real time? | Hired July 2008; formal title "Global Digital & Multimedia Communications Manager" (S)[^ford] |
+| Origin | 2007–08 | Social customer service at Comcast (Frank Eliason) | Customers complain in public faster than our call centre can respond. Who answers? | Informal from September 2007, official February 2008; about ten staff by 2009 (S)[^comcast] |
+| Origin | 2008 | Head of social media, Ford (Scott Monty) | Bloggers and customers shape our brand before PR can respond. Who speaks for the company in public, in real time? | Hired mid-2008; formal title "Global Digital & Multimedia Communications Manager" (S)[^ford] |
 | Spread | 2010s | Social media manager; social care teams | — | About 64,000 US social media managers in 2022, by Revelio Labs' own count (S)[^revelio] |
 
 - **Outcome.** Lasted and multiplied. The first holders did the work under existing titles.
@@ -132,9 +132,9 @@ would have asked at that stage, as we reconstruct it.
 
 | Stage | Years | Role | The business question | Evidence |
 | --- | --- | --- | --- | --- |
-| Origin | December 2022 | Staff prompt engineer, Scale AI (Riley Goodside) | How do we get reliable work out of these models? (Names the technology, no "who"; the role was absorbed.) | Alexandr Wang called him the first person hired with the title (S)[^goodside] |
+| Origin | late 2022 (month M) | Staff prompt engineer, Scale AI (Riley Goodside) | How do we get reliable work out of these models? (Names the technology, no "who"; the role was absorbed.) | Alexandr Wang called him the first person hired with the title (S)[^goodside] |
 | Peak | 2023 | Prompt engineer | — | Anthropic's posting at $175,000–$335,000: the field "is arguably less than two years old" (S)[^anthropic] |
-| Absorbed | 2025 | — | — | WSJ, April 2025: "suddenly obsolete"; Indeed postings flat at about 3,000 (S)[^wsj] |
+| Absorbed | 2025 | — | — | WSJ, April 2025: "suddenly obsolete"; Indeed searches for the title down from 144 to 20–30 per million (S)[^wsj] |
 | Successor | June 2025 | Context engineering (practice) | Our agents fail because they lack the right information at each step. Who designs what they see? | Tobi Lütke's preference for the term, endorsed by Andrej Karpathy (S)[^context] |
 | Successor | 2023– | AI engineer; AI trainer | — | (S)[^aieng] |
 
@@ -145,9 +145,9 @@ would have asked at that stage, as we reconstruct it.
 
 | Role | Since | The business question | Status |
 | --- | --- | --- | --- |
-| Forward-deployed engineer | Palantir, about 2011; surge 2025 | How do we get our AI working inside each customer's operations? | Growing fast (S)[^fde] |
+| Forward-deployed engineer | Palantir, early 2010s; surge 2025 | How do we get our AI working inside each customer's operations? | Growing fast (S)[^fde] |
 | AI engineer | 2023 | Who builds products on models? | #1 fastest-growing US title, 2026 (S)[^linkedin] |
-| Chief AI Officer | US federal agencies, 2024 | Who coordinates AI use and manages its risk? | Kept by M-25-21 (April 2025) as a "change agent and AI advocate", which is transition language. IBM reports 76% of surveyed organisations had one in 2026, up from 26% in 2025 (S)[^caio][^ibm] |
+| Chief AI Officer | US federal agencies, 2024 | Who coordinates AI use and manages its risk? | Kept by M-25-21 (April 2025) as "change agents and AI advocates", which is transition language. IBM reports 76% of surveyed organisations had one in 2026, up from 26% in 2025 (S)[^caio][^ibm] |
 | GRC engineer | about 2024 | Our compliance evidence is collected by hand once a year. Who turns controls into code? | A manifesto and vendor career guides; sources disagree on whether it's a title or a capability (S)[^grc] |
 | Named agent owner | 2025–26 | Who manages each agent's lifecycle? | Analyst recommendation, not a title (S)[^forrester] |
 | Agent supervisor | 2026 | Who oversees agents doing work people used to do? | Gartner expects infrastructure staff to shift to supervising agents (S)[^gartner] |
@@ -160,28 +160,28 @@ transition roles or skills in the making. Only the GRC engineer's question names
 | Year | Event | Lineage |
 | --- | --- | --- |
 | 1931 | McElroy's "brand man" memo at P&G | Product |
-| 1976 | About 2,000 firms using corporate planning models | Planning |
+| 1976 | Nearly 2,000 firms using or developing corporate planning models | Planning |
 | 1979 | VisiCalc ships | Planning |
 | late 1980s | Program manager role at Microsoft | Product |
 | 1993 | "Webmaster" first recorded | Web |
-| 1994/95 | Steve Katz becomes the first CISO, at Citicorp | Security |
+| 1995 | Steve Katz becomes the first CISO, at Citicorp | Security |
 | 1996 | 35% of *Web Week* respondents hold the title webmaster | Web |
 | 1997 | RFC 2142 records `webmaster@`; Wu proposes "data scientist" for statisticians | Web, Data |
 | 2003 | Treynor Sloss starts SRE at Google | Operations |
 | 2007–08 | Comcast's social care; Ford's head of social media | Public voice |
 | 2008 | Patil and Hammerbacher name the data scientist; "Agile Infrastructure" in Toronto | Data, Operations |
 | 2009 | "10+ Deploys per Day"; first devopsdays | Operations |
-| 2011 | Palantir's forward-deployed engineers | Agents |
+| early 2010s | Palantir's forward-deployed engineers | Agents |
 | 2012 | Humble: "no such thing as a devops team"; HBR on data scientists | Operations, Data |
 | 2018 | "Data Scientists" enters the US occupational classification; "revenue operations" and "analytics engineer" appear | Data, Planning |
 | 2019 | *Team Topologies* defines platform teams | Operations |
 | 2020 | Google renames Webmaster Central | Web |
-| Dec 2022 | First staff prompt engineer, at Scale AI | Model work |
+| late 2022 | First staff prompt engineer, at Scale AI | Model work |
 | 2023 | SEC Item 106 requires a named owner of cyber risk; Anthropic's prompt engineer posting; "AI engineer" | Security, Model work |
 | 2024 | US agencies required to name Chief AI Officers | Agents |
 | 2025 | Prompt engineering "obsolete"; context engineering named; FDE postings up about 800% | Model work, Agents |
 | 2026 | AI engineer tops LinkedIn's fastest-growing titles | Agents |
-| Dec 2027 | EU AI Act deployer obligations for high-risk systems apply, including human oversight by people with the necessary competence, training and authority (S)[^aiact] | Agents |
+| Dec 2027 | EU AI Act deployer obligations for stand-alone (Annex III) high-risk systems apply, including human oversight by people with the necessary competence, training and authority (S)[^aiact] | Agents |
 
 ## 5. Roles that didn't last
 
@@ -263,7 +263,7 @@ shows they can still mislead: in 2016 its conflict looked permanent.
   roles that lasted. This is a reconstruction, not a law; the data scientist fits only when its question is
   restated as a cost.
 - **The title trails the work by years.** Eliason and Monty did the work under other titles; Facebook's
-  data scientists were first hired as analysts and research scientists; official classification took ten
+  first data team considered the titles analyst and research scientist and rejected them; official classification took ten
   years.
 
 ## 7. The case that it's all engineering
@@ -400,7 +400,7 @@ the subject of the question.
 [^revops]: "Revenue Operations," *EverybodyWiki*, https://en.everybodywiki.com/Revenue_Operations; on the Xerox claim, "The Evolution to Revenue Operations," *Traction Complete*, https://tractioncomplete.com/articles/the-evolution-to-revenue-operations. (S)
 [^planetmoney]: "Episode 606: Spreadsheets!," *Planet Money*, NPR, February 2015, transcript at https://www.npr.org/transcripts/389027988; "How the Electronic Spreadsheet Revolutionized Business," NPR, 27 February 2015, https://www.npr.org/2015/02/27/389585340/how-the-electronic-spreadsheet-revolutionized-business. (S)
 [^webmaster]: "Webmaster," *Wikipedia*, https://en.wikipedia.org/wiki/Webmaster; "What Happened to the Webmaster," *The History of the Web*, https://thehistoryoftheweb.com/postscript/what-happened-to-the-webmaster/. (S)
-[^webmasterhist]: "Job Profile: Webmaster," *Certification Magazine*, https://certmag.com/articles/job-profile-job-webmaster-constantly-evolved-since-1990s; "Webmaster," *Mewayz Wiki*, https://wiki.mewayz.com/wiki/Webmaster. (S)
+[^webmasterhist]: "Webmaster," *The Princeton Review* careers, https://www.princetonreview.com/careers/183/webmaster (the 1996 *Web Week* survey); "Job Profile: Webmaster," *Certification Magazine*, https://certmag.com/articles/job-profile-job-webmaster-constantly-evolved-since-1990s; "Webmaster," *Mewayz Wiki*, https://wiki.mewayz.com/wiki/Webmaster. (S)
 [^rfc2142]: D. Crocker, "Mailbox Names for Common Services, Roles and Functions," RFC 2142, May 1997, https://www.rfc-editor.org/info/rfc2142. (S)
 [^isaca]: "Information Security Matters: Fifty Years of Information Security—A Recollection," *ISACA Journal* 1 (2019), https://www.isaca.org/resources/isaca-journal/issues/2019/volume-1/information-security-matters-fifty-years-of-information-securitya-recollection. (S)
 [^katz]: "CISO Conversations: Steve Katz, the World's First CISO," *SecurityWeek*, https://www.securityweek.com/ciso-conversations-steve-katz-worlds-first-ciso/; "The Past, Present and Future of Chief Information Security Officers," *Cybersecurity Ventures*, https://cybersecurityventures.com/the-past-present-and-future-of-chief-information-security-officers-cisos/. (S)
