@@ -1,0 +1,551 @@
+position,employer,type,resolution,taken_for,note
+0,DXC Technology,fortune500,workday:dxctechnology.wd1.myworkdayjobs.com/DXCJobs; workday:dxctechnology.wd1.myworkdayjobs.com/ASJobs,accounts payable specialist; HR operations specialist; platform engineer,
+1,APA,fortune500,workday:apa.wd105.myworkdayjobs.com/APA-PrivateCareersPage01102026,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+2,Markel Group,fortune500,smartrecruiters:markel:Markel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+3,Watsco,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+4,CMS Energy,fortune500,greenhouse:ce:Campbell Ewald,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+5,Fox,fortune500,greenhouse:fox:Fox Creek Veterinary Hospital - Wildwood; workday:fox.wd1.myworkdayjobs.com/Domestic; workday:fox.wd1.myworkdayjobs.com/FOXTVST_EAST; workday:fox.wd1.myworkdayjobs.com/FOXTVST_Central,revenue operations manager,
+6,Northwestern Mutual,fortune500,workday:northwesternmutual.wd5.myworkdayjobs.com/CORPORATE-CAREERS; workday:northwesternmutual.wd5.myworkdayjobs.com/CORPORATE-CAREERS-PRIVATE,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+7,Travelers,fortune500,workday:travelers.wd5.myworkdayjobs.com/External; workday:travelers.wd5.myworkdayjobs.com/SimplyBusinesssExternal,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+8,Franklin Templeton,fortune500,workday:franklintempleton.wd5.myworkdayjobs.com/Jobs-WAM; workday:franklintempleton.wd5.myworkdayjobs.com/Jobs-Clarion; workday:franklintempleton.wd5.myworkdayjobs.com/Jobs-ClearBridge-Private,controller,
+9,Accendra Health,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+10,Avis Budget Group,fortune500,workday:avisbudget.wd1.myworkdayjobs.com/ABG_Careers; workday:avisbudget.wd1.myworkdayjobs.com/Zipcar_Careers; workday:avisbudget.wd1.myworkdayjobs.com/ABGrade_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+11,Corteva,fortune500,workday:corteva.wd5.myworkdayjobs.com/Corteva,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+12,Tyson Foods,fortune500,workday:tysonfoods.wd5.myworkdayjobs.com/TSN; workday:tysonfoods.wd5.myworkdayjobs.com/TSN1; workday:tysonfoods.wd5.myworkdayjobs.com/CVT,controller,
+13,Delta Air Lines,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+14,Westinghouse Air Brake,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+15,Kimberly-Clark,fortune500,workday:kimberlyclark.wd1.myworkdayjobs.com/XXX_EMEA; workday:kimberlyclark.wd1.myworkdayjobs.com/XXX_LAO; workday:kimberlyclark.wd1.myworkdayjobs.com/XXX_NA,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+16,Advance Auto Parts,fortune500,workday:advanceauto.wd5.myworkdayjobs.com/AdvanceExternalCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+17,RTX,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+18,Allstate,fortune500,workday:allstate.wd5.myworkdayjobs.com/Agent; workday:allstate.wd5.myworkdayjobs.com/allstate_careers,platform engineer,
+19,Sempra,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+20,VAST Data,venture-backed-software,greenhouse:vast:Vast; ashby:vast,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+21,Jabil,fortune500,workday:jabil.wd5.myworkdayjobs.com/Jabil_Careers,controller,
+22,Intel,fortune500,workday:intel.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+23,State Street,fortune500,workday:statestreet.wd1.myworkdayjobs.com/Global; workday:statestreet.wd1.myworkdayjobs.com/eQuest,controller; compliance analyst; platform engineer,
+24,Postman,venture-backed-software,workday:postman.wd108.myworkdayjobs.com/careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+25,Analog Devices,fortune500,ashby:analog; workday:analogdevices.wd1.myworkdayjobs.com/External,controller; procurement specialist; platform engineer,
+26,3M,fortune500,workday:3m.wd1.myworkdayjobs.com/Search,procurement specialist; platform engineer,
+27,SpartanNash,fortune500,workday:spartannash.wd1.myworkdayjobs.com/SpartanNash_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+28,EMCOR Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+29,QVC Group,fortune500,workday:qvc.wd5.myworkdayjobs.com/QVC-China; workday:qvc.wd5.myworkdayjobs.com/QVC-Japan; workday:qvc.wd5.myworkdayjobs.com/QRG,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+30,Albertsons,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+31,United Services Automobile Assn.,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+32,Yum Brands,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+33,Gold.com,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+34,Vertex Pharmaceuticals,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+35,Lumen Technologies,fortune500,ashby:lumen,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+36,Old Republic International,fortune500,workday:oldrepublic.wd1.myworkdayjobs.com/oldrepublictitle,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+37,Ramp,venture-backed-software,ashby:ramp,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+38,Aflac,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+39,Lear,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+40,Quest Diagnostics,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+41,Netskope,venture-backed-software,greenhouse:netskope:Netskope,platform engineer,
+42,Plains GP Holdings,fortune500,workday:plains.wd1.myworkdayjobs.com/Plains; workday:plains.wd1.myworkdayjobs.com/Rancho; workday:plains.wd1.myworkdayjobs.com/Plains_Trucking,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+43,Penske Automotive Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+44,Ferguson Enterprises,fortune500,workday:ferguson.wd1.myworkdayjobs.com/Ferguson_Campus; workday:ferguson.wd1.myworkdayjobs.com/Ferguson_Experienced; workday:ferguson.wd1.myworkdayjobs.com/Wholesale_Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+45,American Electric Power,fortune500,workday:american.wd1.myworkdayjobs.com/AU,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+46,Seaboard,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+47,KBR,fortune500,workday:kbr.wd5.myworkdayjobs.com/KBR_Careers; workday:kbr.wd5.myworkdayjobs.com/Frazer_Nash_Careers,procurement specialist; HR operations specialist,
+48,Centene,fortune500,workday:centene.wd5.myworkdayjobs.com/Centene_External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+49,Mastercard,fortune500,workday:mastercard.wd1.myworkdayjobs.com/CorporateCareers; workday:mastercard.wd1.myworkdayjobs.com/Campus; workday:mastercard.wd1.myworkdayjobs.com/ContractorConversion,controller; revenue operations manager; compliance analyst; platform engineer,
+50,Goldman Sachs Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+51,Occidental Petroleum,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+52,Edison International,fortune500,greenhouse:edison:Edison,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+53,Western & Southern Financial Group,fortune500,workday:western.wd1.myworkdayjobs.com/WESTERN,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+54,Alphabet,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+55,Labcorp Holdings,fortune500,workday:labcorp.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+56,Automatic Data Processing,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+57,Corning,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+58,TIAA,fortune500,workday:tiaa.wd1.myworkdayjobs.com/Search; workday:tiaa.wd1.myworkdayjobs.com/External-Schroder-Internal,controller; platform engineer,
+59,Arthur J. Gallagher,fortune500,ashby:arthur,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+60,CenterPoint Energy,fortune500,greenhouse:ce:Campbell Ewald,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+61,Cummins,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+62,Kraft Heinz,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+63,Mosaic,fortune500,ashby:mosaic; workday:mosaic.wd5.myworkdayjobs.com/mosaic; workday:mosaic.wd5.myworkdayjobs.com/broadbean_external,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+64,Comcast,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+65,Fannie Mae,fortune500,workday:fanniemae.wd1.myworkdayjobs.com/FannieMaeCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+66,Performance Food Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+67,Oshkosh,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+68,Fluor,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+69,Hertz Global Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+70,Citizens Financial Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+71,AT&T,fortune500,workday:att.wd1.myworkdayjobs.com/ATTCollege; workday:att.wd1.myworkdayjobs.com/ATTGeneral; workday:att.wd1.myworkdayjobs.com/Cricket,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+72,Archer Daniels Midland,fortune500,greenhouse:archer:Archer Veterinary Clinic,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+73,Truist Financial,fortune500,workday:truist.wd1.myworkdayjobs.com/Careers; workday:truist.wd1.myworkdayjobs.com/LDP; workday:truist.wd1.myworkdayjobs.com/AFCO,controller,
+74,M&T Bank,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+75,Microchip Technology,fortune500,smartrecruiters:microchip:Microchip,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+76,Casey's General Stores,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+77,Fidelity National Financial,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+78,Booking Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+79,Clio,venture-backed-software,workday:clio.wd3.myworkdayjobs.com/ClioCareerSite; workday:clio.wd3.myworkdayjobs.com/university_boards,accounts payable specialist; compliance analyst,
+80,Baker Hughes,fortune500,workday:bakerhughes.wd5.myworkdayjobs.com/BakerHughes,procurement specialist,
+81,Berry Global Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+82,Applied Materials,fortune500,ashby:applied,legal operations manager,
+83,PNC Financial Services Group,fortune500,workday:pnc.wd5.myworkdayjobs.com/External; workday:pnc.wd5.myworkdayjobs.com/HarrisWilliams,accounts payable specialist,
+84,Bank of America,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+85,MGM Resorts International,fortune500,workday:mgmresorts.wd5.myworkdayjobs.com/Pool-Hiring-2021,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+86,Ball,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+87,DuPont,fortune500,workday:dupont.wd5.myworkdayjobs.com/Jobs; workday:dupont.wd5.myworkdayjobs.com/Jobs_Swiss; workday:dupont.wd5.myworkdayjobs.com/Confidential,procurement specialist,
+88,W.R. Berkley,fortune500,lever:wr,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+89,Insight Enterprises,fortune500,greenhouse:ie:IE,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+90,Caterpillar,fortune500,smartrecruiters:caterpillarinc:Caterpillar Inc,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+91,Zimmer Biomet Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+92,Boeing,fortune500,workday:boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS; workday:boeing.wd1.myworkdayjobs.com/AISES; workday:boeing.wd1.myworkdayjobs.com/AAEOY,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+93,Cardinal Health,fortune500,workday:cardinalhealth.wd1.myworkdayjobs.com/EXT; workday:cardinalhealth.wd1.myworkdayjobs.com/Contractor; workday:cardinalhealth.wd1.myworkdayjobs.com/EXT_GLOBAL,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+94,Oracle,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+95,Alaska Air Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+96,Meta Platforms,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+97,Liberty Mutual Insurance Group,fortune500,workday:liberty.wd5.myworkdayjobs.com/lu_job_board_staff; workday:liberty.wd5.myworkdayjobs.com/lu_job_board_faculty; workday:liberty.wd5.myworkdayjobs.com/lu_job_board_student,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+98,Wells Fargo,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+99,Lincoln National,fortune500,greenhouse:lincoln:Lincoln Property Company through LinkedIn,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+100,Par Pacific Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+101,Emerson Electric,fortune500,greenhouse:ee:Emily's Entourage; workday:emerson.wd5.myworkdayjobs.com/Emerson_College_Staff; workday:emerson.wd5.myworkdayjobs.com/Emerson_College_Affiliated_Faculty; workday:emerson.wd5.myworkdayjobs.com/Emerson_College_FT_Faculty,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+102,Parker-Hannifin,fortune500,ashby:parker,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+103,Electronic Arts,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+104,Databricks,venture-backed-software,greenhouse:databricks:Databricks,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+105,Anysphere,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+106,HP,fortune500,greenhouse:hp:HP; workday:hp.wd5.myworkdayjobs.com/ExternalCareerSite,revenue operations manager; procurement specialist,
+107,U.S. Bancorp,fortune500,greenhouse:us:itel - United States; workday:us.wd103.myworkdayjobs.com/Tobii_Dynavox,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+108,Sherwin-Williams,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+109,FM,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+110,Loews,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+111,Vistra,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+112,Thor Industries,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+113,Jones Lang LaSalle,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+114,Navan,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+115,DoorDash,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+116,Dollar General,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+117,Costco Wholesale,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+118,Block,fortune500,greenhouse:block:Block,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+119,General Motors,fortune500,greenhouse:general:General Interest ; workday:generalmotors.wd5.myworkdayjobs.com/Careers_GM; workday:generalmotors.wd5.myworkdayjobs.com/Careers_GM_Private; workday:generalmotors.wd5.myworkdayjobs.com/Careers_TEI,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+120,News Corp.,fortune500,smartrecruiters:newscorp:News Corp,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+121,GE HealthCare,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+122,GXO Logistics,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+123,Rippling,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+124,Land O'Lakes,fortune500,workday:landolakes.wd1.myworkdayjobs.com/LandOLakes,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+125,Kellanova,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+126,McKesson,fortune500,workday:mckesson.wd3.myworkdayjobs.com/External_Careers; workday:mckesson.wd3.myworkdayjobs.com/Acquisition_Campus; workday:mckesson.wd3.myworkdayjobs.com/Ontada_Careers,revenue operations manager; compliance analyst,
+127,Quanta Services,fortune500,ashby:quanta,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+128,Abnormal AI,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+129,Thermo Fisher Scientific,fortune500,workday:thermofisher.wd5.myworkdayjobs.com/ThermofisherCareers,procurement specialist,
+130,Verizon Communications,fortune500,workday:verizon.wd12.myworkdayjobs.com/verizon-Careers,procurement specialist,
+131,Westlake,fortune500,workday:westlake.wd1.myworkdayjobs.com/westlake,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+132,Zoetis,fortune500,workday:zoetis.wd5.myworkdayjobs.com/zoetis; workday:zoetis.wd5.myworkdayjobs.com/broadbean_external; workday:zoetis.wd5.myworkdayjobs.com/zoetis_intl,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+133,Apple,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+134,Fifth Third Bancorp,fortune500,workday:fifththird.wd5.myworkdayjobs.com/53careers; workday:fifththird.wd5.myworkdayjobs.com/Providecareers; workday:fifththird.wd5.myworkdayjobs.com/Dividendcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+135,Erie Insurance Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+136,Danaher,fortune500,workday:danaher.wd1.myworkdayjobs.com/DanaherJobs,compliance analyst,
+137,Publix Super Markets,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+138,Nvidia,fortune500,workday:nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite,accounts payable specialist,
+139,Taylor Morrison Home,fortune500,workday:taylor.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+140,Concentrix,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+141,Rush Enterprises,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+142,McDonald's,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+143,Boston Scientific,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+144,World Kinect,fortune500,greenhouse:wk:Wieden+Kennedy,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+145,Cheniere Energy,fortune500,greenhouse:ce:Campbell Ewald,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+146,Flock Safety,venture-backed-software,ashby:flock,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+147,Masco,fortune500,workday:masco.wd1.myworkdayjobs.com/MascoHomeProductsIndia,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+148,Murphy USA,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+149,Corebridge Financial,fortune500,workday:corebridgefinancial.wd1.myworkdayjobs.com/CorebridgeFinancial; workday:corebridgefinancial.wd1.myworkdayjobs.com/early_careers; workday:corebridgefinancial.wd1.myworkdayjobs.com/valic,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+150,Grammarly,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+151,Stanley Black & Decker,fortune500,lever:stanleygroup,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+152,Oneok,fortune500,workday:oneok.wd1.myworkdayjobs.com/ONEOK; workday:oneok.wd1.myworkdayjobs.com/Scout,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+153,Welltower,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+154,Northern Trust,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+155,KKR,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+156,Booz Allen Hamilton Holding,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+157,Guardian Life Ins. Co. of America,fortune500,workday:guardianlife.wd5.myworkdayjobs.com/Guardian-Life-Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+158,Hewlett Packard Enterprise,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+159,Cincinnati Financial,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+160,PulteGroup,fortune500,workday:pultegroup.wd1.myworkdayjobs.com/PGI,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+161,Pfizer,fortune500,workday:pfizer.wd1.myworkdayjobs.com/PfizerCareers; workday:pfizer.wd1.myworkdayjobs.com/ContractorConversions; workday:pfizer.wd1.myworkdayjobs.com/Canada_Only_External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+162,Tesla,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+163,Blackstone,fortune500,workday:blackstone.wd1.myworkdayjobs.com/Blackstone_Campus_Careers; workday:blackstone.wd1.myworkdayjobs.com/Blackstone_InternalCareers; workday:blackstone.wd1.myworkdayjobs.com/Blackstone_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+164,Chewy,fortune500,workday:chewy.wd5.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+165,Kohl's,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+166,Public Service Enterprise Group,fortune500,greenhouse:public:Public,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+167,Warner Bros. Discovery,fortune500,workday:warnerbros.wd5.myworkdayjobs.com/global; workday:warnerbros.wd5.myworkdayjobs.com/francais,compliance analyst,
+168,Paramount Skydance,fortune500,smartrecruiters:paramountgroup:Paramount Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+169,Vulcan Materials,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+170,Macy's,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+171,Hilton Worldwide Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+172,Merck,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+173,FedEx,fortune500,workday:fedex.wd1.myworkdayjobs.com/FSC_Canada_Career_Site; workday:fedex.wd1.myworkdayjobs.com/FTN_External_Career_Site; workday:fedex.wd1.myworkdayjobs.com/FXE-Canada_External_Career_Site,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+174,Builders FirstSource,fortune500,smartrecruiters:buildersfirstsource:Builders FirstSource,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+175,Post Holdings,fortune500,ashby:post,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+176,Solventum,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+177,Amgen,fortune500,workday:amgen.wd1.myworkdayjobs.com/Careers; workday:amgen.wd1.myworkdayjobs.com/agency,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+178,Toll Brothers,fortune500,workday:tollgroup.wd5.myworkdayjobs.com/tollgroup,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+179,Checkout.com,venture-backed-software,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+180,Salesforce,fortune500,workday:salesforce.wd12.myworkdayjobs.com/External_Career_Site; workday:salesforce.wd12.myworkdayjobs.com/Futureforce_NewGradRoles; workday:salesforce.wd12.myworkdayjobs.com/Mulesoft_Careersite,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+181,Altria Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+182,BrightSpring Health Services,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+183,Valero Energy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+184,HF Sinclair,fortune500,greenhouse:hs:Headspace,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+185,ServiceNow,fortune500,smartrecruiters:servicenow:ServiceNow,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+186,Constellation Energy,fortune500,ashby:constellation,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+187,TJX,fortune500,workday:tjx.wd1.myworkdayjobs.com/Tjx_External,compliance analyst,
+188,Henry Schein,fortune500,greenhouse:hs:Headspace; workday:henryschein.wd1.myworkdayjobs.com/External_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+189,PPL,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+190,Procter & Gamble,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+191,Deere,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+192,PG&E,fortune500,workday:pg.wd5.myworkdayjobs.com/1000; workday:pg.wd5.myworkdayjobs.com/1001,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+193,Humana,fortune500,workday:humana.wd5.myworkdayjobs.com/Humana_External_Career_Site; workday:humana.wd5.myworkdayjobs.com/CenterWell_External_Career_Site,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+194,Airtable,venture-backed-software,greenhouse:airtable:Airtable; ashby:airtable,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+195,EOG Resources,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+196,Hershey,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+197,Owens Corning,fortune500,workday:owens.wd1.myworkdayjobs.com/OCC; workday:owens.wd1.myworkdayjobs.com/OCCoj,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+198,Wayfair,fortune500,smartrecruiters:wayfair:Wayfair,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+199,Interpublic Group,fortune500,workday:interpublic.wd5.myworkdayjobs.com/OMC,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+200,Capital One Financial,fortune500,lever:capital; workday:capitalone.wd12.myworkdayjobs.com/Capital_One,HR operations specialist,
+201,Keurig Dr Pepper,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+202,Cigna Group,fortune500,workday:cigna.wd5.myworkdayjobs.com/cignacareers,compliance analyst,
+203,Howmet Aerospace,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+204,Honeywell Technologies,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+205,Gap,fortune500,workday:gapinc.wd1.myworkdayjobs.com/Gapinc,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+206,Massachusetts Mutual Life Insurance,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+207,Advanced Micro Devices,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+208,Hormel Foods,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+209,AutoNation,fortune500,workday:autonation.wd5.myworkdayjobs.com/Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+210,Southwest Airlines,fortune500,smartrecruiters:southwest:Southwest,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+211,ARKO,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+212,GE Aerospace,fortune500,workday:geaerospace.wd5.myworkdayjobs.com/Only_Confidential_Executive_Recruiting; workday:geaerospace.wd5.myworkdayjobs.com/GE_ExternalSite,HR operations specialist,
+213,Illinois Tool Works,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+214,Miro,venture-backed-software,ashby:miro,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+215,Dana,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+216,American Family Insurance Group,fortune500,workday:american.wd1.myworkdayjobs.com/AU,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+217,Adobe,fortune500,workday:adobe.wd5.myworkdayjobs.com/external_experienced,legal operations manager,
+218,Principal Financial,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+219,Optimum Communications,fortune500,ashby:optimum,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+220,Eversource Energy,fortune500,greenhouse:ee:Emily's Entourage; workday:eversource.wd1.myworkdayjobs.com/ExternalSite; workday:eversource.wd1.myworkdayjobs.com/EPUT; workday:eversource.wd1.myworkdayjobs.com/Eversource_Confidential,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+221,Caesars Entertainment,fortune500,greenhouse:ce:Campbell Ewald,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+222,Targa Resources,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+223,L3Harris Technologies,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+224,CSX,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+225,Starbucks,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+226,Plaid,venture-backed-software,ashby:plaid,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+227,Energy Transfer,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+228,Goodyear Tire & Rubber,fortune500,workday:goodyear.wd1.myworkdayjobs.com/GoodyearCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+229,Texas Instruments,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+230,Peter Kiewit Sons',fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+231,Lambda,venture-backed-software,ashby:lambda,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+232,New York Life Insurance,fortune500,greenhouse:new:Sonja Inc.  ,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+233,Coupang,fortune500,greenhouse:coupang:Coupang,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+234,Glean,venture-backed-software,smartrecruiters:glean:Glean,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+235,Charles Schwab,fortune500,greenhouse:charles:charles,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+236,Lennar Corporation,fortune500,workday:lennar.wd1.myworkdayjobs.com/LENNAR_Jobs,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+237,Vercel,venture-backed-software,greenhouse:vercel:Vercel; ashby:vercel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+238,Motive,venture-backed-software,greenhouse:motive:Motive,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+239,Anthropic,venture-backed-software,greenhouse:anthropic:Anthropic,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+240,Packaging Corp. of America,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+241,BlackRock,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+242,Exxon Mobil Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+243,QXO Building Products,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+244,Dover,fortune500,workday:dover.wd103.myworkdayjobs.com/Dover,HR operations specialist,
+245,Endeavor Group Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+246,American Tower,fortune500,workday:american.wd1.myworkdayjobs.com/AU,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+247,Zoho,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+248,Ryder System,fortune500,workday:ryder.wd5.myworkdayjobs.com/RyderCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+249,Core & Main,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+250,Entergy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+251,Arctic Wolf,venture-backed-software,workday:arcticwolf.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+252,Bristol-Myers Squibb,fortune500,workday:bristolmyerssquibb.wd5.myworkdayjobs.com/BMS; workday:bristolmyerssquibb.wd5.myworkdayjobs.com/BMS_Events,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+253,Prudential Financial,fortune500,workday:prudential.wd3.myworkdayjobs.com/prudential; workday:prudential.wd3.myworkdayjobs.com/prudential_eastspring,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+254,Amphenol,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+255,US Foods Holding,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+256,Expeditors Intl. of Washington,fortune500,smartrecruiters:expeditors:Expeditors,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+257,Mutual of Omaha,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+258,Skechers U.S.A.,fortune500,workday:skechers.wd5.myworkdayjobs.com/One-career-site,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+259,Fastenal,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+260,Micron Technology,fortune500,workday:micron.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+261,OneTrust,venture-backed-software,greenhouse:onetrust:OneTrust,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+262,Ingredion,fortune500,workday:ingredion.wd1.myworkdayjobs.com/IngredionCareers; workday:ingredion.wd1.myworkdayjobs.com/RafhanMaizeCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+263,Abbott Laboratories,fortune500,workday:abbott.wd5.myworkdayjobs.com/abbottcareers; workday:abbott.wd5.myworkdayjobs.com/eQuest; workday:abbott.wd5.myworkdayjobs.com/Agency,accounts payable specialist,
+264,Super Micro Computer,fortune500,greenhouse:super:Super Technologies; lever:super; workday:super.wd501.myworkdayjobs.com/EXT; workday:super.wd501.myworkdayjobs.com/search; workday:super.wd501.myworkdayjobs.com/EXTDisForm,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+265,Ally Financial,fortune500,workday:ally.wd1.myworkdayjobs.com/Ally,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+266,Nike,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+267,Uber Technologies,fortune500,smartrecruiters:uber:Uber,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+268,CarMax,fortune500,workday:carmax.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+269,Estée Lauder,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+270,Universal Health Services,fortune500,greenhouse:universal:Universal,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+271,Marathon Petroleum,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+272,Assurant,fortune500,workday:assurant.wd1.myworkdayjobs.com/Assurant_Careers; workday:assurant.wd1.myworkdayjobs.com/iSmash_External_Career_Site,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+273,1Password,venture-backed-software,ashby:1password,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+274,Andersons,fortune500,workday:andersonsinc.wd1.myworkdayjobs.com/TheAndersonsCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+275,KeyCorp,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+276,Cribl,venture-backed-software,greenhouse:cribl:Cribl,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+277,Freddie Mac,fortune500,workday:freddiemac.wd5.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+278,Bank of New York (BNY),fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+279,AbbVie,fortune500,smartrecruiters:abbvie:AbbVie,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+280,Xcel Energy,fortune500,ashby:xe; workday:xcelenergy.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+281,Global Partners,fortune500,workday:global.wd1.myworkdayjobs.com/globalpartnerscareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+282,Huntington Bancshares,fortune500,workday:huntington.wd12.myworkdayjobs.com/HNBcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+283,AutoZone,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+284,Palo Alto Networks,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+285,Zapier,venture-backed-software,ashby:zapier,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+286,International Paper,fortune500,workday:paper.wd3.myworkdayjobs.com/Paper_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+287,Walt Disney,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+288,Chipotle Mexican Grill,fortune500,workday:chipotle.wd5.myworkdayjobs.com/ChipotleCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+289,Reinsurance Group of America,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+290,Workday,fortune500,workday:workday.wd5.myworkdayjobs.com/Workday; workday:workday.wd5.myworkdayjobs.com/Workday_Early_Career; workday:workday.wd5.myworkdayjobs.com/Workday_Executive_Site,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+291,Carta,venture-backed-software,greenhouse:carta:Carta,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+292,Dialpad,venture-backed-software,greenhouse:dialpad:Dialpad,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+293,Global Payments,fortune500,workday:global.wd1.myworkdayjobs.com/globalpartnerscareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+294,PVH,fortune500,workday:pvh.wd1.myworkdayjobs.com/PVH_Careers; workday:pvh.wd1.myworkdayjobs.com/broadbean_external,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+295,Farmers Insurance Exchange,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+296,Phillips 66,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+297,UPS,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+298,S&P Global,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+299,Ovintiv,fortune500,workday:ovintiv.wd3.myworkdayjobs.com/ovintivcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+300,Lockheed Martin,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+301,ManpowerGroup,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+302,Sonic Automotive,fortune500,greenhouse:sonic:Sonic Internet + Phone,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+303,Johnson & Johnson,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+304,Icahn Enterprises,fortune500,greenhouse:ie:IE,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+305,Stryker,fortune500,workday:stryker.wd1.myworkdayjobs.com/StrykerCareers; workday:stryker.wd1.myworkdayjobs.com/StrykerAgencySite,accounts payable specialist,
+306,GE Vernova,fortune500,workday:gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite,accounts payable specialist,
+307,Cohesity,venture-backed-software,workday:cohesity.wd5.myworkdayjobs.com/COHESITY_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+308,Oscar Health,fortune500,greenhouse:oscar:Oscar Health,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+309,General Mills,fortune500,greenhouse:general:General Interest ,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+310,Coca-Cola,fortune500,greenhouse:cc:Climate Corps,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+311,CVS Health,fortune500,workday:cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers; workday:cvshealth.wd1.myworkdayjobs.com/Private_Postings_Intern_Conversion_ONLY; workday:cvshealth.wd1.myworkdayjobs.com/Private_Postings_Mergers_and_Acquisitions_ONLY,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+312,Commercial Metals,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+313,Steel Dynamics,fortune500,ashby:steel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+314,Live Nation Entertainment,fortune500,workday:livenation.wd503.myworkdayjobs.com/LNExternalSite; workday:livenation.wd503.myworkdayjobs.com/TMExternalSite; workday:livenation.wd503.myworkdayjobs.com/InsomniacExternalSite,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+315,Tractor Supply,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+316,OpenAI,venture-backed-software,ashby:openai,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+317,NOV,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+318,Dollar Tree,fortune500,workday:dollartree.wd5.myworkdayjobs.com/dollartreeus; workday:dollartree.wd5.myworkdayjobs.com/dollartreeca,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+319,NinjaOne,venture-backed-software,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+320,Ebay,fortune500,workday:ebay.wd5.myworkdayjobs.com/TCGPlayer_External_Career,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+321,ABM Industries,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+322,Progressive,fortune500,smartrecruiters:progressivegroup:Progressive Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+323,Carvana,fortune500,greenhouse:carvana:Carvana,accounts payable specialist,
+324,WESCO International,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+325,Visa,fortune500,workday:visa.wd5.myworkdayjobs.com/Visa; workday:visa.wd5.myworkdayjobs.com/Visa_Early_Careers,revenue operations manager,
+326,Celonis,venture-backed-software,greenhouse:celonis:Celonis; workday:celonis.wd3.myworkdayjobs.com/ext; workday:celonis.wd3.myworkdayjobs.com/executive,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+327,AGCO,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+328,Canva,venture-backed-software,smartrecruiters:canva:Canva,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+329,W.W. Grainger,fortune500,greenhouse:ww:Weight Watchers; workday:ww.wd1.myworkdayjobs.com/careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+330,GuideWell Mutual Holding,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+331,NextEra Energy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+332,Deel,venture-backed-software,ashby:deel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+333,Regeneron Pharmaceuticals,fortune500,workday:regeneron.wd1.myworkdayjobs.com/Careers; workday:regeneron.wd1.myworkdayjobs.com/IrelandPrivate; workday:regeneron.wd1.myworkdayjobs.com/US_Only_University_Relations_Career,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+334,Ecolab,fortune500,workday:ecolab.wd1.myworkdayjobs.com/ECOLAB_External,HR operations specialist,
+335,Southern,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+336,Lithia Motors,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+337,PepsiCo,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+338,Home Depot,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+339,Newmont,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+340,DTE Energy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+341,XPO,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+342,D.R. Horton,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+343,JPMorgan Chase,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+344,Genuine Parts,fortune500,greenhouse:genuine:Genuine,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+345,PPG Industries,fortune500,workday:ppg.wd5.myworkdayjobs.com/PPG_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+346,Fivetran,venture-backed-software,greenhouse:fivetran:Fivetran ,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+347,Fidelity National Information (FIS),fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+348,Exelon,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+349,Monster Beverage,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+350,Apollo Global Management,fortune500,greenhouse:apollo:Apollo Education Systems,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+351,Eastman Chemical,fortune500,greenhouse:ec:Environmental Comfort,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+352,Las Vegas Sands,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+353,MasTec,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+354,Motorola Solutions,fortune500,workday:motorolasolutions.wd5.myworkdayjobs.com/Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+355,Philip Morris International,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+356,TransDigm Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+357,Diamondback Energy,fortune500,workday:diamondbackenergy.wd12.myworkdayjobs.com/DBE,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+358,AlphaSense,venture-backed-software,greenhouse:alphasense:AlphaSense,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+359,Airbnb,fortune500,greenhouse:airbnb:Airbnb,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+360,Tenet Healthcare,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+361,Avnet,fortune500,workday:avnet.wd1.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+362,NRG Energy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+363,Walgreens Boots Alliance,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+364,Lam Research,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+365,Intercontinental Exchange,fortune500,greenhouse:ie:IE,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+366,Dow,fortune500,workday:dow.wd1.myworkdayjobs.com/ExternalCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+367,Fiserv,fortune500,workday:fiserv.wd5.myworkdayjobs.com/EXT; workday:fiserv.wd5.myworkdayjobs.com/NZ; workday:fiserv.wd5.myworkdayjobs.com/blconsultant,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+368,Unum Group,fortune500,workday:unum.wd1.myworkdayjobs.com/External; workday:unum.wd1.myworkdayjobs.com/Confidential,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+369,Williams-Sonoma,fortune500,workday:williams.wd5.myworkdayjobs.com/External; workday:williams.wd5.myworkdayjobs.com/ContingentWorkerConvCareers; workday:williams.wd5.myworkdayjobs.com/PowerExternal,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+370,Graybar Electric,fortune500,workday:graybar.wd1.myworkdayjobs.com/Careers; workday:graybar.wd1.myworkdayjobs.com/Cape_Careers; workday:graybar.wd1.myworkdayjobs.com/Shingle_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+371,Brex,venture-backed-software,greenhouse:brex:Brex,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+372,Eli Lilly,fortune500,ashby:eli,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+373,Consolidated Edison,fortune500,greenhouse:ce:Campbell Ewald,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+374,Kyndryl Holdings,fortune500,workday:kyndryl.wd5.myworkdayjobs.com/KyndrylEarlyCareers; workday:kyndryl.wd5.myworkdayjobs.com/KyndrylProfessionalCareers; workday:kyndryl.wd5.myworkdayjobs.com/ISMCareers,HR operations specialist,
+375,Voya Financial,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+376,Grafana Labs,venture-backed-software,greenhouse:grafanalabs:Grafana Labs,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+377,Union Pacific,fortune500,ashby:union,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+378,AECOM,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+379,Ameriprise Financial,fortune500,workday:ameriprise.wd5.myworkdayjobs.com/Ameriprise,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+380,Halliburton,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+381,C.H. Robinson Worldwide,fortune500,workday:ch.wd3.myworkdayjobs.com/Honda_Canada,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+382,Qualcomm,fortune500,workday:qualcomm.wd12.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+383,American Financial Group,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+384,Jacobs Solutions,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+385,Thrivent Financial,fortune500,workday:thrivent.wd5.myworkdayjobs.com/CareerFair,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+386,Raymond James Financial,fortune500,workday:raymondjames.wd1.myworkdayjobs.com/RaymondJamesEarlyCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+387,Notion,venture-backed-software,ashby:notion,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+388,Elevance Health,fortune500,workday:elevancehealth.wd1.myworkdayjobs.com/Legato_Ireland; workday:elevancehealth.wd1.myworkdayjobs.com/ANT; workday:elevancehealth.wd1.myworkdayjobs.com/Legato_Israel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+389,Interactive Brokers Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+390,Constellation Brands,fortune500,ashby:constellation,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+391,Vertiv Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+392,JetBlue Airways,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+393,International Flavors & Fragrances,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+394,Regions Financial,fortune500,workday:regions.wd5.myworkdayjobs.com/Regions_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+395,Mohawk Industries,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+396,American Airlines Group,fortune500,workday:american.wd1.myworkdayjobs.com/AU,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+397,Amazon,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+398,Freeport-McMoRan,fortune500,smartrecruiters:freeport-mcmoran:Freeport-McMoRan,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+399,Nationwide,fortune500,workday:nationwide.wd1.myworkdayjobs.com/Nationwide_Career; workday:nationwide.wd1.myworkdayjobs.com/Nationwide_Career_India,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+400,United Airlines Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+401,CACI International,fortune500,smartrecruiters:caci:CACI,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+402,Sysco,fortune500,workday:sysco.wd5.myworkdayjobs.com/syscoCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+403,Intuit,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+404,CDW,fortune500,workday:cdw.wd5.myworkdayjobs.com/Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+405,Stripe,venture-backed-software,greenhouse:stripe:Stripe,support operations manager,
+406,United Rentals,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+407,Asbury Automotive Group,fortune500,smartrecruiters:asburyautomotivegroup:Asbury Automotive Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+408,Cencora,fortune500,smartrecruiters:cencora:Cencora,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+409,Cintas,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+410,Equinix,fortune500,workday:equinix.wd1.myworkdayjobs.com/GDH_Consulting; workday:equinix.wd1.myworkdayjobs.com/JAC_Recruitment; workday:equinix.wd1.myworkdayjobs.com/Career_Design_Center,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+411,CBRE Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+412,Kinder Morgan,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+413,Securian Financial Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+414,TD Synnex,fortune500,workday:td.wd3.myworkdayjobs.com/TD_Bank_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+415,Huntington Ingalls Industries,fortune500,workday:huntington.wd12.myworkdayjobs.com/HNBcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+416,Kenvue,fortune500,workday:kenvue.wd5.myworkdayjobs.com/Kenvue,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+417,Tanium,venture-backed-software,greenhouse:tanium:Tanium,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+418,International Business Machines,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+419,Ross Stores,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+420,CHS,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+421,Sanmina,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+422,Autoliv,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+423,Republic Services,fortune500,workday:republic.wd5.myworkdayjobs.com/Republic; workday:republic.wd5.myworkdayjobs.com/Sprint; workday:republic.wd5.myworkdayjobs.com/Stablex,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+424,Ford Motor,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+425,Foot Locker,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+426,Campbell's,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+427,AES,fortune500,workday:aes.wd1.myworkdayjobs.com/AES_ANDES; workday:aes.wd1.myworkdayjobs.com/AES_EURASIA; workday:aes.wd1.myworkdayjobs.com/AES_BRAZIL,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+428,American Express,fortune500,workday:american.wd1.myworkdayjobs.com/AU,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+429,Conagra Brands,fortune500,workday:conagrabrands.wd1.myworkdayjobs.com/Careers_US; workday:conagrabrands.wd1.myworkdayjobs.com/Careers_CAN; workday:conagrabrands.wd1.myworkdayjobs.com/Careers_MEX,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+430,Avery Dennison,fortune500,smartrecruiters:averydennison:Avery Dennison,HR operations specialist,
+431,Dick's Sporting Goods,fortune500,workday:dickssportinggoods.wd1.myworkdayjobs.com/DSG,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+432,First Citizens BancShares,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+433,Talkdesk,venture-backed-software,ashby:talkdesk,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+434,ConocoPhillips,fortune500,workday:conocophillips.wd1.myworkdayjobs.com/ExternalCWAU; workday:conocophillips.wd1.myworkdayjobs.com/eQuest,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+435,Rockwell Automation,fortune500,workday:rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation; workday:rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers; workday:rockwellautomation.wd1.myworkdayjobs.com/External-ERGs,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+436,Walmart,fortune500,smartrecruiters:walmartinc:Walmart Inc.,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+437,Citigroup,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+438,Air Products & Chemicals,fortune500,greenhouse:air:Air; workday:airproducts.wd5.myworkdayjobs.com/AP0001; workday:airproducts.wd5.myworkdayjobs.com/AP0003,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+439,Paccar,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+440,FirstEnergy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+441,Netflix,fortune500,workday:netflix.wd108.myworkdayjobs.com/Netflix; workday:netflix.wd108.myworkdayjobs.com/Eyeline,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+442,Enterprise Products Partners,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+443,LPL Financial Holdings,fortune500,greenhouse:lpl:Little People's Landing; workday:lplfinancial.wd1.myworkdayjobs.com/External; workday:lplfinancial.wd1.myworkdayjobs.com/BD_Partners; workday:lplfinancial.wd1.myworkdayjobs.com/India_Ext,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+444,Auto-Owners Insurance,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+445,Chevron,fortune500,workday:chevron.wd5.myworkdayjobs.com/jobs; workday:chevron.wd5.myworkdayjobs.com/University,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+446,Kroger,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+447,PBF Energy,fortune500,workday:pbfenergy.wd1.myworkdayjobs.com/PBF; workday:pbfenergy.wd1.myworkdayjobs.com/JobFair,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+448,Science Applications International,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+449,United Natural Foods,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+450,Gilead Sciences,fortune500,workday:gilead.wd1.myworkdayjobs.com/gileadcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+451,KLA,fortune500,workday:kla.wd1.myworkdayjobs.com/Search; workday:kla.wd1.myworkdayjobs.com/AnnArbor; workday:kla.wd1.myworkdayjobs.com/Israel,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+452,Morgan Stanley,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+453,Mondelēz International,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+454,Automation Anywhere,venture-backed-software,workday:automationanywhere.wd5.myworkdayjobs.com/AutomationAnywhereJobs,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+455,Arrow Electronics,fortune500,"workday tenant found, no public site id",,skipped for all ten occupations: Workday tenant exists but no site id could be found
+456,DaVita,fortune500,workday:davita.wd1.myworkdayjobs.com/equest; workday:davita.wd1.myworkdayjobs.com/DKC_External; workday:davita.wd1.myworkdayjobs.com/Quantum_Work,revenue operations manager,
+457,Becton Dickinson,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+458,General Dynamics,fortune500,greenhouse:general:General Interest ,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+459,Dataiku,venture-backed-software,greenhouse:dataiku:Dataiku,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+460,Checkr,venture-backed-software,greenhouse:checkr:Checkr,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+461,IQVIA Holdings,fortune500,workday:iqvia.wd1.myworkdayjobs.com/IQVIA,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+462,PayPal Holdings,fortune500,workday:paypal.wd1.myworkdayjobs.com/Jobs,revenue operations manager,
+463,Nordstrom,fortune500,workday:nordstrom.wd501.myworkdayjobs.com/nordstrom_careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+464,Whirlpool,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+465,Ulta Beauty,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+466,Cognizant Technology Solutions,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+467,Sprouts Farmers Market,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+468,Lululemon athletica,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+469,Charter Communications,fortune500,greenhouse:cc:Climate Corps,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+470,Colgate-Palmolive,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+471,StoneX Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+472,Pacific Life,fortune500,workday:pacificlife.wd1.myworkdayjobs.com/PacificLifeCareers; workday:pacificlife.wd1.myworkdayjobs.com/UnderwriteMeCareers; workday:pacificlife.wd1.myworkdayjobs.com/PacificLifeReCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+473,Darden Restaurants,fortune500,smartrecruiters:dardeninc:Darden inc.,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+474,Western Digital,fortune500,workday:western.wd1.myworkdayjobs.com/WESTERN,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+475,Microsoft,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+476,Cisco Systems,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+477,Duke Energy,fortune500,workday:dukeenergy.wd1.myworkdayjobs.com/Search; workday:dukeenergy.wd1.myworkdayjobs.com/nosearch,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+478,Graphic Packaging Holding,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+479,Yum China Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+480,United States Steel,fortune500,greenhouse:unitedstates:capSpire - US,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+481,O'Reilly Automotive,fortune500,greenhouse:ogroup:O Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+482,Leidos Holdings,fortune500,workday:leidos.wd5.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+483,Berkshire Hathaway,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+484,Hartford Insurance Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+485,Lowe's,fortune500,greenhouse:lowe:Lowe Mechanical Services,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+486,Cleveland-Cliffs,fortune500,greenhouse:cc:Climate Corps,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+487,BJ's Wholesale Club,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+488,Intuitive Surgical,fortune500,workday:intuitive.wd1.myworkdayjobs.com/irtc_careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+489,Omnicom Group,fortune500,smartrecruiters:omnicomgroup:Omnicom Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+490,Norfolk Southern,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+491,Best Buy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+492,Devon Energy,fortune500,workday:devonenergy.wd5.myworkdayjobs.com/Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+493,Group 1 Automotive,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+494,Expedia Group,fortune500,workday:expedia.wd108.myworkdayjobs.com/search,revenue operations manager,
+495,J.B. Hunt Transport Services,fortune500,greenhouse:jb:Application Forms,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+496,Newell Brands,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+497,Sirius XM Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+498,Attentive,venture-backed-software,greenhouse:attentive:Attentive,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+499,Textron,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+500,AIG,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+501,WEC Energy Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+502,Burlington Stores,fortune500,workday:burlington.wd5.myworkdayjobs.com/BurlingtonCareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+503,Carrier Global,fortune500,workday:carrier.wd5.myworkdayjobs.com/jobs; workday:carrier.wd5.myworkdayjobs.com/Union_Workers_Career_Page; workday:carrier.wd5.myworkdayjobs.com/kgs_jobs,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+504,Baxter International,fortune500,workday:baxter.wd1.myworkdayjobs.com/baxter,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+505,Airwallex,venture-backed-software,ashby:airwallex,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+506,State Farm Insurance,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+507,Gusto,venture-backed-software,"greenhouse:gusto:Gusto, Inc.",,resolved; no live posting matching any of the ten titles (or board identity not verified)
+508,Northrop Grumman,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+509,Reliance,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+510,Biogen,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+511,Discover,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+512,Ace Hardware,fortune500,workday:acehardware.wd1.myworkdayjobs.com/External; workday:acehardware.wd1.myworkdayjobs.com/EJDExternal; workday:acehardware.wd1.myworkdayjobs.com/GLA_External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+513,Target,fortune500,workday:target.wd5.myworkdayjobs.com/targetcareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+514,VF,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+515,Nucor,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+516,NVR,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+517,J.M. Smucker,fortune500,workday:jm.wd103.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+518,MetLife,fortune500,lever:metlife,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+519,Otis Worldwide,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+520,Williams,fortune500,workday:williams.wd5.myworkdayjobs.com/External; workday:williams.wd5.myworkdayjobs.com/ContingentWorkerConvCareers; workday:williams.wd5.myworkdayjobs.com/PowerExternal,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+521,Hess,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+522,EchoStar,fortune500,workday:echostar.wd501.myworkdayjobs.com/echostar,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+523,Broadcom,fortune500,workday:broadcom.wd1.myworkdayjobs.com/External_Career,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+524,HCA Healthcare,fortune500,workday:hcahealthcare.wd3.myworkdayjobs.com/HCACareers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+525,Ingram Micro Holding,fortune500,workday:ingrammicro.wd5.myworkdayjobs.com/IngramMicro,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+526,Molina Healthcare,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+527,BorgWarner,fortune500,workday:borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+528,Viatris,fortune500,workday:viatris.wd5.myworkdayjobs.com/External,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+529,Alcoa,fortune500,workday:alcoa.wd5.myworkdayjobs.com/Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+530,Waste Management,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+531,Marsh & McLennan,fortune500,greenhouse:mm:Media Molecule,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+532,Xylem,fortune500,workday:xylem.wd5.myworkdayjobs.com/XYLEM-Careers,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+533,Delek US Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+534,LKQ,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+535,Perplexity AI,venture-backed-software,ashby:perplexity,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+536,UnitedHealth Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+537,Prologis,fortune500,workday:prologis.wd5.myworkdayjobs.com/Prologis_External_Careers; workday:prologis.wd5.myworkdayjobs.com/Broadbean_CareerSite,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+538,Jefferies Financial Group,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+539,Marriott International,fortune500,smartrecruiters:marriottinc:Marriott Inc,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+540,Synchrony,fortune500,smartrecruiters:synchronygroup:Synchrony Group,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+541,Jones Financial (Edward Jones),fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+542,Molson Coors Beverage,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+543,Community Health Systems,fortune500,greenhouse:community:Rome Community Partners,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+544,Celanese,fortune500,smartrecruiters:celanese:celanese,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+545,Equitable Holdings,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+546,Dominion Energy,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+547,Dell Technologies,fortune500,no ATS or career-site API resolved,,skipped for all ten occupations: no Greenhouse/Lever/Ashby/Workday/SmartRecruiters endpoint found under name variants
+548,Aramark,fortune500,smartrecruiters:aramark:Aramark,,resolved; no live posting matching any of the ten titles (or board identity not verified)
+549,Crown Holdings,fortune500,workday:crownholdings.wd501.myworkdayjobs.com/CrownHoldings,,resolved; no live posting matching any of the ten titles (or board identity not verified)
