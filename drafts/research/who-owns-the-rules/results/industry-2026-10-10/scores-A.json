@@ -1,0 +1,342 @@
+{
+  "hospital-clinical-care": {
+    "D1": {
+      "score": 1,
+      "reason": "Fact sheet D1: most automation is alerts clinicians override (55-98%); blanket auto-verification bypassing pharmacists not acceptable to Joint Commission."
+    },
+    "D2": {
+      "score": 2,
+      "reason": "D2: EHR unit error generated a 39x overdose order (UCSF 2013), but humans dismissed alert and gave it; money/contract example not found."
+    },
+    "D3": {
+      "score": 3,
+      "reason": "D3: smart-pump hard limits block infusions; CPOE encodes medication checks as decision-support rules tested by Leapfrog's simulated orders."
+    },
+    "D4": {
+      "score": 3,
+      "reason": "D4: ONC HTI-1 DSI criterion (14 source attributes, annual attestation), FDA CDS guidance, Joint Commission MM.05.01.01; Leapfrog is a purchaser coalition."
+    },
+    "D5": {
+      "score": 4,
+      "reason": "D5: CDS changes go through P&T or CDS committees of pharmacists, physicians, nurses, informatics; 54-hospital system uses two separate workgroup votes."
+    },
+    "D6": {
+      "score": 0,
+      "reason": "D6: Joint Commission requires pharmacist review before dispensing; physicians order and credentialing verifies licences; licensed professionals own decisions."
+    },
+    "D7": {
+      "score": 3,
+      "reason": "D7: PSQIA near-miss reporting to PSOs, ISMP MERP, override studies, monitoring of urgent-use exceptions; dispensing-cabinet override data not found."
+    },
+    "D8": {
+      "score": 3,
+      "reason": "D8: CPOE pioneered at El Camino from 1971, but hospital CPOE adoption grew 167% only between 2008 and 2012 (ONC)."
+    }
+  },
+  "pharmaceutical-manufacturing": {
+    "D1": {
+      "score": 2,
+      "reason": "D1: MES rules check every step under review by exception, but a human/QP makes release decision; control-action speed not found."
+    },
+    "D2": {
+      "score": 1,
+      "reason": "D2: no line-software recall or money/contract case found; only compounding-device software faults and batch discrepancy citations."
+    },
+    "D3": {
+      "score": 4,
+      "reason": "D3: 21 CFR 11.10 requires enforced step sequencing, authority and device checks; MES hard-gates execution with lots quarantined by default."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: Part 11, EU Annex 11 (draft adds alarms, audit trails, AI Annex 22), FDA CSA guidance, ICH Q12 Established Conditions."
+    },
+    "D5": {
+      "score": 4,
+      "reason": "D5: GMP change control boards include QA, regulatory affairs, R&D and manufacturing; ICH Q12 protocols involve the regulator."
+    },
+    "D6": {
+      "score": 1,
+      "reason": "D6: EU Directive 2001/83 requires a Qualified Person to certify each batch; US licensed-individual release not found (quality unit)."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: 21 CFR 211.192 deviation investigations, CAPA under ICH Q10, Part 11 audit trails, exception reports flag deviations for QA."
+    },
+    "D8": {
+      "score": 3,
+      "reason": "D8: ISA-88 batch control from 1995 spread to pharma, Part 11 from 1997; DCS first deployment date not found."
+    }
+  },
+  "commercial-aviation": {
+    "D1": {
+      "score": 3,
+      "reason": "D1: automation flies about 90% of the time; envelope protections, MCAS and TCAS act without approval; OCC software is decision support."
+    },
+    "D2": {
+      "score": 4,
+      "reason": "D2: MCAS activations from one faulty sensor linked to two crashes killing 346; Southwest scheduling meltdown cost over $600M."
+    },
+    "D3": {
+      "score": 4,
+      "reason": "D3: Airbus Normal Law encodes flight-envelope protections in flight-control computers; dispatch release must comply with operations specifications."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: DO-178C design assurance levels via FAA AC 20-115, 14 CFR Part 5 SMS, ICAO TCAS mandate govern system behaviour and change."
+    },
+    "D5": {
+      "score": 3,
+      "reason": "D5: SMS management of change spans operations, maintenance, ANS, airports; who signs off automation logic changes not found."
+    },
+    "D6": {
+      "score": 0,
+      "reason": "D6: pilot in command has full authority; certificated aircraft dispatchers share dispatch responsibility under 14 CFR 121.533 and Part 65."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: ASRS, FOQA flight-data analysis, ASAP event review committees and FAA ASIAS record and review deviations and incidents."
+    },
+    "D8": {
+      "score": 4,
+      "reason": "D8: autopilot since 1912-1914, digital fly-by-wire A320 in service 1988, TCAS mandated globally from 2003."
+    }
+  },
+  "nuclear-power": {
+    "D1": {
+      "score": 2,
+      "reason": "D1: reactor trip and safety features actuate automatically within 30-50 ms; fact sheet covers only protection, much of it analogue."
+    },
+    "D2": {
+      "score": 1,
+      "reason": "D2: TMI core damage arose from stuck valve plus operator actions (six failures), not one automated action; money/contract not found."
+    },
+    "D3": {
+      "score": 4,
+      "reason": "D3: technical specifications fix trip setpoints and operable channels; IEEE 279/603 required; diverse digital and analogue protection at Sizewell B."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: NRC 10 CFR 50.55a(h), NUREG-0800 review, 50.59 for digital modifications; Oconee digital system needed a licence amendment."
+    },
+    "D5": {
+      "score": 3,
+      "reason": "D5: Plant Operations Review Committee reviews safety-related changes; qualified reviewer plus superintendent screen; NRC amendment for protection changes."
+    },
+    "D6": {
+      "score": 0,
+      "reason": "D6: 10 CFR Part 55 requires NRC-licensed reactor operators and senior reactor operators to manipulate controls."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: Appendix B Criterion XVI corrective action, 50.73 Licensee Event Reports, INPO and WANO operating-experience sharing."
+    },
+    "D8": {
+      "score": 3,
+      "reason": "D8: analogue protection systems since 1970s (IEEE 279-1971); digital safety systems limited (Sizewell B 1995, Oconee 2011-13)."
+    }
+  },
+  "electricity-grid": {
+    "D1": {
+      "score": 4,
+      "reason": "D1: AGC regulation signals every 2 seconds, 5-minute dispatch, and protective relays tripped lines automatically in the 2003 blackout."
+    },
+    "D2": {
+      "score": 3,
+      "reason": "D2: automatic relay operations cascaded to 50 million people; UFLS disconnects customers; 5-minute settlement triggers shortage pricing."
+    },
+    "D3": {
+      "score": 4,
+      "reason": "D3: ACE computed and regulated locally; UFLS set points, RAS settings and CIP-010 configuration baselines encoded in protection systems."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: Order 693 made NERC standards mandatory, including PRC-004, PRC-006, PRC-012 and CIP-010 change management."
+    },
+    "D5": {
+      "score": 2,
+      "reason": "D5: standards balloted by ten stakeholder segments, but within a utility CIP-010 accepts one approver's authorisation; internal functions thin."
+    },
+    "D6": {
+      "score": 1,
+      "reason": "D6: PER-003 requires NERC-certified system operators at real-time control positions; industry certification, no government licence found."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: PRC-004 misoperation review reported quarterly to NERC MIDAS; Event Analysis Program categorises events and publishes lessons learned."
+    },
+    "D8": {
+      "score": 4,
+      "reason": "D8: tie-line bias control preferred for 75 years; Area Control Error from early 1950s."
+    }
+  },
+  "algorithmic-trading": {
+    "D1": {
+      "score": 4,
+      "reason": "D1: HFT 55-73% of US equity volume; Knight's router sent 4 million orders in 45 minutes; nanosecond risk checks."
+    },
+    "D2": {
+      "score": 4,
+      "reason": "D2: Knight's faulty code caused ~$440M loss; an automated 75,000-contract sell algorithm fed the 2010 flash crash."
+    },
+    "D3": {
+      "score": 4,
+      "reason": "D3: Rule 15c3-5 mandates automated pre-trade controls; CME credit limits and kill switch; LULD price bands pause trading."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: 15c3-5, Regulation SCI, EU RTS 6 (annual validation, stress tests, kill functionality) and FINRA 15-09 regulate system behaviour."
+    },
+    "D5": {
+      "score": 3,
+      "reason": "D5: RTS 6 validation involves risk management, internal audit and senior management; FINRA 15-09 includes compliance; change committee not found."
+    },
+    "D6": {
+      "score": 2,
+      "reason": "D6: FINRA requires Series 57 registration for algorithm designers and modifiers; registered approval of individual orders not found."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: Consolidated Audit Trail records every order event; Reg SCI event reporting; AFM reviewed RTS 6 self-assessments."
+    },
+    "D8": {
+      "score": 4,
+      "reason": "D8: Instinet electronic trading from 1969; HFT estimated at 60-73% of US equity volume by 2009-2010."
+    }
+  },
+  "retail-banking": {
+    "D1": {
+      "score": 3,
+      "reason": "D1: card authorisations under 300 ms, VisaNet 65,000 TPS, instant payments, automated mortgage underwriting (Desktop Underwriter)."
+    },
+    "D2": {
+      "score": 3,
+      "reason": "D2: algorithmic adverse credit actions need ECOA reasons; SCHUFA score decisive for contracts; Citi $81T error was manual entry."
+    },
+    "D3": {
+      "score": 3,
+      "reason": "D3: NY Part 504 requires detection scenarios with thresholds and testing; Citi preventive controls would have blocked funds leaving."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: SR 11-7 model risk guidance, NYDFS Part 504, EU AI Act high-risk credit scoring, CFPB Circular 2022-03."
+    },
+    "D5": {
+      "score": 3,
+      "reason": "D5: SR 11-7 separates development, independent validation and board governance; Part 504 certification; specific approving functions not found."
+    },
+    "D6": {
+      "score": 3,
+      "reason": "D6: SAFE Act licenses mortgage originators but exempts employed underwriters; no licence found for credit, payment or AML decision owners."
+    },
+    "D7": {
+      "score": 2,
+      "reason": "D7: Citi counted ten $1B+ near misses and reported one to regulators; Part 504 records kept; credit override recording not found."
+    },
+    "D8": {
+      "score": 4,
+      "reason": "D8: automated mortgage underwriting from late 1980s, FICO-based Freddie Mac and Fannie Mae systems by mid-late 1990s."
+    }
+  },
+  "insurance": {
+    "D1": {
+      "score": 2,
+      "reason": "D1: 12% of life applications fully automated, 47% accelerated; 81% group EOI systems auto-approve; claims auto-adjudication 48-84% (vendor figures)."
+    },
+    "D2": {
+      "score": 4,
+      "reason": "D2: Lemonade's AI Jim approves claims and sends payment instructions in two seconds; PXDX and nH Predict denials alleged."
+    },
+    "D3": {
+      "score": 3,
+      "reason": "D3: rates and rules filed in rate manuals via SERFF; underwriting engines expose rules with overrides; claims bot routes or pays."
+    },
+    "D4": {
+      "score": 3,
+      "reason": "D4: NAIC AI Model Bulletin (guidance, 24 states), Colorado SB21-169 and Regulation 10-1-1, California SB 1120, EU AI Act."
+    },
+    "D5": {
+      "score": 4,
+      "reason": "D5: NAIC bulletin expects governance spanning actuarial, data science, underwriting, claims, compliance, legal; rate changes filed with regulators."
+    },
+    "D6": {
+      "score": 2,
+      "reason": "D6: SB 1120 reserves medical-necessity denials to licensed clinicians; adjusters licensed in many states; ASOP 56 for actuaries; underwriting unlicensed."
+    },
+    "D7": {
+      "score": 2,
+      "reason": "D7: market-conduct exams sample claim files; appeal reversals used as error evidence; override recording programme not found."
+    },
+    "D8": {
+      "score": 2,
+      "reason": "D8: rules engines from 1990s failed to take hold; accelerated underwriting dated early 2000s or 2012; pandemic sped adoption."
+    }
+  },
+  "automotive-automated-driving": {
+    "D1": {
+      "score": 3,
+      "reason": "D1: Waymo ~500,000 paid driverless rides a week; Level 3 Drive Pilot to 130 km/h; Level 2 still needs a driver."
+    },
+    "D2": {
+      "score": 4,
+      "reason": "D2: Cruise robotaxi dragged a pedestrian 20 feet; Autopilot crashes (at least 17 deaths) led to 2-million-vehicle recall."
+    },
+    "D3": {
+      "score": 3,
+      "reason": "D3: R157 encodes minimal risk manoeuvres and lane-change rules; Tesla OTA remedy limited Autosteer; RXSWIN identifies approved software."
+    },
+    "D4": {
+      "score": 4,
+      "reason": "D4: UN R155/R156 cybersecurity and software-update management, EU GSR mandates, German Level 4 law, UK self-driving test."
+    },
+    "D5": {
+      "score": 1,
+      "reason": "D5: internal functions approving driving-policy changes not found; only manufacturer SUMS, authorised entity and regulator recall/consent orders."
+    },
+    "D6": {
+      "score": 3,
+      "reason": "D6: UK user-in-charge immune while feature engaged; German technical supervisor required; Level 2/3 driver licence role not found."
+    },
+    "D7": {
+      "score": 4,
+      "reason": "D7: NHTSA Standing General Order crash reports published; California collision and disengagement reports; R157 data collection."
+    },
+    "D8": {
+      "score": 2,
+      "reason": "D8: adaptive cruise from 1995-2000 but premium-only for a decade; Level 3 from 2022, paid robotaxis at scale 2025."
+    }
+  },
+  "ecommerce-logistics": {
+    "D1": {
+      "score": 4,
+      "reason": "D1: Amazon changes prices 2.5 million times a day; robots assist 75% of orders; system auto-generates productivity terminations."
+    },
+    "D2": {
+      "score": 3,
+      "reason": "D2: repricing bots set a book at $23.7M; Nessie algorithm allegedly earned over $1B; Topkins pricing-code price-fixing conviction."
+    },
+    "D3": {
+      "score": 3,
+      "reason": "D3: SP-API enforces per-SKU min/max price guardrails before automated pricing; ISO 3691-4 safety functions for mobile robots."
+    },
+    "D4": {
+      "score": 2,
+      "reason": "D4: EU Machinery Regulation (ML safety components) applies only from 2027; AB 701 quota disclosure; antitrust law covers outcomes."
+    },
+    "D5": {
+      "score": 1,
+      "reason": "D5: no source found on which functions approve pricing, quota or robot-behaviour changes; seller controls price floors alone."
+    },
+    "D6": {
+      "score": 4,
+      "reason": "D6: no licensed profession owns pricing or robot decisions; forklift certification is an employer record, not a licence."
+    },
+    "D7": {
+      "score": 1,
+      "reason": "D7: only OSHA injury records (data disputed); forklift near misses trigger training; override recording for pricing/robots not found."
+    },
+    "D8": {
+      "score": 2,
+      "reason": "D8: Kiva first deployed 2006, Amazon bought it 2012; Nessie from 2010; earlier warehouse automation history not found."
+    }
+  }
+}
