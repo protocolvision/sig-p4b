@@ -8,6 +8,8 @@ page was opened). They list what to fetch later; they contain no transcripts.
 | `media-current.csv` | 90 podcast episodes and YouTube videos, 2024–2026, ten functions | 34 | Stratum S7: people who run functions that use agents describing their work |
 | `media-historical.csv` | 52 talks, podcasts and hearings, 1996–2024, eight roles | 15 | Calibration test (loop-design-v2.md, section 8) |
 
+**Cleaned 10 October 2026** (rerun, `cleaning-log.csv`): current frame 87 items (3 dropped as pre-2024), 74 confirmed, 24 vendor or consultant; historical frame 52 items, 39 confirmed. Only 2 confirmed COO items.
+
 ## How the frames were built
 
 Searches named a speaker's role and function, never a topic: no "rules", "policy", "governance",
