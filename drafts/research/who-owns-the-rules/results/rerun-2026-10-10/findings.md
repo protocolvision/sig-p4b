@@ -103,7 +103,7 @@ Neither source can show rule changes that are agreed informally. This finding de
 - **Two qualifications:**
   - 8 of the 12 trading change owners come from supervisory guidance or expectations, not binding rules: 5 from FCA reviews and 3 from PRA SS5/18.
   - AI Act Art 17(1)(m) was coded "no" while a similar PRA provision was coded "yes". Under the PRA reading, AI law would be 1 of 4.
-- **EU AI Act Art 26(2)** (C9b1da45a): "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority". The Omnibus (Reg. 2026/1744) moves Annex III high-risk obligations to 2 December 2027, and others to 2 August 2028.
+- **EU AI Act Art 26(2)** (C9b1da45a): "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority". The Omnibus (Reg. 2026/1744) moves Annex III high-risk obligations to 2 December 2027, and Annex I systems to 2 August 2028.
 - **Colorado SB26-189** (CO-SB26-189-act), effective 1 January 2027: "individual designated by the deployer who has authority to approve, modify, or override a consequential decision".
 - **PRA SS5/18** (Cef3dde3f, guidance): "each algorithm to have assigned owners, who are accountable for the algorithm's use and performance".
 
@@ -123,7 +123,7 @@ The blind findings' "practice leads law" timing claim is dropped. It compared th
   - frame employers: 0%, 0%, 0.21%, 3.8%, 18.0% (77 of 428).
 - **Content of 2,216 passages** (consensus codes):
   - product 1,342, own use 369, controls 109;
-  - vendors supply 64% of passages.
+  - vendors supply 64% of passages (10-K and 10-Q; 60% in 10-Ks alone).
 - **Non-vendor filers mention their own use about as often as products.** Counted by company, adopters have own use 126 and product 93 (`corpus-b/passage-coding.md`, Haiku codes by filer type; own-use precision 0.76).
 - **No 10-K in Item 9A.** None of 539 10-Ks with a detectable Item 9A uses an agent phrase in that item.
 
@@ -131,17 +131,17 @@ The blind findings' "practice leads law" timing claim is dropped. It compared th
 
 **What changed since round one: new.**
 
-### Finding 6. Open agent tooling (2023) comes before agent-scoped certifications (2025), vendor agent roles (2025) and binding deployer rules (2027). Vendors split business accountability from technical control and relabel their agent products within about three years.
+### Finding 6. Governance and agent-scoped certifications (2024–25) and vendor agent roles (2025) come before binding deployer rules (2027). Vendors split business accountability from technical control and relabel their agent products within about three years.
 
 **Evidence** (`instruments/I5.md`, `I5c.md`, `I4.md`)
 - **Dated order:**
-  - open agent tooling, third-earliest: 2023-08-15;
-  - AI-governance certification: 2024-03-05 (IAPP AIGP);
+  - open agent tooling, third-earliest: 2023-08-15 (does not resolve to a stored source; the counted repos are monitoring tools, and two lack an OSI licence);
+  - AI-governance certification: 2024 (IAPP AIGP; the stored source gives the year only);
   - first agent-scoped certification: 2025-03-03 (Agentforce Specialist);
-  - vendor agent roles: ServiceNow, 2025-03-12; Microsoft Entra, 2025-11-05;
+  - vendor agent roles: Microsoft Entra, November 2025 (listed as new at Ignite 2025);
   - binding deployer rule: 2027-01-01 (Colorado).
-- **Vendors split business accountability from technical control.** "Sponsors provide business accountability for agents, making lifecycle decisions without technical administrative access." (ms-entra-owners, 2025-11-05).
-- **Vendors relabel.** Einstein Copilot became Agentforce on 2024-09-12, and Agentspace became Gemini Enterprise on 2025-10-09. Both feature coders code N24 (vendor relabelling) yes (`pattern-match/result.md`).
+- **Vendors split business accountability from technical control.** "Sponsors provide business accountability for agents, making lifecycle decisions without technical administrative access." (ms-entra-owners; new at Microsoft Ignite, November 2025).
+- **Vendors relabel.** Einstein Copilot became Agentforce in September 2024, and Agentspace became Gemini Enterprise on 2025-10-09. Both feature coders code N24 (vendor relabelling) yes (`pattern-match/result.md`).
 
 **Confidence: low to medium.**
 - The tooling search departed from A.2: it searched by function, did not check licences and kept no search log. This is now recorded in deviation 26.
@@ -156,13 +156,13 @@ The blind findings' "practice leads law" timing claim is dropped. It compared th
 **Evidence**
 - **Speakers (single-coded).** 5 of 34 describe a central body between functions, and 5 describe a team within one function (`instruments/I6.md`). None of the 5 central-body speakers comes from the untimestamped pages. Examples:
   - "I'm on the AI Governance Council and we've just had our second meeting." (M010, 2025-07-22);
-  - "we have a strat and gov team that sit in the middle" (M024, 2025-06-30);
-  - "we decided to create like an AI guild" (M065, 2025-10-28).
+  - "we have a strat and gov team that sit in the middle" (M024, 2025-06-30; a general IT strategy-and-governance team, not an AI body);
+  - "we decided to create like an AI guild" (M065, 2025-10-28; an engineering best-practice guild).
 - **Spans.** About 8 of 862 coded spans mention such a body, about 1%. All of them are in timestamped speech, so the figure is at most 8 of 771 (`red-team.md`, problem 3; checked for this file).
-- **Filings.** The "body" code is yes in 9 of 2,216 passages, from at most 9 of 465 filers (1.9%).
+- **Filings.** The "body" code is yes in 9 of 2,216 passages, from 5 of 465 filers (1.1%; one vendor, Rubrik, supplies 5 of the 9).
   - Filings undercount by construction: passages were retrieved only where an agent phrase appears.
   - The code passed its kappa gate only after a full recode (deviation 11), and its accuracy check had 3–4 positives.
-- **Posting.** IQVIA lists a "governance committee seat" among an AI security architect's duties (`instruments/I3.md` #3).
+- **Posting.** IQVIA asks its AI security architect to "Represent Security Architecture in IQVIA's existing AI governance committees and taskforces", among an AI security architect's duties (`instruments/I3.md` #3).
 
 **Confidence: low.**
 
@@ -179,9 +179,9 @@ The DevOps-leaning values rest on speech, coded single per speaker:
 - N22: 5 speakers describe coordinating existing functions, against 3 who describe a new capability.
 
 The postings point the other way (`instruments/I3.md`):
-- 27 of 30 of today's AI-titled postings ask for AI-specific experience;
+- 27 of 30 of today's AI-titled postings ask for or prefer AI-specific experience (23 require it);
 - 13 of 21 name AI or ML teams;
-- period DevOps postings asked for both operations experience (41 of 60) and programming experience (57 of 60).
+- period operations and systems-engineering postings (2011–16; 26 of 60 with a DevOps-style title) asked for both operations experience (41 of 60) and programming experience (57 of 60).
 
 On postings, today's AI roles look more like a scarce new capability than a merger of two functions. Finding 2's ratio (0.86, against D7's 3 to 1) points the same way, on a measure that was itself chosen after the fact.
 
@@ -195,12 +195,12 @@ These are signals from different sources and units. They are not a ranked typolo
    - Cluster 111's stability rests on one posting (Thrivent REQ-47040). Without it, the cluster fails both found criteria.
    - The work may be an existing security duty extended to AI rather than a new figure. It is not shown to be settled.
 2. **Embedded agent operator.** Among the few timestamped speakers who describe staffing, 6 of 10 gave agent running to existing staff inside a function (M072, M021, M073). The posting-side counterpart is Finding 2's existing-job duties, which are mostly technical occupations. The speaker coding has one coder.
-3. **AI or agent builder.** AI, ML and automation titles appear at 81% of employers (about 2.5–2.7% of postings) and ask for AI-specific experience (27 of 30). Agent-specific builder titles exist: 155 "agentic" titles, now regrouped (deviation 26). They form no stable task bundle (cluster 112 did not replicate). No time series exists, so growth is not shown.
-4. **Designated overseer (law-defined, from 2027–28).** Binding law will require deployers of high-risk or consequential-decision AI to name trained people with authority to oversee, override or review outputs: EU AI Act Art 26(2) and Colorado SB26-189. These laws do not make those people owners of the rules. No posting for this figure was observed.
+3. **AI or agent builder.** AI, ML and automation titles appear at 81% of employers (about 2.5–2.7% of postings) and ask for or prefer AI-specific experience (27 of 30; 23 require it). Agent-specific builder titles exist: 155 "agentic" titles, now regrouped (deviation 26). They form no stable task bundle (cluster 112 did not replicate). No time series exists, so growth is not shown.
+4. **Designated overseer (law-defined, from 2027–28).** Binding law will require deployers of high-risk AI to assign trained people with authority to oversee it (EU AI Act Art 26(2)), and Colorado deployers to offer, on request after an adverse decision and where commercially reasonable, review by a designated individual with authority to override it (SB26-189). These laws do not make those people owners of the rules. No posting for this figure was observed.
 
 **Did not stand as roles:**
 - **Governance council.** It is an organisational form held part-time by existing leaders. 5 of 34 speakers describe one, but none is shown to decide agent rules and none is agent-specific. It is not a figure anyone is hired as.
-- **Business sponsor.** It is a permission label in one vendor's identity product (Microsoft Entra, 2025-11-05). It shows how vendors scaffold the split between business and technical control. It is not a role observed in firms. ServiceNow's AI Steward is an admin role, not a sponsor.
+- **Business sponsor.** It is a permission label in one vendor's identity product (Microsoft Entra, November 2025). It shows how vendors scaffold the split between business and technical control. It is not a role observed in firms. ServiceNow's AI Steward is an admin role, not a sponsor.
 
 ---
 
@@ -223,7 +223,7 @@ These are signals from different sources and units. They are not a ranked typolo
 | H-number | Bundle persists with no owned number | **Untestable** | "Lasts" needs time. No speaker names an error rate or containment figure |
 | H-agreement | No such document found in S6 | **Not tested as specified** (S6 was not searched). No instance found in the texts read | Change owners appear only in trading texts and lab policies (I4). Vendor "owner" roles are product permissions (I5) |
 | H-DevOps | A.4 two-stage test | **Inconclusive** (pattern verdict unreliable by rule; power about 5%). Head-to-head undecided | See "The DevOps question" |
-| Phase change (F1–F3) | Under 5% of agent-mentioning filers **and** under 5% of coded speech spans | **Refutation condition met for F2, the only feature measurable on both sources.** F1 and F3 are untestable. The claim as a whole is not fully tested | F2: about 1% of spans, at most 1.9% of filers. F1 and F3 filing codes failed kappa (0.52, 0.58), and speech for them was not counted by span. Filings undercount bodies by construction |
+| Phase change (F1–F3) | Under 5% of agent-mentioning filers **and** under 5% of coded speech spans | **Refutation condition met for F2, the only feature measurable on both sources.** F1 and F3 are untestable. The claim as a whole is not fully tested | F2: about 1% of spans, 1.1% of filers (5 of 465). F1 and F3 filing codes failed kappa (0.52, 0.58), and speech for them was not counted by span. Filings undercount bodies by construction |
 
 ---
 
@@ -287,3 +287,7 @@ Forecasts 1 and 4 test absorption against a new occupation. Forecasts 2 and 3 te
 ## Addendum: round one verification after the corpus-wide recheck (10 October 2026)
 
 Section 4's "20% (upper bound, recheck pending)" is superseded. After a corpus-wide recheck and an Opus review of it (`verification-random150.md`, `review/verification-recheck-review.md`), the random 150 split two ways: 5 of 131 checkable claims (3.8%, Wilson 1.6–8.6%) were contradicted by an acquired source, and 38 (29.0%, 21.9–37.3%) had no supporting passage in the corpus, 16 of them because the cited page was never acquired. "No passage" is not evidence that a claim is false. The industry slice is the weak part: 20 of 55 checkable claims (36.4%) were contradicted by a source, mostly bindingness and robustness. The loop analysis is unchanged (122 of 127), and the loop red team stands at 52 confirmed, 9 corrected and 9 not checkable.
+
+## Addendum: citation audit (phase 5)
+
+`review/citation-audit.md` checked all 33 corpus citations in this file: 26 pass. The corrections above were applied in place (vendor dates reduced to what stored sources support; filer count for bodies 5 of 465; AI-experience counts; Colorado's review duty stated as on-request; IQVIA and M024 relabelled; the 2023 open-tooling date marked as not resolving to a stored source, so the dated order holds from 2024 on at year level).
