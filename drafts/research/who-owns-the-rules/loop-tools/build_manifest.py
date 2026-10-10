@@ -49,7 +49,13 @@ def main():
     for p in sorted(ROOT.rglob("*")):
         if p.is_dir() or SKIP_DIRS & set(p.relative_to(ROOT).parts) or p.suffix not in (".md", ".csv", ".jsonl", ".json"):
             continue
-        for u in PAT.findall(p.read_text(errors="ignore")):
+        urls = PAT.findall(p.read_text(errors="ignore"))
+        if p.suffix == ".csv":  # read url columns whole, so URLs with spaces survive
+            with open(p, newline="") as f:
+                rd = csv.DictReader(f)
+                if rd.fieldnames and "url" in rd.fieldnames:
+                    urls = [r["url"].strip().replace(" ", "%20") for r in rd if (r.get("url") or "").startswith("http")]
+        for u in urls:
             u = u.rstrip(".;:")
             if u in rows:
                 rows[u]["cited_in"] += 1

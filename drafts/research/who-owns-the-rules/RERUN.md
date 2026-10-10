@@ -9,19 +9,22 @@ recommendation. Follow the phases in order; each ends with a commit.
 
 ## How to start
 
-On a computer with network and browser access, in this repository:
+From a terminal on a computer with network access:
 
 ```
-claude remote-control        # or open the folder in the Claude Desktop app
+cd sig-p4b && git pull
+bash drafts/research/who-owns-the-rules/loop-tools/check_setup.sh
+claude "$(cat drafts/research/who-owns-the-rules/rerun-prompt.md)"
 ```
 
-Then give the session this instruction:
+The check script lists anything missing (Python 3.9+, `yt-dlp`, `pdftotext`, the `claude` CLI, network
+reach; Whisper is optional, for podcasts with no transcript) and rebuilds the manifest. The prompt is in
+[`rerun-prompt.md`](rerun-prompt.md). The run takes many hours; phase 1 can be left running with the
+acquirer alone (`python3 loop-tools/acquire.py --wayback` from `drafts/research/who-owns-the-rules/`)
+before starting Claude Code.
 
-> Read `drafts/research/who-owns-the-rules/RERUN.md` and carry it out phase by phase. Commit and push at
-> the end of each phase. Use a browser for any source the scripts cannot fetch. Do not change the
-> pre-registered designs; record any deviation in `results/rerun-<date>/deviations.md`.
-
-Tools needed: Python 3.9+, `yt-dlp`, `pdftotext` (poppler); optionally Whisper for podcast audio.
+If the terminal session has no Artifact tool, phase 4 still updates `report/who-owns-the-rules.html` in the
+repository; publish it to the existing link afterwards from any Claude session that has the tool.
 
 ## Phase 0. Check the environment (10 minutes)
 

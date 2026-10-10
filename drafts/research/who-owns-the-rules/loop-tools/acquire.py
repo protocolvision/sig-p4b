@@ -92,7 +92,8 @@ def acquire(row, use_wayback):
                 (TEXT / f"{sid}.txt").write_text(f"SOURCE {final}\nFETCHED {today}\nKIND {ctype}\n\n{text}")
                 rec.update(status="ok")
             else:
-                rec.update(status="needs-browser", note="little text extracted; likely JavaScript or login")
+                rec.update(status="needs-browser", note="no text in PDF; scanned or protected" if ext == ".pdf"
+                           else "little text extracted; likely JavaScript or login")
             rec.update(bytes=len(raw), sha1=hashlib.sha1(raw).hexdigest()[:12], final_url=final)
     except urllib.error.HTTPError as e:
         rec.update(status="needs-browser" if e.code in (401, 403, 429) else "failed", note=f"HTTP {e.code}")
