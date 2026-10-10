@@ -18,3 +18,7 @@ drafts/research/who-owns-the-rules/roles/archive/
 # Research corpus: fetched files and extracted text (local only)
 drafts/research/who-owns-the-rules/corpus/raw/
 drafts/research/who-owns-the-rules/corpus/text/
+
+# Corpus B: crawled postings and filings text (local only); indexes are committed under results/
+drafts/research/who-owns-the-rules/corpus/b-raw/
+drafts/research/who-owns-the-rules/loop-tools/.venv/

@@ -9,6 +9,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 PAT = re.compile(r"https?://[^\s)\]\"'<>,|`]+")
 SKIP_DIRS = {"archive", "transcripts", "raw", "text", "corpus", "report", "loop-tools", "loop-prompts"}
+# results/rerun-*/ holds the rerun's own outputs (Corpus B indexes, signatures); they are not round-one citations
 
 CATEGORY = [
     ("results/loop-2026-10-10/ledger", "activity-evidence"),
@@ -47,7 +48,8 @@ def kind(url):
 def main():
     rows = {}
     for p in sorted(ROOT.rglob("*")):
-        if p.is_dir() or SKIP_DIRS & set(p.relative_to(ROOT).parts) or p.suffix not in (".md", ".csv", ".jsonl", ".json"):
+        parts = p.relative_to(ROOT).parts
+        if p.is_dir() or SKIP_DIRS & set(parts) or any(x.startswith("rerun-") for x in parts) or p.suffix not in (".md", ".csv", ".jsonl", ".json"):
             continue
         urls = PAT.findall(p.read_text(errors="ignore"))
         if p.suffix == ".csv":  # read url columns whole, so URLs with spaces survive
