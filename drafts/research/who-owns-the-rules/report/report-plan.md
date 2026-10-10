@@ -52,7 +52,9 @@ From the phase 2 verification files:
   weakest part of round one: trading-rule bindingness overstated (guidance shown as rules); robustness
   mis-stated (trading in fact beats the grid in about 91% of weightings); the Citi role misread. The analogue
   conclusion (trading nearest) survives, with weaker 'binding rule' support.
-- Random 150 across all files: pending (error rate with interval).
+- Random 150 across all other files: error rate 20% of checkable claims (Wilson 13–29%), mostly details
+  absent from the cited page; 55 of 150 not checkable. Headline: the core analysis holds; peripheral
+  factual claims are about 80% reliable.
 - Then the comparison: replicated, revised, round one only.
 
 ## DevOps question (one honest paragraph, not a headline)
