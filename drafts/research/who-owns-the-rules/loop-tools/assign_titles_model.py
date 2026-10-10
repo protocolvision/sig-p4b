@@ -55,8 +55,17 @@ def candidates(m, norm, k=N_CAND, must=""):
     counts: score = (shared tokens, share of the posting's tokens, Jaccard); ties go to the code with the most
     dictionary titles, then the lowest code (as in map_occupations)."""
     toks = set(norm.split())
+    if not hasattr(m, "_inv"):                     # inverted index token -> dictionary titles, built once
+        m._inv = {}
+        for n in m.index:
+            for t in set(n.split()):
+                m._inv.setdefault(t, []).append(n)
+    pool = set()
+    for t in toks:
+        pool.update(m._inv.get(t, ()))
     best = {}
-    for n, levels in m.index.items():
+    for n in pool:
+        levels = m.index[n]
         nt = set(n.split())
         shared = len(toks & nt)
         if not shared:
