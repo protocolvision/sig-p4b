@@ -82,8 +82,12 @@ def main():
     ap.add_argument("--seed", type=int, default=20261010)
     ap.add_argument("--group", default=None, help="column to stratify by (default: function, or role for the historical frame)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--include-partial", action="store_true",
+                    help="also sample rows not yet confirmed (default: only confirmed=yes; see sources-v2/README.md)")
     a = ap.parse_args()
     rows = list(csv.DictReader(open(a.frame, newline="")))
+    if not a.include_partial:
+        rows = [r for r in rows if r.get("confirmed") == "yes"]
     group = a.group or ("function" if "function" in rows[0] else "role")
     picked = sample(rows, a.per_function, a.seed, group)
     OUT.mkdir(parents=True, exist_ok=True)
