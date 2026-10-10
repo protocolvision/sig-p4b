@@ -1,0 +1,551 @@
+employer,ats,board_id,postings,fetched,status,note
+Amazon,none,,0,2026-10-10,skipped,no board discovered
+UnitedHealth Group,other-ats,,0,2026-10-10,skipped,not crawlable
+Apple,none,,0,2026-10-10,skipped,no board discovered
+Berkshire Hathaway,none,,0,2026-10-10,skipped,no board discovered
+Alphabet,none,,0,2026-10-10,skipped,no board discovered
+Energy Transfer,none,,0,2026-10-10,skipped,no board discovered
+JPMorgan Chase,none,,0,2026-10-10,skipped,no board discovered
+Costco Wholesale,other-ats,,0,2026-10-10,skipped,not crawlable
+Microsoft,none,,0,2026-10-10,skipped,no board discovered
+Cardinal Health,none,,0,2026-10-10,skipped,no board discovered
+General Motors,none,,0,2026-10-10,skipped,no board discovered
+Ford Motor,none,,0,2026-10-10,skipped,no board discovered
+Meta Platforms,none,,0,2026-10-10,skipped,no board discovered
+Walgreens Boots Alliance,none,,0,2026-10-10,skipped,no board discovered
+Kroger,none,,0,2026-10-10,skipped,no board discovered
+Phillips 66,other-ats,,0,2026-10-10,skipped,not crawlable
+Marathon Petroleum,none,,0,2026-10-10,skipped,no board discovered
+Verizon Communications,none,,0,2026-10-10,skipped,no board discovered
+Goldman Sachs Group,none,,0,2026-10-10,skipped,no board discovered
+Wells Fargo,none,,0,2026-10-10,skipped,no board discovered
+Valero Energy,none,,0,2026-10-10,skipped,no board discovered
+State Farm Insurance,other-ats,,0,2026-10-10,skipped,not crawlable
+Morgan Stanley,other-ats,,0,2026-10-10,skipped,not crawlable
+Publix Super Markets,none,,0,2026-10-10,skipped,no board discovered
+Tesla,none,,0,2026-10-10,skipped,no board discovered
+Dell Technologies,none,,0,2026-10-10,skipped,no board discovered
+PepsiCo,other-ats,,0,2026-10-10,skipped,not crawlable
+Walt Disney,none,,0,2026-10-10,skipped,no board discovered
+UPS,none,,0,2026-10-10,skipped,no board discovered
+Johnson & Johnson,none,,0,2026-10-10,skipped,no board discovered
+FedEx,none,,0,2026-10-10,skipped,no board discovered
+Archer Daniels Midland,none,,0,2026-10-10,skipped,no board discovered
+Procter & Gamble,none,,0,2026-10-10,skipped,no board discovered
+American Airlines Group,other-ats,,0,2026-10-10,skipped,not crawlable
+Exxon Mobil Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+Albertsons,none,,0,2026-10-10,skipped,no board discovered
+Progressive,none,,0,2026-10-10,skipped,no board discovered
+American Express,other-ats,,0,2026-10-10,skipped,not crawlable
+Lockheed Martin,other-ats,,0,2026-10-10,skipped,not crawlable
+MetLife,none,,0,2026-10-10,skipped,no board discovered
+Broadcom,none,,0,2026-10-10,skipped,no board discovered
+Deere,other-ats,,0,2026-10-10,skipped,not crawlable
+New York Life Insurance,none,,0,2026-10-10,skipped,no board discovered
+Delta Air Lines,none,,0,2026-10-10,skipped,no board discovered
+StoneX Group,none,,0,2026-10-10,skipped,no board discovered
+TD Synnex,other-ats,,0,2026-10-10,skipped,not crawlable
+United Airlines Holdings,none,,0,2026-10-10,skipped,no board discovered
+Enterprise Products Partners,none,,0,2026-10-10,skipped,no board discovered
+Charter Communications,none,,0,2026-10-10,skipped,no board discovered
+Performance Food Group,none,,0,2026-10-10,skipped,no board discovered
+Lowe's,none,,0,2026-10-10,skipped,no board discovered
+Capital One Financial,none,,0,2026-10-10,skipped,no board discovered
+Oracle,none,,0,2026-10-10,skipped,no board discovered
+HCA Healthcare,none,,0,2026-10-10,skipped,no board discovered
+International Business Machines,none,,0,2026-10-10,skipped,no board discovered
+Liberty Mutual Insurance Group,none,,0,2026-10-10,skipped,no board discovered
+United Services Automobile Assn.,none,,0,2026-10-10,skipped,no board discovered
+Bristol-Myers Squibb,none,,0,2026-10-10,skipped,no board discovered
+General Dynamics,none,,0,2026-10-10,skipped,no board discovered
+Coca-Cola,none,,0,2026-10-10,skipped,no board discovered
+TIAA,none,,0,2026-10-10,skipped,no board discovered
+Eli Lilly,none,,0,2026-10-10,skipped,no board discovered
+Massachusetts Mutual Life Insurance,none,,0,2026-10-10,skipped,no board discovered
+Dow,none,,0,2026-10-10,skipped,no board discovered
+Thermo Fisher Scientific,none,,0,2026-10-10,skipped,no board discovered
+U.S. Bancorp,none,,0,2026-10-10,skipped,no board discovered
+Best Buy,none,,0,2026-10-10,skipped,no board discovered
+Northrop Grumman,other-ats,,0,2026-10-10,skipped,not crawlable
+Netflix,other-ats,,0,2026-10-10,skipped,not crawlable
+Dollar General,none,,0,2026-10-10,skipped,no board discovered
+Bank of New York (BNY),none,,0,2026-10-10,skipped,no board discovered
+CHS,none,,0,2026-10-10,skipped,no board discovered
+Molina Healthcare,none,,0,2026-10-10,skipped,no board discovered
+Honeywell Technologies,other-ats,,0,2026-10-10,skipped,not crawlable
+Philip Morris International,none,,0,2026-10-10,skipped,no board discovered
+US Foods Holding,other-ats,,0,2026-10-10,skipped,not crawlable
+D.R. Horton,other-ats,,0,2026-10-10,skipped,not crawlable
+Lithia Motors,none,,0,2026-10-10,skipped,no board discovered
+Mondelēz International,none,,0,2026-10-10,skipped,no board discovered
+Starbucks,other-ats,,0,2026-10-10,skipped,not crawlable
+CBRE Group,none,,0,2026-10-10,skipped,no board discovered
+Lennar Corporation,none,,0,2026-10-10,skipped,no board discovered
+HP,greenhouse,hp,7,2026-10-10,ok,
+PNC Financial Services Group,none,,0,2026-10-10,skipped,no board discovered
+Cummins,none,,0,2026-10-10,skipped,no board discovered
+Paccar,none,,0,2026-10-10,skipped,no board discovered
+Qualcomm,workday,qualcomm,0,2026-10-10,empty,
+Caterpillar,smartrecruiters,caterpillarinc,1,2026-10-10,ok,
+GuideWell Mutual Holding,none,,0,2026-10-10,skipped,no board discovered
+Uber Technologies,smartrecruiters,uber,1,2026-10-10,ok,
+United Natural Foods,none,,0,2026-10-10,skipped,no board discovered
+Dollar Tree,other-ats,,0,2026-10-10,skipped,not crawlable
+Nucor,other-ats,,0,2026-10-10,skipped,not crawlable
+Penske Automotive Group,none,,0,2026-10-10,skipped,no board discovered
+Coupang,greenhouse,coupang,671,2026-10-10,ok,
+Hewlett Packard Enterprise,none,,0,2026-10-10,skipped,no board discovered
+Duke Energy,none,,0,2026-10-10,skipped,no board discovered
+KKR,greenhouse,stage,128,2026-10-10,ok,
+PBF Energy,workday,pbfenergy,37,2026-10-10,ok,
+Paramount Skydance,none,,0,2026-10-10,skipped,no board discovered
+ConocoPhillips,workday,conocophillips,44,2026-10-10,ok,
+World Kinect,workday,wfscorp,37,2026-10-10,ok,
+HF Sinclair,other-ats,,0,2026-10-10,skipped,not crawlable
+Plains GP Holdings,workday,plains,56,2026-10-10,ok,
+Northwestern Mutual,smartrecruiters,northwesternmutual,69,2026-10-10,ok,
+NRG Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+Arrow Electronics,none,,0,2026-10-10,skipped,no board discovered
+Walmart,smartrecruiters,walmartinc,79,2026-10-10,ok,
+Southwest Airlines,none,,0,2026-10-10,skipped,no board discovered
+Fannie Mae,workday,fanniemae,63,2026-10-10,ok,
+Freddie Mac,workday,freddiemac,91,2026-10-10,ok,
+Occidental Petroleum,none,,0,2026-10-10,skipped,no board discovered
+Prudential Financial,workday,prudential,513,2026-10-10,ok,
+Southern,none,,0,2026-10-10,skipped,no board discovered
+Hartford Insurance Group,none,,0,2026-10-10,skipped,no board discovered
+Apollo Global Management,none,,0,2026-10-10,skipped,no board discovered
+Charles Schwab,none,,0,2026-10-10,skipped,no board discovered
+McDonald's,none,,0,2026-10-10,skipped,no board discovered
+Kraft Heinz,none,,0,2026-10-10,skipped,no board discovered
+Advanced Micro Devices,other-ats,,0,2026-10-10,skipped,not crawlable
+Nationwide,workday,nationwide,155,2026-10-10,ok,
+Freeport-McMoRan,smartrecruiters,freeport-mcmoran,10,2026-10-10,ok,
+McKesson,workday,mckesson,640,2026-10-10,ok,
+Marriott International,none,,0,2026-10-10,skipped,no board discovered
+Chevron,workday,chevron,147,2026-10-10,ok,
+NextEra Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+3M,none,,0,2026-10-10,skipped,no board discovered
+Marsh & McLennan,other-ats,,0,2026-10-10,skipped,not crawlable
+PG&E,other-ats,,0,2026-10-10,skipped,not crawlable
+Union Pacific,none,,0,2026-10-10,skipped,no board discovered
+Synchrony,none,,0,2026-10-10,skipped,no board discovered
+Block,greenhouse,block,231,2026-10-10,ok,
+Applied Materials,workday,applied,396,2026-10-10,ok,
+Comcast,workday,comcast,663,2026-10-10,ok,
+Booking Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+EOG Resources,none,,0,2026-10-10,skipped,no board discovered
+Quanta Services,other-ats,,0,2026-10-10,skipped,not crawlable
+Discover,none,,0,2026-10-10,skipped,no board discovered
+Constellation Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+Genuine Parts,none,,0,2026-10-10,skipped,no board discovered
+Elevance Health,workday,elevancehealth,253,2026-10-10,ok,
+Lear,other-ats,,0,2026-10-10,skipped,not crawlable
+PayPal Holdings,workday,paypal,308,2026-10-10,ok,
+Sherwin-Williams,none,,0,2026-10-10,skipped,no board discovered
+Exelon,none,,0,2026-10-10,skipped,no board discovered
+Macy's,none,,0,2026-10-10,skipped,no board discovered
+Halliburton,other-ats,,0,2026-10-10,skipped,not crawlable
+Warner Bros. Discovery,workday,warnerbros,272,2026-10-10,ok,
+Reinsurance Group of America,none,,0,2026-10-10,skipped,no board discovered
+Waste Management,none,,0,2026-10-10,skipped,no board discovered
+Citigroup,workday,citi,280,2026-10-10,ok,listing returned 280 of 2000
+WESCO International,none,,0,2026-10-10,skipped,no board discovered
+AbbVie,smartrecruiters,abbvie,1893,2026-10-10,ok,
+Salesforce,workday,salesforce,1535,2026-10-10,ok,
+American Family Insurance Group,none,,0,2026-10-10,skipped,no board discovered
+L3Harris Technologies,none,,0,2026-10-10,skipped,no board discovered
+Oneok,workday,oneok,86,2026-10-10,ok,
+Centene,workday,centene,380,2026-10-10,ok,
+Tenet Healthcare,none,,0,2026-10-10,skipped,no board discovered
+BJ's Wholesale Club,none,,0,2026-10-10,skipped,no board discovered
+AIG,workday,aig,464,2026-10-10,ok,2 detail fetches failed
+Altria Group,other-ats,,0,2026-10-10,skipped,not crawlable
+BlackRock,none,,0,2026-10-10,skipped,no board discovered
+Becton Dickinson,none,,0,2026-10-10,skipped,no board discovered
+Colgate-Palmolive,none,,0,2026-10-10,skipped,no board discovered
+Kimberly-Clark,smartrecruiters,kimberlyclark,1,2026-10-10,ok,
+Group 1 Automotive,none,,0,2026-10-10,skipped,no board discovered
+Parker-Hannifin,none,,0,2026-10-10,skipped,no board discovered
+Travelers,workday,travelers,389,2026-10-10,ok,
+Cognizant Technology Solutions,none,,0,2026-10-10,skipped,no board discovered
+American Electric Power,none,,0,2026-10-10,skipped,no board discovered
+GE HealthCare,other-ats,,0,2026-10-10,skipped,not crawlable
+Automatic Data Processing,none,,0,2026-10-10,skipped,no board discovered
+Live Nation Entertainment,workday,livenation,1366,2026-10-10,ok,
+Aflac,other-ats,,0,2026-10-10,skipped,not crawlable
+Ferguson Enterprises,workday,ferguson,429,2026-10-10,ok,
+Allstate,workday,allstate,436,2026-10-10,ok,
+Newmont,other-ats,,0,2026-10-10,skipped,not crawlable
+International Paper,none,,0,2026-10-10,skipped,no board discovered
+AutoZone,none,,0,2026-10-10,skipped,no board discovered
+Lincoln National,none,,0,2026-10-10,skipped,no board discovered
+Avnet,workday,avnet,331,2026-10-10,ok,
+Goodyear Tire & Rubber,workday,goodyear,31,2026-10-10,ok,
+Murphy USA,none,,0,2026-10-10,skipped,no board discovered
+ManpowerGroup,none,,0,2026-10-10,skipped,no board discovered
+C.H. Robinson Worldwide,none,,0,2026-10-10,skipped,no board discovered
+PPG Industries,smartrecruiters,ppgindustriesinc,10,2026-10-10,ok,
+Edison International,none,,0,2026-10-10,skipped,no board discovered
+Steel Dynamics,other-ats,,0,2026-10-10,skipped,not crawlable
+Loews,workday,loewscorp,2,2026-10-10,ok,
+Emerson Electric,none,,0,2026-10-10,skipped,no board discovered
+Gilead Sciences,workday,gilead,523,2026-10-10,ok,
+MGM Resorts International,smartrecruiters,mgmresortsinternational,5,2026-10-10,ok,
+Vistra,other-ats,,0,2026-10-10,skipped,not crawlable
+Aramark,smartrecruiters,aramark,289,2026-10-10,ok,
+W.W. Grainger,none,,0,2026-10-10,skipped,no board discovered
+Global Partners,none,,0,2026-10-10,skipped,no board discovered
+Jacobs Solutions,none,,0,2026-10-10,skipped,no board discovered
+CDW,workday,cdw,141,2026-10-10,ok,1 detail fetches failed
+Peter Kiewit Sons',none,,0,2026-10-10,skipped,no board discovered
+Boston Scientific,other-ats,,0,2026-10-10,skipped,not crawlable
+O'Reilly Automotive,none,,0,2026-10-10,skipped,no board discovered
+Asbury Automotive Group,smartrecruiters,asburyautomotivegroup,176,2026-10-10,ok,1 detail fetches failed
+Sysco,workday,sysco,2000,2026-10-10,ok,
+Whirlpool,none,,0,2026-10-10,skipped,no board discovered
+Guardian Life Ins. Co. of America,none,,0,2026-10-10,skipped,no board discovered
+Builders FirstSource,smartrecruiters,buildersfirstsource,4,2026-10-10,ok,
+GE Aerospace,workday,geaerospace,567,2026-10-10,ok,
+Targa Resources,none,,0,2026-10-10,skipped,no board discovered
+Fluor,other-ats,,0,2026-10-10,skipped,not crawlable
+Intuit,none,,0,2026-10-10,skipped,no board discovered
+AECOM,none,,0,2026-10-10,skipped,no board discovered
+Jones Financial (Edward Jones),none,,0,2026-10-10,skipped,no board discovered
+Ingram Micro Holding,workday,ingrammicro,515,2026-10-10,ok,
+Pfizer,workday,pfizer,590,2026-10-10,ok,
+Principal Financial,none,,0,2026-10-10,skipped,no board discovered
+Dominion Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+Intel,workday,intel,670,2026-10-10,ok,
+PulteGroup,workday,pultegroup,137,2026-10-10,ok,
+Corteva,workday,corteva,77,2026-10-10,ok,
+Illinois Tool Works,none,,0,2026-10-10,skipped,no board discovered
+United States Steel,none,,0,2026-10-10,skipped,no board discovered
+Auto-Owners Insurance,none,,0,2026-10-10,skipped,no board discovered
+Cheniere Energy,none,,0,2026-10-10,skipped,no board discovered
+Texas Instruments,none,,0,2026-10-10,skipped,no board discovered
+Estée Lauder,none,,0,2026-10-10,skipped,no board discovered
+Farmers Insurance Exchange,none,,0,2026-10-10,skipped,no board discovered
+Stanley Black & Decker,none,,0,2026-10-10,skipped,no board discovered
+Keurig Dr Pepper,other-ats,,0,2026-10-10,skipped,not crawlable
+Consolidated Edison,none,,0,2026-10-10,skipped,no board discovered
+Amphenol,none,,0,2026-10-10,skipped,no board discovered
+Kinder Morgan,other-ats,,0,2026-10-10,skipped,not crawlable
+EchoStar,workday,echostar,0,2026-10-10,empty,
+Super Micro Computer,none,,0,2026-10-10,skipped,no board discovered
+First Citizens BancShares,none,,0,2026-10-10,skipped,no board discovered
+Raymond James Financial,none,,0,2026-10-10,skipped,no board discovered
+Lam Research,other-ats,,0,2026-10-10,skipped,not crawlable
+Omnicom Group,smartrecruiters,omnicomgroup,1,2026-10-10,ok,
+Universal Health Services,smartrecruiters,universalhealthservicesinc,1,2026-10-10,ok,
+Tractor Supply,none,,0,2026-10-10,skipped,no board discovered
+Casey's General Stores,none,,0,2026-10-10,skipped,no board discovered
+Mutual of Omaha,none,,0,2026-10-10,skipped,no board discovered
+EMCOR Group,other-ats,,0,2026-10-10,skipped,not crawlable
+CSX,none,,0,2026-10-10,skipped,no board discovered
+LKQ,none,,0,2026-10-10,skipped,no board discovered
+Otis Worldwide,none,,0,2026-10-10,skipped,no board discovered
+Kenvue,smartrecruiters,kenvue,7,2026-10-10,ok,
+Gap,smartrecruiters,gapinc,11,2026-10-10,ok,
+Fox,none,,0,2026-10-10,skipped,no board discovered
+Reliance,other-ats,,0,2026-10-10,skipped,not crawlable
+Western & Southern Financial Group,workday,western,5,2026-10-10,ok,
+Textron,other-ats,,0,2026-10-10,skipped,not crawlable
+Devon Energy,workday,devonenergy,47,2026-10-10,ok,
+Fidelity National Financial,none,,0,2026-10-10,skipped,no board discovered
+Kyndryl Holdings,workday,kyndryl,66,2026-10-10,ok,
+Ally Financial,workday,ally,105,2026-10-10,ok,1 detail fetches failed
+W.R. Berkley,other-ats,,0,2026-10-10,skipped,not crawlable
+M&T Bank,none,,0,2026-10-10,skipped,no board discovered
+Dick's Sporting Goods,none,,0,2026-10-10,skipped,no board discovered
+Abbott Laboratories,workday,abbott,514,2026-10-10,ok,listing returned 120 of 2000
+Fifth Third Bancorp,none,,0,2026-10-10,skipped,no board discovered
+Pacific Life,workday,pacificlife,120,2026-10-10,ok,
+Sempra,none,,0,2026-10-10,skipped,no board discovered
+Erie Insurance Group,none,,0,2026-10-10,skipped,no board discovered
+Corning,none,,0,2026-10-10,skipped,no board discovered
+Lumen Technologies,other-ats,,0,2026-10-10,skipped,not crawlable
+FirstEnergy,none,,0,2026-10-10,skipped,no board discovered
+Hess,none,,0,2026-10-10,skipped,no board discovered
+Cleveland-Cliffs,workday,aksteel,286,2026-10-10,ok,
+Markel Group,workday,markelcorp,167,2026-10-10,ok,
+Corebridge Financial,workday,corebridgefinancial,258,2026-10-10,ok,
+Land O'Lakes,workday,landolakes,194,2026-10-10,ok,
+Kellanova,none,,0,2026-10-10,skipped,no board discovered
+Expedia Group,workday,expedia,163,2026-10-10,ok,
+Fiserv,workday,fiserv,340,2026-10-10,ok,
+Community Health Systems,none,,0,2026-10-10,skipped,no board discovered
+Delek US Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+DTE Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+Equitable Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+Cigna Group,workday,cigna,649,2026-10-10,ok,
+Unum Group,workday,unum,71,2026-10-10,ok,
+Citizens Financial Group,none,,0,2026-10-10,skipped,no board discovered
+Adobe,workday,adobe,388,2026-10-10,ok,
+MasTec,other-ats,,0,2026-10-10,skipped,not crawlable
+Berry Global Group,none,,0,2026-10-10,skipped,no board discovered
+Ameriprise Financial,workday,ameriprise,379,2026-10-10,ok,
+Norfolk Southern,other-ats,,0,2026-10-10,skipped,not crawlable
+Air Products & Chemicals,none,,0,2026-10-10,skipped,no board discovered
+Carvana,greenhouse,carvana,1801,2026-10-10,ok,
+Ball,other-ats,,0,2026-10-10,skipped,not crawlable
+Blackstone,workday,blackstone,172,2026-10-10,ok,
+Huntington Bancshares,none,,0,2026-10-10,skipped,no board discovered
+Hormel Foods,none,,0,2026-10-10,skipped,no board discovered
+Eversource Energy,none,,0,2026-10-10,skipped,no board discovered
+General Mills,workday,genmills,396,2026-10-10,ok,
+Entergy,other-ats,,0,2026-10-10,skipped,not crawlable
+S&P Global,workday,spgi,269,2026-10-10,ok,
+Xcel Energy,workday,xcelenergy,247,2026-10-10,ok,
+Wayfair,smartrecruiters,wayfair,1,2026-10-10,ok,
+J.B. Hunt Transport Services,smartrecruiters,jbhunttransportservicesinc,41,2026-10-10,ok,
+BorgWarner,workday,borgwarner,339,2026-10-10,ok,1 detail fetches failed
+Intercontinental Exchange,none,,0,2026-10-10,skipped,no board discovered
+Alaska Air Group,other-ats,,0,2026-10-10,skipped,not crawlable
+GXO Logistics,none,,0,2026-10-10,skipped,no board discovered
+AGCO,none,,0,2026-10-10,skipped,no board discovered
+Baker Hughes,workday,bakerhughes,797,2026-10-10,ok,
+Molson Coors Beverage,none,,0,2026-10-10,skipped,no board discovered
+Arthur J. Gallagher,none,,0,2026-10-10,skipped,no board discovered
+Huntington Ingalls Industries,none,,0,2026-10-10,skipped,no board discovered
+International Flavors & Fragrances,none,,0,2026-10-10,skipped,no board discovered
+Darden Restaurants,none,,0,2026-10-10,skipped,no board discovered
+Cincinnati Financial,none,,0,2026-10-10,skipped,no board discovered
+Viatris,workday,viatris,361,2026-10-10,ok,
+Yum China Holdings,none,,0,2026-10-10,skipped,no board discovered
+Las Vegas Sands,none,,0,2026-10-10,skipped,no board discovered
+Ulta Beauty,other-ats,,0,2026-10-10,skipped,not crawlable
+Caesars Entertainment,none,,0,2026-10-10,skipped,no board discovered
+BrightSpring Health Services,none,,0,2026-10-10,skipped,no board discovered
+Andersons,none,,0,2026-10-10,skipped,no board discovered
+Hershey,other-ats,,0,2026-10-10,skipped,not crawlable
+Hilton Worldwide Holdings,none,,0,2026-10-10,skipped,no board discovered
+Mosaic,smartrecruiters,mosaic,3,2026-10-10,ok,
+Alcoa,workday,alcoa,104,2026-10-10,ok,
+Diamondback Energy,none,,0,2026-10-10,skipped,no board discovered
+American Tower,none,,0,2026-10-10,skipped,no board discovered
+Vertex Pharmaceuticals,none,,0,2026-10-10,skipped,no board discovered
+AES,workday,aes,150,2026-10-10,ok,
+Owens Corning,other-ats,,0,2026-10-10,skipped,not crawlable
+Assurant,workday,assurant,100,2026-10-10,ok,listing returned 100 of 130
+Advance Auto Parts,none,,0,2026-10-10,skipped,no board discovered
+Toll Brothers,none,,0,2026-10-10,skipped,no board discovered
+Mohawk Industries,none,,0,2026-10-10,skipped,no board discovered
+DuPont,workday,dupont,196,2026-10-10,ok,
+Oshkosh,none,,0,2026-10-10,skipped,no board discovered
+DoorDash,none,,0,2026-10-10,skipped,no board discovered
+Nike,workday,nike,923,2026-10-10,ok,
+NVR,none,,0,2026-10-10,skipped,no board discovered
+Interpublic Group,none,,0,2026-10-10,skipped,no board discovered
+Booz Allen Hamilton Holding,none,,0,2026-10-10,skipped,no board discovered
+Henry Schein,workday,henryschein,257,2026-10-10,ok,1 detail fetches failed
+Expeditors Intl. of Washington,none,,0,2026-10-10,skipped,no board discovered
+Lululemon athletica,none,,0,2026-10-10,skipped,no board discovered
+Fidelity National Information (FIS),none,,0,2026-10-10,skipped,no board discovered
+Jefferies Financial Group,none,,0,2026-10-10,skipped,no board discovered
+Airbnb,greenhouse,airbnb,160,2026-10-10,ok,
+AutoNation,workday,autonation,828,2026-10-10,ok,
+FM,other-ats,,0,2026-10-10,skipped,not crawlable
+Autoliv,none,,0,2026-10-10,skipped,no board discovered
+Westinghouse Air Brake,none,,0,2026-10-10,skipped,no board discovered
+Public Service Enterprise Group,none,,0,2026-10-10,skipped,no board discovered
+Dana,other-ats,,0,2026-10-10,skipped,not crawlable
+Ebay,none,,0,2026-10-10,skipped,no board discovered
+Visa,workday,visa,924,2026-10-10,ok,
+Global Payments,none,,0,2026-10-10,skipped,no board discovered
+Celanese,smartrecruiters,celanese,5,2026-10-10,ok,
+Thor Industries,none,,0,2026-10-10,skipped,no board discovered
+News Corp.,smartrecruiters,newscorp,1,2026-10-10,ok,
+Icahn Enterprises,none,,0,2026-10-10,skipped,no board discovered
+Conagra Brands,workday,conagrabrands,253,2026-10-10,ok,
+Quest Diagnostics,none,,0,2026-10-10,skipped,no board discovered
+Baxter International,workday,baxter,507,2026-10-10,ok,1 detail fetches failed
+QXO Building Products,none,,0,2026-10-10,skipped,no board discovered
+APA,none,,0,2026-10-10,skipped,no board discovered
+Gold.com,none,,0,2026-10-10,skipped,no board discovered
+LPL Financial Holdings,workday,lplfinancial,302,2026-10-10,ok,1 detail fetches failed
+Campbell's,none,,0,2026-10-10,skipped,no board discovered
+Westlake,workday,westlake,286,2026-10-10,ok,
+Cintas,other-ats,,0,2026-10-10,skipped,not crawlable
+Regeneron Pharmaceuticals,workday,regeneron,546,2026-10-10,ok,1 detail fetches failed
+Constellation Brands,workday,cbrands,75,2026-10-10,ok,
+Williams,workday,williams,122,2026-10-10,ok,
+Eastman Chemical,other-ats,,0,2026-10-10,skipped,not crawlable
+Interactive Brokers Group,none,,0,2026-10-10,skipped,no board discovered
+Chewy,workday,chewy,258,2026-10-10,ok,
+JetBlue Airways,none,,0,2026-10-10,skipped,no board discovered
+VF,workday,condenast,132,2026-10-10,ok,
+KeyCorp,none,,0,2026-10-10,skipped,no board discovered
+Crown Holdings,workday,crownholdings,260,2026-10-10,ok,listing returned 260 of 289
+Oscar Health,greenhouse,oscar,239,2026-10-10,ok,
+Seaboard,none,,0,2026-10-10,skipped,no board discovered
+Hertz Global Holdings,none,,0,2026-10-10,skipped,no board discovered
+Skechers U.S.A.,none,,0,2026-10-10,skipped,no board discovered
+Optimum Communications,none,,0,2026-10-10,skipped,no board discovered
+NOV,none,,0,2026-10-10,skipped,no board discovered
+Graphic Packaging Holding,none,,0,2026-10-10,skipped,no board discovered
+Ovintiv,workday,ovintiv,5,2026-10-10,ok,
+Northern Trust,workday,ntrs,585,2026-10-10,ok,
+QVC Group,workday,qvc,133,2026-10-10,ok,
+Sirius XM Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+Chipotle Mexican Grill,workday,chipotle,217,2026-10-10,ok,
+CenterPoint Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+WEC Energy Group,other-ats,,0,2026-10-10,skipped,not crawlable
+Insight Enterprises,smartrecruiters,insightinc,3,2026-10-10,ok,
+Franklin Templeton,workday,franklintempleton,0,2026-10-10,empty,
+PPL,none,,0,2026-10-10,skipped,no board discovered
+Home Depot,workday,homedepot,1065,2026-10-10,ok,
+Cencora,workday,myhrabc,1054,2026-10-10,ok,
+Packaging Corp. of America,none,,0,2026-10-10,skipped,no board discovered
+ABM Industries,none,,0,2026-10-10,skipped,no board discovered
+Intuitive Surgical,none,,0,2026-10-10,skipped,no board discovered
+Tyson Foods,workday,tysonfoods,1182,2026-10-10,ok,
+American Financial Group,none,,0,2026-10-10,skipped,no board discovered
+Solventum,none,,0,2026-10-10,skipped,no board discovered
+United Rentals,workday,ur,620,2026-10-10,ok,listing returned 620 of 1322
+Old Republic International,none,,0,2026-10-10,skipped,no board discovered
+Ryder System,workday,ryder,450,2026-10-10,ok,
+Boeing,workday,boeing,1301,2026-10-10,ok,
+Accendra Health,workday,accendra,280,2026-10-10,ok,
+XPO,none,,0,2026-10-10,skipped,no board discovered
+Ace Hardware,workday,acehardware,159,2026-10-10,ok,
+Securian Financial Group,workday,hq,29,2026-10-10,ok,
+Vertiv Holdings,none,,0,2026-10-10,skipped,no board discovered
+Welltower,none,,0,2026-10-10,skipped,no board discovered
+Foot Locker,other-ats,,0,2026-10-10,skipped,not crawlable
+Burlington Stores,workday,burlington,304,2026-10-10,ok,
+Par Pacific Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+TransDigm Group,none,,0,2026-10-10,skipped,no board discovered
+Commercial Metals,none,,0,2026-10-10,skipped,no board discovered
+Post Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+Rush Enterprises,other-ats,,0,2026-10-10,skipped,not crawlable
+Zoetis,workday,zoetis,143,2026-10-10,ok,
+Sprouts Farmers Market,none,,0,2026-10-10,skipped,no board discovered
+Thrivent Financial,workday,thrivent,321,2026-10-10,ok,
+Zimmer Biomet Holdings,other-ats,,0,2026-10-10,skipped,not crawlable
+Prologis,workday,prologis,65,2026-10-10,ok,
+Microchip Technology,smartrecruiters,microchip,9,2026-10-10,ok,
+Watsco,none,,0,2026-10-10,skipped,no board discovered
+Newell Brands,other-ats,,0,2026-10-10,skipped,not crawlable
+ARKO,none,,0,2026-10-10,skipped,no board discovered
+DaVita,workday,davita,399,2026-10-10,ok,listing returned 400 of 3348; 1 detail fetches failed
+Sanmina,none,,0,2026-10-10,skipped,no board discovered
+Electronic Arts,none,,0,2026-10-10,skipped,no board discovered
+Yum Brands,none,,0,2026-10-10,skipped,no board discovered
+AT&T,workday,att,1382,2026-10-10,ok,1 detail fetches failed
+Fastenal,none,,0,2026-10-10,skipped,no board discovered
+CMS Energy,other-ats,,0,2026-10-10,skipped,not crawlable
+Science Applications International,none,,0,2026-10-10,skipped,no board discovered
+Endeavor Group Holdings,none,,0,2026-10-10,skipped,no board discovered
+Monster Beverage,none,,0,2026-10-10,skipped,no board discovered
+Mastercard,workday,mastercard,1237,2026-10-10,ok,listing returned 1110 of 1111; 2 detail fetches failed
+Howmet Aerospace,none,,0,2026-10-10,skipped,no board discovered
+Vulcan Materials,none,,0,2026-10-10,skipped,no board discovered
+OpenAI,none,,0,2026-10-10,skipped,no board discovered
+Williams-Sonoma,workday,williams,159,2026-10-10,ok,
+J.M. Smucker,workday,smucker,124,2026-10-10,ok,
+Voya Financial,workday,godirect,98,2026-10-10,ok,
+Graybar Electric,workday,graybar,451,2026-10-10,ok,2 detail fetches failed
+Navan,none,,0,2026-10-10,skipped,no board discovered
+Anysphere,none,,0,2026-10-10,skipped,no board discovered
+Deel,none,,0,2026-10-10,skipped,no board discovered
+Taylor Morrison Home,workday,taylor,152,2026-10-10,ok,
+Grammarly,none,,0,2026-10-10,skipped,no board discovered
+Biogen,workday,biibhr,260,2026-10-10,ok,
+Notion,ashby,notion,132,2026-10-10,ok,
+Ramp,ashby,ramp,165,2026-10-10,ok,
+Grafana Labs,greenhouse,grafanalabs,106,2026-10-10,ok,
+Rippling,none,,0,2026-10-10,skipped,no board discovered
+Carrier Global,workday,carrier,1162,2026-10-10,ok,
+Gusto,greenhouse,gusto,97,2026-10-10,ok,
+Abnormal AI,none,,0,2026-10-10,skipped,no board discovered
+Netskope,greenhouse,netskope,148,2026-10-10,ok,
+Tanium,greenhouse,tanium,60,2026-10-10,ok,
+Miro,ashby,miro,24,2026-10-10,ok,
+Attentive,greenhouse,attentive,26,2026-10-10,ok,
+VAST Data,none,,0,2026-10-10,skipped,no board discovered
+Celonis,greenhouse,celonis,226,2026-10-10,ok,
+Perplexity AI,none,,0,2026-10-10,skipped,no board discovered
+Stripe,greenhouse,stripe,728,2026-10-10,ok,
+Anthropic,greenhouse,anthropic,645,2026-10-10,ok,
+Flock Safety,ashby,demo.flocksafety-sandbox.com,11,2026-10-10,ok,
+Checkr,greenhouse,checkr,43,2026-10-10,ok,
+AlphaSense,greenhouse,alphasense,196,2026-10-10,ok,
+Postman,none,,0,2026-10-10,skipped,no board discovered
+Zoho,none,,0,2026-10-10,skipped,no board discovered
+Plaid,ashby,plaid,121,2026-10-10,ok,
+Databricks,greenhouse,databricks,892,2026-10-10,ok,
+OneTrust,greenhouse,onetrust,92,2026-10-10,ok,
+Talkdesk,greenhouse,talkdesk2,34,2026-10-10,ok,
+Carta,greenhouse,carta,72,2026-10-10,ok,
+1Password,ashby,1password,71,2026-10-10,ok,
+Checkout.com,none,,0,2026-10-10,skipped,no board discovered
+Airtable,greenhouse,airtable,4,2026-10-10,ok,
+Dataiku,greenhouse,dataiku,17,2026-10-10,ok,
+Fivetran,greenhouse,fivetran,191,2026-10-10,ok,
+Cribl,greenhouse,cribl,69,2026-10-10,ok,
+Airwallex,none,,0,2026-10-10,skipped,no board discovered
+Dialpad,greenhouse,dialpad,58,2026-10-10,ok,
+NinjaOne,none,,0,2026-10-10,skipped,no board discovered
+Zapier,ashby,zapier,11,2026-10-10,ok,
+Vercel,greenhouse,vercel,89,2026-10-10,ok,
+Motive,workday,luminegrp,5,2026-10-10,ok,
+Lambda,ashby,lambda,91,2026-10-10,ok,
+Brex,greenhouse,brex,277,2026-10-10,ok,
+Glean,smartrecruiters,glean,1,2026-10-10,ok,
+Automation Anywhere,workday,automationanywhere,34,2026-10-10,ok,1 detail fetches failed
+Merck,workday,msd,1294,2026-10-10,ok,1 detail fetches failed
+Clio,workday,clio,141,2026-10-10,ok,
+Equinix,workday,equinix,270,2026-10-10,ok,7 detail fetches failed
+Masco,workday,masco,155,2026-10-10,ok,10 detail fetches failed
+Sonic Automotive,smartrecruiters,sonicautomotive,422,2026-10-10,ok,
+Avis Budget Group,workday,avisbudget,536,2026-10-10,ok,14 detail fetches failed
+Western Digital,smartrecruiters,westerndigital,346,2026-10-10,ok,
+Nordstrom,workday,nordstrom,1382,2026-10-10,ok,
+Dover,workday,dover,666,2026-10-10,ok,
+Canva,smartrecruiters,canva,125,2026-10-10,ok,
+CarMax,workday,carmax,1563,2026-10-10,ok,19 detail fetches failed
+State Street,workday,statestreet,1178,2026-10-10,ok,20 detail fetches failed
+Cohesity,workday,cohesity,160,2026-10-10,ok,11 detail fetches failed
+Workday,workday,workday,371,2026-10-10,ok,10 detail fetches failed
+Arctic Wolf,workday,arcticwolf,96,2026-10-10,ok,28 detail fetches failed
+Xylem,workday,xylem,448,2026-10-10,ok,12 detail fetches failed
+Regions Financial,workday,regions,461,2026-10-10,ok,15 detail fetches failed
+Kohl's,workday,kohls,2000,2026-10-10,ok,
+Avery Dennison,smartrecruiters,AveryDennison,485,2026-10-10,ok,
+Cisco Systems,workday,cisco,1537,2026-10-10,ok,21 detail fetches failed
+ServiceNow,smartrecruiters,servicenow,697,2026-10-10,ok,
+Ingredion,workday,ingredion,204,2026-10-10,ok,40 detail fetches failed
+Rockwell Automation,workday,rockwellautomation,348,2026-10-10,ok,40 detail fetches failed
+Core & Main,workday,coreandmain,200,2026-10-10,ok,listing returned 240 of 256; 40 detail fetches failed
+Motorola Solutions,workday,motorolasolutions,877,2026-10-10,ok,26 detail fetches failed
+Danaher,workday,danaher,1472,2026-10-10,ok,56 detail fetches failed
+Stryker,workday,stryker,1479,2026-10-10,ok,55 detail fetches failed
+Ecolab,workday,ecolab,997,2026-10-10,ok,61 detail fetches failed
+DXC Technology,workday,dxctechnology,1115,2026-10-10,ok,68 detail fetches failed
+Humana,workday,humana,1844,2026-10-10,ok,25 detail fetches failed
+Truist Financial,workday,truist,1513,2026-10-10,ok,69 detail fetches failed
+Amgen,workday,amgen,1692,2026-10-10,ok,76 detail fetches failed
+Nvidia,workday,nvidia,2019,2026-10-10,ok,28 detail fetches failed
+CVS Health,workday,cvshealth,1015,2026-10-10,capped,capped at 5000 of 18577; listing returned 1040 of 18577; 80 detail fetches failed
+Analog Devices,workday,analogdevices,771,2026-10-10,ok,72 detail fetches failed
+Target,workday,target,2028,2026-10-10,ok,34 detail fetches failed
+CACI International,workday,caci,656,2026-10-10,ok,listing returned 720 of 1775; 64 detail fetches failed
+Jabil,workday,jabil,2020,2026-10-10,ok,32 detail fetches failed
+Republic Services,workday,republic,1662,2026-10-10,ok,34 detail fetches failed
+Ross Stores,workday,abbott,2284,2026-10-10,ok,27 detail fetches failed
+KLA,workday,kla,1001,2026-10-10,ok,75 detail fetches failed
+TJX,workday,tjx,1118,2026-10-10,capped,capped at 5000 of 11053; listing returned 1140 of 11053; 85 detail fetches failed
+Leidos Holdings,workday,leidos,1955,2026-10-10,ok,45 detail fetches failed
+Bank of America,workday,ghr,1538,2026-10-10,ok,listing returned 1400 of 1974; 83 detail fetches failed
+SpartanNash,workday,spartannash,1086,2026-10-10,ok,83 detail fetches failed
+Palo Alto Networks,workday,paloaltonetworks,1430,2026-10-10,ok,listing returned 1460 of 1491; 30 detail fetches failed
+GE Vernova,workday,gevernova,2550,2026-10-10,ok,41 detail fetches failed
+IQVIA Holdings,workday,iqvia,1783,2026-10-10,ok,88 detail fetches failed
+Jones Lang LaSalle,workday,jll,1948,2026-10-10,ok,77 detail fetches failed
+KBR,workday,kbr,1792,2026-10-10,ok,22 detail fetches failed
+PVH,workday,pvh,1439,2026-10-10,ok,88 detail fetches failed
+Concentrix,workday,cnx,1559,2026-10-10,ok,89 detail fetches failed
+Labcorp Holdings,workday,labcorp,1701,2026-10-10,ok,83 detail fetches failed
+Micron Technology,workday,micron,3078,2026-10-10,ok,78 detail fetches failed
+RTX,workday,globalhr,4908,2026-10-10,ok,18 detail fetches failed
