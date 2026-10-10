@@ -20,9 +20,4 @@ Protocols for Business · rerun of 10 October 2026 · ten points for a chief exe
 
 9. **Forecast.** At least 15% of 10-K filers will use agent language in 2027 (0.60). Colorado's overseer duty will take effect as signed (0.70). The 2028 US occupation list will have no AI-agent or AI-governance occupation, so the work stays a duty and does not become a job (0.70). At least one agent-scoped vendor certification will be retired or renamed by 2029 (0.75).
 
-10. **Recommendation.**
-    - Don't hire a senior "protocol lead". Keep agent running with the staff in each function.
-    - Name an owner for agent limits in the security and governance review where the work already forms.
-    - Keep a register of agents across vendors, with each agent's limits, and keep it under the firm's control rather than in vendor consoles.
-    - Get ready to name trained overseers before the 2027 deadlines.
-    - Run a small exception-review pilot that logs what changes and how long it takes. Finding and deciding rule changes are design bets, and that log is their test. (Medium for the first three; low for the pilot.)
+10. **Recommendation.** Don't hire a senior "protocol lead"; keep agent running with the staff in each function (medium). Name an owner for agent limits, starting in the security and governance review, the one place the work has been observed so far; that observation rests largely on one posting (low). Keep a register of agents and their limits across vendors and under the firm's control (low to medium; untested against simply using vendor registries). Prepare to name trained overseers before the 2027 deadlines (high on what the law requires). Run a small exception-review pilot that logs what changes and how long it takes: finding and deciding rule changes are design bets, and that log is their test (low).

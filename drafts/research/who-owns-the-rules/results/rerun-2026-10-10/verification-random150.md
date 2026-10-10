@@ -1,46 +1,63 @@
-# Verification of the random 150 first-round claims
+# Verification of the random 150 first-round claims (v2)
 
-Phase 2 of RERUN.md, random slice. Claims: `results/rerun-2026-10-10/sealed/phase2/slice-random150.csv` (150 claims). Evidence: `corpus/text/<id>.txt` plus the round-one data files. Full record: `verification-random150.csv`. No round-one file was edited.
+Phase 2 of RERUN.md, random slice. Claims: `results/rerun-2026-10-10/sealed/phase2/slice-random150.csv` (150 claims). Full record: `verification-random150.csv`. The first-pass file is kept as `verification-random150-v1.csv`; the old verdict is in the column `verdict_v1`. No round-one file was edited.
+
+## What changed from v1
+
+The v1 verifier searched the cited source ids only, although its method note said it searched the whole corpus (see `review/verification-review.md`). In v2, every row that v1 marked "not found" or "unverifiable" (70 rows) was searched across `corpus/text/` and the text folders of `corpus/b-raw/` (signatures, vendor, history, filings, postings; the derived `extract`, `review`, `calibration` and `coding` folders were excluded). Each search used 2 to 4 distinctive terms from the claim (names, figures, dates, unusual words), and the hits were read. The search terms for every "not found" are in the `note` column. Rows that are list markers, headings, forecasts, opinions, own recommendations, or statements about the author's own search are `not checkable`. Every v1 "confirmed" list marker was also relabelled `not checkable`.
+
+Verdict meanings:
+- confirmed: a passage was found anywhere in the corpus (file and passage are in `evidence_source` and `passage`). Where only the main assertion was found and a secondary detail was not, the verdict is confirmed and the note says "Partial" and names the missing detail (CL0530, CL0815, CL0903, CL1817).
+- corrected: the corpus gives a different value (4 rows, unchanged from v1).
+- not found: searched everywhere, no passage.
+- not checkable: not a factual claim a source could settle.
 
 ## Counts by verdict
 
-| Verdict | Claims |
-|---|---|
-| confirmed | 76 |
-| corrected | 4 |
-| not found | 15 |
-| unverifiable | 55 |
-| total | 150 |
+| Verdict | v2 | v1 |
+|---|---|---|
+| confirmed | 87 | 76 |
+| corrected | 4 | 4 |
+| not found | 39 | 15 |
+| not checkable | 20 | 0 |
+| unverifiable | 0 | 55 |
+| total | 150 | 150 |
+
+Movements from v1: 55 unverifiable became 30 not found, 17 not checkable and 8 confirmed; 15 not found became 4 confirmed, 2 not checkable and 9 stayed not found; 1 confirmed list marker (CL1159) became not checkable.
+- Not found, now confirmed (4): CL2502 (Goodside hired by Scale AI, Cb88035da), CL0530 (Drive Pilot 2022, Waymo rides), CL0815 (Nasdaq kill switch 2014, Ceb639178; partial), CL1161 (AWS AIP-C01, C39df85f9).
+- Unverifiable, now confirmed (8): CL0967 (FIX algorithm certificates, Cbf0d4d5c), CL2504 (M-24-10 Chief AI Officers, C3ea5c448), CL0903 (FPL $25m, C811f2a93; partial), CL2151, CL1966, CL1971, CL1645, CL1817.
 
 ## Error rate
 
-Error rate = (corrected + not found) / (confirmed + corrected + not found), excluding unverifiable claims.
+Error rate = (corrected + not found) / (confirmed + corrected + not found); not checkable rows are excluded.
 
-- Verifiable claims: 95
-- Errors: 19 (4 corrected, 15 not found)
-- **Error rate 20.0%, Wilson 95% interval 13.2% to 29.1%**
-- 55 of 150 claims (37%) could not be checked, so the rate applies to the checkable part of the sample only.
+- Verifiable claims: 130
+- Errors: 43 (4 corrected, 39 not found)
+- **Error rate 33.1%, Wilson 95% interval 25.6% to 41.5%** (v1: 20.0%, 13.2% to 29.1%, on 95 claims)
+- 20 of 150 claims (13%) are not checkable.
+
+Read this number with care: it is not a rate of false statements. Of the 39 not-found rows, 16 cite a page that was never acquired (HTTP failure, needs-browser, 404) and 10 carry no URL or id, mostly posting details (titles, dates, salaries, requirements) that the corpus cannot show. These are gaps in the corpus as much as errors in the drafts. Excluding the 16 not-acquired rows gives 27/114 = 23.7% (Wilson 16.8% to 32.3%). The v1 rate (20.0%) was lower because v1 put such rows under "unverifiable", not "not found".
 
 ## Error rate by claim type
 
-| Claim type | Sampled | Confirmed | Corrected | Not found | Unverifiable | Verifiable | Error rate | Wilson 95% |
+| Claim type | Sampled | Confirmed | Corrected | Not found | Not checkable | Verifiable | Error rate | Wilson 95% |
 |---|---|---|---|---|---|---|---|---|
-| number | 41 | 18 | 1 | 3 | 19 | 22 | 18.2% | 7.3% to 38.5% |
-| date | 53 | 33 | 0 | 10 | 10 | 43 | 23.3% | 13.2% to 37.7% |
-| quote | 42 | 23 | 3 | 2 | 14 | 28 | 17.9% | 7.9% to 35.6% |
-| characterisation | 14 | 2 | 0 | 0 | 12 | 2 | 0.0% | 0.0% to 65.8% |
+| number | 41 | 22 | 1 | 14 | 4 | 37 | 40.5% | 26.3% to 56.5% |
+| date | 53 | 40 | 0 | 9 | 4 | 49 | 18.4% | 10.0% to 31.4% |
+| quote | 42 | 23 | 3 | 15 | 1 | 41 | 43.9% | 29.9% to 59.0% |
+| characterisation | 14 | 2 | 0 | 1 | 11 | 3 | 33.3% | 6.1% to 79.2% |
+
+Small subsamples (3 verifiable characterisations): the intervals are wide, so differences between types should not be over-read. Numbers and quotes show higher rates than dates mainly because of unacquired posting details (salary bands, requirement clauses).
 
 ## Reading the result
 
-- Of the 150 sampled claims, many were fragments of activity-library tables, bare list numbers, headings or reference-list entries produced by the extraction (for example `7.`, `Main structure today:`, `Accessed October 2026`). Where the surrounding line carried a checkable assertion it was checked; otherwise the verdict is unverifiable.
-- Unverifiable claims fall into three groups: own recommendations and syntheses with no source (for example the business-protocol-lead critique, the predicting-roles literature review); negative search results ("not found" statements); and sources that were not acquired (failed, HTTP 404 or needs-browser).
-- Two recurring causes of `not found`: (1) the acquirer stored a generic landing page instead of the cited posting (Jointaro, Scale AI careers; see index.csv `final_url`), and (2) Nomura posting pages were stored as 1 kB stubs with no body text. These are acquisition defects as much as round-one errors; the claim may be true but cannot be shown from the corpus.
-- Corrections were mainly wording: a paraphrase presented in quotation marks (OpenAI field feedback line), an incomplete title (Art of Service course, USF Health page), and a list of teams that adds three that the posting does not name (OpenAI FDE).
-- Dates and figures the corpus could check mostly held (FinCEN SAR counts, Florida blackout loads, Part 504, ESMA dates, Knight penalty, Visa transactions per second). Failures cluster in dates and secondary details not stated in the cited page: the 13 March 2019 grounding date, the 13 October 2026 Nessie trial date, the 2016 Series 57 format, the late 2022 Goodside hire, the 1983 Progressive start.
-- Small subsamples by type: the intervals are wide, so differences between types should not be over-read.
+- Dates held best (about 82% of verifiable dates confirmed). Failures include the 13 March 2019 grounding day, the 13 October 2026 Nessie trial date, the 6 February 2014 PER-005-2 adoption date, 11 May 2026 for the Talkdesk ad, and the 2011 end date of the El Camino system.
+- The earlier finding stands that the previous "not found" and "unverifiable" verdicts were unreliable: 12 of 70 flipped to confirmed, and 19 more were headings, markers or interpretive text.
+- Citation-only rows (reference-list entries and posting titles) are `not found` when the exact page is absent even if a similar page exists (for example CL1578, where the corpus has a New York Citi ad with a similar title).
+- Activity-library table rows were checked against the named employer postings where the corpus has them; paraphrase was accepted when the posting passage said the same thing.
 
 ## Method notes
 
-- Search: per-claim text lookup in the cited ids first, then a corpus-wide search of all 1,266 texts for names, figures and phrases.
-- Rule for `confirmed`: the figure, date or wording appears in an acquired text; trivial title punctuation differences were accepted. Where only part of a compound claim was checkable and the checked part held, the verdict is confirmed and the note says which part was not rechecked.
-- Rule for `unverifiable`: no id or URL, the cited ids have no text file, or the claim is a negative or interpretive statement.
+- Tools: ripgrep (fixed-string, case-insensitive) over `corpus/text` and `corpus/b-raw/{signatures,vendor,history,filings,postings,audio,onet}`; hits were opened and read.
+- Rule for `confirmed`: the figure, date or wording appears in an acquired text; trivial punctuation differences were accepted.
+- Rule for `not checkable`: list ordinals, headings, forecasts and opinions, the authors' own recommendations or syntheses, and negative statements about the authors' own searches.

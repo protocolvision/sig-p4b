@@ -1,4 +1,4 @@
-Phase 2 verification of the loop analysis (analysis.md, exploratory-analysis.md): 127 claims, 122 confirmed, 4 corrected, 1 not found, 0 unverifiable.
+Phase 2 verification of the loop analysis (analysis.md, exploratory-analysis.md): 127 claims, 122 confirmed, 4 corrected, 1 not found, 0 not checkable (v2 bookkeeping pass: no list markers or headings in this file; first pass kept as `verification-loop-analysis-v1.csv`).
 1. Method: reran loop-tools/analyze.py on results/loop-2026-10-10; output is byte-identical to analysis.md. Kappa, agreement and disagreements also recounted independently from the coder files (298 records, 0.98, 0.95).
 2. All 106 analysis.md claims (agreement, stability, per-code tables, verdicts, 14 cluster rows) and all exploratory tables (secondary-code counts, stratum-by-cluster) recompute exactly.
 3. Corrected: exploratory line 13 quotes R1848 as "reviewing AI conversations weekly..."; the Vanta posting (C85ecc82f) says "Review Fin conversations weekly...". The ledger quote carries the same alteration.

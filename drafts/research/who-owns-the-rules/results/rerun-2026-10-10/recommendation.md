@@ -1,68 +1,68 @@
-# Recommendation: how protocol vision and Business Protocol Management spread through an organisation
+# Recommendation: who should own agent rules, and what the rerun supports
 
 Protocols for Business · rerun of 10 October 2026 · RERUN.md phase 4, step 4. F1–F7 are findings in `findings.md`; "claim n" is a row in `comparison.md`. Paths are relative to `results/rerun-2026-10-10/`.
 
 ## Agents already run under rules that nobody is named to change
 
-Agents act under limits on what they may spend, see and say, and on when a person must step in. When a limit gets in the way, the public record shows no one whose job is to decide the change. The draft proposed three layers of rule work, each with an owner, artefact and measure: finding the rules (protocol vision, PV), designing them (protocol engineering, PE) and deciding changes across functions (RD). The rerun, on texts read in full, kept the draft's negative advice and most of its description. It did not keep most of the machinery.
+Agents act under limits on what they may spend, see and say, and on when a person must step in. The public record shows no one whose job is to change those limits. The draft proposed three layers of rule work, each with an owner, artefact and measure: finding the rules (protocol vision, PV), designing them (protocol engineering, PE) and deciding changes across functions (RD). The rerun kept the draft's negative advice, not most of its machinery.
 
 ## The rerun supports a narrow recommendation, not the full design
 
-- PV and RD are close to absent from postings and speech: PV 1 and RD 0 of 771 timestamped speech spans, PV 2 and RD 0 of 123 agent-related posting codes. The coders were shown to detect both (F1; high).
-- The draft explained that silence away: desk research would miss roles built on internal agreements. That explanation was tested and failed (H-cal, H8; `comparison.md` claim 8). The silence may still hide unrecorded work, but it is no longer evidence for these layers.
-- Setting what agents may do (PE) is about a quarter of agent-related posting codes (F1; medium). Where it appears, it sits in AI security and governance review, not in the draft's five function homes (F3; low).
-- Existing staff inside functions often run agents (F2; low to medium).
-- AI law names a person who oversees AI, not a person who owns rule changes. Named change owners appear only in trading texts and AI labs' own policies (F4; high on the texts).
+- PV and RD are close to absent: PV 1 and RD 0 of 771 timestamped speech spans, PV 2 and RD 0 of 123 agent-related posting codes. The coders were shown to detect both (F1; high).
+- The draft explained that silence away: desk research would miss roles built on internal agreements. That explanation was tested and failed, on a weak test because the earliest recordings were missing (H-cal, H8; claim 8). The silence may hide unrecorded work; it no longer supports these layers.
+- Setting what agents may do (PE) is about a quarter of agent-related posting codes (F1; medium). Its only observed home is AI security and governance review, at low confidence, resting on one posting (F3).
+- Agent duties sit in existing jobs about as often as under new AI titles (0.86, 0.63–1.15), but about 53% of those jobs are computing or engineering. The evidence that business staff run agents inside functions is 6 of 10 speakers, single-coded (F2; low to medium).
+- AI law names a person who oversees AI, not a person who owns rule changes. In the 19 texts read, named change owners appear only in trading texts (8 of 12 from guidance) and AI labs' own policies (F4; high on the quotes, medium on the contrast).
 - Vendors now ship agent registries and owner roles, and rename their products within about three years (F6; low to medium).
 
-We build Business Protocol Management, and every position that would favour it (a PV layer, an RD layer, time to amend, the register as rule-finding work) lacks support from opened texts (`comparison.md`, stake check). Where this memo keeps them, it calls them design bets for field work.
+We build Business Protocol Management. Every position favouring it (PV and RD layers, time to amend, the register as rule-finding) lacks support from opened texts (`comparison.md`, stake check), so this memo calls them design bets.
 
-## By layer, only rule design has an observed home
+## By layer, only rule design has an observed home, and a thin one
 
-**Finding the rules (PV) is a design bet.** No posting or speech span describes reviewing exceptions or overrides (F1; I6). Who holds it and at what seniority is unknown. The artefact we can support is a firm-owned register of agents across vendors, with a named person for each agent. Registries are arriving as vendor tools run by IT admins, so the firm should own one that spans vendors (`comparison.md` claim 21; medium). Using the register to surface unwritten rules is a bet (low). For a measure, start from what practitioners already watch: share handled by the agent and interaction scores ("Toby fixes 60% of those issues itself", M021). Add the share of agents with a named owner (low; not observed).
+**Finding the rules (PV) is a design bet.** No speech span describes reviewing exceptions or overrides, and PV is 2 of 123 posting codes (F1; I6). Holder and seniority are unknown. The artefact is a firm-owned register of agents across vendors, with a named person for each. Registries are arriving as vendor tools run by IT admins (claim 21; low to medium: vendors ship registries, but firm ownership is untested). Using the register to surface unwritten rules is a bet (low). Practitioners measure running agents, not rule-finding ("Toby fixes 60% of those issues itself", M021). Start there and add the share of agents with a named owner (low; not observed).
 
-**Designing rules (PE) belongs where it already forms: security and governance review.** Postings place AI rule work with security architects (Merck, IQVIA) and governance roles reporting to compliance (JLL) (F3; I3). Name an owner for agent limits in that review, and let the staff who run agents in each function propose changes to it (low to medium). On seniority, lasting roles in the signatures did not start senior (H2; low). Treat this as practitioner or senior-practitioner work, not an executive post. The artefact is a written statement of each agent's limits, held where the firm can change it across vendors (medium). No measure has evidence. Overrides per rule is a candidate to test (low).
+**Designing rules (PE) is most visible in security and governance review (low).** Postings place AI rule work with security architects (Merck, IQVIA) and a governance role reporting to compliance (JLL) (F3; I3). Cluster 111 holds only because of one posting, and the frame is mostly regulated finance. Name an owner for agent limits in that review, and let the staff who run agents propose changes to it (low). Lasting roles in the signatures did not start senior (H2; low), though the observed holders are senior individual contributors (a principal engineer, architects). Treat it as senior-practitioner work, not an executive post. The artefact is a written statement of each agent's limits, held where the firm can change it across vendors (low to medium; rests on the trading analogy and the vendor relabelling in F6). No measure has evidence; overrides per rule is a candidate (low).
 
-**Deciding changes across functions (RD) is a design bet.** RD is 0 after adjudication (F1). Some firms have AI councils, guilds or centres of excellence (5 of 34 speakers), but none is shown to decide agent rules (F7; low). The least inventive step is to give an existing council written decision rights over agent rules that cross two functions (`comparison.md` stake check; low). The draft's "named executive, usually the COO" has no evidence outside trading (claim 22), so seniority is open. Time to amend stays the measure to test, not to adopt. It cannot be measured from public records (H7), and the field plan sets out how to measure it (`field-plan-scaffold.md` §5.2).
+**Deciding changes across functions (RD) is a design bet.** RD is 0 after adjudication (F1). Some firms have AI councils, guilds or centres of excellence (5 of 34 speakers), but none is shown to decide agent rules (F7; low). The least inventive step is to give an existing council written decision rights over agent rules that cross two functions (stake check; low). The artefact is a written statement of the council's decision rights and a dated log of its decisions on agent rules (low; not observed). The draft's "named executive, usually the COO" has no evidence outside trading (claim 22), so seniority is open. Time to amend is a measure to test, not adopt (H7; field plan §5.2).
 
 ## By stage, outside rules ask for an overseer, not a change owner
 
-**Today, without an outside rule.** Keep agent running in the functions that use agents. Own a cross-vendor register. Name a rule-design owner in security or governance review. Run exception reviews in one or two functions as a pilot, and log what they find and how long changes take. That log is the test of the PV and RD bets (medium for register and owner; low for the pilot).
+**Today, without an outside rule.** Keep agent running where it is, own a cross-vendor register, and name a rule-design owner in security or governance review. Pilot exception reviews in one or two functions, logging findings and time to change; the log tests the PV and RD bets (low to medium for register and owner; low for the pilot).
 
-**After an outside rule.** Gatekeeper rules are confirmed for Amazon and Mastercard only; Visa is unverified. Amazon's policy (from 4 March 2026) requires agents to identify themselves and stop when asked. Neither names a role inside the firm (`comparison.md` claim 18; I4). Keep limits, logging and a stop control where the firm controls them, not only in vendor consoles (medium). The draft's mid-level agent risk team under the COO is dropped. In trading that team sits at Director level, and agents have no equivalent (claim 14).
+**After an outside rule.** Gatekeeper rules are confirmed for Amazon and Mastercard only; Visa is unverified. A forum notice of Amazon's policy (from 4 March 2026) requires agents to identify themselves and stop when asked, and names no role inside the firm. Mastercard's guide was not read (claim 18; I4). Keep limits, logging and a stop control where the firm controls them, not only in vendor consoles (low to medium). The draft's mid-level agent risk team is dropped: in trading it is Director level, with no agent equivalent (claim 14).
 
-**After a sector regulation.** Name trained people with authority to oversee and override. The EU AI Act requires that deployers "assign human oversight to natural persons who have the necessary competence, training and authority" (Art 26(2)). Annex III duties apply from 2 December 2027 under the Omnibus. Colorado SB26-189 requires an "individual designated by the deployer who has authority to approve, modify, or override a consequential decision" from 1 January 2027 (I4; high on the duty). Neither law requires a change owner, a certifying executive or certified designers (F4). Those exist only in trading: 15c3-5 CEO certification, Series 57 registration and the RTS 6 designated person. Use them only if a regulator extends them to agents (medium). Don't build this stage before its trigger: when the law arrives, it asks for an overseer, not a change committee (F4; medium). The draft's "offices without a lever are cut first" was history from memory, not tested here (dropped).
+**After a sector regulation.** Name trained people with authority to oversee and override. The EU AI Act requires deployers to "assign human oversight to natural persons who have the necessary competence, training and authority" (Art 26(2)); Annex III duties apply from 2 December 2027 under the Omnibus. Colorado SB26-189 requires an "individual designated by the deployer who has authority to approve, modify, or override a consequential decision" from 1 January 2027 (I4; high on the duty). Neither law requires a change owner, a certifying executive or certified designers (F4). Binding versions exist only in trading (15c3-5 CEO certification, Series 57 registration, the RTS 6 designated person). Labs name change owners in voluntary policies. Use the trading forms only if a regulator extends them to agents (medium). Don't build this stage before its trigger: the law asks for an overseer, not a change committee (F4; medium).
 
-## By function, agent running is spread out and rule design sits in security
+## By function, agent running is spread out and rule design shows up most in security review
 
-Agent running shows up across functions in speech: sales and revenue operations 89 spans, support 26, finance 17, IT 11, engineering 10 (I6, pooled spans; counts reflect transcript numbers, not rates). Keep it there with existing staff (claim 6, replicated; medium). Rule design shows up in security and governance (F3; low). The draft's function owners of hardness maps (support, deal desk, accounting, legal operations, identity leads) rested on search summaries and vendor documents (claims 4, 5). Treat them as a proposal to pilot (low).
+Agent running shows up across functions in speech: sales and revenue operations 89 spans, support 26, finance 17, IT 11, engineering 10 (I6; 862 pooled spans including untimestamped pages, recall about 0.5; counts reflect transcript numbers, not rates). Keep it there (claim 6, replicated; medium for dispersion; low to medium for existing staff). The draft's function owners of hardness maps rested on search summaries and vendor documents (claims 4, 5); treat them as a proposal to pilot (low).
 
 ## The training path is untested and should be run as an experiment
 
-Watching, workshops and simulations are training for the capability. They are not the method, and neither round tested them (`comparison.md`, no support). The mapping stays a design bet (low):
+Watching, workshops and simulations are training for the capability, not the method. Neither round tested them (`comparison.md`). The mapping is a design bet (low):
 
-- watching (observations) for the staff who run agents, to read overrides, workarounds and stalls as signals about rules;
-- workshops (hardness maps) for the security and governance reviewers who set agent limits, and the function staff who propose changes;
-- simulations (amendment decisions under trade-offs) for council members, if the council is given decision rights.
+- watching (observations) for staff who run agents, to read overrides, workarounds and stalls as signals about rules;
+- workshops (hardness maps) for the reviewers who set agent limits and the staff who propose changes;
+- simulations (amendment decisions under trade-offs) for council members, if the council gets decision rights.
 
 Judge each against the pilot log: more rules found, or faster decisions?
 
-## What not to do rests on two supported warnings
+## What not to do rests on three warnings
 
-- Don't hire one senior "Business Protocol Lead" to own all three layers. No such posting exists in 25,512 postings, and lasting roles did not start senior (claim 23, replicated; F3; medium).
-- Don't let vendor consoles hold your rules. Vendors define registries, sponsor and owner roles, and relabel them within about three years (F6). Trading's "direct and exclusive control" requirement is binding (claim 14; medium).
+- Don't hire one senior "Business Protocol Lead" to own all three layers. No such posting exists in 25,512 postings from crawlable boards (59% of frame employers, including the adoption leaders, are not visible), and lasting roles did not start senior (claim 23, replicated; F3; medium).
+- Don't let vendor consoles hold your rules. Vendors define registries and owner roles and relabel them within about three years (F6). Trading's "direct and exclusive control" requirement is binding (`comparison.md` §4, IN; medium). The rerun did not test whether firm-held rules work better.
 - Don't present PV or RD as layers already found in practice (F1; high).
 
 ## Assumptions to test in the field
 
-Each maps to a pre-registered claim in `field-plan-scaffold.md`.
+Claims refer to `field-plan-scaffold.md`.
 
-- PV and RD happen out of public view (C7, C9).
+- PV and RD happen out of public view (C7, C9; PV through C6 probes).
 - Councils decide rather than discuss (C8).
 - Time to amend is measurable and shorter where an owner decides (C6).
 - A number set in advance drives rule changes (C2).
 - Existing roles, not a distinct role, hold rule decisions (C8).
-- Framing: the draft said "don't frame it as AI safety". The only AI texts that name change owners are labs' safety policies (I4). Test which framing gets agreement inside firms rather than asserting one.
+- Framing: the only AI texts that name change owners are labs' safety policies (I4), so test the draft's "don't frame it as AI safety".
 - Our stake: test each BPM artefact against a simpler alternative, such as an owner field in a vendor registry.
 
 ## Predictions to register
@@ -75,8 +75,8 @@ The five forecasts in `findings.md` §6 stand unchanged:
 4. By 2030-06-30: the 2028 SOC has no occupation for AI agents or AI governance (0.70; BLS).
 5. By 2029-12-31: an agent-scoped vendor certification in I5 is retired or renamed (0.75).
 
-Three organisation-level predictions, checked in the 16 adopter firms of the field plan (dates assume field work ends by mid-2027):
+Three organisation-level predictions for the field plan's 16 adopter firms. The thresholds are the scaffold's; the probabilities are the authors' priors; the dates assume field work ends by mid-2027, which the scaffold does not schedule.
 
-6. By 2027-09-30: a cross-function rule-change decision is recorded in 10 or more firms (0.35; C7, change logs and incident accounts).
-7. By 2027-09-30: in 60% or more of firms with a standing AI council, the council decided no recorded episode in the window (0.60; C8).
+6. By 2027-09-30: a cross-function rule-change decision is recorded in 10 or more firms (0.35; C7).
+7. By 2027-09-30: in 60% or more of firms with a standing AI council, the council decided no episode recorded in the window (0.60; C8).
 8. By 2027-09-30: time to amend is measurable (5 or more dated episodes) in half or more of firms with an agent change log (0.40; C6, §5.2).

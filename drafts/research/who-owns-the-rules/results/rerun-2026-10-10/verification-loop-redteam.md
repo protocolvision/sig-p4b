@@ -1,4 +1,4 @@
-Phase 2 verification of the loop red team (results/loop-2026-10-10/red-team.md): 70 claims, 61 confirmed, 9 corrected, 0 not found, 0 unverifiable.
+Phase 2 verification of the loop red team (results/loop-2026-10-10/red-team.md): 70 claims, v2: 52 confirmed, 9 corrected, 0 not found, 9 not checkable (v1: 61 confirmed). The 9 relabelled rows are list markers CL0162, CL0165, CL0167, CL0169, CL0171, CL0173, CL0175 and headings CL0170, CL0174. First pass kept as `verification-loop-redteam-v1.csv`; old verdict in `verdict_v1`.
 1. Method: recomputed every number from codes/, clusters/iter-1..5.json, pool/iter-1..5.jsonl and pool/key.json, using the analyze.py formulas; quotes and characterisations checked against loop-design.md, clusters/iter-5.json, the coder notes and corpus/text.
 2. Core numbers all recompute: PE 13 agreed, C7 6/13 = 46%, iteration 4 C5 6/10 = 60%, iteration 3 3/8 each, 40 PE records over 8 clusters with a 32% top, kappa 0.95, 85 identical notes, 8 empty performers, 298 grade S, AO top cluster 29%.
 3. The "nothing is stable" claim holds but is borderline: ARI 3->4 is 0.5949 against a 0.6 threshold (4->5 is 0.655).
