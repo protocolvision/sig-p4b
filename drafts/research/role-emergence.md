@@ -41,8 +41,8 @@ started with junior or mid-level practitioners, whose authority came from a rule
 For protocols, five questions a COO can answer from tickets, override logs and a list of approvers within a
 month. The first measures the cost; the other four test the three conditions above.
 
-1. **Time to amend.** Take the last ten times a person or an agent hit a rule that proved wrong. How many
-   days until it changed, and who changed it?
+1. **Time to amend.** When a policy keeps getting overridden or worked around, how many days until someone
+   fixes it or confirms it, and who is that? Count open cases as well as closed ones.
 2. **Wait and override.** For our ten most-used approvals and limits, how long does work wait on each, and
    how often is each overridden?
 3. **Permanence** (condition 1). Which of these rules existed before our agent rollout and will still
@@ -50,8 +50,9 @@ month. The first measures the cost; the other four test the three conditions abo
 4. **Ownership** (condition 2). Who can change each rule? When changing one means changing another
    function's rule, who decides, and how long does that take?
 5. **Renewal** (condition 3). Who outside the company already asks about these rules, and how often:
-   auditors, customers' security reviews, regulators (including the EU AI Act's oversight duties from
-   December 2027, date to confirm, if any of our agents fall under its high-risk list)?
+   auditors (in US-listed companies, IT change controls on agents that approve money), customers' security
+   reviews, regulators (the EU AI Act's oversight duties from December 2027, date to confirm, where agents
+   fall under its high-risk list)?
 
 **Verdict, moderate confidence.** A distinct role is a candidate only where all five answers point the
 same way: slow amendments, recurring, owned by no one, permanent, and renewed from outside. Otherwise give
@@ -425,11 +426,13 @@ In our reconstructions, lasting roles began with a question that named a cost an
 it, and something kept asking it. The protocol version should be measurable, neutral about technology,
 and able to come out against a new role:
 
-> **When a person or an agent runs into one of our rules and the rule is wrong, how long does it take for
-> someone with the authority to change it, and who is that?**
+> **When a policy keeps getting overridden or worked around, how many days until someone fixes it or
+> confirms it, and who is that?**
 
-To answer it from records: take the last ten times a rule proved wrong, and count the days until it
-changed. The Summary lists the four questions that interpret the answer.
+To answer it from records: start the clock when a rule crosses a threshold (for example, more than a set
+number of overrides in 30 days, or a formal request to change it), stop it at a recorded decision to change
+or keep the rule, and count the cases still open. The Summary lists the four questions that interpret the
+answer; the critique (`business-protocol-lead-critique.md`, section 6) sets out the measurement.
 
 How the answer points to a structure:
 
