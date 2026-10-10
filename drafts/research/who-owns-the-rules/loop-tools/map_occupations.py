@@ -6,15 +6,23 @@ Usage:
   python3 map_occupations.py IN.jsonl OUT.csv
 
 IN.jsonl has one object per line with fields `id` and `title`.
-OUT.csv columns: id, title, normalised, onet_code, method, onet_title, study_occupation
+OUT.csv columns: id, title, normalised, onet_code, method, onet_title, study_occupation, candidate_code
+
+Both sides (posting titles and O*NET titles) are singularised before lookup (Pharmacists -> pharmacist).
+Lead, staff and head of are removed only as leading seniority words followed by a function noun
+("Staff Software Engineer" -> software engineer; "Staff Accountant", "Lead Generation" are kept).
 
 Order of matching (first hit wins):
   override   fixed table below, for the ten study occupations (study_occupation is filled only here)
   exact      normalised title equals a normalised O*NET occupation title
   alternate  ... equals an O*NET alternate title ("Job Titles.txt" in release 31.0)
   reported   ... equals an O*NET sample-of-reported-title
-  fallback   every token of some dictionary title (2+ tokens) appears in the posting title
-  unmatched  nothing found; onet_code is empty (left for model assignment)
+  fallback   every token of some dictionary title (2+ tokens) appears in the posting title AND those tokens
+             cover at least FALLBACK_COVER (60%) of the posting's tokens; otherwise the title goes to "model"
+  model      no safe match (no dictionary hit, or a fallback hit covering < 60% of the title); onet_code is
+             empty and `candidate_code` holds the rejected fallback guess, if any. assign_titles_model.py
+             resolves these titles with the Messages Batches API.
+  unmatched  the title is empty after normalisation
 Ties, at every step: most specific match first (fallback: most tokens), then the SOC code with the most
 dictionary titles (the most common code), then the lowest code. Nothing is random.
 """
@@ -30,13 +38,21 @@ ONET = HERE.parent / "corpus" / "b-raw" / "onet"
 # (any order). Rows are tried in order. Codes are the study's chosen O*NET home for each occupation;
 # several occupations share 11-1021.00 (no closer O*NET occupation), so study_occupation is what
 # separates them.
+# Words that make a "controller" title something other than the finance role (C5, fix 3). The S1 walk's
+# sel.py regex is not in the repo (C6 asks for it to be committed); this is the reviewer's list.
+CONTROLLER_EXCLUDE_PHRASES = ["air traffic"]
+CONTROLLER_EXCLUDE_WORDS = {"project", "production", "motor", "firmware", "plc", "network", "domain", "cost",
+                            "credit", "quality", "inventory"}
+# Head-level words accepted wherever the study occupation is an operations manager role (C5, fix 4).
+HEAD = ["manager", "director", "head", "vp", "vice president", "lead"]
+
 OVERRIDES = [
     ("controller", "11-3031.01", [["controller"]]),
     ("accounts payable specialist", "43-3031.00", [["accounts payable", "ap"], ["specialist"]]),
-    ("support operations manager", "11-1021.00", [["support operations", "support ops"], ["manager"]]),
-    ("revenue operations manager", "11-2022.00", [["revenue operations", "revenue ops", "revops"], ["manager"]]),
+    ("support operations manager", "11-1021.00", [["support operations", "support ops"], HEAD]),
+    ("revenue operations manager", "11-2022.00", [["revenue operations", "revenue ops", "revops"], HEAD]),
     ("procurement specialist", "13-1023.00", [["procurement"], ["specialist"]]),
-    ("legal operations manager", "11-1021.00", [["legal operations", "legal ops"], ["manager"]]),
+    ("legal operations manager", "11-1021.00", [["legal operations", "legal ops"], HEAD]),
     ("HR operations specialist", "13-1071.00",
      [["hr", "human resource", "human resources", "people"], ["operations", "ops"], ["specialist"]]),
     ("identity and access administrator", "15-1244.00",
@@ -45,18 +61,53 @@ OVERRIDES = [
     ("platform engineer", "15-1252.00", [["platform"], ["engineer"]]),
 ]
 
-SENIORITY = {"senior", "sr", "junior", "jr", "lead", "principal", "staff", "i", "ii", "iii", "ll"}
-FIELDS = ["id", "title", "normalised", "onet_code", "method", "onet_title", "study_occupation"]
+SENIORITY = {"senior", "sr", "junior", "jr", "principal", "i", "ii", "iii", "ll"}
+FIELDS = ["id", "title", "normalised", "onet_code", "method", "onet_title", "study_occupation", "candidate_code"]
+FALLBACK_COVER = 0.60
+
+# "lead" and "staff" are seniority only as the first word of a title and only before a function noun.
+LEAD_NEXT = {"engineer", "developer", "designer", "analyst", "scientist", "architect", "researcher",
+             "programmer", "consultant", "recruiter", "administrator", "technician", "specialist", "manager",
+             "software", "data", "product", "program", "project", "security", "backend", "frontend", "ml",
+             "ai", "cloud", "devops", "qa", "ux", "ui"}
+STAFF_NEXT = {"engineer", "developer", "designer", "scientist", "architect", "researcher", "software",
+              "data", "machine", "ml", "ai", "product", "program", "security", "backend", "frontend",
+              "cloud", "devops", "qa", "ux", "ui", "technical", "applied", "research"}
+# words that look plural but are not
+NO_SINGULAR = {"sales", "analysis", "business", "process"}
 
 
-def normalise(t):
+def singular(w):
+    """Plain rule-based singulariser: pharmacists -> pharmacist, secretaries -> secretary, boxes -> box."""
+    if len(w) <= 3 or w.endswith(("ss", "us", "is", "ics")) or w in NO_SINGULAR:
+        return w
+    if w.endswith("ies") and len(w) > 4:
+        return w[:-3] + "y"
+    if w.endswith(("sses", "xes", "ches", "shes", "zes")):
+        return w[:-2]
+    if w.endswith("s"):
+        return w[:-1]
+    return w
+
+
+def normalise(t, strip_lead=True):
+    """Lower-case, drop location/brackets/punctuation/seniority, singularise. With strip_lead=False the
+    words lead, staff and head of are kept (used by the override table, which wants head-level words)."""
     t = t.lower().split("|")[0]                      # "Title | Location" -> title
     for _ in range(3):                               # bracketed text, nested or stray
         t = re.sub(r"\([^()]*\)|\[[^\[\]]*\]|\{[^{}]*\}", " ", t)
     t = t.replace("&", " and ")
     t = re.sub(r"[^a-z0-9]+", " ", t)                # punctuation (incl. en/em dashes)
-    t = re.sub(r"\bhead of\b", " ", t)
-    return " ".join(w for w in t.split() if w not in SENIORITY)
+    toks = [singular(w) for w in t.split() if w not in SENIORITY]
+    if strip_lead:
+        # drop seniority words anywhere only if leading (after any other seniority word was removed)
+        if toks[:2] == ["head", "of"] and len(toks) > 2:
+            toks = toks[2:]
+        elif len(toks) > 1 and toks[0] == "lead" and toks[1] in LEAD_NEXT:
+            toks = toks[1:]
+        elif len(toks) > 1 and toks[0] == "staff" and toks[1] in STAFF_NEXT:
+            toks = toks[1:]
+    return " ".join(toks)
 
 
 def read_tsv(name):
@@ -99,23 +150,29 @@ class Mapper:
     def override(self, norm):
         padded = f" {norm} "
         for study, code, groups in OVERRIDES:
-            if all(any(all(f" {w} " in padded for w in alt.split()) for alt in g) for g in groups):
+            if study == "controller" and (any(f" {p} " in padded for p in CONTROLLER_EXCLUDE_PHRASES)
+                                          or CONTROLLER_EXCLUDE_WORDS & set(norm.split())):
+                continue
+            if all(any(all(f" {w} " in padded for w in a.split())
+                       for a in (normalise(x, False) for x in g)) for g in groups):
                 return study, code
         return None
 
     def map(self, title):
+        """Return (normalised, code, method, onet_title, study_occupation, candidate_code)."""
+        raw_norm = normalise(title, strip_lead=False)
         norm = normalise(title)
         if not norm:
-            return norm, "", "unmatched", "", ""
-        ov = self.override(norm)
+            return norm, "", "unmatched", "", "", ""
+        ov = self.override(raw_norm)
         if ov:
-            return norm, ov[1], "override", self.occ.get(ov[1], ""), ov[0]
+            return norm, ov[1], "override", self.occ.get(ov[1], ""), ov[0], ""
         hit = self.index.get(norm)
         if hit:
             for level in ("exact", "alternate", "reported"):
                 if level in hit:
                     code = pick(hit[level], self.code_count)
-                    return norm, code, level, self.occ.get(code, ""), ""
+                    return norm, code, level, self.occ.get(code, ""), "", ""
         toks = set(norm.split())
         best = None
         for w in toks:
@@ -127,8 +184,10 @@ class Mapper:
                     if best is None or key < best[0]:
                         best = (key, c)
         if best:
-            return norm, best[1], "fallback", self.occ.get(best[1], ""), ""
-        return norm, "", "unmatched", "", ""
+            if -best[0][0] / len(toks) >= FALLBACK_COVER:
+                return norm, best[1], "fallback", self.occ.get(best[1], ""), "", ""
+            return norm, "", "model", "", "", best[1]
+        return norm, "", "model", "", "", ""
 
 
 def main():
@@ -143,9 +202,9 @@ def main():
             if not line.strip():
                 continue
             r = json.loads(line)
-            norm, code, method, otitle, study = m.map(r["title"])
+            norm, code, method, otitle, study, cand = m.map(r["title"])
             n[method] += 1
-            w.writerow([r["id"], r["title"], norm, code, method, otitle, study])
+            w.writerow([r["id"], r["title"], norm, code, method, otitle, study, cand])
     print(f"dictionary: {len(m.index)} normalised titles, {len(m.code_count)} codes", file=sys.stderr)
     print("; ".join(f"{k} {v}" for k, v in n.most_common()), file=sys.stderr)
 

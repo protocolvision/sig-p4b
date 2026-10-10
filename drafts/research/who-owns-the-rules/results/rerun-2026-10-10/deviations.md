@@ -47,3 +47,11 @@ Rerun of 10 October 2026. Each entry: what the runbook or design says, what was 
      0.5 or more;
    - seeds take real-record format at merge;
    - the key is held outside git until coding ends, with its SHA-256 committed in `log.md` beforehand.
+
+7. **Location and coverage (review C6).**
+   - S1 was drawn by title without a location filter (the plan says title and location): 32 of 59 postings
+     are non-US, mostly shared-service centres. S1 is not redrawn. Every S1 and I1 rate is reported
+     separately for US and non-US postings, and by sector and firm type, weighted by employer.
+   - Board coverage is 41% of the frame and misses most large tech and finance firms. Features about early
+     adopters and diffusion (N06a, N21, D6) are therefore coded from filings, speech and vendor documents,
+     not from the board crawl.
