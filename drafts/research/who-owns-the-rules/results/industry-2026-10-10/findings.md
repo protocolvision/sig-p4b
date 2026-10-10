@@ -66,6 +66,25 @@ How trading organised rule work for automated actors, and the counterpart for ag
 5. **Private gatekeepers may move first.** Card networks, app stores and browsers set rules for automated
    actors without law. Payment networks' rules for agents that buy are a candidate first lever (to verify).
 
+## 3a. The chokepoint test
+
+The red team named one piece of evidence that would most change the forecast: whether a gatekeeper
+already imposes binding rules on agent actions, as exchanges do on orders (`gatekeepers.md`, all grade S).
+
+- **Card payments: yes, reportedly.** Visa's agentic transaction rules (April 2026) reportedly bind
+  agentic payment providers to cardholder consent, identity checks, instructions with an expiry and record
+  keeping; Mastercard admits only registered, verified agents to Agent Pay. The Visa rule text was not seen.
+- **Single platforms: yes, by contract.** Amazon requires agents to identify themselves and stop on request
+  (seller agreement from March 2026); Google Play bars autonomous agent control through accessibility
+  services (January 2026); Microsoft gives every new Copilot Studio agent an identity with a sponsor.
+- **Agent actions in general: no.** Model providers prohibit misuse; clouds offer limits, logging and kill
+  switches as options. No rule requires customers to limit, log or be able to stop their agents in general.
+
+**Consequence for the forecast.** Trading's path (inventory, limits under the firm's control, named
+owners) is likely to carry to agents that spend money or act on large platforms, and to regulated
+finance. For other agent work, the control industry is the better guide: no internal decider until
+outside rules arrive.
+
 ## 4. Predictions to register
 
 | By | Prediction | Probability | Check against |

@@ -213,7 +213,7 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
   <li><div><b>That silence is expected, and weak evidence.</b> Applied early to past roles, the same method would have missed brand management, the CISO and site reliability engineering, whose authority came from internal agreements that stayed private for years. <span class="conf">Medium confidence</span></div></li>
   <li><div><b>Algorithmic trading and the electricity grid are the nearest industries, effectively tied.</b> Both have software acting on its own at machine speed, under rules encoded in systems and set from outside. Hospitals, our first idea, ranked last. <span class="conf">High for the pair; low for either alone</span></div></li>
   <li><div><b>In large regulated trading firms, rule work settled into three forms.</b> A mid-level risk and control team monitors and holds the kill switch; the people who design and change algorithms are registered or certified; the CEO or a named senior manager answers for the controls. The grid instead wrote its rules through industry committees, and smaller organisations let individuals own rule changes. <span class="conf">Medium confidence</span></div></li>
-  <li><div><b>The kind of outside pressure shapes the structure.</b> Law produced named persons and certification; industry bodies produced committees and standards; where no pressure applied, as with retail pricing engines, no structure formed. Our pre-registered claim that structures form only after a law did not hold. <span class="conf">Medium confidence</span></div></li>
+  <li><div><b>The kind of outside pressure shapes the structure.</b> Law produced named persons and certification; industry bodies produced committees and standards; where no pressure applied, as with retail pricing engines, no structure formed. Our pre-registered claim that structures form only after a law did not hold. For agents, the first outside rules already exist where they pay or act on large platforms: card networks and Amazon, Google Play and Microsoft set binding terms. <span class="conf">Medium confidence</span></div></li>
 </ol>
 <p class="small muted" style="margin-top:1rem">All evidence comes from search-engine summaries; no source page could be opened. Two red-team reviews argued against each study; their objections are on page 5.</p>
 </div>
@@ -222,7 +222,7 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <div class="pageno">Page 2 · How we studied it</div>
 <div class="col">
 <h2>Three studies, each designed against our own bias</h2>
-<p>Our early work started from job titles and our own idea of "protocol work", which invites confirmation. Each study below fixed its questions, rules and thresholds in the repository before collecting evidence.</p>
+<p>Each study fixed its questions, rules and thresholds in the repository before collecting evidence, to keep our own idea of "protocol work" from steering it.</p>
 </div>
 <figure class="loop">
 <div class="figbox">
@@ -309,6 +309,12 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <figcaption>Selected events from a 55-event timeline. Colour shows the layer: green for noticing deviations, blue for designing limits, amber for deciding changes. Most structures inside firms followed an exchange rule or a law; some industry controls came before the failures that are usually credited with them.</figcaption></figure>
 
 <div class="col">
+<h3>Do agents already have an exchange?</h3>
+<p>Trading's rules spread because exchanges sit between every order and the market. For agents, the nearest equivalents exist in two places. Card networks reportedly bind agent payment providers to consent, identity checks and expiring instructions (Visa, April 2026), and Mastercard admits only registered agents. Large platforms impose rules by contract: Amazon requires agents to identify themselves and stop on request, Google Play bars autonomous control through accessibility services, and Microsoft gives every new Copilot Studio agent a named sponsor. For agent actions in general, clouds and model providers offer limits and kill switches only as options.</p>
+<p>So trading's path is likeliest for agents that spend money or act on large platforms, and in regulated finance. Elsewhere the retail control case is the better guide.</p>
+</div>
+
+<div class="col">
 <h3>What a company running agents may look like</h3>
 <p>Translating trading's structures to agent-run business gives three stages. Choose one to see which structures exist. Green edges mark noticing deviations, blue designing rules, amber deciding changes.</p>
 </div>
@@ -374,10 +380,10 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
 <p><b>Protocol engineering becomes a certified specialty, not a job title.</b> Trading registered the people who design and change algorithms, at mid level, inside existing desks. Today's agent evidence already shows rule design as a duty inside service, legal, sales and IT roles.</p>
 <p><b>Protocol vision becomes the inventory, then monitoring.</b> When trading's stakes rose, regulators required firms to list every algorithm, its limits and its operator, and to define a material change. Finding unwritten rules is the work of building that list; keeping it true is the work of a risk and control team.</p>
 <p><b>In large firms, cross-functional rule decisions sit with a named executive or a committee.</b> A protocol lead there prepares these decisions rather than owning them. Smaller and community organisations let individuals own them.</p>
-<p><b>Outside regulated finance, expect duties until outside rules arrive.</b> The candidates are rules from payment networks and platforms that agents act through, a costly agent failure, and the EU AI Act's oversight duties (dates differ between sources).</p>
+<p><b>Watch the chokepoints.</b> Card networks and large platforms already set binding rules for agents that pay or act through them. Firms whose agents spend money will need an inventory and named owners first; for other agent work, expect duties until outside rules arrive.</p>
 
 <div class="note" id="redteam">
-<p><b>Red-team reviews.</b> <span id="rtText">Study 1: clusters followed their source types; no rule-design record showed a person doing the work; the coders were the same model; the clustering was unstable. Study 3: trading and the grid are effectively tied, and with the grid as the analogue the "only after a law" claim fails; the three-forms claim fails its own test, since individuals own cross-functional rule changes in some organisations; "incidents set the clock" was added after the fact; and trading has features agent-run business lacks: one unit of action (an order), a closed population of registered firms, and exchanges as chokepoints. What survives: the pair as the nearest analogue; finance regulators reusing their templates (an inventory, a defined material change, a kill function, a named senior owner) for agents; and pressure shaping form.</span></p>
+<p><b>Red-team reviews.</b> <span id="rtText">Study 1: clusters followed their source types, no rule-design record showed a person doing the work, and the clustering was unstable. Study 3: trading and the grid are effectively tied; the three-forms claim fails its own test; and trading has features agent-run business lacks (one unit of action, a closed population of registered firms, exchanges as chokepoints). What survives: the pair as the nearest analogue, finance regulators reusing their templates for agents, and pressure shaping form.</span></p>
 </div>
 
 <h3>Limits and assumptions to pressure-test</h3>
@@ -385,7 +391,6 @@ footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem;
   <li>Every fact rests on search-engine summaries; quotes, dates and figures need checking against originals.</li>
   <li>All agents share one model and its knowledge of how past roles and industries turned out.</li>
   <li>Trading's automated actions are uniform and measured in money; agents act across many kinds of work.</li>
-  <li>We chose the industry dimensions and weights; a different weighting could change the ranking.</li>
   <li>We build Business Protocol Management, so findings that rule work matters suit us. The main findings here run against our earlier view of a single protocol role.</li>
 </ul>
 <h3>Next</h3>
