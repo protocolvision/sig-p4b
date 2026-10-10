@@ -114,7 +114,7 @@ def submit(a):
             custom_id=cid,
             params=MessageCreateParamsNonStreaming(
                 model=a.model,
-                max_tokens=200,
+                max_tokens=2000,  # Haiku 5.5 thinks before answering; 200 truncated about 7% of answers
                 system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
                 output_config={"effort": "low", "format": {"type": "json_schema", "schema": schema(cands)}},
                 messages=[{"role": "user", "content": f"Title: {title}\n" + (f"Department: {dept}\n" if dept else "") + f"\nCandidates:\n{listing}"}],
