@@ -169,3 +169,34 @@ Each forecast is a dated, checkable statement with a probability.
 - First availability is not adoption.
 - Archive captures are upper bounds.
 - Vendor announcements overstate what ships.
+
+## Addendum 2 (11 October 2026, before collection): Phase 4b, comparison with conventional enterprise software controls, and an explainer on reach
+
+**Question.** How do controls on AI agents and models differ from the controls firms already use on conventional software and automation? What can each kind of control reach and guarantee?
+
+**Additional comparison domains** (official documentation; same extraction format as Phase 4):
+7. **Application access control:** role- and attribute-based access in enterprise SaaS (e.g. Salesforce profiles and permission sets, Microsoft Entra app roles).
+8. **ERP segregation of duties:** SAP or Oracle access controls and approval workflows (e.g. SAP GRC Access Control, Oracle Risk Management Cloud).
+9. **Robotic process automation:** bot credentials, unattended robot permissions and orchestration controls (UiPath Orchestrator, Microsoft Power Automate).
+10. **API gateways and web application firewalls:** schema validation, rate limiting, IP and geo rules, managed rule sets (e.g. AWS WAF, Azure API Management, Cloudflare WAF).
+11. **Feature flags and release controls:** targeting rules, gradual rollout, kill switches (e.g. LaunchDarkly, Azure App Configuration).
+
+**Reach and guarantee coding.** For every control category in all domains, and for each agent taxonomy category, we code:
+- **determinism:**
+  - **deterministic:** the same input always gets the same decision, as with an allow-list, permission or fixed limit;
+  - **probabilistic:** the decision comes from a classifier or model with an error rate, as with content filters or injection detection;
+  - **mixed.**
+- **position:**
+  - **inside** the logic being controlled, as with ordinary software, whose code paths can be written and tested;
+  - **at the boundary** around a component whose behaviour is not specified in code, as with an LLM.
+- **reach:** what it can cover. Options are company-owned systems only, any system the identity touches, or the end user's own tools. This draws on the personal-AI study.
+- **documented failure modes:** fails open, fails closed, coverage gaps. Taken from the "documented limitation" rows in the inventory.
+
+**Explainer.** The report includes a reader-facing section on how agent controls differ from the controls people know:
+- rules written in plain language;
+- probabilistic enforcement with error rates;
+- controls placed at the boundary rather than inside the logic;
+- short-lived runs;
+- reach that stops at what the firm owns.
+
+Each point is tied to evidence rows and carries a confidence chip.
