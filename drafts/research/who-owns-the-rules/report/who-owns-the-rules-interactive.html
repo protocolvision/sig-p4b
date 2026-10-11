@@ -63,6 +63,19 @@ blockquote cite { display: block; font: normal 400 12px/1.5 var(--mono); color: 
 .checklist input:checked + label .ck-text b { color: var(--muted); }
 .checklist input:focus-visible + label .ck-box { outline: 2px solid var(--cob); outline-offset: 2px; }
 @media (max-width: 520px) { .checklist label { grid-template-columns: 1.6rem minmax(0, 1fr); } .checklist label::before { display: none; } }
+table.cmp2 { min-width: 46rem; }
+table.cmp2 th[scope=row] { font-weight: 600; width: 22%; }
+table.cmp2 td:last-child { color: var(--fg); font-weight: 600; }
+@media (max-width: 640px) {
+  table.cmp2 { min-width: 0; }
+  table.cmp2 thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.cmp2 tr { display: block; border-bottom: .75px solid var(--muted); padding: .6rem 0; }
+  table.cmp2 th, table.cmp2 td { display: block; width: auto !important; border: 0; padding: .2rem 0; }
+  table.cmp2 td::before { display: block; font: 400 11px var(--mono); letter-spacing: .06em; color: var(--muted); text-transform: uppercase; }
+  table.cmp2 td:nth-of-type(1)::before { content: "Data operations"; }
+  table.cmp2 td:nth-of-type(2)::before { content: "Financial controls"; }
+  table.cmp2 td:nth-of-type(3)::before { content: "Agent operations"; }
+}
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* top bar */
@@ -94,6 +107,12 @@ blockquote cite { display: block; font: normal 400 12px/1.5 var(--mono); color: 
 .hero .dek { font-size: 1.2rem; line-height: 1.55; color: #d9d6cf; max-width: 34rem; }
 .hero canvas { width: 100%; display: block; }
 .hero .caption { font: 400 12px/1.5 var(--mono); color: var(--band-muted); margin-top: .5rem; }
+.hero-legend { display: flex; flex-wrap: wrap; gap: .35rem 1rem; align-items: center; }
+.hero-legend > span:first-child { flex-basis: 100%; color: var(--band-fg); }
+.hero-legend .hl { display: inline-flex; align-items: center; gap: .4rem; }
+.hero-legend .sw { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.hero-legend .sw-o { background: #8b8982; opacity: .6; } .hero-legend .sw-r { background: #d9d6cf; } .hero-legend .sw-l { background: #4fb897; }
+.hero-legend .sw-f { width: 11px; height: 11px; border: 1.2px solid #7ba6ff; background: transparent; box-sizing: border-box; }
 .hero-pause { all: unset; cursor: pointer; color: var(--band-cob); font: 400 12px/1 var(--mono); letter-spacing: .04em; padding: 16px 0; margin: -10px 0 -16px; display: inline-block; text-decoration: underline; text-underline-offset: .2em; text-decoration-thickness: 1px; }
 .hero-pause:focus-visible { outline: 2px solid var(--band-cob); outline-offset: 2px; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 2.6rem; border-top: .5px solid #4a4944; }
@@ -421,7 +440,8 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       </div>
       <figure style="margin:0">
         <canvas id="hero-c" width="560" height="380" role="img" aria-label="771 statements from practitioners about their work with agents, drawn as dots. 149 describe running agents, 21 setting their limits, one finding an unwritten rule, none deciding a change across functions."></canvas>
-        <figcaption class="caption">Each dot is one thing a practitioner said about their work with agents. Light: running agents. Green: setting their limits. The single blue ring: the only statement about finding an unwritten rule. No dot describes deciding a change. <button class="hero-pause" id="hero-pause" type="button" hidden>Pause motion</button></figcaption>
+        <figcaption class="caption hero-legend"><span>771 practitioner statements, one dot each</span>
+          <span class="hl"><i class="sw sw-o"></i>other work</span><span class="hl"><i class="sw sw-r"></i>running agents</span><span class="hl"><i class="sw sw-l"></i>setting limits</span><span class="hl"><i class="sw sw-f"></i>finding an unwritten rule (1)</span></figcaption>
       </figure>
     </div>
     <div class="stats">
@@ -533,6 +553,26 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       <blockquote>Review and approve complex chargeback claims … pricing exceptions<cite>Amgen job posting, 2026</cite></blockquote></div>
   </div>
   <p class="narrow" style="margin-top:1rem">Written documents tell the same story. In all eight comparison domains, a public document names who approves rule changes. For agents, documents name deciders for AI use in general; only Microsoft Entra’s vendor documentation names approvers for changes to an agent’s access.</p>
+</section>
+
+<section class="explore in" id="paradigms" aria-labelledby="paradigms-h">
+  <p class="kick">Context · Compared with other control paradigms</p>
+  <h2 id="paradigms-h" class="narrow">Agent operations differs from data and financial controls in what is controlled, who edits it, and where it runs</h2>
+  <p class="narrow">Data teams and financial controllers have run rules for decades. Set side by side, agent operations stands out in five ways. Each row carries its own confidence.</p>
+  <div class="scroll" tabindex="0" role="region" aria-label="Agent operations compared with data operations and financial controls">
+  <table class="plain cmp2">
+    <thead><tr><th scope="col">What differs</th><th scope="col">Data operations</th><th scope="col">Financial controls</th><th scope="col">Agent operations</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">The unit you control <span class="ib" data-chip="High">Documented on every agent platform we examined: a design lasts, runs created from it last minutes or hours. Bank model-risk guidance gives each model an owner.</span></th><td>Lasting pipelines, datasets and models; a bank model has a named owner</td><td>Lasting algorithms, credit policies and price lists, each with an owner</td><td>A lasting design plus many short-lived runs: designs can be owned, runs only traced</td></tr>
+      <tr><th scope="row">How rules are written and changed <span class="ib" data-chip="High">15 of 26 products document an admin role that edits agent limits; practitioners describe changing guardrails themselves.</span></th><td>In code and schemas, by data engineers</td><td>In risk systems and policy documents, by specialist teams</td><td>In plain language, in each vendor’s admin settings, by whoever holds the admin role, often the staff running the agent</td></tr>
+      <tr><th scope="row">Who decides changes <span class="ib" data-chip="Low">Exploratory re-code: all 9 agent decision duties set standards; elsewhere 11 of 26 approve specific changes. Fragile, and partly explained by architect roles.</span></th><td>Data owners approve access to their data</td><td>Committees and named approvers sign off individual changes and exceptions</td><td>A standards owner is emerging; approval of individual changes is not yet assigned</td></tr>
+      <tr><th scope="row">What the law asks for <span class="ib" data-chip="High">From the legal texts read in full: trading rules, GDPR, the EU AI Act and Colorado SB26-189.</span></th><td>A named data protection officer (GDPR)</td><td>Named owners of algorithm changes, licensed algorithm designers, a CEO who certifies controls</td><td>A trained overseer for high-risk uses only (hiring, lending, insurance, health); no law names agents</td></tr>
+      <tr><th scope="row">Where the work runs <span class="ib" data-chip="High">Company controls reach only what the company owns; personal subscriptions on personal devices sit outside them. The personal-device cells are reasoned from how controls work.</span></th><td>On company platforms</td><td>On company and exchange systems only</td><td>Also on staff members’ own AI subscriptions, beyond the reach of company controls</td></tr>
+      <tr><th scope="row">How fast it formalised <span class="ib" data-chip="Medium">Dated milestones from our role profiles and Internet Archive captures; start dates are a judgement.</span></th><td>Data science: about 5 years to a certification, 9 to an occupation code</td><td>Decades to binding law</td><td>About 2.4 years to an agent-named credential; deployer duties scheduled within 4 to 5</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small narrow">Data operations is covered here through data-science milestones and bank model-risk guidance, not a separate study.</p>
 </section>
 
 <section class="explore in" id="devops" aria-labelledby="devops-h">
@@ -833,7 +873,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     update();
   })();
 
-  // ---- hero: 771 dots drifting; one blue ring. Motion stops after 20 s, offscreen, or on Pause.
+  // ---- hero: 771 dots drifting; one blue ring. Motion stops after 5 s (so no pause control is needed) or when offscreen.
   (function () {
     var cv = $('hero-c'), P = statements(11), f, btn = $('hero-pause'), running = !reduce, seen = true, t0 = performance.now(), raf = 0, tLast = t0;
     function size() { f = fitCanvas(cv, Math.round(cv.clientWidth * .68)); }
@@ -848,13 +888,12 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       });
       c.globalAlpha = 1; tLast = t;
     }
-    function label() { btn.textContent = running ? 'Pause motion' : 'Play motion'; }
-    function loop(t) { raf = 0; if (!running || !seen) return; if (t - t0 > 20000) { running = false; label(); return; } draw(t); raf = requestAnimationFrame(loop); }
+    function label() { if (btn) btn.textContent = running ? 'Pause motion' : 'Play motion'; }
+    function loop(t) { raf = 0; if (!running || !seen) return; if (t - t0 > 5000) { running = false; label(); return; } draw(t); raf = requestAnimationFrame(loop); }
     function kick() { if (running && seen && !raf) raf = requestAnimationFrame(loop); }
     size(); draw(t0);
     if (!reduce) {
-      btn.hidden = false; label();
-      btn.addEventListener('click', function () { running = !running; if (running) t0 = performance.now(); label(); kick(); });
+      if (btn) { btn.hidden = false; label(); btn.addEventListener('click', function () { running = !running; if (running) t0 = performance.now(); label(); kick(); }); }
       if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { seen = es[0].isIntersecting; kick(); }).observe(cv);
       kick();
     }
