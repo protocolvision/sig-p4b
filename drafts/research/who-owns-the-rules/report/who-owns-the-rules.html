@@ -205,7 +205,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
       <div class="bx a-fade" style="--d:1100ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 2"/></svg>Overseers</b><span>named by law to oversee AI, from 2027</span></div>
     </div>
     <div class="row" style="margin-top:.75rem">
-      <div class="bx a-fade" style="--d:1400ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="var(--accent)" stroke-width="1"/></svg>Admins</b><span>change an agent’s rules in each tool’s settings</span></div>
+      <div class="bx a-fade" style="--d:1400ms"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="var(--accent)" stroke-width="1"/></svg>Admins</b><span>edit agent designs in each tool’s settings</span></div>
       <div class="seat a-fade" style="--d:1800ms;margin-top:0">Decides when an agent’s rules change<span>rarely named in the public record</span></div>
     </div>
   </div>
@@ -213,7 +213,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
 </figure>
 <section class="abstract" id="abstract" aria-labelledby="abs-h">
   <p class="n" id="abs-h" style="border-top:0;padding-top:0">ABSTRACT</p>
-  <p>AI agents now act under rules about what they may spend, see and say, and when a person must step in. We asked who finds, designs and changes those rules, and whether AI is reshaping firms the way DevOps did. We read 118,526 job postings, 1,167 company filings, 38 practitioner recordings, 19 laws and policies and documents from 12 vendors. The tests were fixed in advance, and blind coding was checked against hidden examples. Running agents is common, and existing staff do it. Designing agents’ limits is a minority duty whose one stable home is AI security review. Finding unwritten rules and deciding changes across functions barely appear. Inside the products, an agent’s rules are changed in admin settings by whoever holds the admin role; the decision behind a change is rarely named. The law will require overseers, not rule owners, and vendors are setting the pace. Inside teams the work looks like DevOps; in hiring it looks like a scarce-skills boom. We recommend four steps: name an owner for each agent’s limits where agents already run; keep a register of agents and their limits that the firm controls; name overseers before 2027; and test the rest in a pilot and in field work in twenty firms.</p>
+  <p>AI agents now act under rules about what they may spend, see and say, and when a person must step in. We asked who finds, designs and changes those rules, and whether AI is reshaping firms the way DevOps did. We read 118,526 job postings, 1,167 company filings, 38 practitioner recordings, 19 laws and policies and documents from 12 vendors. The tests were fixed in advance, and blind coding was checked against hidden examples. Running agents is common, and existing staff do it. Designing agents’ limits is a minority duty whose one stable home is AI security review. Finding unwritten rules and deciding changes across functions barely appear. Inside the products, an agent’s rules are changed in admin settings by whoever holds the admin role; the decision behind a change is rarely named. The law will require overseers, not rule owners, and vendors are setting the pace. Inside teams, the work is spreading the way DevOps did; in hiring, it looks like a race for scarce AI skills. We recommend four steps: name an owner for each agent’s limits where agents already run; keep one list of the agent platforms and designs the firm uses, and make every agent action traceable; name overseers before 2027; and test the rest in a pilot and in field work in twenty firms.</p>
 </section>
 
 <main>
@@ -309,6 +309,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
     <figcaption>One mark per product, from documentation stored on 10 October 2026. Four products’ documentation could not be retrieved (JavaScript-only or gated pages), which is not the same as silence.</figcaption>
   </figure>
   <p style="margin-top:1.4rem">The products also show a second layer. Several pair the person who edits with someone who decides: Salesforce says guardrails “are controlled by your admin and typically signed off by your internal leadership or key decision-makers”, and Microsoft lists “Sponsors: Business representatives accountable for the agent’s purpose and lifecycle decisions” beside technical owners. In practice, people running agents describe changing them themselves (“We changed the guard rails”), while postings describe governance roles that “Define how AI agents are provisioned, governed, monitored, and decommissioned.” So the change has an owner, a product permission; the sign-off behind it has no named holder outside a few vendor role designs and one company’s committee.</p>
+  <p>One more fact shapes what can be owned. On every platform we examined, an agent is two things: a design that lasts (a configuration of instructions, tools and limits) and runs created from it that last minutes or hours, often many at once. AWS runs each agent session in its own isolated machine and deletes it when the session ends; Microsoft describes agents that “might exist for minutes”. Vendor registries list designs, not runs. What can be owned is the design and the identity it acts under; what can be traced is each run, through logs that link it to its design and to whom it acted for. No law asks firms to register agents: the EU registers high-risk AI systems, Colorado regulates automated decision tools, and UK bank guidance inventories trading algorithms.</p>
   <p class="small">The test we fixed in advance asked for two-thirds of products to document a named role that changes limits; 15 of 26 do (58%), so the strict reading is mixed, not a confirmation. The speech evidence for changes made in tools rests mainly on two speakers. Documentation shows what products allow, not what firms do.</p>
 </section>
 
@@ -318,11 +319,11 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   <div class="arch"><h3>Name an owner for each agent’s limits</h3>
     <p>In most products the change itself is already an admin permission; what is missing is who decides it. So give each agent a named owner for its limits: what it may spend, see and say, and when it hands over to a person. The owner signs off changes; the admin makes them. Start with the security or governance reviewers who already assess AI, at senior practitioner level, with the staff who run the agent proposing changes. It is a duty added to existing roles, not a new executive post.</p>
     <p class="small">Follows from findings 1–3 and the product documentation. Low confidence on where it sits: the security bundle rests largely on one posting.</p></div>
-  <div class="arch"><h3>Keep one register of agents and their limits, under the firm’s control</h3>
-    <p>Vendors now ship agent registries, sponsor and owner roles, and rename their products within about three years, and each product keeps its own admin settings. A register that lists every agent, its owner, who holds its admin permission and its written limits across vendors keeps the rules with the firm when a vendor console changes. It is also the artefact an overseer needs.</p>
-    <p class="small">Follows from finding 5. Low to moderate confidence: untested against simply using each vendor’s registry.</p></div>
+  <div class="arch"><h3>List agent platforms and agent designs, and make every agent action traceable</h3>
+    <p>Agents are created from designs (a configuration of instructions, tools and limits) and run for minutes or hours on vendors’ platforms, often many at once. Individual runs come and go too quickly to list. So keep one firm-owned list of the AI platforms and agent designs the firm uses, bought or built. For each design, record its limits, the identity and permissions it acts under, and a named owner who signs off changes. Then make sure every action an agent takes is logged and can be traced back to its design and to the person or team it acted for, and keep those records as long as regulators require: at least six months for EU high-risk uses. Some vendors already build this split: Microsoft creates agent identities from a template and requires a named sponsor, a person or group, for each.</p>
+    <p class="small">Follows from finding 5 and our review of how agent platforms work. Moderate confidence: tracing standards are still drafts, and agents defined on the fly in code leave no stored design unless the firm requires one.</p></div>
   <div class="arch"><h3>Name trained overseers before the 2027 deadlines</h3>
-    <p>The EU AI Act requires deployers of high-risk AI to assign people with the “competence, training and authority” to oversee it from December 2027, and Colorado requires on-request review by a designated person who can override a consequential decision from January 2027. Pick them from the owners above, and record their authority in the register.</p>
+    <p>The EU AI Act requires deployers of high-risk AI to assign people with the “competence, training and authority” to oversee it from December 2027, and Colorado requires on-request review by a designated person who can override a consequential decision from January 2027. Pick them from the owners above, and record their authority against each agent design.</p>
     <p class="small">Follows from finding 4. High confidence on what the law requires.</p></div>
   <div class="arch"><h3>Test the rest with a small exception-review pilot</h3>
     <p>Finding unwritten rules and deciding changes that cross functions barely appear in public sources, so they are bets, not findings. Run a review of agent exceptions and overrides in one or two functions, log what it finds and how long each change takes, and judge watching, workshops and simulations, the training for protocol vision, against that log.</p>
@@ -405,7 +406,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
    {
     "id": "F2",
     "headline": "Existing staff and new AI titles share agent work about evenly, and most of the existing jobs are technical",
-    "body": "Existing-title postings with a confirmed agent duty run at 0.86 (0.63–1.15) of new AI-titled postings, short of the 3 to 1 a DevOps-style absorption predicts. About half sit in computing and engineering occupations. AI titles reach 81% of employers but only about 2.5% of postings (6.6% at venture-backed software firms).",
+    "body": "For every 100 job ads with an AI title, about 86 ads with an ordinary title, such as software engineer or IT administrator, also list agent work. About half of those are technical jobs. That is roughly even, short of the 3 to 1 a DevOps-style absorption predicts. AI titles reach 81% of employers but only about 2.5% of postings (6.6% at venture-backed software firms). The 20% sample of other postings matches the unsampled 80% on agent terms (33.2% against 33.5%).",
     "instruments": [
      "I1",
      "I6"
@@ -528,7 +529,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   }
  },
  "patterns": {
-  "headline": "Inside teams agent work looks like DevOps; in hiring it looks like a scarce-skills boom",
+  "headline": "Inside teams, agent work is spreading the way DevOps did. In hiring, it looks like a race for scarce AI skills",
   "dek": "Which pattern wins is open: the test we fixed in advance could not decide it from public sources.",
   "prose": [
    "DevOps formed when existing developers and operators took on each other’s work to coordinate, without a new profession or a law. Speakers describe agent work the same way: existing staff taking it on to coordinate functions. Postings tell the other story. Today’s AI roles ask for or prefer AI-specific experience (27 of 30) and name AI teams (13 of 21), the way data science hired a scarce skill. Coders scored the present on neutral features without seeing pattern names, but ten of fifteen features cannot be judged from public sources, so the match is undecided. Field work inside firms is what settles it."
@@ -1161,7 +1162,7 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   // scroll guide in the left gutter: one short lede per section; the current section is marked as you read
   (function () {
     var secs = [['abstract', 'Abstract', ''], ['p-findings', 'Findings', 'No visible owner for rule changes'], ['p-method', 'Method', 'Eight stable bundles of work'],
-      ['p-patterns', 'Is it DevOps?', 'DevOps inside, a boom in hiring'], ['p-arch', 'Emerging roles', 'Reviewer, operator, builder, overseer'],
+      ['p-patterns', 'Is it DevOps?', 'DevOps-like inside, scarce skills in hiring'], ['p-arch', 'Emerging roles', 'Reviewer, operator, builder, overseer'],
       ['p-tools', 'Where rules change', 'Admins edit, no one named decides'], ['p-rec', 'Recommendation', 'Name an owner first'], ['p-next', 'Next step', 'Look inside twenty firms'], ['p-closing', 'Limits and sources', 'What this rests on']]
       .filter(function (x) { return $(x[0]) && !$(x[0]).hidden; });
     var nav = $('contents'), ol = h('ol'), links = {};
