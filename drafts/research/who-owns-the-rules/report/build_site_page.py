@@ -26,6 +26,7 @@ def build(out):
         '<meta property="og:type" content="article">', '<meta property="og:title" content="Who owns the rules when agents join the business?">',
         f'<meta property="og:description" content="{DESC}">', f'<meta property="og:url" content="{URL}">',
         '<meta name="twitter:card" content="summary">',
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
     ])
     # split the source's head material (links, style) from the body: the body starts at the hidden SVG pattern defs
     i = rest.index('<svg width="0"')
