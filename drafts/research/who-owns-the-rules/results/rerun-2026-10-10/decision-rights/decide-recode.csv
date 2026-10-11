@@ -1,0 +1,36 @@
+id,code,reason
+X006,STANDARD,establish enterprise standards for non-human identity governance
+X020,STANDARD,set engineering standards for deploying agentic AI
+X021,STANDARD,establish enterprise standards and governance incl. release controls
+X027,CHANGE,review and approval of MOPs/SOPs and specific change requests
+X028,STANDARD,own the enterprise control framework
+X045,STANDARD,own design patterns incl. routing/escalation rules; no approval of specific changes
+X047,CHANGE,CAB approvals (approves specific changes)
+X068,CHANGE,govern change approvals and emergency change handling
+X082,STANDARD,define integration tiers and shared requirements; also resolves exceptions (borderline)
+X083,STANDARD,define requirements and standards for authentication/identity governance
+X094,CHANGE,go-live approvals and change management for specific releases
+X101,STANDARD,set launch criteria up front (rule relevance to pricing weak)
+X103,CHANGE,approve changes to configuration items
+X108,STANDARD,define standards for agent onboarding and model governance
+X117,STANDARD,establish global standards for configuration and change management
+X121,STANDARD,set underwriting standards and strategy
+X124,STANDARD,define engineering standards (coding practice; agent-rule relevance weak)
+X127,STANDARD,establish governance and standards for marketing AI agents
+X132,STANDARD,establish standards, decision rights, thresholds and exception paths
+X169,CHANGE,oversee the credit approval process (approves specific credits)
+X179,STANDARD,establish AI governance guardrails and standards
+X190,CHANGE,run pricing intake/review/approval of specific initiatives (borderline)
+X200,STANDARD,own procurement policy and approval thresholds
+X234,STANDARD,establish architecture standards incl. guardrails
+X253,STANDARD,establish engineering standards and reference architectures (agent-rule relevance weak)
+X259,STANDARD,set risk parameters and guardrails up front (borderline: limits)
+X271,STANDARD,own governance of revenue processes incl. pricing approvals (borderline)
+X282,STANDARD,formulate pricing policies
+X334,STANDARD,lead controls and governance framework
+X343,CHANGE,approve specific chargeback claims and pricing exceptions
+X359,CHANGE,assess and own specific regulatory/system changes (borderline; not IT change control)
+X391,STANDARD,create standards for identity and access
+X395,CHANGE,approve transactions over established limits
+X397,CHANGE,oversee policy exceptions and write-offs
+X422,STANDARD,define control requirements and guardrail thresholds

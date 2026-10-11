@@ -24,3 +24,12 @@ Quotes checked verbatim by script against stored files; pass count in the final 
 - Weak or partial: PRO-03 quote verified in text, but the schedule's tables were not read. CHG-01 and ACC-01 are CSF Tools mirrors of NIST SP 800-53 Rev 5. ACC-03 shows only an 'approved by' line plus CIO administrative authority; CHG-03 Rowan's CAB is advisory.
 - Gaps: no ITIL or ISO 20000 official text (paywalled); SVB and Auckland Airport charters, UCSF P&T charter, FFIEC BSA/AML manual page and the SEC 10-K pages were blocked (captcha, bot checks) and are not used; no Joint Commission text (paywalled/sign-in); no US corporate sales discount-approval policy found (PRC rests on one foreign charter, one hospital, GSAM); SR 11-7 uses the Fed attachment PDF.
 - Purposive sample, not a census.
+
+## Review corrections (Opus, review.md)
+
+- Agents: no document names who approves changes to an agent's *rules*. Microsoft Entra Agent ID documentation (vendor, voluntary) names approvers for changes to an agent's *access*: "designated approvers" and sponsors "accountable for making decisions about its lifecycle and access". Only the sponsor role counts as a named decider.
+- AGT-07 (Ohio AI Council) is advisory: recoded as not naming a decider of rule changes.
+- PRC-05 (GSAM) names contract parties, not who approves pricing-rule changes: recoded no; pricing's strongest level is firm policy.
+- FRD-02: the monitoring designee is not a decider; the board-approval line in the same file keeps the yes.
+- CLN-01 names who sets up the formulary, not who approves changes: weak.
+- Limits added: 48 of 60 agent items come from AI-titled postings; "change management" also matched regulatory and organisational change; clinical matched clinical-trial protocols; trading (7) and clinical (5) are too small to read.
