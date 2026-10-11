@@ -347,31 +347,31 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     <tbody>
       <tr><th scope="row"><b>Device</b><span>device management, managed AI settings, endpoint data-loss rules</span></th>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">e.g. Claude Code managed settings pin logins to the company organisation, with documented exceptions</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">the device is not managed (our inference)</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">our inference</span></td></tr>
+        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">the company doesn’t manage the device</span></td>
+        <td class="no inf"><span class="v"><i></i>Not reached</span></td></tr>
       <tr><th scope="row"><b>Browser</b><span>enterprise browser or extension with data rules</span></th>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">in the managed browser profile</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">unless work sign-in requires the managed browser (our inference)</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">our inference</span></td></tr>
+        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">unless work sign-in requires the managed browser</span></td>
+        <td class="no inf"><span class="v"><i></i>Not reached</span></td></tr>
       <tr><th scope="row"><b>Network</b><span>proxy, tenant restrictions, secure web gateway</span></th>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">only traffic the company routes: Microsoft’s tenant restrictions apply to “users on their network”</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">off the company network (our inference)</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">our inference</span></td></tr>
+        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">traffic doesn’t pass through the company network</span></td>
+        <td class="no inf"><span class="v"><i></i>Not reached</span></td></tr>
       <tr><th scope="row"><b>Identity</b><span>single sign-on, capture of accounts on the company domain</span></th>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">company sign-in enforced</span></td>
         <td class="part"><span class="v"><i></i>Partly</span><span class="e">Claude Enterprise domain capture means “no non-Enterprise accounts can exist on your verified domain”; Team plans can only block new ones</span></td>
-        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">a private email address sits outside the company domain (our inference)</span></td></tr>
+        <td class="no inf"><span class="v"><i></i>Not reached</span><span class="e">a private email address sits outside the company’s domain</span></td></tr>
       <tr><th scope="row"><b>Company apps and data</b><span>app-side controls, managed accounts</span></th>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">the company’s own tenants</span></td>
         <td class="yes"><span class="v"><i></i>Reached</span><span class="e">the work account is the company’s</span></td>
-        <td class="part inf"><span class="v"><i></i>Partly</span><span class="e">only when the personal agent uses company credentials to reach company data (our inference)</span></td></tr>
+        <td class="part inf"><span class="v"><i></i>Partly</span><span class="e">only when the personal agent uses company credentials to reach company data</span></td></tr>
       <tr><th scope="row"><b>Policy, training and law</b><span>acceptable-use rules, AI literacy duties</span></th>
         <td class="yes"><span class="v"><i></i>Applies</span></td><td class="yes"><span class="v"><i></i>Applies</span></td>
         <td class="yes"><span class="v"><i></i>Applies</span><span class="e">the only lever left</span></td></tr>
     </tbody>
   </table>
   </div>
-  <p class="small">Cells with a dashed left edge are our inference: no stored source states them. Vendor documentation, fetched 11 October 2026; full sources and quotes in the repository.</p>
+  <p class="small"><span style="display:inline-block;width:0;height:.9em;border-left:1px dashed var(--cob);margin-right:.5rem;vertical-align:-.1em"></span>A dashed edge means the cell follows from how the control works, but no document we collected says it outright. The other cells are stated in vendor documentation or guidance, fetched 11 October 2026; sources and quotes are in the repository.</p>
   <div class="two" style="margin-top:2rem">
     <div>
       <h3>Companies are licensing, not banning</h3>
