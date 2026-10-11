@@ -242,7 +242,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       </figure>
     </div>
     <div class="stats">
-      <div><b data-count="149">149</b><span>of 771 practitioner statements describe running agents</span></div>
+      <div><b data-count="20">20</b><span>of 30 practitioners we recorded describe running agents themselves</span></div>
       <div><b data-count="15">15</b><span>of 26 agent products document an admin role that changes an agent’s rules</span></div>
       <div><b class="cob" data-count="0">0</b><span>statements or postings describe deciding a rule change across functions</span></div>
     </div>
@@ -269,7 +269,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     <div class="steps" data-target="sp">
       <div class="step" data-s="0"><div><h3>771 things people said about working with agents</h3><p>We transcribed 38 recorded talks and podcasts by people who run functions with AI agents and split them into single statements about their work.</p></div></div>
       <div class="step" data-s="1"><div><h3>Most of it is about something else</h3><p>Two coders from different model families sorted each statement blind. 600 describe other work: strategy, adoption, results.</p></div></div>
-      <div class="step" data-s="2"><div><h3>149 describe running agents</h3><p>Supervising, tuning and training agents is the work people talk about.</p><blockquote>she spends 20% of her time managing the agents, orchestrating the agents.<cite>M072 · 2026</cite></blockquote></div></div>
+      <div class="step" data-s="2"><div><h3>149 describe running agents</h3><p>Supervising, tuning and training agents is the work people talk about. Counted by speaker, 20 of the 30 recordings describe it. A few speakers talk at length: three sales managers account for 89 of these statements, so we compare speakers, not statement counts.</p><blockquote>she spends 20% of her time managing the agents, orchestrating the agents.<cite>M072 · 2026</cite></blockquote></div></div>
       <div class="step" data-s="3"><div><h3>21 describe setting what agents may do</h3><p>Limits, guardrails and hand-off rules. In job postings, setting limits is about a quarter of agent-related duties.</p></div></div>
       <div class="step" data-s="4"><div><h3>One describes finding an unwritten rule. None describes deciding a change across functions</h3><p>The coders could see this work: they caught 94–100% of hidden test examples of it. It is simply absent from the public record. The clearest paid example is one engineering duty at Amgen.</p><blockquote>Map rules, exceptions, data dependencies and human decision points before selecting deterministic automation, classical ML, deep learning, GenAI, RAG, agents or a manual approach.<cite>Amgen · Sr Machine Learning Engineer posting · 2026</cite></blockquote></div></div>
     </div>
@@ -318,8 +318,8 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
 
 <section class="explore in" id="where" aria-labelledby="where-h">
   <p class="kick">Explore · Where it sits</p>
-  <h2 id="where-h" class="narrow">Hiring for AI and agent duties sits in technology functions, while running agents is talked about in sales and support</h2>
-  <p class="narrow">Each row is a business function; each column is a different measure on its own scale. Technology functions are shaded. The first three columns come from 118,526 job postings, the last from practitioner recordings.</p>
+  <h2 id="where-h" class="narrow">Hiring for AI and agent duties sits in technology functions; business functions barely hire for it yet</h2>
+  <p class="narrow">Each row is a business function; each column is a different measure on its own scale. Technology functions are shaded. All three columns come from 118,526 job postings.</p>
   <div class="scroll fnwrap pre" id="fnwrap" tabindex="0" role="region" aria-label="Measures by business function"><table class="fn" id="fn"></table></div>
   <p class="small narrow" style="margin-top:.8rem">Read with care: functions were assigned from job titles and occupation codes (about 82% right on a blind check, 95% counting defensible alternatives). Agent-duty shares for data and AI and for security are conservative. Governance duties are counted from a keyword family checked at 85% precision. Only 7.8% of AI-titled postings state who the role reports to, so reporting lines cannot be mapped yet.</p>
 </section>
@@ -604,12 +604,12 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       ['Finance and accounting', 0, [0.5, 0.3, 1.1], [1.7, 1.2, 2.4], [1.2, 0.4, 2.1], 17],
       ['Operations and supply chain', 0, [0.4, 0.3, 0.8], [1.5, 1.0, 2.1], [0.5, 0.3, 0.8], null],
       ['Healthcare and clinical', 0, [0.1, 0.0, 0.5], [0.2, 0.1, 0.3], [0.0, 0.0, 0.0], null]];
-    var COLS = [['Asked for', 'AI titles, % of postings', 20, '%'], ['Agent duties', 'existing jobs with a confirmed agent duty, %', 14, '%'], ['Controls', 'AI-governance duties per 1,000', 14, ''], ['Talked about', 'practitioner statements about running agents', 100, '']];
+    var COLS = [['Asked for', 'AI titles, % of postings', 20, '%'], ['Agent duties', 'existing jobs with a confirmed agent duty, %', 14, '%'], ['Controls', 'AI-governance duties per 1,000', 14, '']];
     var t = $('fn'), thr = h('tr'); thr.appendChild(h('th', {scope: 'col', text: 'Function'}));
     COLS.forEach(function (c, i) { var th = h('th', {scope: 'col', 'class': 'col', style: 'transition-delay:' + i * 500 + 'ms'}, [h('b', {text: c[0]}), c[1]]); thr.appendChild(th); });
     t.appendChild(h('thead', {}, [thr])); var tb = h('tbody');
     function cell(v, max, unit, bar, ci) {
-      var td = h('td', {'class': 'col', style: 'transition-delay:' + ci * 500 + 'ms;width:20%'});
+      var td = h('td', {'class': 'col', style: 'transition-delay:' + ci * 500 + 'ms;width:26%'});
       var sv = s('svg', {viewBox: '0 0 200 18', preserveAspectRatio: 'none'});
       sv.appendChild(s('line', {x1: 0, x2: 160, y1: 9, y2: 9, stroke: C.hair, 'stroke-width': .5}));
       if (v == null) { sv.appendChild(s('text', {x: 2, y: 13}, '–')); td.appendChild(sv); return td; }
@@ -621,7 +621,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     }
     D.forEach(function (r) {
       var tr = h('tr', {'class': r[1] ? 'tech' : ''}, [h('th', {scope: 'row', text: r[0]})]);
-      tr.appendChild(cell(r[2], 20, '%', false, 0)); tr.appendChild(cell(r[3], 14, '%', false, 1)); tr.appendChild(cell(r[4], 14, '', false, 2)); tr.appendChild(cell(r[5], 100, '', true, 3));
+      tr.appendChild(cell(r[2], 20, '%', false, 0)); tr.appendChild(cell(r[3], 14, '%', false, 1)); tr.appendChild(cell(r[4], 14, '', false, 2));
       tb.appendChild(tr);
     });
     t.appendChild(tb);
@@ -629,7 +629,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     var wrap = $('fnwrap');
     if (reduce || !('IntersectionObserver' in window)) wrap.classList.remove('pre');
     else { var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { wrap.classList.remove('pre'); io.disconnect(); } }, {threshold: .25}); io.observe(wrap); }
-    var note = h('p', {'class': 'small', text: 'Talked about: 170 statements about running agents, by the speaker’s function (sales and revenue operations 89, support 26, finance 17, IT 11, engineering 10; a dash means none recorded in that function). Dots show estimates, lines their 95% intervals.'}); wrap.parentNode.insertBefore(note, wrap.nextSibling);
+    var note = h('p', {'class': 'small', text: 'Dots show estimates, lines their 95% intervals. Practitioner recordings are not split by function here: a few speakers who talk at length about their own agents dominate statement counts.'}); wrap.parentNode.insertBefore(note, wrap.nextSibling);
   })();
   // ---- DevOps lenses and clock
   (function () {
