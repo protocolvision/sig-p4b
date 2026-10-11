@@ -153,3 +153,17 @@ ts,kind,query_or_url,status,bytes,note
 2026-10-11T09:26:50,fetch,https://www.credo.ai/blog/credo-ai-announces-the-worlds-first-responsible-ai-governance-platform,404,849,
 2026-10-11T09:26:50,wayback-cdx,"http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/power-virtual-agents/admin-data-loss-prevention&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",200,150,wb-pva-dlp
 2026-10-11T09:26:50,fetch,https://aiwire.net/2022/04/27/credo-ai-announces-responsible-ai-governance-platform,403,760,
+2026-10-11T09:26:57,wayback-snapshot,http://web.archive.org/web/20230421153620id_/https://learn.microsoft.com/en-us/power-virtual-agents/admin-data-loss-prevention,200,11781,wb-pva-dlp
+2026-10-11T09:27:33,wayback-cdx,"http://web.archive.org/cdx/search/cdx?url=docs.github.com/en/copilot/managing-github-copilot-in-your-organization/configuring-content-exclusions-for-github-copilot&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",200,198,wb-gh-contentexcl
+2026-10-11T09:27:40,wayback-snapshot,http://web.archive.org/web/20240306204531id_/https://docs.github.com/en/copilot/managing-github-copilot-in-your-organization/configuring-content-exclusions-for-github-copilot,200,18117,wb-gh-contentexcl
+2026-10-11T09:27:51,wayback,"http://web.archive.org/cdx/search/cdx?url=credo.ai/product&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",503,11832,backoff
+2026-10-11T09:28:26,wayback,"http://web.archive.org/cdx/search/cdx?url=credo.ai/product&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",503,11832,backoff
+2026-10-11T09:30:10,wayback-cdx,"http://web.archive.org/cdx/search/cdx?url=credo.ai/product&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",200,97,wb-credo-product
+2026-10-11T09:30:12,fetch,https://www.unite.ai/?p=181283,403,107,
+2026-10-11T09:30:13,fetch,https://www.silicon.co.uk/press-release/credo-ai-unveils-its-integrations-hub-connecting-the-enterprise-technology-stack-with-seamless-ai-governance,200,6794,
+2026-10-11T09:30:13,fetch,https://www.businesswire.com/news/home/20240730411517/en/Credo-AI-Announces-21-Million-in-New-Capital-Grows-Leadership-Team-to-Match-the-Rapid-Pace-of-AI-Innovation-Emerges-as-the-Standard-of-Responsible-AI-Governance,000,0,
+2026-10-11T09:30:17,wayback-snapshot,http://web.archive.org/web/20210805151400id_/https://www.credo.ai/product,200,2242,wb-credo-product
+2026-10-11T09:30:22,wayback,"http://web.archive.org/cdx/search/cdx?url=docs.uipath.com/ai-trust-layer&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",000,0,backoff
+2026-10-11T09:31:01,wayback-cdx,"http://web.archive.org/cdx/search/cdx?url=docs.uipath.com/ai-trust-layer&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",200,3,wb-uipath-trust
+2026-10-11T09:31:13,wayback,"http://web.archive.org/cdx/search/cdx?url=help.salesforce.com/s/articleView?id=sf.generative_ai_trust.htm&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",503,11832,backoff
+2026-10-11T09:31:48,wayback,"http://web.archive.org/cdx/search/cdx?url=help.salesforce.com/s/articleView?id=sf.generative_ai_trust.htm&output=json&limit=1&fl=timestamp,original,statuscode&filter=statuscode:200",503,11832,backoff
