@@ -148,3 +148,4 @@ Branch `rerun-2026-10-10`. Runbook: [`../../RERUN.md`](../../RERUN.md).
 - Controls atlas card sorts: S (Sonnet) 14 objects/7 mechanisms; H (Haiku) 13/7. Agreement on 662: object ARI 0.59 NMI 0.70; mechanism ARI 0.45 NMI 0.59; embedding clusters vs sorts NMI 0.55–0.59. Opus reconciliation next.
 - Controls atlas taxonomy (Opus reconciliation): 14 objects, 7 mechanisms, 11 enforcement points; ARI with sorts: objects 0.78 (S)/0.73 (H), mechanisms 0.73/0.52; NMI vs embedding 0.60. 11 documented-gap rows flagged for exclusion from coverage.
 - Controls atlas verification pool: 120 held-out + 24 seeds = 144, seed 20261015; key SHA-256 prefix ff33a5a6edfa5afc (git-ignored).
+- Controls atlas verification gate PASSED: kappa object 0.86, mechanism 0.87, enforcement point 0.87; seed accuracy 1.00/1.00/0.96 (both coders). Remaining 1,329 controls split for single-coder coding (Sonnet).

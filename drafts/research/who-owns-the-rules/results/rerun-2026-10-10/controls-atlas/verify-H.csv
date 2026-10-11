@@ -1,0 +1,145 @@
+id,object,mechanism,enforcement_point
+K001,"Agent tools and actions",Allow-list or grant,tool_action
+K002,"Agent tools and actions",Allow-list or grant,tool_action
+K003,"Stored data: retention, training use and encryption",Allow-list or grant,data_access
+K004,"Sensitive data in prompts and outputs",Transform or steer,input
+K005,"AI inventory, lifecycle and policy management",Record and report,lifecycle
+K006,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K007,"Autonomy and human handover",Transform or steer,input
+K008,"Data and files the AI can reach",Allow-list or grant,data_access
+K009,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K010,"Agent tools and actions",Allow-list or grant,tool_action
+K011,"Logs, traces and audit records",Record and report,logging_audit
+K012,"Agent tools and actions",Require a human,human_approval
+K013,"Agent tools and actions",Require a human,human_approval
+K014,"Data and files the AI can reach",Block or switch off,data_access
+K015,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K016,"Model choice, routing and caching",Transform or steer,model_call
+K017,"Identity, credentials and access rights",Cap a quantity,identity_permission
+K018,"Answer accuracy and presentation",Transform or steer,output
+K019,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K020,"Autonomy and human handover",Transform or steer,input
+K021,"Agent tools and actions",Block or switch off,tool_action
+K022,"Logs, traces and audit records",Record and report,logging_audit
+K023,"Data and files the AI can reach",Block or switch off,data_access
+K024,"Data and files the AI can reach",Block or switch off,data_access
+K025,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K026,"Agent tools and actions",Block or switch off,tool_action
+K027,"Stored data: retention, training use and encryption",Record and report,data_access
+K028,"Data and files the AI can reach",Block or switch off,data_access
+K029,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K030,"Agent tools and actions",Block or switch off,tool_action
+K031,"Agent tools and actions",Require a human,human_approval
+K032,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K033,"Harmful and off-limits content",Detect and flag,input
+K034,"Agent tools and actions",Require a human,human_approval
+K035,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K036,"Agent tools and actions",Transform or steer,tool_action
+K037,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K038,"Agent tools and actions",Block or switch off,lifecycle
+K039,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K040,"Agent tools and actions",Require a human,human_approval
+K041,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K042,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K043,"Autonomy and human handover",Record and report,logging_audit
+K044,"Network destinations",Allow-list or grant,network_egress
+K045,"Autonomy and human handover",Transform or steer,lifecycle
+K046,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K047,"Harmful and off-limits content",Transform or steer,input
+K048,"Sensitive data in prompts and outputs",Block or switch off,output
+K049,"Agent tools and actions",Require a human,human_approval
+K050,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K051,"Logs, traces and audit records",Record and report,logging_audit
+K052,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K053,"Logs, traces and audit records",Record and report,logging_audit
+K054,"Prompt attacks and untrusted input",Transform or steer,input
+K055,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K056,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K057,"Agent tools and actions",Allow-list or grant,tool_action
+K058,"Identity, credentials and access rights",Require a human,human_approval
+K059,"Agent tools and actions",Allow-list or grant,tool_action
+K060,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K061,"Autonomy and human handover",Require a human,human_approval
+K062,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K063,"Harmful and off-limits content",Detect and flag,output
+K064,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K065,"Stored data: retention, training use and encryption",Block or switch off,data_access
+K066,"Prompt attacks and untrusted input",Detect and flag,input
+K067,"Identity, credentials and access rights",Transform or steer,tool_action
+K068,"Agent tools and actions",Block or switch off,tool_action
+K069,"Agent tools and actions",Allow-list or grant,tool_action
+K070,"Harmful and off-limits content",Block or switch off,input
+K071,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K072,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K073,"Network destinations",Allow-list or grant,network_egress
+K074,"Harmful and off-limits content",Block or switch off,input
+K075,"Autonomy and human handover",Block or switch off,identity_permission
+K076,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K077,"Sensitive data in prompts and outputs",Detect and flag,output
+K078,"Data and files the AI can reach",Allow-list or grant,data_access
+K079,"Agent tools and actions",Block or switch off,tool_action
+K080,"Agent tools and actions",Block or switch off,tool_action
+K081,"Logs, traces and audit records",Record and report,logging_audit
+K082,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K083,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K084,"Prompt attacks and untrusted input",Detect and flag,input
+K085,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K086,"Agent tools and actions",Require a human,human_approval
+K087,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K088,"Autonomy and human handover",Allow-list or grant,identity_permission
+K089,"Harmful and off-limits content",Transform or steer,input
+K090,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K091,"Harmful and off-limits content",Block or switch off,output
+K092,"Autonomy and human handover",Require a human,human_approval
+K093,"Harmful and off-limits content",Block or switch off,input
+K094,"Model choice, routing and caching",Allow-list or grant,model_call
+K095,"Usage, spend and rate limits",Detect and flag,spend_rate
+K096,"Network destinations",Block or switch off,network_egress
+K097,"Agent tools and actions",Block or switch off,tool_action
+K098,"Answer accuracy and presentation",Block or switch off,output
+K099,"Agent tools and actions",Transform or steer,tool_action
+K100,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle
+K101,"Answer accuracy and presentation",Detect and flag,output
+K102,"Network destinations",Allow-list or grant,network_egress
+K103,"Autonomy and human handover",Block or switch off,tool_action
+K104,"Agent tools and actions",Transform or steer,tool_action
+K105,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K106,"AI inventory, lifecycle and policy management",Require a human,human_approval
+K107,"Agent tools and actions",Require a human,human_approval
+K108,"Agent tools and actions",Allow-list or grant,tool_action
+K109,"Autonomy and human handover",Transform or steer,input
+K110,"Harmful and off-limits content",Detect and flag,output
+K111,"Answer accuracy and presentation",Transform or steer,output
+K112,"Network destinations",Allow-list or grant,network_egress
+K113,"Agent tools and actions",Block or switch off,tool_action
+K114,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle
+K115,"Identity, credentials and access rights",Cap a quantity,identity_permission
+K116,"Harmful and off-limits content",Block or switch off,output
+K117,"Stored data: retention, training use and encryption",Cap a quantity,data_access
+K118,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K119,"Sensitive data in prompts and outputs",Block or switch off,tool_action
+K120,"Harmful and off-limits content",Detect and flag,output
+K121,"Agent tools and actions",Allow-list or grant,tool_action
+K122,"Network destinations",Transform or steer,network_egress
+K123,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K124,"Sensitive data in prompts and outputs",Transform or steer,output
+K125,"Harmful and off-limits content",Detect and flag,output
+K126,"Agent tools and actions",Allow-list or grant,tool_action
+K127,"Model choice, routing and caching",Allow-list or grant,model_call
+K128,"Usage, spend and rate limits",Cap a quantity,spend_rate
+K129,"Autonomy and human handover",Transform or steer,input
+K130,"Agent tools and actions",Transform or steer,tool_action
+K131,"Agent tools and actions",Allow-list or grant,tool_action
+K132,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K133,"Harmful and off-limits content",Transform or steer,input
+K134,"Harmful and off-limits content",Block or switch off,input
+K135,"Logs, traces and audit records",Record and report,logging_audit
+K136,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K137,"Agent tools and actions",Allow-list or grant,tool_action
+K138,"Identity, credentials and access rights",Allow-list or grant,identity_permission
+K139,"Autonomy and human handover",Require a human,human_approval
+K140,"Agent tools and actions",Transform or steer,tool_action
+K141,"Sensitive data in prompts and outputs",Transform or steer,output
+K142,"Agent tools and actions",Allow-list or grant,tool_action
+K143,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle
+K144,"Autonomy and human handover",Block or switch off,identity_permission

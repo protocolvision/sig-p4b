@@ -60,3 +60,25 @@ timestamp,kind,request,http_status,note
 2026-10-11T09:20:48,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-and-improved-content-moderation-tooling&output=json&limit=1&filter=statuscode:200,200,CDX first capture
 2026-10-11T09:20:49,fetch,https://cloud.google.com/vertex-ai/generative-ai/docs/configure-safety-attributes-palm,404,gcp-palm-safety-doc
 2026-10-11T09:20:55,wayback,http://web.archive.org/web/20220810163205id_/https://openai.com/blog/new-and-improved-content-moderation-tooling/,200,snapshot fetch oa-moderation-blog
+2026-10-11T09:21:05,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-ways-to-manage-your-data-in-chatgpt&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:21:10,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/introducing-chatgpt-enterprise&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:21:16,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/index/new-tools-for-building-agents/&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:21:21,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/index/introducing-agentkit/&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:21:37,websearch,Anthropic Compliance API announced date,ok,
+2026-10-11T09:21:37,websearch,OpenAI ChatGPT Enterprise Compliance API date,ok,
+2026-10-11T09:21:37,websearch,Bedrock Agents user confirmation launch,ok,
+2026-10-11T09:21:37,fetch,https://www.anthropic.com/news/claude-code-on-team-and-enterprise,200,anthropic-cc-team-enterprise
+2026-10-11T09:21:38,fetch,https://aws.amazon.com/about-aws/whats-new/2024/04/amazon-bedrock-agents-agent-creation-return-control-capability,200,aws-agents-roc
+2026-10-11T09:21:39,fetch,https://www.securityweek.com/openai-rolls-out-compliance-api-and-integrations-for-chatgpt-enterprise/,200,sw-openai-compliance
+2026-10-11T09:21:39,fetch,https://openai.com/index/new-tools-for-chatgpt-enterprise,403,oa-compliance-blog-direct
+2026-10-11T09:22:04,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-ways-to-manage-your-data-in-chatgpt&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:22:21,websearch,AgentCore Policy Guardrails whats-new 2026,ok,
+2026-10-11T09:22:21,websearch,AgentCore Evaluations GA 2026,ok,
+2026-10-11T09:22:22,fetch,https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-policy-guardrails-generally-available/,200,aws-agentcore-policy-guardrails
+2026-10-11T09:22:23,fetch,https://aws.amazon.com/about-aws/whats-new/2026/03/agentcore-evaluations-generally-available,200,aws-agentcore-evals-ga
+2026-10-11T09:22:43,websearch,Azure OpenAI GA Jan 2023 content filtering,ok,
+2026-10-11T09:22:43,websearch,Google Model Armor announcement,ok,
+2026-10-11T09:22:47,fetch,https://cloud.google.com/blog/products/identity-security/introducing-ai-protection-security-for-the-ai-era,200,gcp-ai-protection-blog
+2026-10-11T09:23:01,wayback,http://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,503,health probe (not a research target)
+2026-10-11T09:23:39,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-ways-to-manage-your-data-in-chatgpt&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:23:44,wayback,http://web.archive.org/web/20230425170319id_/https://openai.com/blog/new-ways-to-manage-your-data-in-chatgpt,000,snapshot fetch oa-data-controls-blog backoff
