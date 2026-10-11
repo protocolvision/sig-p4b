@@ -213,6 +213,13 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
 .fn svg text { font: 11px var(--serif); fill: var(--muted); }
 .fn .col { transition: opacity .6s; }
 .fnwrap.pre .col { opacity: 0; }
+/* inquiry box */
+.ask { margin-top: 2rem; border: .5px solid var(--fg); padding: 1.2rem 1.3rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .8rem 1.5rem; align-items: center; max-width: 52rem; }
+.ask h3 { margin: 0 0 .3rem; }
+.ask p { margin: 0; color: var(--muted); font-size: .95rem; }
+.ask a.btn { display: inline-block; background: var(--cob); color: #fff; text-decoration: none; font: 500 13px/1 var(--mono); letter-spacing: .04em; padding: .85rem 1.1rem; white-space: nowrap; }
+.ask a.btn:hover { background: #003a96; }
+@media (max-width: 640px) { .ask { grid-template-columns: 1fr; } }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } .step { opacity: 1; } }
 </style>
@@ -377,6 +384,10 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
   <div class="road" id="road"></div>
   <div class="moves" id="moves"></div>
   <div class="movedetail" id="movedetail" aria-live="polite"></div>
+  <div class="ask" id="inquiry">
+    <div><h3>Who decides your agents’ rules?</h3><p>Send Protocol Vision Advisory a short, anonymised summary of how your firm runs agents. We reply with the protocol to fix first.</p></div>
+    <a class="btn" href="https://protocolvision.org/send/" target="_blank" rel="noopener">Send an inquiry ↗</a>
+  </div>
   <p class="small narrow" style="margin-top:1rem">Don’t hire one senior “protocol lead”: no such posting exists among 25,512, and lasting roles in the past did not start senior. And don’t let vendor consoles hold the only copy of an agent’s rules.</p>
 </section>
 
