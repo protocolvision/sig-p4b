@@ -131,3 +131,24 @@ timestamp,kind,request,http_status,note
 2026-10-11T09:53:49,wayback,http://web.archive.org/web/20250216233200id_/https://ai.google.dev/gemini-api/docs/rate-limits,200,snapshot fetch gemini-rate-limits-doc
 2026-10-11T09:54:01,wayback,http://web.archive.org/cdx/search/cdx?url=cloud.google.com/security-command-center/docs/model-armor-overview&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
 2026-10-11T09:54:51,wayback,http://web.archive.org/cdx/search/cdx?url=cloud.google.com/security-command-center/docs/model-armor-overview&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:56:30,wayback,http://web.archive.org/cdx/search/cdx?url=cloud.google.com/security-command-center/docs/model-armor-overview&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:56:37,wayback,http://web.archive.org/web/20250214030158id_/https://cloud.google.com/security-command-center/docs/model-armor-overview,200,snapshot fetch model-armor-overview-doc
+2026-10-11T09:57:05,wayback,http://web.archive.org/web/20251006183309/https://openai.com/index/introducing-agentkit/,403,snapshot fetch (no id_) oa-agentkit-blog
+2026-10-11T09:57:36,wayback,http://web.archive.org/cdx/search/cdx?url=anthropic.com/legal/aup&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:57:42,wayback,http://web.archive.org/web/20240221160247id_/https://www.anthropic.com/legal/aup,200,snapshot fetch anthropic-aup
+2026-10-11T09:58:03,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:58:10,wayback,http://web.archive.org/web/20221222071211id_/https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy,200,snapshot fetch azure-oai-data-privacy-doc
+2026-10-11T09:58:23,wayback,http://web.archive.org/cdx/search/cdx?url=help.openai.com/en/articles/5955598-is-api-usage-subject-to-any-rate-limits&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:58:30,wayback,http://web.archive.org/web/20220930122003id_/https://help.openai.com/en/articles/5955598-is-api-usage-subject-to-any-rate-limits,200,snapshot fetch oa-help-rate-limits
+2026-10-11T09:59:08,wayback,http://web.archive.org/cdx/search/cdx?url=console.anthropic.com/legal/aup&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:59:15,wayback,http://web.archive.org/web/20230711140126id_/https://console.anthropic.com/legal/aup,200,snapshot fetch anthropic-aup2
+2026-10-11T09:59:27,note,http://web.archive.org/web/20210430143553id_/https://beta.openai.com/docs/engines/content-filter,200,first capture of OpenAI content-filter doc (2021-04-30) is an empty JS shell; no quotable text; page not stored; no event recorded
+2026-10-11T09:59:27,note,http://web.archive.org/web/20230131012140id_/https://platform.openai.com/docs/guides/rate-limits,200,first capture of OpenAI rate-limits guide (2023-01-31) is an empty JS shell; page not stored; used help.openai.com article instead
+2026-10-11T09:59:27,note,http://web.archive.org/web/20230711140126id_/https://console.anthropic.com/legal/aup,200,Anthropic AUP console URL first capture 2023-07-11 empty shell; page not stored; used 2024-02-21 www capture
+2026-10-11T09:59:27,note,http://web.archive.org/web/20251006183309/https://openai.com/index/introducing-agentkit/,403,AgentKit blog (guardrails) snapshot blocked by archive; no event recorded
+2026-10-11T09:59:27,note,http://web.archive.org/web/20250214030158id_/https://cloud.google.com/security-command-center/docs/model-armor-overview,200,Model Armor overview first capture 2025-02-14 is later than release note of 2025-02-03; page not stored
+2026-10-11T09:59:27,note,azure-oai-abuse-monitoring-doc; anthropic aup (docs.anthropic.com legal),,CDX returned no capture for learn.microsoft.com/.../abuse-monitoring (old path)
+2026-10-11T09:59:41,fetch,https://learn.microsoft.com/en-us/azure/foundry/whats-new-foundry,200,azure-foundry-whatsnew
+2026-10-11T09:59:41,fetch,https://learn.microsoft.com/en-us/azure/foundry/agents/whats-new,404,azure-foundry-agents-whatsnew
+2026-10-11T09:59:42,fetch,https://learn.microsoft.com/en-us/azure/foundry/openai/whats-new,404,azure-foundry-openai-whatsnew
+2026-10-11T09:59:42,fetch,https://learn.microsoft.com/en-us/azure/foundry/guardrails/overview,404,azure-foundry-guardrails

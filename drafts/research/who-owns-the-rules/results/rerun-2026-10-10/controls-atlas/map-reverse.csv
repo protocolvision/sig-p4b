@@ -1,0 +1,62 @@
+domain,control_type,required_by,agent_equivalent,closest_agent_controls,note,coder_S,coder_H
+algorithmic trading,price collar,law,partial,AH-523,AP2 amount range is a fixed band on one payment; no band relative to a reference value for any agent action.,partial,partial
+algorithmic trading,maximum order value,law,partial,AH-523;AH-532,"Per-action value caps exist only for agent payments (AP2, ACP); none for other value-bearing tool calls.",partial,not listed
+algorithmic trading,maximum order volume,law,partial,AH-519,AP2 constrains line items in a mandate; no cap on quantity or records affected by one tool call.,partial,partial
+algorithmic trading,repeated automated execution throttle,law,partial,AH-279;AH-435;BF-197,Iteration and loop caps end a run; none disables the agent until a designated person re-enables it.,partial,partial
+algorithmic trading,market and credit risk limits,law,none,,"No firm-wide limit on exposure created by agent actions; spend caps meter API cost, mandate budgets cover one user.",none,not listed
+algorithmic trading,credit or capital threshold,law,partial,AH-524;BF-194,Cumulative budgets per mandate or team exist; none is tied to a customer or firm credit or capital level.,partial,not listed
+algorithmic trading,kill functionality,law,partial,EG-186;EG-173;AH-427,Disables block new sign-ins; cancellation is per task. No documented immediate cancel of all pending agent actions.,partial,partial
+algorithmic trading,real-time alerts,law,partial,AH-156;CD-166;EG-277,Alerts on agent activity exist; no documented delivery bound like five seconds. EG-277 is a Credo AI marketing page.,not listed,partial
+algorithmic trading,post-trade controls,law,partial,AH-192;CD-1042,"Actions are logged, but no documented after-the-fact check shuts an agent down; external changes cannot be undone (CD-1042).",partial,partial
+algorithmic trading,stress testing,law,partial,AH-243;AH-352;AH-387,"Vulnerability tests, simulators and batch tests exist; no load test at a multiple of peak volume.",partial,partial
+algorithmic trading,erroneous order rejection,law,partial,AH-416;AH-523;AH-536,"Input validation, amount ranges and idempotency keys catch malformed or duplicate calls, not implausible values generally.",partial,not listed
+algorithmic trading,firm exclusive control of controls,law,partial,CD-314;CD-411;CD-682,Managed rules outrank user settings but are client-side and a local administrator can edit them.,partial,partial
+algorithmic trading,annual CEO certification,law,partial,EG-263,"A GRC tool records control attestations; no named executive, fixed cadence or legal duty for agent controls.",none,none
+algorithmic trading,quick disable of algorithm,regulator guidance,partial,EG-173;EG-187;AH-066,"One-step disable exists for Entra and ServiceNow agents; Conditional Access acts at token issue (EG-162), not on running sessions.",partial,not listed
+algorithmic trading,pilot phase,regulator guidance,partial,EG-267;AH-353,Roll-out to a user subset and A/B tests exist; no rule to widen exposure only as results confirm.,partial,partial
+card payments and spend management,merchant category block/allow,product feature,partial,AH-518;AH-520,AP2 can name allowed merchants and payees; no category-based allow or block for agent purchases.,not listed,partial
+card payments and spend management,allowed or blocked categories,product feature,partial,AH-518;AH-520,"Same as merchant category rule: named merchants only, no category lists for agent spend.",not listed,partial
+card payments and spend management,country restriction,product feature,partial,CD-074;EG-161,Geography rules cover inference region and sign-in location; none limits the counterparty country of an agent action.,not listed,partial
+card payments and spend management,card-present restriction,product feature,partial,EG-161,"Conditional Access can use device signals; no rule blocks an action by channel, such as headless versus interactive runs.",none,partial
+card payments and spend management,spend limit requests and increase approvals,product feature,partial,AH-457;EG-221,Step-up authorization and approved access requests exist; no approval workflow for raising an agent spend limit.,partial,partial
+cloud identity and infrastructure,SCPs grant nothing,product feature,partial,CD-037;CD-314,Org limits and managed rules cap lower levels; no documented restrict-only policy layer for agents.,not listed,partial
+cloud identity and infrastructure,budget action,product feature,partial,AH-105;CD-852;BF-177,Hard stops at a cap exist; no approval-gated response or policy change triggered by a budget breach.,partial,not listed
+cloud identity and infrastructure,budget action target,product feature,partial,BF-141,"A gateway budget node can switch to a fallback; no option to act on a named agent, tool or role.",none,not listed
+cloud identity and infrastructure,deny audit of existing resources,product feature,partial,EG-215;AH-171;EG-277,"Discovery, lifecycle rules and drift alerts exist; no documented re-check of running agents against a new policy.",partial,not listed
+email and DLP,quarantine,product feature,partial,CD-709;BF-058,Denied actions are listed for review and retry; no held queue where a flagged response awaits release.,none,partial
+email and DLP,redirect,product feature,partial,AH-052,Sensitive topics can be rerouted to a live agent (community article); no redirect of a flagged action to a reviewer.,none,partial
+email and DLP,DLP user override,product feature,none,,"Agent blocks are final; approval prompts precede actions, but no override of a block with a recorded justification.",none,partial
+email and DLP,override precedence,product feature,partial,CD-613;CD-739;AH-127,Precedence among agent rules is documented (deny wins); with no user overrides there is no override precedence.,partial,partial
+IT change management,standard change (pre-approved),product feature,partial,CD-127;AH-234,Low-risk runtime actions can be auto-approved; no pre-approved class of changes to an agent. Source is an Atlassian explainer.,partial,not listed
+IT change management,emergency change,product feature,none,,No documented fast-track for urgent agent policy changes with mandatory review afterwards. Source is an Atlassian explainer.,none,partial
+IT change management,configuration change decisions documented,standard,partial,CD-142;CD-412;CD-850,Settings changes are logged; rationale and approver are not documented fields. NIST text via CSF Tools mirror.,partial,not listed
+IT change management,define change types under control,standard,none,,"No agent product classifies prompt, tool, model and permission changes by required approval. NIST text via CSF Tools mirror.",none,partial
+industrial safety,SIS independent of BPCS,standard,partial,BF-129;EG-021;CD-411,"Gateway and guardrail services run outside the agent, but client-side settings are not a security boundary (CD-411).",partial,partial
+industrial safety,no shared devices,standard,none,,"No documented requirement that a guardrail share no model, host or runtime with the agent it guards.",none,partial
+industrial safety,emergency shutdown,regulator guidance,partial,EG-186;EG-173,Manual off switches exist; no automatic trip on a hazard condition independent of the agent.,partial,partial
+industrial safety,"inspect, maintain and test",regulator guidance,partial,AH-303;AH-275;AH-243,Evaluations gate publishing; no periodic proof testing of guardrails in production.,partial,partial
+industrial safety,risk assessment (HAZOP/LOPA),regulator guidance,partial,EG-261;AH-060;EG-061,Risk ratings per AI asset exist; no per-function hazard analysis tied to protection layers.,partial,not listed
+application access control,field-level security,product feature,partial,AH-008;AH-246;CD-914,"Agent data scoping is per source, file or data type; no per-field rule specific to agents. AH-008 is a Trailhead module.",not listed,partial
+application access control,permission set group with muting,product feature,partial,CD-722;CD-739;CD-613,Deny-wins rules subtract from allow rules; no mute of one permission inside a named agent bundle.,partial,not listed
+application access control,continuous access evaluation,product feature,partial,EG-162;EG-173,Conditional Access for agents is evaluated at token issue or refresh; revocation within minutes is not documented.,partial,partial
+ERP segregation of duties,segregation of duties access risk,product feature,partial,EG-062,Lakera flags one fixed toxic combination; no configurable rule on conflicting tools held by one agent.,none,partial
+ERP segregation of duties,access risk analysis in access request,product feature,partial,EG-221;EG-182,Agent access requests route to approvers; no conflict analysis before the grant.,not listed,partial
+ERP segregation of duties,mitigating control,product feature,none,,No record of accepted conflicting agent access with a compensating control.,none,none
+ERP segregation of duties,periodic review of user access and SoD,product feature,partial,EG-188;EG-222,Access reviews and certifications include agent identities; no SoD content in the review.,partial,not listed
+ERP segregation of duties,firefighter ID,product feature,none,,No documented emergency elevated identity for agents with owner and controller.,none,partial
+ERP segregation of duties,firefighter reason code,product feature,none,,No requirement to state a reason before elevated agent use.,none,none
+ERP segregation of duties,firefighter log review,product feature,partial,AH-192;CD-850,Agent actions are logged; no mandated controller review after elevated use.,none,partial
+ERP segregation of duties,access model,product feature,partial,EG-062,Detection covers one fixed combination; no configurable model of risky capability combinations.,not listed,partial
+ERP segregation of duties,control with incident investigation,product feature,none,,No control files a rule breach as an incident record assigned for investigation; misuse reporting (AH-069) is user-initiated.,none,partial
+ERP segregation of duties,provisioning rule,product feature,partial,EG-062,Toxic combination is detected after the fact; nothing blocks assigning conflicting tools to an agent.,not listed,partial
+ERP segregation of duties,advanced access request workflow,product feature,partial,EG-221;EG-182,Approval workflows for agent access exist without conflict analysis.,not listed,partial
+ERP segregation of duties,conflict simulation,product feature,none,,"Simulations test agent behaviour (AH-289, AH-385), not the effect of a permission change.",none,partial
+robotic process automation,machine object,product feature,partial,BF-219;CD-339,Keys can be IP-restricted and managed machines can limit providers; no key bound to a registered host.,not listed,partial
+robotic process automation,queue retry limit,product feature,partial,AH-458;BF-184,"Retry caps exist for model calls and scope upgrades, not for failed agent actions.",partial,not listed
+API gateway and WAF,web ACL default action,product feature,partial,CD-331;CD-827;AH-075,"Default-deny and fail-closed are set per mode, hook or guardrail; no single default for unmatched requests.",partial,not listed
+API gateway and WAF,bot control,product feature,partial,EG-169;EG-171,"Behavioural risk detection covers registered agent identities, not unregistered automated traffic.",not listed,partial
+API gateway and WAF,OWASP scoring ruleset,product feature,partial,AH-054;BF-001,Per-category severity thresholds exist; no cumulative score across rules that triggers an action.,not listed,partial
+API gateway and WAF,bot score,product feature,partial,EG-169;EG-171,Agent risk levels can drive Conditional Access blocks; no per-request automation score usable in rules.,not listed,partial
+feature flags and release controls,percentage rollout,product feature,partial,EG-267;BF-116;AH-353,"Subset roll-out, model traffic splits and A/B tests exist; no hash-based percentage rollout of agent behaviour.",partial,not listed
+feature flags and release controls,guarded rollout,product feature,none,,No documented automatic pause or rollback of an agent roll-out on metric regression.,none,partial
+feature flags and release controls,scheduled flag change,product feature,partial,AH-369,Intercom schedules knowledge content on or off for Fin; no scheduled change to agent policy.,none,none
