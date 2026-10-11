@@ -142,3 +142,7 @@ Verbatim, 40 words or fewer, checked by script.
 - Speech has almost no coverage: the interview sample is about AI adoption and the extractor kept task spans, so the topic appears in only four passages.
 - The filings prefilter and the AI-word prefilter for postings are judgement filters; recall of the terms outside them was not checked beyond the raw table. Function labels inherit the function map's O*NET error.
 - The 'approved-tool duty' tier is a wide reading of 'controls on use'; the 'control or unsanctioned use' tier is the narrower one.
+
+## Opus review adjustments (11 October 2026)
+
+`review.md`: drop Pacific Life #0, Cencora #22, Abbott #67 and Tenable #90 (product text); recode Upstart #86 as risk only; Arcturus #77 and M052 #99 are not security. Wrongly dropped and to add as risk statements: Freshworks #625, Tenable #746, IDT #603, Sprinklr #631, Rubrik #827; speech M064 #444 (personal laptop vs corporate level). Security concentration after fixes: about 19 of 31 control duties, at 14 employers (three supply 10). The 25 filing passages hold about 15 distinct texts. The report uses the adjusted figures.
