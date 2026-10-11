@@ -75,3 +75,65 @@ date,query,engine,results_kept,http_status,note
 2026-10-11,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer&output=json&from=2022&to=2026&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,27,200,
 2026-10-11,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/credentials/certifications/exams/ai-102&output=json&from=2022&to=2026&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,6,200,
 2026-10-11,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader&output=json&from=2022&to=2026&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,8,200,
+2026-10-11,http://web.archive.org/web/20240815144731id_/https://trailhead.salesforce.com/credentials/aispecialist,wayback,1,200,wb-sf-aispecialist-20240815
+2026-10-11,http://web.archive.org/web/20240507052217id_/https://trailhead.salesforce.com/credentials/aiassociate,wayback,1,200,wb-sf-aiassociate-20240507
+2026-10-11,http://web.archive.org/web/20250320012314id_/https://trailhead.salesforce.com/credentials/agentforcespecialist,wayback,1,200,wb-sf-agentforcespecialist-20250320
+2026-10-11,http://web.archive.org/web/20240611110843id_/https://aws.amazon.com/certification/certified-ai-practitioner/,wayback,1,200,wb-aws-aipractitioner-20240611
+2026-10-11,http://web.archive.org/web/20230927135432id_/https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-102,wayback,1,200,wb-ms-ai102-20230927
+2026-10-11,http://web.archive.org/web/20230927215117id_/https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer,wayback,1,200,wb-ms-azure-ai-engineer-20230927
+2026-10-11,Salesforce AI Specialist certification renamed Agentforce Specialist,WebSearch,9,,discovery only
+2026-10-11,AWS Certified AI Practitioner beta exam announcement August 2024,WebSearch,9,,discovery only
+2026-10-11,Colorado SB26-189 artificial intelligence deployer duties signed,WebSearch,9,,discovery only
+2026-10-11,2028 SOC Standard Occupational Classification final structure artificial intelligence occupations,WebSearch,10,,discovery only
+2026-10-11,Microsoft AB-100 Agentic AI Business Solutions Architect certification exam launch,WebSearch,9,,discovery only
+2026-10-11,https://www.salesforceben.com/salesforce-changes-ai-specialist-exam-to-certified-agentforce-specialist/,page,1,200,sf-salesforceben-agentforce-specialist
+2026-10-11,https://salesforcebreak.com/2025/02/24/new-agentforce-specialist-certification/,page,1,200,sf-salesforcebreak-agentforce-specialist
+2026-10-11,https://aws.amazon.com/blogs/training-and-certification/june-2024-new-offerings/,page,1,200,aws-training-june-2024
+2026-10-11,https://aws.amazon.com/blogs/training-and-certification/august-2024-new-offerings/,page,1,200,aws-training-aug-2024
+2026-10-11,https://learn.microsoft.com/en-us/credentials/certifications/exams/ab-100/,page,1,200,ms-ab100-exam
+2026-10-11,https://techcommunity.microsoft.com/blog/microsoftlearnblog/-/4428968,page,1,200,ms-techcommunity-ab100
+2026-10-11,https://www.hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189,page,1,200,co-hklaw-sb189
+2026-10-11,https://leg.colorado.gov/bills/sb26-189,page,1,200,co-leg-sb26-189
+2026-10-11,https://www.bls.gov/soc/2028/2028_soc_revision.htm,page,0,403,
+2026-10-11,https://www.bls.gov/soc/2028/frn_june_12_2024.pdf,page,0,403,
+2026-10-11,https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689,page,0,202,
+2026-10-11,https://www.ai.engineer/summit/2023,page,1,200,ai-engineer-summit-2023
+2026-10-11,https://api.github.com/repos/langchain-ai/langchain/commits?until=2022-11-30T00:00:00Z&per_page=100,page,1,200,gh-langchain-first-commits
+2026-10-11,https://www.onetonline.org/find/result?s=AI+agent,page,1,200,onet-search-ai-agent
+2026-10-11,https://api.github.com/repos/langchain-ai/langchain/commits?until=2022-12-31T00:00:00Z&per_page=100&page=1,github-api,1,200,
+2026-10-11,https://api.github.com/repos/langchain-ai/langchain/commits?until=2022-12-31T00:00:00Z&per_page=100&page=2,github-api,1,200,
+2026-10-11,https://api.github.com/repos/langchain-ai/langchain/commits?until=2022-12-31T00:00:00Z&per_page=100&page=3,github-api,1,200,
+2026-10-11,https://api.github.com/repos/Significant-Gravitas/AutoGPT/releases?per_page=100&page=9,page,0,200,
+2026-10-11,https://raw.githubusercontent.com/Significant-Gravitas/AutoGPT/master/LICENSE,page,1,200,gh-autogpt-license
+2026-10-11,https://raw.githubusercontent.com/yoheinakajima/babyagi/main/LICENSE,page,0,404,
+2026-10-11,https://artificialintelligenceact.eu/article/26/,page,1,200,artai-act-art26
+2026-10-11,https://artificialintelligenceact.eu/article/113/,page,1,200,artai-act-art113
+2026-10-11,https://artificialintelligenceact.eu/article/3/,page,1,200,artai-act-art3
+2026-10-11,http://web.archive.org/web/2026/https://www.bls.gov/soc/2028/2028_soc_revision.htm,wayback,1,200,wb-bls-soc-2028-revision
+2026-10-11,http://web.archive.org/cdx/search/cdx?url=langchain.readthedocs.io/en/latest/modules/agents.html&output=json&from=2022&to=2023&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,3,200,
+2026-10-11,http://web.archive.org/cdx/search/cdx?url=python.langchain.com/docs/modules/agents/&output=json&from=2022&to=2024&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,10,200,
+2026-10-11,http://web.archive.org/cdx/search/cdx?url=github.com/yoheinakajima/babyagi&output=json&from=2023&to=2023&matchType=exact&filter=statuscode:200&collapse=timestamp:6&limit=60,wayback-cdx,9,200,
+2026-10-11,http://web.archive.org/web/20230103071717id_/https://langchain.readthedocs.io/en/latest/modules/agents.html,wayback,1,200,wb-langchain-agents-doc-20230103
+2026-10-11,http://web.archive.org/web/20230403133342id_/https://github.com/yoheinakajima/babyagi,wayback,1,200,wb-babyagi-gh-20230403
+2026-10-11,http://web.archive.org/web/20230103071717id_/https://langchain.readthedocs.io/en/latest/modules/agents.html,wayback,1,200,wb-langchain-agents-doc-20230103
+2026-10-11,https://api.github.com/repos/Significant-Gravitas/AutoGPT/releases?per_page=100&page=9,page,0,200,
+2026-10-11,http://web.archive.org/web/20230103071717id_/https://langchain.readthedocs.io/en/latest/modules/agents.html,wayback,1,200,wb-langchain-agents-doc-20230103
+2026-10-11,https://artificialintelligenceact.eu/article/4/,page,1,200,artai-act-art4
+2026-10-11,https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page,page,1,200,nyc-aedt-ll144
+2026-10-11,https://leg.colorado.gov/bills/sb24-205,page,1,200,co-sb24-205
+2026-10-11,https://artificialintelligenceact.eu/implementation-timeline/,page,1,200,artai-act-implementation-timeline
+2026-10-11,2023 engineering blog LLM agent in production,WebSearch,9,,discovery only
+2026-10-11,LinkedIn jobs on the rise AI engineer agentic 2025,WebSearch,9,,discovery only
+2026-10-11,https://www.axios.com/2025/01/07/ai-jobs-on-the-rise-linkedin-report,page,0,403,
+2026-10-11,https://www.adept.ai/blog/act-1,page,0,403,
+2026-10-11,https://openai.com/index/function-calling-and-other-api-updates/,page,1,200,openai-function-calling-2023
+2026-10-11,https://openai.com/index/introducing-swe-bench-verified/,page,1,200,openai-swebench-verified-2024
+2026-10-11,https://www.anthropic.com/news/3-5-models-and-computer-use,page,1,200,anthropic-claude35-sonnet-upgrade-2024
+2026-10-11,https://www.swebench.com/,page,1,200,swebench-site
+2026-10-11,https://www.onetonline.org/find/quick?s=AI+engineer,page,1,200,onet-ai-engineer
+2026-10-11,https://www.pymnts.com/?p=3961580,page,1,200,pymnts-linkedin-2026
+2026-10-11,http://web.archive.org/web/2025/https://www.axios.com/2025/01/07/ai-jobs-on-the-rise-linkedin-report,wayback,1,200,wb-axios-linkedin-jobs-rise-2025
+2026-10-11,http://web.archive.org/web/2022/https://www.adept.ai/blog/act-1,wayback,1,200,wb-adept-act1-2022
+2026-10-11,https://www.onetonline.org/find/result?s=artificial+intelligence+engineer,page,1,200,onet-search-ai-engineer-results
+2026-10-11,Salesforce Certified AI Associate certification launched announcement date,WebSearch,10,,discovery only
+2026-10-11,https://www.salesforceben.com/salesforce-officially-announce-the-ai-associate-certification/,page,1,200,sf-salesforceben-ai-associate
