@@ -1,10 +1,10 @@
 """Build the public web page of the interactive report for protocolsforbusiness.com/agentcontrolreport2026/.
 
-Same content as the artifact (interactive-src.html with data/map.json inlined); wrapped in a full HTML document
+Same content as the artifact (interactive-src.html with data/map.json inlined), except the meeting box: the website keeps the email form (posts to the sign-up Worker’s /advisory route), the artifact keeps a link to it; wrapped in a full HTML document
 with the site's canonical address, description and social tags. Writes <out>/index.html and copies the fonts.
 Usage: python3 build_site_page.py <out_dir>
 """
-import pathlib, shutil, sys
+import pathlib, re, shutil, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
 URL = "https://protocolsforbusiness.com/agentcontrolreport2026/"
@@ -14,6 +14,8 @@ DESC = ("Who owns the rules when AI agents join the business? Desk research on 1
 def build(out):
     out = pathlib.Path(out); out.mkdir(parents=True, exist_ok=True)
     body = (HERE / "interactive-src.html").read_text().replace("/*MAP*/", (HERE / "data/map.json").read_text())
+    # website version: keep the meeting form, drop the artifact-only link
+    body = re.sub(r"<!--ARTIFACT-->.*?<!--/ARTIFACT-->", "", body, flags=re.S).replace("<!--SITE-->", "").replace("<!--/SITE-->", "")
     title_end = body.index("</title>") + len("</title>")
     title, rest = body[:title_end], body[title_end:]
     head = "\n".join([

@@ -233,6 +233,14 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
 .ask a.btn { display: inline-block; background: var(--cob); color: #fff; text-decoration: none; font: 500 13px/1 var(--mono); letter-spacing: .04em; padding: .85rem 1.1rem; white-space: nowrap; }
 .ask a.btn:hover { background: #003a96; }
 @media (max-width: 640px) { .ask { grid-template-columns: 1fr; } }
+.meet { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin: 0; }
+.meet input[type=email] { font: 15px var(--serif); padding: .7rem .8rem; border: .5px solid var(--muted); background: #fff; color: var(--fg); min-width: 0; width: 16rem; max-width: 100%; }
+.meet input[type=email]:focus { outline: 2px solid var(--cob); outline-offset: 1px; }
+.meet button.btn { all: unset; cursor: pointer; background: var(--cob); color: #fff; font: 500 13px/1 var(--mono); letter-spacing: .04em; padding: .85rem 1.1rem; }
+.meet button.btn:hover { background: #003a96; } .meet button.btn:focus-visible { outline: 2px solid var(--cob); outline-offset: 2px; }
+.meet .hp { position: absolute; left: -9999px; width: 1px; height: 1px; }
+.meet-status { flex-basis: 100%; margin: .2rem 0 0; }
+
 /* reach grid: layers x situations */
 .reach { width: 100%; border-collapse: collapse; min-width: 38rem; font-size: .875rem; margin-top: 1rem; }
 .reach th, .reach td { border-bottom: .5px solid var(--hair); padding: .5rem .5rem .5rem 0; text-align: left; vertical-align: top; font-weight: 400; }
@@ -464,9 +472,18 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
   <div class="road" id="road"></div>
   <div class="moves" id="moves"></div>
   <div class="movedetail" id="movedetail" aria-live="polite"></div>
-  <div class="ask" id="inquiry">
-    <div><h3>Who decides your agents’ rules?</h3><p>Send Protocol Vision Advisory a short, anonymised summary of how your firm runs agents. We reply with the protocol to fix first.</p></div>
-    <a class="btn" href="https://protocolvision.org/send/" target="_blank" rel="noopener">Send an inquiry ↗</a>
+  <div class="ask" id="meet">
+    <div><h3>Talk to us about agents in your firm</h3><p>Leave your work email and Protocol Vision Advisory will be in touch to set up a meeting on agent adoption and control in your firm.</p></div>
+    <!--ARTIFACT--><a class="btn" href="https://protocolsforbusiness.com/agentcontrolreport2026/#meet" target="_blank" rel="noopener">Request a meeting ↗</a><!--/ARTIFACT-->
+    <!--SITE--><form class="meet" id="meet-form" method="post" action="https://sig-p4b-signup.rafaeldf2.workers.dev/advisory">
+      <label class="visually-hidden" for="meet-email">Work email</label>
+      <input id="meet-email" name="contact" type="email" required autocomplete="email" placeholder="you@company.com" maxlength="150">
+      <input type="hidden" name="name" value="Agent control report reader">
+      <input type="hidden" name="need" value="Meeting request: agent adoption and control in their firm (from the 2026 agent control report).">
+      <input class="hp" name="_hp" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Request a meeting</button>
+      <p class="meet-status small" id="meet-status" aria-live="polite"></p>
+    </form><!--/SITE-->
   </div>
   <p class="small narrow" style="margin-top:1rem">Don’t hire one senior “protocol lead”: no such posting exists among 25,512, and lasting roles in the past did not start senior. And don’t let vendor consoles hold the only copy of an agent’s rules.</p>
 </section>
@@ -546,6 +563,23 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     b.addEventListener('click', function () { set(!nav.classList.contains('open')); });
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  })();
+
+  // ---- meeting request (website version only; the artifact links to it)
+  (function () {
+    var f = $('meet-form'); if (!f) return;
+    var st = $('meet-status');
+    if (/[?&]advisory=ok/.test(location.search)) st.textContent = 'Thanks. We’ll be in touch to set up a meeting.';
+    f.addEventListener('submit', function (e) {
+      if (!window.fetch) return;
+      e.preventDefault(); if (!f.reportValidity()) return;
+      var data = {}; new FormData(f).forEach(function (v, k) { data[k] = v; });
+      var b = f.querySelector('button'); b.disabled = true; st.textContent = 'Sending…';
+      fetch(f.action, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)})
+        .then(function (r) { return r.json().then(function (j) { return {ok: r.ok, j: j}; }); })
+        .then(function (x) { if (x.ok) { st.textContent = 'Thanks. We’ll be in touch to set up a meeting.'; f.reset(); } else { st.textContent = (x.j && x.j.error) || 'Something went wrong. Email hello@protocolvision.org instead.'; b.disabled = false; } })
+        .catch(function () { st.textContent = 'Something went wrong. Email hello@protocolvision.org instead.'; b.disabled = false; });
+    });
   })();
 
   // ---- hero: 771 dots drifting; one blue ring
