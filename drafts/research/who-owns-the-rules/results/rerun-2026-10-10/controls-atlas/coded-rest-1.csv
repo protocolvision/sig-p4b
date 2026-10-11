@@ -1,0 +1,665 @@
+control_id,object,mechanism,enforcement_point,is_gap
+AH-002,Autonomy and human handover,Transform or steer,input,no
+AH-003,Autonomy and human handover,Transform or steer,input,no
+AH-005,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-006,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-007,Autonomy and human handover,Require a human,human_approval,no
+AH-008,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-010,Harmful and off-limits content,Block or switch off,output,no
+AH-011,Harmful and off-limits content,Block or switch off,output,no
+AH-012,Prompt attacks and untrusted input,Block or switch off,input,no
+AH-014,Sensitive data in prompts and outputs,Transform or steer,input,no
+AH-018,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+AH-019,Autonomy and human handover,Require a human,human_approval,no
+AH-023,Agent tools and actions,Block or switch off,tool_action,no
+AH-025,Autonomy and human handover,Require a human,human_approval,no
+AH-029,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-030,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-031,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-033,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-035,Answer accuracy and presentation,Transform or steer,input,no
+AH-036,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-038,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-040,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-042,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-043,Agent tools and actions,Require a human,human_approval,no
+AH-047,Sensitive data in prompts and outputs,Transform or steer,input,no
+AH-048,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+AH-052,Harmful and off-limits content,Block or switch off,human_approval,no
+AH-053,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-054,Harmful and off-limits content,Transform or steer,input,no
+AH-057,Agent tools and actions,Require a human,tool_action,no
+AH-058,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-059,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-063,Sensitive data in prompts and outputs,Detect and flag,output,no
+AH-064,Harmful and off-limits content,Detect and flag,output,no
+AH-067,Agent tools and actions,Block or switch off,tool_action,no
+AH-069,"AI inventory, lifecycle and policy management",Record and report,logging_audit,no
+AH-070,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-071,Autonomy and human handover,Require a human,human_approval,no
+AH-072,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-073,Prompt attacks and untrusted input,Detect and flag,input,no
+AH-076,Sensitive data in prompts and outputs,Block or switch off,output,no
+AH-077,Harmful and off-limits content,Transform or steer,input,no
+AH-078,Sensitive data in prompts and outputs,Block or switch off,data_access,no
+AH-079,Data and files the AI can reach,Block or switch off,data_access,no
+AH-080,Network destinations,Allow-list or grant,network_egress,no
+AH-083,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-084,Network destinations,Allow-list or grant,network_egress,no
+AH-085,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-086,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-088,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-089,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-090,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-091,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+AH-093,"AI inventory, lifecycle and policy management",Require a human,lifecycle,no
+AH-097,"Identity, credentials and access rights",Record and report,identity_permission,no
+AH-099,"Model choice, routing and caching",Transform or steer,model_call,no
+AH-100,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-101,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-103,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-108,Agent tools and actions,Block or switch off,tool_action,no
+AH-109,Agent tools and actions,Block or switch off,tool_action,no
+AH-110,Agent tools and actions,Block or switch off,tool_action,no
+AH-111,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-112,Data and files the AI can reach,Block or switch off,data_access,no
+AH-113,Network destinations,Allow-list or grant,network_egress,no
+AH-114,Agent tools and actions,Block or switch off,tool_action,no
+AH-115,Network destinations,Block or switch off,network_egress,no
+AH-116,Agent tools and actions,Block or switch off,tool_action,no
+AH-118,Autonomy and human handover,Block or switch off,tool_action,no
+AH-119,"Logs, traces and audit records",Block or switch off,logging_audit,no
+AH-120,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-121,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-122,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-123,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-124,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-125,Answer accuracy and presentation,Block or switch off,output,no
+AH-126,Harmful and off-limits content,Transform or steer,output,no
+AH-130,"Model choice, routing and caching",Transform or steer,model_call,no
+AH-131,Autonomy and human handover,Transform or steer,input,no
+AH-133,Data and files the AI can reach,Cap a quantity,data_access,no
+AH-134,Autonomy and human handover,Require a human,human_approval,no
+AH-135,Autonomy and human handover,Require a human,human_approval,no
+AH-136,Agent tools and actions,Require a human,human_approval,no
+AH-139,Network destinations,Allow-list or grant,network_egress,no
+AH-140,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-142,"Identity, credentials and access rights",Transform or steer,data_access,no
+AH-143,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-144,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-145,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-146,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-147,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-148,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-150,"AI inventory, lifecycle and policy management",Detect and flag,logging_audit,no
+AH-152,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-153,"AI inventory, lifecycle and policy management",Record and report,lifecycle,no
+AH-154,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-155,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-157,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-159,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-161,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-163,Data and files the AI can reach,Detect and flag,data_access,no
+AH-164,Data and files the AI can reach,Transform or steer,data_access,no
+AH-165,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-166,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-168,Network destinations,Allow-list or grant,network_egress,no
+AH-169,"AI inventory, lifecycle and policy management",Require a human,human_approval,no
+AH-170,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-172,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-174,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-175,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-176,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-177,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-180,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-182,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-184,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-190,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+AH-191,"Identity, credentials and access rights",Transform or steer,data_access,no
+AH-193,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-195,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-196,"AI inventory, lifecycle and policy management",Record and report,lifecycle,no
+AH-198,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-199,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-202,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-205,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-208,"AI inventory, lifecycle and policy management",Transform or steer,tool_action,no
+AH-211,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-214,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-216,Sensitive data in prompts and outputs,Transform or steer,output,no
+AH-218,"Logs, traces and audit records",Transform or steer,logging_audit,no
+AH-219,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-220,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-223,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+AH-224,Autonomy and human handover,Transform or steer,model_call,no
+AH-226,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-227,"Usage, spend and rate limits",Cap a quantity,model_call,no
+AH-229,"Usage, spend and rate limits",Cap a quantity,model_call,no
+AH-231,"Model choice, routing and caching",Allow-list or grant,model_call,no
+AH-232,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-233,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-236,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-237,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-240,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-241,"Logs, traces and audit records",Cap a quantity,logging_audit,no
+AH-243,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-244,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-248,Harmful and off-limits content,Transform or steer,model_call,no
+AH-249,Harmful and off-limits content,Transform or steer,model_call,no
+AH-250,Harmful and off-limits content,Transform or steer,model_call,no
+AH-251,Sensitive data in prompts and outputs,Block or switch off,input,no
+AH-252,Prompt attacks and untrusted input,Block or switch off,input,no
+AH-253,Harmful and off-limits content,Block or switch off,output,no
+AH-257,Harmful and off-limits content,Block or switch off,human_approval,no
+AH-260,Sensitive data in prompts and outputs,Transform or steer,tool_action,no
+AH-262,Agent tools and actions,Require a human,human_approval,no
+AH-264,Sensitive data in prompts and outputs,Transform or steer,input,no
+AH-265,Harmful and off-limits content,Transform or steer,output,no
+AH-266,Prompt attacks and untrusted input,Detect and flag,input,no
+AH-267,Harmful and off-limits content,Transform or steer,input,no
+AH-268,Harmful and off-limits content,Transform or steer,input,no
+AH-269,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+AH-271,"Model choice, routing and caching",Allow-list or grant,model_call,no
+AH-272,"Model choice, routing and caching",Allow-list or grant,model_call,no
+AH-273,"Model choice, routing and caching",Allow-list or grant,model_call,no
+AH-275,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+AH-276,"Usage, spend and rate limits",Cap a quantity,model_call,no
+AH-277,"Usage, spend and rate limits",Cap a quantity,model_call,no
+AH-279,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-280,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-281,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-282,Autonomy and human handover,Require a human,human_approval,no
+AH-283,Autonomy and human handover,Transform or steer,human_approval,no
+AH-284,Autonomy and human handover,Transform or steer,human_approval,no
+AH-286,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+AH-287,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+AH-288,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-289,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-290,Data and files the AI can reach,Cap a quantity,data_access,no
+AH-292,Data and files the AI can reach,Block or switch off,data_access,no
+AH-294,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-295,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-296,"Logs, traces and audit records",Transform or steer,logging_audit,no
+AH-297,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-301,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-302,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-304,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-305,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-307,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-310,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-312,"Identity, credentials and access rights",Allow-list or grant,identity_permission,yes
+AH-313,Autonomy and human handover,Transform or steer,input,no
+AH-315,Autonomy and human handover,Transform or steer,input,no
+AH-316,Autonomy and human handover,Transform or steer,input,yes
+AH-318,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-319,Data and files the AI can reach,Transform or steer,data_access,no
+AH-320,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-322,Answer accuracy and presentation,Transform or steer,output,no
+AH-325,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-326,Autonomy and human handover,Require a human,human_approval,no
+AH-328,Autonomy and human handover,Block or switch off,human_approval,no
+AH-329,Autonomy and human handover,Transform or steer,human_approval,no
+AH-331,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-332,Autonomy and human handover,Transform or steer,output,no
+AH-333,Autonomy and human handover,Transform or steer,output,no
+AH-334,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-335,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-336,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-337,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-339,Sensitive data in prompts and outputs,Transform or steer,data_access,no
+AH-340,Sensitive data in prompts and outputs,Transform or steer,data_access,no
+AH-341,Sensitive data in prompts and outputs,Transform or steer,data_access,yes
+AH-342,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-344,Sensitive data in prompts and outputs,Transform or steer,model_call,no
+AH-346,"Stored data: retention, training use and encryption",Block or switch off,model_call,no
+AH-347,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+AH-350,"Usage, spend and rate limits",Detect and flag,spend_rate,no
+AH-351,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-352,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-353,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+AH-357,"Stored data: retention, training use and encryption",Cap a quantity,data_access,no
+AH-358,Sensitive data in prompts and outputs,Transform or steer,input,no
+AH-359,Autonomy and human handover,Transform or steer,input,no
+AH-360,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-362,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-363,Autonomy and human handover,Transform or steer,input,no
+AH-365,Harmful and off-limits content,Transform or steer,input,no
+AH-366,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-368,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-369,Data and files the AI can reach,Transform or steer,data_access,no
+AH-370,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-371,Data and files the AI can reach,Block or switch off,data_access,no
+AH-373,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-375,Prompt attacks and untrusted input,Block or switch off,input,no
+AH-377,Autonomy and human handover,Require a human,human_approval,no
+AH-380,Autonomy and human handover,Block or switch off,human_approval,no
+AH-381,Autonomy and human handover,Transform or steer,human_approval,no
+AH-382,Autonomy and human handover,Allow-list or grant,input,no
+AH-383,Autonomy and human handover,Transform or steer,tool_action,no
+AH-384,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-385,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-386,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-388,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-389,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-391,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-392,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-393,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-395,Autonomy and human handover,Detect and flag,input,no
+AH-398,Answer accuracy and presentation,Block or switch off,output,no
+AH-400,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-401,Answer accuracy and presentation,Transform or steer,output,no
+AH-402,Answer accuracy and presentation,Transform or steer,output,no
+AH-404,"Usage, spend and rate limits",Detect and flag,spend_rate,no
+AH-407,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-408,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-412,"AI inventory, lifecycle and policy management",Detect and flag,lifecycle,no
+AH-413,Autonomy and human handover,Require a human,human_approval,no
+AH-415,Agent tools and actions,Require a human,human_approval,no
+AH-416,Prompt attacks and untrusted input,Block or switch off,tool_action,no
+AH-417,Agent tools and actions,Allow-list or grant,identity_permission,no
+AH-420,Prompt attacks and untrusted input,Block or switch off,input,no
+AH-423,Prompt attacks and untrusted input,Block or switch off,tool_action,no
+AH-424,Answer accuracy and presentation,Block or switch off,output,no
+AH-425,Agent tools and actions,Allow-list or grant,lifecycle,no
+AH-426,Autonomy and human handover,Cap a quantity,lifecycle,no
+AH-428,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-430,Agent tools and actions,Require a human,human_approval,no
+AH-431,Agent tools and actions,Require a human,human_approval,no
+AH-432,"Model choice, routing and caching",Allow-list or grant,model_call,no
+AH-438,Data and files the AI can reach,Allow-list or grant,data_access,no
+AH-440,Data and files the AI can reach,Require a human,human_approval,no
+AH-442,Sensitive data in prompts and outputs,Block or switch off,data_access,no
+AH-444,Autonomy and human handover,Require a human,human_approval,no
+AH-445,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-446,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-448,Prompt attacks and untrusted input,Block or switch off,network_egress,no
+AH-449,"Identity, credentials and access rights",Allow-list or grant,data_access,no
+AH-450,Sensitive data in prompts and outputs,Block or switch off,output,no
+AH-451,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-452,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-454,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-455,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+AH-457,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-458,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+AH-459,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-460,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-461,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-462,Network destinations,Allow-list or grant,network_egress,no
+AH-463,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+AH-464,Network destinations,Block or switch off,network_egress,no
+AH-465,"Identity, credentials and access rights",Require a human,human_approval,no
+AH-466,"Identity, credentials and access rights",Require a human,human_approval,no
+AH-467,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+AH-469,Network destinations,Allow-list or grant,network_egress,no
+AH-470,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-471,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-472,Agent tools and actions,Require a human,human_approval,no
+AH-473,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-474,Network destinations,Allow-list or grant,network_egress,no
+AH-475,Network destinations,Allow-list or grant,network_egress,no
+AH-476,Network destinations,Allow-list or grant,network_egress,no
+AH-477,"Logs, traces and audit records",Block or switch off,logging_audit,no
+AH-478,"Logs, traces and audit records",Cap a quantity,logging_audit,no
+AH-479,"Logs, traces and audit records",Transform or steer,logging_audit,no
+AH-480,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-482,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-483,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+AH-484,"Identity, credentials and access rights",Allow-list or grant,data_access,no
+AH-487,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-490,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+AH-494,"Identity, credentials and access rights",Allow-list or grant,network_egress,no
+AH-495,"AI inventory, lifecycle and policy management",Allow-list or grant,lifecycle,no
+AH-499,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-500,"Logs, traces and audit records",Record and report,logging_audit,no
+AH-501,"Logs, traces and audit records",Transform or steer,logging_audit,no
+AH-503,Sensitive data in prompts and outputs,Transform or steer,data_access,no
+AH-506,Data and files the AI can reach,Allow-list or grant,identity_permission,no
+AH-508,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+AH-512,Agent tools and actions,Require a human,human_approval,no
+AH-516,Agent tools and actions,Block or switch off,tool_action,no
+AH-519,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-520,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-526,Agent tools and actions,Allow-list or grant,tool_action,no
+AH-527,Agent tools and actions,Allow-list or grant,tool_action,no
+BF-005,Prompt attacks and untrusted input,Block or switch off,input,no
+BF-009,Harmful and off-limits content,Block or switch off,output,no
+BF-013,Answer accuracy and presentation,Block or switch off,output,no
+BF-014,Answer accuracy and presentation,Transform or steer,output,no
+BF-015,Answer accuracy and presentation,Detect and flag,output,no
+BF-017,Harmful and off-limits content,Transform or steer,output,no
+BF-028,Agent tools and actions,Allow-list or grant,tool_action,no
+BF-031,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+BF-033,Agent tools and actions,Allow-list or grant,tool_action,no
+BF-037,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-041,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+BF-047,Agent tools and actions,Allow-list or grant,tool_action,no
+BF-049,Harmful and off-limits content,Transform or steer,input,no
+BF-054,Prompt attacks and untrusted input,Detect and flag,input,no
+BF-055,Harmful and off-limits content,Detect and flag,output,no
+BF-057,Agent tools and actions,Block or switch off,tool_action,no
+BF-059,Harmful and off-limits content,Block or switch off,input,no
+BF-061,Harmful and off-limits content,Detect and flag,output,no
+BF-062,Sensitive data in prompts and outputs,Transform or steer,output,no
+BF-063,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+BF-064,Agent tools and actions,Detect and flag,tool_action,no
+BF-066,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+BF-070,"Logs, traces and audit records",Record and report,logging_audit,no
+BF-075,"Usage, spend and rate limits",Cap a quantity,tool_action,no
+BF-077,"Stored data: retention, training use and encryption",Block or switch off,lifecycle,no
+BF-079,Harmful and off-limits content,Transform or steer,input,no
+BF-080,Harmful and off-limits content,Transform or steer,input,no
+BF-081,Harmful and off-limits content,Block or switch off,input,no
+BF-084,Sensitive data in prompts and outputs,Transform or steer,output,no
+BF-086,Harmful and off-limits content,Detect and flag,logging_audit,no
+BF-087,Harmful and off-limits content,Block or switch off,input,no
+BF-089,Harmful and off-limits content,Detect and flag,input,no
+BF-092,Harmful and off-limits content,Block or switch off,output,no
+BF-093,Harmful and off-limits content,Transform or steer,output,no
+BF-094,Harmful and off-limits content,Transform or steer,output,no
+BF-095,Harmful and off-limits content,Detect and flag,output,no
+BF-096,"Model choice, routing and caching",Allow-list or grant,input,no
+BF-101,"Stored data: retention, training use and encryption",Record and report,logging_audit,no
+BF-104,Answer accuracy and presentation,Detect and flag,output,no
+BF-114,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-125,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-133,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-136,"Logs, traces and audit records",Transform or steer,logging_audit,no
+BF-138,"Usage, spend and rate limits",Transform or steer,spend_rate,no
+BF-140,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-145,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+BF-148,Harmful and off-limits content,Block or switch off,input,no
+BF-149,Harmful and off-limits content,Transform or steer,input,no
+BF-151,Autonomy and human handover,Transform or steer,input,no
+BF-158,Sensitive data in prompts and outputs,Transform or steer,output,no
+BF-159,Harmful and off-limits content,Transform or steer,input,no
+BF-162,Harmful and off-limits content,Transform or steer,input,no
+BF-165,Prompt attacks and untrusted input,Transform or steer,input,no
+BF-172,Harmful and off-limits content,Detect and flag,input,no
+BF-174,Harmful and off-limits content,Detect and flag,input,no
+BF-176,"Logs, traces and audit records",Record and report,logging_audit,no
+BF-177,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-178,"Usage, spend and rate limits",Detect and flag,spend_rate,no
+BF-180,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-183,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-184,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-194,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-196,"Usage, spend and rate limits",Cap a quantity,spend_rate,yes
+BF-197,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+BF-199,"Model choice, routing and caching",Allow-list or grant,input,no
+BF-205,Harmful and off-limits content,Transform or steer,input,no
+BF-208,Sensitive data in prompts and outputs,Transform or steer,input,no
+BF-209,Sensitive data in prompts and outputs,Transform or steer,input,no
+BF-210,Prompt attacks and untrusted input,Detect and flag,input,no
+BF-211,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-212,"Model choice, routing and caching",Transform or steer,model_call,no
+BF-218,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+BF-220,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-001,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-002,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-004,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-005,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+CD-006,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-007,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-008,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-010,"Identity, credentials and access rights",Block or switch off,lifecycle,no
+CD-011,"Logs, traces and audit records",Allow-list or grant,logging_audit,no
+CD-012,"Identity, credentials and access rights",Allow-list or grant,data_access,no
+CD-013,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+CD-014,"Usage, spend and rate limits",Cap a quantity,lifecycle,no
+CD-015,"Identity, credentials and access rights",Allow-list or grant,data_access,no
+CD-016,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-018,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-019,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-020,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-021,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-022,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-023,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+CD-024,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-025,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-026,"Identity, credentials and access rights",Allow-list or grant,network_egress,no
+CD-027,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-029,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-031,"Usage, spend and rate limits",Transform or steer,spend_rate,no
+CD-032,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-033,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-034,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-035,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-036,"Usage, spend and rate limits",Cap a quantity,spend_rate,yes
+CD-037,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-038,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-039,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-040,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-041,"Usage, spend and rate limits",Cap a quantity,spend_rate,yes
+CD-042,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-043,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-044,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-046,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-047,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-048,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-050,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-052,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-053,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-054,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-055,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-057,"Stored data: retention, training use and encryption",Block or switch off,data_access,no
+CD-060,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+CD-061,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-062,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-063,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-064,"Stored data: retention, training use and encryption",Record and report,logging_audit,no
+CD-065,"Stored data: retention, training use and encryption",Transform or steer,lifecycle,no
+CD-066,"Stored data: retention, training use and encryption",Record and report,logging_audit,no
+CD-068,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-069,"Model choice, routing and caching",Block or switch off,model_call,no
+CD-070,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+CD-072,"AI inventory, lifecycle and policy management",Allow-list or grant,tool_action,no
+CD-073,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-076,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-077,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-078,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-080,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-081,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-082,"Identity, credentials and access rights",Block or switch off,lifecycle,no
+CD-083,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-084,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-085,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-086,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-087,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-088,"Identity, credentials and access rights",Transform or steer,lifecycle,no
+CD-090,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-091,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-092,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-093,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-094,"Stored data: retention, training use and encryption",Transform or steer,lifecycle,no
+CD-095,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-096,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-097,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-098,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+CD-099,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-100,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-101,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-102,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-103,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-104,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-105,Agent tools and actions,Block or switch off,identity_permission,no
+CD-107,Agent tools and actions,Transform or steer,tool_action,no
+CD-108,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-109,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-110,Network destinations,Allow-list or grant,network_egress,no
+CD-111,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-112,Agent tools and actions,Cap a quantity,tool_action,no
+CD-113,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-114,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-116,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-117,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-120,Agent tools and actions,Allow-list or grant,identity_permission,no
+CD-126,Agent tools and actions,Require a human,human_approval,no
+CD-128,Agent tools and actions,Require a human,human_approval,no
+CD-130,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-131,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-132,Data and files the AI can reach,Block or switch off,data_access,no
+CD-133,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-135,Agent tools and actions,Require a human,human_approval,no
+CD-137,Data and files the AI can reach,Allow-list or grant,data_access,yes
+CD-139,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-142,"Logs, traces and audit records",Record and report,logging_audit,no
+CD-143,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-145,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-147,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-148,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-150,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-151,"AI inventory, lifecycle and policy management",Block or switch off,identity_permission,no
+CD-152,Agent tools and actions,Allow-list or grant,identity_permission,no
+CD-153,"Stored data: retention, training use and encryption",Block or switch off,data_access,no
+CD-157,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-159,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-160,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-163,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-165,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-166,"Usage, spend and rate limits",Detect and flag,spend_rate,no
+CD-167,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+CD-168,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-170,"Logs, traces and audit records",Allow-list or grant,logging_audit,no
+CD-173,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-176,"Stored data: retention, training use and encryption",Cap a quantity,logging_audit,no
+CD-177,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-179,"Stored data: retention, training use and encryption",Cap a quantity,lifecycle,no
+CD-181,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-184,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-185,"Model choice, routing and caching",Allow-list or grant,data_access,no
+CD-186,Harmful and off-limits content,Detect and flag,input,no
+CD-189,Harmful and off-limits content,Detect and flag,tool_action,no
+CD-191,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-192,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-193,"Usage, spend and rate limits",Transform or steer,spend_rate,no
+CD-194,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-195,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-196,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-197,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-198,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-199,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-200,Harmful and off-limits content,Transform or steer,output,no
+CD-201,Harmful and off-limits content,Transform or steer,input,no
+CD-205,Harmful and off-limits content,Transform or steer,output,no
+CD-206,Harmful and off-limits content,Detect and flag,lifecycle,no
+CD-208,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-209,"Usage, spend and rate limits",Transform or steer,spend_rate,no
+CD-210,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-211,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-213,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-215,"Usage, spend and rate limits",Cap a quantity,spend_rate,no
+CD-219,"Usage, spend and rate limits",Transform or steer,spend_rate,no
+CD-220,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-221,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-225,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-226,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-227,"Usage, spend and rate limits",Cap a quantity,lifecycle,no
+CD-229,"Stored data: retention, training use and encryption",Block or switch off,data_access,no
+CD-231,"Stored data: retention, training use and encryption",Transform or steer,data_access,no
+CD-232,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-233,Harmful and off-limits content,Block or switch off,output,no
+CD-236,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-239,"Stored data: retention, training use and encryption",Block or switch off,data_access,no
+CD-246,Harmful and off-limits content,Block or switch off,input,no
+CD-258,Agent tools and actions,Allow-list or grant,human_approval,no
+CD-259,Agent tools and actions,Require a human,human_approval,no
+CD-260,Agent tools and actions,Require a human,human_approval,no
+CD-262,Agent tools and actions,Require a human,human_approval,no
+CD-263,Agent tools and actions,Require a human,human_approval,no
+CD-264,Agent tools and actions,Allow-list or grant,identity_permission,no
+CD-266,Agent tools and actions,Block or switch off,tool_action,no
+CD-267,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-268,Agent tools and actions,Block or switch off,tool_action,no
+CD-269,Agent tools and actions,Transform or steer,tool_action,no
+CD-270,Autonomy and human handover,Transform or steer,identity_permission,no
+CD-271,Autonomy and human handover,Require a human,human_approval,no
+CD-272,Autonomy and human handover,Transform or steer,human_approval,no
+CD-273,Autonomy and human handover,Block or switch off,tool_action,no
+CD-274,Autonomy and human handover,Transform or steer,human_approval,no
+CD-275,Autonomy and human handover,Block or switch off,human_approval,no
+CD-276,Autonomy and human handover,Transform or steer,human_approval,no
+CD-277,Autonomy and human handover,Block or switch off,identity_permission,no
+CD-278,Agent tools and actions,Transform or steer,tool_action,no
+CD-279,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-280,Agent tools and actions,Allow-list or grant,tool_action,yes
+CD-281,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-282,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-283,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-284,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-285,Agent tools and actions,Transform or steer,tool_action,no
+CD-287,Agent tools and actions,Allow-list or grant,human_approval,no
+CD-288,Agent tools and actions,Require a human,human_approval,no
+CD-289,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-290,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-291,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-293,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-294,Data and files the AI can reach,Transform or steer,data_access,no
+CD-297,Data and files the AI can reach,Require a human,human_approval,no
+CD-298,Agent tools and actions,Allow-list or grant,network_egress,no
+CD-299,Agent tools and actions,Block or switch off,network_egress,no
+CD-301,Agent tools and actions,Require a human,human_approval,no
+CD-302,Agent tools and actions,Block or switch off,tool_action,no
+CD-303,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-304,Agent tools and actions,Transform or steer,tool_action,no
+CD-305,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-306,Agent tools and actions,Block or switch off,tool_action,no
+CD-307,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-308,Data and files the AI can reach,Block or switch off,data_access,no
+CD-309,Data and files the AI can reach,Allow-list or grant,data_access,no
+CD-310,Agent tools and actions,Allow-list or grant,human_approval,no
+CD-312,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-313,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-315,Autonomy and human handover,Require a human,human_approval,no
+CD-317,Autonomy and human handover,Transform or steer,lifecycle,yes
+CD-318,"AI inventory, lifecycle and policy management",Block or switch off,lifecycle,no
+CD-319,Agent tools and actions,Block or switch off,tool_action,no
+CD-320,Data and files the AI can reach,Require a human,human_approval,no
+CD-321,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-322,Agent tools and actions,Transform or steer,human_approval,no
+CD-324,Autonomy and human handover,Block or switch off,model_call,no
+CD-326,Agent tools and actions,Require a human,network_egress,no
+CD-327,Prompt attacks and untrusted input,Transform or steer,model_call,no
+CD-328,Autonomy and human handover,Require a human,human_approval,no
+CD-329,Agent tools and actions,Require a human,human_approval,no
+CD-330,Prompt attacks and untrusted input,Require a human,human_approval,no
+CD-331,Agent tools and actions,Require a human,human_approval,no
+CD-332,"Identity, credentials and access rights",Transform or steer,data_access,no
+CD-333,Agent tools and actions,Allow-list or grant,tool_action,no
+CD-334,Network destinations,Allow-list or grant,network_egress,no
+CD-335,"Identity, credentials and access rights",Allow-list or grant,data_access,no
+CD-336,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-337,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-338,"Identity, credentials and access rights",Block or switch off,identity_permission,no
+CD-339,"Model choice, routing and caching",Allow-list or grant,identity_permission,no
+CD-340,"Model choice, routing and caching",Block or switch off,identity_permission,no
+CD-341,"Model choice, routing and caching",Allow-list or grant,network_egress,no
+CD-342,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-343,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-344,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-345,"Identity, credentials and access rights",Transform or steer,data_access,no
+CD-346,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-347,"Identity, credentials and access rights",Transform or steer,identity_permission,no
+CD-348,"Identity, credentials and access rights",Allow-list or grant,identity_permission,no
+CD-349,"Identity, credentials and access rights",Cap a quantity,identity_permission,no
+CD-352,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-353,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-354,"Model choice, routing and caching",Allow-list or grant,model_call,no
+CD-355,"Model choice, routing and caching",Allow-list or grant,model_call,no
+CD-356,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-357,"Model choice, routing and caching",Transform or steer,model_call,no
+CD-358,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-359,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-360,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,yes
+CD-361,"AI inventory, lifecycle and policy management",Transform or steer,identity_permission,no
+CD-362,"AI inventory, lifecycle and policy management",Transform or steer,lifecycle,no
+CD-363,Autonomy and human handover,Block or switch off,identity_permission,no
+CD-364,"Logs, traces and audit records",Block or switch off,logging_audit,no
+CD-365,"AI inventory, lifecycle and policy management",Block or switch off,identity_permission,no
+CD-367,"AI inventory, lifecycle and policy management",Block or switch off,identity_permission,no
+CD-368,Agent tools and actions,Block or switch off,tool_action,no
+CD-369,Agent tools and actions,Block or switch off,tool_action,no
+CD-370,Network destinations,Block or switch off,network_egress,no
+CD-371,Data and files the AI can reach,Block or switch off,data_access,no
+CD-372,Autonomy and human handover,Transform or steer,model_call,no
+CD-374,Prompt attacks and untrusted input,Transform or steer,input,no
+CD-375,Autonomy and human handover,Transform or steer,model_call,no

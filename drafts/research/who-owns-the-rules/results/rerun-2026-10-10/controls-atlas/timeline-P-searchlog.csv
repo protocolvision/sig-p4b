@@ -82,3 +82,7 @@ timestamp,kind,request,http_status,note
 2026-10-11T09:23:01,wayback,http://web.archive.org/cdx/search/cdx?url=example.com&output=json&limit=1,503,health probe (not a research target)
 2026-10-11T09:23:39,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-ways-to-manage-your-data-in-chatgpt&output=json&limit=1&filter=statuscode:200,200,CDX first capture
 2026-10-11T09:23:44,wayback,http://web.archive.org/web/20230425170319id_/https://openai.com/blog/new-ways-to-manage-your-data-in-chatgpt,000,snapshot fetch oa-data-controls-blog backoff
+2026-10-11T09:24:30,wayback,http://web.archive.org/web/20230425170319id_/https://openai.com/blog/new-ways-to-manage-your-data-in-chatgpt,200,snapshot fetch oa-data-controls-blog
+2026-10-11T09:24:35,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/introducing-chatgpt-enterprise&output=json&limit=1&filter=statuscode:200,000,CDX first capture backoff
+2026-10-11T09:25:44,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/introducing-chatgpt-enterprise&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:25:51,wayback,http://web.archive.org/web/20230828171018id_/https://openai.com/blog/introducing-chatgpt-enterprise,200,snapshot fetch oa-chatgpt-enterprise-blog
