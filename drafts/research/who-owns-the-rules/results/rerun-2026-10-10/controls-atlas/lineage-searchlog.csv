@@ -3,9 +3,9 @@ date,method,query_or_url,domain_target,http_status,result,stored_path
 2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc6749.txt,api-rfc6749,200,stored,corpus/b-raw/controls-atlas/lineage/api-rfc6749.txt
 2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc6585.txt,api-rfc6585,200,stored,corpus/b-raw/controls-atlas/lineage/api-rfc6585.txt
 2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc2617.txt,api-rfc2617,200,stored,corpus/b-raw/controls-atlas/lineage/api-rfc2617.txt
-2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc6750.txt,api-rfc6750,200,stored,corpus/b-raw/controls-atlas/lineage/api-rfc6750.txt
+2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc6750.txt,api-rfc6750,200,stored_then_discarded_unused,
 2026-10-11,direct_fetch,https://openid.net/specs/openid-connect-core-1_0.html,api-oidc,200,stored,corpus/b-raw/controls-atlas/lineage/api-oidc.txt
-2026-10-11,direct_fetch,https://aws.amazon.com/about-aws/whats-new/2015/07/introducing-amazon-api-gateway/,api-apigw,200,stored,corpus/b-raw/controls-atlas/lineage/api-apigw.txt
+2026-10-11,direct_fetch,https://aws.amazon.com/about-aws/whats-new/2015/07/introducing-amazon-api-gateway/,api-apigw,200,stored_then_discarded_unused,
 2026-10-11,direct_fetch,https://aws.amazon.com/blogs/security/introducing-cedar-an-open-source-language-for-access-control/,api-cedar,404,failed,
 2026-10-11,direct_fetch,https://www.cncf.io/projects/open-policy-agent-opa/,api-opa,200,stored,corpus/b-raw/controls-atlas/lineage/api-opa.txt
 2026-10-11,direct_fetch,https://docs.oasis-open.org/xacml/1.0/oasis-200302-xacml-1.0-spec.pdf,api-xacml,404,failed,
@@ -22,16 +22,16 @@ date,method,query_or_url,domain_target,http_status,result,stored_path
 2026-10-11,direct_fetch,https://aws.amazon.com/blogs/aws/new-aws-organizations-simplified-management/,cl-scp,404,failed,
 2026-10-11,direct_fetch,https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf,net-nist80041,200,stored,corpus/b-raw/controls-atlas/lineage/net-nist80041.txt
 2026-10-11,direct_fetch,https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf,net-nist800207,200,stored,corpus/b-raw/controls-atlas/lineage/net-nist800207.txt
-2026-10-11,direct_fetch,https://patents.google.com/patent/US5606668A/en,net-patent5606668,200,stored,corpus/b-raw/controls-atlas/lineage/net-patent5606668.txt
+2026-10-11,direct_fetch,https://patents.google.com/patent/US5606668A/en,net-patent5606668,200,stored_then_discarded_unused,
 2026-10-11,direct_fetch,https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/,net-eo14028,404,failed,
 2026-10-11,direct_fetch,https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf,net-m2209,200,stored,corpus/b-raw/controls-atlas/lineage/net-m2209.txt
 2026-10-11,direct_fetch,https://www.paloaltonetworks.com/company/press/2007/palo-alto-networks-unveils-new-generation-of-firewalls,net-pan,404,failed,
-2026-10-11,direct_fetch,https://www.snort.org/faq/what-is-snort,net-snort,200,stored,corpus/b-raw/controls-atlas/lineage/net-snort.txt
+2026-10-11,direct_fetch,https://www.snort.org/faq/what-is-snort,net-snort,200,stored_then_discarded_unused,
 2026-10-11,direct_fetch,https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html,net-hipaa,403,failed,
 2026-10-11,direct_fetch,https://www.pcisecuritystandards.org/documents/information_supplement_6.6.pdf,net-pcidss,200,stored,corpus/b-raw/controls-atlas/lineage/net-pcidss.txt
 2026-10-11,direct_fetch,https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/,net-beyondcorp,200,stored,corpus/b-raw/controls-atlas/lineage/net-beyondcorp.txt
-2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc2979.txt,net-rfc2979,200,stored,corpus/b-raw/controls-atlas/lineage/net-rfc2979.txt
-2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc1858.txt,net-rfc1858,200,stored,corpus/b-raw/controls-atlas/lineage/net-rfc1858.txt
+2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc2979.txt,net-rfc2979,200,stored_then_discarded_unused,
+2026-10-11,direct_fetch,https://www.rfc-editor.org/rfc/rfc1858.txt,net-rfc1858,200,stored_then_discarded_unused,
 2026-10-11,direct_fetch,https://www.checkpoint.com/about-us/company-history/,net-checkpoint,404,failed,
 2026-10-11,direct_fetch,https://www.cisco.com/c/en/us/about/press/corporate-overview/history.html,net-cisco-asa,404,failed,
 2026-10-11,direct_fetch,https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.119,ind-psm,200,stored,corpus/b-raw/controls-atlas/lineage/ind-psm.txt
@@ -101,3 +101,25 @@ date,method,query_or_url,domain_target,http_status,result,stored_path
 2026-10-11,direct_fetch,https://webstore.ansi.org/standards/isa/ansiisa6244399012007,ind-62443-ansi,403,failed,
 2026-10-11,direct_fetch,https://community.checkpoint.com/t5/Check-Point-for-Beginners/Brief-History-of-Check-Point-Firewalls/ba-p/87842,net-checkpoint,403,failed,
 2026-10-11,direct_fetch,https://www.boutique.afnor.org/en-gb/standard/iec-6151112003/functional-safety-safety-instrumented-systems-for-the-process-industry-sect/xs109602/251279,ind-iec61511-afnor,200,stored,corpus/b-raw/controls-atlas/lineage/ind-iec61511-afnor.txt
+2026-10-11,web_search,AWS IAM 2011 announcement,url discovery,,results reviewed,
+2026-10-11,web_search,AWS Organizations 2017 SCP announcement,url discovery,,results reviewed,
+2026-10-11,web_search,IAM permissions boundaries July 2018,url discovery,,results reviewed,
+2026-10-11,web_search,Cedar open source AWS 2023,url discovery,,results reviewed,
+2026-10-11,web_search,S3 bucket policies July 2010,url discovery,,results reviewed,
+2026-10-11,web_search,Azure Policy GA announcement 2018 (not found),url discovery,,results reviewed,
+2026-10-11,web_search,AWS Config 2014 / Verified Permissions GA,url discovery,,results reviewed,
+2026-10-11,web_search,OSHA PSM 1910.119 final rule 1992,url discovery,,results reviewed,
+2026-10-11,web_search,IEC 61508 1998 edition,url discovery,,results reviewed,
+2026-10-11,web_search,ISO 13850 first edition (not found),url discovery,,results reviewed,
+2026-10-11,web_search,EPA operator certification guidelines 1999,url discovery,,results reviewed,
+2026-10-11,web_search,Check Point stateful inspection history,url discovery,,results reviewed,
+2026-10-11,web_search,Palo Alto Networks 2007 PA-4000 press release,url discovery,,results reviewed,
+2026-10-11,web_search,Mogul 1989 screend packet filter,url discovery,,results reviewed,
+2026-10-11,web_search,API Gateway usage plans 2016,url discovery,,results reviewed,
+2026-10-11,web_search,IEC 61511 2003 publication date,url discovery,,results reviewed,
+2026-10-11,web_search,ISA99 / IEC 62443 history,url discovery,,results reviewed,
+2026-10-11,web_search,OPA CNCF sandbox 2018,url discovery,,results reviewed,
+2026-10-11,web_search,AWIA section 2013 EPA page,url discovery,,results reviewed,
+2026-10-11,web_search,EPA 2023 cyber memo withdrawal and 2024 enforcement alert,url discovery,,results reviewed,
+2026-10-11,web_search,NIS2 Annex I drinking water,url discovery,,results reviewed,
+2026-10-11,web_search,Water SCADA history,url discovery,,results reviewed,
