@@ -1,0 +1,62 @@
+timestamp,kind,request,http_status,note
+2026-10-11T09:18:20,fetch,https://docs.anthropic.com/en/release-notes/api,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://docs.aws.amazon.com/bedrock/latest/userguide/doc-history.html,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://learn.microsoft.com/en-us/azure/ai-services/content-safety/whats-new,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://cloud.google.com/vertex-ai/generative-ai/docs/release-notes,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://platform.openai.com/docs/changelog,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://ai.google.dev/gemini-api/docs/changelog,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://help.openai.com/en/articles/6825453-chatgpt-release-notes,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2025/07/amazon-bedrock-agentcore-preview/,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-bedrock-agentcore-available/,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2023/11/guardrails-amazon-bedrock-preview/,404,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2024/04/guardrails-amazon-bedrock-generally-available/,404,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2024/04/guardrails-amazon-bedrock-available/,404,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/doc-history.html,"200 (JS shell, empty)",logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-bedrock-safeguard-ai-applications-guardrails/,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-bedrock-agentcore-policy-evaluations-preview,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-bedrock-guardrails-automated-reasoning-checks-preview,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/about-aws/whats-new/2026/03/policy-amazon-bedrock-agentcore-generally-available/,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-now-available-with-new-safety-filters-and-privacy-controls/,200,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/new-and-improved-content-moderation-tooling/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/introducing-chatgpt-enterprise/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/new-ways-to-manage-your-data-in-chatgpt/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/new-tools-for-building-agents/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/introducing-agentkit/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.com/index/introducing-operator/,403,logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,fetch,https://openai.github.io/openai-agents-python/guardrails/,200 (probe),logged retrospectively (before logging wrapper)
+2026-10-11T09:18:20,websearch,Amazon Bedrock AgentCore Policy preview Cedar,ok,
+2026-10-11T09:18:20,websearch,Guardrails for Amazon Bedrock preview November 2023,ok,
+2026-10-11T09:18:20,websearch,Bedrock Guardrails Automated Reasoning preview December 2024,ok,
+2026-10-11T09:18:41,websearch,OpenAI Moderation endpoint launch date,ok,
+2026-10-11T09:18:41,websearch,Azure OpenAI abuse monitoring modified release date,ok,
+2026-10-11T09:18:41,websearch,Google Model Armor release notes,ok,
+2026-10-11T09:18:41,websearch,Anthropic Claude Enterprise SSO audit logs,ok,
+2026-10-11T09:18:42,fetch,https://www.anthropic.com/news/claude-for-enterprise,200,anthropic-claude-enterprise
+2026-10-11T09:18:43,fetch,https://docs.cloud.google.com/model-armor/release-notes,200,gcp-model-armor-relnotes
+2026-10-11T09:18:43,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/abuse-monitoring,200,azure-abuse-monitoring
+2026-10-11T09:18:43,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/content-filter,200,azure-content-filter
+2026-10-11T09:18:43,fetch,https://openai.github.io/openai-agents-python/guardrails/,200,openai-agents-guardrails
+2026-10-11T09:18:44,fetch,https://www.anthropic.com/news/workspaces,200,anthropic-workspaces
+2026-10-11T09:18:44,fetch,https://www.anthropic.com/news/claude-team-plan,404,anthropic-team-plan
+2026-10-11T09:18:45,fetch,https://www.anthropic.com/news/api-compliance-ai-features,404,anthropic-compliance
+2026-10-11T09:19:27,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/openai/whats-new-archive,404,azure-openai-whatsnew-archive
+2026-10-11T09:19:28,fetch,https://learn.microsoft.com/en-us/azure/ai-services/openai/whats-new-archive,404,azure-openai-whatsnew-archive2
+2026-10-11T09:19:28,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/agents/whats-new,200,azure-agents-whatsnew
+2026-10-11T09:19:29,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/limits-quotas-regions,200,azure-agents-limits
+2026-10-11T09:19:29,fetch,https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/whats-new,404,azure-foundry-whatsnew
+2026-10-11T09:19:49,fetch,https://azure.microsoft.com/en-us/blog/general-availability-of-azure-openai-service-expands-access-to-large-advanced-ai-models-with-added-benefits/,404,azure-openai-ga-blog
+2026-10-11T09:19:52,fetch,https://azure.microsoft.com/en-us/blog/introducing-azure-openai-service/,404,azure-openai-intro-blog
+2026-10-11T09:19:52,fetch,https://www.anthropic.com/news/constitutional-classifiers,200,anthropic-constitutional-classifiers
+2026-10-11T09:19:52,fetch,https://www.anthropic.com/news/activating-asl3-protections,200,anthropic-asl3
+2026-10-11T09:19:53,fetch,https://support.claude.com/en/articles/12138966-release-notes,200,claude-release-notes
+2026-10-11T09:19:53,fetch,https://platform.claude.com/docs/en/build-with-claude/api-and-data-retention,200,anthropic-data-retention
+2026-10-11T09:19:55,fetch,https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/,200,aws-guardrails-preview-blog
+2026-10-11T09:19:55,fetch,https://www.anthropic.com/news/anthropic-api-enterprise-controls,404,anthropic-x
+2026-10-11T09:20:42,websearch,Azure AI Foundry Build 2025 Entra Agent ID guardrails,ok,
+2026-10-11T09:20:42,websearch,Vertex AI PaLM safety attributes announcement,ok,
+2026-10-11T09:20:44,fetch,https://azure.microsoft.com/en-us/blog/azure-ai-foundry-your-ai-app-and-agent-factory/,200,azure-foundry-build2025-blog
+2026-10-11T09:20:48,fetch,https://techcommunity.microsoft.com/blog/microsoft-security-blog/enterprise-grade-controls-for-ai-apps-and-agents-built-with-azure-ai-foundry-and/4414757,200,azure-enterprise-controls-techcomm
+2026-10-11T09:20:48,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/blog/new-and-improved-content-moderation-tooling&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:20:49,fetch,https://cloud.google.com/vertex-ai/generative-ai/docs/configure-safety-attributes-palm,404,gcp-palm-safety-doc
+2026-10-11T09:20:55,wayback,http://web.archive.org/web/20220810163205id_/https://openai.com/blog/new-and-improved-content-moderation-tooling/,200,snapshot fetch oa-moderation-blog

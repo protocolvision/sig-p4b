@@ -1,0 +1,663 @@
+control_id,object,mechanism
+AH-496,"Usage, spend and rate limits",Cap a quantity
+AH-504,Autonomy and human handover,Block or switch off
+AH-485,Agent tools and actions,Allow-list or grant
+AH-493,Network destinations,Block or switch off
+AH-502,"Stored data: retention, training use and encryption",Cap a quantity
+AH-489,"Identity, credentials and access rights",Block or switch off
+AH-498,"Logs, traces and audit records",Record and report
+AH-497,Prompt attacks and untrusted input,Block or switch off
+AH-486,Agent tools and actions,Allow-list or grant
+AH-509,"Identity, credentials and access rights",Cap a quantity
+AH-505,Autonomy and human handover,Block or switch off
+AH-491,"Identity, credentials and access rights",Allow-list or grant
+AH-481,Network destinations,Allow-list or grant
+AH-492,"Identity, credentials and access rights",Allow-list or grant
+AH-488,Autonomy and human handover,Require a human
+AH-541,Agent tools and actions,Require a human
+AH-533,"Identity, credentials and access rights",Cap a quantity
+AH-539,Sensitive data in prompts and outputs,Transform or steer
+AH-536,Agent tools and actions,Block or switch off
+AH-544,Agent tools and actions,Transform or steer
+AH-537,"Identity, credentials and access rights",Allow-list or grant
+AH-543,Agent tools and actions,Require a human
+AH-532,"Usage, spend and rate limits",Cap a quantity
+AH-535,Agent tools and actions,Detect and flag
+AH-538,"AI inventory, lifecycle and policy management",Block or switch off
+AH-542,Agent tools and actions,Require a human
+AH-540,"Usage, spend and rate limits",Cap a quantity
+AH-545,Agent tools and actions,Block or switch off
+AH-534,"Identity, credentials and access rights",Allow-list or grant
+AH-521,Agent tools and actions,Allow-list or grant
+AH-530,"Logs, traces and audit records",Record and report
+AH-531,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-523,"Usage, spend and rate limits",Cap a quantity
+AH-517,Sensitive data in prompts and outputs,Transform or steer
+AH-515,"Identity, credentials and access rights",Allow-list or grant
+AH-510,Agent tools and actions,Require a human
+AH-518,Agent tools and actions,Allow-list or grant
+AH-529,"Logs, traces and audit records",Record and report
+AH-528,Agent tools and actions,Allow-list or grant
+AH-524,"Usage, spend and rate limits",Cap a quantity
+AH-511,Agent tools and actions,Require a human
+AH-522,Agent tools and actions,Allow-list or grant
+AH-525,"Usage, spend and rate limits",Cap a quantity
+AH-513,Agent tools and actions,Require a human
+BF-040,Network destinations,Allow-list or grant
+BF-043,"Identity, credentials and access rights",Allow-list or grant
+BF-027,Agent tools and actions,Allow-list or grant
+BF-046,"Logs, traces and audit records",Record and report
+BF-044,"AI inventory, lifecycle and policy management",Detect and flag
+BF-039,"Stored data: retention, training use and encryption",Record and report
+BF-036,"Usage, spend and rate limits",Cap a quantity
+BF-048,Network destinations,Allow-list or grant
+BF-032,"Identity, credentials and access rights",Allow-list or grant
+BF-029,Agent tools and actions,Allow-list or grant
+BF-042,"Logs, traces and audit records",Record and report
+BF-035,"Stored data: retention, training use and encryption",Cap a quantity
+BF-034,Agent tools and actions,Allow-list or grant
+BF-045,"Usage, spend and rate limits",Cap a quantity
+BF-038,"Identity, credentials and access rights",Allow-list or grant
+BF-024,"Logs, traces and audit records",Record and report
+BF-022,"Usage, spend and rate limits",Cap a quantity
+BF-023,"AI inventory, lifecycle and policy management",Transform or steer
+BF-025,"Logs, traces and audit records",Record and report
+BF-026,"Logs, traces and audit records",Record and report
+BF-021,Harmful and off-limits content,Transform or steer
+BF-007,Harmful and off-limits content,Block or switch off
+BF-020,"Model choice, routing and caching",Transform or steer
+BF-011,Sensitive data in prompts and outputs,Transform or steer
+BF-019,"Stored data: retention, training use and encryption",Transform or steer
+BF-018,"Logs, traces and audit records",Record and report
+BF-012,Sensitive data in prompts and outputs,Transform or steer
+BF-001,Harmful and off-limits content,Block or switch off
+BF-008,Harmful and off-limits content,Block or switch off
+BF-003,Harmful and off-limits content,Detect and flag
+BF-004,Harmful and off-limits content,Block or switch off
+BF-016,Harmful and off-limits content,Detect and flag
+BF-010,Sensitive data in prompts and outputs,Transform or steer
+BF-006,Prompt attacks and untrusted input,Detect and flag
+BF-002,Harmful and off-limits content,Block or switch off
+CD-991,Agent tools and actions,Allow-list or grant
+CD-986,Agent tools and actions,Block or switch off
+CD-995,"Identity, credentials and access rights",Block or switch off
+CD-988,Agent tools and actions,Require a human
+CD-1014,"Stored data: retention, training use and encryption",Block or switch off
+CD-990,Network destinations,Allow-list or grant
+CD-1017,"Identity, credentials and access rights",Transform or steer
+CD-983,Agent tools and actions,Allow-list or grant
+CD-1018,"Identity, credentials and access rights",Allow-list or grant
+CD-1007,Data and files the AI can reach,Allow-list or grant
+CD-1000,Agent tools and actions,Allow-list or grant
+CD-996,"Identity, credentials and access rights",Block or switch off
+CD-1012,"Stored data: retention, training use and encryption",Block or switch off
+CD-1001,Agent tools and actions,Allow-list or grant
+CD-998,"Identity, credentials and access rights",Block or switch off
+CD-051,"Stored data: retention, training use and encryption",Cap a quantity
+CD-079,"Identity, credentials and access rights",Allow-list or grant
+CD-059,"Stored data: retention, training use and encryption",Block or switch off
+CD-106,Agent tools and actions,Require a human
+CD-075,"Model choice, routing and caching",Transform or steer
+CD-030,"Usage, spend and rate limits",Cap a quantity
+CD-071,Network destinations,Block or switch off
+CD-045,"Logs, traces and audit records",Transform or steer
+CD-089,"Identity, credentials and access rights",Require a human
+CD-056,"Stored data: retention, training use and encryption",Block or switch off
+CD-049,"Stored data: retention, training use and encryption",Cap a quantity
+CD-119,"Identity, credentials and access rights",Transform or steer
+CD-058,"Stored data: retention, training use and encryption",Block or switch off
+CD-115,"Identity, credentials and access rights",Allow-list or grant
+CD-074,"Model choice, routing and caching",Allow-list or grant
+BF-065,Prompt attacks and untrusted input,Detect and flag
+BF-072,"Identity, credentials and access rights",Allow-list or grant
+BF-067,Network destinations,Allow-list or grant
+BF-056,Answer accuracy and presentation,Detect and flag
+BF-052,Prompt attacks and untrusted input,Detect and flag
+BF-069,Agent tools and actions,Require a human
+BF-076,"Usage, spend and rate limits",Cap a quantity
+BF-051,Harmful and off-limits content,Require a human
+BF-073,"Logs, traces and audit records",Record and report
+BF-068,Agent tools and actions,Allow-list or grant
+BF-071,Network destinations,Allow-list or grant
+BF-050,Harmful and off-limits content,Block or switch off
+BF-060,"Usage, spend and rate limits",Cap a quantity
+BF-058,Autonomy and human handover,Require a human
+BF-074,"Usage, spend and rate limits",Cap a quantity
+BF-230,"Logs, traces and audit records",Record and report
+BF-232,Harmful and off-limits content,Block or switch off
+BF-237,"Identity, credentials and access rights",Allow-list or grant
+BF-229,"Usage, spend and rate limits",Cap a quantity
+BF-234,"Model choice, routing and caching",Transform or steer
+BF-235,"Identity, credentials and access rights",Allow-list or grant
+BF-231,Harmful and off-limits content,Block or switch off
+BF-236,"Identity, credentials and access rights",Allow-list or grant
+BF-233,"Model choice, routing and caching",Transform or steer
+CD-122,Agent tools and actions,Allow-list or grant
+CD-121,Agent tools and actions,Allow-list or grant
+CD-141,"Logs, traces and audit records",Record and report
+CD-124,Agent tools and actions,Allow-list or grant
+CD-155,Harmful and off-limits content,Detect and flag
+CD-129,Agent tools and actions,Allow-list or grant
+CD-149,"Stored data: retention, training use and encryption",Allow-list or grant
+CD-134,Agent tools and actions,Allow-list or grant
+CD-144,"Stored data: retention, training use and encryption",Cap a quantity
+CD-138,"Logs, traces and audit records",Record and report
+CD-125,Agent tools and actions,Allow-list or grant
+CD-127,Agent tools and actions,Require a human
+CD-136,"Stored data: retention, training use and encryption",Block or switch off
+CD-123,Agent tools and actions,Allow-list or grant
+CD-146,"Stored data: retention, training use and encryption",Cap a quantity
+EG-050,Sensitive data in prompts and outputs,Detect and flag
+EG-038,Prompt attacks and untrusted input,Detect and flag
+EG-061,"AI inventory, lifecycle and policy management",Detect and flag
+EG-058,Harmful and off-limits content,Allow-list or grant
+EG-035,Harmful and off-limits content,Detect and flag
+EG-044,Harmful and off-limits content,Detect and flag
+EG-051,Sensitive data in prompts and outputs,Detect and flag
+EG-060,"AI inventory, lifecycle and policy management",Detect and flag
+EG-048,Sensitive data in prompts and outputs,Detect and flag
+EG-063,"Logs, traces and audit records",Record and report
+EG-047,Sensitive data in prompts and outputs,Transform or steer
+EG-054,Agent tools and actions,Detect and flag
+EG-062,"AI inventory, lifecycle and policy management",Detect and flag
+EG-034,Harmful and off-limits content,Block or switch off
+EG-041,Harmful and off-limits content,Detect and flag
+CD-261,Agent tools and actions,Require a human
+CD-578,Autonomy and human handover,Transform or steer
+CD-510,Agent tools and actions,Block or switch off
+CD-645,"Logs, traces and audit records",Record and report
+CD-467,Data and files the AI can reach,Allow-list or grant
+CD-555,Agent tools and actions,Allow-list or grant
+CD-311,Agent tools and actions,Allow-list or grant
+CD-629,Agent tools and actions,Detect and flag
+CD-621,"Usage, spend and rate limits",Cap a quantity
+CD-529,"Usage, spend and rate limits",Cap a quantity
+CD-534,"Usage, spend and rate limits",Cap a quantity
+CD-323,Autonomy and human handover,Require a human
+CD-414,"AI inventory, lifecycle and policy management",Transform or steer
+CD-300,Agent tools and actions,Allow-list or grant
+CD-656,"Logs, traces and audit records",Record and report
+BF-129,Sensitive data in prompts and outputs,Block or switch off
+BF-137,"Logs, traces and audit records",Record and report
+BF-134,"Identity, credentials and access rights",Allow-list or grant
+BF-132,"Model choice, routing and caching",Transform or steer
+BF-131,Sensitive data in prompts and outputs,Block or switch off
+BF-142,"AI inventory, lifecycle and policy management",Transform or steer
+BF-141,"Usage, spend and rate limits",Cap a quantity
+BF-130,Sensitive data in prompts and outputs,Block or switch off
+BF-144,"Logs, traces and audit records",Record and report
+BF-139,"Identity, credentials and access rights",Transform or steer
+BF-143,"Model choice, routing and caching",Transform or steer
+BF-128,Harmful and off-limits content,Block or switch off
+BF-126,"Usage, spend and rate limits",Cap a quantity
+BF-127,Harmful and off-limits content,Block or switch off
+BF-135,"Logs, traces and audit records",Record and report
+EG-281,"AI inventory, lifecycle and policy management",Detect and flag
+EG-285,"Logs, traces and audit records",Record and report
+EG-270,Autonomy and human handover,Require a human
+EG-268,Agent tools and actions,Block or switch off
+EG-271,Agent tools and actions,Transform or steer
+EG-278,"AI inventory, lifecycle and policy management",Transform or steer
+EG-280,"AI inventory, lifecycle and policy management",Record and report
+EG-282,"AI inventory, lifecycle and policy management",Require a human
+EG-269,Agent tools and actions,Block or switch off
+EG-272,"AI inventory, lifecycle and policy management",Transform or steer
+EG-277,"AI inventory, lifecycle and policy management",Detect and flag
+EG-279,"AI inventory, lifecycle and policy management",Require a human
+EG-273,"AI inventory, lifecycle and policy management",Transform or steer
+EG-276,"AI inventory, lifecycle and policy management",Require a human
+EG-283,"AI inventory, lifecycle and policy management",Record and report
+CD-840,Agent tools and actions,Transform or steer
+CD-811,Agent tools and actions,Require a human
+CD-822,Data and files the AI can reach,Block or switch off
+CD-843,Agent tools and actions,Allow-list or grant
+CD-852,"Usage, spend and rate limits",Cap a quantity
+CD-855,"Model choice, routing and caching",Allow-list or grant
+CD-884,Agent tools and actions,Transform or steer
+CD-868,Agent tools and actions,Cap a quantity
+CD-862,Network destinations,Allow-list or grant
+CD-850,"Logs, traces and audit records",Record and report
+CD-827,Agent tools and actions,Block or switch off
+CD-869,Autonomy and human handover,Require a human
+CD-831,Data and files the AI can reach,Block or switch off
+CD-816,Autonomy and human handover,Require a human
+CD-829,"Usage, spend and rate limits",Cap a quantity
+BF-110,Harmful and off-limits content,Block or switch off
+BF-119,"Logs, traces and audit records",Record and report
+BF-120,"Identity, credentials and access rights",Allow-list or grant
+BF-124,"Model choice, routing and caching",Transform or steer
+BF-111,Sensitive data in prompts and outputs,Transform or steer
+BF-113,Agent tools and actions,Block or switch off
+BF-115,"Usage, spend and rate limits",Cap a quantity
+BF-109,Harmful and off-limits content,Block or switch off
+BF-118,"Logs, traces and audit records",Record and report
+BF-116,"Model choice, routing and caching",Transform or steer
+BF-112,Harmful and off-limits content,Block or switch off
+BF-123,Agent tools and actions,Allow-list or grant
+BF-121,"Usage, spend and rate limits",Cap a quantity
+BF-122,"Model choice, routing and caching",Allow-list or grant
+BF-117,"Model choice, routing and caching",Transform or steer
+BF-227,"Identity, credentials and access rights",Transform or steer
+BF-224,"Usage, spend and rate limits",Cap a quantity
+BF-222,Agent tools and actions,Allow-list or grant
+BF-226,Sensitive data in prompts and outputs,Block or switch off
+BF-225,Data and files the AI can reach,Allow-list or grant
+BF-223,"Usage, spend and rate limits",Cap a quantity
+BF-228,"AI inventory, lifecycle and policy management",Transform or steer
+BF-221,Agent tools and actions,Allow-list or grant
+CD-240,"Logs, traces and audit records",Record and report
+CD-224,"Identity, credentials and access rights",Allow-list or grant
+CD-212,"Usage, spend and rate limits",Cap a quantity
+CD-238,"Logs, traces and audit records",Record and report
+CD-228,"Stored data: retention, training use and encryption",Transform or steer
+CD-202,Harmful and off-limits content,Block or switch off
+CD-234,Autonomy and human handover,Require a human
+CD-235,Harmful and off-limits content,Block or switch off
+CD-223,"Identity, credentials and access rights",Allow-list or grant
+CD-230,"Logs, traces and audit records",Record and report
+CD-222,"Identity, credentials and access rights",Block or switch off
+CD-216,"Usage, spend and rate limits",Cap a quantity
+CD-218,"Usage, spend and rate limits",Transform or steer
+CD-217,"Stored data: retention, training use and encryption",Block or switch off
+CD-203,Harmful and off-limits content,Block or switch off
+CD-1029,"Logs, traces and audit records",Record and report
+CD-1042,Agent tools and actions,Detect and flag
+CD-1036,Autonomy and human handover,Require a human
+CD-1043,"Usage, spend and rate limits",Transform or steer
+CD-1026,"Identity, credentials and access rights",Allow-list or grant
+CD-1041,Autonomy and human handover,Transform or steer
+CD-1021,"AI inventory, lifecycle and policy management",Transform or steer
+CD-1024,"Logs, traces and audit records",Record and report
+CD-1031,Agent tools and actions,Allow-list or grant
+CD-1038,Agent tools and actions,Require a human
+CD-1020,"AI inventory, lifecycle and policy management",Transform or steer
+CD-1028,"Logs, traces and audit records",Record and report
+CD-1044,Agent tools and actions,Allow-list or grant
+CD-1037,Autonomy and human handover,Require a human
+CD-1019,"AI inventory, lifecycle and policy management",Transform or steer
+CD-898,"AI inventory, lifecycle and policy management",Allow-list or grant
+CD-931,Network destinations,Allow-list or grant
+CD-917,Data and files the AI can reach,Block or switch off
+CD-953,"Logs, traces and audit records",Record and report
+CD-968,Agent tools and actions,Require a human
+CD-974,Agent tools and actions,Allow-list or grant
+CD-976,"AI inventory, lifecycle and policy management",Transform or steer
+CD-961,Agent tools and actions,Detect and flag
+CD-973,Prompt attacks and untrusted input,Block or switch off
+CD-940,"AI inventory, lifecycle and policy management",Allow-list or grant
+CD-929,Network destinations,Allow-list or grant
+CD-914,Data and files the AI can reach,Block or switch off
+CD-971,"Logs, traces and audit records",Record and report
+CD-969,Agent tools and actions,Require a human
+CD-957,Agent tools and actions,Allow-list or grant
+AH-106,"Stored data: retention, training use and encryption",Transform or steer
+AH-096,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-081,Data and files the AI can reach,Block or switch off
+AH-102,"Logs, traces and audit records",Record and report
+AH-087,"Identity, credentials and access rights",Allow-list or grant
+AH-094,"AI inventory, lifecycle and policy management",Require a human
+AH-104,"Usage, spend and rate limits",Cap a quantity
+AH-074,Harmful and off-limits content,Block or switch off
+AH-075,Harmful and off-limits content,Block or switch off
+AH-092,Data and files the AI can reach,Allow-list or grant
+AH-095,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-098,Network destinations,Allow-list or grant
+AH-107,"Logs, traces and audit records",Detect and flag
+AH-082,"Identity, credentials and access rights",Allow-list or grant
+AH-105,"Usage, spend and rate limits",Cap a quantity
+BF-099,"Logs, traces and audit records",Record and report
+BF-083,Prompt attacks and untrusted input,Detect and flag
+BF-090,Prompt attacks and untrusted input,Transform or steer
+BF-098,"Usage, spend and rate limits",Transform or steer
+BF-105,"Identity, credentials and access rights",Allow-list or grant
+BF-091,Network destinations,Allow-list or grant
+BF-102,"Model choice, routing and caching",Transform or steer
+BF-088,Harmful and off-limits content,Transform or steer
+BF-108,"Stored data: retention, training use and encryption",Transform or steer
+BF-100,"Logs, traces and audit records",Record and report
+BF-085,Sensitive data in prompts and outputs,Transform or steer
+BF-082,Prompt attacks and untrusted input,Detect and flag
+BF-106,"Identity, credentials and access rights",Allow-list or grant
+BF-107,Network destinations,Allow-list or grant
+BF-103,"Model choice, routing and caching",Cap a quantity
+EG-065,Harmful and off-limits content,Block or switch off
+EG-077,Harmful and off-limits content,Transform or steer
+EG-096,Harmful and off-limits content,Detect and flag
+EG-085,Harmful and off-limits content,Detect and flag
+EG-098,Prompt attacks and untrusted input,Detect and flag
+EG-104,Answer accuracy and presentation,Detect and flag
+EG-078,Prompt attacks and untrusted input,Detect and flag
+EG-082,Answer accuracy and presentation,Detect and flag
+EG-075,Harmful and off-limits content,Detect and flag
+EG-097,Harmful and off-limits content,Detect and flag
+EG-084,Harmful and off-limits content,Detect and flag
+EG-102,Answer accuracy and presentation,Detect and flag
+EG-089,Prompt attacks and untrusted input,Detect and flag
+EG-073,Answer accuracy and presentation,Transform or steer
+EG-080,Prompt attacks and untrusted input,Detect and flag
+AH-235,"AI inventory, lifecycle and policy management",Transform or steer
+AH-213,Harmful and off-limits content,Transform or steer
+AH-221,"AI inventory, lifecycle and policy management",Detect and flag
+AH-230,"Model choice, routing and caching",Transform or steer
+AH-245,Agent tools and actions,Allow-list or grant
+AH-234,"AI inventory, lifecycle and policy management",Require a human
+AH-222,"Identity, credentials and access rights",Detect and flag
+AH-239,Autonomy and human handover,Allow-list or grant
+AH-209,Harmful and off-limits content,Block or switch off
+AH-246,Data and files the AI can reach,Allow-list or grant
+AH-247,"Usage, spend and rate limits",Cap a quantity
+AH-210,Sensitive data in prompts and outputs,Transform or steer
+AH-242,"Logs, traces and audit records",Record and report
+AH-228,"Usage, spend and rate limits",Cap a quantity
+AH-238,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-399,Answer accuracy and presentation,Transform or steer
+AH-387,"AI inventory, lifecycle and policy management",Detect and flag
+AH-361,"Usage, spend and rate limits",Cap a quantity
+AH-378,Autonomy and human handover,Transform or steer
+AH-390,Agent tools and actions,Allow-list or grant
+AH-364,Data and files the AI can reach,Transform or steer
+AH-411,"Logs, traces and audit records",Record and report
+AH-406,"Identity, credentials and access rights",Allow-list or grant
+AH-405,"Usage, spend and rate limits",Cap a quantity
+AH-403,Answer accuracy and presentation,Transform or steer
+AH-372,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-374,Autonomy and human handover,Allow-list or grant
+AH-379,Autonomy and human handover,Block or switch off
+AH-394,Agent tools and actions,Allow-list or grant
+AH-367,Autonomy and human handover,Transform or steer
+BF-156,"Model choice, routing and caching",Transform or steer
+BF-168,"Identity, credentials and access rights",Allow-list or grant
+BF-152,Prompt attacks and untrusted input,Allow-list or grant
+BF-154,"Usage, spend and rate limits",Cap a quantity
+BF-166,Agent tools and actions,Allow-list or grant
+BF-160,Harmful and off-limits content,Transform or steer
+BF-161,"Logs, traces and audit records",Record and report
+BF-147,"Model choice, routing and caching",Transform or steer
+BF-169,"Identity, credentials and access rights",Allow-list or grant
+BF-153,Prompt attacks and untrusted input,Transform or steer
+BF-155,"Usage, spend and rate limits",Transform or steer
+BF-167,Agent tools and actions,Allow-list or grant
+BF-157,Sensitive data in prompts and outputs,Transform or steer
+BF-164,"Logs, traces and audit records",Record and report
+BF-146,"Model choice, routing and caching",Transform or steer
+BF-217,"Logs, traces and audit records",Record and report
+BF-201,"Identity, credentials and access rights",Allow-list or grant
+BF-213,"Model choice, routing and caching",Transform or steer
+BF-200,"Usage, spend and rate limits",Cap a quantity
+BF-219,Network destinations,Allow-list or grant
+BF-207,Harmful and off-limits content,Transform or steer
+BF-198,"Model choice, routing and caching",Allow-list or grant
+BF-203,Agent tools and actions,Allow-list or grant
+BF-216,"Logs, traces and audit records",Transform or steer
+BF-204,"Identity, credentials and access rights",Allow-list or grant
+BF-214,"Model choice, routing and caching",Transform or steer
+BF-195,"Usage, spend and rate limits",Cap a quantity
+BF-206,Harmful and off-limits content,Transform or steer
+BF-202,Agent tools and actions,Allow-list or grant
+BF-215,"Logs, traces and audit records",Transform or steer
+AH-421,"Usage, spend and rate limits",Cap a quantity
+AH-434,"Usage, spend and rate limits",Cap a quantity
+AH-433,"Model choice, routing and caching",Transform or steer
+AH-447,Agent tools and actions,Require a human
+AH-439,Data and files the AI can reach,Block or switch off
+AH-456,"Identity, credentials and access rights",Allow-list or grant
+AH-427,Autonomy and human handover,Block or switch off
+AH-468,Network destinations,Block or switch off
+AH-437,Prompt attacks and untrusted input,Block or switch off
+AH-441,Data and files the AI can reach,Detect and flag
+AH-419,Prompt attacks and untrusted input,Transform or steer
+AH-422,Prompt attacks and untrusted input,Allow-list or grant
+AH-435,"Usage, spend and rate limits",Cap a quantity
+AH-436,Agent tools and actions,Transform or steer
+AH-414,Agent tools and actions,Require a human
+EG-151,Harmful and off-limits content,Detect and flag
+EG-140,Harmful and off-limits content,Detect and flag
+EG-154,Harmful and off-limits content,Detect and flag
+EG-160,Prompt attacks and untrusted input,Transform or steer
+EG-152,Harmful and off-limits content,Detect and flag
+EG-157,Prompt attacks and untrusted input,Detect and flag
+EG-156,Agent tools and actions,Detect and flag
+EG-150,Harmful and off-limits content,Detect and flag
+EG-158,Prompt attacks and untrusted input,Detect and flag
+EG-147,Sensitive data in prompts and outputs,Detect and flag
+EG-159,Prompt attacks and untrusted input,Detect and flag
+EG-153,Harmful and off-limits content,Detect and flag
+EG-146,Harmful and off-limits content,Detect and flag
+EG-141,Harmful and off-limits content,Detect and flag
+EG-149,Harmful and off-limits content,Detect and flag
+AH-149,"AI inventory, lifecycle and policy management",Detect and flag
+AH-173,"Identity, credentials and access rights",Allow-list or grant
+AH-132,Agent tools and actions,Transform or steer
+AH-158,"Usage, spend and rate limits",Cap a quantity
+AH-141,"Model choice, routing and caching",Allow-list or grant
+AH-156,"Logs, traces and audit records",Detect and flag
+AH-162,"Stored data: retention, training use and encryption",Transform or steer
+AH-138,Agent tools and actions,Allow-list or grant
+AH-137,Autonomy and human handover,Require a human
+AH-128,Harmful and off-limits content,Block or switch off
+AH-127,Harmful and off-limits content,Transform or steer
+AH-171,"AI inventory, lifecycle and policy management",Block or switch off
+AH-167,"Identity, credentials and access rights",Allow-list or grant
+AH-117,"AI inventory, lifecycle and policy management",Block or switch off
+AH-160,"Usage, spend and rate limits",Cap a quantity
+EG-179,"Identity, credentials and access rights",Transform or steer
+EG-168,"Identity, credentials and access rights",Block or switch off
+EG-189,"Logs, traces and audit records",Record and report
+EG-182,"Identity, credentials and access rights",Require a human
+EG-192,Network destinations,Block or switch off
+EG-186,"Identity, credentials and access rights",Block or switch off
+EG-164,"Identity, credentials and access rights",Allow-list or grant
+EG-170,"Identity, credentials and access rights",Transform or steer
+EG-181,"Identity, credentials and access rights",Require a human
+EG-178,"Identity, credentials and access rights",Transform or steer
+EG-166,"Identity, credentials and access rights",Allow-list or grant
+EG-169,"Identity, credentials and access rights",Detect and flag
+EG-177,"Identity, credentials and access rights",Allow-list or grant
+EG-165,"Identity, credentials and access rights",Allow-list or grant
+EG-174,"Logs, traces and audit records",Record and report
+EG-194,Sensitive data in prompts and outputs,Block or switch off
+EG-213,"Logs, traces and audit records",Record and report
+EG-211,"Stored data: retention, training use and encryption",Cap a quantity
+EG-197,"Identity, credentials and access rights",Allow-list or grant
+EG-209,Data and files the AI can reach,Block or switch off
+EG-200,Sensitive data in prompts and outputs,Detect and flag
+EG-199,Sensitive data in prompts and outputs,Block or switch off
+EG-212,Harmful and off-limits content,Detect and flag
+EG-214,"AI inventory, lifecycle and policy management",Detect and flag
+EG-204,"Identity, credentials and access rights",Block or switch off
+EG-193,Sensitive data in prompts and outputs,Block or switch off
+EG-203,Network destinations,Allow-list or grant
+EG-207,Sensitive data in prompts and outputs,Block or switch off
+EG-206,"Logs, traces and audit records",Record and report
+EG-201,Data and files the AI can reach,Block or switch off
+CD-253,"Stored data: retention, training use and encryption",Block or switch off
+CD-244,Harmful and off-limits content,Block or switch off
+CD-252,"Identity, credentials and access rights",Allow-list or grant
+CD-251,Harmful and off-limits content,Detect and flag
+CD-255,"Stored data: retention, training use and encryption",Transform or steer
+CD-242,Harmful and off-limits content,Block or switch off
+CD-256,"Stored data: retention, training use and encryption",Block or switch off
+CD-241,Harmful and off-limits content,Block or switch off
+CD-257,"Stored data: retention, training use and encryption",Block or switch off
+CD-249,Harmful and off-limits content,Detect and flag
+CD-254,"Stored data: retention, training use and encryption",Block or switch off
+CD-248,Harmful and off-limits content,Transform or steer
+CD-245,Harmful and off-limits content,Block or switch off
+CD-243,Harmful and off-limits content,Transform or steer
+CD-250,Sensitive data in prompts and outputs,Detect and flag
+EG-027,Answer accuracy and presentation,Block or switch off
+EG-011,Prompt attacks and untrusted input,Detect and flag
+EG-002,Data and files the AI can reach,Transform or steer
+EG-031,"Logs, traces and audit records",Record and report
+EG-022,Prompt attacks and untrusted input,Detect and flag
+EG-003,Autonomy and human handover,Transform or steer
+EG-015,Sensitive data in prompts and outputs,Transform or steer
+EG-013,Harmful and off-limits content,Block or switch off
+EG-017,Sensitive data in prompts and outputs,Transform or steer
+EG-032,"Logs, traces and audit records",Record and report
+EG-021,Agent tools and actions,Allow-list or grant
+EG-030,Harmful and off-limits content,Detect and flag
+EG-018,Prompt attacks and untrusted input,Detect and flag
+EG-006,Harmful and off-limits content,Block or switch off
+EG-023,Agent tools and actions,Block or switch off
+EG-215,"AI inventory, lifecycle and policy management",Detect and flag
+EG-225,"Logs, traces and audit records",Record and report
+EG-220,"Identity, credentials and access rights",Allow-list or grant
+EG-221,"Identity, credentials and access rights",Require a human
+EG-222,"Identity, credentials and access rights",Require a human
+EG-218,"Identity, credentials and access rights",Allow-list or grant
+EG-216,"AI inventory, lifecycle and policy management",Record and report
+EG-223,"Identity, credentials and access rights",Allow-list or grant
+EG-217,"Identity, credentials and access rights",Transform or steer
+EG-224,"Identity, credentials and access rights",Allow-list or grant
+EG-219,"Identity, credentials and access rights",Block or switch off
+CD-178,"Stored data: retention, training use and encryption",Transform or steer
+CD-164,"Usage, spend and rate limits",Detect and flag
+CD-188,Harmful and off-limits content,Detect and flag
+CD-161,"Identity, credentials and access rights",Allow-list or grant
+CD-154,"Stored data: retention, training use and encryption",Cap a quantity
+CD-162,"Model choice, routing and caching",Allow-list or grant
+CD-180,Harmful and off-limits content,Detect and flag
+CD-182,"Model choice, routing and caching",Transform or steer
+CD-158,"Identity, credentials and access rights",Allow-list or grant
+CD-187,Harmful and off-limits content,Detect and flag
+CD-183,Network destinations,Block or switch off
+CD-174,"Stored data: retention, training use and encryption",Transform or steer
+CD-169,"Usage, spend and rate limits",Cap a quantity
+CD-156,"Identity, credentials and access rights",Allow-list or grant
+CD-172,"Stored data: retention, training use and encryption",Block or switch off
+CD-807,"Identity, credentials and access rights",Allow-list or grant
+CD-771,Network destinations,Allow-list or grant
+CD-776,Agent tools and actions,Block or switch off
+CD-752,"AI inventory, lifecycle and policy management",Transform or steer
+CD-728,Data and files the AI can reach,Block or switch off
+CD-804,"Logs, traces and audit records",Record and report
+CD-778,Autonomy and human handover,Require a human
+CD-748,"Usage, spend and rate limits",Cap a quantity
+CD-719,Agent tools and actions,Block or switch off
+CD-751,"AI inventory, lifecycle and policy management",Allow-list or grant
+CD-724,Network destinations,Block or switch off
+CD-769,Agent tools and actions,Allow-list or grant
+CD-746,Agent tools and actions,Block or switch off
+CD-737,"Stored data: retention, training use and encryption",Record and report
+CD-743,Agent tools and actions,Detect and flag
+BF-175,Harmful and off-limits content,Block or switch off
+BF-190,Agent tools and actions,Allow-list or grant
+BF-193,"Model choice, routing and caching",Transform or steer
+BF-173,Answer accuracy and presentation,Detect and flag
+BF-187,"Identity, credentials and access rights",Allow-list or grant
+BF-171,Harmful and off-limits content,Detect and flag
+BF-185,"Model choice, routing and caching",Transform or steer
+BF-179,"Usage, spend and rate limits",Cap a quantity
+BF-188,Data and files the AI can reach,Allow-list or grant
+BF-181,"Model choice, routing and caching",Allow-list or grant
+BF-186,"Model choice, routing and caching",Cap a quantity
+BF-170,Harmful and off-limits content,Block or switch off
+BF-191,Agent tools and actions,Allow-list or grant
+BF-192,"Logs, traces and audit records",Record and report
+BF-182,"Model choice, routing and caching",Transform or steer
+EG-123,Harmful and off-limits content,Detect and flag
+EG-117,Sensitive data in prompts and outputs,Transform or steer
+EG-133,Answer accuracy and presentation,Detect and flag
+EG-118,Harmful and off-limits content,Detect and flag
+EG-129,"Usage, spend and rate limits",Cap a quantity
+EG-113,Prompt attacks and untrusted input,Transform or steer
+EG-130,Answer accuracy and presentation,Detect and flag
+EG-107,Harmful and off-limits content,Block or switch off
+EG-122,Harmful and off-limits content,Transform or steer
+EG-119,"Usage, spend and rate limits",Cap a quantity
+EG-125,Sensitive data in prompts and outputs,Transform or steer
+EG-109,Harmful and off-limits content,Transform or steer
+EG-121,Harmful and off-limits content,Transform or steer
+EG-114,Harmful and off-limits content,Allow-list or grant
+EG-137,Prompt attacks and untrusted input,Detect and flag
+AH-013,Data and files the AI can reach,Transform or steer
+AH-028,"Identity, credentials and access rights",Allow-list or grant
+AH-016,"Logs, traces and audit records",Record and report
+AH-026,Agent tools and actions,Allow-list or grant
+AH-032,"AI inventory, lifecycle and policy management",Detect and flag
+AH-034,Agent tools and actions,Require a human
+AH-015,Sensitive data in prompts and outputs,Transform or steer
+AH-024,Answer accuracy and presentation,Transform or steer
+AH-022,"Usage, spend and rate limits",Cap a quantity
+AH-009,"Stored data: retention, training use and encryption",Cap a quantity
+AH-027,"Identity, credentials and access rights",Allow-list or grant
+AH-017,"Logs, traces and audit records",Record and report
+AH-001,Agent tools and actions,Allow-list or grant
+AH-037,"AI inventory, lifecycle and policy management",Require a human
+AH-020,Autonomy and human handover,Require a human
+AH-061,"AI inventory, lifecycle and policy management",Transform or steer
+AH-065,"Model choice, routing and caching",Allow-list or grant
+AH-066,"AI inventory, lifecycle and policy management",Block or switch off
+AH-060,"AI inventory, lifecycle and policy management",Require a human
+AH-062,Agent tools and actions,Detect and flag
+AH-068,"Usage, spend and rate limits",Cap a quantity
+AH-050,Harmful and off-limits content,Block or switch off
+AH-046,Data and files the AI can reach,Transform or steer
+AH-041,Agent tools and actions,Allow-list or grant
+AH-051,Prompt attacks and untrusted input,Block or switch off
+AH-049,"AI inventory, lifecycle and policy management",Detect and flag
+AH-055,Harmful and off-limits content,Transform or steer
+AH-039,"Identity, credentials and access rights",Allow-list or grant
+AH-044,Autonomy and human handover,Require a human
+AH-056,"Logs, traces and audit records",Record and report
+EG-265,Sensitive data in prompts and outputs,Transform or steer
+EG-242,Harmful and off-limits content,Detect and flag
+EG-245,"Model choice, routing and caching",Block or switch off
+EG-261,"AI inventory, lifecycle and policy management",Detect and flag
+EG-238,Agent tools and actions,Block or switch off
+EG-257,Data and files the AI can reach,Block or switch off
+EG-235,"Identity, credentials and access rights",Allow-list or grant
+EG-255,Agent tools and actions,Transform or steer
+EG-264,"AI inventory, lifecycle and policy management",Record and report
+EG-258,Agent tools and actions,Allow-list or grant
+EG-241,Harmful and off-limits content,Block or switch off
+EG-243,Harmful and off-limits content,Block or switch off
+EG-251,Network destinations,Allow-list or grant
+EG-230,"AI inventory, lifecycle and policy management",Require a human
+EG-233,Agent tools and actions,Allow-list or grant
+AH-259,Agent tools and actions,Transform or steer
+AH-303,"AI inventory, lifecycle and policy management",Require a human
+AH-299,"Usage, spend and rate limits",Transform or steer
+AH-285,Autonomy and human handover,Transform or steer
+AH-256,Harmful and off-limits content,Block or switch off
+AH-293,"Logs, traces and audit records",Record and report
+AH-306,"Identity, credentials and access rights",Transform or steer
+AH-270,"Model choice, routing and caching",Block or switch off
+AH-255,Prompt attacks and untrusted input,Detect and flag
+AH-274,"Model choice, routing and caching",Allow-list or grant
+AH-291,Data and files the AI can reach,Allow-list or grant
+AH-308,Agent tools and actions,Allow-list or grant
+AH-258,"AI inventory, lifecycle and policy management",Transform or steer
+AH-300,"Usage, spend and rate limits",Cap a quantity
+AH-278,"AI inventory, lifecycle and policy management",Block or switch off
+AH-204,"AI inventory, lifecycle and policy management",Allow-list or grant
+AH-200,"Identity, credentials and access rights",Allow-list or grant
+AH-201,"AI inventory, lifecycle and policy management",Detect and flag
+AH-185,Agent tools and actions,Allow-list or grant
+AH-203,"Usage, spend and rate limits",Detect and flag
+AH-183,Data and files the AI can reach,Allow-list or grant
+AH-197,"AI inventory, lifecycle and policy management",Transform or steer
+AH-189,"Identity, credentials and access rights",Cap a quantity
+AH-192,"Logs, traces and audit records",Record and report
+AH-186,Agent tools and actions,Allow-list or grant
+AH-187,"Identity, credentials and access rights",Allow-list or grant
+AH-178,"Identity, credentials and access rights",Block or switch off
+AH-188,"Identity, credentials and access rights",Allow-list or grant
+AH-194,"Logs, traces and audit records",Record and report
+AH-206,"Stored data: retention, training use and encryption",Block or switch off
+AH-323,Agent tools and actions,Allow-list or grant
+AH-348,"AI inventory, lifecycle and policy management",Block or switch off
+AH-356,Autonomy and human handover,Require a human
+AH-309,"Identity, credentials and access rights",Allow-list or grant
+AH-314,Autonomy and human handover,Transform or steer
+AH-349,"Usage, spend and rate limits",Block or switch off
+AH-345,"Stored data: retention, training use and encryption",Cap a quantity
+AH-321,Data and files the AI can reach,Allow-list or grant
+AH-338,"Logs, traces and audit records",Transform or steer
+AH-343,Sensitive data in prompts and outputs,Transform or steer
+AH-324,"Usage, spend and rate limits",Cap a quantity
+AH-354,"AI inventory, lifecycle and policy management",Require a human
+AH-330,Autonomy and human handover,Require a human
+AH-311,"Identity, credentials and access rights",Allow-list or grant
+AH-355,"AI inventory, lifecycle and policy management",Allow-list or grant
