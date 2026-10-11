@@ -117,3 +117,17 @@ timestamp,kind,request,http_status,note
 2026-10-11T09:44:32,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter&output=json&limit=1&filter=statuscode:200,200,CDX first capture
 2026-10-11T09:44:38,wayback,http://web.archive.org/web/20230117024428id_/https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter,200,snapshot fetch azure-oai-content-filter-doc
 2026-10-11T09:44:48,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/abuse-monitoring&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:45:55,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/abuse-monitoring&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:47:33,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/abuse-monitoring&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:47:55,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:48:21,wayback,http://web.archive.org/web/20221231005450id_/https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quotas-limits,200,snapshot fetch azure-oai-quotas-doc
+2026-10-11T09:48:27,wayback,http://web.archive.org/cdx/search/cdx?url=ai.google.dev/gemini-api/docs/safety-settings&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:49:25,wayback,http://web.archive.org/cdx/search/cdx?url=ai.google.dev/gemini-api/docs/safety-settings&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:51:20,wayback,http://web.archive.org/cdx/search/cdx?url=ai.google.dev/gemini-api/docs/safety-settings&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:51:37,wayback,http://web.archive.org/web/20240418173827id_/https://ai.google.dev/gemini-api/docs/safety-settings,200,snapshot fetch gemini-safety-settings-doc
+2026-10-11T09:52:22,wayback,http://web.archive.org/cdx/search/cdx?url=developers.generativeai.google/guide/safety_setting&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:53:00,wayback,http://web.archive.org/web/20230517202411id_/https://developers.generativeai.google/guide/safety_setting,200,snapshot fetch palm-safety-doc
+2026-10-11T09:53:40,wayback,http://web.archive.org/cdx/search/cdx?url=ai.google.dev/gemini-api/docs/rate-limits&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:53:49,wayback,http://web.archive.org/web/20250216233200id_/https://ai.google.dev/gemini-api/docs/rate-limits,200,snapshot fetch gemini-rate-limits-doc
+2026-10-11T09:54:01,wayback,http://web.archive.org/cdx/search/cdx?url=cloud.google.com/security-command-center/docs/model-armor-overview&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:54:51,wayback,http://web.archive.org/cdx/search/cdx?url=cloud.google.com/security-command-center/docs/model-armor-overview&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
