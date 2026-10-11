@@ -11,6 +11,7 @@
 <meta property="og:description" content="Who owns the rules when AI agents join the business? Desk research on 118,526 job postings, company filings, practitioner recordings, laws and 31 agent products. Protocols for Business, October 2026.">
 <meta property="og:url" content="https://protocolsforbusiness.com/agentcontrolreport2026/">
 <meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -59,6 +60,22 @@ p { margin: 0 0 1rem; }
 .src { font: 400 12px/1.5 var(--mono); color: var(--muted); letter-spacing: .02em; }
 blockquote { margin: 1rem 0; padding: 0 0 0 1rem; border-left: 1.2px solid var(--for); font-style: italic; }
 blockquote cite { display: block; font: normal 400 12px/1.5 var(--mono); color: var(--muted); margin-top: .35rem; }
+/* self-check as a checklist */
+.checklist-wrap { max-width: 46rem; margin-top: 1.4rem; }
+.ck-progress { font: 400 12px var(--mono); letter-spacing: .08em; color: var(--muted); margin: 0 0 .4rem; }
+.checklist { list-style: none; counter-reset: ck; margin: 0 0 .8rem; padding: 0; border-top: 1.2px solid var(--fg); }
+.checklist li { counter-increment: ck; border-bottom: .5px solid var(--hair); position: relative; }
+.checklist input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.checklist label { display: grid; grid-template-columns: 2.2rem 1.6rem minmax(0, 1fr); gap: .2rem .6rem; align-items: start; padding: .9rem 0; cursor: pointer; min-height: 44px; }
+.checklist label::before { content: counter(ck, decimal-leading-zero); font: 400 12px/1.9 var(--mono); color: var(--muted); letter-spacing: .06em; }
+.ck-box { width: 1.15rem; height: 1.15rem; border: 1.2px solid var(--fg); margin-top: .2rem; position: relative; background: var(--bg); }
+.ck-text b { display: block; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+.ck-text span { display: block; color: var(--muted); font-size: .9375rem; line-height: 1.55; margin-top: .2rem; }
+.checklist input:checked + label .ck-box { background: var(--for); border-color: var(--for); }
+.checklist input:checked + label .ck-box::after { content: ""; position: absolute; left: .32rem; top: .08rem; width: .3rem; height: .62rem; border: solid var(--bg); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.checklist input:checked + label .ck-text b { color: var(--muted); }
+.checklist input:focus-visible + label .ck-box { outline: 2px solid var(--cob); outline-offset: 2px; }
+@media (max-width: 520px) { .checklist label { grid-template-columns: 1.6rem minmax(0, 1fr); } .checklist label::before { display: none; } }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 /* top bar */
@@ -413,9 +430,9 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
   <div class="in">
     <div class="grid">
       <div>
-        <p class="kick">Research findings · October 2026 · public sources; field work next</p>
+        <p class="kick">Research findings · October 2026 · public sources</p>
         <h1 id="h1">Who owns the rules when agents join the business?</h1>
-        <p class="dek">AI agents now spend, answer and approve under rules someone has to change. We read 118,526 job postings, 1,167 company filings, 771 statements from 30 practitioners we recorded, 19 laws and policies, and the documentation of 31 agent products and protocols. They show where agent rules are edited. They are still thin on who owns those rules; field work inside firms comes next.</p>
+        <p class="dek">AI agents now spend, answer and approve under rules someone has to change. We read 118,526 job postings, 1,167 company filings, 771 statements from 30 practitioners we recorded, 19 laws and policies, and the documentation of 31 agent products and protocols. They show where agent rules are edited. They are still thin on who owns those rules.</p>
       </div>
       <figure style="margin:0">
         <canvas id="hero-c" width="560" height="380" role="img" aria-label="771 statements from practitioners about their work with agents, drawn as dots. 149 describe running agents, 21 setting their limits, one finding an unwritten rule, none deciding a change across functions."></canvas>
@@ -434,7 +451,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
 <section class="take in" id="take" aria-labelledby="take-h">
   <p class="kick">The short version</p>
   <h2 id="take-h" class="narrow">So far the evidence shows where agent rules are edited, points to who runs agents, and gives an early sign of who owns their rules</h2>
-  <p class="narrow">Public sources show that products put agent rule edits in admin settings. They point to existing staff, mostly technical, running agents. On who owns an agent’s rules the evidence is still thin: an early sign is that firms own them as standards set up front, not as approvals of each change. Field work inside firms comes next.</p>
+  <p class="narrow">Public sources show that products put agent rule edits in admin settings. They point to existing staff, mostly technical, running agents. On who owns an agent’s rules the evidence is still thin: an early sign is that firms own them as standards set up front, not as approvals of each change.</p>
   <p class="def narrow">By an agent’s rules we mean its instructions, tools and limits: what it may do, spend or say, and when it must hand over to a person. One vocabulary marks how sure we are: <b>High</b>, the evidence shows; <b>Medium</b>, it points to; <b>Low</b>, an early sign.</p>
   <div class="cards">
     <div class="card"><div class="top"><span class="n">RUNNING</span><span class="ib" data-chip="Medium">The range around 86 (63–115) includes parity, and practitioner speech is a small, self-selected sample coded by one model per speaker.</span></div><h3>The evidence points to existing staff, not new hires, running most agents</h3><p>In job ads that means technical staff more than business teams: 86 ordinary ads list agent work for every 100 AI-titled ones (range 63–115), and about half of those are technical jobs. In speech, 20 of 30 practitioners describe running agents, and 6 of 10 who discuss staffing gave the work to existing staff.</p></div>
@@ -661,15 +678,19 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
 <section class="explore in" id="next" aria-labelledby="next-h">
   <p class="kick">Try this in your firm</p>
   <h2 id="next-h" class="narrow">Public sources show who edits an agent’s rules but not who approves a change; you can find out inside your own firm in an afternoon</h2>
-  <p class="narrow">Pick one agent that matters, such as a support, finance or sales agent, and answer five questions. Each one tests a finding in this report against your own records.</p>
-  <div class="next">
-    <div><h3>Trace the last three changes to its rules</h3><p class="small">For each change: who asked, who decided, who approved and who made the edit in the tool. If you can’t find a decision written down anywhere, you have the gap this report describes.</p></div>
-    <div><h3>Do you have a written standard saying which agent changes need approval?</h3><p class="small">If there is one, check whether it names an owner and separates routine changes from those that need sign-off. If there isn’t, routine and risky changes go through the same path, or no path at all.</p></div>
-    <div><h3>Find who runs it, and how they got the job</h3><p class="small">Was it added to someone’s existing role or did you hire for it? That tells you whether your firm is following the DevOps pattern or the scarce-skills one.</p></div>
-    <div><h3>Time one change from complaint to fix</h3><p class="small">How long from the first report that the agent got something wrong to the corrected rule going live? A long or unknown answer usually means no one owns the decision.</p></div>
-    <div><h3>Check where your agents actually run</h3><p class="small">Which agents run on company accounts and devices, and which on staff members’ own AI subscriptions? Only the first kind can be traced and controlled.</p></div>
+  <p class="narrow">Pick one agent that matters, such as a support, finance or sales agent, and work through five checks, in order. Each one tests a finding in this report against your own records.</p>
+  <div class="checklist-wrap">
+    <p class="ck-progress" id="ck-progress" aria-live="polite">0 of 5 done</p>
+    <ol class="checklist" id="checklist">
+    <li><input type="checkbox" id="ck-run"><label for="ck-run"><span class="ck-box" aria-hidden="true"></span><span class="ck-text"><b>Check where your agents actually run</b><span>Which agents run on company accounts and devices, and which on staff members’ own AI subscriptions? Only the first kind can be traced and controlled.</span></span></label></li>
+    <li><input type="checkbox" id="ck-who"><label for="ck-who"><span class="ck-box" aria-hidden="true"></span><span class="ck-text"><b>Find who runs it, and how they got the job</b><span>Was it added to someone’s existing role or did you hire for it? That tells you whether your firm is following the DevOps pattern or the scarce-skills one.</span></span></label></li>
+    <li><input type="checkbox" id="ck-std"><label for="ck-std"><span class="ck-box" aria-hidden="true"></span><span class="ck-text"><b>Look for a written standard saying which agent changes need approval</b><span>If there is one, check whether it names an owner and separates routine changes from those that need sign-off. If there isn’t, routine and risky changes go through the same door.</span></span></label></li>
+    <li><input type="checkbox" id="ck-trace"><label for="ck-trace"><span class="ck-box" aria-hidden="true"></span><span class="ck-text"><b>Trace the last three changes to its rules</b><span>For each change: who asked, who decided, who approved and who made the edit in the tool. If you can’t find a decision written down anywhere, you have the gap this report describes.</span></span></label></li>
+    <li><input type="checkbox" id="ck-time"><label for="ck-time"><span class="ck-box" aria-hidden="true"></span><span class="ck-text"><b>Time one change from complaint to fix</b><span>How long from the first report that the agent got something wrong to the corrected rule going live? A long or unknown answer usually means no one owns the decision.</span></span></label></li>
+    </ol>
+    <p class="small">Your ticks stay in this browser only.</p>
   </div>
-  <p class="small narrow" style="margin-top:1.4rem">We are continuing this research, including these checks inside firms. If you’d like to join the conversation, come to the <a href="https://protocolsforbusiness.com/" target="_blank" rel="noopener">Protocols for Business research group</a>: open sessions every other Monday, with readings, observations and case studies.</p>
+  <p class="small narrow" style="margin-top:1.4rem">If you’d like to discuss this research, come to the <a href="https://protocolsforbusiness.com/" target="_blank" rel="noopener">Protocols for Business research group</a>: open sessions every other Monday, with readings, observations and case studies.</p>
 </section>
 
 <section class="explore in" id="method" aria-labelledby="method-h">
@@ -821,6 +842,19 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
     });
   })();
 
+  // ---- self-check checklist: ticks kept per viewer, if storage is available
+  (function () {
+    var list = $('checklist'); if (!list) return;
+    var boxes = [].slice.call(list.querySelectorAll('input[type=checkbox]')), out = $('ck-progress'), KEY = 'aocr-checklist';
+    var saved = {}; try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
+    function update() { var n = boxes.filter(function (b) { return b.checked; }).length; out.textContent = n + ' of ' + boxes.length + ' done'; }
+    boxes.forEach(function (b) {
+      b.checked = !!saved[b.id];
+      b.addEventListener('change', function () { saved[b.id] = b.checked; try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} update(); });
+    });
+    update();
+  })();
+
   // ---- hero: 771 dots drifting; one blue ring. Motion stops after 20 s, offscreen, or on Pause.
   (function () {
     var cv = $('hero-c'), P = statements(11), f, btn = $('hero-pause'), running = !reduce, seen = true, t0 = performance.now(), raf = 0, tLast = t0;
@@ -953,7 +987,7 @@ table.plain thead th { color: var(--muted); border-bottom: .75px solid var(--mut
       builders: ['Builders', '81%', 'of employers post at least one AI or automation title', 'AI, machine-learning and automation engineers build agents. They ask for or prefer AI-specific experience (27 of 30) and name AI teams.', null, 'Evidence: AI or automation titles at 81% of employers in our job-posting sample.', ['High', 'Shows: counted directly from 118,526 postings at 218 employers. AI titles are about 2.5% of all postings.']],
       admins: ['Admins', '15 of 26', 'products document an admin role that edits agent limits', 'Owners and admins edit an agent design’s limits in the product’s settings or managed configuration; central policy usually overrides users.', ['These guardrails are controlled by your admin and typically signed off by your internal leadership or key decision-makers.', 'Salesforce Agentforce documentation'], 'Evidence: product documentation, fetched 10 October 2026.', ['High', 'Shows what products allow, not what firms do.']],
       overseers: ['Overseers', '2027', 'when overseer duties for high-risk uses start in Colorado and the EU', 'For high-risk uses (hiring, lending, insurance, health and similar decisions), the EU AI Act and Colorado will require deployers to name trained overseers: Colorado from January 2027, the EU from December 2027. Most agents in support, sales or internal work fall outside that. In the EU a deployer is any organisation using an AI system professionally.', ['Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority', 'EU AI Act, Art. 26(2)'], 'Evidence: the binding texts, read in full. Not yet seen in job postings.', ['High', 'Shows that the law requires them for high-risk uses. Both dates are scheduled; the EU date was postponed once.']],
-      gap: ['Standards owner (emerging)', '9 of 9', 'agent decision duties in job ads set standards up front; none approves individual changes', 'About a quarter of agent rule duties in job ads carry decision rights, more than in credit, pricing or IT change. All nine set standards and frameworks. The open question is who approves individual changes, perhaps only exceptions. Microsoft’s Entra documentation is one of the few to name a person accountable for an agent’s access decisions:', ['Sponsors: Business representatives accountable for the agent’s purpose and lifecycle decisions', 'Microsoft Entra Agent ID documentation'], 'Evidence: an exploratory re-code of decision duties in job ads. Field work inside firms is what can test it.', ['Low', 'An early sign: the split rests mostly on IT change, and agent duties come mostly from AI-titled senior architect roles.']],
+      gap: ['Standards owner (emerging)', '9 of 9', 'agent decision duties in job ads set standards up front; none approves individual changes', 'About a quarter of agent rule duties in job ads carry decision rights, more than in credit, pricing or IT change. All nine set standards and frameworks. The open question is who approves individual changes, perhaps only exceptions. Microsoft’s Entra documentation is one of the few to name a person accountable for an agent’s access decisions:', ['Sponsors: Business representatives accountable for the agent’s purpose and lifecycle decisions', 'Microsoft Entra Agent ID documentation'], 'Evidence: an exploratory re-code of decision duties in job ads. The self-check below tests it in your own firm.', ['Low', 'An early sign: the split rests mostly on IT change, and agent duties come mostly from AI-titled senior architect roles.']],
       law: ['Law', '0 of 4', 'binding AI-law provisions on changes name who decides them', 'Binding AI law asks deployers of high-risk AI to name overseers, not owners of rules, and no law registers agents. Named owners of rule changes appear in trading rules (12 provisions) and in AI labs’ own voluntary policies (3).', null, 'Evidence: 111 provisions from 19 texts.', ['High', 'Shows what the texts say: every quote was checked by script. The AI-law count rests on 4 provisions, coded by one coder.']],
       vendors: ['Vendors', '2025', 'first agent-named certifications and vendor agent roles', 'Vendors moved first: certifications, registries, and owner and sponsor roles arrived before the law. They also rename their agent products within about three years.', null, 'Evidence: vendor documentation, certification pages and archived captures.', ['Low', 'An early sign: the order (tooling, certification, vendor roles, then law) is common to enterprise software in general.']]
     };
