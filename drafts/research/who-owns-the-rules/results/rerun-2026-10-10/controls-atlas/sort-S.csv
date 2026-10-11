@@ -1,0 +1,663 @@
+control_id,object,mechanism
+AH-496,"Spend, rate and resource limits",Limit or quota
+AH-504,Lifecycle and governance,Block or deny
+AH-485,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-493,Network and external connectivity,Block or deny
+AH-502,"Retention, privacy and training use",Record or retain
+AH-489,"Identity, authentication and permissions",Block or deny
+AH-498,"Logging, monitoring and audit",Record or retain
+AH-497,Prompt attacks and untrusted input,Block or deny
+AH-486,Tool and action use,Allow-list or scoped grant
+AH-509,"Identity, authentication and permissions",Limit or quota
+AH-505,Lifecycle and governance,Block or deny
+AH-491,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-481,Network and external connectivity,Block or deny
+AH-492,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-488,Autonomy and human oversight,Require approval or human step
+AH-541,Autonomy and human oversight,Require approval or human step
+AH-533,"Identity, authentication and permissions",Limit or quota
+AH-539,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-536,Tool and action use,"Transform, redact or steer"
+AH-544,Lifecycle and governance,"Transform, redact or steer"
+AH-537,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-543,Autonomy and human oversight,Require approval or human step
+AH-532,"Spend, rate and resource limits",Limit or quota
+AH-535,Tool and action use,"Detect, score or alert"
+AH-538,Lifecycle and governance,Block or deny
+AH-542,Autonomy and human oversight,Require approval or human step
+AH-540,"Spend, rate and resource limits",Limit or quota
+AH-545,Tool and action use,"Transform, redact or steer"
+AH-534,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-521,Tool and action use,Allow-list or scoped grant
+AH-530,"Logging, monitoring and audit",Record or retain
+AH-531,Lifecycle and governance,Block or deny
+AH-523,"Spend, rate and resource limits",Limit or quota
+AH-517,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-515,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-510,Autonomy and human oversight,Require approval or human step
+AH-518,Tool and action use,Allow-list or scoped grant
+AH-529,"Logging, monitoring and audit",Record or retain
+AH-528,Tool and action use,Allow-list or scoped grant
+AH-524,"Spend, rate and resource limits",Limit or quota
+AH-511,Autonomy and human oversight,Require approval or human step
+AH-522,Tool and action use,Allow-list or scoped grant
+AH-525,"Spend, rate and resource limits",Limit or quota
+AH-513,Autonomy and human oversight,Require approval or human step
+BF-040,Network and external connectivity,Allow-list or scoped grant
+BF-043,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-027,Tool and action use,Allow-list or scoped grant
+BF-046,"Logging, monitoring and audit",Record or retain
+BF-044,"Logging, monitoring and audit","Detect, score or alert"
+BF-039,"Retention, privacy and training use",Record or retain
+BF-036,"Spend, rate and resource limits",Limit or quota
+BF-048,Network and external connectivity,Allow-list or scoped grant
+BF-032,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-029,Tool and action use,Allow-list or scoped grant
+BF-042,"Logging, monitoring and audit",Record or retain
+BF-035,"Retention, privacy and training use","Transform, redact or steer"
+BF-034,Tool and action use,Block or deny
+BF-045,"Spend, rate and resource limits",Limit or quota
+BF-038,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-024,"Logging, monitoring and audit",Record or retain
+BF-022,"Spend, rate and resource limits",Limit or quota
+BF-023,Lifecycle and governance,"Transform, redact or steer"
+BF-025,"Logging, monitoring and audit",Record or retain
+BF-026,"Logging, monitoring and audit",Record or retain
+BF-021,Harmful and policy content,"Transform, redact or steer"
+BF-007,Harmful and policy content,Block or deny
+BF-020,Model selection and call configuration,"Transform, redact or steer"
+BF-011,Sensitive data in AI traffic,"Detect, score or alert"
+BF-019,"Retention, privacy and training use","Transform, redact or steer"
+BF-018,"Logging, monitoring and audit",Record or retain
+BF-012,Sensitive data in AI traffic,"Detect, score or alert"
+BF-001,Harmful and policy content,Block or deny
+BF-008,Harmful and policy content,Block or deny
+BF-003,Harmful and policy content,"Detect, score or alert"
+BF-004,Harmful and policy content,"Detect, score or alert"
+BF-016,Harmful and policy content,"Detect, score or alert"
+BF-010,Sensitive data in AI traffic,"Transform, redact or steer"
+BF-006,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-002,Harmful and policy content,Block or deny
+CD-991,Tool and action use,Allow-list or scoped grant
+CD-986,Tool and action use,Block or deny
+CD-995,Tool and action use,Block or deny
+CD-988,Tool and action use,Require approval or human step
+CD-1014,"Retention, privacy and training use","Transform, redact or steer"
+CD-990,Network and external connectivity,Block or deny
+CD-1017,"Identity, authentication and permissions","Transform, redact or steer"
+CD-983,Tool and action use,Allow-list or scoped grant
+CD-1018,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-1007,Data and knowledge access,Block or deny
+CD-1000,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-996,Tool and action use,Block or deny
+CD-1012,"Retention, privacy and training use","Transform, redact or steer"
+CD-1001,Tool and action use,Allow-list or scoped grant
+CD-998,Tool and action use,Block or deny
+CD-051,"Retention, privacy and training use",Record or retain
+CD-079,"Identity, authentication and permissions",Block or deny
+CD-059,"Retention, privacy and training use",Block or deny
+CD-106,Tool and action use,Require approval or human step
+CD-075,Model selection and call configuration,"Transform, redact or steer"
+CD-030,"Spend, rate and resource limits",Limit or quota
+CD-071,Network and external connectivity,Block or deny
+CD-045,"Logging, monitoring and audit","Transform, redact or steer"
+CD-089,"Identity, authentication and permissions",Require approval or human step
+CD-056,"Retention, privacy and training use",Block or deny
+CD-049,"Retention, privacy and training use",Record or retain
+CD-119,"Identity, authentication and permissions","Transform, redact or steer"
+CD-058,"Retention, privacy and training use",Block or deny
+CD-115,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-074,Model selection and call configuration,Block or deny
+BF-065,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-072,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-067,Network and external connectivity,Allow-list or scoped grant
+BF-056,Output quality and format,"Detect, score or alert"
+BF-052,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-069,Tool and action use,Require approval or human step
+BF-076,"Spend, rate and resource limits",Limit or quota
+BF-051,Harmful and policy content,Require approval or human step
+BF-073,"Logging, monitoring and audit",Record or retain
+BF-068,Tool and action use,Allow-list or scoped grant
+BF-071,Network and external connectivity,Block or deny
+BF-050,Harmful and policy content,Block or deny
+BF-060,"Spend, rate and resource limits",Limit or quota
+BF-058,Autonomy and human oversight,Require approval or human step
+BF-074,"Spend, rate and resource limits",Limit or quota
+BF-230,"Logging, monitoring and audit",Record or retain
+BF-232,Harmful and policy content,Block or deny
+BF-237,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-229,"Spend, rate and resource limits",Limit or quota
+BF-234,Model selection and call configuration,"Detect, score or alert"
+BF-235,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-231,Harmful and policy content,Block or deny
+BF-236,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-233,Model selection and call configuration,"Transform, redact or steer"
+CD-122,Tool and action use,Allow-list or scoped grant
+CD-121,Tool and action use,Allow-list or scoped grant
+CD-141,"Logging, monitoring and audit",Record or retain
+CD-124,Tool and action use,Allow-list or scoped grant
+CD-155,Harmful and policy content,"Detect, score or alert"
+CD-129,Tool and action use,Allow-list or scoped grant
+CD-149,"Logging, monitoring and audit",Record or retain
+CD-134,Tool and action use,Allow-list or scoped grant
+CD-144,"Retention, privacy and training use",Record or retain
+CD-138,"Logging, monitoring and audit",Record or retain
+CD-125,Tool and action use,Allow-list or scoped grant
+CD-127,Tool and action use,Require approval or human step
+CD-136,"Retention, privacy and training use",Block or deny
+CD-123,Tool and action use,Allow-list or scoped grant
+CD-146,"Retention, privacy and training use",Record or retain
+EG-050,Sensitive data in AI traffic,"Detect, score or alert"
+EG-038,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-061,"Logging, monitoring and audit","Detect, score or alert"
+EG-058,Harmful and policy content,Allow-list or scoped grant
+EG-035,Harmful and policy content,"Detect, score or alert"
+EG-044,Harmful and policy content,"Detect, score or alert"
+EG-051,Sensitive data in AI traffic,"Detect, score or alert"
+EG-060,"Logging, monitoring and audit","Detect, score or alert"
+EG-048,Sensitive data in AI traffic,"Detect, score or alert"
+EG-063,"Logging, monitoring and audit",Record or retain
+EG-047,Sensitive data in AI traffic,Block or deny
+EG-054,Tool and action use,"Detect, score or alert"
+EG-062,Tool and action use,"Detect, score or alert"
+EG-034,Harmful and policy content,Block or deny
+EG-041,Harmful and policy content,"Detect, score or alert"
+CD-261,Tool and action use,Require approval or human step
+CD-578,Lifecycle and governance,"Transform, redact or steer"
+CD-510,Tool and action use,Block or deny
+CD-645,"Logging, monitoring and audit",Record or retain
+CD-467,Data and knowledge access,Block or deny
+CD-555,Tool and action use,Allow-list or scoped grant
+CD-311,Tool and action use,Allow-list or scoped grant
+CD-629,Tool and action use,"Detect, score or alert"
+CD-621,"Spend, rate and resource limits",Limit or quota
+CD-529,"Spend, rate and resource limits",Limit or quota
+CD-534,Prompt attacks and untrusted input,Limit or quota
+CD-323,Tool and action use,Require approval or human step
+CD-414,Lifecycle and governance,"Transform, redact or steer"
+CD-300,Tool and action use,Allow-list or scoped grant
+CD-656,"Logging, monitoring and audit",Record or retain
+BF-129,Sensitive data in AI traffic,Block or deny
+BF-137,"Logging, monitoring and audit",Record or retain
+BF-134,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-132,Model selection and call configuration,"Transform, redact or steer"
+BF-131,Sensitive data in AI traffic,"Detect, score or alert"
+BF-142,Lifecycle and governance,"Transform, redact or steer"
+BF-141,"Spend, rate and resource limits",Limit or quota
+BF-130,Sensitive data in AI traffic,Block or deny
+BF-144,"Logging, monitoring and audit",Record or retain
+BF-139,"Identity, authentication and permissions","Transform, redact or steer"
+BF-143,Model selection and call configuration,"Transform, redact or steer"
+BF-128,Harmful and policy content,Block or deny
+BF-126,"Spend, rate and resource limits",Limit or quota
+BF-127,Harmful and policy content,Block or deny
+BF-135,"Logging, monitoring and audit",Record or retain
+EG-281,"Logging, monitoring and audit","Detect, score or alert"
+EG-285,"Logging, monitoring and audit",Record or retain
+EG-270,Autonomy and human oversight,Require approval or human step
+EG-268,Tool and action use,Block or deny
+EG-271,Tool and action use,"Transform, redact or steer"
+EG-278,Lifecycle and governance,"Transform, redact or steer"
+EG-280,"Logging, monitoring and audit",Record or retain
+EG-282,Lifecycle and governance,Require approval or human step
+EG-269,Tool and action use,Block or deny
+EG-272,Lifecycle and governance,"Transform, redact or steer"
+EG-277,"Logging, monitoring and audit","Detect, score or alert"
+EG-279,Lifecycle and governance,Require approval or human step
+EG-273,Lifecycle and governance,"Transform, redact or steer"
+EG-276,Lifecycle and governance,Require approval or human step
+EG-283,Lifecycle and governance,Record or retain
+CD-840,Tool and action use,"Transform, redact or steer"
+CD-811,Tool and action use,Require approval or human step
+CD-822,Data and knowledge access,Block or deny
+CD-843,Tool and action use,Allow-list or scoped grant
+CD-852,"Spend, rate and resource limits",Limit or quota
+CD-855,Model selection and call configuration,Allow-list or scoped grant
+CD-884,Tool and action use,"Transform, redact or steer"
+CD-868,Tool and action use,Limit or quota
+CD-862,Network and external connectivity,Allow-list or scoped grant
+CD-850,"Logging, monitoring and audit",Record or retain
+CD-827,Tool and action use,Block or deny
+CD-869,Autonomy and human oversight,Require approval or human step
+CD-831,Data and knowledge access,Block or deny
+CD-816,Tool and action use,Require approval or human step
+CD-829,"Spend, rate and resource limits",Limit or quota
+BF-110,Harmful and policy content,Block or deny
+BF-119,"Logging, monitoring and audit",Record or retain
+BF-120,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-124,Model selection and call configuration,"Transform, redact or steer"
+BF-111,Sensitive data in AI traffic,Block or deny
+BF-113,Tool and action use,"Detect, score or alert"
+BF-115,"Spend, rate and resource limits",Limit or quota
+BF-109,Harmful and policy content,Block or deny
+BF-118,"Logging, monitoring and audit",Record or retain
+BF-116,Model selection and call configuration,"Transform, redact or steer"
+BF-112,Harmful and policy content,"Detect, score or alert"
+BF-123,Tool and action use,Allow-list or scoped grant
+BF-121,"Spend, rate and resource limits",Limit or quota
+BF-122,Model selection and call configuration,Allow-list or scoped grant
+BF-117,Model selection and call configuration,"Transform, redact or steer"
+BF-227,Sensitive data in AI traffic,"Transform, redact or steer"
+BF-224,"Spend, rate and resource limits",Limit or quota
+BF-222,Tool and action use,Allow-list or scoped grant
+BF-226,Sensitive data in AI traffic,Block or deny
+BF-225,Data and knowledge access,Block or deny
+BF-223,"Spend, rate and resource limits",Limit or quota
+BF-228,Lifecycle and governance,"Transform, redact or steer"
+BF-221,Tool and action use,Allow-list or scoped grant
+CD-240,"Logging, monitoring and audit",Record or retain
+CD-224,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-212,"Spend, rate and resource limits",Block or deny
+CD-238,"Logging, monitoring and audit",Record or retain
+CD-228,"Retention, privacy and training use","Transform, redact or steer"
+CD-202,Harmful and policy content,Block or deny
+CD-234,Autonomy and human oversight,Require approval or human step
+CD-235,Lifecycle and governance,Block or deny
+CD-223,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-230,"Logging, monitoring and audit",Record or retain
+CD-222,"Identity, authentication and permissions",Block or deny
+CD-216,"Spend, rate and resource limits",Limit or quota
+CD-218,"Spend, rate and resource limits",Block or deny
+CD-217,"Retention, privacy and training use",Block or deny
+CD-203,Harmful and policy content,Block or deny
+CD-1029,"Logging, monitoring and audit",Record or retain
+CD-1042,Tool and action use,"Detect, score or alert"
+CD-1036,Tool and action use,Require approval or human step
+CD-1043,"Spend, rate and resource limits",Limit or quota
+CD-1026,"Logging, monitoring and audit",Allow-list or scoped grant
+CD-1041,Tool and action use,"Transform, redact or steer"
+CD-1021,Lifecycle and governance,"Transform, redact or steer"
+CD-1024,"Logging, monitoring and audit",Record or retain
+CD-1031,Tool and action use,Allow-list or scoped grant
+CD-1038,Tool and action use,Require approval or human step
+CD-1020,Lifecycle and governance,Limit or quota
+CD-1028,"Logging, monitoring and audit",Record or retain
+CD-1044,Lifecycle and governance,Block or deny
+CD-1037,Autonomy and human oversight,Require approval or human step
+CD-1019,Lifecycle and governance,"Transform, redact or steer"
+CD-898,Tool and action use,Allow-list or scoped grant
+CD-931,Network and external connectivity,Allow-list or scoped grant
+CD-917,Data and knowledge access,Block or deny
+CD-953,"Logging, monitoring and audit",Record or retain
+CD-968,Autonomy and human oversight,Require approval or human step
+CD-974,Tool and action use,Allow-list or scoped grant
+CD-976,Lifecycle and governance,"Transform, redact or steer"
+CD-961,Tool and action use,"Detect, score or alert"
+CD-973,Prompt attacks and untrusted input,Block or deny
+CD-940,Tool and action use,Allow-list or scoped grant
+CD-929,Network and external connectivity,Allow-list or scoped grant
+CD-914,Data and knowledge access,Block or deny
+CD-971,"Logging, monitoring and audit",Record or retain
+CD-969,Autonomy and human oversight,Require approval or human step
+CD-957,Tool and action use,Allow-list or scoped grant
+AH-106,"Retention, privacy and training use","Transform, redact or steer"
+AH-096,Lifecycle and governance,Allow-list or scoped grant
+AH-081,Network and external connectivity,Block or deny
+AH-102,"Logging, monitoring and audit",Record or retain
+AH-087,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-094,Lifecycle and governance,Require approval or human step
+AH-104,"Spend, rate and resource limits",Limit or quota
+AH-074,Harmful and policy content,Block or deny
+AH-075,Harmful and policy content,Block or deny
+AH-092,Data and knowledge access,Allow-list or scoped grant
+AH-095,Lifecycle and governance,Allow-list or scoped grant
+AH-098,Network and external connectivity,Allow-list or scoped grant
+AH-107,"Logging, monitoring and audit","Detect, score or alert"
+AH-082,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-105,"Spend, rate and resource limits",Limit or quota
+BF-099,"Logging, monitoring and audit",Record or retain
+BF-083,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-090,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-098,"Spend, rate and resource limits",Limit or quota
+BF-105,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-091,Network and external connectivity,Allow-list or scoped grant
+BF-102,Model selection and call configuration,"Transform, redact or steer"
+BF-088,Harmful and policy content,Block or deny
+BF-108,"Retention, privacy and training use","Transform, redact or steer"
+BF-100,"Logging, monitoring and audit",Record or retain
+BF-085,Sensitive data in AI traffic,"Transform, redact or steer"
+BF-082,Prompt attacks and untrusted input,"Detect, score or alert"
+BF-106,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-107,Network and external connectivity,Allow-list or scoped grant
+BF-103,Model selection and call configuration,"Transform, redact or steer"
+EG-065,Harmful and policy content,Block or deny
+EG-077,Harmful and policy content,"Detect, score or alert"
+EG-096,Harmful and policy content,"Detect, score or alert"
+EG-085,Harmful and policy content,"Detect, score or alert"
+EG-098,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-104,Output quality and format,"Detect, score or alert"
+EG-078,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-082,Output quality and format,"Detect, score or alert"
+EG-075,Harmful and policy content,"Detect, score or alert"
+EG-097,Harmful and policy content,"Detect, score or alert"
+EG-084,Harmful and policy content,"Detect, score or alert"
+EG-102,Output quality and format,"Detect, score or alert"
+EG-089,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-073,Output quality and format,"Transform, redact or steer"
+EG-080,Prompt attacks and untrusted input,"Detect, score or alert"
+AH-235,Lifecycle and governance,Record or retain
+AH-213,Harmful and policy content,"Transform, redact or steer"
+AH-221,"Logging, monitoring and audit","Detect, score or alert"
+AH-230,Model selection and call configuration,"Transform, redact or steer"
+AH-245,Tool and action use,Allow-list or scoped grant
+AH-234,Lifecycle and governance,Require approval or human step
+AH-222,"Identity, authentication and permissions","Detect, score or alert"
+AH-239,Autonomy and human oversight,Allow-list or scoped grant
+AH-209,Harmful and policy content,Block or deny
+AH-246,Data and knowledge access,Allow-list or scoped grant
+AH-247,"Spend, rate and resource limits",Limit or quota
+AH-210,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-242,"Identity, authentication and permissions","Transform, redact or steer"
+AH-228,"Spend, rate and resource limits",Limit or quota
+AH-238,Lifecycle and governance,Allow-list or scoped grant
+AH-399,Output quality and format,"Transform, redact or steer"
+AH-387,Lifecycle and governance,"Detect, score or alert"
+AH-361,"Spend, rate and resource limits",Limit or quota
+AH-378,Autonomy and human oversight,"Transform, redact or steer"
+AH-390,Tool and action use,Allow-list or scoped grant
+AH-364,Data and knowledge access,"Transform, redact or steer"
+AH-411,"Logging, monitoring and audit","Detect, score or alert"
+AH-406,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-405,"Spend, rate and resource limits",Block or deny
+AH-403,Lifecycle and governance,"Transform, redact or steer"
+AH-372,Lifecycle and governance,Block or deny
+AH-374,Autonomy and human oversight,Allow-list or scoped grant
+AH-379,Autonomy and human oversight,Block or deny
+AH-394,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-367,Lifecycle and governance,"Transform, redact or steer"
+BF-156,Model selection and call configuration,"Transform, redact or steer"
+BF-168,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-152,Prompt attacks and untrusted input,Allow-list or scoped grant
+BF-154,"Spend, rate and resource limits",Limit or quota
+BF-166,Tool and action use,Allow-list or scoped grant
+BF-160,Harmful and policy content,"Detect, score or alert"
+BF-161,"Logging, monitoring and audit",Record or retain
+BF-147,Model selection and call configuration,"Transform, redact or steer"
+BF-169,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-153,Prompt attacks and untrusted input,"Transform, redact or steer"
+BF-155,"Spend, rate and resource limits",Limit or quota
+BF-167,Tool and action use,Allow-list or scoped grant
+BF-157,Sensitive data in AI traffic,"Transform, redact or steer"
+BF-164,"Logging, monitoring and audit",Record or retain
+BF-146,Model selection and call configuration,"Transform, redact or steer"
+BF-217,"Logging, monitoring and audit",Record or retain
+BF-201,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-213,Model selection and call configuration,"Transform, redact or steer"
+BF-200,"Spend, rate and resource limits",Limit or quota
+BF-219,Network and external connectivity,Allow-list or scoped grant
+BF-207,Harmful and policy content,"Detect, score or alert"
+BF-198,Model selection and call configuration,Allow-list or scoped grant
+BF-203,Tool and action use,Allow-list or scoped grant
+BF-216,Sensitive data in AI traffic,"Transform, redact or steer"
+BF-204,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-214,Model selection and call configuration,"Transform, redact or steer"
+BF-195,"Spend, rate and resource limits",Limit or quota
+BF-206,Harmful and policy content,Block or deny
+BF-202,Tool and action use,Allow-list or scoped grant
+BF-215,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-421,"Spend, rate and resource limits",Limit or quota
+AH-434,"Spend, rate and resource limits",Limit or quota
+AH-433,Model selection and call configuration,"Transform, redact or steer"
+AH-447,Tool and action use,Require approval or human step
+AH-439,Data and knowledge access,Block or deny
+AH-456,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-427,Tool and action use,Block or deny
+AH-468,Network and external connectivity,Block or deny
+AH-437,Prompt attacks and untrusted input,Block or deny
+AH-441,"Logging, monitoring and audit","Detect, score or alert"
+AH-419,Prompt attacks and untrusted input,"Transform, redact or steer"
+AH-422,Prompt attacks and untrusted input,Block or deny
+AH-435,"Spend, rate and resource limits",Limit or quota
+AH-436,Tool and action use,"Transform, redact or steer"
+AH-414,Tool and action use,Require approval or human step
+EG-151,Harmful and policy content,"Detect, score or alert"
+EG-140,Harmful and policy content,"Detect, score or alert"
+EG-154,Harmful and policy content,"Detect, score or alert"
+EG-160,Prompt attacks and untrusted input,"Transform, redact or steer"
+EG-152,Harmful and policy content,"Detect, score or alert"
+EG-157,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-156,Tool and action use,"Detect, score or alert"
+EG-150,Harmful and policy content,"Detect, score or alert"
+EG-158,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-147,Harmful and policy content,"Detect, score or alert"
+EG-159,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-153,Harmful and policy content,"Detect, score or alert"
+EG-146,Harmful and policy content,"Detect, score or alert"
+EG-141,Harmful and policy content,"Detect, score or alert"
+EG-149,Harmful and policy content,"Detect, score or alert"
+AH-149,Lifecycle and governance,"Detect, score or alert"
+AH-173,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-132,Tool and action use,"Transform, redact or steer"
+AH-158,"Spend, rate and resource limits",Limit or quota
+AH-141,Model selection and call configuration,Allow-list or scoped grant
+AH-156,"Logging, monitoring and audit","Detect, score or alert"
+AH-162,"Retention, privacy and training use","Transform, redact or steer"
+AH-138,Tool and action use,Allow-list or scoped grant
+AH-137,Autonomy and human oversight,Require approval or human step
+AH-128,Harmful and policy content,Block or deny
+AH-127,Harmful and policy content,"Transform, redact or steer"
+AH-171,Lifecycle and governance,Block or deny
+AH-167,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-117,Lifecycle and governance,Block or deny
+AH-160,"Spend, rate and resource limits",Block or deny
+EG-179,"Identity, authentication and permissions",Require approval or human step
+EG-168,"Identity, authentication and permissions",Block or deny
+EG-189,"Logging, monitoring and audit",Record or retain
+EG-182,"Identity, authentication and permissions",Require approval or human step
+EG-192,Network and external connectivity,Block or deny
+EG-186,"Identity, authentication and permissions",Block or deny
+EG-164,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-170,"Logging, monitoring and audit","Transform, redact or steer"
+EG-181,"Identity, authentication and permissions",Require approval or human step
+EG-178,"Identity, authentication and permissions","Transform, redact or steer"
+EG-166,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-169,"Identity, authentication and permissions","Detect, score or alert"
+EG-177,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-165,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-174,"Logging, monitoring and audit",Record or retain
+EG-194,Sensitive data in AI traffic,Block or deny
+EG-213,"Logging, monitoring and audit",Record or retain
+EG-211,"Retention, privacy and training use",Record or retain
+EG-197,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-209,Data and knowledge access,Block or deny
+EG-200,Sensitive data in AI traffic,"Detect, score or alert"
+EG-199,Sensitive data in AI traffic,"Detect, score or alert"
+EG-212,"Logging, monitoring and audit","Detect, score or alert"
+EG-214,"Logging, monitoring and audit","Detect, score or alert"
+EG-204,"Identity, authentication and permissions",Block or deny
+EG-193,Sensitive data in AI traffic,Block or deny
+EG-203,Network and external connectivity,Allow-list or scoped grant
+EG-207,Sensitive data in AI traffic,Block or deny
+EG-206,"Logging, monitoring and audit","Detect, score or alert"
+EG-201,Data and knowledge access,Block or deny
+CD-253,"Retention, privacy and training use","Transform, redact or steer"
+CD-244,Harmful and policy content,Block or deny
+CD-252,"Identity, authentication and permissions","Transform, redact or steer"
+CD-251,Harmful and policy content,"Detect, score or alert"
+CD-255,"Retention, privacy and training use","Transform, redact or steer"
+CD-242,Harmful and policy content,Block or deny
+CD-256,"Retention, privacy and training use","Transform, redact or steer"
+CD-241,Harmful and policy content,Block or deny
+CD-257,"Retention, privacy and training use","Transform, redact or steer"
+CD-249,Harmful and policy content,"Detect, score or alert"
+CD-254,"Retention, privacy and training use","Transform, redact or steer"
+CD-248,Harmful and policy content,"Transform, redact or steer"
+CD-245,Harmful and policy content,Block or deny
+CD-243,Harmful and policy content,"Transform, redact or steer"
+CD-250,Sensitive data in AI traffic,"Detect, score or alert"
+EG-027,Output quality and format,"Detect, score or alert"
+EG-011,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-002,Data and knowledge access,"Transform, redact or steer"
+EG-031,"Logging, monitoring and audit",Record or retain
+EG-022,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-003,Harmful and policy content,"Transform, redact or steer"
+EG-015,Sensitive data in AI traffic,"Transform, redact or steer"
+EG-013,Harmful and policy content,Block or deny
+EG-017,Sensitive data in AI traffic,"Transform, redact or steer"
+EG-032,"Logging, monitoring and audit",Record or retain
+EG-021,Tool and action use,Allow-list or scoped grant
+EG-030,Harmful and policy content,"Detect, score or alert"
+EG-018,Output quality and format,"Detect, score or alert"
+EG-006,Harmful and policy content,"Detect, score or alert"
+EG-023,Tool and action use,Block or deny
+EG-215,"Logging, monitoring and audit","Detect, score or alert"
+EG-225,"Logging, monitoring and audit",Record or retain
+EG-220,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-221,"Identity, authentication and permissions",Require approval or human step
+EG-222,"Identity, authentication and permissions",Require approval or human step
+EG-218,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-216,Lifecycle and governance,Record or retain
+EG-223,"Identity, authentication and permissions","Transform, redact or steer"
+EG-217,"Identity, authentication and permissions","Transform, redact or steer"
+EG-224,"Identity, authentication and permissions",Allow-list or scoped grant
+EG-219,"Identity, authentication and permissions",Block or deny
+CD-178,"Retention, privacy and training use","Transform, redact or steer"
+CD-164,"Spend, rate and resource limits","Detect, score or alert"
+CD-188,Harmful and policy content,"Detect, score or alert"
+CD-161,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-154,"Retention, privacy and training use",Record or retain
+CD-162,Model selection and call configuration,Allow-list or scoped grant
+CD-180,Harmful and policy content,"Detect, score or alert"
+CD-182,Model selection and call configuration,"Transform, redact or steer"
+CD-158,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-187,Harmful and policy content,"Detect, score or alert"
+CD-183,Network and external connectivity,Block or deny
+CD-174,"Retention, privacy and training use","Transform, redact or steer"
+CD-169,"Spend, rate and resource limits",Limit or quota
+CD-156,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-172,"Retention, privacy and training use","Transform, redact or steer"
+CD-807,"Identity, authentication and permissions",Allow-list or scoped grant
+CD-771,Network and external connectivity,Allow-list or scoped grant
+CD-776,Tool and action use,Block or deny
+CD-752,Lifecycle and governance,"Transform, redact or steer"
+CD-728,Data and knowledge access,Block or deny
+CD-804,"Logging, monitoring and audit",Record or retain
+CD-778,Autonomy and human oversight,Require approval or human step
+CD-748,"Spend, rate and resource limits",Limit or quota
+CD-719,Tool and action use,"Detect, score or alert"
+CD-751,Tool and action use,Allow-list or scoped grant
+CD-724,Network and external connectivity,Block or deny
+CD-769,Tool and action use,Allow-list or scoped grant
+CD-746,Lifecycle and governance,Block or deny
+CD-737,"Logging, monitoring and audit",Record or retain
+CD-743,Lifecycle and governance,"Detect, score or alert"
+BF-175,Harmful and policy content,"Detect, score or alert"
+BF-190,Tool and action use,Allow-list or scoped grant
+BF-193,Model selection and call configuration,"Transform, redact or steer"
+BF-173,Output quality and format,"Detect, score or alert"
+BF-187,"Identity, authentication and permissions",Allow-list or scoped grant
+BF-171,Harmful and policy content,"Detect, score or alert"
+BF-185,Model selection and call configuration,"Transform, redact or steer"
+BF-179,"Spend, rate and resource limits",Limit or quota
+BF-188,Data and knowledge access,Block or deny
+BF-181,Model selection and call configuration,Allow-list or scoped grant
+BF-186,Model selection and call configuration,"Transform, redact or steer"
+BF-170,Harmful and policy content,Block or deny
+BF-191,Tool and action use,Allow-list or scoped grant
+BF-192,"Logging, monitoring and audit",Record or retain
+BF-182,Model selection and call configuration,"Transform, redact or steer"
+EG-123,Output quality and format,"Detect, score or alert"
+EG-117,Sensitive data in AI traffic,"Transform, redact or steer"
+EG-133,Output quality and format,"Detect, score or alert"
+EG-118,Prompt attacks and untrusted input,"Detect, score or alert"
+EG-129,Output quality and format,Limit or quota
+EG-113,Prompt attacks and untrusted input,"Transform, redact or steer"
+EG-130,Output quality and format,"Detect, score or alert"
+EG-107,Prompt attacks and untrusted input,Block or deny
+EG-122,Output quality and format,Block or deny
+EG-119,Prompt attacks and untrusted input,Limit or quota
+EG-125,Sensitive data in AI traffic,"Transform, redact or steer"
+EG-109,Prompt attacks and untrusted input,Block or deny
+EG-121,Output quality and format,"Detect, score or alert"
+EG-114,Prompt attacks and untrusted input,Allow-list or scoped grant
+EG-137,Output quality and format,"Detect, score or alert"
+AH-013,Data and knowledge access,"Transform, redact or steer"
+AH-028,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-016,"Logging, monitoring and audit",Record or retain
+AH-026,Tool and action use,Allow-list or scoped grant
+AH-032,Lifecycle and governance,"Detect, score or alert"
+AH-034,Tool and action use,Require approval or human step
+AH-015,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-024,Output quality and format,"Transform, redact or steer"
+AH-022,"Spend, rate and resource limits",Limit or quota
+AH-009,"Retention, privacy and training use","Transform, redact or steer"
+AH-027,"Identity, authentication and permissions",Require approval or human step
+AH-017,"Logging, monitoring and audit",Record or retain
+AH-001,Tool and action use,Allow-list or scoped grant
+AH-037,Lifecycle and governance,Require approval or human step
+AH-020,Autonomy and human oversight,Require approval or human step
+AH-061,Lifecycle and governance,"Transform, redact or steer"
+AH-065,Model selection and call configuration,Allow-list or scoped grant
+AH-066,Lifecycle and governance,Block or deny
+AH-060,Lifecycle and governance,"Detect, score or alert"
+AH-062,Tool and action use,"Detect, score or alert"
+AH-068,"Spend, rate and resource limits",Limit or quota
+AH-050,Harmful and policy content,Block or deny
+AH-046,Data and knowledge access,"Transform, redact or steer"
+AH-041,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-051,Prompt attacks and untrusted input,Block or deny
+AH-049,Lifecycle and governance,"Detect, score or alert"
+AH-055,Harmful and policy content,"Transform, redact or steer"
+AH-039,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-044,Autonomy and human oversight,Require approval or human step
+AH-056,"Logging, monitoring and audit",Record or retain
+EG-265,Sensitive data in AI traffic,"Transform, redact or steer"
+EG-242,Harmful and policy content,"Detect, score or alert"
+EG-245,Model selection and call configuration,Block or deny
+EG-261,Lifecycle and governance,"Detect, score or alert"
+EG-238,Tool and action use,Block or deny
+EG-257,Data and knowledge access,Block or deny
+EG-235,Lifecycle and governance,Allow-list or scoped grant
+EG-255,Tool and action use,"Transform, redact or steer"
+EG-264,Lifecycle and governance,Record or retain
+EG-258,Tool and action use,Allow-list or scoped grant
+EG-241,Harmful and policy content,Block or deny
+EG-243,Harmful and policy content,Block or deny
+EG-251,Network and external connectivity,Allow-list or scoped grant
+EG-230,Lifecycle and governance,"Transform, redact or steer"
+EG-233,Tool and action use,Block or deny
+AH-259,Tool and action use,Block or deny
+AH-303,Lifecycle and governance,Require approval or human step
+AH-299,"Spend, rate and resource limits",Require approval or human step
+AH-285,Autonomy and human oversight,"Transform, redact or steer"
+AH-256,Harmful and policy content,"Detect, score or alert"
+AH-293,"Logging, monitoring and audit",Record or retain
+AH-306,"Identity, authentication and permissions","Transform, redact or steer"
+AH-270,Model selection and call configuration,Block or deny
+AH-255,Prompt attacks and untrusted input,"Detect, score or alert"
+AH-274,Model selection and call configuration,Allow-list or scoped grant
+AH-291,Data and knowledge access,Allow-list or scoped grant
+AH-308,Tool and action use,Block or deny
+AH-258,Lifecycle and governance,"Transform, redact or steer"
+AH-300,"Spend, rate and resource limits",Block or deny
+AH-278,Lifecycle and governance,Block or deny
+AH-204,Lifecycle and governance,Allow-list or scoped grant
+AH-200,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-201,"Logging, monitoring and audit","Detect, score or alert"
+AH-185,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-203,"Spend, rate and resource limits","Detect, score or alert"
+AH-183,Data and knowledge access,Allow-list or scoped grant
+AH-197,Lifecycle and governance,"Transform, redact or steer"
+AH-189,"Identity, authentication and permissions",Limit or quota
+AH-192,"Logging, monitoring and audit",Record or retain
+AH-186,Tool and action use,Allow-list or scoped grant
+AH-187,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-178,"Identity, authentication and permissions",Block or deny
+AH-188,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-194,"Logging, monitoring and audit",Record or retain
+AH-206,"Retention, privacy and training use",Block or deny
+AH-323,Tool and action use,Allow-list or scoped grant
+AH-348,Lifecycle and governance,Block or deny
+AH-356,Autonomy and human oversight,Require approval or human step
+AH-309,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-314,Autonomy and human oversight,"Transform, redact or steer"
+AH-349,"Spend, rate and resource limits",Block or deny
+AH-345,"Retention, privacy and training use","Transform, redact or steer"
+AH-321,Data and knowledge access,Allow-list or scoped grant
+AH-338,"Logging, monitoring and audit","Transform, redact or steer"
+AH-343,Sensitive data in AI traffic,"Transform, redact or steer"
+AH-324,"Spend, rate and resource limits",Limit or quota
+AH-354,Lifecycle and governance,Require approval or human step
+AH-330,Autonomy and human oversight,Require approval or human step
+AH-311,"Identity, authentication and permissions",Allow-list or scoped grant
+AH-355,Lifecycle and governance,Allow-list or scoped grant

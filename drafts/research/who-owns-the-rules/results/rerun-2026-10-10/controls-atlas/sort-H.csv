@@ -1,0 +1,663 @@
+control_id,object,mechanism
+AH-496,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-504,"Conversations, tasks and handover",Block or stop
+AH-485,Agent actions and tool calls,Permit or set state
+AH-493,Network destinations and endpoints,Block or stop
+AH-502,"Stored data: retention, training and encryption","Limit volume, amount or time"
+AH-489,Agent actions and tool calls,Require human approval or review
+AH-498,"Logs, traces and audit records",Record or report
+AH-497,"Conversations, tasks and handover",Block or stop
+AH-486,Agent actions and tool calls,Block or stop
+AH-509,"Identities, keys and access rights","Limit volume, amount or time"
+AH-505,"Conversations, tasks and handover",Block or stop
+AH-491,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-481,Network destinations and endpoints,Permit or set state
+AH-492,"Identities, keys and access rights",Permit or set state
+AH-488,Agent actions and tool calls,Require human approval or review
+AH-541,Agent actions and tool calls,Require human approval or review
+AH-533,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-539,Personal and sensitive data in content,Transform or redact
+AH-536,Agent actions and tool calls,Block or stop
+AH-544,Agent actions and tool calls,Permit or set state
+AH-537,"Identities, keys and access rights",Permit or set state
+AH-543,Agent actions and tool calls,Require human approval or review
+AH-532,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-535,Agent actions and tool calls,"Detect, score or flag"
+AH-538,"Agents and AI systems: inventory, versions and status",Block or stop
+AH-542,"Conversations, tasks and handover",Require human approval or review
+AH-540,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-545,Agent actions and tool calls,Block or stop
+AH-534,"Identities, keys and access rights",Permit or set state
+AH-521,Agent actions and tool calls,Permit or set state
+AH-530,"Logs, traces and audit records",Record or report
+AH-531,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-523,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-517,Personal and sensitive data in content,Transform or redact
+AH-515,"Identities, keys and access rights",Permit or set state
+AH-510,Agent actions and tool calls,Require human approval or review
+AH-518,Agent actions and tool calls,Permit or set state
+AH-529,"Logs, traces and audit records",Record or report
+AH-528,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-524,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-511,Agent actions and tool calls,Require human approval or review
+AH-522,Agent actions and tool calls,Permit or set state
+AH-525,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-513,Agent actions and tool calls,Require human approval or review
+BF-040,Network destinations and endpoints,Permit or set state
+BF-043,"Identities, keys and access rights",Permit or set state
+BF-027,Agent actions and tool calls,Block or stop
+BF-046,"Logs, traces and audit records",Record or report
+BF-044,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+BF-039,"Stored data: retention, training and encryption",Permit or set state
+BF-036,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-048,Network destinations and endpoints,Permit or set state
+BF-032,"Identities, keys and access rights",Permit or set state
+BF-029,Agent actions and tool calls,Block or stop
+BF-042,"Logs, traces and audit records",Record or report
+BF-035,"Stored data: retention, training and encryption","Limit volume, amount or time"
+BF-034,Data sources and files an agent can reach,Permit or set state
+BF-045,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-038,"Identities, keys and access rights",Permit or set state
+BF-024,"Logs, traces and audit records",Record or report
+BF-022,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-023,"Agents and AI systems: inventory, versions and status",Permit or set state
+BF-025,"Logs, traces and audit records",Record or report
+BF-026,"Logs, traces and audit records","Limit volume, amount or time"
+BF-021,Harmful or off-topic content,Permit or set state
+BF-007,Harmful or off-topic content,Block or stop
+BF-020,Network destinations and endpoints,Permit or set state
+BF-011,Personal and sensitive data in content,Transform or redact
+BF-019,"Stored data: retention, training and encryption",Permit or set state
+BF-018,"Logs, traces and audit records",Record or report
+BF-012,Personal and sensitive data in content,"Detect, score or flag"
+BF-001,Harmful or off-topic content,Block or stop
+BF-008,Harmful or off-topic content,Block or stop
+BF-003,Harmful or off-topic content,"Detect, score or flag"
+BF-004,Agent actions and tool calls,"Detect, score or flag"
+BF-016,Harmful or off-topic content,"Detect, score or flag"
+BF-010,Personal and sensitive data in content,Transform or redact
+BF-006,Prompt attacks and injected instructions,"Detect, score or flag"
+BF-002,Harmful or off-topic content,Block or stop
+CD-991,Agent actions and tool calls,Permit or set state
+CD-986,Agent actions and tool calls,Block or stop
+CD-995,"Identities, keys and access rights",Block or stop
+CD-988,Agent actions and tool calls,Require human approval or review
+CD-1014,"Logs, traces and audit records",Permit or set state
+CD-990,Network destinations and endpoints,Permit or set state
+CD-1017,"Identities, keys and access rights",Permit or set state
+CD-983,Agent actions and tool calls,Permit or set state
+CD-1018,"Identities, keys and access rights",Permit or set state
+CD-1007,Data sources and files an agent can reach,Permit or set state
+CD-1000,Agent actions and tool calls,Permit or set state
+CD-996,"Identities, keys and access rights",Block or stop
+CD-1012,"Stored data: retention, training and encryption",Permit or set state
+CD-1001,Agent actions and tool calls,Permit or set state
+CD-998,"Identities, keys and access rights",Block or stop
+CD-051,"Stored data: retention, training and encryption","Limit volume, amount or time"
+CD-079,"Identities, keys and access rights",Permit or set state
+CD-059,"Stored data: retention, training and encryption",Permit or set state
+CD-106,Agent actions and tool calls,Require human approval or review
+CD-075,"Model choice, routing and parameters",Permit or set state
+CD-030,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-071,Network destinations and endpoints,Block or stop
+CD-045,"Logs, traces and audit records",Transform or redact
+CD-089,"Identities, keys and access rights",Require human approval or review
+CD-056,"Stored data: retention, training and encryption",Permit or set state
+CD-049,"Stored data: retention, training and encryption","Limit volume, amount or time"
+CD-119,"Identities, keys and access rights",Permit or set state
+CD-058,"Stored data: retention, training and encryption",Permit or set state
+CD-115,"Identities, keys and access rights",Permit or set state
+CD-074,"Model choice, routing and parameters",Permit or set state
+BF-065,Prompt attacks and injected instructions,"Detect, score or flag"
+BF-072,"Identities, keys and access rights",Permit or set state
+BF-067,Network destinations and endpoints,Permit or set state
+BF-056,Harmful or off-topic content,"Detect, score or flag"
+BF-052,Prompt attacks and injected instructions,"Detect, score or flag"
+BF-069,Agent actions and tool calls,Require human approval or review
+BF-076,"Conversations, tasks and handover","Limit volume, amount or time"
+BF-051,Harmful or off-topic content,Permit or set state
+BF-073,"Logs, traces and audit records",Record or report
+BF-068,Agent actions and tool calls,Permit or set state
+BF-071,Network destinations and endpoints,Permit or set state
+BF-050,Harmful or off-topic content,Block or stop
+BF-060,Harmful or off-topic content,"Limit volume, amount or time"
+BF-058,Agent actions and tool calls,Require human approval or review
+BF-074,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-230,"Logs, traces and audit records",Record or report
+BF-232,Harmful or off-topic content,Block or stop
+BF-237,"Identities, keys and access rights",Permit or set state
+BF-229,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-234,Harmful or off-topic content,"Detect, score or flag"
+BF-235,Agent actions and tool calls,Permit or set state
+BF-231,Harmful or off-topic content,Block or stop
+BF-236,"Identities, keys and access rights",Permit or set state
+BF-233,"Model choice, routing and parameters",Transform or redact
+CD-122,Agent actions and tool calls,Permit or set state
+CD-121,Agent actions and tool calls,Permit or set state
+CD-141,"Logs, traces and audit records","Limit volume, amount or time"
+CD-124,Agent actions and tool calls,Permit or set state
+CD-155,Harmful or off-topic content,"Detect, score or flag"
+CD-129,Agent actions and tool calls,Require human approval or review
+CD-149,"Stored data: retention, training and encryption",Permit or set state
+CD-134,Agent actions and tool calls,Permit or set state
+CD-144,"Stored data: retention, training and encryption","Limit volume, amount or time"
+CD-138,"Logs, traces and audit records",Record or report
+CD-125,Agent actions and tool calls,Permit or set state
+CD-127,Agent actions and tool calls,Require human approval or review
+CD-136,"Stored data: retention, training and encryption",Permit or set state
+CD-123,Agent actions and tool calls,Permit or set state
+CD-146,"Stored data: retention, training and encryption","Limit volume, amount or time"
+EG-050,Personal and sensitive data in content,"Detect, score or flag"
+EG-038,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-061,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-058,Harmful or off-topic content,Permit or set state
+EG-035,Harmful or off-topic content,"Detect, score or flag"
+EG-044,Harmful or off-topic content,"Detect, score or flag"
+EG-051,Personal and sensitive data in content,"Detect, score or flag"
+EG-060,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-048,Personal and sensitive data in content,"Detect, score or flag"
+EG-063,"Logs, traces and audit records",Record or report
+EG-047,Personal and sensitive data in content,Transform or redact
+EG-054,Agent actions and tool calls,"Detect, score or flag"
+EG-062,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-034,Harmful or off-topic content,Block or stop
+EG-041,Harmful or off-topic content,"Detect, score or flag"
+CD-261,Network destinations and endpoints,Require human approval or review
+CD-578,"Conversations, tasks and handover",Block or stop
+CD-510,Agent actions and tool calls,Block or stop
+CD-645,"Logs, traces and audit records",Record or report
+CD-467,Data sources and files an agent can reach,Permit or set state
+CD-555,Network destinations and endpoints,Permit or set state
+CD-311,Agent actions and tool calls,Permit or set state
+CD-629,Agent actions and tool calls,"Detect, score or flag"
+CD-621,Agent actions and tool calls,"Limit volume, amount or time"
+CD-529,Agent actions and tool calls,"Limit volume, amount or time"
+CD-534,Agent actions and tool calls,"Limit volume, amount or time"
+CD-323,Agent actions and tool calls,Require human approval or review
+CD-414,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-300,Agent actions and tool calls,Permit or set state
+CD-656,"Logs, traces and audit records",Record or report
+BF-129,Personal and sensitive data in content,Block or stop
+BF-137,"Logs, traces and audit records","Limit volume, amount or time"
+BF-134,"Identities, keys and access rights",Permit or set state
+BF-132,"Model choice, routing and parameters",Permit or set state
+BF-131,Personal and sensitive data in content,"Detect, score or flag"
+BF-142,"Agents and AI systems: inventory, versions and status",Permit or set state
+BF-141,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-130,Personal and sensitive data in content,Block or stop
+BF-144,"Logs, traces and audit records",Record or report
+BF-139,"Identities, keys and access rights",Permit or set state
+BF-143,"Model choice, routing and parameters",Permit or set state
+BF-128,Harmful or off-topic content,Block or stop
+BF-126,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-127,Harmful or off-topic content,Block or stop
+BF-135,"Logs, traces and audit records",Record or report
+EG-281,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-285,"Logs, traces and audit records",Record or report
+EG-270,Agent actions and tool calls,Require human approval or review
+EG-268,Agent actions and tool calls,Block or stop
+EG-271,Agent actions and tool calls,Transform or redact
+EG-278,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-280,"Agents and AI systems: inventory, versions and status",Record or report
+EG-282,"Agents and AI systems: inventory, versions and status",Require human approval or review
+EG-269,Agent actions and tool calls,Block or stop
+EG-272,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-277,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-279,"Agents and AI systems: inventory, versions and status",Require human approval or review
+EG-273,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-276,"Agents and AI systems: inventory, versions and status",Require human approval or review
+EG-283,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-840,Agent actions and tool calls,Permit or set state
+CD-811,Data sources and files an agent can reach,Require human approval or review
+CD-822,Data sources and files an agent can reach,Permit or set state
+CD-843,Agent actions and tool calls,Permit or set state
+CD-852,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-855,"Model choice, routing and parameters",Permit or set state
+CD-884,Agent actions and tool calls,Permit or set state
+CD-868,Agent actions and tool calls,"Limit volume, amount or time"
+CD-862,Network destinations and endpoints,Permit or set state
+CD-850,"Logs, traces and audit records",Record or report
+CD-827,Agent actions and tool calls,Block or stop
+CD-869,Agent actions and tool calls,Require human approval or review
+CD-831,Data sources and files an agent can reach,Block or stop
+CD-816,Agent actions and tool calls,Permit or set state
+CD-829,Agent actions and tool calls,"Limit volume, amount or time"
+BF-110,Harmful or off-topic content,Block or stop
+BF-119,"Logs, traces and audit records",Record or report
+BF-120,"Identities, keys and access rights",Permit or set state
+BF-124,"Model choice, routing and parameters",Permit or set state
+BF-111,Personal and sensitive data in content,Transform or redact
+BF-113,Agent actions and tool calls,"Detect, score or flag"
+BF-115,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-109,Harmful or off-topic content,Block or stop
+BF-118,"Usage volume, spend and compute limits",Record or report
+BF-116,"Model choice, routing and parameters",Permit or set state
+BF-112,Harmful or off-topic content,"Detect, score or flag"
+BF-123,Agent actions and tool calls,Permit or set state
+BF-121,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-122,"Model choice, routing and parameters",Permit or set state
+BF-117,"Model choice, routing and parameters",Permit or set state
+BF-227,"Identities, keys and access rights",Permit or set state
+BF-224,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-222,"Agents and AI systems: inventory, versions and status",Permit or set state
+BF-226,Personal and sensitive data in content,Block or stop
+BF-225,Data sources and files an agent can reach,Permit or set state
+BF-223,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-228,"Agents and AI systems: inventory, versions and status",Permit or set state
+BF-221,Agent actions and tool calls,Permit or set state
+CD-240,"Logs, traces and audit records",Permit or set state
+CD-224,"Identities, keys and access rights",Permit or set state
+CD-212,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-238,"Logs, traces and audit records","Limit volume, amount or time"
+CD-228,"Stored data: retention, training and encryption",Permit or set state
+CD-202,Harmful or off-topic content,Block or stop
+CD-234,Agent actions and tool calls,Require human approval or review
+CD-235,Harmful or off-topic content,Permit or set state
+CD-223,Network destinations and endpoints,Permit or set state
+CD-230,"Logs, traces and audit records",Record or report
+CD-222,"Identities, keys and access rights",Block or stop
+CD-216,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-218,"Usage volume, spend and compute limits",Permit or set state
+CD-217,"Stored data: retention, training and encryption",Permit or set state
+CD-203,Harmful or off-topic content,Block or stop
+CD-1029,"Logs, traces and audit records",Record or report
+CD-1042,Agent actions and tool calls,"Detect, score or flag"
+CD-1036,Agent actions and tool calls,Require human approval or review
+CD-1043,"Usage volume, spend and compute limits",Permit or set state
+CD-1026,"Logs, traces and audit records",Permit or set state
+CD-1041,"Conversations, tasks and handover",Permit or set state
+CD-1021,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-1024,"Logs, traces and audit records",Record or report
+CD-1031,Agent actions and tool calls,Permit or set state
+CD-1038,Agent actions and tool calls,Require human approval or review
+CD-1020,"Identities, keys and access rights",Permit or set state
+CD-1028,"Logs, traces and audit records",Permit or set state
+CD-1044,Agent actions and tool calls,Permit or set state
+CD-1037,Agent actions and tool calls,Require human approval or review
+CD-1019,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-898,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-931,Network destinations and endpoints,Permit or set state
+CD-917,Data sources and files an agent can reach,"Detect, score or flag"
+CD-953,"Logs, traces and audit records",Record or report
+CD-968,Agent actions and tool calls,Require human approval or review
+CD-974,Agent actions and tool calls,Permit or set state
+CD-976,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-961,Agent actions and tool calls,"Detect, score or flag"
+CD-973,"Conversations, tasks and handover",Block or stop
+CD-940,"Agents and AI systems: inventory, versions and status",Permit or set state
+CD-929,Network destinations and endpoints,Permit or set state
+CD-914,Data sources and files an agent can reach,Permit or set state
+CD-971,Agent actions and tool calls,Record or report
+CD-969,Agent actions and tool calls,Require human approval or review
+CD-957,Agent actions and tool calls,Permit or set state
+AH-106,"Stored data: retention, training and encryption",Permit or set state
+AH-096,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-081,Data sources and files an agent can reach,Block or stop
+AH-102,"Logs, traces and audit records",Record or report
+AH-087,"Identities, keys and access rights",Permit or set state
+AH-094,Agent actions and tool calls,Require human approval or review
+AH-104,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-074,Harmful or off-topic content,Block or stop
+AH-075,Harmful or off-topic content,Block or stop
+AH-092,Data sources and files an agent can reach,Permit or set state
+AH-095,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-098,Network destinations and endpoints,Block or stop
+AH-107,Data sources and files an agent can reach,"Detect, score or flag"
+AH-082,"Identities, keys and access rights",Permit or set state
+AH-105,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-099,"Logs, traces and audit records",Record or report
+BF-083,Harmful or off-topic content,"Detect, score or flag"
+BF-090,Prompt attacks and injected instructions,Permit or set state
+BF-098,"Usage volume, spend and compute limits",Permit or set state
+BF-105,"Identities, keys and access rights",Permit or set state
+BF-091,Network destinations and endpoints,Permit or set state
+BF-102,"Model choice, routing and parameters",Transform or redact
+BF-088,Harmful or off-topic content,Permit or set state
+BF-108,"Stored data: retention, training and encryption",Permit or set state
+BF-100,"Logs, traces and audit records",Permit or set state
+BF-085,Personal and sensitive data in content,Transform or redact
+BF-082,Prompt attacks and injected instructions,"Detect, score or flag"
+BF-106,"Identities, keys and access rights",Permit or set state
+BF-107,Network destinations and endpoints,Permit or set state
+BF-103,"Model choice, routing and parameters","Limit volume, amount or time"
+EG-065,Harmful or off-topic content,Block or stop
+EG-077,Harmful or off-topic content,Block or stop
+EG-096,Harmful or off-topic content,"Detect, score or flag"
+EG-085,Harmful or off-topic content,"Detect, score or flag"
+EG-098,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-104,Personal and sensitive data in content,"Detect, score or flag"
+EG-078,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-082,Agent actions and tool calls,Block or stop
+EG-075,Harmful or off-topic content,"Detect, score or flag"
+EG-097,Harmful or off-topic content,"Detect, score or flag"
+EG-084,Harmful or off-topic content,"Detect, score or flag"
+EG-102,Harmful or off-topic content,"Detect, score or flag"
+EG-089,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-073,Harmful or off-topic content,Block or stop
+EG-080,Prompt attacks and injected instructions,"Detect, score or flag"
+AH-235,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-213,"Conversations, tasks and handover",Transform or redact
+AH-221,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-230,"Model choice, routing and parameters",Permit or set state
+AH-245,Network destinations and endpoints,Permit or set state
+AH-234,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-222,"Identities, keys and access rights","Detect, score or flag"
+AH-239,Agent actions and tool calls,Permit or set state
+AH-209,Harmful or off-topic content,Block or stop
+AH-246,Data sources and files an agent can reach,Permit or set state
+AH-247,"Agents and AI systems: inventory, versions and status","Limit volume, amount or time"
+AH-210,Personal and sensitive data in content,Transform or redact
+AH-242,"Logs, traces and audit records",Record or report
+AH-228,"Model choice, routing and parameters","Limit volume, amount or time"
+AH-238,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-399,"Conversations, tasks and handover",Block or stop
+AH-387,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-361,"Conversations, tasks and handover","Limit volume, amount or time"
+AH-378,"Conversations, tasks and handover",Require human approval or review
+AH-390,Agent actions and tool calls,Permit or set state
+AH-364,Data sources and files an agent can reach,Permit or set state
+AH-411,"Logs, traces and audit records",Record or report
+AH-406,"Usage volume, spend and compute limits",Permit or set state
+AH-405,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-403,"Conversations, tasks and handover",Permit or set state
+AH-372,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-374,"Conversations, tasks and handover",Permit or set state
+AH-379,"Conversations, tasks and handover",Block or stop
+AH-394,Agent actions and tool calls,Permit or set state
+AH-367,"Conversations, tasks and handover",Permit or set state
+BF-156,"Model choice, routing and parameters",Transform or redact
+BF-168,"Identities, keys and access rights",Permit or set state
+BF-152,Prompt attacks and injected instructions,Permit or set state
+BF-154,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-166,Agent actions and tool calls,Permit or set state
+BF-160,Harmful or off-topic content,"Detect, score or flag"
+BF-161,"Logs, traces and audit records",Record or report
+BF-147,"Model choice, routing and parameters",Permit or set state
+BF-169,"Identities, keys and access rights",Permit or set state
+BF-153,Prompt attacks and injected instructions,Transform or redact
+BF-155,"Usage volume, spend and compute limits",Permit or set state
+BF-167,Agent actions and tool calls,Permit or set state
+BF-157,Personal and sensitive data in content,Transform or redact
+BF-164,"Logs, traces and audit records",Record or report
+BF-146,"Model choice, routing and parameters",Permit or set state
+BF-217,"Logs, traces and audit records",Record or report
+BF-201,"Identities, keys and access rights",Permit or set state
+BF-213,"Model choice, routing and parameters",Permit or set state
+BF-200,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-219,Network destinations and endpoints,Permit or set state
+BF-207,Harmful or off-topic content,Permit or set state
+BF-198,"Model choice, routing and parameters",Permit or set state
+BF-203,Agent actions and tool calls,Permit or set state
+BF-216,"Logs, traces and audit records",Transform or redact
+BF-204,"Identities, keys and access rights",Permit or set state
+BF-214,"Model choice, routing and parameters",Transform or redact
+BF-195,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-206,Harmful or off-topic content,Permit or set state
+BF-202,Agent actions and tool calls,Permit or set state
+BF-215,"Logs, traces and audit records",Transform or redact
+AH-421,Agent actions and tool calls,"Limit volume, amount or time"
+AH-434,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-433,"Model choice, routing and parameters",Permit or set state
+AH-447,Network destinations and endpoints,Require human approval or review
+AH-439,Data sources and files an agent can reach,Block or stop
+AH-456,"Identities, keys and access rights",Permit or set state
+AH-427,"Conversations, tasks and handover",Block or stop
+AH-468,Network destinations and endpoints,Block or stop
+AH-437,"Conversations, tasks and handover",Block or stop
+AH-441,Data sources and files an agent can reach,"Detect, score or flag"
+AH-419,Agent actions and tool calls,Transform or redact
+AH-422,Agent actions and tool calls,Permit or set state
+AH-435,Agent actions and tool calls,"Limit volume, amount or time"
+AH-436,Agent actions and tool calls,Permit or set state
+AH-414,Agent actions and tool calls,Require human approval or review
+EG-151,Harmful or off-topic content,"Detect, score or flag"
+EG-140,Harmful or off-topic content,"Detect, score or flag"
+EG-154,Agent actions and tool calls,"Detect, score or flag"
+EG-160,Prompt attacks and injected instructions,Permit or set state
+EG-152,Harmful or off-topic content,"Detect, score or flag"
+EG-157,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-156,Agent actions and tool calls,"Detect, score or flag"
+EG-150,Harmful or off-topic content,"Detect, score or flag"
+EG-158,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-147,Personal and sensitive data in content,"Detect, score or flag"
+EG-159,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-153,Harmful or off-topic content,"Detect, score or flag"
+EG-146,Harmful or off-topic content,"Detect, score or flag"
+EG-141,Harmful or off-topic content,"Detect, score or flag"
+EG-149,Harmful or off-topic content,"Detect, score or flag"
+AH-149,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-173,"Identities, keys and access rights",Permit or set state
+AH-132,Agent actions and tool calls,Permit or set state
+AH-158,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-141,"Model choice, routing and parameters",Permit or set state
+AH-156,"Logs, traces and audit records","Detect, score or flag"
+AH-162,"Stored data: retention, training and encryption",Permit or set state
+AH-138,Network destinations and endpoints,Permit or set state
+AH-137,Agent actions and tool calls,Require human approval or review
+AH-128,Harmful or off-topic content,Block or stop
+AH-127,Harmful or off-topic content,Permit or set state
+AH-171,"Agents and AI systems: inventory, versions and status",Block or stop
+AH-167,"Identities, keys and access rights",Permit or set state
+AH-117,"Agents and AI systems: inventory, versions and status",Block or stop
+AH-160,"Usage volume, spend and compute limits","Limit volume, amount or time"
+EG-179,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-168,"Identities, keys and access rights",Block or stop
+EG-189,"Logs, traces and audit records",Record or report
+EG-182,"Identities, keys and access rights",Require human approval or review
+EG-192,Network destinations and endpoints,Block or stop
+EG-186,"Agents and AI systems: inventory, versions and status",Block or stop
+EG-164,"Identities, keys and access rights",Permit or set state
+EG-170,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-181,"Identities, keys and access rights",Require human approval or review
+EG-178,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-166,"Identities, keys and access rights",Permit or set state
+EG-169,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-177,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-165,"Identities, keys and access rights",Permit or set state
+EG-174,"Logs, traces and audit records","Limit volume, amount or time"
+EG-194,Personal and sensitive data in content,Block or stop
+EG-213,"Logs, traces and audit records",Record or report
+EG-211,"Stored data: retention, training and encryption","Limit volume, amount or time"
+EG-197,"Identities, keys and access rights",Permit or set state
+EG-209,Data sources and files an agent can reach,Permit or set state
+EG-200,Personal and sensitive data in content,"Detect, score or flag"
+EG-199,Personal and sensitive data in content,Block or stop
+EG-212,Harmful or off-topic content,"Detect, score or flag"
+EG-214,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-204,"Identities, keys and access rights",Block or stop
+EG-193,Network destinations and endpoints,Block or stop
+EG-203,Network destinations and endpoints,Permit or set state
+EG-207,Personal and sensitive data in content,Block or stop
+EG-206,"Logs, traces and audit records",Record or report
+EG-201,Data sources and files an agent can reach,Block or stop
+CD-253,"Stored data: retention, training and encryption",Permit or set state
+CD-244,Harmful or off-topic content,Block or stop
+CD-252,"Identities, keys and access rights",Permit or set state
+CD-251,Harmful or off-topic content,"Detect, score or flag"
+CD-255,"Stored data: retention, training and encryption",Permit or set state
+CD-242,Harmful or off-topic content,Block or stop
+CD-256,"Stored data: retention, training and encryption",Permit or set state
+CD-241,Harmful or off-topic content,Block or stop
+CD-257,"Stored data: retention, training and encryption",Permit or set state
+CD-249,Harmful or off-topic content,"Detect, score or flag"
+CD-254,"Stored data: retention, training and encryption",Permit or set state
+CD-248,Harmful or off-topic content,Permit or set state
+CD-245,Harmful or off-topic content,Block or stop
+CD-243,Harmful or off-topic content,Permit or set state
+CD-250,Personal and sensitive data in content,"Detect, score or flag"
+EG-027,Harmful or off-topic content,Block or stop
+EG-011,Prompt attacks and injected instructions,"Detect, score or flag"
+EG-002,Data sources and files an agent can reach,Transform or redact
+EG-031,"Logs, traces and audit records",Record or report
+EG-022,Agent actions and tool calls,"Detect, score or flag"
+EG-003,"Conversations, tasks and handover",Permit or set state
+EG-015,Personal and sensitive data in content,Transform or redact
+EG-013,Harmful or off-topic content,Block or stop
+EG-017,Personal and sensitive data in content,Transform or redact
+EG-032,"Logs, traces and audit records",Permit or set state
+EG-021,Agent actions and tool calls,Block or stop
+EG-030,Harmful or off-topic content,"Detect, score or flag"
+EG-018,Agent actions and tool calls,"Detect, score or flag"
+EG-006,Harmful or off-topic content,Block or stop
+EG-023,Agent actions and tool calls,Block or stop
+EG-215,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-225,"Logs, traces and audit records",Record or report
+EG-220,"Identities, keys and access rights",Permit or set state
+EG-221,"Identities, keys and access rights",Require human approval or review
+EG-222,"Identities, keys and access rights",Require human approval or review
+EG-218,"Identities, keys and access rights",Permit or set state
+EG-216,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-223,"Identities, keys and access rights",Permit or set state
+EG-217,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-224,"Identities, keys and access rights",Permit or set state
+EG-219,"Identities, keys and access rights",Block or stop
+CD-178,"Stored data: retention, training and encryption",Permit or set state
+CD-164,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-188,Harmful or off-topic content,Require human approval or review
+CD-161,"Identities, keys and access rights",Permit or set state
+CD-154,"Stored data: retention, training and encryption","Limit volume, amount or time"
+CD-162,"Model choice, routing and parameters",Permit or set state
+CD-180,Harmful or off-topic content,"Detect, score or flag"
+CD-182,Network destinations and endpoints,Permit or set state
+CD-158,Data sources and files an agent can reach,Permit or set state
+CD-187,Harmful or off-topic content,"Detect, score or flag"
+CD-183,Network destinations and endpoints,Block or stop
+CD-174,"Stored data: retention, training and encryption",Permit or set state
+CD-169,"Usage volume, spend and compute limits","Limit volume, amount or time"
+CD-156,"Identities, keys and access rights",Permit or set state
+CD-172,"Logs, traces and audit records",Permit or set state
+CD-807,"Identities, keys and access rights",Permit or set state
+CD-771,Network destinations and endpoints,Permit or set state
+CD-776,Agent actions and tool calls,Permit or set state
+CD-752,"Identities, keys and access rights",Permit or set state
+CD-728,Data sources and files an agent can reach,Permit or set state
+CD-804,"Logs, traces and audit records",Record or report
+CD-778,Agent actions and tool calls,Require human approval or review
+CD-748,Agent actions and tool calls,"Limit volume, amount or time"
+CD-719,Agent actions and tool calls,Block or stop
+CD-751,"Identities, keys and access rights",Permit or set state
+CD-724,Network destinations and endpoints,Block or stop
+CD-769,Agent actions and tool calls,Permit or set state
+CD-746,Agent actions and tool calls,Permit or set state
+CD-737,"Stored data: retention, training and encryption",Permit or set state
+CD-743,Agent actions and tool calls,"Detect, score or flag"
+BF-175,Harmful or off-topic content,"Detect, score or flag"
+BF-190,Agent actions and tool calls,Permit or set state
+BF-193,"Model choice, routing and parameters",Permit or set state
+BF-173,"Model choice, routing and parameters","Detect, score or flag"
+BF-187,"Identities, keys and access rights",Permit or set state
+BF-171,Harmful or off-topic content,"Detect, score or flag"
+BF-185,"Model choice, routing and parameters",Transform or redact
+BF-179,"Usage volume, spend and compute limits","Limit volume, amount or time"
+BF-188,"Stored data: retention, training and encryption",Permit or set state
+BF-181,"Model choice, routing and parameters",Permit or set state
+BF-186,"Model choice, routing and parameters","Limit volume, amount or time"
+BF-170,Harmful or off-topic content,Block or stop
+BF-191,Agent actions and tool calls,Permit or set state
+BF-192,"Logs, traces and audit records","Limit volume, amount or time"
+BF-182,"Model choice, routing and parameters",Permit or set state
+EG-123,Harmful or off-topic content,"Detect, score or flag"
+EG-117,Personal and sensitive data in content,Transform or redact
+EG-133,Network destinations and endpoints,"Detect, score or flag"
+EG-118,Harmful or off-topic content,"Detect, score or flag"
+EG-129,"Model choice, routing and parameters","Limit volume, amount or time"
+EG-113,Prompt attacks and injected instructions,Transform or redact
+EG-130,Harmful or off-topic content,"Detect, score or flag"
+EG-107,Harmful or off-topic content,Block or stop
+EG-122,Harmful or off-topic content,Block or stop
+EG-119,"Model choice, routing and parameters","Limit volume, amount or time"
+EG-125,Personal and sensitive data in content,Transform or redact
+EG-109,Harmful or off-topic content,Block or stop
+EG-121,Harmful or off-topic content,Transform or redact
+EG-114,Harmful or off-topic content,Permit or set state
+EG-137,Harmful or off-topic content,"Detect, score or flag"
+AH-013,Data sources and files an agent can reach,Permit or set state
+AH-028,"Identities, keys and access rights",Permit or set state
+AH-016,"Logs, traces and audit records",Record or report
+AH-026,Agent actions and tool calls,Permit or set state
+AH-032,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-034,Agent actions and tool calls,Require human approval or review
+AH-015,Personal and sensitive data in content,"Detect, score or flag"
+AH-024,"Conversations, tasks and handover",Permit or set state
+AH-022,Agent actions and tool calls,"Limit volume, amount or time"
+AH-009,"Stored data: retention, training and encryption",Permit or set state
+AH-027,"Identities, keys and access rights",Require human approval or review
+AH-017,"Logs, traces and audit records",Record or report
+AH-001,Agent actions and tool calls,Permit or set state
+AH-037,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-020,"Conversations, tasks and handover",Require human approval or review
+AH-061,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-065,"Model choice, routing and parameters",Permit or set state
+AH-066,"Agents and AI systems: inventory, versions and status",Block or stop
+AH-060,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-062,Agent actions and tool calls,"Detect, score or flag"
+AH-068,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-050,Harmful or off-topic content,"Detect, score or flag"
+AH-046,Data sources and files an agent can reach,Permit or set state
+AH-041,Agent actions and tool calls,Permit or set state
+AH-051,Prompt attacks and injected instructions,"Detect, score or flag"
+AH-049,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-055,Harmful or off-topic content,Permit or set state
+AH-039,"Identities, keys and access rights",Permit or set state
+AH-044,Agent actions and tool calls,Require human approval or review
+AH-056,"Logs, traces and audit records",Record or report
+EG-265,Personal and sensitive data in content,Transform or redact
+EG-242,Harmful or off-topic content,"Detect, score or flag"
+EG-245,"Model choice, routing and parameters",Block or stop
+EG-261,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+EG-238,Agent actions and tool calls,Block or stop
+EG-257,Data sources and files an agent can reach,Block or stop
+EG-235,"Agents and AI systems: inventory, versions and status",Permit or set state
+EG-255,Agent actions and tool calls,Permit or set state
+EG-264,"Agents and AI systems: inventory, versions and status",Record or report
+EG-258,Agent actions and tool calls,Require human approval or review
+EG-241,Harmful or off-topic content,Block or stop
+EG-243,Harmful or off-topic content,Block or stop
+EG-251,Network destinations and endpoints,Permit or set state
+EG-230,"Agents and AI systems: inventory, versions and status",Require human approval or review
+EG-233,Agent actions and tool calls,Permit or set state
+AH-259,Agent actions and tool calls,Block or stop
+AH-303,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-299,"Usage volume, spend and compute limits",Permit or set state
+AH-285,"Conversations, tasks and handover",Permit or set state
+AH-256,Harmful or off-topic content,"Detect, score or flag"
+AH-293,"Logs, traces and audit records",Record or report
+AH-306,"Identities, keys and access rights",Permit or set state
+AH-270,"Model choice, routing and parameters",Block or stop
+AH-255,Prompt attacks and injected instructions,"Detect, score or flag"
+AH-274,Network destinations and endpoints,Permit or set state
+AH-291,Data sources and files an agent can reach,Permit or set state
+AH-308,Agent actions and tool calls,"Limit volume, amount or time"
+AH-258,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-300,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-278,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-204,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-200,"Identities, keys and access rights",Permit or set state
+AH-201,"Agents and AI systems: inventory, versions and status","Detect, score or flag"
+AH-185,Agent actions and tool calls,Permit or set state
+AH-203,"Usage volume, spend and compute limits","Limit volume, amount or time"
+AH-183,Data sources and files an agent can reach,Permit or set state
+AH-197,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-189,"Identities, keys and access rights","Limit volume, amount or time"
+AH-192,"Logs, traces and audit records",Record or report
+AH-186,Agent actions and tool calls,Permit or set state
+AH-187,"Identities, keys and access rights",Permit or set state
+AH-178,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-188,"Identities, keys and access rights",Permit or set state
+AH-194,"Logs, traces and audit records",Record or report
+AH-206,"Stored data: retention, training and encryption",Permit or set state
+AH-323,Agent actions and tool calls,Permit or set state
+AH-348,"Agents and AI systems: inventory, versions and status",Permit or set state
+AH-356,"Conversations, tasks and handover",Require human approval or review
+AH-309,"Identities, keys and access rights",Permit or set state
+AH-314,"Conversations, tasks and handover",Permit or set state
+AH-349,"Usage volume, spend and compute limits",Permit or set state
+AH-345,"Stored data: retention, training and encryption",Permit or set state
+AH-321,Data sources and files an agent can reach,Permit or set state
+AH-338,"Logs, traces and audit records",Transform or redact
+AH-343,Personal and sensitive data in content,Transform or redact
+AH-324,Agent actions and tool calls,"Limit volume, amount or time"
+AH-354,"Agents and AI systems: inventory, versions and status",Require human approval or review
+AH-330,"Conversations, tasks and handover",Require human approval or review
+AH-311,"Identities, keys and access rights",Permit or set state
+AH-355,"Agents and AI systems: inventory, versions and status",Permit or set state
