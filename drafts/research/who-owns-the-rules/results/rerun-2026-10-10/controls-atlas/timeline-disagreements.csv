@@ -1,0 +1,112 @@
+event_id,object_S,sophistication_S,is_availability_S,object_H,sophistication_H,is_availability_H
+P-003,"Stored data: retention, training use and encryption",1,yes,"Logs, traces and audit records",3,no
+P-009,Harmful and off-limits content,2,yes,Harmful and off-limits content,1,yes
+P-013,Harmful and off-limits content,2,yes,Harmful and off-limits content,1,yes
+P-020,Harmful and off-limits content,2,yes,Harmful and off-limits content,1,yes
+P-021,"Usage, spend and rate limits",3,yes,"Identity, credentials and access rights",3,yes
+P-027,Agent tools and actions,4,yes,Harmful and off-limits content,4,yes
+P-031,"Logs, traces and audit records",3,yes,"Logs, traces and audit records",2,yes
+P-034,"Logs, traces and audit records",3,yes,"Logs, traces and audit records",1,yes
+P-038,"Identity, credentials and access rights",3,no,"Identity, credentials and access rights",3,yes
+P-039,"Logs, traces and audit records",3,no,"Logs, traces and audit records",1,no
+P-044,Network destinations,4,yes,"Identity, credentials and access rights",4,yes
+P-050,"Model choice, routing and caching",3,yes,"Model choice, routing and caching",1,yes
+P-053,Harmful and off-limits content,2,yes,Harmful and off-limits content,3,yes
+P-054,Harmful and off-limits content,3,yes,"Identity, credentials and access rights",3,yes
+P-055,"Stored data: retention, training use and encryption",3,yes,"Stored data: retention, training use and encryption",1,yes
+P-056,Prompt attacks and untrusted input,3,yes,Harmful and off-limits content,2,yes
+P-060,Autonomy and human handover,4,yes,Agent tools and actions,4,yes
+P-065,Harmful and off-limits content,3,yes,Harmful and off-limits content,2,yes
+P-069,"Logs, traces and audit records",3,yes,"Logs, traces and audit records",1,yes
+P-071,Network destinations,4,yes,Network destinations,1,yes
+P-075,"Identity, credentials and access rights",4,yes,Network destinations,4,yes
+P-077,Harmful and off-limits content,2,yes,Harmful and off-limits content,3,yes
+P-081,Harmful and off-limits content,3,yes,"AI inventory, lifecycle and policy management",3,yes
+P-083,Prompt attacks and untrusted input,4,yes,Agent tools and actions,4,yes
+P-084,Network destinations,4,yes,Agent tools and actions,4,yes
+P-090,"Usage, spend and rate limits",4,yes,"Usage, spend and rate limits",1,yes
+P-091,Prompt attacks and untrusted input,4,yes,Agent tools and actions,4,yes
+P-092,Harmful and off-limits content,5,yes,Agent tools and actions,4,yes
+P-097,"AI inventory, lifecycle and policy management",3,yes,"Identity, credentials and access rights",3,yes
+P-099,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+P-103,"Logs, traces and audit records",1,yes,"Logs, traces and audit records",2,yes
+P-104,Agent tools and actions,4,yes,Prompt attacks and untrusted input,4,yes
+P-108,Autonomy and human handover,4,yes,Agent tools and actions,4,yes
+P-109,Network destinations,4,yes,Network destinations,1,no
+P-110,Harmful and off-limits content,3,yes,Harmful and off-limits content,4,yes
+P-112,Network destinations,4,yes,Agent tools and actions,4,yes
+P-113,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",3,yes
+G-001,Answer accuracy and presentation,2,yes,Answer accuracy and presentation,1,yes
+G-002,Harmful and off-limits content,1,yes,Harmful and off-limits content,2,yes
+G-004,Agent tools and actions,1,yes,Network destinations,1,yes
+G-012,Answer accuracy and presentation,1,yes,Harmful and off-limits content,2,yes
+G-019,Harmful and off-limits content,1,yes,Autonomy and human handover,1,yes
+G-020,Sensitive data in prompts and outputs,2,yes,Harmful and off-limits content,2,yes
+G-026,Sensitive data in prompts and outputs,2,no,Prompt attacks and untrusted input,1,no
+G-027,Answer accuracy and presentation,1,yes,"AI inventory, lifecycle and policy management",1,yes
+G-029,Harmful and off-limits content,3,yes,Harmful and off-limits content,2,yes
+G-031,Prompt attacks and untrusted input,2,yes,Prompt attacks and untrusted input,1,yes
+G-038,Sensitive data in prompts and outputs,2,yes,Sensitive data in prompts and outputs,1,yes
+G-044,Harmful and off-limits content,2,yes,Harmful and off-limits content,1,yes
+G-052,"Usage, spend and rate limits",1,yes,"Model choice, routing and caching",3,yes
+G-053,"Usage, spend and rate limits",1,yes,"Usage, spend and rate limits",3,yes
+G-060,Harmful and off-limits content,3,yes,"AI inventory, lifecycle and policy management",3,yes
+G-061,Sensitive data in prompts and outputs,2,yes,"AI inventory, lifecycle and policy management",2,yes
+G-066,Prompt attacks and untrusted input,2,yes,Harmful and off-limits content,2,yes
+G-067,"Model choice, routing and caching",3,yes,"Model choice, routing and caching",1,yes
+G-069,Harmful and off-limits content,2,yes,"Model choice, routing and caching",1,yes
+G-070,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+G-080,Sensitive data in prompts and outputs,3,yes,Sensitive data in prompts and outputs,2,yes
+G-081,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+G-084,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",3,yes
+G-089,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+G-091,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+G-092,Harmful and off-limits content,2,yes,Prompt attacks and untrusted input,2,yes
+G-095,Harmful and off-limits content,2,yes,"Model choice, routing and caching",3,yes
+G-097,"AI inventory, lifecycle and policy management",3,yes,"Logs, traces and audit records",1,yes
+G-101,"Usage, spend and rate limits",3,yes,"Usage, spend and rate limits",1,yes
+G-103,"AI inventory, lifecycle and policy management",4,yes,"Model choice, routing and caching",1,yes
+G-104,"Usage, spend and rate limits",3,yes,"Identity, credentials and access rights",3,yes
+G-105,"Usage, spend and rate limits",3,yes,"Usage, spend and rate limits",2,yes
+G-106,"Identity, credentials and access rights",5,yes,"Identity, credentials and access rights",3,yes
+G-107,Harmful and off-limits content,5,yes,Harmful and off-limits content,2,yes
+G-108,Agent tools and actions,5,yes,Agent tools and actions,4,yes
+A-001,"AI inventory, lifecycle and policy management",3,yes,"AI inventory, lifecycle and policy management",1,yes
+A-004,Sensitive data in prompts and outputs,3,yes,Agent tools and actions,3,yes
+A-007,"AI inventory, lifecycle and policy management",3,no,"AI inventory, lifecycle and policy management",1,no
+A-008,Data and files the AI can reach,1,yes,Data and files the AI can reach,3,yes
+A-010,Answer accuracy and presentation,3,yes,Data and files the AI can reach,1,yes
+A-014,"AI inventory, lifecycle and policy management",3,yes,"AI inventory, lifecycle and policy management",1,yes
+A-016,Autonomy and human handover,4,yes,Agent tools and actions,4,yes
+A-017,Autonomy and human handover,3,no,Agent tools and actions,1,no
+A-019,Data and files the AI can reach,1,yes,Data and files the AI can reach,3,yes
+A-022,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",3,yes
+A-023,Agent tools and actions,4,yes,Agent tools and actions,1,yes
+A-024,Agent tools and actions,4,yes,"Identity, credentials and access rights",4,yes
+A-026,"Identity, credentials and access rights",4,no,"Identity, credentials and access rights",3,no
+A-033,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",3,yes
+A-036,Network destinations,4,yes,Network destinations,1,yes
+A-037,Autonomy and human handover,4,yes,Autonomy and human handover,3,yes
+A-038,Agent tools and actions,4,yes,Agent tools and actions,1,yes
+A-040,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+A-041,Agent tools and actions,4,no,"Usage, spend and rate limits",4,no
+A-045,"AI inventory, lifecycle and policy management",5,yes,"AI inventory, lifecycle and policy management",3,yes
+A-047,"AI inventory, lifecycle and policy management",5,yes,Agent tools and actions,3,yes
+A-048,Agent tools and actions,5,yes,Agent tools and actions,3,yes
+A-052,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+A-055,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",2,yes
+A-056,"AI inventory, lifecycle and policy management",4,yes,"AI inventory, lifecycle and policy management",3,yes
+A-057,Agent tools and actions,5,yes,Agent tools and actions,4,yes
+A-059,Agent tools and actions,4,yes,"Identity, credentials and access rights",4,yes
+A-060,"Identity, credentials and access rights",4,yes,"Identity, credentials and access rights",3,yes
+A-061,"AI inventory, lifecycle and policy management",5,yes,"AI inventory, lifecycle and policy management",3,yes
+A-062,Agent tools and actions,5,yes,Agent tools and actions,4,yes
+A-063,Agent tools and actions,5,yes,Agent tools and actions,3,yes
+A-064,"AI inventory, lifecycle and policy management",5,yes,"AI inventory, lifecycle and policy management",3,yes
+A-065,"AI inventory, lifecycle and policy management",5,yes,"AI inventory, lifecycle and policy management",3,yes
+A-066,Autonomy and human handover,4,yes,Agent tools and actions,4,yes
+A-068,Agent tools and actions,4,yes,Agent tools and actions,3,yes
+A-070,Sensitive data in prompts and outputs,4,yes,Sensitive data in prompts and outputs,3,yes
+A-071,Autonomy and human handover,4,yes,Agent tools and actions,4,yes
+A-073,Prompt attacks and untrusted input,4,yes,Data and files the AI can reach,3,yes
+A-076,Agent tools and actions,4,yes,Agent tools and actions,3,yes
