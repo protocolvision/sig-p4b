@@ -124,3 +124,48 @@ Every claim carries a confidence chip. It links to and from the main report, and
 - Vendor documentation changes quickly; the snapshot is dated.
 - Some documentation is gated or rendered by script and cannot be retrieved; this is recorded per product.
 - Analogue mappings are judgements, reported with agreement statistics.
+
+## Addendum (11 October 2026, before collection): Phase 2b, a timeline of controls, 2021–2026
+
+**Question.** How have the scope, breadth and sophistication of agent and model controls evolved since 2021? What is likely in the next 12 months, and where are the blind spots?
+
+**Events.** Each event is the first public availability of one control type at one vendor, with:
+- the date;
+- the vendor;
+- the control described in the source's own words;
+- the availability stage (preview, beta or general availability);
+- the evidence type:
+  - **primary:** a release note, changelog, official blog or documentation page with a date;
+  - **archive:** an Internet Archive first capture of a documentation page, used only as an upper bound when no dated primary source exists;
+  - **press:** news coverage, used only for context;
+- a verbatim quote of 40 words or fewer, the URL and the stored path.
+
+Wayback CDX requests are paced at 5 seconds or more, and every request is logged. Events are later mapped onto the final taxonomy (object, mechanism, enforcement point).
+
+**Measures, by quarter, from Q1 2021 to Q3 2026:**
+- **Scope:** distinct control types available.
+- **Breadth:** taxonomy object categories with at least one control available, and how many vendors offer each.
+- **Sophistication:** an ordinal scale fixed now, with each event coded on it:
+  1. static rule (keyword or block list, fixed limit);
+  2. classifier-based (a model scores content or behaviour);
+  3. context or policy-aware (rules bound to identity, project, data labels or risk level);
+  4. agent-aware (rules on tool calls, actions, delegation, sessions or agent identity);
+  5. runtime policy engine (central, declarative policies enforced across agents and tools, with approval workflows and audit).
+
+**Forecast (next 12 months).** We combine three things:
+- extrapolation of category growth;
+- announced previews and betas not yet generally available;
+- scheduled rules (EU AI Act and Colorado dates) and draft standards.
+
+Each forecast is a dated, checkable statement with a probability.
+
+**Blind spots.** These are categories with low vendor coverage, plus analogue controls from the comparison domains that have no agent equivalent and no announced plan. Examples to test:
+- a mandatory kill function;
+- per-action value caps;
+- two-person approval;
+- controls on agent-to-agent delegation.
+
+**Limits.**
+- First availability is not adoption.
+- Archive captures are upper bounds.
+- Vendor announcements overstate what ships.
