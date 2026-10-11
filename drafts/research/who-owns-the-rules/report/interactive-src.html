@@ -1,0 +1,689 @@
+<title>Who Owns the Rules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url("fonts/jetbrains-mono-latin-400.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url("fonts/jetbrains-mono-latin-500.woff2") format("woff2"); }
+/* Layout: an interactive report landing page. A dark ink opening band, then chapters on paper: each chapter pins one hairline graphic
+   while its story steps scroll past (two columns on desktop, graphic-over-text on phones). Explorers sit between chapters.
+   Light paper by design (single theme, every colour set explicitly); protocolvision.org tokens. */
+:root {
+  color-scheme: light;
+  --bg: #f9f8f5;       /* paper */
+  --panel: #f1efe9;    /* pinned-graphic ground */
+  --fg: #2c2c2a;       /* ink */
+  --muted: #5f5e5a;    /* ink-2 */
+  --hair: #c9c7c0;     /* guides */
+  --cob: #004fcc;      /* the present, the gap, actions */
+  --for: #0f6e56;      /* observed, hard */
+  --band: #23231f;     /* opening band */
+  --band-fg: #f3f1ea;
+  --band-muted: #a9a7a0;
+  --band-cob: #7ba6ff;
+  --band-for: #4fb897;
+  --serif: Lora, Charter, Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1.0625rem/1.65 var(--serif); font-variant-numeric: tabular-nums; }
+a { color: var(--cob); text-underline-offset: .15em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--cob); outline-offset: 2px; border-radius: 2px; }
+.in { max-width: 72rem; margin: 0 auto; padding-inline: 1.25rem; }
+.narrow { max-width: 42rem; }
+.kick { font: 400 12px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 .8rem; }
+h1, h2, h3 { text-wrap: balance; }
+h2 { font: 600 clamp(1.6rem, 3.6vw, 2.35rem)/1.2 var(--serif); margin: 0 0 .9rem; letter-spacing: -.005em; }
+h3 { font: 600 1.2rem/1.35 var(--serif); margin: 0 0 .4rem; }
+p { margin: 0 0 1rem; }
+.lede { font-size: 1.2rem; line-height: 1.6; color: var(--fg); }
+.small { font-size: .875rem; line-height: 1.55; color: var(--muted); }
+.src { font: 400 11.5px/1.5 var(--mono); color: var(--muted); letter-spacing: .02em; }
+blockquote { margin: 1rem 0; padding: 0 0 0 1rem; border-left: 1.2px solid var(--for); font-style: italic; }
+blockquote cite { display: block; font: normal 400 11.5px/1.5 var(--mono); color: var(--muted); margin-top: .35rem; }
+
+/* top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--band); color: var(--band-fg); border-bottom: .5px solid #3a3935; }
+.bar .in { display: flex; align-items: center; gap: 1.2rem; height: 2.75rem; overflow-x: auto; scrollbar-width: none; }
+.bar .in::-webkit-scrollbar { display: none; }
+.bar b { font: 500 12px var(--mono); letter-spacing: .1em; white-space: nowrap; }
+.bar nav { display: flex; gap: 1.1rem; margin-left: auto; }
+.bar nav a { color: var(--band-muted); text-decoration: none; font: 400 12px var(--mono); letter-spacing: .04em; white-space: nowrap; padding: .2rem 0; border-bottom: 1.2px solid transparent; }
+.bar nav a:hover, .bar nav a[aria-current] { color: var(--band-fg); border-bottom-color: var(--band-cob); }
+
+/* opening band */
+.hero { background: var(--band); color: var(--band-fg); padding-block: 3.5rem 3rem; overflow: hidden; }
+.hero .grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
+.hero .kick { color: var(--band-muted); }
+.hero h1 { font: 400 clamp(2rem, 5.2vw, 3.6rem)/1.08 var(--mono); letter-spacing: -.035em; margin: 0 0 1.2rem; }
+.hero .dek { font-size: 1.2rem; line-height: 1.55; color: #d9d6cf; max-width: 34rem; }
+.hero canvas { width: 100%; display: block; }
+.hero .caption { font: 400 11.5px/1.5 var(--mono); color: var(--band-muted); margin-top: .5rem; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 2.6rem; border-top: .5px solid #4a4944; }
+.stats div { padding: 1rem 1.2rem 0 0; min-width: 0; }
+.stats div + div { padding-left: 1.2rem; border-left: .5px solid #4a4944; }
+.stats b { display: block; font: 400 clamp(1.8rem, 4vw, 2.6rem)/1 var(--mono); letter-spacing: -.03em; color: var(--band-fg); }
+.stats span { display: block; font-size: .9rem; line-height: 1.45; color: var(--band-muted); margin-top: .45rem; }
+.stats b.cob { color: var(--band-cob); }
+@media (max-width: 760px) { .hero .grid { grid-template-columns: 1fr; } .stats { grid-template-columns: 1fr; } .stats div + div { padding-left: 0; border-left: 0; border-top: .5px solid #4a4944; } }
+
+/* takeaways */
+.take { padding-block: 3.5rem 1rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.6rem 2rem; margin-top: 1.4rem; }
+.card { border-top: 1.2px solid var(--fg); padding-top: .9rem; min-width: 0; }
+.card .n { font: 400 12px var(--mono); color: var(--muted); letter-spacing: .1em; }
+.card h3 { margin-top: .5rem; }
+.card p { font-size: .975rem; color: var(--muted); margin: 0; }
+
+/* chapters with a pinned graphic */
+.chapter { padding-block: 4rem 2rem; border-top: .5px solid var(--hair); margin-top: 3rem; }
+.scrolly { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 3rem; margin-top: 1.5rem; }
+.pin { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 4rem); align-self: start; background: var(--panel); padding: 1.1rem; min-width: 0; }
+.pin canvas { width: 100%; display: block; }
+.pin .legend { margin-top: .6rem; }
+.steps { min-width: 0; }
+.step { min-height: min(72vh, 620px); display: flex; flex-direction: column; justify-content: center; padding-block: 1rem; opacity: .35; transition: opacity .4s; }
+.step.on { opacity: 1; }
+.step:first-child { min-height: min(50vh, 420px); justify-content: flex-start; padding-top: 2rem; }
+.step:last-child { min-height: min(60vh, 520px); }
+.step h3 { font-size: 1.3rem; }
+@media (max-width: 860px) {
+  .scrolly { grid-template-columns: 1fr; gap: 0; }
+  .pin { top: calc(env(safe-area-inset-top, 0px) + 2.75rem); z-index: 2; padding: .7rem; box-shadow: 0 1px 0 var(--hair); }
+  .step { min-height: min(64vh, 560px); }
+  .step > * { background: var(--bg); padding: .7rem .8rem; margin: 0; }
+  .step.on { opacity: 1; }
+}
+.legend { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; list-style: none; padding: 0; margin: .8rem 0 0; font-size: .8125rem; color: var(--muted); }
+.legend li { display: flex; align-items: center; gap: .4rem; }
+.legend svg { width: 12px; height: 12px; flex: none; }
+
+/* product grid in chapter 2 */
+.prod { display: grid; gap: .9rem; }
+.prod .g { min-width: 0; transition: opacity .5s; }
+.prod .g.dim { opacity: .28; }
+.prod .gh { font: 400 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; display: flex; justify-content: space-between; gap: .5rem; }
+.prod .tiles { display: flex; flex-wrap: wrap; gap: .3rem; }
+.prod .t { display: inline-flex; align-items: center; gap: .35rem; font-size: .8125rem; line-height: 1.2; padding: .3rem .45rem; border: .5px solid var(--hair); background: var(--bg); }
+.prod .t svg { width: 10px; height: 10px; flex: none; }
+
+/* explorer: who holds what */
+.explore { padding-block: 4rem 2rem; border-top: .5px solid var(--hair); margin-top: 3rem; }
+.ex { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; margin-top: 1.5rem; align-items: start; }
+.org .lab { font: 400 11px/1.4 var(--mono); letter-spacing: .08em; color: var(--muted); margin: 0 0 .45rem; }
+.org .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); gap: .5rem; }
+.org .firm { border: .5px solid var(--hair); padding: .7rem; margin-top: .9rem; }
+.org button { all: unset; box-sizing: border-box; cursor: pointer; display: block; border: .5px solid var(--muted); background: var(--bg); padding: .55rem .6rem; min-width: 0; font-size: .875rem; line-height: 1.35; }
+.org button b { display: flex; align-items: center; gap: .4rem; font-weight: 600; }
+.org button span { display: block; color: var(--muted); font-size: .8125rem; margin-top: .15rem; }
+.org button svg { width: 12px; height: 12px; flex: none; }
+.org button:hover { border-color: var(--fg); }
+.org button[aria-pressed="true"] { border-color: var(--cob); box-shadow: inset 0 0 0 1px var(--cob); }
+.org button.out { border-style: dashed; }
+.org button.gap { border: 1px dashed var(--cob); color: var(--cob); text-align: center; }
+.org button.gap span { color: var(--muted); }
+.org button:focus-visible { outline: 2px solid var(--cob); outline-offset: 2px; }
+.panel { border-top: 1.2px solid var(--fg); padding-top: .9rem; min-width: 0; }
+.panel .big { font: 400 2.4rem/1 var(--mono); letter-spacing: -.03em; margin: .4rem 0 .3rem; }
+.panel .big small { font: 400 .95rem var(--serif); color: var(--muted); letter-spacing: 0; margin-left: .4rem; }
+@media (max-width: 860px) { .ex { grid-template-columns: 1fr; } }
+
+/* tabs and chips */
+.tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+.tabs button { all: unset; cursor: pointer; font: 400 12px/1 var(--mono); letter-spacing: .04em; padding: .5rem .7rem; border: .5px solid var(--muted); color: var(--fg); background: var(--bg); }
+.tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.tabs button:focus-visible { outline: 2px solid var(--cob); outline-offset: 2px; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; margin-top: 1rem; align-items: start; }
+@media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+.lens { min-height: 13rem; }
+.lens ul { padding-left: 1.1rem; margin: .4rem 0 0; } .lens li { margin-bottom: .45rem; }
+
+/* law dots */
+.lawrow { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: .2rem .9rem; padding: .5rem 0; border-top: .5px solid var(--hair); font-size: .9rem; line-height: 1.35; transition: opacity .4s; }
+.lawrow.dim { opacity: .25; }
+.lawrow .nm span { display: block; color: var(--muted); font-size: .8125rem; }
+.lawrow .dots { display: flex; flex-wrap: wrap; gap: 3px; padding-top: .2rem; }
+.lawrow .dots svg { width: 10px; height: 10px; }
+@media (max-width: 560px) { .lawrow { grid-template-columns: 1fr; } }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { font-family: var(--serif); font-size: 12px; fill: var(--muted); }
+.tip { font-size: .9rem; min-height: 3rem; margin-top: .4rem; color: var(--fg); }
+
+/* roadmap */
+.road { margin-top: 1.5rem; }
+.road svg { display: block; width: 100%; height: auto; }
+.road text { font-family: var(--serif); font-size: 12.5px; fill: var(--fg); }
+.road .mut { fill: var(--muted); }
+.moves { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem 1.6rem; margin-top: 1rem; }
+.moves button { all: unset; box-sizing: border-box; cursor: pointer; display: block; border-top: 1.2px solid var(--hair); padding-top: .7rem; min-width: 0; }
+.moves button b { display: block; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
+.moves button span { display: block; font-size: .9rem; color: var(--muted); margin-top: .3rem; line-height: 1.5; }
+.moves button[aria-pressed="true"] { border-top-color: var(--cob); }
+.moves button[aria-pressed="true"] b { color: var(--cob); }
+.moves button:focus-visible { outline: 2px solid var(--cob); outline-offset: 4px; }
+.movedetail { margin-top: 1.2rem; padding-top: 1rem; border-top: .5px solid var(--hair); min-height: 6rem; }
+
+/* method */
+.walk canvas { width: 100%; display: block; }
+.wsteps { display: flex; list-style: none; margin: .8rem 0 .4rem; padding: 0; border-top: .5px solid var(--hair); }
+.wsteps li { flex: 1; min-width: 0; }
+.wsteps button { all: unset; box-sizing: border-box; cursor: pointer; display: block; width: 100%; padding: .45rem .3rem 0 0; font: 400 12px/1.4 var(--mono); color: var(--muted); border-top: 1.2px solid transparent; margin-top: -1px; }
+.wsteps button span { display: block; font: 400 .8125rem/1.35 var(--serif); margin-top: .1rem; }
+.wsteps button[aria-current="step"] { color: var(--cob); border-top-color: var(--cob); }
+.wsteps button:focus-visible { outline: 2px solid var(--cob); outline-offset: 2px; }
+@media (max-width: 520px) { .wsteps button span { display: none; } }
+.funnel { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem 1.4rem; margin-top: 1.4rem; }
+.funnel div { border-top: .5px solid var(--hair); padding-top: .5rem; min-width: 0; }
+.funnel b { display: block; font: 400 1.5rem/1.1 var(--mono); letter-spacing: -.02em; }
+.funnel span { font-size: .85rem; color: var(--muted); }
+
+/* next and close */
+.next { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.4rem 2rem; margin-top: 1.4rem; }
+.next div { border-top: 1.2px solid var(--fg); padding-top: .8rem; min-width: 0; }
+.next p { font-size: .95rem; margin: 0 0 .4rem; }
+details { border-top: .5px solid var(--hair); padding: .5rem 0; }
+summary { cursor: pointer; color: var(--cob); font-weight: 500; padding: .2rem 0; }
+details ul { padding-left: 1.1rem; font-size: .95rem; } details li { margin-bottom: .4rem; }
+footer { margin-top: 4rem; background: var(--band); color: var(--band-muted); padding-block: 2rem; font-size: .875rem; }
+footer a { color: var(--band-cob); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } .step { opacity: 1; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <pattern id="hx-f" width="2.4" height="2.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="2.4" stroke="#0f6e56" stroke-width=".5"/></pattern>
+</defs></svg>
+
+<header class="bar"><div class="in">
+  <b>PROTOCOL VISION</b>
+  <nav aria-label="Chapters">
+    <a href="#take">Summary</a><a href="#ch1">The work</a><a href="#ch2">The tools</a><a href="#roles">Roles</a><a href="#devops">DevOps?</a><a href="#law">Law</a><a href="#act">What to do</a><a href="#method">Method</a>
+  </nav>
+</div></header>
+
+<section class="hero" aria-labelledby="h1">
+  <div class="in">
+    <div class="grid">
+      <div>
+        <p class="kick">Research report · October 2026</p>
+        <h1 id="h1">Who owns the rules when agents join the business?</h1>
+        <p class="dek">AI agents now spend, answer and approve under rules someone has to change. We read 118,526 job postings, 1,167 company filings, 38 practitioner recordings, 19 laws and the documentation of 31 agent products to find out who does.</p>
+      </div>
+      <figure style="margin:0">
+        <canvas id="hero-c" width="560" height="380" role="img" aria-label="771 statements from practitioners about their work with agents, drawn as dots. 149 describe running agents, 21 setting their limits, one finding unwritten rules, none deciding a change across functions."></canvas>
+        <figcaption class="caption">Each dot is one thing a practitioner said about their work with agents. Green: running them or setting their limits. The single blue ring: the only statement about finding an unwritten rule.</figcaption>
+      </figure>
+    </div>
+    <div class="stats">
+      <div><b data-count="149">149</b><span>of 771 practitioner statements describe running agents</span></div>
+      <div><b data-count="15">15</b><span>of 26 agent products document an admin role that changes an agent’s rules</span></div>
+      <div><b class="cob" data-count="0">0</b><span>statements or postings describe deciding a rule change across functions</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="take in" id="take" aria-labelledby="take-h">
+  <p class="kick">The short version</p>
+  <h2 id="take-h" class="narrow">Agents are run by existing staff and configured in vendors’ tools, while the decision to change their rules has no visible owner</h2>
+  <div class="cards">
+    <div class="card"><span class="n">RUNNING</span><h3>Existing staff run agents, inside their own functions</h3><p>Running agents is the work people describe most. New AI job titles and existing jobs share agent duties about evenly (0.86 to 1), mostly in technical roles.</p></div>
+    <div class="card"><span class="n">CHANGING</span><h3>Rules are edited in admin settings, by whoever holds the admin role</h3><p>In Claude, ChatGPT, Codex, Copilot, Agentforce and most others, an admin changes an agent’s limits in the product, under central policy.</p></div>
+    <div class="card"><span class="n">DECIDING</span><h3>The sign-off behind a change has no named holder</h3><p>No posting or statement describes deciding a rule change across functions. The law will require an overseer of AI from 2027, not an owner of its rules.</p></div>
+  </div>
+</section>
+
+<section class="chapter in" id="ch1" aria-labelledby="ch1-h">
+  <p class="kick">Chapter 1 · The work</p>
+  <h2 id="ch1-h" class="narrow">Running agents is common work; finding and changing their rules barely appears</h2>
+  <div class="scrolly">
+    <div class="pin"><canvas id="sp-c" role="img" aria-label="771 practitioner statements sorted by what the speaker describes doing: 600 other work, 149 running agents, 21 setting limits, 1 finding unwritten rules, 0 deciding changes across functions."></canvas>
+      <p class="src" id="sp-cap" style="margin:.5rem 0 0">771 timestamped statements · 38 recordings</p></div>
+    <div class="steps" data-target="sp">
+      <div class="step" data-s="0"><div><h3>771 things people said about working with agents</h3><p>We transcribed 38 recorded talks and podcasts by people who run functions with AI agents and split them into single statements about their work.</p></div></div>
+      <div class="step" data-s="1"><div><h3>Most of it is about something else</h3><p>Two coders from different model families sorted each statement blind. 600 describe other work: strategy, adoption, results.</p></div></div>
+      <div class="step" data-s="2"><div><h3>149 describe running agents</h3><p>Supervising, tuning and training agents is the work people talk about.</p><blockquote>she spends 20% of her time managing the agents, orchestrating the agents.<cite>M072 · 2026</cite></blockquote></div></div>
+      <div class="step" data-s="3"><div><h3>21 describe setting what agents may do</h3><p>Limits, guardrails and hand-off rules. In job postings, setting limits is about a quarter of agent-related duties.</p></div></div>
+      <div class="step" data-s="4"><div><h3>One describes finding an unwritten rule. None describes deciding a change across functions</h3><p>The coders could see this work: they caught 94–100% of hidden test examples of it. It is simply absent from the public record. The clearest paid example is one engineering duty at Amgen.</p><blockquote>Map rules, exceptions, data dependencies and human decision points before selecting deterministic automation, classical ML, deep learning, GenAI, RAG, agents or a manual approach.<cite>Amgen · Sr Machine Learning Engineer posting · 2026</cite></blockquote></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter in" id="ch2" aria-labelledby="ch2-h">
+  <p class="kick">Chapter 2 · The tools</p>
+  <h2 id="ch2-h" class="narrow">Agent rules are changed in admin settings; the decision behind a change is rarely named</h2>
+  <div class="scrolly">
+    <div class="pin"><div class="prod" id="prod" role="img" aria-label="31 agent products and protocols by group, marked by whether a named role changes agent limits."></div>
+      <ul class="legend" id="prod-legend"></ul></div>
+    <div class="steps" data-target="prod">
+      <div class="step" data-s="0"><div><h3>If no one is named, where do the changes happen?</h3><p>We read the public documentation of 31 agent products, governance platforms and protocols, as published on 10 October 2026, and coded where an agent’s limits live and who may change them.</p></div></div>
+      <div class="step" data-s="1"><div><h3>Coding assistants put it plainly: an admin decides what the agent may do</h3><p>Seven of eight assistants and coding agents document an owner or admin role that sets agent limits. Organisation settings override the user, and most keep an audit log.</p></div></div>
+      <div class="step" data-s="2"><div><h3>Business agent platforms mostly do the same</h3><p>Seven of twelve document a named permission. Some vendors pair the editor with a decider.</p><blockquote>These guardrails are controlled by your admin and typically signed off by your internal leadership or key decision-makers.<cite>Salesforce Agentforce documentation</cite></blockquote></div></div>
+      <div class="step" data-s="3"><div><h3>Governance platforms record approvals but rarely say who edits</h3><p>Inventories, approval workflows and audit trails, but only one of six names the role that changes a limit.</p></div></div>
+      <div class="step" data-s="4"><div><h3>Protocols leave it to the implementer or the user</h3><p>MCP and A2A leave authorisation to whoever builds on them. Payment protocols put the limit in a mandate the user signs.</p><p class="small">Our pre-set test needed two-thirds of products to name an editor; 15 of 26 do, so the evidence is mixed rather than conclusive.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="explore in" id="roles" aria-labelledby="roles-h">
+  <p class="kick">Explore · Who holds what</p>
+  <h2 id="roles-h" class="narrow">Five roles are taking shape around agents. None of them decides when an agent’s rules change</h2>
+  <p class="narrow">Select a role to see the evidence behind it.</p>
+  <div class="ex">
+    <div class="org" id="org">
+      <p class="lab">OUTSIDE THE FIRM</p>
+      <div class="row"><button class="out" data-r="law"><b>Law</b><span>overseers from 2027</span></button><button class="out" data-r="vendors"><b>Vendors</b><span>certifications, owner roles</span></button></div>
+      <div class="firm"><p class="lab">INSIDE THE FIRM</p>
+        <div class="row">
+          <button data-r="operators"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="#0f6e56"/></svg>Operators</b><span>run agents</span></button>
+          <button data-r="reviewers"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="#0f6e56"/></svg>Reviewers</b><span>check AI limits</span></button>
+          <button data-r="builders"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="#0f6e56"/></svg>Builders</b><span>build agents</span></button>
+          <button data-r="admins"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.2" fill="url(#hx-f)" stroke="#0f6e56"/></svg>Admins</b><span>edit agent rules</span></button>
+          <button data-r="overseers"><b><svg viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="none" stroke="#0f6e56" stroke-dasharray="2 2"/></svg>Overseers</b><span>required from 2027</span></button>
+        </div>
+        <div class="row" style="margin-top:.5rem"><button class="gap" data-r="gap">Decides when an agent’s rules change<span>rarely named in the public record</span></button></div>
+      </div>
+    </div>
+    <div class="panel" id="role-panel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="explore in" id="devops" aria-labelledby="devops-h">
+  <p class="kick">Explore · Is it DevOps again?</p>
+  <h2 id="devops-h" class="narrow">Inside teams agent work looks like DevOps; in hiring it looks like a scarce-skills boom</h2>
+  <p class="narrow">DevOps formed when existing developers and operators took on each other’s work to coordinate, without a new profession or a law. Switch lenses to compare the evidence.</p>
+  <div class="tabs" role="group" aria-label="Lens">
+    <button type="button" data-l="teams" aria-pressed="true">Inside teams</button>
+    <button type="button" data-l="hiring" aria-pressed="false">In hiring</button>
+    <button type="button" data-l="clock" aria-pressed="false">On the clock</button>
+  </div>
+  <div class="two">
+    <div class="lens" id="lens" aria-live="polite"></div>
+    <div class="chart" id="clock"></div>
+  </div>
+</section>
+
+<section class="explore in" id="law" aria-labelledby="law-h">
+  <p class="kick">Explore · Law and disclosure</p>
+  <h2 id="law-h" class="narrow">The law will ask for an overseer of AI, not an owner of its rules</h2>
+  <p class="narrow">We coded 111 provisions in 19 laws, rules and policies for whether they govern changes to a system’s rules, and whether they name who decides. Filter by family.</p>
+  <div class="tabs" role="group" aria-label="Family" id="law-tabs"></div>
+  <div id="law-rows"></div>
+  <ul class="legend" id="law-legend"></ul>
+  <div class="two" style="margin-top:3rem">
+    <div><h3>Meanwhile, agent language is spreading through annual reports</h3><p>Share of 10-K filers using an agent phrase. Vendors write about 60% of these passages, mostly describing products. Hover or tap a year.</p><p class="tip" id="fil-tip"></p></div>
+    <div class="chart" id="fil"></div>
+  </div>
+</section>
+
+<section class="explore in" id="act" aria-labelledby="act-h">
+  <p class="kick">What to do</p>
+  <h2 id="act-h" class="narrow">Name an owner for each agent’s limits where agents already run, before the 2027 deadlines</h2>
+  <p class="narrow">In most products the change itself is already an admin permission; what is missing is who decides it. Four moves follow from the findings. Select one.</p>
+  <div class="road" id="road"></div>
+  <div class="moves" id="moves"></div>
+  <div class="movedetail" id="movedetail" aria-live="polite"></div>
+  <p class="small narrow" style="margin-top:1rem">Don’t hire one senior “protocol lead”: no such posting exists among 25,512, and lasting roles in the past did not start senior. And don’t let vendor consoles hold the only copy of an agent’s rules.</p>
+</section>
+
+<section class="explore in" id="method" aria-labelledby="method-h">
+  <p class="kick">How we know</p>
+  <h2 id="method-h" class="narrow">Three hundred thousand duties sorted into eight stable bundles of work, and only one involves AI</h2>
+  <p class="narrow">We read postings the way a labour economist reads tasks: by duties, not titles. Step through the method on real data.</p>
+  <div class="two">
+    <figure class="walk" style="margin:0"><canvas id="walk-c" role="img" aria-label="Method walkthrough on 3,040 real duty statements. The steps are described beside the figure."></canvas></figure>
+    <div><ol class="wsteps" id="walk-steps" aria-label="Steps"></ol><p id="walk-text" aria-live="polite" style="min-height:7rem"></p>
+      <p class="small">Tests, thresholds and refutation rules were fixed before any data were read. A red team and fresh reviewers checked every result; quotes are checked by script against stored sources.</p></div>
+  </div>
+  <div class="funnel">
+    <div><b>118,526</b><span>postings crawled from 218 employers</span></div>
+    <div><b>305,533</b><span>duty statements extracted</span></div>
+    <div><b>1,167</b><span>company filings read</span></div>
+    <div><b>771</b><span>practitioner statements coded</span></div>
+    <div><b>111</b><span>legal provisions coded</span></div>
+    <div><b>31</b><span>products and protocols audited</span></div>
+  </div>
+</section>
+
+<section class="explore in" id="next" aria-labelledby="next-h">
+  <p class="kick">Next step</p>
+  <h2 id="next-h" class="narrow">Public sources show who edits an agent’s rules but not who signs off; the next step is to look inside twenty firms</h2>
+  <p class="narrow">Sixteen heavy users of agents, across software and incumbent firms and regulated and unregulated sectors, plus four vendors, drawn at random from public signals.</p>
+  <div class="next">
+    <div><p><b>Trace the last few changes to an agent’s rules</b></p><p class="small">Who asked, who decided, who approved and who made the edit. Shows whether the decision is written down anywhere.</p></div>
+    <div><p><b>Find who first took on agent work, and why</b></p><p class="small">Settles whether this is DevOps again or a scarce skill hired in.</p></div>
+    <div><p><b>Time changes from complaint to fix</b></p><p class="small">Tests whether time to change a rule is the right measure of this work.</p></div>
+    <div><p><b>Check whether a target triggers changes</b></p><p class="small">Tests whether owning a number gives someone the right to change an agent’s rules.</p></div>
+  </div>
+  <div class="narrow" style="margin-top:2.5rem">
+    <details><summary>What these findings rest on</summary><ul>
+      <li>Public sources only: postings, filings, recordings, laws and vendor documentation. Rule changes agreed informally inside firms do not appear.</li>
+      <li>59% of employers in scope have no crawlable job board, including Alphabet, Apple, Meta, Microsoft, Amazon, Goldman Sachs and JPMorgan.</li>
+      <li>Speech extraction catches about half of what is said, and the statements about changing agents in tools rest mainly on two speakers.</li>
+      <li>Product documentation shows what products allow, not what firms do; four products’ documentation could not be retrieved.</li>
+      <li>No time series: the job-board crawl is one point in time.</li>
+    </ul></details>
+    <details><summary>Sources quoted on this page</summary><ul>
+      <li>M072, practitioner recording, 2026. R-251199, Amgen posting, 2026.</li>
+      <li>sf-guard, Salesforce Agentforce documentation; ms-entra, Microsoft Entra Agent ID documentation; fetched 10 October 2026.</li>
+      <li>C9b1da45a, EU AI Act Art 26(2); CO-SB26-189-act, Colorado; Cef3dde3f, PRA SS5/18 (guidance).</li>
+      <li>SEC EDGAR full-text search, 10-K filers 2022–2026.</li>
+    </ul></details>
+  </div>
+</section>
+</main>
+
+<footer><div class="in">Protocols for Business, Protocol Institute · 11 October 2026. A longer memo version of this report, with every caveat beside its finding, is available from the authors. Designs, prompts, corpus ids, codes and scripts are in the project repository.</div></footer>
+
+<script type="application/json" id="map-data">/*MAP*/</script>
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  function $(id) { return document.getElementById(id); }
+  function h(tag, a, kids) { var e = document.createElement(tag); for (var k in (a || {})) { if (k === 'text') e.textContent = a[k]; else e.setAttribute(k, a[k]); } (kids || []).forEach(function (c) { e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c); }); return e; }
+  function s(tag, a, t) { var e = document.createElementNS(NS, tag); for (var k in (a || {})) e.setAttribute(k, a[k]); if (t != null) e.textContent = t; return e; }
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C = {fg: '#2c2c2a', mu: '#5f5e5a', hair: '#c9c7c0', cob: '#004fcc', for: '#0f6e56', bg: '#f9f8f5', panel: '#f1efe9'};
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function fitCanvas(cv, ratio) { var W = cv.clientWidth, H = Math.round(W * ratio); cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + 'px'; var c = cv.getContext('2d'); c.setTransform(dpr, 0, 0, dpr, 0, 0); return {W: W, H: H, c: c}; }
+  function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+  function rng(seed) { return function () { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }; }
+  // the 771 statements: 600 other, 149 running, 21 limits, 1 finding, 0 deciding
+  var CATS = [['Other work', 600], ['Running agents', 149], ['Setting what agents may do', 21], ['Finding unwritten rules', 1], ['Deciding changes across functions', 0]];
+  function statements(seed) { var r = rng(seed), out = [], k = 0; CATS.forEach(function (c, ci) { for (var i = 0; i < c[1]; i++) out.push({c: ci, x: r(), y: r(), p: r() * 6.28, k: k++}); }); return out; }
+
+  // ---- hero: 771 dots drifting; one blue ring
+  (function () {
+    var cv = $('hero-c'), P = statements(11), f, t0 = performance.now();
+    function size() { f = fitCanvas(cv, .68); }
+    function draw(t) {
+      var c = f.c; c.clearRect(0, 0, f.W, f.H);
+      P.forEach(function (p) {
+        var dx = reduce ? 0 : Math.sin(t / 2400 + p.p) * 3, dy = reduce ? 0 : Math.cos(t / 3100 + p.p) * 3;
+        var x = 8 + p.x * (f.W - 16) + dx, y = 8 + p.y * (f.H - 16) + dy;
+        c.globalAlpha = p.c === 0 ? .35 : 1; c.fillStyle = p.c === 0 ? '#8b8982' : '#4fb897';
+        c.beginPath(); c.arc(x, y, p.c === 3 ? 2.6 : 1.8, 0, 6.3); c.fill();
+        if (p.c === 3) { c.globalAlpha = 1; c.strokeStyle = '#7ba6ff'; c.lineWidth = 1.2; var r = 7 + (reduce ? 0 : Math.sin(t / 600) * 1.5); c.beginPath(); c.arc(x, y, r, 0, 6.3); c.stroke(); }
+      });
+      c.globalAlpha = 1;
+    }
+    size(); draw(t0);
+    if (!reduce) (function loop(t) { draw(t); requestAnimationFrame(loop); })(t0);
+    window.addEventListener('resize', function () { size(); draw(performance.now()); });
+  })();
+
+  // ---- chapter 1: statement sort, driven by steps
+  var speech = (function () {
+    var cv = $('sp-c'), P = statements(771), f, state = 0, from = null, raf, cur;
+    var rows;
+    function layout() {
+      f = fitCanvas(cv, cv.clientWidth < 520 ? .78 : .72);
+      var lab = f.W < 520 ? 0 : 236, x0 = lab, pitch = 6.2, per = Math.max(10, Math.floor((f.W - x0 - 30) / pitch)), y = 10;
+      rows = CATS.map(function (c, ci) { var lines = Math.max(1, Math.ceil(c[1] / per)), top = y + (lab ? 0 : 16); var r = {top: top, x0: x0, per: per, ly: lab ? top + 8 : y + 10}; y = top + Math.max(lines * pitch, 10) + 16; return r; });
+      var cnt = [0, 0, 0, 0, 0];
+      P.forEach(function (p) { var rw = rows[p.c], n = cnt[p.c]++; p.rx = rw.x0 + (n % rw.per) * pitch + 3; p.ry = rw.top + Math.floor(n / rw.per) * pitch + 3; p.cx = 8 + p.x * (f.W - 16); p.cy = 8 + p.y * (f.H - 16); });
+    }
+    function target(st) { return P.map(function (p) { return st === 0 ? [p.cx, p.cy] : [p.rx, p.ry]; }); }
+    function alpha(p, st) { if (st <= 1) return p.c === 0 ? .5 : .9; if (st === 2) return p.c === 1 ? 1 : .18; if (st === 3) return p.c === 2 ? 1 : .18; return p.c >= 3 ? 1 : .18; }
+    function col(p) { return p.c === 0 ? '#9b9890' : p.c === 1 ? C.mu : p.c === 2 ? C.for : C.cob; }
+    function draw(pos, st, k) {
+      var c = f.c; c.clearRect(0, 0, f.W, f.H);
+      if (st >= 1) {
+        c.font = '12.5px Lora, Georgia, serif'; c.globalAlpha = Math.min(1, k * 1.5);
+        rows.forEach(function (rw, ri) {
+          var on = st === 1 || (st === 2 && ri === 1) || (st === 3 && ri === 2) || (st === 4 && ri >= 3);
+          c.fillStyle = on ? C.fg : C.mu; c.globalAlpha = Math.min(1, k * 1.5) * (on ? 1 : .45);
+          c.fillText(CATS[ri][0] + '  ' + CATS[ri][1], 0, rw.ly);
+          if (ri === 4) { c.strokeStyle = C.cob; c.setLineDash([2, 2]); c.lineWidth = 1; c.strokeRect(rw.x0, rw.top - 1, 40, 8); c.setLineDash([]); }
+        });
+        c.globalAlpha = 1;
+      }
+      P.forEach(function (p, i) {
+        var a0 = from ? from.a[i] : alpha(p, st), a1 = alpha(p, st), a = a0 + (a1 - a0) * k;
+        c.globalAlpha = a; c.fillStyle = col(p); c.beginPath(); c.arc(pos[i][0], pos[i][1], p.c >= 2 ? 2.3 : 1.9, 0, 6.3); c.fill();
+        if (p.c === 3 && st >= 1) { c.strokeStyle = C.cob; c.lineWidth = 1; c.beginPath(); c.arc(pos[i][0], pos[i][1], 5.5, 0, 6.3); c.stroke(); }
+      });
+      c.globalAlpha = 1;
+    }
+    function go(st) {
+      var to = target(st); from = {pos: cur ? cur.map(function (q) { return q.slice(); }) : to, a: P.map(function (p) { return alpha(p, state); })};
+      state = st; cancelAnimationFrame(raf);
+      var t0 = performance.now(), dur = reduce ? 0 : 1100;
+      (function tick(t) {
+        var k = dur ? Math.min(1, (t - t0) / dur) : 1, e = ease(k);
+        cur = P.map(function (p, i) { var j = Math.min(1, Math.max(0, e * 1.2 - (i % 41) / 41 * .2)); return [from.pos[i][0] + (to[i][0] - from.pos[i][0]) * j, from.pos[i][1] + (to[i][1] - from.pos[i][1]) * j]; });
+        draw(cur, st, e); if (k < 1) raf = requestAnimationFrame(tick);
+      })(t0);
+    }
+    layout(); cur = target(0); draw(cur, 0, 1);
+    window.addEventListener('resize', function () { layout(); cur = target(state); from = null; draw(cur, state, 1); });
+    return go;
+  })();
+
+  // ---- chapter 2: product grid, driven by steps
+  var PROD = [
+    ['Assistants and coding agents', '7 of 8 name who changes limits', [['Claude Enterprise','p'],['Claude Code','p'],['ChatGPT Enterprise','p'],['Codex','p'],['GitHub Copilot','p'],['Cursor','p'],['Amazon Q Developer','p'],['Gemini Code Assist','w']]],
+    ['Business agent platforms', '7 of 12', [['Agentforce','p'],['Copilot Studio','p'],['Agent 365 / Entra','p'],['Workday','p'],['UiPath','p'],['Intercom Fin','p'],['AWS AgentCore','p'],['Gemini Enterprise','w'],['Zendesk','w'],['IBM Orchestrate','w'],['Okta','w'],['ServiceNow','r']]],
+    ['Governance platforms', '1 of 6', [['Purview','p'],['OneTrust','w'],['Holistic AI','w'],['ServiceNow Control Tower','r'],['watsonx.governance','r'],['Credo AI','r']]],
+    ['Protocols', 'left to implementer or user', [['MCP','i'],['A2A','i'],['AP2','u'],['ACP','u'],['Visa Intelligent Commerce','u']]]];
+  function glyph(k) {
+    var v = s('svg', {viewBox: '0 0 10 10', 'aria-hidden': 'true'});
+    if (k === 'p') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.8, fill: C.for}));
+    else if (k === 'w') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.4, fill: 'none', stroke: C.for, 'stroke-width': 1}));
+    else if (k === 'r') v.appendChild(s('line', {x1: 2, x2: 8, y1: 5, y2: 5, stroke: C.mu, 'stroke-width': .9}));
+    else v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.4, fill: 'none', stroke: C.cob, 'stroke-width': 1, 'stroke-dasharray': '1.6 1.4'}));
+    return v;
+  }
+  var prod = (function () {
+    var box = $('prod'), gs = [];
+    PROD.forEach(function (g) {
+      var tiles = h('div', {'class': 'tiles'});
+      g[2].forEach(function (t) { var el = h('span', {'class': 't'}); el.appendChild(glyph(t[1])); el.appendChild(document.createTextNode(t[0])); tiles.appendChild(el); });
+      var gh = h('div', {'class': 'gh'}, [h('span', {text: g[0]}), h('span', {text: g[1]})]);
+      var d = h('div', {'class': 'g'}, [gh, tiles]); box.appendChild(d); gs.push(d);
+    });
+    [['p', 'A named role changes limits'], ['w', 'Limits documented, no named editor'], ['r', 'Docs not retrievable'], ['i', 'Left to implementer or user']].forEach(function (x) { var li = h('li'); var g = glyph(x[0]); li.appendChild(g); li.appendChild(document.createTextNode(x[1])); $('prod-legend').appendChild(li); });
+    return function (st) { gs.forEach(function (d, i) { d.classList.toggle('dim', st !== 0 && i !== st - 1); }); };
+  })();
+
+  // ---- steps observer
+  var drivers = {sp: speech, prod: prod};
+  document.querySelectorAll('.steps').forEach(function (wrap) {
+    var drive = drivers[wrap.getAttribute('data-target')], steps = wrap.querySelectorAll('.step'), last = -1;
+    function pick() {
+      var mid = window.innerHeight * .55, best = 0;
+      steps.forEach(function (st, i) { if (st.getBoundingClientRect().top < mid) best = i; });
+      if (best !== last) { last = best; steps.forEach(function (st, i) { st.classList.toggle('on', i === best); }); drive(+steps[best].getAttribute('data-s')); }
+    }
+    var tk; window.addEventListener('scroll', function () { if (!tk) tk = requestAnimationFrame(function () { tk = 0; pick(); }); }, {passive: true});
+    pick();
+  });
+
+  // ---- top bar: mark the chapter in view
+  (function () {
+    var links = [].slice.call(document.querySelectorAll('.bar nav a')), secs = links.map(function (a) { return $(a.getAttribute('href').slice(1)); });
+    function spy() { var cur = -1; secs.forEach(function (sct, i) { if (sct && sct.getBoundingClientRect().top < 140) cur = i; }); links.forEach(function (a, i) { if (i === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+    window.addEventListener('scroll', spy, {passive: true}); spy();
+  })();
+
+  // ---- roles explorer
+  (function () {
+    var R = {
+      operators: ['Operators', '6 of 10', 'speakers who describe staffing gave agent work to existing staff', 'Existing staff inside a function take on running agents as part of their job. Speakers describe training, tuning and supervising agents themselves.', ['she spends 20% of her time managing the agents, orchestrating the agents.', 'M072 · practitioner recording · 2026'], 'Practitioner speech; one coder per speaker.'],
+      reviewers: ['Reviewers', '18', 'employers in the one stable AI bundle of duties', 'Security architects review AI systems and agents before and after deployment, mostly in regulated finance. Rule design is 30–40% of the bundle’s duties.', ['Support security architecture reviews and risk assessments for AI systems, AI applications, AI agents, and AI-enabled platforms across the enterprise.', 'Merck posting · 2026'], 'Low confidence: in the held-out half, 24 of the bundle’s 53 duties come from one posting.'],
+      builders: ['Builders', '81%', 'of employers post at least one AI or automation title', 'AI, machine-learning and automation engineers build agents. They ask for or prefer AI-specific experience (27 of 30) and name AI teams, but form no stable bundle of duties.', null, 'Postings; AI titles are about 2.5% of all postings (6.6% at venture-backed software firms).'],
+      admins: ['Admins', '15 of 26', 'products document an admin role that changes agent limits', 'Owners and admins change an agent’s limits in the product’s settings or managed configuration. Central policy usually overrides users.', ['These guardrails are controlled by your admin and typically signed off by your internal leadership or key decision-makers.', 'Salesforce Agentforce documentation'], 'Product documentation shows what products allow, not what firms do.'],
+      overseers: ['Overseers', '2027', 'when binding overseer duties start in Colorado and the EU', 'The EU AI Act requires deployers of high-risk AI to assign people with the competence, training and authority to oversee it. Colorado requires on-request review by a designated person who can override a consequential decision.', ['Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority', 'EU AI Act Art 26(2)'], 'No posting for this figure was observed yet.'],
+      gap: ['The gap', '0', 'postings or statements describe deciding a rule change across functions', 'The edit has an owner, a product permission. The sign-off behind it has no named holder outside a few vendor role designs and one company’s committee. Microsoft is one of the few to build the split into its product:', ['Sponsors: Business representatives accountable for the agent’s purpose and lifecycle decisions', 'Microsoft Entra Agent ID documentation'], 'This is the question field work inside firms will answer.'],
+      law: ['Law', '0 of 4', 'AI-law provisions on changes name who decides them', 'Binding AI law asks for overseers. Named owners of rule changes appear in trading rules (12) and in AI labs’ own policies (3).', null, '111 provisions from 19 texts.'],
+      vendors: ['Vendors', '2025', 'first agent-scoped certifications and vendor agent roles', 'Vendors moved first: certifications, registries, and owner and sponsor roles arrived before the law. They also rename their agent products within about three years.', null, 'Agent language in 10-Ks rose to 6.75% of filers in 2026, mostly from vendors.']
+    };
+    var panel = $('role-panel'), btns = [].slice.call(document.querySelectorAll('#org button'));
+    function show(k) {
+      var r = R[k]; btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-r') === k ? 'true' : 'false'); });
+      panel.textContent = '';
+      panel.appendChild(h('p', {'class': 'kick', text: r[0]}));
+      var big = h('p', {'class': 'big'}, [r[1]]); big.appendChild(h('small', {text: r[2]})); if (k === 'gap') big.style.color = C.cob; panel.appendChild(big);
+      panel.appendChild(h('p', {text: r[3]}));
+      if (r[4]) { var q = h('blockquote', {}, [r[4][0]]); q.appendChild(h('cite', {text: r[4][1]})); panel.appendChild(q); }
+      panel.appendChild(h('p', {'class': 'small', text: r[5]}));
+    }
+    btns.forEach(function (b) { b.setAttribute('type', 'button'); b.addEventListener('click', function () { show(b.getAttribute('data-r')); }); });
+    show('gap');
+  })();
+
+  // ---- DevOps lenses and clock
+  (function () {
+    var L = {
+      teams: ['Looks like DevOps', 'Inside teams, existing staff take agent work on to coordinate functions, the way developers and operators did.', ['6 of 10 speakers who describe staffing gave the work to existing staff.', '5 speakers describe coordinating existing functions; 3 describe a new capability.', 'Existing jobs and new AI titles share agent duties about evenly (0.86 to 1).']],
+      hiring: ['Looks like a scarce-skills boom', 'In hiring, today’s AI roles look like data science did: a scarce capability recruited in.', ['27 of 30 AI-titled postings ask for or prefer AI-specific experience.', '13 of 21 name AI or ML teams.', 'DevOps-era postings asked for both operations (41 of 60) and programming (57 of 60) experience.']],
+      clock: ['Faster than DevOps, and with law', 'Lined up on the first role-specific vendor certification, binding law arrives within three years for agents. DevOps never had one.', ['DevOps: certification in Nov 2014, about five years after the practice went public; no regulation ever found.', 'Agents: Agentforce certification in Mar 2025; Colorado’s deployer rule from Jan 2027, EU high-risk duties from Dec 2027.', 'The pattern test fixed in advance could not decide between DevOps and a skills boom from public sources.']]
+    };
+    var lens = $('lens'), tabs = [].slice.call(document.querySelectorAll('#devops .tabs button'));
+    function show(k) {
+      tabs.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-l') === k ? 'true' : 'false'); });
+      var l = L[k]; lens.textContent = '';
+      lens.appendChild(h('h3', {text: l[0]})); lens.appendChild(h('p', {text: l[1]}));
+      var ul = h('ul'); l[2].forEach(function (t) { ul.appendChild(h('li', {text: t})); }); lens.appendChild(ul);
+      drawClock(k);
+    }
+    var H = [[-5.4, 'Practice public', 'Jun 2009: practice made public'], [-3.7, 'Titles appear', 'Mar 2011: DevOps titles in postings'], [-1.7, 'Shared metrics', 'Mar 2013: shared metrics'], [0, 'Certification', 'Nov 2014: AWS DevOps certification'], [8.4, 'Platform eng.', 'Apr 2023: platform engineering']];
+    var P = [[-1.0, 'AIGP', '2024: AI-governance certification'], [0, 'Agent certification', 'Mar 2025: Agentforce certification'], [0.7, 'Sponsor roles', 'Nov 2025: vendor sponsor roles'], [1.8, 'Colorado', 'Jan 2027: Colorado deployer rule'], [2.7, 'EU AI Act', 'Dec 2027: EU high-risk duties']];
+    function drawClock(k) {
+      var el = $('clock'); el.textContent = ''; var W = 520, Ht = 230, x0 = 20, x1 = W - 20, X = function (y) { return x0 + (y + 6) / 16 * (x1 - x0); };
+      var v = s('svg', {viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'DevOps and AI agent milestones aligned on the first vendor certification.'});
+      var yH = 70, yP = 150;
+      v.appendChild(s('text', {x: x0, y: 30, 'font-size': 12.5, fill: C.fg}, 'DevOps'));
+      v.appendChild(s('text', {x: x0, y: 110, 'font-size': 12.5, fill: C.fg}, 'AI agents'));
+      [yH, yP].forEach(function (y) { v.appendChild(s('line', {x1: x0, x2: x1, y1: y, y2: y, stroke: C.hair, 'stroke-width': .75})); });
+      v.appendChild(s('line', {x1: X(0), x2: X(0), y1: 40, y2: 175, stroke: C.mu, 'stroke-width': .75, 'stroke-dasharray': '6 2 1 2'}));
+      v.appendChild(s('text', {x: X(0) + 4, y: 190, 'font-size': 11.5}, 'first certification'));
+      v.appendChild(s('line', {x1: X(1.6), x2: X(1.6), y1: yP - 14, y2: yP + 14, stroke: C.cob, 'stroke-width': 1}));
+      v.appendChild(s('text', {x: X(1.6) + 4, y: yP + 28, 'font-size': 11.5, fill: C.cob}, 'now'));
+      var hl = k === 'clock';
+      H.forEach(function (e, i) { v.appendChild(s('circle', {cx: X(e[0]), cy: yH, r: 4, fill: 'url(#hx-f)', stroke: C.for, 'stroke-width': 1})); v.appendChild(s('text', {x: X(e[0]), y: yH - 10, 'text-anchor': 'middle', 'font-size': 11}, 'D' + (i + 1))); });
+      P.forEach(function (e, i) { var law = e[0] > 1.6; v.appendChild(s('circle', {cx: X(e[0]), cy: yP, r: 4, fill: C.bg, stroke: law && hl ? C.cob : C.for, 'stroke-width': law && hl ? 1.6 : 1, 'stroke-dasharray': law ? '2 2' : ''})); v.appendChild(s('text', {x: X(e[0]), y: yP - 10 - (i % 2) * 12, 'text-anchor': 'middle', 'font-size': 11, fill: law && hl ? C.cob : C.mu}, 'A' + (i + 1))); });
+      el.appendChild(v);
+      var key = h('ul', {'class': 'legend', style: 'display:grid;grid-template-columns:1fr 1fr;gap:.2rem 1rem'});
+      H.forEach(function (e, i) { key.appendChild(h('li', {text: 'D' + (i + 1) + ' ' + e[2]})); });
+      P.forEach(function (e, i) { key.appendChild(h('li', {text: 'A' + (i + 1) + ' ' + e[2]})); });
+      el.appendChild(key); return;
+      [-6, -4, -2, 0, 2, 4, 6, 8, 10].forEach(function (t) { v.appendChild(s('text', {x: X(t), y: 218, 'text-anchor': 'middle', 'font-size': 11}, (t > 0 ? '+' : '') + t)); });
+      el.appendChild(v);
+    }
+    tabs.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-l')); }); });
+    show('teams');
+  })();
+
+  // ---- law: filterable provisions
+  (function () {
+    var F = [['Trading and markets', 'RTS 6, SEC, FINRA, PRA, FCA', 53, 25, 12], ['AI law and standards', 'EU AI Act, Colorado, NIST', 37, 4, 0], ['AI labs’ own policies', 'Anthropic, OpenAI, DeepMind', 13, 3, 3], ['Grid operations', 'NERC', 7, 0, 0], ['Platform rule', 'Amazon', 1, 0, 0]];
+    function g(kind) { var v = s('svg', {viewBox: '0 0 10 10', 'aria-hidden': 'true'}); if (kind === 'own') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.8, fill: C.for})); else if (kind === 'chg') v.appendChild(s('circle', {cx: 5, cy: 5, r: 3.4, fill: 'none', stroke: C.for, 'stroke-width': 1})); else v.appendChild(s('circle', {cx: 5, cy: 5, r: 1.4, fill: C.mu})); return v; }
+    var rows = [];
+    F.forEach(function (f) {
+      var dots = h('div', {'class': 'dots'}); for (var i = 0; i < f[2]; i++) dots.appendChild(g(i < f[4] ? 'own' : i < f[3] ? 'chg' : 'oth'));
+      var own = f[3] ? f[4] + ' of ' + f[3] + ' change provisions name who decides' : 'no provision on changing the rules';
+      var r = h('div', {'class': 'lawrow'}, [h('div', {'class': 'nm'}, [f[0], h('span', {text: f[1] + ' · ' + own})]), dots]); $('law-rows').appendChild(r); rows.push(r);
+    });
+    var tabs = $('law-tabs'), opts = [['All', -1], ['Trading', 0], ['AI law', 1], ['AI labs', 2]];
+    opts.forEach(function (o) { var b = h('button', {type: 'button', 'aria-pressed': o[1] === -1 ? 'true' : 'false', text: o[0]}); b.addEventListener('click', function () { [].forEach.call(tabs.children, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); rows.forEach(function (r, i) { r.classList.toggle('dim', o[1] !== -1 && i !== o[1]); }); }); tabs.appendChild(b); });
+    [['own', 'Governs rule changes and names who decides'], ['chg', 'Governs rule changes, names no one'], ['oth', 'Other provision']].forEach(function (x) { var li = h('li'); li.appendChild(g(x[0])); li.appendChild(document.createTextNode(x[1])); $('law-legend').appendChild(li); });
+  })();
+
+  // ---- filings line with hover
+  (function () {
+    var Y = [2022, 2023, 2024, 2025, 2026], A = [0.05, 0.06, 0.12, 1.71, 6.75], F = [0, 0, 0.21, 3.8, 18.0];
+    var W = 520, Ht = 260, x0 = 40, x1 = W - 120, y0 = 16, y1 = 220, X = function (i) { return x0 + (x1 - x0) * i / 4; }, Yv = function (v) { return y1 - (y1 - y0) * v / 20; };
+    var v = s('svg', {viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Share of 10-K filers using agent phrases: all filers 0.05, 0.06, 0.12, 1.71 and 6.75 percent from 2022 to 2026; employers studied 0, 0, 0.21, 3.8 and 18.0 percent.'});
+    [0, 5, 10, 15, 20].forEach(function (t) { v.appendChild(s('line', {x1: x0, x2: x1, y1: Yv(t), y2: Yv(t), stroke: C.hair, 'stroke-width': .5})); v.appendChild(s('text', {x: x0 - 8, y: Yv(t) + 4, 'text-anchor': 'end'}, t + '%')); });
+    Y.forEach(function (y, i) { v.appendChild(s('text', {x: X(i), y: y1 + 22, 'text-anchor': 'middle'}, y)); });
+    function line(vals, col, w, lab) { v.appendChild(s('path', {d: vals.map(function (q, i) { return (i ? 'L' : 'M') + X(i) + ' ' + Yv(q); }).join(' '), fill: 'none', stroke: col, 'stroke-width': w})); vals.forEach(function (q, i) { v.appendChild(s('circle', {cx: X(i), cy: Yv(q), r: i === 4 ? 4 : 2.2, fill: i === 4 ? 'url(#hx-f)' : col, stroke: col, 'stroke-width': i === 4 ? 1 : 0})); }); v.appendChild(s('text', {x: X(4) + 10, y: Yv(vals[4]) + 4, fill: C.fg, 'font-weight': 600}, vals[4] + '%')); v.appendChild(s('text', {x: X(4) + 10, y: Yv(vals[4]) + 19}, lab)); }
+    line(A, C.mu, 1, 'all filers'); line(F, C.for, 1.2, 'employers studied');
+    var guide = s('line', {x1: X(4), x2: X(4), y1: y0, y2: y1, stroke: C.cob, 'stroke-width': .75, 'stroke-dasharray': '3 2'}); v.appendChild(guide);
+    function pickYear(i) { guide.setAttribute('x1', X(i)); guide.setAttribute('x2', X(i)); $('fil-tip').textContent = Y[i] + (i === 4 ? ' (to 10 October)' : '') + ': ' + A[i] + '% of all 10-K filers; ' + F[i] + '% of the employers studied.'; }
+    Y.forEach(function (y, i) { var hit = s('rect', {x: X(i) - (x1 - x0) / 8, y: y0, width: (x1 - x0) / 4, height: y1 - y0, fill: 'transparent', tabindex: 0, role: 'button', 'aria-label': 'Year ' + y}); hit.style.cursor = 'pointer'; ['mouseenter', 'click', 'focus'].forEach(function (ev) { hit.addEventListener(ev, function () { pickYear(i); }); }); v.appendChild(hit); });
+    $('fil').appendChild(v); pickYear(4);
+  })();
+
+  // ---- roadmap
+  (function () {
+    var M = [
+      ['Name an owner for each agent’s limits', 'Now', 'The owner signs off changes; the admin makes them. Start with the security or governance reviewers who already assess AI, at senior practitioner level, with the staff who run the agent proposing changes. A duty added to existing roles, not a new executive post.', 'Follows from the findings on running work, security review and admin settings. Low confidence on where it sits.'],
+      ['Keep one register of agents and their limits', 'Now', 'List every agent, its owner, who holds its admin permission and its written limits, across vendors and under the firm’s control, so the rules survive a vendor renaming its console.', 'Follows from the vendor findings. Low to moderate confidence; untested against simply using each vendor’s registry.'],
+      ['Name trained overseers', 'Before Jan 2027', 'Colorado requires on-request review by a designated person who can override a consequential decision from January 2027; the EU AI Act requires trained overseers of high-risk AI from December 2027. Pick them from the owners and record their authority in the register.', 'High confidence on what the law requires.'],
+      ['Test the rest with an exception-review pilot', 'Through 2027', 'Finding unwritten rules and deciding changes across functions barely appear in public sources, so they are bets. Review agent exceptions and overrides in one or two functions, log what changes and how long it takes, and judge training against that log.', 'Low confidence. We build Business Protocol Management, so we treat every step that would favour it as a bet to test.']
+    ];
+    var W = 640, Ht = 120, x0 = 20, x1 = W - 20, start = 2026.75, end = 2028.05, X = function (t) { return x0 + (t - start) / (end - start) * (x1 - x0); };
+    var v = s('svg', {viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Roadmap from October 2026 to the end of 2027 with the Colorado (January 2027) and EU (December 2027) deadlines.'});
+    v.appendChild(s('line', {x1: x0, x2: x1, y1: 60, y2: 60, stroke: C.hair, 'stroke-width': .75}));
+    [[2026.78, 'Today', C.cob], [2027.0, 'Colorado, 1 Jan 2027', C.fg], [2027.92, 'EU AI Act, 2 Dec 2027', C.fg]].forEach(function (m, i) { v.appendChild(s('line', {x1: X(m[0]), x2: X(m[0]), y1: 48, y2: 72, stroke: m[2], 'stroke-width': 1.1})); v.appendChild(s('text', {x: X(m[0]), y: i === 1 ? 92 : 40, 'text-anchor': i === 2 ? 'end' : 'start', fill: m[2]}, m[1])); });
+    [[2027.0, '2027'], [2028.0, '2028']].forEach(function (y) { v.appendChild(s('text', {x: X(y[0]), y: 112, 'text-anchor': 'middle', 'class': 'mut'}, y[1])); });
+    var bar = s('rect', {x: X(2026.78), y: 56, width: X(2027.0) - X(2026.78), height: 8, fill: 'url(#hx-f)', stroke: C.for, 'stroke-width': .75}); v.appendChild(bar);
+    $('road').appendChild(v);
+    var spans = [[2026.78, 2027.0], [2026.78, 2027.0], [2026.78, 2027.0], [2026.78, 2027.95]];
+    var mv = $('moves'), det = $('movedetail'), bs = [];
+    M.forEach(function (m, i) {
+      var b = h('button', {type: 'button', 'aria-pressed': 'false'}, [h('b', {text: m[0]}), h('span', {text: m[1]})]); bs.push(b);
+      b.addEventListener('click', function () { sel(i); }); mv.appendChild(b);
+    });
+    function sel(i) { bs.forEach(function (b, j) { b.setAttribute('aria-pressed', i === j ? 'true' : 'false'); }); var m = M[i]; det.textContent = ''; det.appendChild(h('p', {text: m[2]})); det.appendChild(h('p', {'class': 'small', text: m[3]})); bar.setAttribute('x', X(spans[i][0])); bar.setAttribute('width', X(spans[i][1]) - X(spans[i][0])); }
+    sel(0);
+  })();
+
+  // ---- method walkthrough on the real map
+  (function () {
+    var MAP = JSON.parse($('map-data').textContent), cv = $('walk-c'), P = MAP.points, n = P.length;
+    var SHORT = {2: 'SAP support', 19: 'On-call', 43: 'Recruiting', 67: 'Store ops', 69: 'Audits', 76: 'Testing', 83: 'Mentoring', 111: 'AI security review', 110: 'AI governance', 112: 'Agentic workflows', 113: 'AI use cases', 21: 'ML monitoring'};
+    var STEPS = [['01', 'Sample', '118,526 postings from 218 employers’ public job boards; 25,512 selected: ten study occupations, every AI or automation title, and a 20% sample of the rest.'],
+      ['02', 'Duties', 'Models split each posting into duty statements, 305,533 in all, checked against the source (precision 0.97, recall 0.89). Each dot is one statement.'],
+      ['03', 'Map', 'A sentence model places each statement by meaning, so similar duties land near each other. Only the discovery half of the postings is drawn.'],
+      ['04', 'Bundles', '114 bundles; eight reappeared in the held-out half (green). The large AI bundles (blue) did not. Two-thirds of statements belong to no bundle.'],
+      ['05', 'Coding', 'Coders labelled bundles blind after catching 94–100% of hidden test examples. The one stable AI bundle, security review, is 30–40% rule design.']];
+    var ol = $('walk-steps'), step = 0, f, cur, raf;
+    var cols = Math.ceil(Math.sqrt(n * 1.28)), order = P.map(function (_, i) { return i; }).sort(function (a, b) { return P[a][2] - P[b][2]; }), grid = [];
+    order.forEach(function (pi, k) { grid[pi] = [(k % cols + .5) / cols, (Math.floor(k / cols) + .5) / Math.ceil(n / cols)]; });
+    var cen = {}; P.forEach(function (p) { if (p[2] >= 0) { var c = cen[p[2]] || (cen[p[2]] = {x: [], y: []}); c.x.push(p[0]); c.y.push(p[1]); } });
+    function med(a) { a = a.slice().sort(function (x, y) { return x - y; }); return a[a.length >> 1]; }
+    Object.keys(cen).forEach(function (k) { cen[k] = {x: med(cen[k].x), y: med(cen[k].y)}; });
+    function kind(c) { var k = MAP.clusters[c]; return k ? k.kind : 'none'; }
+    function size() { f = fitCanvas(cv, .8); }
+    function X(x) { return 10 + x * (f.W - 20); } function Yc(y) { return 24 + y * (f.H - 34); }
+    function target(st) { return P.map(function (p, i) { return st <= 1 ? grid[i] : [p[0], p[1]]; }); }
+    function render(pos, st, k) {
+      var c = f.c; c.clearRect(0, 0, f.W, f.H);
+      if (st === 0) {
+        var Fn = [['postings crawled', 118526], ['postings selected', 25512]];
+        Fn.forEach(function (q, i) { var y = f.H * .3 + i * 70, xe = 10 + (f.W - 90) * q[1] / 118526 * Math.min(1, k * 1.4); c.fillStyle = C.mu; c.font = '13px Lora, Georgia, serif'; c.fillText(q[0], 10, y - 12); c.strokeStyle = C.hair; c.lineWidth = .5; c.beginPath(); c.moveTo(10, y); c.lineTo(f.W - 80, y); c.stroke(); c.strokeStyle = C.mu; c.lineWidth = 1; c.beginPath(); c.moveTo(10, y); c.lineTo(xe, y); c.stroke(); c.fillStyle = C.fg; c.fillText(q[1].toLocaleString('en'), xe + 10, y + 4); });
+        return;
+      }
+      for (var i = 0; i < n; i++) {
+        var kd = kind(P[i][2]), col = C.mu, r = 1.3, a = 1;
+        if (st >= 3) { if (kd === 'work') { col = C.for; r = 1.8; if (st === 4 && P[i][2] !== 111) a = .3; if (st === 4 && P[i][2] === 111) r = 2.6; } else if (kd === 'ai') { col = C.cob; r = 1.6; if (st === 4) a = .4; } else { col = C.hair; a = .8; } }
+        c.globalAlpha = a; c.fillStyle = col; c.beginPath(); c.arc(X(pos[i][0]), Yc(pos[i][1]), r, 0, 6.3); c.fill();
+      }
+      c.globalAlpha = 1;
+      if (st >= 3 && k > .6) {
+        c.globalAlpha = Math.min(1, (k - .6) / .4);
+        Object.keys(SHORT).forEach(function (id) {
+          var cc = cen[id]; if (!cc) return; var kd = MAP.clusters[id].kind; if (st === 4 && id !== '111' && kd === 'work') return; if (f.W < 420 && kd === 'work' && id !== '111') return;
+          var x = X(cc.x), y = Yc(cc.y), rr = id === '111' && st === 4 ? 15 : 10;
+          c.strokeStyle = kd === 'work' ? C.for : C.cob; c.setLineDash(kd === 'work' ? [] : [2, 2]); c.lineWidth = 1; c.beginPath(); c.arc(x, y, rr, 0, 6.3); c.stroke(); c.setLineDash([]);
+          c.font = (id === '111' ? '600 ' : '') + '12px Lora, Georgia, serif'; var lbl = SHORT[id], tw = c.measureText(lbl).width, tx = x + rr + 4; if (tx + tw > f.W - 2) tx = x - rr - 4 - tw;
+          c.fillStyle = C.bg; c.fillRect(tx - 2, y - 10, tw + 4, 14); c.fillStyle = kd === 'work' ? C.for : C.cob; c.fillText(lbl, tx, y + 2);
+        });
+        c.globalAlpha = 1;
+      }
+    }
+    function go(i) {
+      step = i; var from = cur.map(function (q) { return q.slice(); }), to = target(i), t0 = performance.now(), dur = reduce ? 0 : 1600;
+      [].forEach.call(ol.querySelectorAll('button'), function (b, j) { if (j === i) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });
+      $('walk-text').textContent = STEPS[i][2]; cancelAnimationFrame(raf);
+      (function tick(t) { var k = dur ? Math.min(1, (t - t0) / dur) : 1, e = ease(k); for (var j = 0; j < n; j++) { var q = Math.min(1, Math.max(0, e * 1.25 - (j % 97) / 97 * .25)); cur[j][0] = from[j][0] + (to[j][0] - from[j][0]) * q; cur[j][1] = from[j][1] + (to[j][1] - from[j][1]) * q; } render(cur, i, k); if (k < 1) raf = requestAnimationFrame(tick); })(t0);
+    }
+    STEPS.forEach(function (st, i) { var b = h('button', {type: 'button'}, [st[0], h('span', {text: st[1]})]); b.addEventListener('click', function () { go(i); }); ol.appendChild(h('li', {}, [b])); });
+    size(); cur = target(3); go(3);
+    window.addEventListener('resize', function () { size(); render(cur, step, 1); });
+  })();
+})();
+</script>
