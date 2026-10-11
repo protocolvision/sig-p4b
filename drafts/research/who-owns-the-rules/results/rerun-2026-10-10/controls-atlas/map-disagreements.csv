@@ -1,0 +1,31 @@
+agent_category,domain,match_S,analogue_S,match_H,analogue_H
+Harmful and off-limits content,algorithmic trading,partial,restricted-security block,none,real-time monitoring
+Harmful and off-limits content,email and dlp,direct,mail flow rule,partial,mail flow rule
+Prompt attacks and untrusted input,email and dlp,none,(no analogue),partial,quarantine
+Prompt attacks and untrusted input,robotic process automation,none,(no analogue),partial,queue item schema
+Sensitive data in prompts and outputs,api gateway and waf,partial,AI Security for Apps,direct,AI Security for Apps
+Answer accuracy and presentation,algorithmic trading,partial,erroneous order rejection,none,real-time alerts
+Answer accuracy and presentation,industrial safety,none,(no analogue),partial,"inspect, maintain and test"
+Answer accuracy and presentation,feature flags and release controls,none,(no analogue),partial,guarded rollout
+Agent tools and actions,algorithmic trading,direct,price collar,partial,trader permission block
+Agent tools and actions,cloud identity and infrastructure,direct,Azure Policy deny effect,partial,permissions boundary
+Agent tools and actions,email and dlp,partial,moderation (approval),direct,moderation (approval)
+Agent tools and actions,application access control,direct,permission set,partial,required user assignment
+Agent tools and actions,feature flags and release controls,partial,kill switch flag,direct,kill switch flag
+Data and files the AI can reach,email and dlp,none,(no analogue),partial,"Google DLP block, warn, audit"
+Data and files the AI can reach,industrial safety,none,(no analogue),partial,no shared devices
+Data and files the AI can reach,application access control,direct,field-level security,partial,field-level security
+"Identity, credentials and access rights",card payments and spend management,none,(no analogue),partial,lock date
+"Identity, credentials and access rights",erp segregation of duties,direct,workflow approval of access requests,partial,segregation of duties access risk
+Network destinations,cloud identity and infrastructure,partial,Azure Policy deny effect,none,Azure Policy deny effect
+Network destinations,industrial safety,none,(no analogue),partial,no shared devices
+Network destinations,robotic process automation,partial,data policy connector grouping,direct,blocked connector
+"Model choice, routing and caching",algorithmic trading,none,(no analogue),partial,pilot phase
+"Model choice, routing and caching",it change management,none,(no analogue),partial,configuration change control: approve or disapprove
+"Model choice, routing and caching",industrial safety,none,(no analogue),partial,management of change
+"Model choice, routing and caching",robotic process automation,none,(no analogue),partial,advanced connector policy
+"Logs, traces and audit records",algorithmic trading,direct,real-time monitoring,partial,real-time monitoring
+"Logs, traces and audit records",api gateway and waf,none,(no analogue),partial,rule action
+"Stored data: retention, training use and encryption",feature flags and release controls,none,(no analogue),partial,configuration snapshot
+"AI inventory, lifecycle and policy management",email and dlp,partial,rule test modes,direct,rule test modes
+"AI inventory, lifecycle and policy management",api gateway and waf,none,(no analogue),partial,API schema validation

@@ -1,0 +1,155 @@
+agent_category,domain,analogue,match,reason
+Harmful and off-limits content,algorithmic trading,real-time monitoring,none,Monitors market activity for disorder; does not judge what content says.
+Harmful and off-limits content,card payments and spend management,merchant category block/allow,partial,"Category deny-list blocks off-limits purchases; object is merchant category, not content meaning."
+Harmful and off-limits content,cloud identity and infrastructure,Azure Policy deny effect,none,Denies non-compliant resource requests by configuration; no judgement of content meaning.
+Harmful and off-limits content,email and DLP,mail flow rule,partial,"Content-condition rules act on messages in transit; same block-by-condition logic, different object."
+Harmful and off-limits content,IT change management,standard change (pre-approved),none,Pre-approved change types say nothing about harmful content.
+Harmful and off-limits content,industrial safety,emergency shutdown,none,Process trip on hazard conditions; not a judgement about content.
+Harmful and off-limits content,application access control,conditional access app control,none,"Session-action restriction governs access, not what content says."
+Harmful and off-limits content,ERP segregation of duties,access model,none,Flags risky role combinations; does not evaluate content.
+Harmful and off-limits content,robotic process automation,queue item schema,none,Validates data shape of queue items; does not judge harmful meaning.
+Harmful and off-limits content,API gateway and WAF,LLM content safety policy,direct,Sends prompts and completions to a content-safety classifier and blocks on detection.
+Harmful and off-limits content,feature flags and release controls,kill switch flag,none,Turns a whole feature off; not a content-based rule.
+Prompt attacks and untrusted input,algorithmic trading,erroneous order rejection,partial,"Rejects malformed or duplicate orders before entry; screens inputs, but not adversarial text."
+Prompt attacks and untrusted input,card payments and spend management,real-time authorization webhook,none,External system decides each purchase; no screening of untrusted input.
+Prompt attacks and untrusted input,cloud identity and infrastructure,Azure Policy deny effect,none,Denies non-compliant requests; no screening of untrusted content.
+Prompt attacks and untrusted input,email and DLP,quarantine,partial,"Holds suspicious inbound messages before delivery; screens untrusted content, different object."
+Prompt attacks and untrusted input,IT change management,configuration change control: approve or disapprove,none,Human review of a change; no screening of untrusted input.
+Prompt attacks and untrusted input,industrial safety,SIS independent of BPCS,none,Independent safety layer; does not screen inputs.
+Prompt attacks and untrusted input,application access control,conditional access app control,none,Session-action restriction; not screening of untrusted text.
+Prompt attacks and untrusted input,ERP segregation of duties,provisioning rule,none,Blocks conflicting role pairs; no input screening.
+Prompt attacks and untrusted input,robotic process automation,queue item schema,partial,"JSON schema validates queue data before processing; structural check, not adversarial screening."
+Prompt attacks and untrusted input,API gateway and WAF,AI Security for Apps,direct,Detects prompt injection in LLM prompts before the model; usable in rules.
+Prompt attacks and untrusted input,feature flags and release controls,switch flag as kill switch,none,Toggles a feature without redeploy; no content screening.
+Sensitive data in prompts and outputs,algorithmic trading,restricted-security block,none,Blocks orders in restricted securities; does not detect sensitive data in traffic.
+Sensitive data in prompts and outputs,card payments and spend management,card-present restriction,none,"Restricts channel, not detection of card data in traffic."
+Sensitive data in prompts and outputs,cloud identity and infrastructure,deny audit of existing resources,none,Flags non-compliant existing resources; no detection of data in traffic.
+Sensitive data in prompts and outputs,email and DLP,DLP block / block with override / audit,direct,"Detects sensitive content in outbound mail and blocks, overrides or audits; same object and action."
+Sensitive data in prompts and outputs,IT change management,configuration change decisions documented,none,Documents change decisions; no detection of sensitive data.
+Sensitive data in prompts and outputs,industrial safety,no shared devices,none,Separates safety devices from control devices; no data detection.
+Sensitive data in prompts and outputs,application access control,field-level security,partial,Restricts sensitive fields per user; limits exposure but does not detect data in prompts.
+Sensitive data in prompts and outputs,ERP segregation of duties,access model,none,Flags risky role combinations; does not detect sensitive data.
+Sensitive data in prompts and outputs,robotic process automation,credential store,partial,"Keeps robot secrets in a secure store; protects credentials, does not detect them in traffic."
+Sensitive data in prompts and outputs,API gateway and WAF,AI Security for Apps,direct,Detects PII in LLM prompts; usable in rules to act on detections.
+Sensitive data in prompts and outputs,feature flags and release controls,role-based access to configuration,none,Governs who changes configuration; no detection of sensitive data.
+Answer accuracy and presentation,algorithmic trading,real-time alerts,none,Alerts on unexpected algorithm activity; does not check output correctness.
+Answer accuracy and presentation,card payments and spend management,max expense amount,none,Declines transactions above an amount; no correctness check.
+Answer accuracy and presentation,cloud identity and infrastructure,deny audit of existing resources,none,Flags non-compliant resources; no correctness check of outputs.
+Answer accuracy and presentation,email and DLP,rule test modes,none,Test modes preview rule effects; do not check answer correctness.
+Answer accuracy and presentation,IT change management,configuration change decisions documented,none,Records change decisions; no output quality check.
+Answer accuracy and presentation,industrial safety,"inspect, maintain and test",partial,"Periodic testing verifies safety functions work; similar verification idea, different object."
+Answer accuracy and presentation,application access control,conditional access session control,none,Forces re-authentication; no output checks.
+Answer accuracy and presentation,ERP segregation of duties,conflict simulation,none,Previews remediation effects; no output quality check.
+Answer accuracy and presentation,robotic process automation,queue item schema,partial,Schema validates output data format; closest to format validation of answers.
+Answer accuracy and presentation,API gateway and WAF,validate-content policy,direct,Validates response bodies against JSON schema and blocks mismatches.
+Answer accuracy and presentation,feature flags and release controls,guarded rollout,partial,"Monitors metrics and pauses on regression; aggregate quality check, not per-answer validation."
+Agent tools and actions,algorithmic trading,trader permission block,partial,Blocks orders from traders lacking instrument permission; action-level allow-list by principal.
+Agent tools and actions,card payments and spend management,real-time authorization webhook,direct,External system approves or declines each purchase in real time; same per-action decision.
+Agent tools and actions,cloud identity and infrastructure,permissions boundary,partial,"Caps permissions an identity can be granted; ceiling on identities, not on named tools."
+Agent tools and actions,email and DLP,moderation (approval),direct,Holds each outbound message for approval before release; per-action approval gate.
+Agent tools and actions,IT change management,standard change (pre-approved),direct,"Pre-approved repeatable changes proceed, others need review; same allow-list-plus-approval logic."
+Agent tools and actions,industrial safety,SIS independent of BPCS,partial,Independent layer separate from control logic; resembles a gate outside the agent.
+Agent tools and actions,application access control,required user assignment,partial,"Only assigned users may sign in to an app; app-level allow-list, not action-level."
+Agent tools and actions,ERP segregation of duties,segregation of duties access risk,partial,"Blocks conflicting functions held by one user; combination rule, not per-action control."
+Agent tools and actions,robotic process automation,connector action control,direct,Allows or blocks single actions of a connector; per-action allow-list.
+Agent tools and actions,API gateway and WAF,custom rule,partial,"Expression rules block matched requests; applies to web requests, not agent actions."
+Agent tools and actions,feature flags and release controls,kill switch flag,direct,Switches a named capability off without redeploy; same as disabling one tool.
+Autonomy and human handover,algorithmic trading,kill functionality,partial,"Cancels unexecuted orders on emergency; halts activity, with no escalation or review."
+Autonomy and human handover,card payments and spend management,spend limit requests and increase approvals,partial,"Escalates over-limit spend to an approver; an escalation step, not run-level handover."
+Autonomy and human handover,cloud identity and infrastructure,budget action,none,Automatic cost-triggered restriction; no handover to a person.
+Autonomy and human handover,email and DLP,DLP user override,partial,"A person may override a block on one message, taking over a blocked step."
+Autonomy and human handover,IT change management,emergency change,partial,Expedited path skips normal approval and is reviewed later; closest to takeover under urgency.
+Autonomy and human handover,industrial safety,emergency shutdown,partial,"Automatic safety stop halts the process; stops activity, with no handover to an operator."
+Autonomy and human handover,application access control,conditional access session control,none,Forces re-authentication; does not escalate a run to a person.
+Autonomy and human handover,ERP segregation of duties,firefighter ID,partial,Emergency elevated access with controller review; break-glass analogue to takeover.
+Autonomy and human handover,robotic process automation,attended robot permission limit,partial,Attended robots run with a human present and bounded to the user's rights; shared oversight.
+Autonomy and human handover,API gateway and WAF,rule action,none,CAPTCHA or challenge pauses a request; does not escalate an agent run.
+Autonomy and human handover,feature flags and release controls,switch flag as kill switch,partial,"Turns a feature off without redeploy; stops the run, with no human handover."
+Data and files the AI can reach,algorithmic trading,restricted-security block,none,"Blocks named securities; scopes instruments, not data sources."
+Data and files the AI can reach,card payments and spend management,allowed or blocked merchants,none,"Merchant lists scope counterparties, not data an agent can read."
+Data and files the AI can reach,cloud identity and infrastructure,permissions boundary,partial,"Caps resources an identity can be granted; resource scope, not data-source scope."
+Data and files the AI can reach,email and DLP,"Google DLP block, warn, audit",partial,"Blocks or audits sharing of sensitive content; limits data leaving, not what is read."
+Data and files the AI can reach,IT change management,configuration change control: approve or disapprove,none,Approves system changes; does not scope data an AI can read.
+Data and files the AI can reach,industrial safety,no shared devices,partial,Keeps safety devices apart from control devices; a data-path isolation boundary.
+Data and files the AI can reach,application access control,field-level security,partial,Restricts read and edit per field; scopes data access at finer granularity than sources.
+Data and files the AI can reach,ERP segregation of duties,access model,none,Flags risky role combinations; does not scope data an identity may read.
+Data and files the AI can reach,robotic process automation,environment,direct,Limits an app to data sources in its own environment; a data-source scope boundary.
+Data and files the AI can reach,API gateway and WAF,custom rule,none,Expression rules on requests; no scoping of data sources.
+Data and files the AI can reach,feature flags and release controls,role-based access to configuration,none,Governs who changes configuration; not which data a model reads.
+"Identity, credentials and access rights",algorithmic trading,access restriction to pre-approved persons,direct,"Restricts market access to pre-approved, authorised persons and accounts; same principal allow-list."
+"Identity, credentials and access rights",card payments and spend management,lock date,partial,Stops a fund accepting charges after a date; like a credential lifetime limit.
+"Identity, credentials and access rights",cloud identity and infrastructure,permissions boundary,direct,Managed policy caps what an identity may be granted; an entitlement ceiling.
+"Identity, credentials and access rights",email and DLP,override precedence,none,Decides which conflicting policy wins; no identity or credential check.
+"Identity, credentials and access rights",IT change management,configuration change control: approve or disapprove,none,Approves changes; no identity or entitlement check.
+"Identity, credentials and access rights",industrial safety,no shared devices,none,"Separates safety devices, not identities; no entitlement or credential check."
+"Identity, credentials and access rights",application access control,conditional access grant or block,direct,"Grants or blocks sign-in on identity, MFA and device conditions; same identity gate."
+"Identity, credentials and access rights",ERP segregation of duties,segregation of duties access risk,partial,"Flags conflicting functions per user; an entitlement rule, not authentication."
+"Identity, credentials and access rights",robotic process automation,unattended robot account,direct,Robot identity running without a person; the closest analogue to an agent identity.
+"Identity, credentials and access rights",API gateway and WAF,validate-jwt policy,direct,Validates the caller's token from an identity provider before the request proceeds.
+"Identity, credentials and access rights",feature flags and release controls,role policy,direct,Governs who may change flags and settings; admin rights over AI settings.
+Network destinations,algorithmic trading,access restriction to pre-approved persons,none,Restricts who may trade; does not constrain network destinations.
+Network destinations,card payments and spend management,country restriction,partial,Allows or blocks merchant countries; a geographic destination restriction.
+Network destinations,cloud identity and infrastructure,Azure Policy deny effect,none,Denies non-compliant requests; no network destination check.
+Network destinations,email and DLP,redirect,partial,"Reroutes messages to other destinations silently; destination control, but redirects rather than blocks."
+Network destinations,IT change management,configuration change control: approve or disapprove,none,Approves configuration changes; no network destination control.
+Network destinations,industrial safety,no shared devices,partial,Segregates safety network devices from control devices; a network segregation analogue.
+Network destinations,application access control,conditional access network location,direct,Conditions sign-ins on IP ranges and countries; a source-network allow-list.
+Network destinations,ERP segregation of duties,access model,none,Role-risk filter; no network control.
+Network destinations,robotic process automation,blocked connector,direct,Blocks a named service so it cannot be used; a destination deny-list.
+Network destinations,API gateway and WAF,ip-filter policy,direct,Allows or forbids calls by address or range; an IP allow and deny list.
+Network destinations,feature flags and release controls,targeting rule,none,Targets flag variations by context; no network control.
+"Model choice, routing and caching",algorithmic trading,pilot phase,partial,"Limited-size pilot exposure, scaled as results confirm; similar to staged routing of traffic."
+"Model choice, routing and caching",card payments and spend management,most restrictive wins,none,Resolves overlapping limits; no model or routing choice.
+"Model choice, routing and caching",cloud identity and infrastructure,service control policy,partial,Organisation-wide policy can deny named AI services or models; an org-level model allow-list.
+"Model choice, routing and caching",email and DLP,rule test modes,none,Test modes for rule rollout; no model choice.
+"Model choice, routing and caching",IT change management,configuration change control: approve or disapprove,partial,"Approves configuration changes; approval of model settings, not routing itself."
+"Model choice, routing and caching",industrial safety,management of change,partial,Formal approval of control-system changes; similar governance for changing routing.
+"Model choice, routing and caching",application access control,field-level security,none,Field permissions; no model choice.
+"Model choice, routing and caching",ERP segregation of duties,conflict simulation,none,Previews access remediation; no model choice.
+"Model choice, routing and caching",robotic process automation,advanced connector policy,partial,Strict allow-list of certified connectors including MCP; restricts which services may serve.
+"Model choice, routing and caching",API gateway and WAF,geographic match,none,"Restricts caller origin, not which model or region serves a call."
+"Model choice, routing and caching",feature flags and release controls,percentage rollout,direct,Splits traffic across variations by share; same as weighted routing across model versions.
+"Usage, spend and rate limits",algorithmic trading,maximum messages limit,direct,Caps order-message rate; the same rate-limit function.
+"Usage, spend and rate limits",card payments and spend management,spending limit by interval,direct,Caps total spend per interval; the same budget or quota cap.
+"Usage, spend and rate limits",cloud identity and infrastructure,budget action,direct,Applies a deny policy when cost exceeds a threshold; a hard stop at the cap.
+"Usage, spend and rate limits",email and DLP,mail flow rule,none,Conditions and actions on messages; no volume or frequency cap.
+"Usage, spend and rate limits",IT change management,configuration change control: approve or disapprove,none,Approves changes; no quantity cap.
+"Usage, spend and rate limits",industrial safety,emergency shutdown,none,Hazard trip; no quantity or spend cap.
+"Usage, spend and rate limits",application access control,permission set,none,Grants functional access; no quantity cap.
+"Usage, spend and rate limits",ERP segregation of duties,access model,none,Role-risk filter; no quantity cap.
+"Usage, spend and rate limits",robotic process automation,API rate limit,direct,Caps Orchestrator API calls per tenant per minute; the same rate-limit function.
+"Usage, spend and rate limits",API gateway and WAF,LLM token limit policy,direct,Caps LLM tokens per key with a 429 on exceed; direct token-based cap.
+"Usage, spend and rate limits",feature flags and release controls,scheduled flag change,none,Schedules policy changes over time; no quantity cap.
+"Logs, traces and audit records",algorithmic trading,real-time monitoring,partial,Staff monitor algorithmic activity in real time; monitoring rather than a durable activity record.
+"Logs, traces and audit records",card payments and spend management,expense approval policy,none,Approval policy for transactions; no activity record described.
+"Logs, traces and audit records",cloud identity and infrastructure,deny audit of existing resources,partial,"Records non-compliant existing resources; an audit output, not an activity log."
+"Logs, traces and audit records",email and DLP,DLP user notification and incident report,direct,Notifies users and admins and records an incident per match; alert plus audit record.
+"Logs, traces and audit records",IT change management,configuration change decisions documented,direct,Documents each change decision in a record; the same audit trail.
+"Logs, traces and audit records",industrial safety,management of change,partial,"Formal change records; governs control-system change, not activity logs."
+"Logs, traces and audit records",application access control,conditional access session control,none,Forces re-authentication; records nothing.
+"Logs, traces and audit records",ERP segregation of duties,firefighter log review,partial,"Controller reviews emergency-access logs; logs exist, mandatory review not documented for agents."
+"Logs, traces and audit records",robotic process automation,orchestrator audit trail,direct,"Filterable, exportable audit log of actions by all entities."
+"Logs, traces and audit records",API gateway and WAF,rule action,partial,"Count action records matches without blocking; a record, not a full audit trail."
+"Logs, traces and audit records",feature flags and release controls,configuration snapshot,partial,"Immutable saved configuration records what was live; a configuration record, not an activity log."
+"Stored data: retention, training use and encryption",algorithmic trading,annual CEO certification,none,Executive certification kept in records; not retention or training of customer content.
+"Stored data: retention, training use and encryption",card payments and spend management,lock date,none,"Ends charges after a date; expiry of a payment fund, not retention of data."
+"Stored data: retention, training use and encryption",cloud identity and infrastructure,service quota,none,Caps resource counts; no retention or encryption of content.
+"Stored data: retention, training use and encryption",email and DLP,quarantine,partial,Holds message copies in quarantine; a held-content store with its own lifetime.
+"Stored data: retention, training use and encryption",IT change management,configuration change decisions documented,none,Records decisions; no storage of customer content.
+"Stored data: retention, training use and encryption",industrial safety,"inspect, maintain and test",none,Tests safety equipment; no data retention.
+"Stored data: retention, training use and encryption",application access control,field-level security,none,Field permissions; no retention or encryption.
+"Stored data: retention, training use and encryption",ERP segregation of duties,mitigating control,none,Residual-risk control with a validity period; no content storage.
+"Stored data: retention, training use and encryption",robotic process automation,credential asset,partial,"Encrypts stored robot credentials with AES-256; at-rest protection for secrets, not content."
+"Stored data: retention, training use and encryption",API gateway and WAF,subscription key,none,Keys identify callers; no storage of content.
+"Stored data: retention, training use and encryption",feature flags and release controls,configuration snapshot,partial,"Immutable saved configuration for rollback; versioned config storage, not customer content."
+"AI inventory, lifecycle and policy management",algorithmic trading,pre-deployment testing and authorisation,direct,Tested methodology and senior authorisation before deployment; same publish gate.
+"AI inventory, lifecycle and policy management",card payments and spend management,spend limit requests and increase approvals,partial,"Approval workflow for changing limits; a governance gate on policy change, not agent release."
+"AI inventory, lifecycle and policy management",cloud identity and infrastructure,Azure Policy deny effect,partial,"Blocks non-compliant resource creation; a publish gate on configuration, not agent registration."
+"AI inventory, lifecycle and policy management",email and DLP,rule test modes,direct,Test then enforce modes for rule rollout; staged lifecycle for policy changes.
+"AI inventory, lifecycle and policy management",IT change management,normal change (risk assessment and CAB),direct,Risk-assessed approval before non-emergency change; a promotion approval gate.
+"AI inventory, lifecycle and policy management",industrial safety,risk assessment (HAZOP/LOPA),direct,Assesses which functions depend on the control system; same as risk rating and impact assessment.
+"AI inventory, lifecycle and policy management",application access control,continuous access evaluation,partial,Revokes access within minutes on critical events; containment like disabling an agent.
+"AI inventory, lifecycle and policy management",ERP segregation of duties,conflict simulation,partial,Previews remediation effects before change; similar to testing before release.
+"AI inventory, lifecycle and policy management",robotic process automation,environment,partial,"Separates apps and data by environment; a promotion path, without release gates."
+"AI inventory, lifecycle and policy management",API gateway and WAF,API schema validation,partial,Requests checked against an uploaded OpenAPI schema; defines which API surface an agent may call.
+"AI inventory, lifecycle and policy management",feature flags and release controls,release pipeline,direct,Moves flags through release phases with gated audiences; staged publish with rollback.

@@ -100,3 +100,20 @@ timestamp,kind,request,http_status,note
 2026-10-11T09:30:57,wayback,http://web.archive.org/web/20250123183017id_/https://openai.com/index/introducing-operator/,200,snapshot fetch oa-operator-blog
 2026-10-11T09:31:06,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/policies/usage-policies&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
 2026-10-11T09:31:57,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/policies/usage-policies&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:34:06,wayback,http://web.archive.org/cdx/search/cdx?url=openai.com/policies/usage-policies&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:34:12,wayback,http://web.archive.org/web/20230310202350id_/https://openai.com/policies/usage-policies,200,snapshot fetch oa-usage-policies
+2026-10-11T09:34:23,wayback,http://web.archive.org/cdx/search/cdx?url=platform.openai.com/docs/guides/rate-limits&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:35:36,wayback,http://web.archive.org/cdx/search/cdx?url=platform.openai.com/docs/guides/rate-limits&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:35:52,wayback,http://web.archive.org/web/20230131012140id_/https://platform.openai.com/docs/guides/rate-limits,200,snapshot fetch oa-rate-limits-doc
+2026-10-11T09:36:28,wayback,http://web.archive.org/cdx/search/cdx?url=beta.openai.com/docs/engines/content-filter&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:37:29,wayback,http://web.archive.org/cdx/search/cdx?url=beta.openai.com/docs/engines/content-filter&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:39:29,wayback,http://web.archive.org/cdx/search/cdx?url=beta.openai.com/docs/engines/content-filter&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:40:07,wayback,http://web.archive.org/web/20210430143553id_/https://beta.openai.com/docs/engines/content-filter,200,snapshot fetch oa-content-filter-2021
+2026-10-11T09:40:22,wayback,http://web.archive.org/cdx/search/cdx?url=www.anthropic.com/legal/aup&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff
+2026-10-11T09:42:07,wayback,http://web.archive.org/cdx/search/cdx?url=www.anthropic.com/legal/aup&output=json&limit=1&filter=statuscode:200,000,CDX first capture backoff
+2026-10-11T09:43:42,wayback,http://web.archive.org/cdx/search/cdx?url=www.anthropic.com/legal/aup&output=json&limit=1&filter=statuscode:200,503,CDX first capture
+2026-10-11T09:44:09,wayback,http://web.archive.org/cdx/search/cdx?url=docs.anthropic.com/claude/reference/rate-limits&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:44:18,wayback,http://web.archive.org/web/20240306215455id_/https://docs.anthropic.com/claude/reference/rate-limits,200,snapshot fetch anthropic-rate-limits-doc
+2026-10-11T09:44:32,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter&output=json&limit=1&filter=statuscode:200,200,CDX first capture
+2026-10-11T09:44:38,wayback,http://web.archive.org/web/20230117024428id_/https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter,200,snapshot fetch azure-oai-content-filter-doc
+2026-10-11T09:44:48,wayback,http://web.archive.org/cdx/search/cdx?url=learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/abuse-monitoring&output=json&limit=1&filter=statuscode:200,503,CDX first capture backoff

@@ -1,0 +1,57 @@
+domain,control_type,required_by,agent_equivalent,note
+algorithmic trading,price collar,law,partial,Refuse tool actions whose parameters fall outside a price or value band before execution; no band check is documented for agents.
+algorithmic trading,maximum order volume,law,partial,"Per-action size cap on one tool call's quantity; agents cap totals and tokens, not the size of a single action."
+algorithmic trading,repeated automated execution throttle,law,partial,"Auto-disable an agent after N repeated runs until a person re-enables it; loop caps exist, human re-enable does not."
+algorithmic trading,kill functionality,law,partial,Mandatory one-step stop that cancels all pending agent actions; kill switches exist but are optional and not pending-action cancel.
+algorithmic trading,real-time alerts,law,partial,"Alert within seconds that triggers automatic remediation; alerts exist, but automatic shutdown on drift is not documented."
+algorithmic trading,post-trade controls,law,partial,"Continuous after-the-fact checks of agent outcomes that can shut the agent down; audit logs exist, automatic shutdown does not."
+algorithmic trading,stress testing,law,partial,"Periodic load test at multiples of peak volume; agent evaluations test answer quality, not capacity under load."
+algorithmic trading,annual CEO certification,law,none,Accountable executive certifies agent control effectiveness each year; no equivalent in the agent taxonomy.
+algorithmic trading,firm exclusive control of controls,law,partial,"Controls held only by the firm, not vendor or user; managed settings are client-side and can be bypassed."
+algorithmic trading,pilot phase,regulator guidance,partial,"Limited-exposure pilot scaled only as results confirm; release channels exist, metric-gated scaling does not."
+card payments and spend management,default daily limit,product feature,partial,"Platform-default cap applied when none is set; some vendors default their caps, not universally."
+card payments and spend management,merchant category block/allow,product feature,partial,Category allow or deny list for agent purchases; purchase-category rules are not in the agent taxonomy.
+card payments and spend management,country restriction,product feature,partial,"Allow or block counterparty countries for agent actions; geography rules cover callers, not destinations."
+card payments and spend management,card-present restriction,product feature,partial,"Block agent-initiated channels such as unattended actions; run modes restrict autonomy, not channel."
+card payments and spend management,allowed or blocked categories,product feature,partial,Per-agent category allow-lists for spend; same gap as the merchant category rule.
+card payments and spend management,allowed or blocked merchants,product feature,partial,"Named-counterparty allow-list for agent payments; mandates approve single transactions, not standing merchant lists."
+card payments and spend management,spend limit requests and increase approvals,product feature,partial,"Approver workflow for raising an agent's limits; approval gates cover promotions, not limit changes."
+cloud identity and infrastructure,SCPs grant nothing,product feature,partial,"Org policies can only restrict, never grant; agent policies have deny-overrides-allow but no documented never-grant rule."
+email and DLP,quarantine,product feature,partial,Holds an agent's output or action for review before delivery; quarantine of responses is not documented.
+email and DLP,redirect,product feature,partial,"Silently reroutes agent output to other recipients; routing exists, silent redirect of actions is not documented."
+email and DLP,DLP user override,product feature,partial,"Named human overrides a block on one agent output, with a logged reason; overrides are not documented for agents."
+email and DLP,override precedence,product feature,partial,"Rule for which override wins across conflicting policies; settings precedence exists, override rules do not."
+IT change management,emergency change,product feature,partial,"Expedited agent change path bypassing normal approval, reviewed afterwards; takeover exists, approval bypass does not."
+IT change management,define change types under control,standard,partial,"Scope which agent change types need governance; policy scope exists, a change-type taxonomy is not documented."
+industrial safety,SIS independent of BPCS,standard,partial,Safety guard run separately from the agent's control logic; external guardrails are similar but often share a stack.
+industrial safety,no shared devices,standard,partial,"Safety components not shared with the agent runtime; sandbox isolation covers tools, not separate hardware."
+industrial safety,emergency shutdown,regulator guidance,partial,"Automatic trip that halts the agent on a detected hazard; halts on guardrail verdicts only, not on process conditions."
+industrial safety,"inspect, maintain and test",regulator guidance,partial,"Periodic proof-testing of guardrails in production; agent evaluations run before release, not continuously."
+application access control,field-level security,product feature,partial,Per-field read or edit rules on data an agent can see; agent data scoping is at file or source level.
+application access control,conditional access risk signal,product feature,partial,"Risk-based sign-in conditions for agent identities; identity risk detections exist, agent risk policy is not documented."
+application access control,conditional access session control,product feature,partial,Forces re-authentication after a set session length for agent sessions; credential lifetimes are the nearest equivalent.
+application access control,continuous access evaluation,product feature,partial,Revokes agent access within minutes on critical events; disabling an agent is manual or scheduled.
+ERP segregation of duties,segregation of duties access risk,product feature,partial,"Rule blocking conflicting capabilities held by one agent identity, such as pay and approve; not documented."
+ERP segregation of duties,access risk analysis in access request,product feature,partial,Simulates an agent's requested tools before granting; access requests exist without risk simulation.
+ERP segregation of duties,mitigating control,product feature,none,"Compensating control linked to a residual risk, with a validity period; no agent equivalent."
+ERP segregation of duties,firefighter ID,product feature,partial,Shared emergency identity with a named owner and controllers for agent break-glass use; not documented.
+ERP segregation of duties,firefighter reason code,product feature,none,Mandatory reason code before emergency agent access; no documented equivalent.
+ERP segregation of duties,firefighter log review,product feature,partial,"Controller approves logs of emergency agent activity; logs exist, a mandatory review does not."
+ERP segregation of duties,access model,product feature,partial,Filter of risky capability combinations that selects affected agents; no agent equivalent of a risk model.
+ERP segregation of duties,control with incident investigation,product feature,partial,"Violations feed permanent incident records assigned to investigators; agent audit logs exist, incident cases do not."
+ERP segregation of duties,provisioning rule,product feature,partial,Blocks assigning conflicting capability pairs to an agent; no documented pair rule for agents.
+ERP segregation of duties,advanced access request workflow,product feature,partial,"Request workflow with conflict analysis before agent tool grants; approval exists, the analysis does not."
+ERP segregation of duties,conflict simulation,product feature,partial,Previews the effect of remediation before a change to agent permissions; evaluations are not policy simulations.
+robotic process automation,attended robot permission limit,product feature,partial,"Agent acting for a user may never exceed that user's rights; on-behalf-of attribution exists, the ceiling is not documented."
+robotic process automation,machine object,product feature,partial,"Key bound to a specific host machine that authorises the robot; key restrictions exist, host binding is not documented."
+robotic process automation,credential store,product feature,partial,Named secret vault limited to assigned folders; vault-backed agent credentials are not documented.
+robotic process automation,credential asset,product feature,partial,Encrypted login values hidden from developers; at-rest encryption of agent secrets is not in the taxonomy.
+robotic process automation,data policy connector grouping,product feature,partial,Connectors in separate groups barred from sharing data; agent tool data-flow groups are not documented.
+API gateway and WAF,geographic match,product feature,partial,"Allow or block requests by caller country or region; inference region exists, caller geography does not."
+API gateway and WAF,bot control,product feature,partial,"Detects automated and AI-agent traffic by behaviour; agent discovery covers registered agents, not unregistered bots."
+API gateway and WAF,OWASP scoring ruleset,product feature,partial,Cumulative threat score across rules triggers an action; runtime score aggregation for agents is not documented.
+API gateway and WAF,bot score,product feature,partial,Probability score usable in rules to challenge automated agent traffic; no agent equivalent is documented.
+feature flags and release controls,guarded rollout,product feature,partial,Progressive rollout that pauses on metric regression; release channels exist without a metric-based pause.
+feature flags and release controls,environment separation,product feature,partial,"Separate targeting and keys per environment, production marked critical; agent environment separation is not documented."
+feature flags and release controls,scheduled flag change,product feature,none,"Future-dated change to agent policy without redeploy; scheduled runs exist, scheduled policy changes do not."
+feature flags and release controls,feature filter,product feature,partial,"Code-evaluated conditions checked on every read; agent runtime conditions exist, code-defined filters are not documented."

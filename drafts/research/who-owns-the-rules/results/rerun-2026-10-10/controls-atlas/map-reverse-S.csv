@@ -1,0 +1,60 @@
+domain,control_type,required_by,agent_equivalent,note
+algorithmic trading,kill functionality,law,partial,"Only scattered switches (Entra blueprint disable, global model kill switch); no mandatory, immediate cancel of all in-flight agent actions."
+algorithmic trading,quick disable of algorithm,regulator guidance,partial,Per-agent disable exists in some platforms; no standard single control that halts one agent everywhere it runs.
+algorithmic trading,maximum order value,law,partial,"Per-action value cap exists only in payment protocols (AP2, ACP); no general cap on value of any tool call."
+algorithmic trading,maximum order volume,law,partial,Count caps on calls and iterations exist; no cap on records changed or items affected per action.
+algorithmic trading,maximum messages limit,law,partial,Request and tool-call rate limits exist; per-recipient outbound message throttles for agents are not documented.
+algorithmic trading,repeated automated execution throttle,law,partial,Loop and iteration limits exist; no throttle on identical repeated actions across runs.
+algorithmic trading,price collar,law,partial,Would bound an action value against a reference (refund within range of order); only fixed amount ranges exist.
+algorithmic trading,market and credit risk limits,law,none,Would be aggregate exposure limits across all agents of a firm; only per-key or per-project spend caps exist.
+algorithmic trading,credit or capital threshold,law,partial,Cumulative budgets exist for spend; no exposure threshold tied to the firm financial position.
+algorithmic trading,erroneous order rejection,law,partial,"Would reject implausible action arguments; MCP schema checks catch malformed input, not implausible values."
+algorithmic trading,post-trade controls,law,partial,"Would reconcile actions taken against what was intended and allow reversal; logs exist, undo is rarely offered."
+algorithmic trading,stress testing,law,partial,Simulation of tools and conversations exists; no required stress test under load or adversarial input before release.
+algorithmic trading,material change review,law,partial,Would require re-authorisation after model or prompt change; publish gates exist but are optional.
+algorithmic trading,pilot phase,regulator guidance,partial,Staged deploy options exist at a few vendors; not required before full release.
+algorithmic trading,firm exclusive control of controls,law,partial,"Managed settings cannot be overridden in places, but are client-side and bypassable on cloud sessions."
+algorithmic trading,annual CEO certification,law,none,Would be a named executive attesting that agent controls work; no vendor feature or protocol field covers this.
+card payments and spend management,real-time authorization webhook,product feature,partial,"Hooks can decide each tool call, but vendors call them best-effort and non-blocking on error."
+card payments and spend management,card-present restriction,product feature,none,"Would bind an action to a physical or channel condition, such as only from a managed device or session type."
+card payments and spend management,lock date,product feature,none,"Would freeze actions in a closed period, for example no ledger writes after month end."
+card payments and spend management,spend limit requests and increase approvals,product feature,partial,Limit increases can need approval in billing consoles; agent-initiated requests for more authority are undefined.
+cloud identity and infrastructure,budget action,product feature,partial,"Budget breach triggers a stop, but not an automatic policy attach or role change on the agent."
+cloud identity and infrastructure,budget action target,product feature,none,"Would pick what a budget breach acts on (an agent, project or tool); caps apply to key or project only."
+cloud identity and infrastructure,deny audit of existing resources,product feature,partial,Would flag already-running agents that violate a new policy; shadow-AI discovery exists but not retroactive checks.
+email and DLP,quarantine,product feature,none,Would hold a flagged response or action in a review queue for release or deletion; guardrails just block or mask.
+email and DLP,redirect,product feature,none,Would reroute a flagged output to a reviewer or alternate recipient rather than block it.
+email and DLP,DLP user override,product feature,none,Would let a user proceed past a block with a recorded justification; agent blocks are final or approval-only.
+email and DLP,DLP user notification and incident report,product feature,partial,Would tell the end user why an agent step was blocked and file a report; runtime alerts go to admins.
+email and DLP,rule test modes,product feature,partial,"Would run a guardrail in audit-only mode before enforcing; a few gateways log-only, most apply at once."
+email and DLP,override precedence,product feature,partial,Precedence among overlapping rules exists in places (deny wins); not consistently defined or documented.
+IT change management,standard change (pre-approved),product feature,partial,Would be a catalogue of pre-approved low-risk agent changes; promotion gates exist but no pre-approval class.
+IT change management,normal change (risk assessment and CAB),product feature,partial,Approval gates on promotion exist; a risk-scored review board for agent changes is not a product feature.
+IT change management,emergency change,product feature,none,Would let an agent policy be changed urgently with after-the-fact review; no documented fast-track with mandatory retrospective.
+IT change management,configuration change decisions documented,standard,partial,Audit logs record settings changes; decision rationale and approver are rarely recorded.
+IT change management,define change types under control,standard,none,"Would classify which agent changes (prompt, tool, model, permission) need which approval; no such change taxonomy."
+industrial safety,SIS independent of BPCS,standard,partial,"Gateways run separate from the agent, but guardrails often share the vendor model, and settings are client-side."
+industrial safety,no shared devices,standard,none,Would forbid sharing infrastructure between the agent and its safety layer; sandbox and agent usually co-reside.
+industrial safety,emergency shutdown,regulator guidance,partial,Would be a physical-style hard stop independent of agent logic; closest are global off switches and revocation.
+industrial safety,"inspect, maintain and test",regulator guidance,partial,"Would be scheduled proof tests of each guardrail; evaluations exist before release, not periodic proof testing."
+industrial safety,risk assessment (HAZOP/LOPA),regulator guidance,partial,Risk rating of AI systems exists in governance tools; no structured per-function hazard analysis tied to layers.
+industrial safety,management of change,regulator guidance,partial,Versioning and rollback exist; formal review of safety impact before each change is not required.
+application access control,continuous access evaluation,product feature,partial,"Would revoke access mid-session when risk changes; token lifetimes and IdP revoke exist, mid-run revocation is unclear."
+application access control,permission set group with muting,product feature,partial,Would let admins subtract one permission from a bundle; deny-wins exists but agent bundles are not mutable.
+ERP segregation of duties,segregation of duties access risk,product feature,none,Would flag one agent holding conflicting tool combinations (create vendor plus approve payment); no such rule exists.
+ERP segregation of duties,mitigating control,product feature,none,Would record accepted conflicting access with a compensating control; no agent equivalent.
+ERP segregation of duties,periodic review of user access and SoD,product feature,partial,Access certification covers agent identities in Entra and Credo; SoD content of the review is missing.
+ERP segregation of duties,firefighter ID,product feature,none,Would be an emergency elevated agent identity with reason code and logged use; none documented.
+ERP segregation of duties,firefighter reason code,product feature,none,Would require a stated reason before elevated agent use; no equivalent.
+ERP segregation of duties,firefighter log review,product feature,none,"Would require review of an elevated session after the fact; logs exist, mandated review does not."
+ERP segregation of duties,conflict simulation,product feature,none,Would simulate a permission change for conflicts before granting it to an agent; only tool simulations exist.
+ERP segregation of duties,control with incident investigation,product feature,none,Would tie each rule to an incident record when breached; logs are not linked to control owners.
+robotic process automation,attended robot permission limit,product feature,partial,Limits what a person-supervised bot may do; agent run modes partly mirror but are not permission-bound.
+robotic process automation,queue retry limit,product feature,partial,"Would cap retries of a failed action; model retries are routing features, not capped actions."
+API gateway and WAF,web ACL default action,product feature,partial,"Would set default allow or deny for unmatched requests; fail-open or fail-closed is set per guardrail, not per policy."
+feature flags and release controls,percentage rollout,product feature,partial,Would expose a new agent version to a share of users; only A/B and traffic splitting at a few vendors.
+feature flags and release controls,targeting rule,product feature,partial,Would roll out agent behaviour to chosen users or segments; vendor release channels are per organisation.
+feature flags and release controls,guarded rollout,product feature,none,Would stop and roll back a rollout automatically when a metric regresses; none documented for agents.
+feature flags and release controls,scheduled flag change,product feature,none,"Would schedule a policy change for a future time with approval; scheduled runs exist, scheduled policy changes do not."
+feature flags and release controls,kill switch flag,product feature,partial,"Instant central off switch for one capability; global model switch and blueprint disable exist, not per tool."
+feature flags and release controls,switch flag as kill switch,product feature,partial,Same central off switch for any capability; documented for few agent features.

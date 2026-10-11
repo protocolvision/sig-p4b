@@ -200,3 +200,40 @@ Each forecast is a dated, checkable statement with a probability.
 - reach that stops at what the firm owns.
 
 Each point is tied to evidence rows and carries a confidence chip.
+
+## Addendum 3 (11 October 2026, before collection): Phase 4c, a lineage of control regimes in the broader control space
+
+**Question.** Where do agent controls sit in the history of how control regimes mature in other technical systems? How fast are they moving through the same stages?
+
+**Domains:**
+- **APIs:** API keys, then OAuth 1.0 and 2.0, then rate limiting and quotas, then API gateways and management, then fine-grained scopes and policy engines.
+- **Cloud infrastructure:** account credentials, then IAM, then resource policies, then organisation-wide policies (service control policies), then permission boundaries, then policy-as-code and automated guardrails.
+- **Network security:** packet filters, then stateful firewalls, then application firewalls and intrusion prevention, then next-generation firewalls, then zero trust.
+- **Industrial machinery and process safety:** hard-wired interlocks and emergency stops, then programmable safety systems (IEC 61508/61511), then industrial cybersecurity (ISA/IEC 62443).
+- **Water and wastewater systems:** telemetry and supervisory control (SCADA), then operator certification and safety rules, then mandated cybersecurity and risk assessments (e.g. US America's Water Infrastructure Act 2018 risk and resilience assessments, EPA guidance, EU NIS2 for drinking water).
+
+**Data.** Dated milestones from primary or authoritative sources:
+- standards bodies' publication dates;
+- RFC dates;
+- vendor launch announcements;
+- laws and regulator rules.
+
+Each milestone records:
+- the stage it marks, on the Phase 2b sophistication scale (1 static rule, 2 classifier, 3 context or policy-aware, 4 identity- or actor-aware, 5 central runtime policy engine);
+- whether it was a product feature, an industry standard or a legal requirement;
+- a verbatim quote of 40 words or fewer, with URL, stored path and date.
+
+**Measures.**
+- For each domain, years from the first stage-1 control to the first stage-3, 4 and 5 controls.
+- Years from the first control to the first binding legal requirement.
+- How the agent timeline from Phase 2b compares on the same scale.
+
+**Map.** All domains, agents included, are placed on two axes:
+- determinism of enforcement (deterministic to probabilistic);
+- reach (owned systems only to beyond the owner's systems).
+
+The axis values for each domain's mature controls come from Phase 4b coding, extended to these domains.
+
+**Limits.**
+- Milestone dates mark first availability, not adoption.
+- Stage assignments are judgements, coded by two coders with Opus adjudication.

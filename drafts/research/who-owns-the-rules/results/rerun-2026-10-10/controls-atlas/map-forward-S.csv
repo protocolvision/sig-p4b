@@ -1,0 +1,155 @@
+agent_category,domain,analogue,match,reason
+Harmful and off-limits content,algorithmic trading,restricted-security block,partial,"Both deny named items, but trading lists are exact instruments; content topics need semantic judgement."
+Harmful and off-limits content,card payments and spend management,merchant category block/allow,partial,"Category deny-list on spend; agent topics are judged on meaning, not a fixed code."
+Harmful and off-limits content,cloud identity and infrastructure,(no analogue),none,Cloud policy does not inspect what a service says.
+Harmful and off-limits content,email and DLP,mail flow rule,direct,Keyword and pattern rules on message content map to word and topic blocklists.
+Harmful and off-limits content,IT change management,(no analogue),none,Change control does not judge content.
+Harmful and off-limits content,industrial safety,(no analogue),none,"Safety systems act on process state, not meaning."
+Harmful and off-limits content,application access control,(no analogue),none,Role grants do not inspect content.
+Harmful and off-limits content,ERP segregation of duties,(no analogue),none,"SoD concerns who holds duties, not what is said."
+Harmful and off-limits content,robotic process automation,(no analogue),none,Bot permissions do not inspect content.
+Harmful and off-limits content,API gateway and WAF,LLM content safety policy,direct,Gateway policy scores prompts and responses against safety categories.
+Harmful and off-limits content,feature flags and release controls,(no analogue),none,"Flags target users, not content."
+Prompt attacks and untrusted input,algorithmic trading,erroneous order rejection,partial,Rejects malformed input before acting; does not detect adversarial intent.
+Prompt attacks and untrusted input,card payments and spend management,(no analogue),none,No instruction-hijack analogue in card rules.
+Prompt attacks and untrusted input,cloud identity and infrastructure,(no analogue),none,No analogue.
+Prompt attacks and untrusted input,email and DLP,(no analogue),none,Mail rules do not detect instruction injection.
+Prompt attacks and untrusted input,IT change management,(no analogue),none,No analogue.
+Prompt attacks and untrusted input,industrial safety,(no analogue),none,No analogue.
+Prompt attacks and untrusted input,application access control,(no analogue),none,Fixed roles have no instructions to override.
+Prompt attacks and untrusted input,ERP segregation of duties,(no analogue),none,No analogue.
+Prompt attacks and untrusted input,robotic process automation,(no analogue),none,Bots run fixed scripts; no injectable text.
+Prompt attacks and untrusted input,API gateway and WAF,AI Security for Apps,direct,Gateway or WAF prompt-injection and jailbreak screening is the same control.
+Prompt attacks and untrusted input,feature flags and release controls,(no analogue),none,No analogue.
+Sensitive data in prompts and outputs,algorithmic trading,(no analogue),none,No analogue.
+Sensitive data in prompts and outputs,card payments and spend management,(no analogue),none,"Card controls limit amounts, not data content."
+Sensitive data in prompts and outputs,cloud identity and infrastructure,(no analogue),none,Cloud IAM does not scan payload content.
+Sensitive data in prompts and outputs,email and DLP,DLP block / block with override / audit,direct,"Pattern detection of PII or secrets in outbound content, then block or mask."
+Sensitive data in prompts and outputs,IT change management,(no analogue),none,No analogue.
+Sensitive data in prompts and outputs,industrial safety,(no analogue),none,No analogue.
+Sensitive data in prompts and outputs,application access control,field-level security,partial,"Restricts fields by role; agent rule triggers on content, not field."
+Sensitive data in prompts and outputs,ERP segregation of duties,(no analogue),none,No analogue.
+Sensitive data in prompts and outputs,robotic process automation,data policy connector grouping,partial,Separates business and non-business data connectors; no content scanning.
+Sensitive data in prompts and outputs,API gateway and WAF,AI Security for Apps,partial,Gateway rules can inspect payloads for sensitive data; coverage varies.
+Sensitive data in prompts and outputs,feature flags and release controls,(no analogue),none,No analogue.
+Answer accuracy and presentation,algorithmic trading,erroneous order rejection,partial,"Sanity check rejects implausible output; trading uses numeric bounds, not groundedness."
+Answer accuracy and presentation,card payments and spend management,(no analogue),none,No analogue.
+Answer accuracy and presentation,cloud identity and infrastructure,(no analogue),none,No analogue.
+Answer accuracy and presentation,email and DLP,(no analogue),none,No analogue.
+Answer accuracy and presentation,IT change management,(no analogue),none,No analogue.
+Answer accuracy and presentation,industrial safety,(no analogue),none,No analogue.
+Answer accuracy and presentation,application access control,(no analogue),none,No analogue.
+Answer accuracy and presentation,ERP segregation of duties,(no analogue),none,No analogue.
+Answer accuracy and presentation,robotic process automation,queue item schema,partial,"Schema check on work items; agents add groundedness, which is probabilistic."
+Answer accuracy and presentation,API gateway and WAF,API schema validation,direct,Schema validation of payloads matches JSON schema checks on output.
+Answer accuracy and presentation,feature flags and release controls,(no analogue),none,No analogue.
+Agent tools and actions,algorithmic trading,price collar,direct,Pre-trade check on each action against fixed bounds; tool allow-lists and approvals are the same idea.
+Agent tools and actions,card payments and spend management,real-time authorization webhook,direct,"Per-transaction decision point, as with per-tool approval and mandates."
+Agent tools and actions,cloud identity and infrastructure,Azure Policy deny effect,direct,Deny of specific actions by deterministic policy.
+Agent tools and actions,email and DLP,moderation (approval),partial,"Human approval before send; applies to messages, not arbitrary tool calls."
+Agent tools and actions,IT change management,normal change (risk assessment and CAB),direct,Named human approval before a consequential action.
+Agent tools and actions,industrial safety,emergency shutdown,partial,Independent layer that stops actions; agent equivalents are rarely independent.
+Agent tools and actions,application access control,permission set,direct,"Granted capabilities by named permission, like tool allow-lists."
+Agent tools and actions,ERP segregation of duties,segregation of duties access risk,partial,Checks conflicting rights; agents have no conflicting-tool-combination rules.
+Agent tools and actions,robotic process automation,connector action control,direct,"Block or allow specific connectors and actions, as with tool and MCP allow-lists."
+Agent tools and actions,API gateway and WAF,custom rule,partial,Rule-by-request matching; agent tool calls need argument-level matching.
+Agent tools and actions,feature flags and release controls,kill switch flag,partial,Turns a capability off centrally; few agent tools offer this.
+Autonomy and human handover,algorithmic trading,kill functionality,partial,Stops the whole algorithm; agent run modes and takeover are weaker and not mandated.
+Autonomy and human handover,card payments and spend management,expense approval policy,partial,"Approval thresholds resemble escalation, but are per expense not per dialogue."
+Autonomy and human handover,cloud identity and infrastructure,(no analogue),none,No analogue.
+Autonomy and human handover,email and DLP,moderation (approval),partial,Hold for a person before release resembles human takeover and review gates.
+Autonomy and human handover,IT change management,emergency change,partial,Fast-track with oversight resembles run modes; not run-state control.
+Autonomy and human handover,industrial safety,emergency shutdown,partial,Shutdown state resembles task cancellation; not graded autonomy.
+Autonomy and human handover,application access control,(no analogue),none,Access rules have no run-mode concept.
+Autonomy and human handover,ERP segregation of duties,workflow approval of access requests,partial,"Human approval workflow, but on access, not live runs."
+Autonomy and human handover,robotic process automation,attended robot permission limit,partial,Attended versus unattended mode resembles supervised versus auto modes.
+Autonomy and human handover,API gateway and WAF,(no analogue),none,No analogue.
+Autonomy and human handover,feature flags and release controls,kill switch flag,partial,"Central off switch, but no graded autonomy."
+Data and files the AI can reach,algorithmic trading,(no analogue),none,No analogue.
+Data and files the AI can reach,card payments and spend management,(no analogue),none,No analogue.
+Data and files the AI can reach,cloud identity and infrastructure,permissions boundary,partial,Limits reachable resources by IAM; agent file and knowledge scoping adds ignore lists.
+Data and files the AI can reach,email and DLP,(no analogue),none,Mail rules do not scope data sources.
+Data and files the AI can reach,IT change management,(no analogue),none,No analogue.
+Data and files the AI can reach,industrial safety,(no analogue),none,No analogue.
+Data and files the AI can reach,application access control,field-level security,direct,"Restricts reachable records and fields, as knowledge-base scoping does."
+Data and files the AI can reach,ERP segregation of duties,(no analogue),none,No analogue.
+Data and files the AI can reach,robotic process automation,folder,direct,Scopes resources a bot can reach; maps to filesystem boundaries.
+Data and files the AI can reach,API gateway and WAF,(no analogue),none,No analogue.
+Data and files the AI can reach,feature flags and release controls,(no analogue),none,No analogue.
+"Identity, credentials and access rights",algorithmic trading,trader permission block,direct,Per-person and per-system permission gating matches agent identity and role grants.
+"Identity, credentials and access rights",card payments and spend management,(no analogue),none,"Card controls attach to the instrument, not an identity system."
+"Identity, credentials and access rights",cloud identity and infrastructure,service control policy,direct,Organisation-wide ceilings on identities match SCP-style limits on AI service use.
+"Identity, credentials and access rights",email and DLP,(no analogue),none,No analogue.
+"Identity, credentials and access rights",IT change management,(no analogue),none,No analogue.
+"Identity, credentials and access rights",industrial safety,(no analogue),none,No analogue.
+"Identity, credentials and access rights",application access control,conditional access for agent identities,direct,"Conditional Access applies to agent identities, same mechanism."
+"Identity, credentials and access rights",ERP segregation of duties,workflow approval of access requests,direct,Access request approval matches agent access packages and multi-stage approval.
+"Identity, credentials and access rights",robotic process automation,unattended robot account,direct,Non-human account with scoped roles and credentials.
+"Identity, credentials and access rights",API gateway and WAF,validate-jwt policy,direct,Token validation of caller identity.
+"Identity, credentials and access rights",feature flags and release controls,role-based access to configuration,direct,Who may change flags matches admin rights over AI settings.
+Network destinations,algorithmic trading,(no analogue),none,No analogue.
+Network destinations,card payments and spend management,country restriction,partial,Geographic destination rule; agents use host and domain lists.
+Network destinations,cloud identity and infrastructure,Azure Policy deny effect,partial,Can deny network and region settings; not per-request egress.
+Network destinations,email and DLP,redirect,partial,Recipient-domain routing resembles destination control.
+Network destinations,IT change management,(no analogue),none,No analogue.
+Network destinations,industrial safety,(no analogue),none,No analogue.
+Network destinations,application access control,conditional access network location,direct,Location and network conditions match IP allow-lists.
+Network destinations,ERP segregation of duties,(no analogue),none,No analogue.
+Network destinations,robotic process automation,data policy connector grouping,partial,Controls which services connect; not host-level egress.
+Network destinations,API gateway and WAF,IP set match,direct,IP and geo rules match IP and domain allow-lists.
+Network destinations,feature flags and release controls,(no analogue),none,No analogue.
+"Model choice, routing and caching",algorithmic trading,(no analogue),none,No analogue.
+"Model choice, routing and caching",card payments and spend management,(no analogue),none,No analogue.
+"Model choice, routing and caching",cloud identity and infrastructure,service control policy,partial,Restricting services or regions resembles model allow-lists.
+"Model choice, routing and caching",email and DLP,(no analogue),none,No analogue.
+"Model choice, routing and caching",IT change management,(no analogue),none,No analogue.
+"Model choice, routing and caching",industrial safety,(no analogue),none,No analogue.
+"Model choice, routing and caching",application access control,(no analogue),none,No analogue.
+"Model choice, routing and caching",ERP segregation of duties,(no analogue),none,No analogue.
+"Model choice, routing and caching",robotic process automation,(no analogue),none,No analogue.
+"Model choice, routing and caching",API gateway and WAF,(no analogue),none,No analogue.
+"Model choice, routing and caching",feature flags and release controls,percentage rollout,direct,Weighted routing and traffic splitting match percentage targeting.
+"Usage, spend and rate limits",algorithmic trading,maximum order value,direct,"Pre-trade caps on value, volume and messages match token, spend and rate caps."
+"Usage, spend and rate limits",card payments and spend management,spending limit by interval,direct,Spend per interval and per authorization match budgets and per-transaction caps.
+"Usage, spend and rate limits",cloud identity and infrastructure,budget action,direct,Budgets and quotas with automated stop match hard spend limits.
+"Usage, spend and rate limits",email and DLP,(no analogue),none,No throttle in mail-flow set.
+"Usage, spend and rate limits",IT change management,(no analogue),none,No analogue.
+"Usage, spend and rate limits",industrial safety,(no analogue),none,No analogue.
+"Usage, spend and rate limits",application access control,(no analogue),none,No analogue.
+"Usage, spend and rate limits",ERP segregation of duties,(no analogue),none,No analogue.
+"Usage, spend and rate limits",robotic process automation,API rate limit,direct,Orchestrator call limits match rate limits.
+"Usage, spend and rate limits",API gateway and WAF,rate-based rule,direct,"Rate and quota policies, including LLM token limits, are the same control."
+"Usage, spend and rate limits",feature flags and release controls,(no analogue),none,No analogue.
+"Logs, traces and audit records",algorithmic trading,real-time monitoring,direct,Monitoring and audit trail of each action matches invocation and audit logs.
+"Logs, traces and audit records",card payments and spend management,(no analogue),none,No analogue.
+"Logs, traces and audit records",cloud identity and infrastructure,deny audit of existing resources,partial,"Audit-mode policy reporting; agent logs record activity, not resource compliance."
+"Logs, traces and audit records",email and DLP,DLP user notification and incident report,direct,Incident reports and notices match runtime alerts.
+"Logs, traces and audit records",IT change management,configuration change decisions documented,direct,Records of decisions match audit records of policy changes.
+"Logs, traces and audit records",industrial safety,"inspect, maintain and test",partial,Test records exist; agent logs are not defined by a standard.
+"Logs, traces and audit records",application access control,(no analogue),none,No log control in the set.
+"Logs, traces and audit records",ERP segregation of duties,firefighter log review,partial,Logs reviewed afterwards; agents record but rarely require review.
+"Logs, traces and audit records",robotic process automation,orchestrator audit trail,direct,Audit trail of robot actions matches agent action logs.
+"Logs, traces and audit records",API gateway and WAF,(no analogue),none,No log control in the set.
+"Logs, traces and audit records",feature flags and release controls,configuration snapshot,partial,"Records config state, not runtime activity."
+"Stored data: retention, training use and encryption",algorithmic trading,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",card payments and spend management,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",cloud identity and infrastructure,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",email and DLP,quarantine,partial,"Holding messages resembles retention, but no training-use analogue."
+"Stored data: retention, training use and encryption",IT change management,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",industrial safety,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",application access control,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",ERP segregation of duties,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",robotic process automation,tenant isolation,partial,Separates tenant data; training-use and retention have no analogue.
+"Stored data: retention, training use and encryption",API gateway and WAF,(no analogue),none,No analogue.
+"Stored data: retention, training use and encryption",feature flags and release controls,(no analogue),none,No analogue.
+"AI inventory, lifecycle and policy management",algorithmic trading,pre-deployment testing and authorisation,direct,"Authorisation, testing and change review before an algorithm goes live match publish gates."
+"AI inventory, lifecycle and policy management",card payments and spend management,spend limit requests and increase approvals,partial,Approved limit changes resemble policy change control; no inventory.
+"AI inventory, lifecycle and policy management",cloud identity and infrastructure,Azure Policy deny effect,partial,Guardrails on what may be created resemble policy packs and release gates.
+"AI inventory, lifecycle and policy management",email and DLP,rule test modes,partial,Test before enforce resembles pre-release evaluation.
+"AI inventory, lifecycle and policy management",IT change management,standard change (pre-approved),direct,Change types and approval match promotion gates and rollback.
+"AI inventory, lifecycle and policy management",industrial safety,management of change,direct,Formal change management and risk assessment match lifecycle controls.
+"AI inventory, lifecycle and policy management",application access control,required user assignment,partial,Controls who is assigned an app; no model inventory or risk rating.
+"AI inventory, lifecycle and policy management",ERP segregation of duties,periodic review of user access and SoD,partial,Periodic certification resembles access reviews; agents add shadow-AI discovery.
+"AI inventory, lifecycle and policy management",robotic process automation,environment,partial,"Separate environments with roles resemble dev, test and prod stages."
+"AI inventory, lifecycle and policy management",API gateway and WAF,(no analogue),none,No lifecycle control in the gateway set.
+"AI inventory, lifecycle and policy management",feature flags and release controls,release pipeline,direct,"Environments, approvals, rollout and kill switch match agent release channels."
