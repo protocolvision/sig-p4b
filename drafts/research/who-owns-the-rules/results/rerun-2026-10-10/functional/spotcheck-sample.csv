@@ -1,0 +1,61 @@
+n,draw,doc_id,employer,title,department,onet_use,fn,fn_src
+1,universe-weighted,Pworkday_cisco_2017474,Cisco Systems,"Software Engineering Technical Leader, Security Officer / DevSecOps (BLR G11)",,15-1252.00,security,title
+2,universe-weighted,Pworkday_leidos_R-00193172,Leidos Holdings,Last Mile Fill Device Test Engineer,,17-2072.00,manufacturing/field,onet
+3,universe-weighted,Pworkday_republic_R-186084,Republic Services,Driver - CDL (B)-2,,53-3032.00,operations and supply chain,onet
+4,universe-weighted,Pworkday_att_R-123864,AT&T,Bilingual Spanish Business Sales Representative – Territory Accounts,,41-4012.00,sales,title
+5,universe-weighted,Pworkday_cnx_R1768370,Concentrix,Partner Success Leader,,11-2022.00,sales,onet
+6,universe-weighted,Pworkday_statestreet_R-793913,State Street,Senior Data Security Architect,,15-1212.00,security,title
+7,universe-weighted,Pworkday_analogdevices_R265300,Analog Devices,"Analyst, Manufacturing IT",,15-1211.00,IT and infrastructure,onet
+8,universe-weighted,Pworkday_micron_JR87680,Micron Technology,"Dry Etch Principal Engineer/ MTS Lead, Process Development, Advance NAND",,17-2071.00,manufacturing/field,onet
+9,universe-weighted,Pworkday_baxter_JR - 211357,Baxter International,Lead Maintenance Tech,,49-9071.00,manufacturing/field,onet
+10,universe-weighted,Pworkday_kohls_R478555,Kohl's,Seasonal Stockroom Operations Associate,,53-7065.00,operations and supply chain,onet
+11,universe-weighted,Pworkday_jabil_J2452584,Jabil,CVG300 Conversions Assembler I - 404,,51-2092.00,manufacturing/field,onet
+12,universe-weighted,Pgreenhouse_databricks_8649279002,Databricks,Staff Software Engineer- Foundation Model Inference,Engineering,15-1252.00,software engineering,title
+13,universe-weighted,Pworkday_gevernova_R5053518,GE Vernova,Senior Subsystem Integration Engineer,,17-2199.00,manufacturing/field,onet
+14,universe-weighted,Pworkday_globalhr_01874913,RTX,"Machine Cell Operator I, 2nd Shift (Onsite)",,51-9161.00,manufacturing/field,onet
+15,universe-weighted,Pworkday_jabil_J2465373,Jabil,ME Assistant Manager,,11-1021.00,operations and supply chain,onet
+16,universe-weighted,Pworkday_target_R0000475539,Target,Fulfillment Operations Team Leader,,53-1042.00,operations and supply chain,onet
+17,universe-weighted,Pworkday_gilead_R0055816,Gilead Sciences,"Sr Director, Clinical Development (MD)",,29-1229.00,healthcare/clinical,onet
+18,universe-weighted,Pworkday_micron_JR110690,Micron Technology,"Senior Technician, MTB DRY ETCH",,49-2094.00,manufacturing/field,onet
+19,universe-weighted,Pworkday_globalhr_01872715,RTX,Avionics Computer Systems Engineering Co-op (Summer/Fall 2027) - Onsite,,17-2011.00,manufacturing/field,onet
+20,universe-weighted,Pworkday_pfizer_4964822,Pfizer,"Dermatology Area Business Manager - Los Angeles, CA",,41-4011.00,sales,onet
+21,universe-weighted,Pworkday_kohls_R473084,Kohl's,Full-Time Store Merchandising Supervisor,,41-1011.00,sales,onet
+22,universe-weighted,Pgreenhouse_netskope_8176475,Netskope,Regional Sales Manager,Sales Representative,41-1012.00,sales,title
+23,universe-weighted,Psmartrecruiters_servicenow_744000143028899,ServiceNow,"Mgr, Software Engrg Mgmt","Engineering, Infrastructure and Operations",11-3021.00,software engineering,title
+24,universe-weighted,Pworkday_cvshealth_R1070317,CVS Health,Pharmacy Manager,,29-1051.00,healthcare/clinical,onet
+25,universe-weighted,Pworkday_davita_R0481237,DaVita,Licensed Practical Nurse LPN,,31-1131.00,healthcare/clinical,onet
+26,universe-weighted,Pworkday_danaher_R1318434,Danaher,Sourcing Leader – Supplier Performance Management,,13-1023.00,operations and supply chain,onet
+27,universe-weighted,Pworkday_target_R0000472914,Target,"General Merchandise, Closing, Fulfillment (T2757)",,53-7065.00,operations and supply chain,onet
+28,universe-weighted,Pgreenhouse_anthropic_5412334008,Anthropic,"Research Engineer, Cybersecurity RL (Reinforcement Learning)",Security,15-1212.00,security,title
+29,universe-weighted,Pworkday_kla_2636762,KLA,Service System Engineer (Mechanical/Optical),,49-9041.00,manufacturing/field,onet
+30,universe-weighted,Pworkday_pfizer_4962593,Pfizer,区域市场经理Local Marketing Manager,,41-3091.00,marketing,title
+31,universe-weighted,Pworkday_motorolasolutions_R67485,Motorola Solutions,QA Lead Engineer,,15-1253.00,software engineering,onet
+32,universe-weighted,Pworkday_stryker_R575001,Stryker,Sewer,,17-2051.00,manufacturing/field,onet
+33,universe-weighted,Psmartrecruiters_sonicautomotive_744000151949960,Sonic Automotive,Technician - Baytown Ford,,49-3023.00,manufacturing/field,onet
+34,universe-weighted,Pgreenhouse_stripe_8104427,Stripe,Partner Development Manager,3514 Global Expansion and LPM Partnerships,41-3091.00,sales,onet
+35,universe-weighted,Pworkday_globalhr_01872182,RTX,"Stage - Hiver 2027 - Analyste de données, Services de pièces de rechange / Internship - Winter 2027 - Data Analyst, Spare Parts Services",,15-2051.00,data and AI/ML,title
+36,universe-weighted,Pworkday_jll_REQ537228,Jones Lang LaSalle,Facilities and Real Estate Data Manager,,13-1199.00,operations and supply chain,onet
+37,universe-weighted,Pworkday_stryker_R574274,Stryker,"OnSite Specialist - Philadelphia, PA",,,other,default
+38,universe-weighted,Pworkday_nvidia_JR2025242,Nvidia,Senior Math Libraries Engineer - LLM Integration and Developer Experience,,15-1252.00,data and AI/ML,title
+39,universe-weighted,Pworkday_leidos_R-00187503,Leidos Holdings,"Offensive Operational Planner, Senior",,55-1019.00,other,onet
+40,universe-weighted,Pworkday_micron_JR90115,Micron Technology,"Engineer, APTD CEM - Advanced Packaging Equipment Engineering",,17-2112.00,manufacturing/field,onet
+41,ai-titled,Pworkday_abbott_31161618,Abbott Laboratories,Instrumentation/Automation Service Engineer I,,17-2071.00,manufacturing/field,onet
+42,ai-titled,Pworkday_danaher_R1312825,Danaher,Advanced Automation Maintenance Technician - PLC exp,,49-9041.00,manufacturing/field,onet
+43,ai-titled,Pgreenhouse_checkr_8257332,Checkr,Senior Machine Learning Engineer,Engineering,15-1252.00,data and AI/ML,title
+44,ai-titled,Pworkday_nvidia_JR2022743,Nvidia,"Senior Software Engineer – Kubernetes AI Foundations, Open Source",,15-1252.00,software engineering,title
+45,ai-titled,Pworkday_intel_JR0286477,Intel,Partner Marketing Strategist - AI ISV,,41-3091.00,marketing,title
+46,ai-titled,Pworkday_ntrs_R154145,Northern Trust,"Cnsltant, Automation Developer",,15-1252.00,software engineering,title
+47,ai-titled,Pworkday_dxctechnology_51586945,DXC Technology,【Data & AI】Project Manager / Project Leader,,11-3021.00,data and AI/ML,title
+48,ai-titled,Pworkday_danaher_R1319475,Danaher,Senior CRS Project & Automation Manager,,11-1021.00,operations and supply chain,onet
+49,ai-titled,Pworkday_cisco_2025726,Cisco Systems,"Product Marketing Manager, AI Infrastructure & Software Ecosystem",,41-4012.00,marketing,title
+50,ai-titled,Pworkday_cisco_2021309,Cisco Systems,AI Solutions Engineer,,15-1252.00,data and AI/ML,title
+51,ai-titled,Pworkday_nvidia_JR2021956,Nvidia,"Senior Systems Software Engineer, Developer Productivity and Cloud Automation - GeForce NOW",,15-1252.00,software engineering,title
+52,ai-titled,Pworkday_homedepot_Req194838,Home Depot,Automation Engineer,,17-2199.05,manufacturing/field,onet
+53,ai-titled,Psmartrecruiters_westerndigital_744000148018831,Western Digital,"Automation Engineer, Manufacturing",,17-2112.03,manufacturing/field,onet
+54,ai-titled,Pworkday_visa_REF080828W,Visa,Senior Staff Software Engineer (Sr. Consultant) - GenAI Enablement,,15-1252.00,software engineering,title
+55,ai-titled,Pgreenhouse_databricks_8860653002,Databricks,Principal Brand Content & AI Search Visibility,Marketing,27-3043.00,marketing,title
+56,ai-titled,Pworkday_paloaltonetworks_JR-021772,Palo Alto Networks,"Sr Director IT Engineering, GTM AI Applications",,11-3021.00,IT and infrastructure,onet
+57,ai-titled,Pworkday_paloaltonetworks_JR-021825,Palo Alto Networks,"Principal AI Product Manager, Enterprise AI",,11-3021.00,data and AI/ML,title
+58,ai-titled,Pworkday_dxctechnology_51584626,DXC Technology,GenAI Engineer / AI Agent Engineer – AI Foundry & Copilot Studio,,15-1252.00,software engineering,onet
+59,ai-titled,Pworkday_intel_JR0287530,Intel,AI Solution Architect Graduate Intern,,15-1299.08,data and AI/ML,title
+60,ai-titled,Pworkday_graybar_R263943,Graybar Electric,Technical Specialist - Industrial Automation,,49-9041.00,manufacturing/field,onet

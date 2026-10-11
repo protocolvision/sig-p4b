@@ -1,0 +1,61 @@
+n,draw,doc_id,employer,title,department,onet_use,fn,fn_src
+1,universe-weighted,Pworkday_att_R-124639,AT&T,Bilingual Spanish Retail Sales Consultant,,41-2031.00,sales,title
+2,universe-weighted,Pworkday_jll_REQ538683,Jones Lang LaSalle,Facilities Coordinator,,37-1011.00,other,onet
+3,universe-weighted,Pworkday_humana_R-415480,Humana,Home Health Speech Language Pathologist,,29-1127.00,healthcare/clinical,onet
+4,universe-weighted,Pworkday_spgi_331961,S&P Global,Market Intelligence Revenue Associate Internship,,41-3091.00,sales,onet
+5,universe-weighted,Pworkday_cdw_R26_00002331,CDW,Lenovo ISG Business Development Manager – Central Majors and Territory,,41-4011.00,sales,title
+6,universe-weighted,Pworkday_nordstrom_R-877278,Nordstrom,Seasonal Retail Sales - Holiday Gift Shop - City Creek Center,,41-2031.00,sales,title
+7,universe-weighted,Pworkday_abbott_31158896,Abbott Laboratories,Account Manager - Infectious Disease Diagnostics - AZ/NM,,41-4011.00,sales,title
+8,universe-weighted,Pworkday_boeing_JR2026518830,Boeing,Boeing Summer 2027 Internship Program (Paid) - Sales and Marketing,,41-9099.00,sales,title
+9,universe-weighted,Pworkday_spartannash_R89144,SpartanNash,BAKERY TEAM MEMBER,,35-2021.00,other,onet
+10,universe-weighted,Pworkday_pacificlife_R17481,Pacific Life,"Director, IAM Platforms & Services",,15-1212.00,security,title
+11,universe-weighted,Pworkday_att_R-123189,AT&T,Retail Sales Consultant,,41-2031.00,sales,title
+12,universe-weighted,Pworkday_henryschein_R134960,Henry Schein,Equipment Coordinator,,43-9061.00,other,onet
+13,universe-weighted,Pworkday_republic_R-181500,Republic Services,HazMat Field Driver/Technician - CDL (A),,53-3032.00,operations and supply chain,onet
+14,universe-weighted,Pworkday_cisco_2024361,Cisco Systems,Security Consulting Engineer,,17-2199.00,manufacturing/field,onet
+15,universe-weighted,Pworkday_allstate_R35165,Allstate,"Managing Engineer, Data Security Engineering (Hybrid OR Remote)",,15-1299.05,IT and infrastructure,onet
+16,universe-weighted,Pworkday_globalhr_01877678,RTX,Senior Information System Owner,,15-1211.00,IT and infrastructure,onet
+17,universe-weighted,Pworkday_tjx_REQ143279,TJX,Retail Merchandise Associate,,41-2031.00,sales,onet
+18,universe-weighted,Pworkday_dover_JR101792,Dover,Senior Hardware Engineer - II,,17-2061.00,software engineering,onet
+19,universe-weighted,Pworkday_kohls_R505114,Kohl's,Seasonal Beauty Advisor - Sephora,,41-9011.00,sales,onet
+20,universe-weighted,Pworkday_micron_JR108849,Micron Technology,PDE HBM Yield Engineering,,17-2112.03,manufacturing/field,onet
+21,universe-weighted,Pworkday_ameriprise_R26_3758,Ameriprise Financial,Senior Lead Auditor,,13-2011.00,finance and accounting,onet
+22,universe-weighted,Pworkday_adobe_R172119,Adobe,"Senior Videographer, Social Creative",,27-4031.00,manufacturing/field,onet
+23,universe-weighted,Pworkday_tjx_REQ166447,TJX,Loss Prevention Detective,,33-9099.02,other,onet
+24,universe-weighted,Psmartrecruiters_abbvie_3743990015545356,AbbVie,Discover Accounting and Finance at AbbVie 2027,,,other,default
+25,universe-weighted,Pworkday_kbr_R2128060,KBR,"Special Operations Performance Dietitian (4/160 SOAR. JBLM, WA)",,29-1031.00,healthcare/clinical,onet
+26,universe-weighted,Pworkday_globalhr_01876478,RTX,Senior Principal Cyber Software Engineer,,15-1252.00,security,title
+27,universe-weighted,Pworkday_jll_REQ539136,Jones Lang LaSalle,Data Quality and Governance Analyst 2,,15-2051.00,data and AI/ML,onet
+28,universe-weighted,Pworkday_centene_1657094,Centene,Field Health Benefit Rep,,41-3091.00,sales,onet
+29,universe-weighted,Pworkday_paloaltonetworks_JR-013321,Palo Alto Networks,Channel Systems Engineer 1,,15-1231.00,IT and infrastructure,onet
+30,universe-weighted,Pworkday_nvidia_JR2026278,Nvidia,"Senior Director, ATE Test Development",,17-2072.00,manufacturing/field,onet
+31,universe-weighted,Pworkday_nvidia_JR2015083,Nvidia,Senior GPU Networking Architect,,15-1241.00,IT and infrastructure,onet
+32,universe-weighted,Pworkday_chewy_R29125,Chewy,Software Engineer II - Python,,15-1252.00,software engineering,title
+33,universe-weighted,Pworkday_cvshealth_R1070796,CVS Health,Store Associate,,41-2031.00,sales,onet
+34,universe-weighted,Pworkday_visa_REF088375W,Visa,Business Development Representative,,41-3091.00,sales,title
+35,universe-weighted,Psmartrecruiters_canva_6000000001375089,Canva,Enterprise Account Executive - UKI,,41-4012.00,sales,title
+36,universe-weighted,Psmartrecruiters_abbvie_3743990015988466,AbbVie,Shift Supervisor - Contamination Control Team,,51-1011.00,manufacturing/field,onet
+37,universe-weighted,Pworkday_statestreet_R-798870,State Street,"Associate FIX Analyst, Charles River Development, Officer",,,other,default
+38,universe-weighted,Pworkday_statestreet_R-798235,State Street,Income Processing - Manager,,13-1199.00,operations and supply chain,onet
+39,universe-weighted,Pworkday_xcelenergy_JR116778,Xcel Energy,DER Interconnection Policy Manager,,19-2041.00,other,onet
+40,universe-weighted,Pworkday_workday_JR-0109107,Workday,"Senior Director, AI and Data Product Management – Data Cloud",,11-3021.00,IT and infrastructure,onet
+41,ai-titled,Pworkday_gevernova_R5051547,GE Vernova,Protection & Control Systems Engineer (GRID AUTOMATION),,17-2071.00,manufacturing/field,onet
+42,ai-titled,Pworkday_amgen_R-225950,Amgen,Test Automation Engineering,,15-1253.00,software engineering,title
+43,ai-titled,Pworkday_gevernova_R5050112,GE Vernova,Automation Operations Leader (f/m/d),,15-1299.09,IT and infrastructure,onet
+44,ai-titled,Psmartrecruiters_servicenow_744000149782419,ServiceNow,Senior Advisory AI Foundry Architect,Sales,15-1299.08,IT and infrastructure,onet
+45,ai-titled,Pgreenhouse_dialpad_8700100002,Dialpad,AI Transformation Engineer,650 - Data,15-2051.00,executive/strategy,title
+46,ai-titled,Pworkday_ntrs_R154145,Northern Trust,"Cnsltant, Automation Developer",,15-1252.00,software engineering,title
+47,ai-titled,Pworkday_fiserv_R-10374510,Fiserv,AI Transformation Consultant,,13-1111.00,executive/strategy,title
+48,ai-titled,Pgreenhouse_block_5431987008,Block,"Staff Machine Learning Engineer (Modeling), Support",11003 Risk - Prod Dev - Square,15-2051.00,data and AI/ML,title
+49,ai-titled,Pworkday_paloaltonetworks_JR-021091,Palo Alto Networks,Senior Product Manager (Prisma AIRS - AI Runtime Security API),,11-3021.00,IT and infrastructure,onet
+50,ai-titled,Pworkday_mastercard_R-280100,Mastercard,Senior Software Engineer (AI),,15-1252.00,software engineering,title
+51,ai-titled,Pworkday_motorolasolutions_R68425,Motorola Solutions,Senior Test Automation Engineer,,15-1253.00,software engineering,title
+52,ai-titled,Pworkday_gevernova_R5046904,GE Vernova,Principal Engineer - AI Engineering,,15-1252.00,software engineering,onet
+53,ai-titled,Pworkday_ghr_26031584,Bank of America,Product Manager - Tech Delivery - GenAI,,11-3021.00,IT and infrastructure,onet
+54,ai-titled,Pworkday_cisco_2022074,Cisco Systems,Software Test Automation Engineer,,15-1253.00,software engineering,title
+55,ai-titled,Pgreenhouse_dialpad_8624613002,Dialpad,Agentic Transformation Advisor,515 - Enterprise Sales,41-3091.00,executive/strategy,title
+56,ai-titled,Pgreenhouse_anthropic_5057647008,Anthropic,"Applied AI Engineer, Enterprise Tech",Applied AI,15-1252.00,data and AI/ML,title
+57,ai-titled,Pworkday_micron_JR111574,Micron Technology,SR. AI Engineer,,15-1212.00,data and AI/ML,title
+58,ai-titled,Pworkday_truist_R0119292,Truist Financial,AWS Solution Architect - Agentic AI & Intelligent Systems,,15-1299.08,sales,title
+59,ai-titled,Pworkday_carrier_30218250,Carrier Global,Agentic AI Engineer Lead,,15-1252.00,data and AI/ML,title
+60,ai-titled,Pworkday_adobe_R165641,Adobe,"Lead Forward Deployed Engineer, Creative AI",,15-1252.00,software engineering,onet

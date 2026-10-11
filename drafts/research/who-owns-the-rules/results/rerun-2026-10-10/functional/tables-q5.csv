@@ -1,0 +1,625 @@
+question,function,measure,value,low,high,n
+Q5,sales,all_weighted:duty_statements_weighted,261355.0328596848,,,54912
+Q5,sales,all_weighted:security_review_per_1000_duties,2.8083281976550234,2.2331185184318216,3.3865294925698053,54912
+Q5,sales,all_weighted:security_review_duty_count_unweighted,162.0,,,54912
+Q5,sales,all_weighted:security_review_posting_share,0.025537399220611812,0.021173190488013555,0.030772876250355886,4418
+Q5,sales,all_weighted:ai_governance_per_1000_duties,0.23339624352994628,0.03929085934488236,0.5584057196408542,54912
+Q5,sales,all_weighted:ai_governance_duty_count_unweighted,13.0,,,54912
+Q5,sales,all_weighted:ai_governance_posting_share,0.0015050727035682556,0.0007020933811516017,0.003223451523707046,4418
+Q5,sales,all_weighted:guardrail_permission_per_1000_duties,0.5272121648245712,0.2924799177410133,0.793716366903731,54912
+Q5,sales,all_weighted:guardrail_permission_duty_count_unweighted,34.0,,,54912
+Q5,sales,all_weighted:guardrail_permission_posting_share,0.0049958897644775254,0.0032661930728954004,0.00763457567353776,4418
+Q5,sales,all_weighted:service_management_per_1000_duties,5.994883046809674,5.023241744577169,7.069841420016775,54912
+Q5,sales,all_weighted:service_management_duty_count_unweighted,319.0,,,54912
+Q5,sales,all_weighted:service_management_posting_share,0.054758254160630265,0.04826118745653111,0.062072930128512206,4418
+Q5,customer service/support,all_weighted:duty_statements_weighted,39442.11797733907,,,8755
+Q5,customer service/support,all_weighted:security_review_per_1000_duties,4.133079659001699,2.649626369149122,5.864408697097856,8755
+Q5,customer service/support,all_weighted:security_review_duty_count_unweighted,35.0,,,8755
+Q5,customer service/support,all_weighted:security_review_posting_share,0.041124540579823544,0.028661868022260284,0.05867883475046182,756
+Q5,customer service/support,all_weighted:ai_governance_per_1000_duties,0.3296177890522621,0.02470133891264453,0.7599119540889031,8755
+Q5,customer service/support,all_weighted:ai_governance_duty_count_unweighted,5.0,,,8755
+Q5,customer service/support,all_weighted:ai_governance_posting_share,0.0035759479214582017,0.0011000280116197645,0.0115601236792062,756
+Q5,customer service/support,all_weighted:guardrail_permission_per_1000_duties,2.281810432675481,1.3147054524495094,3.297747053070862,8755
+Q5,customer service/support,all_weighted:guardrail_permission_duty_count_unweighted,22.0,,,8755
+Q5,customer service/support,all_weighted:guardrail_permission_posting_share,0.026519625364319527,0.0168938063556622,0.0413991202002004,756
+Q5,customer service/support,all_weighted:service_management_per_1000_duties,30.02670563276884,24.622672916421934,35.51198603075059,8755
+Q5,customer service/support,all_weighted:service_management_duty_count_unweighted,268.0,,,8755
+Q5,customer service/support,all_weighted:service_management_posting_share,0.19876150135360876,0.17066143493360206,0.23020407044816754,756
+Q5,marketing,all_weighted:duty_statements_weighted,41535.90981059319,,,9031
+Q5,marketing,all_weighted:security_review_per_1000_duties,4.960312364976848,3.280270022459298,6.887213951115824,9031
+Q5,marketing,all_weighted:security_review_duty_count_unweighted,46.0,,,9031
+Q5,marketing,all_weighted:security_review_posting_share,0.043633205275596824,0.03066117652542823,0.06174381825289861,732
+Q5,marketing,all_weighted:ai_governance_per_1000_duties,0.5777987083649161,0.19718136803428296,1.0510739943921836,9031
+Q5,marketing,all_weighted:ai_governance_duty_count_unweighted,12.0,,,9031
+Q5,marketing,all_weighted:ai_governance_posting_share,0.006919752448641117,0.0028844289128820617,0.0165070451724925,732
+Q5,marketing,all_weighted:guardrail_permission_per_1000_duties,2.7447151148763185,1.5412926550402335,4.103207827812128,9031
+Q5,marketing,all_weighted:guardrail_permission_duty_count_unweighted,30.0,,,9031
+Q5,marketing,all_weighted:guardrail_permission_posting_share,0.027079716550114777,0.01727560590946809,0.0422087998603758,732
+Q5,marketing,all_weighted:service_management_per_1000_duties,3.057428277540251,1.7530206578962406,4.493227210907687,9031
+Q5,marketing,all_weighted:service_management_duty_count_unweighted,27.0,,,9031
+Q5,marketing,all_weighted:service_management_posting_share,0.030686991370530818,0.02012145583225732,0.04653688250086304,732
+Q5,finance and accounting,all_weighted:duty_statements_weighted,84130.72176203625,,,18222
+Q5,finance and accounting,all_weighted:security_review_per_1000_duties,1.7828066032127001,0.9054862656752571,2.854459941476245,18222
+Q5,finance and accounting,all_weighted:security_review_duty_count_unweighted,33.0,,,18222
+Q5,finance and accounting,all_weighted:security_review_posting_share,0.013557385808123148,0.008704243924190341,0.02105896328842077,1489
+Q5,finance and accounting,all_weighted:ai_governance_per_1000_duties,1.1529000997863466,0.41890760333263544,2.0909908537397444,18222
+Q5,finance and accounting,all_weighted:ai_governance_duty_count_unweighted,37.0,,,18222
+Q5,finance and accounting,all_weighted:ai_governance_posting_share,0.006057552571964169,0.003136238348989187,0.011668135214600996,1489
+Q5,finance and accounting,all_weighted:guardrail_permission_per_1000_duties,1.1046978819971494,0.6212969924542961,1.6740220020114236,18222
+Q5,finance and accounting,all_weighted:guardrail_permission_duty_count_unweighted,21.0,,,18222
+Q5,finance and accounting,all_weighted:guardrail_permission_posting_share,0.012684223003767108,0.008023207009125287,0.01999842852747826,1489
+Q5,finance and accounting,all_weighted:service_management_per_1000_duties,6.345779583867329,5.144310998361306,7.5570321096697946,18222
+Q5,finance and accounting,all_weighted:service_management_duty_count_unweighted,118.0,,,18222
+Q5,finance and accounting,all_weighted:service_management_posting_share,0.07152386619206533,0.05919435285751343,0.08618621676550703,1489
+Q5,HR,all_weighted:duty_statements_weighted,23371.654336150936,,,4987
+Q5,HR,all_weighted:security_review_per_1000_duties,2.567048649895672,0.8740640841450874,4.716179030503255,4987
+Q5,HR,all_weighted:security_review_duty_count_unweighted,12.0,,,4987
+Q5,HR,all_weighted:security_review_posting_share,0.022289527476198022,0.011379062167804618,0.04320399210649705,379
+Q5,HR,all_weighted:ai_governance_per_1000_duties,0.5562164035411683,0.08008851701171277,1.2403959351107015,4987
+Q5,HR,all_weighted:ai_governance_duty_count_unweighted,5.0,,,4987
+Q5,HR,all_weighted:ai_governance_posting_share,0.007244423891544863,0.0023081163792828987,0.02249979856432128,379
+Q5,HR,all_weighted:guardrail_permission_per_1000_duties,2.8227081731493944,1.2535036389990164,4.72436130404602,4987
+Q5,HR,all_weighted:guardrail_permission_duty_count_unweighted,14.0,,,4987
+Q5,HR,all_weighted:guardrail_permission_posting_share,0.03119887180774203,0.017652775795949992,0.05456239163226044,379
+Q5,HR,all_weighted:service_management_per_1000_duties,6.973554852793788,4.239958250806723,10.106979678744572,4987
+Q5,HR,all_weighted:service_management_duty_count_unweighted,35.0,,,4987
+Q5,HR,all_weighted:service_management_posting_share,0.06519443437235699,0.044078921491952174,0.09541545118010769,379
+Q5,legal and compliance,all_weighted:duty_statements_weighted,19416.02875211667,,,5048
+Q5,legal and compliance,all_weighted:security_review_per_1000_duties,4.731127810339444,2.5650932302322302,7.413654119191234,5048
+Q5,legal and compliance,all_weighted:security_review_duty_count_unweighted,44.0,,,5048
+Q5,legal and compliance,all_weighted:security_review_posting_share,0.04058813595198248,0.024232634356505765,0.06722208204902043,412
+Q5,legal and compliance,all_weighted:ai_governance_per_1000_duties,2.416434195942021,1.1369642627613936,4.107978312097758,5048
+Q5,legal and compliance,all_weighted:ai_governance_duty_count_unweighted,23.0,,,5048
+Q5,legal and compliance,all_weighted:ai_governance_posting_share,0.023102581461930217,0.011676517818034741,0.04519829478833591,412
+Q5,legal and compliance,all_weighted:guardrail_permission_per_1000_duties,3.603991783460043,1.6975313720792675,5.871647015086753,5048
+Q5,legal and compliance,all_weighted:guardrail_permission_duty_count_unweighted,22.0,,,5048
+Q5,legal and compliance,all_weighted:guardrail_permission_posting_share,0.036280747421099435,0.021022129470740572,0.06191417929102112,412
+Q5,legal and compliance,all_weighted:service_management_per_1000_duties,4.9957224608064905,3.122273356015161,7.124976887979786,5048
+Q5,legal and compliance,all_weighted:service_management_duty_count_unweighted,29.0,,,5048
+Q5,legal and compliance,all_weighted:service_management_posting_share,0.05944808595544603,0.03888572333669607,0.08986693847557613,412
+Q5,IT and infrastructure,all_weighted:duty_statements_weighted,64862.28794634209,,,16631
+Q5,IT and infrastructure,all_weighted:security_review_per_1000_duties,20.336764913223924,16.974626705638666,23.857020891810727,16631
+Q5,IT and infrastructure,all_weighted:security_review_duty_count_unweighted,331.0,,,16631
+Q5,IT and infrastructure,all_weighted:security_review_posting_share,0.1611028978687476,0.1405219222259874,0.18405268453734094,1336
+Q5,IT and infrastructure,all_weighted:ai_governance_per_1000_duties,2.883151896491343,2.041991941446573,3.936830242327125,16631
+Q5,IT and infrastructure,all_weighted:ai_governance_duty_count_unweighted,103.0,,,16631
+Q5,IT and infrastructure,all_weighted:ai_governance_posting_share,0.029114267850323793,0.0206853943829171,0.04083452181997999,1336
+Q5,IT and infrastructure,all_weighted:guardrail_permission_per_1000_duties,10.777214344082802,8.57935761832708,13.18983722255751,16631
+Q5,IT and infrastructure,all_weighted:guardrail_permission_duty_count_unweighted,191.0,,,16631
+Q5,IT and infrastructure,all_weighted:guardrail_permission_posting_share,0.10267651591347086,0.08606717399579147,0.1220630555233338,1336
+Q5,IT and infrastructure,all_weighted:service_management_per_1000_duties,29.634285870502136,25.011858566025275,34.38013199246438,16631
+Q5,IT and infrastructure,all_weighted:service_management_duty_count_unweighted,438.0,,,16631
+Q5,IT and infrastructure,all_weighted:service_management_posting_share,0.18808665131789337,0.16604901890810997,0.21230448466423293,1336
+Q5,security,all_weighted:duty_statements_weighted,33570.981638086494,,,8612
+Q5,security,all_weighted:security_review_per_1000_duties,172.38288221400998,155.64286309589923,190.1114628524206,8612
+Q5,security,all_weighted:security_review_duty_count_unweighted,1614.0,,,8612
+Q5,security,all_weighted:security_review_posting_share,0.6584278129629566,0.6174971984805688,0.6971268149517562,665
+Q5,security,all_weighted:ai_governance_per_1000_duties,3.8396392974347404,2.5597303701841705,5.314924506789446,8612
+Q5,security,all_weighted:ai_governance_duty_count_unweighted,89.0,,,8612
+Q5,security,all_weighted:ai_governance_posting_share,0.03379928961053255,0.021565541988485336,0.052599935496006056,665
+Q5,security,all_weighted:guardrail_permission_per_1000_duties,40.512994817352784,31.334529477535266,50.47855174401575,8612
+Q5,security,all_weighted:guardrail_permission_duty_count_unweighted,404.0,,,8612
+Q5,security,all_weighted:guardrail_permission_posting_share,0.21208761575020393,0.1797490933440634,0.2484816689481561,665
+Q5,security,all_weighted:service_management_per_1000_duties,16.53385145859954,12.51333318942339,21.309581790687158,8612
+Q5,security,all_weighted:service_management_duty_count_unweighted,143.0,,,8612
+Q5,security,all_weighted:service_management_posting_share,0.15228833439258727,0.12448459786849334,0.1849899337516452,665
+Q5,software engineering,all_weighted:duty_statements_weighted,79654.74894526528,,,24048
+Q5,software engineering,all_weighted:security_review_per_1000_duties,15.957868489373539,13.853263972483337,18.19625022380312,24048
+Q5,software engineering,all_weighted:security_review_duty_count_unweighted,443.0,,,24048
+Q5,software engineering,all_weighted:security_review_posting_share,0.12342517925806654,0.10862035380332098,0.13993111275606782,2293
+Q5,software engineering,all_weighted:ai_governance_per_1000_duties,2.046419447294279,1.4799212855090178,2.663944615782892,24048
+Q5,software engineering,all_weighted:ai_governance_duty_count_unweighted,103.0,,,24048
+Q5,software engineering,all_weighted:ai_governance_posting_share,0.01703227602891172,0.011877749797222519,0.02436852083185703,2293
+Q5,software engineering,all_weighted:guardrail_permission_per_1000_duties,7.883274364978897,6.490242842516531,9.35176999261655,24048
+Q5,software engineering,all_weighted:guardrail_permission_duty_count_unweighted,276.0,,,24048
+Q5,software engineering,all_weighted:guardrail_permission_posting_share,0.06524227149679176,0.05444671184506323,0.07800176986159538,2293
+Q5,software engineering,all_weighted:service_management_per_1000_duties,19.397979971454564,16.51941188412311,22.212214706239337,24048
+Q5,software engineering,all_weighted:service_management_duty_count_unweighted,553.0,,,24048
+Q5,software engineering,all_weighted:service_management_posting_share,0.12617559112184074,0.11121670415027,0.14282316165290984,2293
+Q5,data and AI/ML,all_weighted:duty_statements_weighted,36802.45408217766,,,16726
+Q5,data and AI/ML,all_weighted:security_review_per_1000_duties,9.782559463601926,7.759911634023729,12.014178878643929,16726
+Q5,data and AI/ML,all_weighted:security_review_duty_count_unweighted,228.0,,,16726
+Q5,data and AI/ML,all_weighted:security_review_posting_share,0.0776528920840958,0.061884117294522784,0.09702416338632364,1536
+Q5,data and AI/ML,all_weighted:ai_governance_per_1000_duties,10.543235762444702,8.32424834475445,12.931815690797015,16726
+Q5,data and AI/ML,all_weighted:ai_governance_duty_count_unweighted,276.0,,,16726
+Q5,data and AI/ML,all_weighted:ai_governance_posting_share,0.08495933950082679,0.06843494134231683,0.10502391232617961,1536
+Q5,data and AI/ML,all_weighted:guardrail_permission_per_1000_duties,10.787977180087985,8.74552429950365,12.940764622764505,16726
+Q5,data and AI/ML,all_weighted:guardrail_permission_duty_count_unweighted,265.0,,,16726
+Q5,data and AI/ML,all_weighted:guardrail_permission_posting_share,0.09653332002334294,0.07889123389525037,0.11761685817122239,1536
+Q5,data and AI/ML,all_weighted:service_management_per_1000_duties,6.9563913199643395,5.055533893811937,9.111313392493928,16726
+Q5,data and AI/ML,all_weighted:service_management_duty_count_unweighted,160.0,,,16726
+Q5,data and AI/ML,all_weighted:service_management_posting_share,0.05481341148997181,0.04172666616059996,0.07169746737866543,1536
+Q5,operations and supply chain,all_weighted:duty_statements_weighted,172395.5370245791,,,36139
+Q5,operations and supply chain,all_weighted:security_review_per_1000_duties,3.1317319010146347,2.387569259841285,3.8866556075240375,36139
+Q5,operations and supply chain,all_weighted:security_review_duty_count_unweighted,116.0,,,36139
+Q5,operations and supply chain,all_weighted:security_review_posting_share,0.03321119384657409,0.027000121665311242,0.04079115368900233,2724
+Q5,operations and supply chain,all_weighted:ai_governance_per_1000_duties,0.4869827582987125,0.2560247019197646,0.7680042633212082,36139
+Q5,operations and supply chain,all_weighted:ai_governance_duty_count_unweighted,48.0,,,36139
+Q5,operations and supply chain,all_weighted:ai_governance_posting_share,0.004245329852717084,0.0023786326336375668,0.007565858958902056,2724
+Q5,operations and supply chain,all_weighted:guardrail_permission_per_1000_duties,1.2470793168157175,0.8253327846035418,1.7416851834514202,36139
+Q5,operations and supply chain,all_weighted:guardrail_permission_duty_count_unweighted,51.0,,,36139
+Q5,operations and supply chain,all_weighted:guardrail_permission_posting_share,0.012514605662321468,0.008913006871979172,0.01754578616608613,2724
+Q5,operations and supply chain,all_weighted:service_management_per_1000_duties,6.200556014761107,5.278239901913028,7.2137445222412255,36139
+Q5,operations and supply chain,all_weighted:service_management_duty_count_unweighted,225.0,,,36139
+Q5,operations and supply chain,all_weighted:service_management_posting_share,0.06581497076330299,0.05693545220104439,0.0759677643513331,2724
+Q5,manufacturing/field,all_weighted:duty_statements_weighted,269925.8547667869,,,57697
+Q5,manufacturing/field,all_weighted:security_review_per_1000_duties,2.926731545072501,2.410976735240139,3.510871316223647,57697
+Q5,manufacturing/field,all_weighted:security_review_duty_count_unweighted,186.0,,,57697
+Q5,manufacturing/field,all_weighted:security_review_posting_share,0.028855744459445436,0.024449866128207706,0.03402787107478292,4965
+Q5,manufacturing/field,all_weighted:ai_governance_per_1000_duties,0.18897007939841445,0.09184822357477604,0.30674610535709823,57697
+Q5,manufacturing/field,all_weighted:ai_governance_duty_count_unweighted,11.0,,,57697
+Q5,manufacturing/field,all_weighted:ai_governance_posting_share,0.0021903391126550675,0.0012019120034984909,0.003988381947733134,4965
+Q5,manufacturing/field,all_weighted:guardrail_permission_per_1000_duties,0.616947253927813,0.3654971821964435,0.9097076298831771,57697
+Q5,manufacturing/field,all_weighted:guardrail_permission_duty_count_unweighted,39.0,,,57697
+Q5,manufacturing/field,all_weighted:guardrail_permission_posting_share,0.005568960251281794,0.003811162088700336,0.008130879299044033,4965
+Q5,manufacturing/field,all_weighted:service_management_per_1000_duties,5.21175016491243,4.49184478736747,5.991602793996041,57697
+Q5,manufacturing/field,all_weighted:service_management_duty_count_unweighted,323.0,,,57697
+Q5,manufacturing/field,all_weighted:service_management_posting_share,0.04976113873868676,0.043915569066480246,0.05633895708169726,4965
+Q5,healthcare/clinical,all_weighted:duty_statements_weighted,69654.37804171932,,,14002
+Q5,healthcare/clinical,all_weighted:security_review_per_1000_duties,0.14356165112366676,0.0,0.36757712417537497,14002
+Q5,healthcare/clinical,all_weighted:security_review_duty_count_unweighted,2.0,,,14002
+Q5,healthcare/clinical,all_weighted:security_review_posting_share,0.0017335936729230628,0.0004758821329700013,0.006294385467916658,1159
+Q5,healthcare/clinical,all_weighted:ai_governance_per_1000_duties,0.014356599371270828,0.0,0.0452974077002569,14002
+Q5,healthcare/clinical,all_weighted:ai_governance_duty_count_unweighted,1.0,,,14002
+Q5,healthcare/clinical,all_weighted:ai_governance_posting_share,0.00017336461123094,8.202650512629905e-06,0.0036519498116694155,1159
+Q5,healthcare/clinical,all_weighted:guardrail_permission_per_1000_duties,0.8610035456806635,0.37235731311631964,1.4044455052771805,14002
+Q5,healthcare/clinical,all_weighted:guardrail_permission_duty_count_unweighted,12.0,,,14002
+Q5,healthcare/clinical,all_weighted:guardrail_permission_posting_share,0.009530409221355488,0.0053310684885044,0.016981143988455988,1159
+Q5,healthcare/clinical,all_weighted:service_management_per_1000_duties,4.103933938966657,3.0647566641234305,5.262225708812007,14002
+Q5,healthcare/clinical,all_weighted:service_management_duty_count_unweighted,58.0,,,14002
+Q5,healthcare/clinical,all_weighted:service_management_posting_share,0.04695817636823751,0.036188209388380244,0.060731423286986184,1159
+Q5,executive/strategy,all_weighted:duty_statements_weighted,30538.391592418622,,,6836
+Q5,executive/strategy,all_weighted:security_review_per_1000_duties,6.516368434845073,3.5376293272842134,9.874133753416183,6836
+Q5,executive/strategy,all_weighted:security_review_duty_count_unweighted,47.0,,,6836
+Q5,executive/strategy,all_weighted:security_review_posting_share,0.04337925115074442,0.028726916785215564,0.06500491200498494,540
+Q5,executive/strategy,all_weighted:ai_governance_per_1000_duties,2.193888460107122,1.20116610098185,3.458153078895131,6836
+Q5,executive/strategy,all_weighted:ai_governance_duty_count_unweighted,39.0,,,6836
+Q5,executive/strategy,all_weighted:ai_governance_posting_share,0.020052452511067614,0.010931433003720861,0.03650303589506961,540
+Q5,executive/strategy,all_weighted:guardrail_permission_per_1000_duties,2.94694101636254,1.6838437574944891,4.325402245357102,6836
+Q5,executive/strategy,all_weighted:guardrail_permission_duty_count_unweighted,26.0,,,6836
+Q5,executive/strategy,all_weighted:guardrail_permission_posting_share,0.033965640320822076,0.021300472612829916,0.053747895356077706,540
+Q5,executive/strategy,all_weighted:service_management_per_1000_duties,7.169414270868464,4.70354988236949,10.081390676400915,6836
+Q5,executive/strategy,all_weighted:service_management_duty_count_unweighted,47.0,,,6836
+Q5,executive/strategy,all_weighted:service_management_posting_share,0.06423926726433836,0.04588534386934213,0.08924795146024851,540
+Q5,other,all_weighted:duty_statements_weighted,107901.66256027545,,,22509
+Q5,other,all_weighted:security_review_per_1000_duties,3.205774236606801,2.1989560954313263,4.498117498382097,22509
+Q5,other,all_weighted:security_review_duty_count_unweighted,86.0,,,22509
+Q5,other,all_weighted:security_review_posting_share,0.02981650008099944,0.022825658836170378,0.03886328086487315,1816
+Q5,other,all_weighted:ai_governance_per_1000_duties,0.1014696065124963,0.0,0.24905683217308977,22509
+Q5,other,all_weighted:ai_governance_duty_count_unweighted,3.0,,,22509
+Q5,other,all_weighted:ai_governance_posting_share,0.001260963043546273,0.0003658259506427235,0.004336902537896216,1816
+Q5,other,all_weighted:guardrail_permission_per_1000_duties,1.2504315211827701,0.7294441534496161,1.908060716555413,22509
+Q5,other,all_weighted:guardrail_permission_duty_count_unweighted,27.0,,,22509
+Q5,other,all_weighted:guardrail_permission_posting_share,0.012660095661035748,0.008390427276152702,0.019060722232365837,1816
+Q5,other,all_weighted:service_management_per_1000_duties,4.6783554742777085,3.5660313245382156,5.937160937806194,22509
+Q5,other,all_weighted:service_management_duty_count_unweighted,101.0,,,22509
+Q5,other,all_weighted:service_management_posting_share,0.043748319938023326,0.0351303085083269,0.05436135218184139,1816
+Q5,ALL,all_weighted:duty_statements_weighted,1334557.762095572,,,304155
+Q5,ALL,all_weighted:security_review_per_1000_duties,9.011945919734494,8.379665995928535,9.697672841359086,304155
+Q5,ALL,all_weighted:security_review_duty_count_unweighted,3385.0,,,304155
+Q5,ALL,all_weighted:security_review_posting_share,0.0565688126533683,0.05362912424904007,0.059659482237867524,25220
+Q5,ALL,all_weighted:ai_governance_per_1000_duties,1.0008944574306615,0.8697970487424584,1.1355132983495855,304155
+Q5,ALL,all_weighted:ai_governance_duty_count_unweighted,768.0,,,304155
+Q5,ALL,all_weighted:ai_governance_posting_share,0.008869144366185704,0.0077265826471947015,0.010178928234447888,25220
+Q5,ALL,all_weighted:guardrail_permission_per_1000_duties,3.237889792520457,2.920519646610701,3.576294790757419,304155
+Q5,ALL,all_weighted:guardrail_permission_duty_count_unweighted,1434.0,,,304155
+Q5,ALL,all_weighted:guardrail_permission_posting_share,0.02658175165792474,0.02456198216397493,0.028762712443531024,25220
+Q5,ALL,all_weighted:service_management_per_1000_duties,8.568870841568884,8.074741084222735,9.087205619675666,304155
+Q5,ALL,all_weighted:service_management_duty_count_unweighted,2844.0,,,304155
+Q5,ALL,all_weighted:service_management_posting_share,0.07245707567553034,0.06914655583568252,0.07591316699778676,25220
+Q5,sales,existing_weighted:duty_statements_weighted,258336.03285968478,,,51893
+Q5,sales,existing_weighted:security_review_per_1000_duties,2.7753414823410654,2.2087685122663885,3.383700950981157,51893
+Q5,sales,existing_weighted:security_review_duty_count_unweighted,145.0,,,51893
+Q5,sales,existing_weighted:security_review_posting_share,0.025235501576413796,0.020838336145218992,0.03053159531235197,4070
+Q5,sales,existing_weighted:ai_governance_per_1000_duties,0.23225286164274528,0.03866936256536808,0.540017239826707,51893
+Q5,sales,existing_weighted:ai_governance_duty_count_unweighted,12.0,,,51893
+Q5,sales,existing_weighted:ai_governance_posting_share,0.0014815532393317162,0.0006794326038432644,0.0032275783658211733,4070
+Q5,sales,existing_weighted:guardrail_permission_per_1000_duties,0.5024059215628137,0.26750556334607734,0.7791766700101843,51893
+Q5,sales,existing_weighted:guardrail_permission_duty_count_unweighted,26.0,,,51893
+Q5,sales,existing_weighted:guardrail_permission_posting_share,0.004686660958327876,0.0030024423228214056,0.007308715471748393,4070
+Q5,sales,existing_weighted:service_management_per_1000_duties,6.0378447343275194,5.088058869576492,7.148811231467197,51893
+Q5,sales,existing_weighted:service_management_duty_count_unweighted,312.0,,,51893
+Q5,sales,existing_weighted:service_management_posting_share,0.055551194109130994,0.048911758989341574,0.06303215721374508,4070
+Q5,customer service/support,existing_weighted:duty_statements_weighted,38660.11797733906,,,7973
+Q5,customer service/support,existing_weighted:security_review_per_1000_duties,4.19081534140825,2.6398213968472004,5.966923692183784,7973
+Q5,customer service/support,existing_weighted:security_review_duty_count_unweighted,34.0,,,7973
+Q5,customer service/support,existing_weighted:security_review_posting_share,0.04195161404936185,0.02908884772776705,0.06014978489064459,666
+Q5,customer service/support,existing_weighted:ai_governance_per_1000_duties,0.25868580455680584,0.0,0.6672799286046729,7973
+Q5,customer service/support,existing_weighted:ai_governance_duty_count_unweighted,2.0,,,7973
+Q5,customer service/support,existing_weighted:ai_governance_posting_share,0.0030621166448301,0.0008420469592611274,0.011070580548522259,666
+Q5,customer service/support,existing_weighted:guardrail_permission_per_1000_duties,2.2762329990583847,1.29802986893935,3.246934668188364,7973
+Q5,customer service/support,existing_weighted:guardrail_permission_duty_count_unweighted,20.0,,,7973
+Q5,customer service/support,existing_weighted:guardrail_permission_posting_share,0.0269442343999886,0.017038879121079875,0.042359802021657844,666
+Q5,customer service/support,existing_weighted:service_management_per_1000_duties,30.168476638435155,24.588928614072973,35.96326526665759,7973
+Q5,customer service/support,existing_weighted:service_management_duty_count_unweighted,250.0,,,7973
+Q5,customer service/support,existing_weighted:service_management_posting_share,0.20056449097818582,0.17170022113922245,0.23291662283608056,666
+Q5,marketing,existing_weighted:duty_statements_weighted,40649.90981059319,,,8145
+Q5,marketing,existing_weighted:security_review_per_1000_duties,4.920824866674646,3.0386294058747634,6.869372408982164,8145
+Q5,marketing,existing_weighted:security_review_duty_count_unweighted,40.0,,,8145
+Q5,marketing,existing_weighted:security_review_posting_share,0.0431945269241466,0.030055490186628002,0.061711967498941624,650
+Q5,marketing,existing_weighted:ai_governance_per_1000_duties,0.36898962652590295,0.0,0.8445366354885173,8145
+Q5,marketing,existing_weighted:ai_governance_duty_count_unweighted,3.0,,,8145
+Q5,marketing,existing_weighted:ai_governance_posting_share,0.0046269710529322754,0.0015751937240194092,0.013511244612313325,650
+Q5,marketing,existing_weighted:guardrail_permission_per_1000_duties,2.583135853352154,1.4405610930702795,3.8668720978381246,8145
+Q5,marketing,existing_weighted:guardrail_permission_duty_count_unweighted,21.0,,,8145
+Q5,marketing,existing_weighted:guardrail_permission_posting_share,0.026222315572686748,0.016437597703685632,0.04158526721104698,650
+Q5,marketing,existing_weighted:service_management_per_1000_duties,3.0748669743837063,1.708087175389093,4.615896388666666,8145
+Q5,marketing,existing_weighted:service_management_duty_count_unweighted,25.0,,,8145
+Q5,marketing,existing_weighted:service_management_posting_share,0.030846268407455354,0.0200575982874043,0.04715873011712884,650
+Q5,finance and accounting,existing_weighted:duty_statements_weighted,83789.72176203625,,,17881
+Q5,finance and accounting,existing_weighted:security_review_per_1000_duties,1.754258197775838,0.8805487977045312,2.9354925540253474,17881
+Q5,finance and accounting,existing_weighted:security_review_duty_count_unweighted,30.0,,,17881
+Q5,finance and accounting,existing_weighted:security_review_posting_share,0.013320789654617082,0.008505920914628068,0.02080397917871902,1462
+Q5,finance and accounting,existing_weighted:ai_governance_per_1000_duties,0.8950300339644724,0.2414299189099281,1.7410725731707763,17881
+Q5,finance and accounting,existing_weighted:ai_governance_duty_count_unweighted,15.0,,,17881
+Q5,finance and accounting,existing_weighted:ai_governance_posting_share,0.005067634723186389,0.002466813289295056,0.010382026593055604,1462
+Q5,finance and accounting,existing_weighted:guardrail_permission_per_1000_duties,1.0853244076842836,0.5952824082529665,1.6516211955701525,17881
+Q5,finance and accounting,existing_weighted:guardrail_permission_duty_count_unweighted,19.0,,,17881
+Q5,finance and accounting,existing_weighted:guardrail_permission_posting_share,0.01244421313138754,0.00782461306251315,0.019736939998903687,1462
+Q5,finance and accounting,existing_weighted:service_management_per_1000_duties,6.347735800389497,5.202233427211618,7.642980014724077,17881
+Q5,finance and accounting,existing_weighted:service_management_duty_count_unweighted,116.0,,,17881
+Q5,finance and accounting,existing_weighted:service_management_posting_share,0.07165869596148103,0.05927771222327886,0.08638815068419246,1462
+Q5,HR,existing_weighted:duty_statements_weighted,23186.654336150932,,,4802
+Q5,HR,existing_weighted:security_review_per_1000_duties,2.587530431930533,0.8427659426362366,4.740781567185574,4802
+Q5,HR,existing_weighted:security_review_duty_count_unweighted,12.0,,,4802
+Q5,HR,existing_weighted:security_review_posting_share,0.022452184401952437,0.011440765960575893,0.04359441757198364,366
+Q5,HR,existing_weighted:ai_governance_per_1000_duties,0.43126953007922436,0.0,1.1258495458296118,4802
+Q5,HR,existing_weighted:ai_governance_duty_count_unweighted,2.0,,,4802
+Q5,HR,existing_weighted:ai_governance_posting_share,0.005613260648833754,0.0015456715458860104,0.020168889476972162,366
+Q5,HR,existing_weighted:guardrail_permission_per_1000_duties,2.802101535337814,1.23188861177223,4.63376911687848,4802
+Q5,HR,existing_weighted:guardrail_permission_duty_count_unweighted,13.0,,,4802
+Q5,HR,existing_weighted:guardrail_permission_posting_share,0.030865201269209233,0.01734682576121287,0.05433591573357663,366
+Q5,HR,existing_weighted:service_management_per_1000_duties,6.986066690144748,4.233042406104599,10.052549685065255,4802
+Q5,HR,existing_weighted:service_management_duty_count_unweighted,34.0,,,4802
+Q5,HR,existing_weighted:service_management_posting_share,0.06510884507744664,0.04389677449111829,0.0955468016876353,366
+Q5,legal and compliance,existing_weighted:duty_statements_weighted,19231.02875211667,,,4863
+Q5,legal and compliance,existing_weighted:security_review_per_1000_duties,3.9966511717179882,2.0618786292689846,6.2388913507971235,4863
+Q5,legal and compliance,existing_weighted:security_review_duty_count_unweighted,29.0,,,4863
+Q5,legal and compliance,existing_weighted:security_review_posting_share,0.03847016902053635,0.0225398826082706,0.06491165806413103,396
+Q5,legal and compliance,existing_weighted:ai_governance_per_1000_duties,1.607691206982635,0.5412793377160338,2.9000909973729607,4863
+Q5,legal and compliance,existing_weighted:ai_governance_duty_count_unweighted,7.0,,,4863
+Q5,legal and compliance,existing_weighted:ai_governance_posting_share,0.019543532412283262,0.009262424861942028,0.04076689103148709,396
+Q5,legal and compliance,existing_weighted:guardrail_permission_per_1000_duties,3.5346631200148715,1.6845126713429037,5.680451798964874,4863
+Q5,legal and compliance,existing_weighted:guardrail_permission_duty_count_unweighted,20.0,,,4863
+Q5,legal and compliance,existing_weighted:guardrail_permission_posting_share,0.03538345134860164,0.020261977266731363,0.0610864271253447,396
+Q5,legal and compliance,existing_weighted:service_management_per_1000_duties,4.939782065801236,2.9954993342284584,7.127104133013653,4863
+Q5,legal and compliance,existing_weighted:service_management_duty_count_unweighted,27.0,,,4863
+Q5,legal and compliance,existing_weighted:service_management_posting_share,0.05941721925621022,0.038713215244500235,0.09015536315102214,396
+Q5,IT and infrastructure,existing_weighted:duty_statements_weighted,60288.28794634209,,,12057
+Q5,IT and infrastructure,existing_weighted:security_review_per_1000_duties,20.486385395416356,17.105513360318838,24.522777611816963,12057
+Q5,IT and infrastructure,existing_weighted:security_review_duty_count_unweighted,247.0,,,12057
+Q5,IT and infrastructure,existing_weighted:security_review_posting_share,0.16142600289949957,0.13944380064574033,0.18612403292688487,954
+Q5,IT and infrastructure,existing_weighted:ai_governance_per_1000_duties,1.7417616601871853,0.9022206344508154,2.773184588628325,12057
+Q5,IT and infrastructure,existing_weighted:ai_governance_duty_count_unweighted,21.0,,,12057
+Q5,IT and infrastructure,existing_weighted:ai_governance_posting_share,0.018867872536664814,0.011967539941456957,0.029627544613755094,954
+Q5,IT and infrastructure,existing_weighted:guardrail_permission_per_1000_duties,10.533302597853535,8.182994760624014,13.325989682204275,12057
+Q5,IT and infrastructure,existing_weighted:guardrail_permission_duty_count_unweighted,127.0,,,12057
+Q5,IT and infrastructure,existing_weighted:guardrail_permission_posting_share,0.1006268383462465,0.0831095762721637,0.12134762087301827,954
+Q5,IT and infrastructure,existing_weighted:service_management_per_1000_duties,30.771276584729858,25.669415938585388,36.38638589311786,12057
+Q5,IT and infrastructure,existing_weighted:service_management_duty_count_unweighted,371.0,,,12057
+Q5,IT and infrastructure,existing_weighted:service_management_posting_share,0.19287652088019994,0.16909067397317348,0.21912591927573194,954
+Q5,security,existing_weighted:duty_statements_weighted,31606.981638086494,,,6648
+Q5,security,existing_weighted:security_review_per_1000_duties,166.73729348380795,147.99039907546936,186.45412594898036,6648
+Q5,security,existing_weighted:security_review_duty_count_unweighted,1097.0,,,6648
+Q5,security,existing_weighted:security_review_posting_share,0.6520202072234966,0.6085132562132696,0.6931303991170586,509
+Q5,security,existing_weighted:ai_governance_per_1000_duties,1.5787796798327265,0.606345303538716,2.779121039433685,6648
+Q5,security,existing_weighted:ai_governance_duty_count_unweighted,10.0,,,6648
+Q5,security,existing_weighted:ai_governance_posting_share,0.018822344224518735,0.009967471407028567,0.03526349096097478,509
+Q5,security,existing_weighted:guardrail_permission_per_1000_duties,38.695912792996744,29.12558395391997,50.04219453448082,6648
+Q5,security,existing_weighted:guardrail_permission_duty_count_unweighted,267.0,,,6648
+Q5,security,existing_weighted:guardrail_permission_posting_share,0.19870907715996522,0.16557632407664752,0.2365919998376687,509
+Q5,security,existing_weighted:service_management_per_1000_duties,16.770270245760326,12.389831666011572,21.493123153071412,6648
+Q5,security,existing_weighted:service_management_duty_count_unweighted,118.0,,,6648
+Q5,security,existing_weighted:service_management_posting_share,0.15344406485246806,0.12405961365597373,0.1882923363671263,509
+Q5,software engineering,existing_weighted:duty_statements_weighted,73367.74894526528,,,17761
+Q5,software engineering,existing_weighted:security_review_per_1000_duties,16.07136684951683,13.713594424477957,18.420732010392523,17761
+Q5,software engineering,existing_weighted:security_review_duty_count_unweighted,351.0,,,17761
+Q5,software engineering,existing_weighted:security_review_posting_share,0.12394770263433487,0.1080476627686989,0.14181553759169563,1688
+Q5,software engineering,existing_weighted:ai_governance_per_1000_duties,1.2131628486698791,0.6800569829805776,1.8310281578404342,17761
+Q5,software engineering,existing_weighted:ai_governance_duty_count_unweighted,29.0,,,17761
+Q5,software engineering,existing_weighted:ai_governance_posting_share,0.010957122310735992,0.006760232500221942,0.017713060905425203,1688
+Q5,software engineering,existing_weighted:guardrail_permission_per_1000_duties,7.114028274172943,5.672219502759739,8.647645381170083,17761
+Q5,software engineering,existing_weighted:guardrail_permission_duty_count_unweighted,170.0,,,17761
+Q5,software engineering,existing_weighted:guardrail_permission_posting_share,0.05947546768743511,0.04847551308833607,0.07278058573997287,1688
+Q5,software engineering,existing_weighted:service_management_per_1000_duties,19.24743834958058,16.103718428353766,22.429035105788518,17761
+Q5,software engineering,existing_weighted:service_management_duty_count_unweighted,420.0,,,17761
+Q5,software engineering,existing_weighted:service_management_posting_share,0.12337762681653854,0.10751227000879883,0.1412137617915061,1688
+Q5,data and AI/ML,existing_weighted:duty_statements_weighted,26302.454082177665,,,6226
+Q5,data and AI/ML,existing_weighted:security_review_per_1000_duties,7.908851197513813,5.352017952159352,10.695664012863997,6226
+Q5,data and AI/ML,existing_weighted:security_review_duty_count_unweighted,76.0,,,6226
+Q5,data and AI/ML,existing_weighted:security_review_posting_share,0.06332438657251503,0.044741090528330335,0.08890790300189214,542
+Q5,data and AI/ML,existing_weighted:ai_governance_per_1000_duties,5.893630668097373,3.4086132237558933,8.855605898246877,6226
+Q5,data and AI/ML,existing_weighted:ai_governance_duty_count_unweighted,43.0,,,6226
+Q5,data and AI/ML,existing_weighted:ai_governance_posting_share,0.045855245123453764,0.03041809375625913,0.06857265962685154,542
+Q5,data and AI/ML,existing_weighted:guardrail_permission_per_1000_duties,8.060998192310686,5.65221618981621,10.93469888949108,6226
+Q5,data and AI/ML,existing_weighted:guardrail_permission_duty_count_unweighted,80.0,,,6226
+Q5,data and AI/ML,existing_weighted:guardrail_permission_posting_share,0.07555306449131804,0.055051075907253305,0.102859239063831,542
+Q5,data and AI/ML,existing_weighted:service_management_per_1000_duties,5.665337221579526,3.1991118068545363,8.701104651236665,6226
+Q5,data and AI/ML,existing_weighted:service_management_duty_count_unweighted,53.0,,,6226
+Q5,data and AI/ML,existing_weighted:service_management_posting_share,0.04498155299103694,0.029717660846974126,0.06753971417703168,542
+Q5,operations and supply chain,existing_weighted:duty_statements_weighted,171314.5370245791,,,35058
+Q5,operations and supply chain,existing_weighted:security_review_per_1000_duties,3.093121063137787,2.370722226924029,3.895957639805115,35058
+Q5,operations and supply chain,existing_weighted:security_review_duty_count_unweighted,106.0,,,35058
+Q5,operations and supply chain,existing_weighted:security_review_posting_share,0.033070187036966965,0.026835915639116924,0.04069218745559216,2628
+Q5,operations and supply chain,existing_weighted:ai_governance_per_1000_duties,0.2624042005972174,0.11411543570603874,0.45659607691579485,35058
+Q5,operations and supply chain,existing_weighted:ai_governance_duty_count_unweighted,9.0,,,35058
+Q5,operations and supply chain,existing_weighted:ai_governance_posting_share,0.0034987484210940428,0.0018437837985344067,0.006629329242360146,2628
+Q5,operations and supply chain,existing_weighted:guardrail_permission_per_1000_duties,1.2024134793951342,0.7883689658614134,1.729350524887395,35058
+Q5,operations and supply chain,existing_weighted:guardrail_permission_duty_count_unweighted,42.0,,,35058
+Q5,operations and supply chain,existing_weighted:guardrail_permission_posting_share,0.012141130201976581,0.008582589751660654,0.017149601440316284,2628
+Q5,operations and supply chain,existing_weighted:service_management_per_1000_duties,6.198821200231029,5.28026192994908,7.171208313483442,35058
+Q5,operations and supply chain,existing_weighted:service_management_duty_count_unweighted,218.0,,,35058
+Q5,operations and supply chain,existing_weighted:service_management_posting_share,0.06591756932591113,0.056975461890149,0.07614978240438737,2628
+Q5,manufacturing/field,existing_weighted:duty_statements_weighted,265318.85476678686,,,53090
+Q5,manufacturing/field,existing_weighted:security_review_per_1000_duties,2.845634603090133,2.305124490798466,3.412154678510012,53090
+Q5,manufacturing/field,existing_weighted:security_review_duty_count_unweighted,151.0,,,53090
+Q5,manufacturing/field,existing_weighted:security_review_posting_share,0.027939940685721937,0.023549155842360663,0.033121626065371584,4583
+Q5,manufacturing/field,existing_weighted:ai_governance_per_1000_duties,0.18848230839425706,0.07651798072656597,0.3198843138966459,53090
+Q5,manufacturing/field,existing_weighted:ai_governance_duty_count_unweighted,10.0,,,53090
+Q5,manufacturing/field,existing_weighted:ai_governance_posting_share,0.0021832102922511544,0.001186441113826236,0.004014033439412888,4583
+Q5,manufacturing/field,existing_weighted:guardrail_permission_per_1000_duties,0.6012765847444674,0.3523262077499433,0.8931540090674137,53090
+Q5,manufacturing/field,existing_weighted:guardrail_permission_duty_count_unweighted,32.0,,,53090
+Q5,manufacturing/field,existing_weighted:guardrail_permission_posting_share,0.005443547797446297,0.003688294806424195,0.00802739231099639,4583
+Q5,manufacturing/field,existing_weighted:service_management_per_1000_duties,5.106256467471104,4.385416800989584,5.888833147604846,53090
+Q5,manufacturing/field,existing_weighted:service_management_duty_count_unweighted,271.0,,,53090
+Q5,manufacturing/field,existing_weighted:service_management_posting_share,0.04867008848127072,0.04280877377150336,0.0552875719496949,4583
+Q5,healthcare/clinical,existing_weighted:duty_statements_weighted,69573.37804171932,,,13921
+Q5,healthcare/clinical,existing_weighted:security_review_per_1000_duties,0.1437287911141103,0.0,0.36450951381819996,13921
+Q5,healthcare/clinical,existing_weighted:security_review_duty_count_unweighted,2.0,,,13921
+Q5,healthcare/clinical,existing_weighted:security_review_posting_share,0.001735398813366723,0.0004761520287059922,0.0063038861764800206,1153
+Q5,healthcare/clinical,existing_weighted:ai_governance_per_1000_duties,0.0,0.0,0.0,13921
+Q5,healthcare/clinical,existing_weighted:ai_governance_duty_count_unweighted,0.0,,,13921
+Q5,healthcare/clinical,existing_weighted:ai_governance_posting_share,0.0,0.0,0.0033207662861976382,1153
+Q5,healthcare/clinical,existing_weighted:guardrail_permission_per_1000_duties,0.8620059590917001,0.3648684238701437,1.4155271251642334,13921
+Q5,healthcare/clinical,existing_weighted:guardrail_permission_duty_count_unweighted,12.0,,,13921
+Q5,healthcare/clinical,existing_weighted:guardrail_permission_posting_share,0.009540332958041195,0.005335370799482443,0.01700269897070526,1153
+Q5,healthcare/clinical,existing_weighted:service_management_per_1000_duties,4.094338582671848,3.0335147596970544,5.237568158773482,13921
+Q5,healthcare/clinical,existing_weighted:service_management_duty_count_unweighted,57.0,,,13921
+Q5,healthcare/clinical,existing_weighted:service_management_posting_share,0.04683352741464345,0.036070376014106655,0.06060639870357335,1153
+Q5,executive/strategy,existing_weighted:duty_statements_weighted,29629.391592418622,,,5927
+Q5,executive/strategy,existing_weighted:security_review_per_1000_duties,6.412531638766105,3.5591519111518326,9.932134349067129,5927
+Q5,executive/strategy,existing_weighted:security_review_duty_count_unweighted,38.0,,,5927
+Q5,executive/strategy,existing_weighted:security_review_posting_share,0.04202446470462679,0.027367474974874444,0.06401455047581629,476
+Q5,executive/strategy,existing_weighted:ai_governance_per_1000_duties,1.1811860798989406,0.3304879717109074,2.3032844139003577,5927
+Q5,executive/strategy,existing_weighted:ai_governance_duty_count_unweighted,7.0,,,5927
+Q5,executive/strategy,existing_weighted:ai_governance_posting_share,0.012606952019500106,0.005790582877904148,0.027227449887021686,476
+Q5,executive/strategy,existing_weighted:guardrail_permission_per_1000_duties,2.6998474979792677,1.470904675187474,4.166640015630782,5927
+Q5,executive/strategy,existing_weighted:guardrail_permission_duty_count_unweighted,16.0,,,5927
+Q5,executive/strategy,existing_weighted:guardrail_permission_posting_share,0.03151715346204134,0.019191723579389586,0.051343922264932625,476
+Q5,executive/strategy,existing_weighted:service_management_per_1000_duties,7.254363621393215,4.595349328352604,10.25572372619432,5927
+Q5,executive/strategy,existing_weighted:service_management_duty_count_unweighted,43.0,,,5927
+Q5,executive/strategy,existing_weighted:service_management_posting_share,0.06512655627985071,0.046257154642338656,0.09095914368363658,476
+Q5,other,existing_weighted:duty_statements_weighted,106758.66256027546,,,21366
+Q5,other,existing_weighted:security_review_per_1000_duties,3.043391160312914,1.9718147224464244,4.362647074509347,21366
+Q5,other,existing_weighted:security_review_duty_count_unweighted,65.0,,,21366
+Q5,other,existing_weighted:security_review_posting_share,0.027943665567816856,0.021140870006755835,0.03685307762535732,1718
+Q5,other,existing_weighted:ai_governance_per_1000_duties,0.09318905841873294,0.0,0.23452348628503725,21366
+Q5,other,existing_weighted:ai_governance_duty_count_unweighted,2.0,,,21366
+Q5,other,existing_weighted:ai_governance_posting_share,0.0011588731138935018,0.00031701662588570816,0.004226876928755218,1718
+Q5,other,existing_weighted:guardrail_permission_per_1000_duties,1.2638191301545945,0.7141253101096362,1.909436349184079,21366
+Q5,other,existing_weighted:guardrail_permission_duty_count_unweighted,27.0,,,21366
+Q5,other,existing_weighted:guardrail_permission_posting_share,0.012804616642453437,0.008470717779437954,0.019312692095693407,1718
+Q5,other,existing_weighted:service_management_per_1000_duties,4.728443777923141,3.5801553525117265,5.934634007112735,21366
+Q5,other,existing_weighted:service_management_duty_count_unweighted,101.0,,,21366
+Q5,other,existing_weighted:service_management_posting_share,0.044247727707292975,0.035497552197614794,0.055031760587563726,1718
+Q5,ALL,existing_weighted:duty_statements_weighted,1298013.7620955717,,,267611
+Q5,ALL,existing_weighted:security_review_per_1000_duties,8.524533947084977,7.868423908200334,9.216135686470702,267611
+Q5,ALL,existing_weighted:security_review_duty_count_unweighted,2423.0,,,267611
+Q5,ALL,existing_weighted:security_review_posting_share,0.05413453340021125,0.051177391922238386,0.05725223461969197,21861
+Q5,ALL,existing_weighted:ai_governance_per_1000_duties,0.5699103420970175,0.45160068112900503,0.6968765478244812,267611
+Q5,ALL,existing_weighted:ai_governance_duty_count_unweighted,172.0,,,267611
+Q5,ALL,existing_weighted:ai_governance_posting_share,0.005498622280635623,0.004591399871657406,0.006583918613991472,21861
+Q5,ALL,existing_weighted:guardrail_permission_per_1000_duties,2.9114875864774827,2.6044666075241594,3.2588272427044975,267611
+Q5,ALL,existing_weighted:guardrail_permission_duty_count_unweighted,892.0,,,267611
+Q5,ALL,existing_weighted:guardrail_permission_posting_share,0.023876416653205595,0.021911840164363507,0.0260124490748225,21861
+Q5,ALL,existing_weighted:service_management_per_1000_duties,8.480382423864999,7.956964303973599,9.000039309769209,267611
+Q5,ALL,existing_weighted:service_management_duty_count_unweighted,2416.0,,,267611
+Q5,ALL,existing_weighted:service_management_posting_share,0.07178132025171517,0.06839392834520437,0.07532291714982027,21861
+Q5,sales,ai_titled:duty_statements_weighted,1231.0,,,1231
+Q5,sales,ai_titled:security_review_per_1000_duties,4.061738424045491,0.0,9.44138473642801,1231
+Q5,sales,ai_titled:security_review_duty_count_unweighted,5.0,,,1231
+Q5,sales,ai_titled:security_review_posting_share,0.023809523809523808,0.00812980475522534,0.06766716632338121,126
+Q5,sales,ai_titled:ai_governance_per_1000_duties,0.0,0.0,0.0,1231
+Q5,sales,ai_titled:ai_governance_duty_count_unweighted,0.0,,,1231
+Q5,sales,ai_titled:ai_governance_posting_share,0.0,0.0,0.029586819632536874,126
+Q5,sales,ai_titled:guardrail_permission_per_1000_duties,5.686433793663688,1.8280701637331698,10.300872023293316,1231
+Q5,sales,ai_titled:guardrail_permission_duty_count_unweighted,7.0,,,1231
+Q5,sales,ai_titled:guardrail_permission_posting_share,0.05555555555555555,0.027168409228588992,0.11024209711144381,126
+Q5,sales,ai_titled:service_management_per_1000_duties,4.061738424045491,0.0,13.240066703637453,1231
+Q5,sales,ai_titled:service_management_duty_count_unweighted,5.0,,,1231
+Q5,sales,ai_titled:service_management_posting_share,0.007936507936507936,0.0014023289659406463,0.04358787448195279,126
+Q5,customer service/support,ai_titled:duty_statements_weighted,257.0,,,257
+Q5,customer service/support,ai_titled:security_review_per_1000_duties,3.8910505836575875,0.0,13.218795888399397,257
+Q5,customer service/support,ai_titled:security_review_duty_count_unweighted,1.0,,,257
+Q5,customer service/support,ai_titled:security_review_posting_share,0.04,0.007096050386699169,0.19544472405022525,25
+Q5,customer service/support,ai_titled:ai_governance_per_1000_duties,11.673151750972762,0.0,30.121238723739175,257
+Q5,customer service/support,ai_titled:ai_governance_duty_count_unweighted,3.0,,,257
+Q5,customer service/support,ai_titled:ai_governance_posting_share,0.08,0.02221993369109194,0.2496651212295782,25
+Q5,customer service/support,ai_titled:guardrail_permission_per_1000_duties,7.782101167315175,0.0,25.806451612903224,257
+Q5,customer service/support,ai_titled:guardrail_permission_duty_count_unweighted,2.0,,,257
+Q5,customer service/support,ai_titled:guardrail_permission_posting_share,0.04,0.007096050386699169,0.19544472405022525,25
+Q5,customer service/support,ai_titled:service_management_per_1000_duties,50.583657587548636,19.228468899521534,84.21149026412184,257
+Q5,customer service/support,ai_titled:service_management_duty_count_unweighted,13.0,,,257
+Q5,customer service/support,ai_titled:service_management_posting_share,0.28,0.14283673837381572,0.47576971896558296,25
+Q5,marketing,ai_titled:duty_statements_weighted,849.0,,,849
+Q5,marketing,ai_titled:security_review_per_1000_duties,5.889281507656066,1.0951708091411945,13.049454812546548,849
+Q5,marketing,ai_titled:security_review_duty_count_unweighted,5.0,,,849
+Q5,marketing,ai_titled:security_review_posting_share,0.05128205128205128,0.020120686846503352,0.12456856654052718,78
+Q5,marketing,ai_titled:ai_governance_per_1000_duties,9.422850412249705,2.7582422780379354,17.045939342227733,849
+Q5,marketing,ai_titled:ai_governance_duty_count_unweighted,8.0,,,849
+Q5,marketing,ai_titled:ai_governance_posting_share,0.08974358974358974,0.044152447186411065,0.17384915591030256,78
+Q5,marketing,ai_titled:guardrail_permission_per_1000_duties,9.422850412249705,1.1311897640412099,20.99856648906715,849
+Q5,marketing,ai_titled:guardrail_permission_duty_count_unweighted,8.0,,,849
+Q5,marketing,ai_titled:guardrail_permission_posting_share,0.05128205128205128,0.020120686846503352,0.12456856654052718,78
+Q5,marketing,ai_titled:service_management_per_1000_duties,2.3557126030624262,0.0,6.242783926107399,849
+Q5,marketing,ai_titled:service_management_duty_count_unweighted,2.0,,,849
+Q5,marketing,ai_titled:service_management_posting_share,0.02564102564102564,0.007059945446585375,0.08875440813398978,78
+Q5,finance and accounting,ai_titled:duty_statements_weighted,341.0,,,341
+Q5,finance and accounting,ai_titled:security_review_per_1000_duties,8.797653958944283,0.0,20.930928839994426,341
+Q5,finance and accounting,ai_titled:security_review_duty_count_unweighted,3.0,,,341
+Q5,finance and accounting,ai_titled:security_review_posting_share,0.07407407407407407,0.020554221697383537,0.2336997729073062,27
+Q5,finance and accounting,ai_titled:ai_governance_per_1000_duties,64.51612903225806,19.350200968772544,115.05528070053184,341
+Q5,finance and accounting,ai_titled:ai_governance_duty_count_unweighted,22.0,,,341
+Q5,finance and accounting,ai_titled:ai_governance_posting_share,0.25925925925925924,0.13170208422866778,0.44678930402615685,27
+Q5,finance and accounting,ai_titled:guardrail_permission_per_1000_duties,5.865102639296188,0.0,14.620686331212642,341
+Q5,finance and accounting,ai_titled:guardrail_permission_duty_count_unweighted,2.0,,,341
+Q5,finance and accounting,ai_titled:guardrail_permission_posting_share,0.07407407407407407,0.020554221697383537,0.2336997729073062,27
+Q5,finance and accounting,ai_titled:service_management_per_1000_duties,5.865102639296188,0.0,17.317899491812526,341
+Q5,finance and accounting,ai_titled:service_management_duty_count_unweighted,2.0,,,341
+Q5,finance and accounting,ai_titled:service_management_posting_share,0.037037037037037035,0.006567976533097596,0.1828385393415652,27
+Q5,HR,ai_titled:duty_statements_weighted,185.0,,,185
+Q5,HR,ai_titled:security_review_per_1000_duties,0.0,0.0,0.0,185
+Q5,HR,ai_titled:security_review_duty_count_unweighted,0.0,,,185
+Q5,HR,ai_titled:security_review_posting_share,0.0,0.0,0.22810184305529166,13
+Q5,HR,ai_titled:ai_governance_per_1000_duties,16.216216216216218,0.0,31.25,185
+Q5,HR,ai_titled:ai_governance_duty_count_unweighted,3.0,,,185
+Q5,HR,ai_titled:ai_governance_posting_share,0.23076923076923078,0.08179379092465712,0.5025687399512693,13
+Q5,HR,ai_titled:guardrail_permission_per_1000_duties,5.405405405405405,0.0,20.626652992929195,185
+Q5,HR,ai_titled:guardrail_permission_duty_count_unweighted,1.0,,,185
+Q5,HR,ai_titled:guardrail_permission_posting_share,0.07692307692307693,0.013710066379696325,0.3331453392824736,13
+Q5,HR,ai_titled:service_management_per_1000_duties,5.405405405405405,0.0,18.51851851851852,185
+Q5,HR,ai_titled:service_management_duty_count_unweighted,1.0,,,185
+Q5,HR,ai_titled:service_management_posting_share,0.07692307692307693,0.013710066379696325,0.3331453392824736,13
+Q5,legal and compliance,ai_titled:duty_statements_weighted,177.0,,,177
+Q5,legal and compliance,ai_titled:security_review_per_1000_duties,84.7457627118644,6.405279503105589,183.6806892568348,177
+Q5,legal and compliance,ai_titled:security_review_duty_count_unweighted,15.0,,,177
+Q5,legal and compliance,ai_titled:security_review_posting_share,0.26666666666666666,0.10897276103182811,0.5195088965768675,15
+Q5,legal and compliance,ai_titled:ai_governance_per_1000_duties,90.3954802259887,17.536297640653356,207.43804956035154,177
+Q5,legal and compliance,ai_titled:ai_governance_duty_count_unweighted,16.0,,,177
+Q5,legal and compliance,ai_titled:ai_governance_posting_share,0.4,0.19824228082594664,0.6425355724349229,15
+Q5,legal and compliance,ai_titled:guardrail_permission_per_1000_duties,11.299435028248588,0.0,29.41176470588235,177
+Q5,legal and compliance,ai_titled:guardrail_permission_duty_count_unweighted,2.0,,,177
+Q5,legal and compliance,ai_titled:guardrail_permission_posting_share,0.13333333333333333,0.037360469891359285,0.3788249920651624,15
+Q5,legal and compliance,ai_titled:service_management_per_1000_duties,11.299435028248588,0.0,28.77870780298837,177
+Q5,legal and compliance,ai_titled:service_management_duty_count_unweighted,2.0,,,177
+Q5,legal and compliance,ai_titled:service_management_posting_share,0.06666666666666667,0.011866588606194859,0.29817077552423993,15
+Q5,IT and infrastructure,ai_titled:duty_statements_weighted,4486.0,,,4486
+Q5,IT and infrastructure,ai_titled:security_review_per_1000_duties,18.724921979491754,14.099476787764882,23.2760974652064,4486
+Q5,IT and infrastructure,ai_titled:security_review_duty_count_unweighted,84.0,,,4486
+Q5,IT and infrastructure,ai_titled:security_review_posting_share,0.15915119363395225,0.12568812884722314,0.19949063313676182,377
+Q5,IT and infrastructure,ai_titled:ai_governance_per_1000_duties,18.27909050378957,13.615329982517483,23.117762369937864,4486
+Q5,IT and infrastructure,ai_titled:ai_governance_duty_count_unweighted,82.0,,,4486
+Q5,IT and infrastructure,ai_titled:ai_governance_posting_share,0.15915119363395225,0.12568812884722314,0.19949063313676182,377
+Q5,IT and infrastructure,ai_titled:guardrail_permission_per_1000_duties,14.043691484618815,10.29430785506282,18.2313671847709,4486
+Q5,IT and infrastructure,ai_titled:guardrail_permission_duty_count_unweighted,63.0,,,4486
+Q5,IT and infrastructure,ai_titled:guardrail_permission_posting_share,0.1273209549071618,0.09739169237502951,0.16476874387983342,377
+Q5,IT and infrastructure,ai_titled:service_management_per_1000_duties,14.489522960320999,10.457118239943357,18.72871346477478,4486
+Q5,IT and infrastructure,ai_titled:service_management_duty_count_unweighted,65.0,,,4486
+Q5,IT and infrastructure,ai_titled:service_management_posting_share,0.1273209549071618,0.09739169237502951,0.16476874387983342,377
+Q5,security,ai_titled:duty_statements_weighted,1934.0,,,1934
+Q5,security,ai_titled:security_review_per_1000_duties,265.770423991727,223.5479151682173,306.5557470630678,1934
+Q5,security,ai_titled:security_review_duty_count_unweighted,514.0,,,1934
+Q5,security,ai_titled:security_review_posting_share,0.7631578947368421,0.689606437132478,0.8237353150055905,152
+Q5,security,ai_titled:ai_governance_per_1000_duties,40.33092037228542,27.311732856847836,56.0437979771596,1934
+Q5,security,ai_titled:ai_governance_duty_count_unweighted,78.0,,,1934
+Q5,security,ai_titled:ai_governance_posting_share,0.2631578947368421,0.19961325660556514,0.3383791664701733,152
+Q5,security,ai_titled:guardrail_permission_per_1000_duties,69.28645294725956,50.58659343280702,90.32631901996825,1934
+Q5,security,ai_titled:guardrail_permission_duty_count_unweighted,134.0,,,1934
+Q5,security,ai_titled:guardrail_permission_posting_share,0.42105263157894735,0.3454563929691184,0.500541081389461,152
+Q5,security,ai_titled:service_management_per_1000_duties,12.926577042399172,7.680233816843472,18.675028376513293,1934
+Q5,security,ai_titled:service_management_duty_count_unweighted,25.0,,,1934
+Q5,security,ai_titled:service_management_posting_share,0.13815789473684212,0.09217105465530898,0.20198403615484703,152
+Q5,software engineering,ai_titled:duty_statements_weighted,6098.0,,,6098
+Q5,software engineering,ai_titled:security_review_per_1000_duties,15.08691374221056,11.667139475930115,18.73973157468472,6098
+Q5,software engineering,ai_titled:security_review_duty_count_unweighted,92.0,,,6098
+Q5,software engineering,ai_titled:security_review_posting_share,0.12136752136752137,0.09734613254410296,0.15032930343052928,585
+Q5,software engineering,ai_titled:ai_governance_per_1000_duties,12.135126270908495,8.902551862107599,15.56160383119232,6098
+Q5,software engineering,ai_titled:ai_governance_duty_count_unweighted,74.0,,,6098
+Q5,software engineering,ai_titled:ai_governance_posting_share,0.0905982905982906,0.06993154232788244,0.11660690875981246,585
+Q5,software engineering,ai_titled:guardrail_permission_per_1000_duties,16.890783863561822,13.171877537102588,20.774933720767926,6098
+Q5,software engineering,ai_titled:guardrail_permission_duty_count_unweighted,103.0,,,6098
+Q5,software engineering,ai_titled:guardrail_permission_posting_share,0.13162393162393163,0.10661440065111234,0.1614400302858324,585
+Q5,software engineering,ai_titled:service_management_per_1000_duties,20.826500491964577,16.282064552154612,26.02379874074109,6098
+Q5,software engineering,ai_titled:service_management_duty_count_unweighted,127.0,,,6098
+Q5,software engineering,ai_titled:service_management_posting_share,0.15555555555555556,0.12844238134541522,0.1871630378369252,585
+Q5,data and AI/ML,ai_titled:duty_statements_weighted,10468.0,,,10468
+Q5,data and AI/ML,ai_titled:security_review_per_1000_duties,14.520443255636225,11.746183942004226,17.285219096130064,10468
+Q5,data and AI/ML,ai_titled:security_review_duty_count_unweighted,152.0,,,10468
+Q5,data and AI/ML,ai_titled:security_review_posting_share,0.1111111111111111,0.09301769129640099,0.13221095681009806,990
+Q5,data and AI/ML,ai_titled:ai_governance_per_1000_duties,22.258311043179212,18.710961511768556,26.110583946130205,10468
+Q5,data and AI/ML,ai_titled:ai_governance_duty_count_unweighted,233.0,,,10468
+Q5,data and AI/ML,ai_titled:ai_governance_posting_share,0.17575757575757575,0.1533140721610257,0.20070773574075657,990
+Q5,data and AI/ML,ai_titled:guardrail_permission_per_1000_duties,17.672907909820406,14.80831625868959,20.63085308680004,10468
+Q5,data and AI/ML,ai_titled:guardrail_permission_duty_count_unweighted,185.0,,,10468
+Q5,data and AI/ML,ai_titled:guardrail_permission_posting_share,0.14545454545454545,0.1248628035279731,0.16878721071977015,990
+Q5,data and AI/ML,ai_titled:service_management_per_1000_duties,10.221627818112342,7.869656608429215,12.915673719544492,10468
+Q5,data and AI/ML,ai_titled:service_management_duty_count_unweighted,107.0,,,10468
+Q5,data and AI/ML,ai_titled:service_management_posting_share,0.07777777777777778,0.06267894112183563,0.09614073396522049,990
+Q5,operations and supply chain,ai_titled:duty_statements_weighted,666.0,,,666
+Q5,operations and supply chain,ai_titled:security_review_per_1000_duties,15.015015015015015,1.8791751684042821,33.05847262785062,666
+Q5,operations and supply chain,ai_titled:security_review_duty_count_unweighted,10.0,,,666
+Q5,operations and supply chain,ai_titled:security_review_posting_share,0.09615384615384616,0.041773735183410265,0.20609881861160995,52
+Q5,operations and supply chain,ai_titled:ai_governance_per_1000_duties,58.55855855855856,17.298199610726645,103.83548232234455,666
+Q5,operations and supply chain,ai_titled:ai_governance_duty_count_unweighted,39.0,,,666
+Q5,operations and supply chain,ai_titled:ai_governance_posting_share,0.19230769230769232,0.10795930648521072,0.3189912106919475,52
+Q5,operations and supply chain,ai_titled:guardrail_permission_per_1000_duties,13.513513513513514,3.706884394872179,25.845065660459014,666
+Q5,operations and supply chain,ai_titled:guardrail_permission_duty_count_unweighted,9.0,,,666
+Q5,operations and supply chain,ai_titled:guardrail_permission_posting_share,0.11538461538461539,0.05396895756082726,0.22971918891062051,52
+Q5,operations and supply chain,ai_titled:service_management_per_1000_duties,9.00900900900901,1.30485619628046,19.233091787439605,666
+Q5,operations and supply chain,ai_titled:service_management_duty_count_unweighted,6.0,,,666
+Q5,operations and supply chain,ai_titled:service_management_posting_share,0.07692307692307693,0.03031885429734589,0.18173810682124666,52
+Q5,manufacturing/field,ai_titled:duty_statements_weighted,4530.0,,,4530
+Q5,manufacturing/field,ai_titled:security_review_per_1000_duties,7.72626931567329,5.2400461380724535,10.407037304658681,4530
+Q5,manufacturing/field,ai_titled:security_review_duty_count_unweighted,35.0,,,4530
+Q5,manufacturing/field,ai_titled:security_review_posting_share,0.0855614973262032,0.061257715457408726,0.11829265697378995,374
+Q5,manufacturing/field,ai_titled:ai_governance_per_1000_duties,0.22075055187637968,0.0,0.6866638472243106,4530
+Q5,manufacturing/field,ai_titled:ai_governance_duty_count_unweighted,1.0,,,4530
+Q5,manufacturing/field,ai_titled:ai_governance_posting_share,0.00267379679144385,0.00047213467136140893,0.01498831224607701,374
+Q5,manufacturing/field,ai_titled:guardrail_permission_per_1000_duties,1.1037527593818985,0.2030013771684596,2.3868492132679737,4530
+Q5,manufacturing/field,ai_titled:guardrail_permission_duty_count_unweighted,5.0,,,4530
+Q5,manufacturing/field,ai_titled:guardrail_permission_posting_share,0.0106951871657754,0.004166724031090239,0.02717339309735723,374
+Q5,manufacturing/field,ai_titled:service_management_per_1000_duties,11.479028697571744,8.309746960802608,15.043250756239994,4530
+Q5,manufacturing/field,ai_titled:service_management_duty_count_unweighted,52.0,,,4530
+Q5,manufacturing/field,ai_titled:service_management_posting_share,0.11764705882352941,0.08881551791176628,0.15425353536346864,374
+Q5,healthcare/clinical,ai_titled:duty_statements_weighted,64.0,,,64
+Q5,healthcare/clinical,ai_titled:security_review_per_1000_duties,0.0,0.0,0.0,64
+Q5,healthcare/clinical,ai_titled:security_review_duty_count_unweighted,0.0,,,64
+Q5,healthcare/clinical,ai_titled:security_review_posting_share,0.0,0.0,0.48990002040399916,4
+Q5,healthcare/clinical,ai_titled:ai_governance_per_1000_duties,15.625,0.0,71.42857142857143,64
+Q5,healthcare/clinical,ai_titled:ai_governance_duty_count_unweighted,1.0,,,64
+Q5,healthcare/clinical,ai_titled:ai_governance_posting_share,0.25,0.045586062644636216,0.6993639475573634,4
+Q5,healthcare/clinical,ai_titled:guardrail_permission_per_1000_duties,0.0,0.0,0.0,64
+Q5,healthcare/clinical,ai_titled:guardrail_permission_duty_count_unweighted,0.0,,,64
+Q5,healthcare/clinical,ai_titled:guardrail_permission_posting_share,0.0,0.0,0.48990002040399916,4
+Q5,healthcare/clinical,ai_titled:service_management_per_1000_duties,15.625,0.0,64.50676982591506,64
+Q5,healthcare/clinical,ai_titled:service_management_duty_count_unweighted,1.0,,,64
+Q5,healthcare/clinical,ai_titled:service_management_posting_share,0.25,0.045586062644636216,0.6993639475573634,4
+Q5,executive/strategy,ai_titled:duty_statements_weighted,886.0,,,886
+Q5,executive/strategy,ai_titled:security_review_per_1000_duties,10.158013544018058,2.697240603239334,20.1837067748765,886
+Q5,executive/strategy,ai_titled:security_review_duty_count_unweighted,9.0,,,886
+Q5,executive/strategy,ai_titled:security_review_posting_share,0.0967741935483871,0.045111257797333194,0.1954904286744415,62
+Q5,executive/strategy,ai_titled:ai_governance_per_1000_duties,36.11738148984198,19.895143328223078,51.662107138312756,886
+Q5,executive/strategy,ai_titled:ai_governance_duty_count_unweighted,32.0,,,886
+Q5,executive/strategy,ai_titled:ai_governance_posting_share,0.3064516129032258,0.20581430019850633,0.4296745093079456,62
+Q5,executive/strategy,ai_titled:guardrail_permission_per_1000_duties,11.286681715575622,4.379974344338845,20.294515744212255,886
+Q5,executive/strategy,ai_titled:guardrail_permission_duty_count_unweighted,10.0,,,886
+Q5,executive/strategy,ai_titled:guardrail_permission_posting_share,0.12903225806451613,0.06685798258498754,0.2344955689690452,62
+Q5,executive/strategy,ai_titled:service_management_per_1000_duties,4.514672686230248,0.0,11.338512677798388,886
+Q5,executive/strategy,ai_titled:service_management_duty_count_unweighted,4.0,,,886
+Q5,executive/strategy,ai_titled:service_management_posting_share,0.03225806451612903,0.008891184997076395,0.11020677131018222,62
+Q5,other,ai_titled:duty_statements_weighted,604.0,,,604
+Q5,other,ai_titled:security_review_per_1000_duties,0.0,0.0,0.0,604
+Q5,other,ai_titled:security_review_duty_count_unweighted,0.0,,,604
+Q5,other,ai_titled:security_review_posting_share,0.0,0.0,0.0675843044530766,53
+Q5,other,ai_titled:ai_governance_per_1000_duties,0.0,0.0,0.0,604
+Q5,other,ai_titled:ai_governance_duty_count_unweighted,0.0,,,604
+Q5,other,ai_titled:ai_governance_posting_share,0.0,0.0,0.0675843044530766,53
+Q5,other,ai_titled:guardrail_permission_per_1000_duties,0.0,0.0,0.0,604
+Q5,other,ai_titled:guardrail_permission_duty_count_unweighted,0.0,,,604
+Q5,other,ai_titled:guardrail_permission_posting_share,0.0,0.0,0.0675843044530766,53
+Q5,other,ai_titled:service_management_per_1000_duties,0.0,0.0,0.0,604
+Q5,other,ai_titled:service_management_duty_count_unweighted,0.0,,,604
+Q5,other,ai_titled:service_management_posting_share,0.0,0.0,0.0675843044530766,53
+Q5,ALL,ai_titled:duty_statements_weighted,32776.0,,,32776
+Q5,ALL,ai_titled:security_review_per_1000_duties,28.22186966072736,24.283246291859346,32.17840885181987,32776
+Q5,ALL,ai_titled:security_review_duty_count_unweighted,925.0,,,32776
+Q5,ALL,ai_titled:security_review_posting_share,0.1411524036822366,0.12902038146784509,0.15422322281779288,2933
+Q5,ALL,ai_titled:ai_governance_per_1000_duties,18.06199658286551,15.92036966264171,20.331005556158797,32776
+Q5,ALL,ai_titled:ai_governance_duty_count_unweighted,592.0,,,32776
+Q5,ALL,ai_titled:ai_governance_posting_share,0.13058302079781794,0.11887032978827908,0.14326215975422807,2933
+Q5,ALL,ai_titled:guardrail_permission_per_1000_duties,16.200878691725656,14.348838613428782,18.197808343462533,32776
+Q5,ALL,ai_titled:guardrail_permission_duty_count_unweighted,531.0,,,32776
+Q5,ALL,ai_titled:guardrail_permission_posting_share,0.12546880327309923,0.11396830357351426,0.13794913044812313,2933
+Q5,ALL,ai_titled:service_management_per_1000_duties,12.570173297534781,11.03022673146942,14.144612532317554,32776
+Q5,ALL,ai_titled:service_management_duty_count_unweighted,412.0,,,32776
+Q5,ALL,ai_titled:service_management_posting_share,0.1026252983293556,0.0921571493440458,0.11413303668437326,2933

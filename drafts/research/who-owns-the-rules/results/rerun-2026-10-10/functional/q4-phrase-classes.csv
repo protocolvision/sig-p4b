@@ -1,0 +1,1394 @@
+doc_id,fn,kind,dept
+Pworkday_expedia_R-105310,software engineering,part_of_team,data and AI/ML
+Pworkday_expedia_R-109301,data and AI/ML,part_of_team,product/design
+Pworkday_expedia_R-110059,data and AI/ML,part_of_team,marketing
+Pashby_notion_4e7b3471-20b7-4a37-8455-8b2735bfaf26,finance and accounting,part_of_team,data and AI/ML
+Pworkday_mastercard_R-292755,sales,part_of_team,no function named
+Pworkday_mastercard_R-292450,software engineering,part_of_team,no function named
+Pworkday_mastercard_R-292455,IT and infrastructure,part_of_team,no function named
+Pworkday_mastercard_R-292180,IT and infrastructure,part_of_team,no function named
+Pworkday_mastercard_R-288492,software engineering,part_of_team,data and AI/ML
+Pworkday_mastercard_R-289918,data and AI/ML,reports_to,data and AI/ML
+Pworkday_mastercard_R-286494,software engineering,part_of_team,data and AI/ML
+Pworkday_mastercard_R-286494,software engineering,part_of_team,no function named
+Pworkday_mastercard_R-289958,data and AI/ML,part_of_team,no function named
+Pworkday_mastercard_R-282004,IT and infrastructure,part_of_team,no function named
+Pworkday_mastercard_R-289119,executive/strategy,part_of_team,marketing
+Pworkday_mastercard_R-288104,data and AI/ML,part_of_team,software engineering
+Pworkday_danaher_R1319908,other,part_of_team,no function named
+Pworkday_danaher_R1319908,other,part_of_team,no function named
+Pworkday_danaher_R1319009,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1319009,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1319009,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1319565,finance and accounting,reports_to,finance and accounting
+Pworkday_danaher_R1319565,finance and accounting,part_of_team,finance and accounting
+Pworkday_danaher_R1319565,finance and accounting,part_of_team,no function named
+Pworkday_danaher_R1319565,finance and accounting,part_of_team,no function named
+Pworkday_danaher_R1314269,data and AI/ML,reports_to,no function named
+Pworkday_danaher_R1314269,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1314269,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1317997,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1317997,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1318429,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1318429,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1317994,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1317994,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1314805,legal and compliance,part_of_team,no function named
+Pworkday_danaher_R1318771,software engineering,reports_to,data and AI/ML
+Pworkday_danaher_R1318771,software engineering,part_of_team,no function named
+Pworkday_danaher_R1318522,IT and infrastructure,part_of_team,marketing
+Pworkday_danaher_R1318522,IT and infrastructure,part_of_team,no function named
+Pworkday_danaher_R1316980,sales,reports_to,no function named
+Pworkday_danaher_R1316980,sales,part_of_team,no function named
+Pworkday_danaher_R1317145,sales,reports_to,sales
+Pworkday_danaher_R1317145,sales,part_of_team,data and AI/ML
+Pworkday_danaher_R1317145,sales,part_of_team,no function named
+Pworkday_danaher_R1316781,operations and supply chain,reports_to,operations and supply chain
+Pworkday_danaher_R1316781,operations and supply chain,part_of_team,no function named
+Pworkday_danaher_R1316781,operations and supply chain,part_of_team,no function named
+Pworkday_danaher_R1316595,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1316595,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1316595,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1316595,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1316595,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1309980,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1309980,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1309980,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1315402,manufacturing/field,reports_to,customer service/support
+Pworkday_danaher_R1315402,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1315024,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1315024,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1315024,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1313629,legal and compliance,part_of_team,no function named
+Pworkday_danaher_R1313326,software engineering,part_of_team,software engineering
+Pworkday_danaher_R1313326,software engineering,part_of_team,no function named
+Pworkday_danaher_R1308825,software engineering,part_of_team,no function named
+Pworkday_danaher_R1308825,software engineering,part_of_team,no function named
+Pworkday_danaher_R1304633,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1304633,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1304633,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1312825,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_danaher_R1312825,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1319117,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1319255,healthcare/clinical,part_of_team,no function named
+Pworkday_danaher_R1319032,manufacturing/field,reports_to,no function named
+Pworkday_danaher_R1319032,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1319032,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1320108,software engineering,reports_to,software engineering
+Pworkday_danaher_R1320108,software engineering,part_of_team,software engineering
+Pworkday_danaher_R1320108,software engineering,part_of_team,software engineering
+Pworkday_danaher_R1320108,software engineering,part_of_team,no function named
+Pworkday_danaher_R1320109,software engineering,reports_to,IT and infrastructure
+Pworkday_danaher_R1320109,software engineering,part_of_team,IT and infrastructure
+Pworkday_danaher_R1320109,software engineering,part_of_team,software engineering
+Pworkday_danaher_R1320109,software engineering,part_of_team,no function named
+Pworkday_danaher_R1320089,software engineering,reports_to,IT and infrastructure
+Pworkday_danaher_R1320089,software engineering,part_of_team,IT and infrastructure
+Pworkday_danaher_R1320089,software engineering,part_of_team,software engineering
+Pworkday_danaher_R1320089,software engineering,part_of_team,no function named
+Pworkday_danaher_R1320331,data and AI/ML,reports_to,no function named
+Pworkday_danaher_R1320331,data and AI/ML,part_of_team,software engineering
+Pworkday_danaher_R1320331,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1320210,healthcare/clinical,reports_to,sales
+Pworkday_danaher_R1320210,healthcare/clinical,part_of_team,sales
+Pworkday_danaher_R1320210,healthcare/clinical,part_of_team,no function named
+Pworkday_danaher_R1320309,manufacturing/field,reports_to,sales
+Pworkday_danaher_R1320309,manufacturing/field,part_of_team,sales
+Pworkday_danaher_R1320309,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1317396,software engineering,reports_to,data and AI/ML
+Pworkday_danaher_R1317396,software engineering,part_of_team,data and AI/ML
+Pworkday_danaher_R1317396,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319111,software engineering,part_of_team,data and AI/ML
+Pworkday_danaher_R1319111,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319118,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1319119,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1318134,other,reports_to,sales
+Pworkday_danaher_R1318134,other,part_of_team,sales
+Pworkday_danaher_R1318134,other,part_of_team,no function named
+Pworkday_danaher_R1319108,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319107,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319110,customer service/support,part_of_team,no function named
+Pworkday_danaher_R1319113,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1319109,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319956,manufacturing/field,reports_to,software engineering
+Pworkday_danaher_R1319956,manufacturing/field,part_of_team,software engineering
+Pworkday_danaher_R1319956,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1319112,software engineering,reports_to,data and AI/ML
+Pworkday_danaher_R1319112,software engineering,part_of_team,no function named
+Pworkday_danaher_R1319103,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_danaher_R1319103,IT and infrastructure,part_of_team,no function named
+Pworkday_danaher_R1319202,data and AI/ML,reports_to,data and AI/ML
+Pworkday_danaher_R1319202,data and AI/ML,part_of_team,software engineering
+Pworkday_danaher_R1319202,data and AI/ML,part_of_team,no function named
+Pworkday_danaher_R1319475,operations and supply chain,part_of_team,no function named
+Pworkday_danaher_R1319100,security,part_of_team,no function named
+Pworkday_danaher_R1318783,marketing,reports_to,marketing
+Pworkday_danaher_R1318783,marketing,part_of_team,marketing
+Pworkday_danaher_R1318783,marketing,part_of_team,no function named
+Pworkday_danaher_R1317582,sales,reports_to,product/design
+Pworkday_danaher_R1317582,sales,part_of_team,product/design
+Pworkday_danaher_R1317582,sales,part_of_team,no function named
+Pworkday_danaher_R1317950,manufacturing/field,reports_to,manufacturing/field
+Pworkday_danaher_R1317950,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1318278,manufacturing/field,reports_to,operations and supply chain
+Pworkday_danaher_R1318278,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_danaher_R1318278,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1318478,software engineering,reports_to,software engineering
+Pworkday_danaher_R1318478,software engineering,part_of_team,no function named
+Pworkday_danaher_R1318478,software engineering,part_of_team,no function named
+Pworkday_danaher_R1317533,manufacturing/field,reports_to,no function named
+Pworkday_danaher_R1317533,manufacturing/field,part_of_team,IT and infrastructure
+Pworkday_danaher_R1317533,manufacturing/field,part_of_team,no function named
+Pworkday_danaher_R1317447,security,reports_to,security
+Pworkday_danaher_R1317447,security,part_of_team,software engineering
+Pworkday_danaher_R1317447,security,part_of_team,security
+Pworkday_danaher_R1317447,security,part_of_team,no function named
+Pworkday_danaher_R1317010,IT and infrastructure,reports_to,software engineering
+Pworkday_danaher_R1317010,IT and infrastructure,part_of_team,no function named
+Pworkday_danaher_R1307368,customer service/support,reports_to,no function named
+Pworkday_danaher_R1307368,customer service/support,part_of_team,no function named
+Pworkday_danaher_R1307368,customer service/support,part_of_team,no function named
+Pworkday_danaher_R1315654,other,part_of_team,no function named
+Pworkday_danaher_R1315654,other,part_of_team,no function named
+Pworkday_danaher_R1310277,data and AI/ML,part_of_team,no function named
+Pworkday_cigna_26012027,manufacturing/field,reports_to,no function named
+Pworkday_cigna_26011859,IT and infrastructure,reports_to,healthcare/clinical
+Pworkday_cigna_26006939,data and AI/ML,part_of_team,no function named
+Pworkday_cigna_26006939,data and AI/ML,part_of_team,healthcare/clinical
+Pworkday_cigna_26009410,data and AI/ML,part_of_team,no function named
+Pworkday_ryder_R181667,software engineering,part_of_team,no function named
+Pworkday_blackstone_45238,data and AI/ML,part_of_team,software engineering
+Pworkday_blackstone_45237,data and AI/ML,part_of_team,software engineering
+Pgreenhouse_oscar_8119603,data and AI/ML,reports_to,data and AI/ML
+Pgreenhouse_oscar_8119603,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_oscar_8119736,data and AI/ML,reports_to,data and AI/ML
+Pgreenhouse_oscar_8119736,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_geaerospace_R5041026,IT and infrastructure,reports_to,executive/strategy
+Pashby_1password_618d6f38-988d-4e1f-af12-f5fdeebf05ed,software engineering,reports_to,software engineering
+Pashby_1password_8151254c-b7d1-4653-87b1-7afeba176898,marketing,reports_to,product/design
+Pworkday_caci_332612,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332612,data and AI/ML,part_of_team,no function named
+Pworkday_caci_325560,data and AI/ML,part_of_team,no function named
+Pworkday_caci_325560,data and AI/ML,part_of_team,no function named
+Pworkday_caci_325560,data and AI/ML,part_of_team,no function named
+Pworkday_caci_333369,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_333369,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_caci_333369,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_333369,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_333190,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_333190,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_caci_333190,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_333190,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_332675,data and AI/ML,part_of_team,no function named
+Pworkday_caci_331005,data and AI/ML,part_of_team,no function named
+Pworkday_caci_333302,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_331831,software engineering,part_of_team,no function named
+Pworkday_caci_332026,software engineering,part_of_team,no function named
+Pworkday_caci_332026,software engineering,part_of_team,no function named
+Pworkday_caci_332362,data and AI/ML,part_of_team,no function named
+Pworkday_caci_333194,data and AI/ML,part_of_team,no function named
+Pworkday_caci_333195,data and AI/ML,part_of_team,no function named
+Pworkday_caci_333066,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_caci_333066,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332901,software engineering,part_of_team,no function named
+Pworkday_caci_332930,software engineering,part_of_team,no function named
+Pworkday_caci_329216,manufacturing/field,part_of_team,no function named
+Pworkday_caci_327930,security,part_of_team,no function named
+Pworkday_caci_333022,manufacturing/field,part_of_team,no function named
+Pworkday_caci_325156,security,part_of_team,no function named
+Pworkday_caci_325156,security,part_of_team,no function named
+Pworkday_caci_332816,data and AI/ML,part_of_team,product/design
+Pworkday_caci_332816,data and AI/ML,part_of_team,product/design
+Pworkday_caci_332816,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332344,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332797,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332797,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332823,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332823,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332792,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332792,data and AI/ML,part_of_team,no function named
+Pworkday_caci_326068,data and AI/ML,part_of_team,no function named
+Pworkday_caci_326068,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332578,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332573,IT and infrastructure,part_of_team,no function named
+Pworkday_caci_332534,data and AI/ML,part_of_team,no function named
+Pworkday_caci_332407,data and AI/ML,part_of_team,no function named
+Pworkday_abbott_31160789,manufacturing/field,part_of_team,no function named
+Pworkday_abbott_35000179,manufacturing/field,part_of_team,no function named
+Pworkday_abbott_35000250,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_abbott_35000250,manufacturing/field,part_of_team,no function named
+Pworkday_abbott_31160011,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_abbott_31160011,manufacturing/field,part_of_team,software engineering
+Pworkday_abbott_35000241,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_abbott_35000241,manufacturing/field,part_of_team,no function named
+Pworkday_henryschein_R134977,operations and supply chain,reports_to,operations and supply chain
+Pworkday_iqvia_R1529486,software engineering,part_of_team,no function named
+Pworkday_iqvia_R1553743,data and AI/ML,part_of_team,no function named
+Pworkday_iqvia_R1562480,data and AI/ML,part_of_team,no function named
+Pworkday_iqvia_R1562482,data and AI/ML,part_of_team,no function named
+Pworkday_iqvia_R1549373,security,reports_to,security
+Pworkday_iqvia_R1549373,security,part_of_team,data and AI/ML
+Pworkday_iqvia_R1549373,security,part_of_team,security
+Pgreenhouse_carvana_8231506,executive/strategy,part_of_team,no function named
+Pworkday_amgen_R-256332,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-257593,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-257593,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-257061,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-257061,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-257061,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-257062,executive/strategy,part_of_team,no function named
+Pworkday_amgen_R-257062,executive/strategy,part_of_team,no function named
+Pworkday_amgen_R-257062,executive/strategy,part_of_team,data and AI/ML
+Pworkday_amgen_R-256264,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-256264,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-257435,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-256479,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256479,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256479,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_amgen_R-256478,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256478,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256478,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_amgen_R-256713,marketing,reports_to,marketing
+Pworkday_amgen_R-250474,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_amgen_R-256477,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256477,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256477,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_amgen_R-256476,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256476,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-256476,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_amgen_R-256345,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-256345,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-256345,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-256661,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-256661,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-256660,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-244637,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-244637,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-244637,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-252446,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-252446,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-248677,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-248677,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-255722,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255722,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-251304,executive/strategy,part_of_team,software engineering
+Pworkday_amgen_R-251304,executive/strategy,part_of_team,no function named
+Pworkday_amgen_R-251304,executive/strategy,part_of_team,data and AI/ML
+Pworkday_amgen_R-254158,other,part_of_team,no function named
+Pworkday_amgen_R-254158,other,part_of_team,no function named
+Pworkday_amgen_R-254158,other,part_of_team,no function named
+Pworkday_amgen_R-253856,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-253856,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-256347,software engineering,part_of_team,no function named
+Pworkday_amgen_R-256347,software engineering,part_of_team,no function named
+Pworkday_amgen_R-256347,software engineering,part_of_team,software engineering
+Pworkday_amgen_R-255709,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255709,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255745,software engineering,part_of_team,no function named
+Pworkday_amgen_R-255745,software engineering,part_of_team,no function named
+Pworkday_amgen_R-255704,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255704,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255711,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255711,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255719,software engineering,part_of_team,no function named
+Pworkday_amgen_R-255719,software engineering,part_of_team,no function named
+Pworkday_amgen_R-255744,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255744,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255743,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255743,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255134,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-255134,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-235073,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-235073,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-244636,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-244636,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-254054,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-254054,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-252241,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-252241,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-252765,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-252765,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-251197,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-251197,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-251197,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-250796,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-250796,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-250796,data and AI/ML,part_of_team,software engineering
+Pworkday_amgen_R-251044,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-251044,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250937,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-250937,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-250936,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250936,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-252248,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-252248,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-251199,data and AI/ML,part_of_team,software engineering
+Pworkday_amgen_R-251201,data and AI/ML,part_of_team,software engineering
+Pworkday_amgen_R-252035,marketing,reports_to,data and AI/ML
+Pworkday_amgen_R-252035,marketing,part_of_team,no function named
+Pworkday_amgen_R-252035,marketing,part_of_team,no function named
+Pworkday_amgen_R-250799,software engineering,part_of_team,no function named
+Pworkday_amgen_R-250799,software engineering,part_of_team,no function named
+Pworkday_amgen_R-250799,software engineering,part_of_team,software engineering
+Pworkday_amgen_R-250806,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250806,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250807,operations and supply chain,part_of_team,no function named
+Pworkday_amgen_R-250807,operations and supply chain,part_of_team,no function named
+Pworkday_amgen_R-250801,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250801,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-250800,software engineering,part_of_team,no function named
+Pworkday_amgen_R-250800,software engineering,part_of_team,no function named
+Pworkday_amgen_R-250800,software engineering,part_of_team,data and AI/ML
+Pworkday_amgen_R-251123,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-251123,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-251123,manufacturing/field,part_of_team,no function named
+Pworkday_amgen_R-234311,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-234311,IT and infrastructure,part_of_team,no function named
+Pworkday_amgen_R-246927,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-246927,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-246935,data and AI/ML,part_of_team,no function named
+Pworkday_amgen_R-246935,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-241122,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_amgen_R-237925,software engineering,part_of_team,no function named
+Pworkday_amgen_R-237925,software engineering,part_of_team,no function named
+Pworkday_amgen_R-225950,software engineering,part_of_team,manufacturing/field
+Pworkday_amgen_R-216571,software engineering,part_of_team,manufacturing/field
+Pworkday_gevernova_R5048689,manufacturing/field,reports_to,manufacturing/field
+Pworkday_gevernova_R5048689,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_gevernova_R5048689,manufacturing/field,part_of_team,software engineering
+Pworkday_gevernova_R5052880,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5052756,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gevernova_R5052756,data and AI/ML,part_of_team,no function named
+Pworkday_gevernova_R5054349,data and AI/ML,part_of_team,software engineering
+Pworkday_gevernova_R5053225,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5053175,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5053542,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5049208,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_gevernova_R5049208,manufacturing/field,part_of_team,software engineering
+Pworkday_gevernova_R5051378,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gevernova_R5052449,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5025772,finance and accounting,part_of_team,manufacturing/field
+Pworkday_gevernova_R5048238,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5047911,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5050532,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5048292,operations and supply chain,reports_to,no function named
+Pworkday_gevernova_R5048474,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5048472,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5050808,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5042677,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5048240,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5041112,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5047912,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5046904,software engineering,part_of_team,no function named
+Pworkday_gevernova_R5047916,manufacturing/field,part_of_team,no function named
+Pworkday_gevernova_R5047795,software engineering,part_of_team,no function named
+Pworkday_rockwellautomation_R26-7274,data and AI/ML,reports_to,data and AI/ML
+Pworkday_rockwellautomation_R26-7615,finance and accounting,reports_to,data and AI/ML
+Pworkday_rockwellautomation_R26-7615,finance and accounting,part_of_team,data and AI/ML
+Pworkday_rockwellautomation_R26-7360,software engineering,part_of_team,no function named
+Pworkday_rockwellautomation_R26-7360,software engineering,part_of_team,no function named
+Pworkday_rockwellautomation_R26-7359,software engineering,part_of_team,no function named
+Pworkday_rockwellautomation_R26-7359,software engineering,part_of_team,no function named
+Pworkday_rockwellautomation_R26-4694,IT and infrastructure,reports_to,software engineering
+Pworkday_rockwellautomation_R26-5418,finance and accounting,reports_to,operations and supply chain
+Pworkday_rockwellautomation_R26-5500,finance and accounting,reports_to,no function named
+Pworkday_rockwellautomation_R26-5500,finance and accounting,part_of_team,finance and accounting
+Pworkday_rockwellautomation_R26-5500,finance and accounting,part_of_team,no function named
+Pworkday_rockwellautomation_R26-4818,IT and infrastructure,reports_to,IT and infrastructure
+Pworkday_rockwellautomation_R26-3961,customer service/support,reports_to,no function named
+Pworkday_rockwellautomation_R26-3961,customer service/support,part_of_team,customer service/support
+Pworkday_rockwellautomation_R26-5836,IT and infrastructure,reports_to,IT and infrastructure
+Pworkday_cdw_R26_00002705,data and AI/ML,part_of_team,sales
+Pworkday_cdw_R26_00002705,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_pfizer_4961699,marketing,part_of_team,customer service/support
+Pworkday_pfizer_4962165,IT and infrastructure,part_of_team,manufacturing/field
+Pworkday_pfizer_4962165,IT and infrastructure,part_of_team,no function named
+Pworkday_pfizer_4965408,data and AI/ML,reports_to,executive/strategy
+Pworkday_pfizer_4964708,data and AI/ML,reports_to,data and AI/ML
+Pworkday_pfizer_4964531,other,reports_to,executive/strategy
+Pworkday_pfizer_4959846,executive/strategy,reports_to,sales
+Pworkday_pfizer_4959846,executive/strategy,part_of_team,sales
+Pworkday_pfizer_4959846,executive/strategy,part_of_team,operations and supply chain
+Pworkday_pfizer_4959846,executive/strategy,part_of_team,sales
+Pgreenhouse_dialpad_8700100002,data and AI/ML,reports_to,data and AI/ML
+Pgreenhouse_dialpad_8647151002,sales,reports_to,sales
+Pgreenhouse_dialpad_8407056002,software engineering,reports_to,manufacturing/field
+Pgreenhouse_dialpad_8754688002,marketing,reports_to,no function named
+Pgreenhouse_dialpad_8633544002,software engineering,reports_to,software engineering
+Pgreenhouse_dialpad_8766158002,data and AI/ML,reports_to,data and AI/ML
+Pgreenhouse_dialpad_8742092002,software engineering,reports_to,no function named
+Pgreenhouse_dialpad_8742096002,software engineering,reports_to,no function named
+Pgreenhouse_dialpad_8633547002,software engineering,reports_to,software engineering
+Pworkday_carrier_30214353,manufacturing/field,reports_to,software engineering
+Pworkday_carrier_30214353,manufacturing/field,part_of_team,no function named
+Pworkday_carrier_30214353,manufacturing/field,part_of_team,no function named
+Pworkday_carrier_30218287,data and AI/ML,part_of_team,no function named
+Pworkday_carrier_30212917,manufacturing/field,part_of_team,software engineering
+Pgreenhouse_celonis_7986192003,other,part_of_team,software engineering
+Pgreenhouse_celonis_7986192003,other,part_of_team,no function named
+Pgreenhouse_celonis_8002490003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7989839003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7885808003,software engineering,part_of_team,no function named
+Pgreenhouse_celonis_7765659003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7784391003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7784391003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7784391003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7885977003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7885977003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7765677003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7765677003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7981557003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7981557003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7814021003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7814021003,sales,part_of_team,no function named
+Pgreenhouse_celonis_8014300003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_8014300003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7885824003,sales,part_of_team,software engineering
+Pgreenhouse_celonis_7885824003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7995509003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7995509003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7990158003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7990158003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7816927003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7816927003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7819725003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7819725003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7786762003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7786762003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7885913003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7885913003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7885993003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7885993003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7979056003,IT and infrastructure,part_of_team,software engineering
+Pgreenhouse_celonis_7979056003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7885816003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7885881003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7972958003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7767090003,executive/strategy,part_of_team,software engineering
+Pgreenhouse_celonis_7767090003,executive/strategy,part_of_team,no function named
+Pgreenhouse_celonis_7989895003,executive/strategy,part_of_team,no function named
+Pgreenhouse_celonis_7990983003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7977924003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7815041003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_6672115003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7822051003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7928952003,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_celonis_7926567003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7993837003,executive/strategy,part_of_team,no function named
+Pgreenhouse_celonis_7788209003,data and AI/ML,part_of_team,marketing
+Pgreenhouse_celonis_7788209003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_7825688003,data and AI/ML,part_of_team,no function named
+Pgreenhouse_celonis_8007989003,software engineering,part_of_team,no function named
+Pgreenhouse_celonis_8007977003,software engineering,part_of_team,no function named
+Pgreenhouse_celonis_7993836003,sales,part_of_team,no function named
+Pgreenhouse_celonis_7805685003,software engineering,part_of_team,no function named
+Pgreenhouse_celonis_7805685003,software engineering,part_of_team,no function named
+Pworkday_nationwide_100573,finance and accounting,reports_to,data and AI/ML
+Pworkday_nationwide_100573,finance and accounting,part_of_team,data and AI/ML
+Pworkday_unum_836302,data and AI/ML,part_of_team,no function named
+Pworkday_unum_836302,data and AI/ML,part_of_team,no function named
+Pworkday_kbr_R2130769,IT and infrastructure,part_of_team,no function named
+Pworkday_kbr_R2130770,IT and infrastructure,part_of_team,no function named
+Pworkday_kbr_R2130285,security,reports_to,legal and compliance
+Pworkday_kbr_R2130285,security,part_of_team,no function named
+Pworkday_kbr_R2126504,other,part_of_team,no function named
+Pworkday_masco_REQ54490,data and AI/ML,part_of_team,no function named
+Pworkday_masco_REQ54239,IT and infrastructure,reports_to,HR
+Pworkday_masco_REQ53189,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-799266,software engineering,part_of_team,no function named
+Pworkday_statestreet_R-799264,finance and accounting,reports_to,executive/strategy
+Pworkday_statestreet_R-799264,finance and accounting,part_of_team,executive/strategy
+Pworkday_statestreet_R-797810,data and AI/ML,part_of_team,no function named
+Pworkday_statestreet_R-796408,finance and accounting,reports_to,software engineering
+Pworkday_statestreet_R-799047,executive/strategy,reports_to,data and AI/ML
+Pworkday_statestreet_R-799047,executive/strategy,part_of_team,data and AI/ML
+Pworkday_statestreet_R-799073,software engineering,part_of_team,IT and infrastructure
+Pworkday_statestreet_R-796935,security,part_of_team,no function named
+Pworkday_statestreet_R-798881,security,reports_to,data and AI/ML
+Pworkday_statestreet_R-798881,security,part_of_team,no function named
+Pworkday_statestreet_R-798880,security,reports_to,data and AI/ML
+Pworkday_statestreet_R-797297,executive/strategy,reports_to,software engineering
+Pworkday_statestreet_R-798786,software engineering,part_of_team,no function named
+Pworkday_statestreet_R-798786,software engineering,part_of_team,no function named
+Pworkday_statestreet_R-796679,security,part_of_team,legal and compliance
+Pworkday_statestreet_R-798070,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-798582,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-793601,data and AI/ML,part_of_team,software engineering
+Pworkday_statestreet_R-797785,security,reports_to,data and AI/ML
+Pworkday_statestreet_R-797785,security,part_of_team,no function named
+Pworkday_statestreet_R-797784,security,reports_to,data and AI/ML
+Pworkday_statestreet_R-794424,executive/strategy,part_of_team,no function named
+Pworkday_statestreet_R-791745,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-796444,software engineering,part_of_team,no function named
+Pworkday_statestreet_R-796423,data and AI/ML,part_of_team,no function named
+Pworkday_statestreet_R-795667,manufacturing/field,part_of_team,no function named
+Pworkday_statestreet_R-795667,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-795671,manufacturing/field,part_of_team,no function named
+Pworkday_statestreet_R-795671,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_statestreet_R-780070,IT and infrastructure,part_of_team,software engineering
+Pworkday_globalhr_01859636,operations and supply chain,part_of_team,no function named
+Pworkday_globalhr_01879473,software engineering,part_of_team,no function named
+Pworkday_globalhr_01879473,software engineering,part_of_team,no function named
+Pworkday_globalhr_01874934,operations and supply chain,reports_to,operations and supply chain
+Pworkday_globalhr_01874140,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01874139,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01844633,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_globalhr_01844633,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01844633,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01874103,software engineering,part_of_team,product/design
+Pworkday_globalhr_01875002,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_globalhr_01854543,software engineering,part_of_team,software engineering
+Pworkday_globalhr_01873349,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_globalhr_01873349,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01873349,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01873355,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_globalhr_01873355,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01873355,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01857584,manufacturing/field,reports_to,manufacturing/field
+Pworkday_globalhr_01857584,manufacturing/field,part_of_team,no function named
+Pworkday_globalhr_01857584,manufacturing/field,part_of_team,software engineering
+Pworkday_globalhr_01857584,manufacturing/field,part_of_team,no function named
+Pworkday_globalhr_01868376,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_globalhr_01843642,manufacturing/field,part_of_team,healthcare/clinical
+Pworkday_globalhr_01804570,data and AI/ML,part_of_team,no function named
+Pworkday_globalhr_01804570,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_globalhr_01804570,data and AI/ML,part_of_team,no function named
+Pworkday_target_R0000451054,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_ingrammicro_R-116749,data and AI/ML,part_of_team,software engineering
+Pworkday_ingrammicro_R-117396,operations and supply chain,reports_to,no function named
+Pworkday_allstate_R34190,software engineering,part_of_team,software engineering
+Pworkday_cisco_2027863,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_cisco_2027499,marketing,part_of_team,no function named
+Pworkday_cisco_2021571,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_cisco_2022293,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_cisco_2025652,software engineering,part_of_team,security
+Pworkday_cisco_2022074,software engineering,part_of_team,no function named
+Pworkday_cisco_2024069,executive/strategy,part_of_team,data and AI/ML
+Pworkday_cisco_2024069,executive/strategy,part_of_team,data and AI/ML
+Pworkday_cisco_2021755,security,part_of_team,no function named
+Pworkday_cisco_2025818,legal and compliance,part_of_team,no function named
+Pworkday_cisco_2024315,IT and infrastructure,part_of_team,no function named
+Pworkday_cisco_2025845,data and AI/ML,part_of_team,finance and accounting
+Pworkday_cisco_2021485,data and AI/ML,part_of_team,no function named
+Pworkday_cisco_2021479,data and AI/ML,part_of_team,no function named
+Pworkday_cisco_2021491,data and AI/ML,part_of_team,no function named
+Pworkday_cisco_2023913,data and AI/ML,part_of_team,no function named
+Pworkday_cisco_2022119,security,part_of_team,security
+Pworkday_cisco_2022551,sales,part_of_team,sales
+Pworkday_cisco_2022551,sales,part_of_team,data and AI/ML
+Pworkday_cisco_2021611,data and AI/ML,part_of_team,customer service/support
+Pworkday_cisco_2021880,IT and infrastructure,part_of_team,software engineering
+Pworkday_cisco_2020998,data and AI/ML,part_of_team,software engineering
+Pworkday_cisco_2020998,data and AI/ML,part_of_team,software engineering
+Pworkday_cisco_2007945,manufacturing/field,part_of_team,operations and supply chain
+Pashby_zapier_45b2c110-f8e0-497a-914c-72fddf447ed0,customer service/support,part_of_team,customer service/support
+Psmartrecruiters_abbvie_3743990015513886,healthcare/clinical,reports_to,healthcare/clinical
+Psmartrecruiters_abbvie_3743990015277307,data and AI/ML,part_of_team,no function named
+Psmartrecruiters_abbvie_3743990014795736,data and AI/ML,reports_to,executive/strategy
+Psmartrecruiters_abbvie_3743990014657896,security,part_of_team,no function named
+Psmartrecruiters_abbvie_3743990014202686,operations and supply chain,reports_to,no function named
+Psmartrecruiters_abbvie_3743990013935661,data and AI/ML,part_of_team,data and AI/ML
+Psmartrecruiters_abbvie_3743990013810061,operations and supply chain,part_of_team,operations and supply chain
+Pworkday_micron_JR112532,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR112979,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR112779,software engineering,part_of_team,no function named
+Pworkday_micron_JR114168,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR114168,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR107720,data and AI/ML,reports_to,manufacturing/field
+Pworkday_micron_JR109599,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR113313,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR113313,manufacturing/field,part_of_team,software engineering
+Pworkday_micron_JR88692,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR88692,data and AI/ML,part_of_team,product/design
+Pworkday_micron_JR112534,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR112591,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_micron_JR112148,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR112148,data and AI/ML,part_of_team,product/design
+Pworkday_micron_JR112148,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR111574,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_micron_JR112524,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_micron_JR112720,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR108743,security,reports_to,security
+Pworkday_micron_JR108743,security,part_of_team,data and AI/ML
+Pworkday_micron_JR111261,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR111261,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR112586,other,part_of_team,no function named
+Pworkday_micron_JR112623,IT and infrastructure,reports_to,manufacturing/field
+Pworkday_micron_JR112623,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR112385,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR112194,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR87239,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_micron_JR112358,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR111805,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR111805,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR112274,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR112274,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR111327,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_micron_JR112149,software engineering,part_of_team,no function named
+Pworkday_micron_JR112145,software engineering,part_of_team,no function named
+Pworkday_micron_JR112154,software engineering,part_of_team,no function named
+Pworkday_micron_JR110850,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR112107,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR111373,IT and infrastructure,reports_to,manufacturing/field
+Pworkday_micron_JR111373,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR111136,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR110806,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR111138,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR110821,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR105146,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR110472,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR110472,data and AI/ML,part_of_team,product/design
+Pworkday_micron_JR108564,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR109751,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR99365,IT and infrastructure,reports_to,manufacturing/field
+Pworkday_micron_JR99365,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR108532,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR108967,software engineering,part_of_team,data and AI/ML
+Pworkday_micron_JR108522,software engineering,part_of_team,data and AI/ML
+Pworkday_micron_JR107517,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR96891,software engineering,part_of_team,no function named
+Pworkday_micron_JR106653,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_micron_JR106700,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR106223,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_micron_JR106378,data and AI/ML,reports_to,data and AI/ML
+Pworkday_micron_JR99439,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR99439,data and AI/ML,part_of_team,product/design
+Pworkday_micron_JR106383,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_micron_JR106383,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR104993,manufacturing/field,reports_to,no function named
+Pworkday_micron_JR104993,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR106129,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR104995,IT and infrastructure,reports_to,no function named
+Pworkday_micron_JR104995,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR96479,software engineering,part_of_team,no function named
+Pworkday_micron_JR105267,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR105265,software engineering,part_of_team,no function named
+Pworkday_micron_JR102509,manufacturing/field,reports_to,manufacturing/field
+Pworkday_micron_JR100732,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR96930,IT and infrastructure,reports_to,manufacturing/field
+Pworkday_micron_JR93292,data and AI/ML,part_of_team,no function named
+Pworkday_micron_JR93292,data and AI/ML,part_of_team,product/design
+Pworkday_micron_JR96179,manufacturing/field,part_of_team,no function named
+Pworkday_micron_JR89941,IT and infrastructure,part_of_team,no function named
+Pworkday_micron_JR91747,manufacturing/field,part_of_team,no function named
+Pworkday_equinix_JR-163213,sales,reports_to,sales
+Pworkday_equinix_JR-163213,sales,part_of_team,sales
+Pworkday_equinix_JR-160312,security,part_of_team,security
+Pworkday_spgi_331993,IT and infrastructure,part_of_team,no function named
+Pworkday_spgi_330168,finance and accounting,reports_to,finance and accounting
+Pworkday_spgi_330168,finance and accounting,reports_to,data and AI/ML
+Pworkday_spgi_330168,finance and accounting,part_of_team,finance and accounting
+Pworkday_spgi_330168,finance and accounting,part_of_team,finance and accounting
+Pworkday_spgi_331714,data and AI/ML,part_of_team,no function named
+Pworkday_spgi_327946,data and AI/ML,reports_to,data and AI/ML
+Pworkday_spgi_327217,data and AI/ML,part_of_team,no function named
+Pworkday_biibhr_REQ24303,manufacturing/field,part_of_team,no function named
+Pworkday_biibhr_REQ23585,manufacturing/field,part_of_team,IT and infrastructure
+Pworkday_biibhr_REQ22963,manufacturing/field,part_of_team,no function named
+Psmartrecruiters_AveryDennison_744000152685419,manufacturing/field,reports_to,no function named
+Psmartrecruiters_AveryDennison_744000152685419,manufacturing/field,part_of_team,no function named
+Psmartrecruiters_AveryDennison_744000152685419,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_jll_REQ539393,data and AI/ML,part_of_team,legal and compliance
+Pworkday_jll_REQ539393,data and AI/ML,part_of_team,no function named
+Pworkday_jll_REQ537551,IT and infrastructure,part_of_team,no function named
+Pworkday_jll_REQ534894,operations and supply chain,reports_to,legal and compliance
+Pworkday_jll_REQ536692,data and AI/ML,reports_to,product/design
+Pworkday_analogdevices_R266809,software engineering,part_of_team,no function named
+Pworkday_analogdevices_R266809,software engineering,part_of_team,data and AI/ML
+Pworkday_analogdevices_R266607,data and AI/ML,part_of_team,no function named
+Pworkday_analogdevices_R265809,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_analogdevices_R265795,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_analogdevices_R265801,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_analogdevices_R265198,data and AI/ML,part_of_team,no function named
+Pworkday_analogdevices_R260556,IT and infrastructure,part_of_team,no function named
+Pworkday_mckesson_JR0154807,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_mckesson_JR0153913,executive/strategy,reports_to,IT and infrastructure
+Pworkday_mckesson_JR0153688,software engineering,part_of_team,no function named
+Pworkday_mckesson_JR0153334,data and AI/ML,reports_to,finance and accounting
+Pworkday_mckesson_JR0153334,data and AI/ML,reports_to,finance and accounting
+Pworkday_mckesson_JR0153334,data and AI/ML,part_of_team,finance and accounting
+Pworkday_mckesson_JR0151015,software engineering,part_of_team,no function named
+Pworkday_mckesson_JR0149829,software engineering,reports_to,software engineering
+Pworkday_travelers_R-51005,software engineering,part_of_team,no function named
+Pworkday_travelers_R-52946,IT and infrastructure,part_of_team,no function named
+Pworkday_travelers_R-52945,IT and infrastructure,part_of_team,no function named
+Pworkday_travelers_R-52945,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_travelers_R-51887,software engineering,part_of_team,data and AI/ML
+Pworkday_travelers_R-51887,software engineering,part_of_team,no function named
+Pworkday_travelers_R-51656,software engineering,part_of_team,data and AI/ML
+Pworkday_travelers_R-49859,data and AI/ML,part_of_team,no function named
+Pworkday_travelers_R-49858,data and AI/ML,part_of_team,no function named
+Pworkday_travelers_R-49857,data and AI/ML,part_of_team,no function named
+Pworkday_travelers_R-49861,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2603482,IT and infrastructure,part_of_team,no function named
+Pworkday_aig_JR2502945,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2603744,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2603656,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2600811,software engineering,part_of_team,no function named
+Pworkday_aig_JR2602295,IT and infrastructure,part_of_team,no function named
+Pworkday_aig_JR2601795,HR,part_of_team,no function named
+Pworkday_aig_JR2600851,executive/strategy,part_of_team,no function named
+Pworkday_aig_JR2601747,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2602238,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2600925,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2601370,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2601183,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2601035,data and AI/ML,part_of_team,no function named
+Pworkday_aig_JR2600810,software engineering,part_of_team,no function named
+Pworkday_aig_JR2502205,IT and infrastructure,part_of_team,no function named
+Pworkday_ally_R2600897,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ally_R2600897,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_checkr_8208099,sales,part_of_team,sales
+Pgreenhouse_checkr_8208099,sales,part_of_team,sales
+Pgreenhouse_checkr_8178764,data and AI/ML,reports_to,data and AI/ML
+Pgreenhouse_checkr_8257332,data and AI/ML,part_of_team,software engineering
+Pworkday_avisbudget_R0190146,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_salesforce_JR362550,customer service/support,part_of_team,customer service/support
+Pworkday_salesforce_JR362550,customer service/support,part_of_team,customer service/support
+Pworkday_salesforce_JR360144,data and AI/ML,part_of_team,no function named
+Pworkday_salesforce_JR348959,executive/strategy,part_of_team,no function named
+Pworkday_salesforce_JR358244,security,part_of_team,sales
+Pworkday_salesforce_JR334734,data and AI/ML,reports_to,sales
+Pworkday_salesforce_JR356995,data and AI/ML,reports_to,product/design
+Pworkday_salesforce_JR329013,sales,part_of_team,product/design
+Pworkday_salesforce_JR350182,data and AI/ML,part_of_team,no function named
+Pworkday_salesforce_JR350178,data and AI/ML,part_of_team,no function named
+Pworkday_salesforce_JR350176,data and AI/ML,part_of_team,no function named
+Pworkday_salesforce_JR346848,data and AI/ML,part_of_team,no function named
+Pworkday_salesforce_JR346847,data and AI/ML,part_of_team,no function named
+Pworkday_dxctechnology_51591022,software engineering,part_of_team,no function named
+Pworkday_dxctechnology_51591022,software engineering,part_of_team,software engineering
+Pworkday_dxctechnology_51584522,software engineering,reports_to,no function named
+Pworkday_dxctechnology_51584527,software engineering,reports_to,no function named
+Pworkday_dxctechnology_51590193,software engineering,part_of_team,no function named
+Pworkday_dxctechnology_51590186,software engineering,part_of_team,no function named
+Pworkday_dxctechnology_51584465,data and AI/ML,part_of_team,no function named
+Pworkday_dxctechnology_51565121,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_dxctechnology_51565121,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_xylem_R51022,IT and infrastructure,part_of_team,no function named
+Pworkday_xylem_R50257,IT and infrastructure,part_of_team,no function named
+Pworkday_xylem_R47127,software engineering,part_of_team,no function named
+Pworkday_gilead_R0052731,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0050700,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_gilead_R0050700,IT and infrastructure,part_of_team,no function named
+Pworkday_gilead_R0050700,IT and infrastructure,part_of_team,no function named
+Pworkday_gilead_R0055482,HR,reports_to,manufacturing/field
+Pworkday_gilead_R0055482,HR,part_of_team,no function named
+Pworkday_gilead_R0055483,HR,reports_to,manufacturing/field
+Pworkday_gilead_R0055483,HR,part_of_team,no function named
+Pworkday_gilead_R0055484,HR,reports_to,manufacturing/field
+Pworkday_gilead_R0055484,HR,part_of_team,no function named
+Pworkday_gilead_R0054815,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0055209,manufacturing/field,part_of_team,no function named
+Pworkday_gilead_R0052730,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0054846,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0054795,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0054829,marketing,part_of_team,no function named
+Pworkday_gilead_R0054109,data and AI/ML,reports_to,IT and infrastructure
+Pworkday_gilead_R0054258,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0054301,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0053917,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0052718,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0052719,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0052715,data and AI/ML,reports_to,data and AI/ML
+Pworkday_gilead_R0052681,data and AI/ML,part_of_team,IT and infrastructure
+Pworkday_labcorp_2631730,software engineering,part_of_team,no function named
+Pworkday_labcorp_2632795,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_warnerbros_R000106155,data and AI/ML,part_of_team,no function named
+Pworkday_warnerbros_R000106155,data and AI/ML,part_of_team,no function named
+Pworkday_warnerbros_R000107158,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108859,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108859,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108716,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108716,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108840,software engineering,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108840,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0110534,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0110534,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0108616,data and AI/ML,part_of_team,product/design
+Pworkday_workday_JR-0109754,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108006,data and AI/ML,part_of_team,no function named
+Pworkday_workday_JR-0110395,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0109817,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0109817,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0110283,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_workday_JR-0107776,software engineering,part_of_team,data and AI/ML
+Pworkday_workday_JR-0107776,software engineering,part_of_team,no function named
+Pworkday_workday_JR-0109923,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_workday_JR-0109752,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0109107,IT and infrastructure,part_of_team,no function named
+Pworkday_workday_JR-0108977,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0103398,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_workday_JR-0103398,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_workday_JR-0109080,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_workday_JR-0108727,data and AI/ML,part_of_team,software engineering
+Pworkday_ingredion_Req-38916,manufacturing/field,reports_to,software engineering
+Pgreenhouse_vercel_6122437004,software engineering,reports_to,data and AI/ML
+Pgreenhouse_vercel_5798406004,software engineering,part_of_team,data and AI/ML
+Pworkday_regeneron_R48763,IT and infrastructure,part_of_team,no function named
+Pworkday_regeneron_R48763,IT and infrastructure,part_of_team,no function named
+Pworkday_regeneron_R51237,manufacturing/field,part_of_team,no function named
+Pworkday_regeneron_R51059,manufacturing/field,part_of_team,no function named
+Pworkday_regeneron_R51060,manufacturing/field,part_of_team,no function named
+Pworkday_regeneron_R49636,manufacturing/field,part_of_team,software engineering
+Pworkday_regeneron_R49539,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_regeneron_R48861,data and AI/ML,part_of_team,no function named
+Pworkday_regeneron_R50609,data and AI/ML,reports_to,IT and infrastructure
+Pworkday_regeneron_R49612,IT and infrastructure,part_of_team,no function named
+Pworkday_regeneron_R49320,manufacturing/field,part_of_team,software engineering
+Pworkday_regeneron_R49618,manufacturing/field,part_of_team,software engineering
+Pworkday_regeneron_R49722,manufacturing/field,part_of_team,software engineering
+Pworkday_regeneron_R50147,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_regeneron_R48399,other,part_of_team,manufacturing/field
+Pworkday_regeneron_R49699,operations and supply chain,reports_to,data and AI/ML
+Pworkday_regeneron_R49699,operations and supply chain,part_of_team,data and AI/ML
+Pworkday_regeneron_R48875,data and AI/ML,part_of_team,no function named
+Pgreenhouse_talkdesk2_7862517,sales,reports_to,software engineering
+Pworkday_nvidia_JR2027174,customer service/support,part_of_team,customer service/support
+Pworkday_nvidia_JR2026683,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2027094,customer service/support,part_of_team,customer service/support
+Pworkday_nvidia_JR2027412,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2021069,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2015168,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2022039,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026884,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2026884,data and AI/ML,part_of_team,product/design
+Pworkday_nvidia_JR2024858,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2026872,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2011480,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_nvidia_JR1999579,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2026943,marketing,part_of_team,no function named
+Pworkday_nvidia_JR2025453,marketing,part_of_team,no function named
+Pworkday_nvidia_JR2026233,finance and accounting,part_of_team,finance and accounting
+Pworkday_nvidia_JR2025802,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025924,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025792,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025792,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2012698,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2012698,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026679,executive/strategy,part_of_team,sales
+Pworkday_nvidia_JR2021296,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2021296,IT and infrastructure,part_of_team,software engineering
+Pworkday_nvidia_JR2020087,software engineering,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026739,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026739,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026584,manufacturing/field,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026576,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2012361,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2018966,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2018966,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2026298,software engineering,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2026211,finance and accounting,part_of_team,finance and accounting
+Pworkday_nvidia_JR2026267,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2016032,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2016032,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2026471,manufacturing/field,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2013723,software engineering,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2006812,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2011946,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2011362,marketing,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2019285,IT and infrastructure,part_of_team,product/design
+Pworkday_nvidia_JR1998048,software engineering,part_of_team,customer service/support
+Pworkday_nvidia_JR2025034,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025163,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2015231,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_nvidia_JR2015231,manufacturing/field,part_of_team,product/design
+Pworkday_nvidia_JR2018385,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_nvidia_JR2025406,other,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025406,other,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2025490,sales,part_of_team,no function named
+Pworkday_nvidia_JR2025628,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2023870,IT and infrastructure,part_of_team,operations and supply chain
+Pworkday_nvidia_JR2025621,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2025377,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2017895,IT and infrastructure,part_of_team,sales
+Pworkday_nvidia_JR2025198,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2021355,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2025070,software engineering,part_of_team,software engineering
+Pworkday_nvidia_JR2025003,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2025060,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2024515,sales,part_of_team,no function named
+Pworkday_nvidia_JR2020550,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2020208,sales,part_of_team,no function named
+Pworkday_nvidia_JR2024455,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2024094,manufacturing/field,part_of_team,no function named
+Pworkday_nvidia_JR1997487,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2018915,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR2002944,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2002944,IT and infrastructure,part_of_team,software engineering
+Pworkday_nvidia_JR2023577,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_nvidia_JR2022938,sales,part_of_team,no function named
+Pworkday_nvidia_JR2023372,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2021695,sales,part_of_team,no function named
+Pworkday_nvidia_JR2022750,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2021693,sales,part_of_team,no function named
+Pworkday_nvidia_JR2021817,data and AI/ML,part_of_team,no function named
+Pworkday_nvidia_JR1995883,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR1996103,software engineering,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2013673,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR1997866,software engineering,part_of_team,software engineering
+Pworkday_nvidia_JR2022223,IT and infrastructure,part_of_team,no function named
+Pworkday_nvidia_JR2021836,sales,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2021831,data and AI/ML,part_of_team,operations and supply chain
+Pworkday_nvidia_JR2015120,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2016759,software engineering,part_of_team,no function named
+Pworkday_nvidia_JR2021647,software engineering,part_of_team,software engineering
+Pworkday_nvidia_JR2020290,IT and infrastructure,part_of_team,operations and supply chain
+Pworkday_nvidia_JR2009074,IT and infrastructure,part_of_team,operations and supply chain
+Pworkday_nvidia_JR2008156,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_nvidia_JR2009388,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_nvidia_JR2009388,manufacturing/field,part_of_team,product/design
+Pworkday_nvidia_JR2021401,sales,part_of_team,no function named
+Pworkday_nvidia_JR1995134,IT and infrastructure,part_of_team,software engineering
+Pworkday_nvidia_JR2020230,data and AI/ML,part_of_team,software engineering
+Pworkday_comcast_R445033,sales,part_of_team,sales
+Pworkday_kohls_R503701,software engineering,part_of_team,no function named
+Pworkday_kohls_R503701,software engineering,part_of_team,no function named
+Pgreenhouse_brex_8616214002,marketing,part_of_team,data and AI/ML
+Pgreenhouse_brex_8616214002,marketing,part_of_team,product/design
+Pworkday_avnet_JR-022995,software engineering,part_of_team,no function named
+Pworkday_avnet_JR-022116,IT and infrastructure,reports_to,IT and infrastructure
+Pgreenhouse_alphasense_8596193002,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_baxter_JR - 210887,operations and supply chain,part_of_team,no function named
+Pworkday_baxter_JR - 205909,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_ghr_26026007,executive/strategy,part_of_team,no function named
+Pworkday_ghr_26025303,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2454229,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_jabil_J2454229,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2454229,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2456684,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2453687,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2458200,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2466618,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2445254,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2445255,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2445257,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462637,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2466044,data and AI/ML,reports_to,data and AI/ML
+Pworkday_jabil_J2466044,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2466766,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2466769,manufacturing/field,reports_to,no function named
+Pworkday_jabil_J2466769,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2466752,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2463891,finance and accounting,part_of_team,no function named
+Pworkday_jabil_J2466755,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2463391,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2457281,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2466042,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2457276,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2457274,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2457275,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462880,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2460988,software engineering,part_of_team,no function named
+Pworkday_jabil_J2464364,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2463278,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2462833,manufacturing/field,reports_to,no function named
+Pworkday_jabil_J2462833,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462833,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462456,manufacturing/field,reports_to,no function named
+Pworkday_jabil_J2462456,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462456,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2463776,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2461433,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2458946,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462079,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2462184,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2461057,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2460345,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2458938,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2458372,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2458374,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2449123,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2457125,data and AI/ML,part_of_team,no function named
+Pworkday_jabil_J2455948,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2455947,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2455060,software engineering,part_of_team,no function named
+Pworkday_jabil_J2451514,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2451512,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2453806,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2453076,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2449592,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2445667,manufacturing/field,part_of_team,no function named
+Pworkday_jabil_J2437827,software engineering,part_of_team,no function named
+Pworkday_jabil_J2437827,software engineering,part_of_team,no function named
+Pworkday_jabil_J2438881,manufacturing/field,part_of_team,no function named
+Pworkday_hq_R-010841,data and AI/ML,part_of_team,finance and accounting
+Pworkday_hq_R-010841,data and AI/ML,part_of_team,no function named
+Pworkday_genmills_10128341,IT and infrastructure,part_of_team,data and AI/ML
+Pworkday_genmills_10128326,data and AI/ML,part_of_team,software engineering
+Pworkday_genmills_10130499,IT and infrastructure,part_of_team,no function named
+Pworkday_genmills_10128338,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10128338,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10129370,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10129339,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10129339,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10128346,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10128346,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10128967,software engineering,part_of_team,no function named
+Pworkday_genmills_10128342,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10123445,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_genmills_10123445,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_citi_26986598,data and AI/ML,part_of_team,no function named
+Pworkday_citi_26979538,data and AI/ML,part_of_team,no function named
+Pworkday_motorolasolutions_R68425,software engineering,part_of_team,no function named
+Pworkday_motorolasolutions_R68425,software engineering,part_of_team,no function named
+Pworkday_motorolasolutions_R69625,software engineering,part_of_team,software engineering
+Pworkday_motorolasolutions_R69574,data and AI/ML,part_of_team,no function named
+Pworkday_motorolasolutions_R69040,data and AI/ML,part_of_team,no function named
+Pworkday_motorolasolutions_R69512,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_motorolasolutions_R67973,data and AI/ML,reports_to,product/design
+Pworkday_motorolasolutions_R67973,data and AI/ML,part_of_team,product/design
+Pworkday_motorolasolutions_R68477,software engineering,part_of_team,no function named
+Pworkday_motorolasolutions_R65996,IT and infrastructure,part_of_team,software engineering
+Pworkday_motorolasolutions_R67159,software engineering,part_of_team,product/design
+Pworkday_motorolasolutions_R67833,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_motorolasolutions_R67833,data and AI/ML,part_of_team,no function named
+Pworkday_motorolasolutions_R64920,IT and infrastructure,part_of_team,software engineering
+Pworkday_motorolasolutions_R68214,data and AI/ML,part_of_team,HR
+Pworkday_motorolasolutions_R68214,data and AI/ML,part_of_team,IT and infrastructure
+Pworkday_motorolasolutions_R67576,marketing,part_of_team,data and AI/ML
+Pworkday_motorolasolutions_R67526,software engineering,reports_to,software engineering
+Pworkday_motorolasolutions_R67526,software engineering,part_of_team,HR
+Pworkday_motorolasolutions_R67526,software engineering,part_of_team,software engineering
+Pworkday_motorolasolutions_R66513,marketing,part_of_team,no function named
+Pworkday_motorolasolutions_R66513,marketing,part_of_team,no function named
+Pworkday_motorolasolutions_R66966,executive/strategy,part_of_team,no function named
+Pworkday_motorolasolutions_R66966,executive/strategy,part_of_team,no function named
+Pworkday_motorolasolutions_R66347,data and AI/ML,part_of_team,HR
+Pworkday_motorolasolutions_R65168,data and AI/ML,part_of_team,HR
+Pashby_plaid_8efcc88b-48eb-486a-bf63-ff9143af7250,marketing,reports_to,marketing
+Pashby_plaid_8efcc88b-48eb-486a-bf63-ff9143af7250,marketing,part_of_team,marketing
+Pashby_plaid_a1db9566-d51d-495e-9e87-4d57ac307d3c,data and AI/ML,part_of_team,no function named
+Pashby_plaid_a1db9566-d51d-495e-9e87-4d57ac307d3c,data and AI/ML,part_of_team,no function named
+Pworkday_myhrabc_R2616376,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_myhrabc_R2616379,manufacturing/field,part_of_team,operations and supply chain
+Pworkday_myhrabc_R2616950,software engineering,part_of_team,no function named
+Pworkday_myhrabc_R2613670,data and AI/ML,part_of_team,no function named
+Pworkday_myhrabc_R2615880,security,reports_to,no function named
+Pworkday_myhrabc_R2615880,security,reports_to,IT and infrastructure
+Pworkday_corebridgefinancial_JR2600957,security,reports_to,security
+Pworkday_homedepot_Req194977,legal and compliance,reports_to,legal and compliance
+Pworkday_homedepot_Req194838,manufacturing/field,reports_to,no function named
+Pworkday_homedepot_Req186094,data and AI/ML,part_of_team,no function named
+Pworkday_homedepot_Req191646,data and AI/ML,reports_to,software engineering
+Pworkday_homedepot_Req193447,data and AI/ML,reports_to,no function named
+Pworkday_homedepot_Req193447,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_homedepot_Req185410,finance and accounting,reports_to,software engineering
+Pworkday_homedepot_Req185410,finance and accounting,part_of_team,no function named
+Pworkday_homedepot_Req193044,security,reports_to,no function named
+Pworkday_homedepot_Req191794,data and AI/ML,reports_to,no function named
+Pworkday_homedepot_Req191208,software engineering,reports_to,software engineering
+Pworkday_homedepot_Req191208,software engineering,part_of_team,no function named
+Pworkday_homedepot_Req185348,software engineering,reports_to,software engineering
+Pworkday_homedepot_Req185348,software engineering,part_of_team,no function named
+Pworkday_homedepot_Req178482,IT and infrastructure,reports_to,no function named
+Pgreenhouse_stripe_8221776,data and AI/ML,reports_to,finance and accounting
+Pgreenhouse_stripe_8221776,data and AI/ML,part_of_team,finance and accounting
+Pgreenhouse_stripe_8222219,marketing,part_of_team,marketing
+Pgreenhouse_stripe_8168813,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_stripe_8212325,sales,reports_to,sales
+Pworkday_clio_BF-REQ-3169,data and AI/ML,part_of_team,software engineering
+Pworkday_clio_REQ-4673,software engineering,part_of_team,software engineering
+Pworkday_clio_REQ-5222,data and AI/ML,part_of_team,software engineering
+Pgreenhouse_anthropic_5390746008,data and AI/ML,part_of_team,no function named
+Pgreenhouse_anthropic_5424310008,data and AI/ML,part_of_team,no function named
+Pgreenhouse_anthropic_5443882008,data and AI/ML,part_of_team,no function named
+Pgreenhouse_anthropic_5446657008,data and AI/ML,part_of_team,no function named
+Pgreenhouse_anthropic_5439830008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5390799008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5248983008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5437172008,data and AI/ML,part_of_team,no function named
+Pgreenhouse_anthropic_5437172008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5057647008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5445410008,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_anthropic_5390865008,IT and infrastructure,reports_to,data and AI/ML
+Pgreenhouse_anthropic_5356621008,HR,part_of_team,sales
+Pgreenhouse_anthropic_5356621008,HR,part_of_team,sales
+Pworkday_pacificlife_R17835,IT and infrastructure,part_of_team,no function named
+Pworkday_pacificlife_R17152,IT and infrastructure,part_of_team,security
+Pworkday_pacificlife_R17406,data and AI/ML,part_of_team,no function named
+Pworkday_pacificlife_R17406,data and AI/ML,part_of_team,no function named
+Pworkday_pacificlife_R17161,finance and accounting,reports_to,legal and compliance
+Pgreenhouse_airbnb_7107054,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_netskope_7646769,sales,part_of_team,data and AI/ML
+Pworkday_visa_REF088818W,data and AI/ML,part_of_team,product/design
+Pworkday_visa_REF087081W,software engineering,part_of_team,no function named
+Pworkday_visa_REF088989W,executive/strategy,part_of_team,no function named
+Pworkday_visa_REF072167W,data and AI/ML,part_of_team,no function named
+Pworkday_visa_REF088661W,software engineering,part_of_team,data and AI/ML
+Pworkday_visa_REF087977W,data and AI/ML,part_of_team,no function named
+Pworkday_visa_REF080828W,software engineering,part_of_team,no function named
+Pworkday_visa_REF088746W,data and AI/ML,part_of_team,no function named
+Pworkday_visa_REF085174W,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_visa_REF088256W,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_visa_REF081464W,software engineering,part_of_team,no function named
+Pworkday_visa_REF088810W,operations and supply chain,part_of_team,no function named
+Pworkday_visa_REF088810W,operations and supply chain,part_of_team,software engineering
+Pworkday_visa_REF088646W,data and AI/ML,part_of_team,software engineering
+Pworkday_visa_REF088747W,software engineering,part_of_team,product/design
+Pworkday_visa_REF088747W,software engineering,part_of_team,software engineering
+Pworkday_visa_REF088747W,software engineering,part_of_team,no function named
+Pworkday_visa_REF087950W,software engineering,part_of_team,software engineering
+Pworkday_visa_REF080662W,data and AI/ML,part_of_team,no function named
+Pworkday_visa_REF084674W,data and AI/ML,reports_to,security
+Pworkday_visa_REF084674W,data and AI/ML,part_of_team,product/design
+Pworkday_visa_REF081369W,IT and infrastructure,part_of_team,no function named
+Pworkday_visa_REF084669W,security,reports_to,security
+Pworkday_visa_REF084669W,security,part_of_team,product/design
+Pworkday_visa_REF088314W,software engineering,part_of_team,no function named
+Pworkday_visa_REF088314W,software engineering,part_of_team,software engineering
+Pworkday_visa_REF082414W,finance and accounting,reports_to,finance and accounting
+Pworkday_visa_REF084670W,data and AI/ML,reports_to,security
+Pworkday_visa_REF084670W,data and AI/ML,part_of_team,product/design
+Pworkday_visa_REF086890W,software engineering,part_of_team,no function named
+Pworkday_visa_REF084891W,software engineering,part_of_team,data and AI/ML
+Pworkday_visa_REF084891W,software engineering,part_of_team,no function named
+Pworkday_visa_REF080421W,software engineering,part_of_team,no function named
+Pworkday_borgwarner_R2026-3180,software engineering,part_of_team,data and AI/ML
+Pworkday_cnx_R1770118,data and AI/ML,part_of_team,customer service/support
+Pworkday_cnx_R1759416,security,reports_to,data and AI/ML
+Pworkday_cnx_R1759416,security,part_of_team,no function named
+Pworkday_cnx_R1757345,IT and infrastructure,part_of_team,customer service/support
+Pworkday_cnx_R1711901,IT and infrastructure,part_of_team,customer service/support
+Pworkday_cnx_R1746692,IT and infrastructure,part_of_team,software engineering
+Pworkday_cnx_R1691702,security,part_of_team,customer service/support
+Pworkday_msd_R417977,security,reports_to,legal and compliance
+Pworkday_msd_R421425,manufacturing/field,reports_to,software engineering
+Pworkday_msd_R421136,IT and infrastructure,reports_to,no function named
+Pworkday_msd_R414620,software engineering,part_of_team,data and AI/ML
+Pworkday_msd_R414620,software engineering,part_of_team,data and AI/ML
+Pworkday_msd_R403953,customer service/support,part_of_team,data and AI/ML
+Pworkday_msd_R419182,manufacturing/field,part_of_team,no function named
+Pworkday_msd_R420064,IT and infrastructure,part_of_team,no function named
+Pworkday_msd_R420422,IT and infrastructure,part_of_team,marketing
+Pworkday_msd_R406566,data and AI/ML,part_of_team,no function named
+Pworkday_msd_R419377,data and AI/ML,part_of_team,no function named
+Pworkday_msd_R407618,data and AI/ML,part_of_team,manufacturing/field
+Pworkday_msd_R407618,data and AI/ML,part_of_team,operations and supply chain
+Pworkday_msd_R400053,legal and compliance,part_of_team,data and AI/ML
+Pworkday_msd_R400053,legal and compliance,part_of_team,data and AI/ML
+Pworkday_msd_R411511,security,part_of_team,security
+Pworkday_conocophillips_REQ-006663,manufacturing/field,part_of_team,no function named
+Pworkday_conocophillips_REQ-006605,manufacturing/field,part_of_team,no function named
+Pworkday_conocophillips_REQ-006572,manufacturing/field,part_of_team,no function named
+Pworkday_cohesity_R04648,legal and compliance,reports_to,data and AI/ML
+Pworkday_cohesity_R04648,legal and compliance,part_of_team,legal and compliance
+Pworkday_cohesity_R04648,legal and compliance,part_of_team,legal and compliance
+Pworkday_cohesity_R04648,legal and compliance,part_of_team,data and AI/ML
+Pworkday_truist_R0120385,security,part_of_team,no function named
+Pworkday_truist_R0119088,security,part_of_team,data and AI/ML
+Pworkday_dover_JR100856,manufacturing/field,reports_to,no function named
+Pworkday_ntrs_R162406,executive/strategy,part_of_team,executive/strategy
+Pworkday_ntrs_R157016,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_ntrs_R156584,security,reports_to,data and AI/ML
+Pworkday_ntrs_R154145,software engineering,part_of_team,no function named
+Pworkday_ntrs_R153112,security,part_of_team,no function named
+Pworkday_ntrs_R149529,software engineering,part_of_team,no function named
+Pworkday_tjx_REQ119715,software engineering,part_of_team,no function named
+Pworkday_plains_R0014965,finance and accounting,part_of_team,no function named
+Pworkday_plains_R0014965,finance and accounting,part_of_team,no function named
+Pgreenhouse_gusto_7905578,IT and infrastructure,reports_to,no function named
+Pgreenhouse_gusto_7905578,IT and infrastructure,part_of_team,IT and infrastructure
+Pgreenhouse_gusto_7369003,data and AI/ML,reports_to,no function named
+Pgreenhouse_gusto_7369003,data and AI/ML,part_of_team,IT and infrastructure
+Pworkday_automationanywhere_JR1453,data and AI/ML,reports_to,product/design
+Pworkday_kla_2638258,data and AI/ML,part_of_team,software engineering
+Pworkday_kla_2638974,data and AI/ML,part_of_team,software engineering
+Pworkday_kla_2641371,software engineering,part_of_team,no function named
+Pworkday_kla_2636786,software engineering,part_of_team,operations and supply chain
+Pworkday_kla_2640056,data and AI/ML,part_of_team,no function named
+Pworkday_kla_2640055,data and AI/ML,part_of_team,no function named
+Pworkday_kla_2638582,data and AI/ML,part_of_team,no function named
+Pworkday_kla_2638582,data and AI/ML,part_of_team,no function named
+Pworkday_kla_2639414,data and AI/ML,part_of_team,no function named
+Pworkday_intel_JR0287885,software engineering,part_of_team,software engineering
+Pworkday_intel_JR0287723,software engineering,part_of_team,data and AI/ML
+Pworkday_intel_JR0287890,software engineering,part_of_team,software engineering
+Pworkday_intel_JR0287931,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_intel_JR0287524,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_intel_JR0287530,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_intel_JR0287585,data and AI/ML,part_of_team,no function named
+Pworkday_intel_JR0286946,data and AI/ML,part_of_team,manufacturing/field
+Pworkday_intel_JR0286757,manufacturing/field,part_of_team,software engineering
+Pworkday_intel_JR0286477,marketing,part_of_team,sales
+Pworkday_nike_R-91174,finance and accounting,part_of_team,finance and accounting
+Pworkday_nike_R-81648,software engineering,reports_to,software engineering
+Pworkday_nike_R-85447,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_nike_R-88371,manufacturing/field,reports_to,software engineering
+Pworkday_nike_R-91486,software engineering,reports_to,software engineering
+Pworkday_nike_R-90288,manufacturing/field,reports_to,manufacturing/field
+Pworkday_nike_R-90254,manufacturing/field,reports_to,manufacturing/field
+Pworkday_nike_R-90410,IT and infrastructure,reports_to,software engineering
+Pworkday_nike_R-88358,data and AI/ML,reports_to,no function named
+Pworkday_stryker_R572437,software engineering,part_of_team,software engineering
+Pworkday_stryker_R571267,customer service/support,reports_to,customer service/support
+Pworkday_stryker_R571267,customer service/support,part_of_team,no function named
+Pworkday_stryker_R572200,software engineering,part_of_team,software engineering
+Pworkday_nordstrom_R-884856,data and AI/ML,reports_to,operations and supply chain
+Pworkday_nordstrom_R-884854,data and AI/ML,reports_to,operations and supply chain
+Pgreenhouse_databricks_7803651002,IT and infrastructure,part_of_team,no function named
+Pgreenhouse_databricks_8091041002,data and AI/ML,reports_to,software engineering
+Pgreenhouse_databricks_8735590002,marketing,reports_to,marketing
+Pgreenhouse_databricks_8487145002,marketing,reports_to,product/design
+Pgreenhouse_databricks_8604598002,data and AI/ML,reports_to,finance and accounting
+Pgreenhouse_databricks_8604598002,data and AI/ML,part_of_team,finance and accounting
+Pgreenhouse_databricks_8176503002,IT and infrastructure,reports_to,software engineering
+Pgreenhouse_databricks_8643542002,software engineering,reports_to,software engineering
+Pgreenhouse_databricks_8194599002,HR,reports_to,no function named
+Pgreenhouse_databricks_8604579002,data and AI/ML,reports_to,finance and accounting
+Pgreenhouse_databricks_8793863002,IT and infrastructure,reports_to,data and AI/ML
+Pgreenhouse_databricks_8604577002,data and AI/ML,reports_to,finance and accounting
+Pgreenhouse_databricks_8604577002,data and AI/ML,reports_to,finance and accounting
+Pgreenhouse_databricks_8604577002,data and AI/ML,part_of_team,finance and accounting
+Pgreenhouse_databricks_7845325002,data and AI/ML,reports_to,no function named
+Pgreenhouse_databricks_7845325002,data and AI/ML,part_of_team,customer service/support
+Pgreenhouse_databricks_8233899002,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_databricks_8233899002,data and AI/ML,part_of_team,no function named
+Pgreenhouse_databricks_8697991002,data and AI/ML,part_of_team,manufacturing/field
+Pgreenhouse_databricks_8829047002,IT and infrastructure,reports_to,IT and infrastructure
+Pgreenhouse_databricks_8716720002,data and AI/ML,reports_to,software engineering
+Pgreenhouse_databricks_8716192002,data and AI/ML,reports_to,software engineering
+Pgreenhouse_databricks_8574912002,software engineering,reports_to,data and AI/ML
+Pgreenhouse_databricks_8845270002,software engineering,reports_to,data and AI/ML
+Pgreenhouse_databricks_8630019002,software engineering,reports_to,no function named
+Pgreenhouse_databricks_8862144002,IT and infrastructure,reports_to,software engineering
+Pgreenhouse_databricks_8493857002,marketing,part_of_team,product/design
+Pgreenhouse_databricks_8367019002,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_databricks_8367019002,software engineering,part_of_team,no function named
+Pgreenhouse_databricks_8614863002,data and AI/ML,part_of_team,no function named
+Pgreenhouse_databricks_8509534002,data and AI/ML,part_of_team,no function named
+Pworkday_ecolab_R00303467,software engineering,part_of_team,product/design
+Pworkday_ecolab_R00300130,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00305757,software engineering,reports_to,data and AI/ML
+Pworkday_ecolab_R00305089,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00305095,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00301594,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00303380,IT and infrastructure,part_of_team,no function named
+Pworkday_ecolab_R00300129,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00299919,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00303249,data and AI/ML,part_of_team,no function named
+Pworkday_ecolab_R00301586,IT and infrastructure,reports_to,data and AI/ML
+Pworkday_ecolab_R00302559,manufacturing/field,part_of_team,manufacturing/field
+Pworkday_ecolab_R00298515,data and AI/ML,reports_to,data and AI/ML
+Pworkday_ecolab_R00296630,data and AI/ML,reports_to,data and AI/ML
+Pworkday_boeing_JR2026506524,software engineering,part_of_team,no function named
+Pworkday_boeing_JR2026506524,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00193769,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00193767,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00193327,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00193061,manufacturing/field,part_of_team,no function named
+Pworkday_leidos_R-00193770,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00193692,software engineering,part_of_team,no function named
+Pworkday_leidos_R-00190844,manufacturing/field,part_of_team,product/design
+Pworkday_leidos_R-00190488,security,part_of_team,no function named
+Pworkday_ferguson_R-138931,data and AI/ML,reports_to,data and AI/ML
+Pworkday_paloaltonetworks_JR-021185,software engineering,part_of_team,software engineering
+Pworkday_paloaltonetworks_JR-022641,software engineering,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-021444,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-020385,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_paloaltonetworks_JR-019054,customer service/support,part_of_team,software engineering
+Pworkday_paloaltonetworks_JR-023331,data and AI/ML,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-017917,IT and infrastructure,reports_to,IT and infrastructure
+Pworkday_paloaltonetworks_JR-017917,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_paloaltonetworks_JR-017183,software engineering,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-022973,security,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-019822,security,part_of_team,security
+Pworkday_paloaltonetworks_JR-022783,software engineering,part_of_team,software engineering
+Pworkday_paloaltonetworks_JR-020056,IT and infrastructure,part_of_team,security
+Pworkday_paloaltonetworks_JR-020056,IT and infrastructure,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-020056,IT and infrastructure,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-022764,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-018159,marketing,part_of_team,product/design
+Pworkday_paloaltonetworks_JR-021443,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-021261,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_paloaltonetworks_JR-021261,data and AI/ML,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-015292,marketing,reports_to,marketing
+Pworkday_paloaltonetworks_JR-015292,marketing,part_of_team,marketing
+Pworkday_paloaltonetworks_JR-015292,marketing,part_of_team,marketing
+Pworkday_paloaltonetworks_JR-021439,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-021655,data and AI/ML,part_of_team,IT and infrastructure
+Pworkday_paloaltonetworks_JR-020488,security,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-020488,security,part_of_team,sales
+Pworkday_paloaltonetworks_JR-021772,IT and infrastructure,reports_to,sales
+Pworkday_paloaltonetworks_JR-016705,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-021659,data and AI/ML,part_of_team,IT and infrastructure
+Pworkday_paloaltonetworks_JR-021091,security,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-021183,IT and infrastructure,reports_to,no function named
+Pworkday_paloaltonetworks_JR-021112,sales,part_of_team,sales
+Pworkday_paloaltonetworks_JR-016613,data and AI/ML,part_of_team,software engineering
+Pworkday_paloaltonetworks_JR-017437,data and AI/ML,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-016135,data and AI/ML,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-018632,data and AI/ML,part_of_team,finance and accounting
+Pworkday_paloaltonetworks_JR-012605,customer service/support,part_of_team,no function named
+Pworkday_paloaltonetworks_JR-012605,customer service/support,part_of_team,no function named
+Pgreenhouse_fivetran_7810468003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7810467003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7810218003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7810466003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7810220003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7811996003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7812006003,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_fivetran_7812000003,software engineering,part_of_team,data and AI/ML
+Pworkday_lplfinancial_R-053691,executive/strategy,part_of_team,no function named
+Pworkday_lplfinancial_R-054145,operations and supply chain,part_of_team,no function named
+Pworkday_lplfinancial_R-053413,security,part_of_team,no function named
+Pworkday_lplfinancial_R-053105,security,part_of_team,security
+Pworkday_lplfinancial_R-053105,security,part_of_team,security
+Pworkday_lplfinancial_R-053105,security,part_of_team,no function named
+Pworkday_lplfinancial_R-053353,data and AI/ML,part_of_team,no function named
+Pworkday_lplfinancial_R-053248,data and AI/ML,part_of_team,no function named
+Pworkday_lplfinancial_R-053358,IT and infrastructure,part_of_team,no function named
+Pworkday_lplfinancial_R-053160,software engineering,part_of_team,no function named
+Pworkday_lplfinancial_R-052907,data and AI/ML,part_of_team,no function named
+Pworkday_lplfinancial_R-052903,security,part_of_team,no function named
+Pworkday_lplfinancial_R-052957,data and AI/ML,part_of_team,no function named
+Pworkday_conagrabrands_Req-039217,manufacturing/field,reports_to,manufacturing/field
+Pworkday_conagrabrands_Req-038116,software engineering,reports_to,no function named
+Pworkday_conagrabrands_Req-038790,manufacturing/field,reports_to,manufacturing/field
+Pworkday_livenation_JR-92588,IT and infrastructure,reports_to,sales
+Pworkday_livenation_JR-92588,IT and infrastructure,part_of_team,IT and infrastructure
+Pworkday_livenation_JR-92588,IT and infrastructure,part_of_team,sales
+Pworkday_livenation_JR-92588,IT and infrastructure,part_of_team,no function named
+Pworkday_livenation_JR-92882,software engineering,reports_to,no function named
+Pworkday_livenation_JR-92881,software engineering,reports_to,no function named
+Pworkday_adobe_R171487,data and AI/ML,part_of_team,software engineering
+Pworkday_adobe_R171478,data and AI/ML,part_of_team,software engineering
+Pworkday_adobe_R170011,data and AI/ML,reports_to,no function named
+Pworkday_adobe_R170011,data and AI/ML,part_of_team,product/design
+Pworkday_adobe_R170011,data and AI/ML,part_of_team,no function named
+Pworkday_adobe_R170011,data and AI/ML,part_of_team,operations and supply chain
+Pworkday_adobe_R172095,data and AI/ML,part_of_team,no function named
+Pworkday_adobe_R169243,IT and infrastructure,part_of_team,customer service/support
+Pworkday_adobe_R170471,manufacturing/field,part_of_team,no function named
+Pworkday_bakerhughes_R168977,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_bakerhughes_R162469,manufacturing/field,part_of_team,no function named
+Pworkday_bakerhughes_R162469,manufacturing/field,part_of_team,software engineering
+Pworkday_bakerhughes_R160152,data and AI/ML,part_of_team,data and AI/ML
+Pworkday_bakerhughes_R167039,IT and infrastructure,part_of_team,software engineering
+Pworkday_bakerhughes_R167039,IT and infrastructure,part_of_team,no function named
+Pworkday_bakerhughes_R165592,data and AI/ML,part_of_team,data and AI/ML
+Pgreenhouse_onetrust_8245740,legal and compliance,part_of_team,customer service/support
+Pgreenhouse_onetrust_8245740,legal and compliance,part_of_team,no function named
+Pgreenhouse_onetrust_8138824,software engineering,part_of_team,data and AI/ML
+Pgreenhouse_coupang_7474295,data and AI/ML,part_of_team,no function named
+Pgreenhouse_coupang_7774291,data and AI/ML,part_of_team,no function named
+Pworkday_cvshealth_R1047559,software engineering,part_of_team,no function named
+Psmartrecruiters_canva_6000000001340200,marketing,part_of_team,no function named
+Psmartrecruiters_canva_6000000001340195,marketing,part_of_team,no function named
+Pworkday_tysonfoods_R0487154,manufacturing/field,part_of_team,no function named
+Psmartrecruiters_servicenow_744000154513541,data and AI/ML,part_of_team,product/design
+Psmartrecruiters_servicenow_744000153956409,data and AI/ML,part_of_team,sales
+Psmartrecruiters_servicenow_744000151933359,IT and infrastructure,part_of_team,product/design
+Psmartrecruiters_servicenow_744000151871700,software engineering,part_of_team,no function named
+Psmartrecruiters_servicenow_744000151871700,software engineering,part_of_team,no function named
+Psmartrecruiters_servicenow_744000151681299,sales,part_of_team,sales
+Psmartrecruiters_servicenow_744000150800929,software engineering,reports_to,software engineering
+Psmartrecruiters_servicenow_744000150494819,software engineering,part_of_team,data and AI/ML
+Psmartrecruiters_servicenow_744000146538969,data and AI/ML,part_of_team,software engineering
+Psmartrecruiters_servicenow_744000143146444,security,reports_to,security
+Psmartrecruiters_servicenow_744000141848799,IT and infrastructure,part_of_team,no function named
+Psmartrecruiters_servicenow_744000141813872,data and AI/ML,part_of_team,data and AI/ML
+Psmartrecruiters_servicenow_744000138210479,software engineering,part_of_team,no function named
+Psmartrecruiters_servicenow_744000136531576,IT and infrastructure,part_of_team,software engineering
+Psmartrecruiters_servicenow_744000135949979,IT and infrastructure,part_of_team,no function named
+Psmartrecruiters_servicenow_744000130592199,software engineering,part_of_team,no function named

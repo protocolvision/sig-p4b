@@ -1,0 +1,564 @@
+question,function,measure,value,low,high,n
+Q1,sales,ai_title_share,0.007084609823790138,0.004974642257373888,0.010080442298462274,4525
+Q1,sales,ai_ml_title_share,0.00494496256157164,0.0032405263807844136,0.007539109013253901,4525
+Q1,sales,automation_title_share,0.0015215269420220429,0.0007181381372214078,0.0032207785979403505,4525
+Q1,sales,agent_title_share,0.000618120320196455,0.0001971116132617152,0.001936615475807619,4525
+Q1,sales,ai_title_postings_n,149.0,,,4525
+Q1,sales,weighted_postings,21031.504021528133,,,4525
+Q1,customer service/support,ai_title_share,0.007396488628164143,0.0031952550678813287,0.01702729253091958,760
+Q1,customer service/support,ai_ml_title_share,0.005325471812278183,0.0019998074562009548,0.01410353365522045,760
+Q1,customer service/support,automation_title_share,0.001183438180506263,0.0001812687715928421,0.007683659365069555,760
+Q1,customer service/support,agent_title_share,0.0008875786353796971,0.00010931169296594747,0.007167158374070806,760
+Q1,customer service/support,ai_title_postings_n,25.0,,,760
+Q1,customer service/support,weighted_postings,3379.9822127496686,,,760
+Q1,marketing,ai_title_share,0.02510662004763582,0.01577040120351073,0.039746758766148166,742
+Q1,marketing,ai_ml_title_share,0.020623295039129422,0.012347738868907214,0.03425284378978154,742
+Q1,marketing,automation_title_share,0.002391106671203411,0.0005826979082256407,0.00975713701918452,742
+Q1,marketing,agent_title_share,0.002092218337302985,0.000469261484888186,0.009276134955123964,742
+Q1,marketing,ai_title_postings_n,84.0,,,742
+Q1,marketing,weighted_postings,3345.7311195462935,,,742
+Q1,finance and accounting,ai_title_share,0.005287173860303132,0.002627283856922034,0.010611314185536508,1514
+Q1,finance and accounting,ai_ml_title_share,0.004144001133751103,0.00188821881551413,0.009070190271395542,1514
+Q1,finance and accounting,automation_title_share,0.0011431727265520284,0.00027757872259267336,0.004695334356001216,1514
+Q1,finance and accounting,agent_title_share,0.0,0.0,0.0026927241230450204,1514
+Q1,finance and accounting,ai_title_postings_n,37.0,,,1514
+Q1,finance and accounting,weighted_postings,6998.067583478079,,,1514
+Q1,HR,ai_title_share,0.007505231538189356,0.0024835633884901292,0.022451980124497294,394
+Q1,HR,ai_ml_title_share,0.007505231538189356,0.0024835633884901292,0.022451980124497294,394
+Q1,HR,automation_title_share,0.0,0.0,0.010076330828454607,394
+Q1,HR,agent_title_share,0.0,0.0,0.010076330828454607,394
+Q1,HR,ai_title_postings_n,14.0,,,394
+Q1,HR,weighted_postings,1865.3655025515059,,,394
+Q1,legal and compliance,ai_title_share,0.009351715921640415,0.0032812773831855015,0.02635564502795565,414
+Q1,legal and compliance,ai_ml_title_share,0.008104820465421693,0.0026488933553860975,0.024522023667392732,414
+Q1,legal and compliance,automation_title_share,0.0012468954562187221,0.00011393440147251346,0.013493952985313527,414
+Q1,legal and compliance,agent_title_share,0.0,0.0,0.011141881998423715,414
+Q1,legal and compliance,ai_title_postings_n,15.0,,,414
+Q1,legal and compliance,weighted_postings,1603.9837101220244,,,414
+Q1,IT and infrastructure,ai_title_share,0.09407461735915748,0.07851517417778645,0.11234158088342776,1464
+Q1,IT and infrastructure,ai_ml_title_share,0.07880398808843252,0.06458581771083502,0.09583153383245692,1464
+Q1,IT and infrastructure,automation_title_share,0.011311577237574045,0.00662047150950435,0.01926223238667441,1464
+Q1,IT and infrastructure,agent_title_share,0.003959052033150916,0.0016273909167936714,0.009599303878163259,1464
+Q1,IT and infrastructure,ai_title_postings_n,499.0,,,1464
+Q1,IT and infrastructure,weighted_postings,5304.300075916556,,,1464
+Q1,security,ai_title_share,0.08649306148413588,0.0661372299462772,0.11236023728376701,744
+Q1,security,ai_ml_title_share,0.07239507348892431,0.05389885781229093,0.09659053563162885,744
+Q1,security,automation_title_share,0.00914464086175886,0.003984624791890458,0.020846924098065656,744
+Q1,security,agent_title_share,0.004953347133452716,0.0016395332294455462,0.014865291021392496,744
+Q1,security,ai_title_postings_n,227.0,,,744
+Q1,security,weighted_postings,2624.4879774736055,,,744
+Q1,software engineering,ai_title_share,0.10800493314822544,0.0946182290525179,0.12302824201138304,2625
+Q1,software engineering,ai_ml_title_share,0.08328241665880505,0.07149798330078701,0.09680667289024297,2625
+Q1,software engineering,automation_title_share,0.015982232882049544,0.011174464110574288,0.022810807148751357,2625
+Q1,software engineering,agent_title_share,0.008740283607370844,0.0053911218547288775,0.014140486462038606,2625
+Q1,software engineering,ai_title_postings_n,865.0,,,2625
+Q1,software engineering,weighted_postings,8008.893434644122,,,2625
+Q1,data and AI/ML,ai_title_share,0.16342650571557596,0.13685311553355567,0.19400004302348473,957
+Q1,data and AI/ML,ai_ml_title_share,0.14986870142975464,0.1243550291896196,0.17954365413743534,957
+Q1,data and AI/ML,automation_title_share,0.00696211571434068,0.0028444126223638017,0.016939531794033617,957
+Q1,data and AI/ML,agent_title_share,0.006595688571480644,0.0026333114385589554,0.01642213364729831,957
+Q1,data and AI/ML,ai_title_postings_n,446.0,,,957
+Q1,data and AI/ML,weighted_postings,2729.0554738789374,,,957
+Q1,operations and supply chain,ai_title_share,0.004438830103589822,0.002525013076254057,0.007791880897994667,2754
+Q1,operations and supply chain,ai_ml_title_share,0.0032143252474271123,0.0016612949743103238,0.006210145556433029,2754
+Q1,operations and supply chain,automation_title_share,0.0008418470886118628,0.00024500970029140405,0.002888364783660295,2754
+Q1,operations and supply chain,agent_title_share,0.0003826577675508467,6.806149913194977e-05,0.0021482679435052355,2754
+Q1,operations and supply chain,ai_title_postings_n,58.0,,,2754
+Q1,operations and supply chain,weighted_postings,13066.505959102506,,,2754
+Q1,manufacturing/field,ai_title_share,0.016307556632612043,0.01308777331596919,0.020303157969952537,5038
+Q1,manufacturing/field,ai_ml_title_share,0.0016095770182837862,0.0008057289769137809,0.003212817890355192,5038
+Q1,manufacturing/field,automation_title_share,0.014697979614328258,0.011657072981119168,0.018517285947716674,5038
+Q1,manufacturing/field,agent_title_share,0.0,0.0,0.0008019745101830802,5038
+Q1,manufacturing/field,ai_title_postings_n,385.0,,,5038
+Q1,manufacturing/field,weighted_postings,23608.68698319112,,,5038
+Q1,healthcare/clinical,ai_title_share,0.0008607077162428429,0.00015210270951565856,0.004854481992572096,1168
+Q1,healthcare/clinical,ai_ml_title_share,0.0005164246297457057,6.242973676070336e-05,0.00425785474941788,1168
+Q1,healthcare/clinical,automation_title_share,0.00034428308649713717,2.993024283676639e-05,0.003947204135387231,1168
+Q1,healthcare/clinical,agent_title_share,0.0,0.0,0.003290834162314828,1168
+Q1,healthcare/clinical,ai_title_postings_n,5.0,,,1168
+Q1,healthcare/clinical,weighted_postings,5809.1729696882185,,,1168
+Q1,executive/strategy,ai_title_share,0.0319126336205231,0.019803078687511737,0.05104156687339072,560
+Q1,executive/strategy,ai_ml_title_share,0.02787305974450752,0.016726422381798254,0.04609965236061876,560
+Q1,executive/strategy,automation_title_share,0.0024237443256093496,0.0004934559821114982,0.011815622603847217,560
+Q1,executive/strategy,agent_title_share,0.001615829550406233,0.00024779454172519895,0.010457569880536427,560
+Q1,executive/strategy,ai_title_postings_n,79.0,,,560
+Q1,executive/strategy,weighted_postings,2475.508632079644,,,560
+Q1,other,ai_title_share,0.006430683634442694,0.00364035913850611,0.011335451027058296,1853
+Q1,other,ai_ml_title_share,0.004851217478614664,0.002525712241497137,0.009297932019647235,1853
+Q1,other,automation_title_share,0.0013538281335668829,0.000412747219878731,0.0044311011100498475,1853
+Q1,other,agent_title_share,0.00022563802226114715,1.974826684655982e-05,0.0025725529884962784,1853
+Q1,other,ai_title_postings_n,57.0,,,1853
+Q1,other,weighted_postings,8863.754344049585,,,1853
+Q1,ALL,ai_title_share,0.026599828388203947,0.02459124540310688,0.0287676314220876,25512
+Q1,ALL,ai_ml_title_share,0.019202456758343495,0.01750181209586763,0.021064809448999345,25512
+Q1,ALL,automation_title_share,0.005988348462267985,0.005067477222828931,0.007075372069145303,25512
+Q1,ALL,agent_title_share,0.0014090231675924672,0.0009992635779547947,0.0019864753023881225,25512
+Q1,ALL,ai_title_postings_n,2945.0,,,25512
+Q1,ALL,weighted_postings,110715.0,,,25512
+Q1,sales,share_of_all_ai_titled,0.050594227504244485,0.04324750318430516,0.059111877529803056,2945
+Q1,customer service/support,share_of_all_ai_titled,0.008488964346349746,0.005756578635010978,0.012501980929531248,2945
+Q1,marketing,share_of_all_ai_titled,0.028522920203735144,0.0230976329193042,0.035176639934144424,2945
+Q1,finance and accounting,share_of_all_ai_titled,0.012563667232597622,0.009128673896919123,0.017268674811129488,2945
+Q1,HR,share_of_all_ai_titled,0.004753820033955857,0.00283387919827429,0.007964123651387081,2945
+Q1,legal and compliance,share_of_all_ai_titled,0.0050933786078098476,0.0030891017902822775,0.008387133488004628,2945
+Q1,IT and infrastructure,share_of_all_ai_titled,0.16943972835314092,0.15632336671963537,0.18341736401340913,2945
+Q1,security,share_of_all_ai_titled,0.07707979626485569,0.06798818507088163,0.08727332507601808,2945
+Q1,software engineering,share_of_all_ai_titled,0.2937181663837012,0.27754534857102303,0.31042845103896616,2945
+Q1,data and AI/ML,share_of_all_ai_titled,0.15144312393887946,0.13895039268256115,0.16484401933333015,2945
+Q1,operations and supply chain,share_of_all_ai_titled,0.01969439728353141,0.015266098668826434,0.025374131040358357,2945
+Q1,manufacturing/field,share_of_all_ai_titled,0.1307300509337861,0.11903427748422232,0.14338795638551152,2945
+Q1,healthcare/clinical,share_of_all_ai_titled,0.001697792869269949,0.0007253961700247382,0.003968514822006845,2945
+Q1,executive/strategy,share_of_all_ai_titled,0.026825127334465196,0.021577346497120082,0.03330576421320088,2945
+Q1,other,share_of_all_ai_titled,0.01935483870967742,0.014969157895918635,0.024992839384640624,2945
+Q1,sales,census_ai_title_share,0.007127822426329889,0.006074472697845036,0.008362292501294407,20904
+Q1,customer service/support,census_ai_title_share,0.008107265357031494,0.005538633504968898,0.011852943831016783,3207
+Q1,marketing,census_ai_title_share,0.025511717591219223,0.020704776631962907,0.031398883581304576,3371
+Q1,finance and accounting,census_ai_title_share,0.005645520725003714,0.00411599117161579,0.007739016672963657,6731
+Q1,HR,census_ai_title_share,0.008363201911589008,0.004988256013615724,0.013989459165218796,1674
+Q1,legal and compliance,census_ai_title_share,0.009439899307740718,0.005728956372784076,0.015517098476612128,1589
+Q1,IT and infrastructure,census_ai_title_share,0.09227348526959422,0.08483940369523588,0.10028759577092138,5397
+Q1,security,census_ai_title_share,0.08645640074211502,0.07642567723124497,0.09766442127620353,2695
+Q1,software engineering,census_ai_title_share,0.11814662170600725,0.11125889106039025,0.12540058801356874,8007
+Q1,data and AI/ML,census_ai_title_share,0.1712354487420203,0.1574033728403171,0.1860146989341745,2663
+Q1,operations and supply chain,census_ai_title_share,0.004422332780541736,0.0034073575161957274,0.005737905656590772,12663
+Q1,manufacturing/field,census_ai_title_share,0.016845060536936303,0.01525402081408539,0.01859891612912565,22796
+Q1,healthcare/clinical,census_ai_title_share,0.0008683570684265369,0.0003709600045531066,0.0020313274863074542,5758
+Q1,executive/strategy,census_ai_title_share,0.034392686112320416,0.02768322273039695,0.04265695192569411,2297
+Q1,other,census_ai_title_share,0.00565538629937061,0.004414401197671031,0.007242701609394223,10963
+Q1,ALL,census_ai_title_share,0.027521112767014407,0.026573718959580113,0.02850129367494514,110715
+Q2,sales,flagged_share_existing,0.05744314480897839,0.05075371545913029,0.06495392228391395,4152
+Q2,sales,confirmed_agent_duty_share_existing,0.008344725561855146,0.005693396516326558,0.011323106551160492,4152
+Q2,sales,confirmed_agent_duty_band_rates_only,0.008344725561855146,0.006011720872203784,0.011373272218360053,4152
+Q2,sales,confirmed_agent_duty_postings_weighted,172.38954657813315,,,4152
+Q2,sales,existing_postings_weighted,20658.504021528133,,,4152
+Q2,sales,phase2_task_confirmation_rate_existing,0.045454545454545456,0.008069219301147859,0.21798489499518056,22
+Q2,customer service/support,flagged_share_existing,0.12097594843951938,0.09827753139246821,0.1480560707856582,671
+Q2,customer service/support,confirmed_agent_duty_share_existing,0.01818425796217357,0.011574859290082605,0.025831291009725577,671
+Q2,customer service/support,confirmed_agent_duty_band_rates_only,0.01818425796217357,0.013263910036017276,0.024453475186312565,671
+Q2,customer service/support,confirmed_agent_duty_postings_weighted,59.84406950556476,,,671
+Q2,customer service/support,existing_postings_weighted,3290.982212749669,,,671
+Q2,customer service/support,phase2_task_confirmation_rate_existing,0.0,0.0,0.6576280471103807,2
+Q2,marketing,flagged_share_existing,0.19671176530000675,0.16800725893789512,0.22897083022869108,653
+Q2,marketing,confirmed_agent_duty_share_existing,0.0355086644954498,0.023466849114218678,0.04885123302708528,653
+Q2,marketing,confirmed_agent_duty_band_rates_only,0.0355086644954498,0.025853769981201195,0.047701518734893804,653
+Q2,marketing,confirmed_agent_duty_postings_weighted,115.64217267585995,,,653
+Q2,marketing,existing_postings_weighted,3256.7311195462935,,,653
+Q2,marketing,phase2_task_confirmation_rate_existing,0.15789473684210525,0.05520371039927826,0.37565927643176683,19
+Q2,finance and accounting,flagged_share_existing,0.12786602289642962,0.11143510468957799,0.14632070246060985,1476
+Q2,finance and accounting,confirmed_agent_duty_share_existing,0.017173945021151125,0.011644981622891903,0.023488492314500137,1476
+Q2,finance and accounting,confirmed_agent_duty_band_rates_only,0.017173945021151125,0.012336634433766303,0.023507416616365386,1476
+Q2,finance and accounting,confirmed_agent_duty_postings_weighted,119.5318180221487,,,1476
+Q2,finance and accounting,existing_postings_weighted,6960.067583478079,,,1476
+Q2,finance and accounting,phase2_task_confirmation_rate_existing,0.09090909090909091,0.016231752262825964,0.3773646254862038,11
+Q2,HR,flagged_share_existing,0.13334432607475077,0.10253157060499059,0.17164592434737017,380
+Q2,HR,confirmed_agent_duty_share_existing,0.020698942814280388,0.012851220583574706,0.030591386421131222,380
+Q2,HR,confirmed_agent_duty_band_rates_only,0.020698942814280388,0.014940183717974655,0.028134877319142246,380
+Q2,HR,confirmed_agent_duty_postings_weighted,38.32130866564509,,,380
+Q2,HR,existing_postings_weighted,1851.3655025515059,,,380
+Q2,HR,phase2_task_confirmation_rate_existing,0.0,0.0,0.43449149475208104,5
+Q2,legal and compliance,flagged_share_existing,0.18854021579363545,0.15026832606277946,0.23387672852722044,398
+Q2,legal and compliance,confirmed_agent_duty_share_existing,0.030748945925313548,0.020896279901442553,0.043360713188277375,398
+Q2,legal and compliance,confirmed_agent_duty_band_rates_only,0.030748945925313548,0.02252163099985668,0.04120247177493905,398
+Q2,legal and compliance,confirmed_agent_duty_postings_weighted,48.82882523282092,,,398
+Q2,legal and compliance,existing_postings_weighted,1587.9837101220246,,,398
+Q2,legal and compliance,phase2_task_confirmation_rate_existing,0.125,0.02241690886329618,0.4708948057698615,8
+Q2,IT and infrastructure,flagged_share_existing,0.2979223822448285,0.2698432065141781,0.32761240709910683,960
+Q2,IT and infrastructure,confirmed_agent_duty_share_existing,0.05136343536201219,0.03485127767167229,0.06918002522395257,960
+Q2,IT and infrastructure,confirmed_agent_duty_band_rates_only,0.05136343536201219,0.03744645386879502,0.06894435606660117,960
+Q2,IT and infrastructure,confirmed_agent_duty_postings_weighted,246.5599026676022,,,960
+Q2,IT and infrastructure,existing_postings_weighted,4800.300075916555,,,960
+Q2,IT and infrastructure,phase2_task_confirmation_rate_existing,0.0625,0.01731020319515724,0.20147467248003584,32
+Q2,security,flagged_share_existing,0.3220914904255034,0.28202202164188944,0.3649601318564815,510
+Q2,security,confirmed_agent_duty_share_existing,0.057641456601989806,0.04013330710635675,0.07696268640921622,510
+Q2,security,confirmed_agent_duty_band_rates_only,0.057641456601989806,0.042501638228308936,0.07667677528152325,510
+Q2,security,confirmed_agent_duty_postings_weighted,137.79120901112321,,,510
+Q2,security,existing_postings_weighted,2390.4879774736055,,,510
+Q2,security,phase2_task_confirmation_rate_existing,0.2916666666666667,0.14914460334164278,0.49168063658709704,24
+Q2,software engineering,flagged_share_existing,0.3880321671257978,0.36349119334407387,0.4131545469117158,1700
+Q2,software engineering,confirmed_agent_duty_share_existing,0.08098811010696193,0.059664674658175196,0.10264648503250368,1700
+Q2,software engineering,confirmed_agent_duty_band_rates_only,0.08098811010696193,0.06033590022306552,0.10641006872454507,1700
+Q2,software engineering,confirmed_agent_duty_postings_weighted,573.711141470943,,,1700
+Q2,software engineering,existing_postings_weighted,7083.893434644123,,,1700
+Q2,software engineering,phase2_task_confirmation_rate_existing,0.18840579710144928,0.13194064080494428,0.26174922168955667,138
+Q2,data and AI/ML,flagged_share_existing,0.46292432219115043,0.4188522695935827,0.5075833861465708,548
+Q2,data and AI/ML,confirmed_agent_duty_share_existing,0.10231879547602246,0.07598615246705859,0.13048094422099663,548
+Q2,data and AI/ML,confirmed_agent_duty_band_rates_only,0.10231879547602246,0.07736734589793444,0.13287286812206361,548
+Q2,data and AI/ML,confirmed_agent_duty_postings_weighted,237.38528152484542,,,548
+Q2,data and AI/ML,existing_postings_weighted,2320.055473878938,,,548
+Q2,data and AI/ML,phase2_task_confirmation_rate_existing,0.35,0.2545439440982969,0.4592019767810756,80
+Q2,operations and supply chain,flagged_share_existing,0.11541811719816866,0.10370856744346534,0.1282605763539452,2651
+Q2,operations and supply chain,confirmed_agent_duty_share_existing,0.015405719838267863,0.010377086740399435,0.020858830135277444,2651
+Q2,operations and supply chain,confirmed_agent_duty_band_rates_only,0.015405719838267863,0.011128028889143602,0.02095699135167098,2651
+Q2,operations and supply chain,confirmed_agent_duty_postings_weighted,199.71214092764916,,,2651
+Q2,operations and supply chain,existing_postings_weighted,12963.505959102507,,,2651
+Q2,operations and supply chain,phase2_task_confirmation_rate_existing,0.08,0.02221993369109194,0.2496651212295782,25
+Q2,manufacturing/field,flagged_share_existing,0.11281470680109976,0.10403371432578916,0.12223574526079023,4645
+Q2,manufacturing/field,confirmed_agent_duty_share_existing,0.01807920683623392,0.012257645252607582,0.02418865544354464,4645
+Q2,manufacturing/field,confirmed_agent_duty_band_rates_only,0.01807920683623392,0.013060119504169512,0.02454092455234731,4645
+Q2,manufacturing/field,confirmed_agent_duty_postings_weighted,419.7212068143758,,,4645
+Q2,manufacturing/field,existing_postings_weighted,23215.686983191124,,,4645
+Q2,manufacturing/field,phase2_task_confirmation_rate_existing,0.03225806451612903,0.008891184997076395,0.11020677131018222,62
+Q2,healthcare/clinical,flagged_share_existing,0.01378484563710123,0.008503129421548985,0.022273597761992874,1161
+Q2,healthcare/clinical,confirmed_agent_duty_share_existing,0.0018040682401923417,0.0007494954293638426,0.003273297268175019,1161
+Q2,healthcare/clinical,confirmed_agent_duty_band_rates_only,0.0018040682401923417,0.0013071793447723757,0.0024429494318938417,1161
+Q2,healthcare/clinical,confirmed_agent_duty_postings_weighted,10.467515978717,,,1161
+Q2,healthcare/clinical,existing_postings_weighted,5802.172969688219,,,1161
+Q2,healthcare/clinical,phase2_task_confirmation_rate_existing,0.0,0.0,0.7934567085261071,1
+Q2,executive/strategy,flagged_share_existing,0.1961892049063424,0.1631023825426178,0.23411041530335122,479
+Q2,executive/strategy,confirmed_agent_duty_share_existing,0.03278034396843592,0.021029704797209853,0.04644148482259737,479
+Q2,executive/strategy,confirmed_agent_duty_band_rates_only,0.03278034396843592,0.023851400982847694,0.04413602730889038,479
+Q2,executive/strategy,confirmed_agent_duty_postings_weighted,78.49281659495972,,,479
+Q2,executive/strategy,existing_postings_weighted,2394.5086320796445,,,479
+Q2,executive/strategy,phase2_task_confirmation_rate_existing,0.125,0.02241690886329618,0.4708948057698615,8
+Q2,other,flagged_share_existing,0.055104181239668606,0.04536461458832227,0.06678849257618925,1754
+Q2,other,confirmed_agent_duty_share_existing,0.007999972190289254,0.005056492897764119,0.011331365789654399,1754
+Q2,other,confirmed_agent_duty_band_rates_only,0.007999972190289254,0.005769615328667472,0.010881450548451297,1754
+Q2,other,confirmed_agent_duty_postings_weighted,70.11779100711362,,,1754
+Q2,other,existing_postings_weighted,8764.754344049587,,,1754
+Q2,other,phase2_task_confirmation_rate_existing,0.0,0.0,0.22810184305529166,13
+Q2,ALL,flagged_share_existing,0.1381817719401362,0.13364443462830436,0.1428477558507349,22138
+Q2,ALL,confirmed_agent_duty_share_existing,0.02355592687488938,0.016864730902637137,0.030572759830072436,22138
+Q2,ALL,confirmed_agent_duty_band_rates_only,0.02355592687488938,0.017256391287101623,0.03153382719290375,22138
+Q2,ALL,confirmed_agent_duty_postings_weighted,2528.5167466775015,,,22138
+Q2,ALL,existing_postings_weighted,107341.00000000001,,,22138
+Q2,ALL,phase2_task_confirmation_rate_existing,0.16444444444444445,0.13306304537038707,0.20150654895503398,450
+Q3,sales,phase2_tasks_sampled_all,27.0,,,27
+Q3,sales,AO_count_all,2.0,,,27
+Q3,sales,AO_share_of_sampled_tasks,0.07407407407407407,0.020554221697383537,0.2336997729073062,27
+Q3,sales,PE_count_all,1.0,,,27
+Q3,sales,PE_share_of_sampled_tasks,0.037037037037037035,0.006567976533097596,0.1828385393415652,27
+Q3,sales,PV_count_all,0.0,,,27
+Q3,sales,PV_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,sales,RD_count_all,0.0,,,27
+Q3,sales,RD_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,sales,phase2_tasks_sampled_existing,22.0,,,22
+Q3,sales,AO_count_existing,0.0,,,22
+Q3,sales,PE_count_existing,1.0,,,22
+Q3,sales,PV_count_existing,0.0,,,22
+Q3,sales,RD_count_existing,0.0,,,22
+Q3,sales,phase2_tasks_sampled_newtitle,5.0,,,5
+Q3,sales,AO_count_newtitle,2.0,,,5
+Q3,sales,PE_count_newtitle,0.0,,,5
+Q3,sales,PV_count_newtitle,0.0,,,5
+Q3,sales,RD_count_newtitle,0.0,,,5
+Q3,customer service/support,phase2_tasks_sampled_all,2.0,,,2
+Q3,customer service/support,AO_count_all,0.0,,,2
+Q3,customer service/support,AO_share_of_sampled_tasks,0.0,0.0,0.6576280471103807,2
+Q3,customer service/support,PE_count_all,0.0,,,2
+Q3,customer service/support,PE_share_of_sampled_tasks,0.0,0.0,0.6576280471103807,2
+Q3,customer service/support,PV_count_all,0.0,,,2
+Q3,customer service/support,PV_share_of_sampled_tasks,0.0,0.0,0.6576280471103807,2
+Q3,customer service/support,RD_count_all,0.0,,,2
+Q3,customer service/support,RD_share_of_sampled_tasks,0.0,0.0,0.6576280471103807,2
+Q3,customer service/support,phase2_tasks_sampled_existing,2.0,,,2
+Q3,customer service/support,AO_count_existing,0.0,,,2
+Q3,customer service/support,PE_count_existing,0.0,,,2
+Q3,customer service/support,PV_count_existing,0.0,,,2
+Q3,customer service/support,RD_count_existing,0.0,,,2
+Q3,customer service/support,phase2_tasks_sampled_newtitle,0.0,,,0
+Q3,customer service/support,AO_count_newtitle,0.0,,,0
+Q3,customer service/support,PE_count_newtitle,0.0,,,0
+Q3,customer service/support,PV_count_newtitle,0.0,,,0
+Q3,customer service/support,RD_count_newtitle,0.0,,,0
+Q3,marketing,phase2_tasks_sampled_all,27.0,,,27
+Q3,marketing,AO_count_all,3.0,,,27
+Q3,marketing,AO_share_of_sampled_tasks,0.1111111111111111,0.03851964789498724,0.2805818254397295,27
+Q3,marketing,PE_count_all,0.0,,,27
+Q3,marketing,PE_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,marketing,PV_count_all,0.0,,,27
+Q3,marketing,PV_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,marketing,RD_count_all,0.0,,,27
+Q3,marketing,RD_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,marketing,phase2_tasks_sampled_existing,19.0,,,19
+Q3,marketing,AO_count_existing,3.0,,,19
+Q3,marketing,PE_count_existing,0.0,,,19
+Q3,marketing,PV_count_existing,0.0,,,19
+Q3,marketing,RD_count_existing,0.0,,,19
+Q3,marketing,phase2_tasks_sampled_newtitle,8.0,,,8
+Q3,marketing,AO_count_newtitle,0.0,,,8
+Q3,marketing,PE_count_newtitle,0.0,,,8
+Q3,marketing,PV_count_newtitle,0.0,,,8
+Q3,marketing,RD_count_newtitle,0.0,,,8
+Q3,finance and accounting,phase2_tasks_sampled_all,13.0,,,13
+Q3,finance and accounting,AO_count_all,1.0,,,13
+Q3,finance and accounting,AO_share_of_sampled_tasks,0.07692307692307693,0.013710066379696325,0.3331453392824736,13
+Q3,finance and accounting,PE_count_all,0.0,,,13
+Q3,finance and accounting,PE_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,finance and accounting,PV_count_all,0.0,,,13
+Q3,finance and accounting,PV_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,finance and accounting,RD_count_all,0.0,,,13
+Q3,finance and accounting,RD_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,finance and accounting,phase2_tasks_sampled_existing,11.0,,,11
+Q3,finance and accounting,AO_count_existing,1.0,,,11
+Q3,finance and accounting,PE_count_existing,0.0,,,11
+Q3,finance and accounting,PV_count_existing,0.0,,,11
+Q3,finance and accounting,RD_count_existing,0.0,,,11
+Q3,finance and accounting,phase2_tasks_sampled_newtitle,2.0,,,2
+Q3,finance and accounting,AO_count_newtitle,0.0,,,2
+Q3,finance and accounting,PE_count_newtitle,0.0,,,2
+Q3,finance and accounting,PV_count_newtitle,0.0,,,2
+Q3,finance and accounting,RD_count_newtitle,0.0,,,2
+Q3,HR,phase2_tasks_sampled_all,5.0,,,5
+Q3,HR,AO_count_all,0.0,,,5
+Q3,HR,AO_share_of_sampled_tasks,0.0,0.0,0.43449149475208104,5
+Q3,HR,PE_count_all,0.0,,,5
+Q3,HR,PE_share_of_sampled_tasks,0.0,0.0,0.43449149475208104,5
+Q3,HR,PV_count_all,0.0,,,5
+Q3,HR,PV_share_of_sampled_tasks,0.0,0.0,0.43449149475208104,5
+Q3,HR,RD_count_all,0.0,,,5
+Q3,HR,RD_share_of_sampled_tasks,0.0,0.0,0.43449149475208104,5
+Q3,HR,phase2_tasks_sampled_existing,5.0,,,5
+Q3,HR,AO_count_existing,0.0,,,5
+Q3,HR,PE_count_existing,0.0,,,5
+Q3,HR,PV_count_existing,0.0,,,5
+Q3,HR,RD_count_existing,0.0,,,5
+Q3,HR,phase2_tasks_sampled_newtitle,0.0,,,0
+Q3,HR,AO_count_newtitle,0.0,,,0
+Q3,HR,PE_count_newtitle,0.0,,,0
+Q3,HR,PV_count_newtitle,0.0,,,0
+Q3,HR,RD_count_newtitle,0.0,,,0
+Q3,legal and compliance,phase2_tasks_sampled_all,9.0,,,9
+Q3,legal and compliance,AO_count_all,1.0,,,9
+Q3,legal and compliance,AO_share_of_sampled_tasks,0.1111111111111111,0.019890371327130518,0.4350062147680602,9
+Q3,legal and compliance,PE_count_all,0.0,,,9
+Q3,legal and compliance,PE_share_of_sampled_tasks,0.0,0.0,0.2991527535509594,9
+Q3,legal and compliance,PV_count_all,0.0,,,9
+Q3,legal and compliance,PV_share_of_sampled_tasks,0.0,0.0,0.2991527535509594,9
+Q3,legal and compliance,RD_count_all,0.0,,,9
+Q3,legal and compliance,RD_share_of_sampled_tasks,0.0,0.0,0.2991527535509594,9
+Q3,legal and compliance,phase2_tasks_sampled_existing,8.0,,,8
+Q3,legal and compliance,AO_count_existing,1.0,,,8
+Q3,legal and compliance,PE_count_existing,0.0,,,8
+Q3,legal and compliance,PV_count_existing,0.0,,,8
+Q3,legal and compliance,RD_count_existing,0.0,,,8
+Q3,legal and compliance,phase2_tasks_sampled_newtitle,1.0,,,1
+Q3,legal and compliance,AO_count_newtitle,0.0,,,1
+Q3,legal and compliance,PE_count_newtitle,0.0,,,1
+Q3,legal and compliance,PV_count_newtitle,0.0,,,1
+Q3,legal and compliance,RD_count_newtitle,0.0,,,1
+Q3,IT and infrastructure,phase2_tasks_sampled_all,52.0,,,52
+Q3,IT and infrastructure,AO_count_all,4.0,,,52
+Q3,IT and infrastructure,AO_share_of_sampled_tasks,0.07692307692307693,0.03031885429734589,0.18173810682124666,52
+Q3,IT and infrastructure,PE_count_all,5.0,,,52
+Q3,IT and infrastructure,PE_share_of_sampled_tasks,0.09615384615384616,0.041773735183410265,0.20609881861160995,52
+Q3,IT and infrastructure,PV_count_all,0.0,,,52
+Q3,IT and infrastructure,PV_share_of_sampled_tasks,0.0,0.0,0.06879459041288215,52
+Q3,IT and infrastructure,RD_count_all,0.0,,,52
+Q3,IT and infrastructure,RD_share_of_sampled_tasks,0.0,0.0,0.06879459041288215,52
+Q3,IT and infrastructure,phase2_tasks_sampled_existing,32.0,,,32
+Q3,IT and infrastructure,AO_count_existing,1.0,,,32
+Q3,IT and infrastructure,PE_count_existing,1.0,,,32
+Q3,IT and infrastructure,PV_count_existing,0.0,,,32
+Q3,IT and infrastructure,RD_count_existing,0.0,,,32
+Q3,IT and infrastructure,phase2_tasks_sampled_newtitle,20.0,,,20
+Q3,IT and infrastructure,AO_count_newtitle,3.0,,,20
+Q3,IT and infrastructure,PE_count_newtitle,4.0,,,20
+Q3,IT and infrastructure,PV_count_newtitle,0.0,,,20
+Q3,IT and infrastructure,RD_count_newtitle,0.0,,,20
+Q3,security,phase2_tasks_sampled_all,30.0,,,30
+Q3,security,AO_count_all,5.0,,,30
+Q3,security,AO_share_of_sampled_tasks,0.16666666666666666,0.07336434240351682,0.3356470518568018,30
+Q3,security,PE_count_all,6.0,,,30
+Q3,security,PE_share_of_sampled_tasks,0.2,0.09504978102401236,0.37306047381027446,30
+Q3,security,PV_count_all,1.0,,,30
+Q3,security,PV_share_of_sampled_tasks,0.03333333333333333,0.005908437994857381,0.16670751396958874,30
+Q3,security,RD_count_all,0.0,,,30
+Q3,security,RD_share_of_sampled_tasks,0.0,0.0,0.11351709139047801,30
+Q3,security,phase2_tasks_sampled_existing,24.0,,,24
+Q3,security,AO_count_existing,5.0,,,24
+Q3,security,PE_count_existing,3.0,,,24
+Q3,security,PV_count_existing,1.0,,,24
+Q3,security,RD_count_existing,0.0,,,24
+Q3,security,phase2_tasks_sampled_newtitle,6.0,,,6
+Q3,security,AO_count_newtitle,0.0,,,6
+Q3,security,PE_count_newtitle,3.0,,,6
+Q3,security,PV_count_newtitle,0.0,,,6
+Q3,security,RD_count_newtitle,0.0,,,6
+Q3,software engineering,phase2_tasks_sampled_all,166.0,,,166
+Q3,software engineering,AO_count_all,31.0,,,166
+Q3,software engineering,AO_share_of_sampled_tasks,0.18674698795180722,0.1347953849388279,0.25286935679700123,166
+Q3,software engineering,PE_count_all,6.0,,,166
+Q3,software engineering,PE_share_of_sampled_tasks,0.03614457831325301,0.01666853558902472,0.07660425505826075,166
+Q3,software engineering,PV_count_all,0.0,,,166
+Q3,software engineering,PV_share_of_sampled_tasks,0.0,1.69548624725715e-18,0.022618722386034986,166
+Q3,software engineering,RD_count_all,0.0,,,166
+Q3,software engineering,RD_share_of_sampled_tasks,0.0,1.69548624725715e-18,0.022618722386034986,166
+Q3,software engineering,phase2_tasks_sampled_existing,138.0,,,138
+Q3,software engineering,AO_count_existing,22.0,,,138
+Q3,software engineering,PE_count_existing,5.0,,,138
+Q3,software engineering,PV_count_existing,0.0,,,138
+Q3,software engineering,RD_count_existing,0.0,,,138
+Q3,software engineering,phase2_tasks_sampled_newtitle,28.0,,,28
+Q3,software engineering,AO_count_newtitle,9.0,,,28
+Q3,software engineering,PE_count_newtitle,1.0,,,28
+Q3,software engineering,PV_count_newtitle,0.0,,,28
+Q3,software engineering,RD_count_newtitle,0.0,,,28
+Q3,data and AI/ML,phase2_tasks_sampled_all,137.0,,,137
+Q3,data and AI/ML,AO_count_all,36.0,,,137
+Q3,data and AI/ML,AO_share_of_sampled_tasks,0.26277372262773724,0.1962656718995997,0.3422229564602032,137
+Q3,data and AI/ML,PE_count_all,11.0,,,137
+Q3,data and AI/ML,PE_share_of_sampled_tasks,0.08029197080291971,0.045422997117338174,0.1380568838269283,137
+Q3,data and AI/ML,PV_count_all,1.0,,,137
+Q3,data and AI/ML,PV_share_of_sampled_tasks,0.0072992700729927005,0.0012896313769595533,0.040186750601092384,137
+Q3,data and AI/ML,RD_count_all,0.0,,,137
+Q3,data and AI/ML,RD_share_of_sampled_tasks,0.0,0.0,0.027276032081430486,137
+Q3,data and AI/ML,phase2_tasks_sampled_existing,80.0,,,80
+Q3,data and AI/ML,AO_count_existing,21.0,,,80
+Q3,data and AI/ML,PE_count_existing,7.0,,,80
+Q3,data and AI/ML,PV_count_existing,0.0,,,80
+Q3,data and AI/ML,RD_count_existing,0.0,,,80
+Q3,data and AI/ML,phase2_tasks_sampled_newtitle,57.0,,,57
+Q3,data and AI/ML,AO_count_newtitle,15.0,,,57
+Q3,data and AI/ML,PE_count_newtitle,4.0,,,57
+Q3,data and AI/ML,PV_count_newtitle,1.0,,,57
+Q3,data and AI/ML,RD_count_newtitle,0.0,,,57
+Q3,operations and supply chain,phase2_tasks_sampled_all,27.0,,,27
+Q3,operations and supply chain,AO_count_all,2.0,,,27
+Q3,operations and supply chain,AO_share_of_sampled_tasks,0.07407407407407407,0.020554221697383537,0.2336997729073062,27
+Q3,operations and supply chain,PE_count_all,3.0,,,27
+Q3,operations and supply chain,PE_share_of_sampled_tasks,0.1111111111111111,0.03851964789498724,0.2805818254397295,27
+Q3,operations and supply chain,PV_count_all,0.0,,,27
+Q3,operations and supply chain,PV_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,operations and supply chain,RD_count_all,0.0,,,27
+Q3,operations and supply chain,RD_share_of_sampled_tasks,0.0,1.2149183920775522e-17,0.1245590371446358,27
+Q3,operations and supply chain,phase2_tasks_sampled_existing,25.0,,,25
+Q3,operations and supply chain,AO_count_existing,1.0,,,25
+Q3,operations and supply chain,PE_count_existing,1.0,,,25
+Q3,operations and supply chain,PV_count_existing,0.0,,,25
+Q3,operations and supply chain,RD_count_existing,0.0,,,25
+Q3,operations and supply chain,phase2_tasks_sampled_newtitle,2.0,,,2
+Q3,operations and supply chain,AO_count_newtitle,1.0,,,2
+Q3,operations and supply chain,PE_count_newtitle,2.0,,,2
+Q3,operations and supply chain,PV_count_newtitle,0.0,,,2
+Q3,operations and supply chain,RD_count_newtitle,0.0,,,2
+Q3,manufacturing/field,phase2_tasks_sampled_all,76.0,,,76
+Q3,manufacturing/field,AO_count_all,2.0,,,76
+Q3,manufacturing/field,AO_share_of_sampled_tasks,0.02631578947368421,0.00724650713060782,0.09096795750937935,76
+Q3,manufacturing/field,PE_count_all,1.0,,,76
+Q3,manufacturing/field,PE_share_of_sampled_tasks,0.013157894736842105,0.0023264201405674635,0.07083844629497489,76
+Q3,manufacturing/field,PV_count_all,0.0,,,76
+Q3,manufacturing/field,PV_share_of_sampled_tasks,0.0,0.0,0.04811526823109757,76
+Q3,manufacturing/field,RD_count_all,0.0,,,76
+Q3,manufacturing/field,RD_share_of_sampled_tasks,0.0,0.0,0.04811526823109757,76
+Q3,manufacturing/field,phase2_tasks_sampled_existing,62.0,,,62
+Q3,manufacturing/field,AO_count_existing,2.0,,,62
+Q3,manufacturing/field,PE_count_existing,0.0,,,62
+Q3,manufacturing/field,PV_count_existing,0.0,,,62
+Q3,manufacturing/field,RD_count_existing,0.0,,,62
+Q3,manufacturing/field,phase2_tasks_sampled_newtitle,14.0,,,14
+Q3,manufacturing/field,AO_count_newtitle,0.0,,,14
+Q3,manufacturing/field,PE_count_newtitle,1.0,,,14
+Q3,manufacturing/field,PV_count_newtitle,0.0,,,14
+Q3,manufacturing/field,RD_count_newtitle,0.0,,,14
+Q3,healthcare/clinical,phase2_tasks_sampled_all,1.0,,,1
+Q3,healthcare/clinical,AO_count_all,0.0,,,1
+Q3,healthcare/clinical,AO_share_of_sampled_tasks,0.0,0.0,0.7934567085261071,1
+Q3,healthcare/clinical,PE_count_all,0.0,,,1
+Q3,healthcare/clinical,PE_share_of_sampled_tasks,0.0,0.0,0.7934567085261071,1
+Q3,healthcare/clinical,PV_count_all,0.0,,,1
+Q3,healthcare/clinical,PV_share_of_sampled_tasks,0.0,0.0,0.7934567085261071,1
+Q3,healthcare/clinical,RD_count_all,0.0,,,1
+Q3,healthcare/clinical,RD_share_of_sampled_tasks,0.0,0.0,0.7934567085261071,1
+Q3,healthcare/clinical,phase2_tasks_sampled_existing,1.0,,,1
+Q3,healthcare/clinical,AO_count_existing,0.0,,,1
+Q3,healthcare/clinical,PE_count_existing,0.0,,,1
+Q3,healthcare/clinical,PV_count_existing,0.0,,,1
+Q3,healthcare/clinical,RD_count_existing,0.0,,,1
+Q3,healthcare/clinical,phase2_tasks_sampled_newtitle,0.0,,,0
+Q3,healthcare/clinical,AO_count_newtitle,0.0,,,0
+Q3,healthcare/clinical,PE_count_newtitle,0.0,,,0
+Q3,healthcare/clinical,PV_count_newtitle,0.0,,,0
+Q3,healthcare/clinical,RD_count_newtitle,0.0,,,0
+Q3,executive/strategy,phase2_tasks_sampled_all,15.0,,,15
+Q3,executive/strategy,AO_count_all,1.0,,,15
+Q3,executive/strategy,AO_share_of_sampled_tasks,0.06666666666666667,0.011866588606194859,0.29817077552423993,15
+Q3,executive/strategy,PE_count_all,0.0,,,15
+Q3,executive/strategy,PE_share_of_sampled_tasks,0.0,0.0,0.20388926630434784,15
+Q3,executive/strategy,PV_count_all,0.0,,,15
+Q3,executive/strategy,PV_share_of_sampled_tasks,0.0,0.0,0.20388926630434784,15
+Q3,executive/strategy,RD_count_all,0.0,,,15
+Q3,executive/strategy,RD_share_of_sampled_tasks,0.0,0.0,0.20388926630434784,15
+Q3,executive/strategy,phase2_tasks_sampled_existing,8.0,,,8
+Q3,executive/strategy,AO_count_existing,1.0,,,8
+Q3,executive/strategy,PE_count_existing,0.0,,,8
+Q3,executive/strategy,PV_count_existing,0.0,,,8
+Q3,executive/strategy,RD_count_existing,0.0,,,8
+Q3,executive/strategy,phase2_tasks_sampled_newtitle,7.0,,,7
+Q3,executive/strategy,AO_count_newtitle,0.0,,,7
+Q3,executive/strategy,PE_count_newtitle,0.0,,,7
+Q3,executive/strategy,PV_count_newtitle,0.0,,,7
+Q3,executive/strategy,RD_count_newtitle,0.0,,,7
+Q3,other,phase2_tasks_sampled_all,13.0,,,13
+Q3,other,AO_count_all,0.0,,,13
+Q3,other,AO_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,other,PE_count_all,0.0,,,13
+Q3,other,PE_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,other,PV_count_all,0.0,,,13
+Q3,other,PV_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,other,RD_count_all,0.0,,,13
+Q3,other,RD_share_of_sampled_tasks,0.0,0.0,0.22810184305529166,13
+Q3,other,phase2_tasks_sampled_existing,13.0,,,13
+Q3,other,AO_count_existing,0.0,,,13
+Q3,other,PE_count_existing,0.0,,,13
+Q3,other,PV_count_existing,0.0,,,13
+Q3,other,RD_count_existing,0.0,,,13
+Q3,other,phase2_tasks_sampled_newtitle,0.0,,,0
+Q3,other,AO_count_newtitle,0.0,,,0
+Q3,other,PE_count_newtitle,0.0,,,0
+Q3,other,PV_count_newtitle,0.0,,,0
+Q3,other,RD_count_newtitle,0.0,,,0
+Q3,ALL,phase2_tasks_sampled_all,600.0,,,600
+Q3,ALL,AO_count_all,88.0,,,600
+Q3,ALL,AO_share_of_sampled_tasks,0.14666666666666667,0.12060758458058377,0.17722151497135175,600
+Q3,ALL,PE_count_all,33.0,,,600
+Q3,ALL,PE_share_of_sampled_tasks,0.055,0.0394278979035846,0.07623422275852283,600
+Q3,ALL,PV_count_all,2.0,,,600
+Q3,ALL,PV_share_of_sampled_tasks,0.0033333333333333335,0.0009145775384123506,0.012071609567610156,600
+Q3,ALL,RD_count_all,0.0,,,600
+Q3,ALL,RD_share_of_sampled_tasks,0.0,0.0,0.006361933328210577,600
+Q3,ALL,phase2_tasks_sampled_existing,450.0,,,450
+Q3,ALL,AO_count_existing,58.0,,,450
+Q3,ALL,PE_count_existing,18.0,,,450
+Q3,ALL,PV_count_existing,1.0,,,450
+Q3,ALL,RD_count_existing,0.0,,,450
+Q3,ALL,phase2_tasks_sampled_newtitle,150.0,,,150
+Q3,ALL,AO_count_newtitle,30.0,,,150
+Q3,ALL,PE_count_newtitle,15.0,,,150
+Q3,ALL,PV_count_newtitle,1.0,,,150
+Q3,ALL,RD_count_newtitle,0.0,,,150
+Q3,sales,p2_tool_change_count,0.0,,,3
+Q3,sales,p2_decision_count,0.0,,,3
+Q3,sales,p2_neither_count,3.0,,,3
+Q3,marketing,p2_tool_change_count,0.0,,,3
+Q3,marketing,p2_decision_count,0.0,,,3
+Q3,marketing,p2_neither_count,3.0,,,3
+Q3,finance and accounting,p2_tool_change_count,0.0,,,1
+Q3,finance and accounting,p2_decision_count,0.0,,,1
+Q3,finance and accounting,p2_neither_count,1.0,,,1
+Q3,legal and compliance,p2_tool_change_count,0.0,,,1
+Q3,legal and compliance,p2_decision_count,0.0,,,1
+Q3,legal and compliance,p2_neither_count,1.0,,,1
+Q3,IT and infrastructure,p2_tool_change_count,0.0,,,9
+Q3,IT and infrastructure,p2_decision_count,2.0,,,9
+Q3,IT and infrastructure,p2_neither_count,7.0,,,9
+Q3,security,p2_tool_change_count,0.0,,,10
+Q3,security,p2_decision_count,2.0,,,10
+Q3,security,p2_neither_count,8.0,,,10
+Q3,software engineering,p2_tool_change_count,0.0,,,36
+Q3,software engineering,p2_decision_count,1.0,,,36
+Q3,software engineering,p2_neither_count,35.0,,,36
+Q3,data and AI/ML,p2_tool_change_count,1.0,,,46
+Q3,data and AI/ML,p2_decision_count,5.0,,,46
+Q3,data and AI/ML,p2_neither_count,40.0,,,46
+Q3,operations and supply chain,p2_tool_change_count,0.0,,,4
+Q3,operations and supply chain,p2_decision_count,0.0,,,4
+Q3,operations and supply chain,p2_neither_count,4.0,,,4
+Q3,manufacturing/field,p2_tool_change_count,0.0,,,3
+Q3,manufacturing/field,p2_decision_count,0.0,,,3
+Q3,manufacturing/field,p2_neither_count,3.0,,,3
+Q3,executive/strategy,p2_tool_change_count,0.0,,,1
+Q3,executive/strategy,p2_decision_count,0.0,,,1
+Q3,executive/strategy,p2_neither_count,1.0,,,1
+Q3,ALL,p2_tool_change_count,1.0,,,117
+Q3,ALL,p2_decision_count,10.0,,,117
+Q3,ALL,p2_neither_count,106.0,,,117

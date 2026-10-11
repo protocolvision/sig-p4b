@@ -1,0 +1,601 @@
+qid,group,doc_id,fn,pgroup,conf,codes
+Q0001,S1,Pgreenhouse_airbnb_8262769,software engineering,S1,True,AO
+Q0002,rest20,Pworkday_micron_JR100024,manufacturing/field,rest20,False,OT
+Q0003,newtitle,Pworkday_micron_JR109239,manufacturing/field,newtitle,False,OT
+Q0004,newtitle,Pworkday_nvidia_JR2020087,software engineering,newtitle,False,OT
+Q0005,rest20,Pworkday_sysco_R235620,software engineering,rest20,True,PE
+Q0006,S1,Pgreenhouse_databricks_8560783002,software engineering,S1,False,OT
+Q0007,S1,Pworkday_caci_332568,software engineering,S1,False,OT
+Q0008,rest20,Pgreenhouse_anthropic_5385651008,marketing,rest20,True,AO
+Q0009,S1,Pworkday_target_R0000475423,data and AI/ML,S1,False,OT
+Q0010,S1,Pworkday_citi_26989233,software engineering,S1,True,AO
+Q0011,rest20,Psmartrecruiters_abbvie_3743990014971186,operations and supply chain,rest20,False,OT
+Q0012,rest20,Pworkday_amgen_R-252234,software engineering,rest20,True,PE
+Q0013,rest20,Pworkday_labcorp_2632085,IT and infrastructure,rest20,False,OT
+Q0014,newtitle,Psmartrecruiters_abbvie_3743990015187326,marketing,newtitle,False,OT
+Q0015,S1,Pworkday_msd_R403318,data and AI/ML,S1,False,OT
+Q0016,rest20,Pworkday_freddiemac_JR17438,software engineering,rest20,False,OT
+Q0017,S1,Pworkday_nvidia_JR2025421,software engineering,S1,False,OT
+Q0018,newtitle,Pworkday_gilead_R0054109,data and AI/ML,newtitle,False,OT
+Q0019,S1,Pgreenhouse_hp_6220700004,data and AI/ML,S1,False,OT
+Q0020,rest20,Pworkday_salesforce_JR346377,software engineering,rest20,True,AO
+Q0021,newtitle,Pworkday_pfizer_4965561,executive/strategy,newtitle,False,OT
+Q0022,rest20,Pworkday_thrivent_REQ-48555,security,rest20,False,OT
+Q0023,newtitle,Pworkday_gevernova_R5048474,software engineering,newtitle,False,OT
+Q0024,rest20,Pworkday_cohesity_R04882,manufacturing/field,rest20,False,OT
+Q0025,rest20,Pworkday_amgen_R-251679,operations and supply chain,rest20,False,OT
+Q0026,newtitle,Pworkday_globalhr_01860147,manufacturing/field,newtitle,False,OT
+Q0027,rest20,Pworkday_ryder_R178493,software engineering,rest20,False,OT
+Q0028,newtitle,Pworkday_livenation_JR-92882,software engineering,newtitle,True,AO
+Q0029,rest20,Pworkday_jll_REQ521957,software engineering,rest20,True,AO
+Q0030,S1,Pworkday_ecolab_R00305080,data and AI/ML,S1,False,OT
+Q0031,rest20,Pworkday_republic_R-184732,operations and supply chain,rest20,False,OT
+Q0032,rest20,Pgreenhouse_celonis_7825720003,manufacturing/field,rest20,True,AO
+Q0033,newtitle,Pworkday_amgen_R-254115,security,newtitle,False,OT
+Q0034,S1,Psmartrecruiters_servicenow_744000144420159,data and AI/ML,S1,True,AO
+Q0035,rest20,Pworkday_micron_JR90097,manufacturing/field,rest20,False,OT
+Q0036,newtitle,Pworkday_paloaltonetworks_JR-021836,data and AI/ML,newtitle,False,OT
+Q0037,rest20,Pgreenhouse_vercel_5649459004,security,rest20,False,OT
+Q0038,newtitle,Pworkday_nvidia_JR2023411,marketing,newtitle,False,OT
+Q0039,rest20,Pgreenhouse_databricks_8649279002,software engineering,rest20,False,OT
+Q0040,rest20,Pworkday_nvidia_JR2023933,software engineering,rest20,False,OT
+Q0041,rest20,Pworkday_masco_REQ53143,manufacturing/field,rest20,False,OT
+Q0042,newtitle,Pworkday_graybar_R263943,manufacturing/field,newtitle,False,OT
+Q0043,rest20,Pworkday_caci_332986,security,rest20,False,OT
+Q0044,rest20,Pworkday_jll_REQ539203,software engineering,rest20,False,OT
+Q0045,S1,Pworkday_paloaltonetworks_JR-020846,data and AI/ML,S1,True,AO
+Q0046,newtitle,Pworkday_intel_JR0286124,software engineering,newtitle,True,AO
+Q0047,S1,Pworkday_myhrabc_R2613853,security,S1,False,OT
+Q0048,rest20,Pworkday_amgen_R-248672,manufacturing/field,rest20,False,OT
+Q0049,rest20,Pworkday_nvidia_JR2022647,sales,rest20,False,OT
+Q0050,newtitle,Pworkday_cdw_R26_00002350,data and AI/ML,newtitle,False,OT
+Q0051,rest20,Pworkday_amgen_R-238157,data and AI/ML,rest20,True,AO
+Q0052,rest20,Pworkday_cigna_26010291,data and AI/ML,rest20,False,OT
+Q0053,S1,Pashby_ramp_bca0346c-b843-4795-96df-6091f51e421b,data and AI/ML,S1,False,OT
+Q0054,rest20,Psmartrecruiters_servicenow_744000154466958,HR,rest20,False,OT
+Q0055,newtitle,Psmartrecruiters_servicenow_744000150494699,data and AI/ML,newtitle,False,OT
+Q0056,rest20,Pworkday_clio_REQ-5055,executive/strategy,rest20,False,OT
+Q0057,rest20,Pworkday_intel_JR0287674,manufacturing/field,rest20,False,OT
+Q0058,rest20,Pworkday_gevernova_R5053009,manufacturing/field,rest20,False,OT
+Q0059,rest20,Pworkday_ghr_26034353,data and AI/ML,rest20,False,OT
+Q0060,rest20,Pworkday_carrier_30216362,security,rest20,False,OT
+Q0061,newtitle,Pworkday_bakerhughes_R159031,manufacturing/field,newtitle,False,OT
+Q0062,rest20,Pworkday_salesforce_JR363252,data and AI/ML,rest20,False,OT
+Q0063,rest20,Pashby_ramp_cf3516f6-4d6b-4872-831f-c8ef4a3078ee,marketing,rest20,True,AO
+Q0064,S1,Pworkday_paloaltonetworks_JR-018773,software engineering,S1,False,OT
+Q0065,rest20,Pworkday_statestreet_R-790967,IT and infrastructure,rest20,True,AO
+Q0066,S1,Pworkday_ecolab_R00305083,data and AI/ML,S1,True,AO
+Q0067,rest20,Pworkday_kbr_R2128233,manufacturing/field,rest20,False,OT
+Q0068,S1,Pworkday_dxctechnology_51589016,software engineering,S1,True,AO
+Q0069,newtitle,Pworkday_gevernova_R5051104,data and AI/ML,newtitle,True,PE
+Q0070,newtitle,Pworkday_jabil_J2466618,manufacturing/field,newtitle,False,OT
+Q0071,rest20,Pworkday_cisco_2020318,manufacturing/field,rest20,False,OT
+Q0072,newtitle,Pworkday_mckesson_JR0148042,legal and compliance,newtitle,False,OT
+Q0073,rest20,Pworkday_micron_JR107220,manufacturing/field,rest20,False,OT
+Q0074,rest20,Pworkday_warnerbros_R000107691,finance and accounting,rest20,False,OT
+Q0075,rest20,Pworkday_micron_JR109104,manufacturing/field,rest20,False,OT
+Q0076,S1,Pworkday_sysco_R266111,legal and compliance,S1,False,OT
+Q0077,rest20,Pgreenhouse_databricks_8638642002,marketing,rest20,False,OT
+Q0078,S1,Pworkday_ecolab_R00305079,data and AI/ML,S1,True,PE
+Q0079,rest20,Pworkday_micron_JR111280,manufacturing/field,rest20,False,OT
+Q0080,S1,Pworkday_micron_JR112178,data and AI/ML,S1,True,AO
+Q0081,rest20,Pworkday_travelers_R-52976,sales,rest20,False,OT
+Q0082,newtitle,Pgreenhouse_talkdesk2_7862517,sales,newtitle,True,AO
+Q0083,S1,Pworkday_micron_JR110666,software engineering,S1,False,OT
+Q0084,rest20,Pworkday_micron_JR100933,manufacturing/field,rest20,False,OT
+Q0085,rest20,Pworkday_salesforce_JR362202,software engineering,rest20,False,OT
+Q0086,newtitle,Pworkday_paloaltonetworks_JR-021986,data and AI/ML,newtitle,False,OT
+Q0087,newtitle,Pworkday_truist_R0119882,software engineering,newtitle,True,AO
+Q0088,newtitle,Pworkday_pfizer_4959846,executive/strategy,newtitle,False,OT
+Q0089,rest20,Pworkday_salesforce_JR352778,software engineering,rest20,False,OT
+Q0090,newtitle,Pworkday_rockwellautomation_R26-7274,data and AI/ML,newtitle,True,AO
+Q0091,rest20,Pworkday_carrier_30215676,IT and infrastructure,rest20,False,OT
+Q0092,rest20,Pworkday_dxctechnology_51578141,executive/strategy,rest20,False,OT
+Q0093,newtitle,Pworkday_micron_JR96479,software engineering,newtitle,False,OT
+Q0094,newtitle,Pworkday_equinix_JR-163818,IT and infrastructure,newtitle,False,OT
+Q0095,rest20,Psmartrecruiters_servicenow_744000150603709,sales,rest20,False,OT
+Q0096,S1,Pworkday_homedepot_Req195423,software engineering,S1,False,OT
+Q0097,S1,Pworkday_msd_R404336,software engineering,S1,False,OT
+Q0098,rest20,Pworkday_amgen_R-253239,IT and infrastructure,rest20,False,OT
+Q0099,rest20,Pgreenhouse_databricks_8647670002,software engineering,rest20,False,OT
+Q0100,rest20,Pworkday_carrier_30218895,manufacturing/field,rest20,False,OT
+Q0101,rest20,Pgreenhouse_airbnb_8125873,operations and supply chain,rest20,False,OT
+Q0102,rest20,Pworkday_nike_R-82625,software engineering,rest20,False,OT
+Q0103,rest20,Pgreenhouse_databricks_8604610002,sales,rest20,True,PE
+Q0104,rest20,Pworkday_micron_JR112482,manufacturing/field,rest20,False,OT
+Q0105,S1,Pworkday_homedepot_Req195423,software engineering,S1,False,OT
+Q0106,rest20,Pworkday_regeneron_R51082,other,rest20,False,OT
+Q0107,rest20,Pworkday_micron_JR110074,other,rest20,False,OT
+Q0108,newtitle,Pworkday_abbott_31160789,manufacturing/field,newtitle,False,OT
+Q0109,S1,Pgreenhouse_block_5423630008,software engineering,S1,False,OT
+Q0110,rest20,Pworkday_visa_REF088619W,software engineering,rest20,False,OT
+Q0111,newtitle,Pworkday_micron_JR105267,manufacturing/field,newtitle,False,OT
+Q0112,rest20,Pworkday_allstate_R33095,legal and compliance,rest20,False,OT
+Q0113,rest20,Pworkday_micron_JR109648,manufacturing/field,rest20,False,OT
+Q0114,S1,Pworkday_xylem_R49411,data and AI/ML,S1,False,OT
+Q0115,rest20,Pworkday_salesforce_JR346858,software engineering,rest20,True,AO
+Q0116,newtitle,Pworkday_ryder_R184986,manufacturing/field,newtitle,False,OT
+Q0117,S1,Pworkday_micron_JR110666,software engineering,S1,False,OT
+Q0118,newtitle,Pworkday_carrier_30212917,manufacturing/field,newtitle,False,OT
+Q0119,rest20,Pworkday_cisco_2015482,customer service/support,rest20,False,OT
+Q0120,rest20,Pworkday_micron_JR108454,manufacturing/field,rest20,False,OT
+Q0121,rest20,Pworkday_cisco_2027038,software engineering,rest20,False,OT
+Q0122,newtitle,Pgreenhouse_alphasense_8634067002,security,newtitle,True,PE
+Q0123,newtitle,Pworkday_rockwellautomation_R26-5836,IT and infrastructure,newtitle,True,AO
+Q0124,rest20,Pworkday_statestreet_R-783866,software engineering,rest20,False,OT
+Q0125,newtitle,Pgreenhouse_brex_8615155002,executive/strategy,newtitle,False,OT
+Q0126,newtitle,Pworkday_adobe_R172085,data and AI/ML,newtitle,False,OT
+Q0127,newtitle,Pworkday_dxctechnology_51586092,software engineering,newtitle,False,OT
+Q0128,rest20,Pworkday_salesforce_JR350080,software engineering,rest20,True,AO
+Q0129,rest20,Pworkday_micron_JR114122,other,rest20,False,OT
+Q0130,rest20,Pworkday_dxctechnology_51589643,sales,rest20,False,OT
+Q0131,rest20,Pworkday_cigna_26006942,manufacturing/field,rest20,False,OT
+Q0132,rest20,Pworkday_micron_JR111664,marketing,rest20,False,OT
+Q0133,newtitle,Pgreenhouse_netskope_8168624,software engineering,newtitle,True,PE
+Q0134,rest20,Pworkday_statestreet_R-796618,other,rest20,False,OT
+Q0135,S1,Pgreenhouse_stripe_7939868,data and AI/ML,S1,False,OT
+Q0136,rest20,Pworkday_micron_JR107719,manufacturing/field,rest20,False,OT
+Q0137,rest20,Pworkday_republic_R-183305,operations and supply chain,rest20,False,OT
+Q0138,rest20,Pworkday_analogdevices_R262852,IT and infrastructure,rest20,False,OT
+Q0139,newtitle,Pashby_plaid_ca8c19ad-2be8-4d4f-96af-e0a37ff76fb8,marketing,newtitle,False,OT
+Q0140,S1,Pgreenhouse_databricks_8032546002,software engineering,S1,False,OT
+Q0141,rest20,Pgreenhouse_anthropic_5399379008,IT and infrastructure,rest20,False,OT
+Q0142,rest20,Pworkday_mckesson_JR0150253,HR,rest20,False,OT
+Q0143,rest20,Pworkday_amgen_R-248009,security,rest20,True,AO+PE
+Q0144,rest20,Pworkday_homedepot_Req191771,operations and supply chain,rest20,False,OT
+Q0145,S1,Pgreenhouse_alphasense_8628007002,software engineering,S1,False,OT
+Q0146,newtitle,Pworkday_nvidia_JR2026938,software engineering,newtitle,False,OT
+Q0147,rest20,Pworkday_micron_JR106057,software engineering,rest20,False,OT
+Q0148,S1,Psmartrecruiters_servicenow_744000146838699,software engineering,S1,False,OT
+Q0149,newtitle,Pworkday_equinix_JR-163407,data and AI/ML,newtitle,False,OT
+Q0150,newtitle,Pworkday_ingrammicro_R-116749,data and AI/ML,newtitle,False,OT
+Q0151,rest20,Pworkday_nvidia_JR2024861,manufacturing/field,rest20,False,OT
+Q0152,newtitle,Pworkday_cdw_R26_00002695,data and AI/ML,newtitle,False,OT
+Q0153,newtitle,Pworkday_cisco_2021635,data and AI/ML,newtitle,True,AO
+Q0154,rest20,Pworkday_ameriprise_R26_3898,IT and infrastructure,rest20,False,OT
+Q0155,rest20,Pworkday_cigna_26003284,IT and infrastructure,rest20,False,OT
+Q0156,rest20,Psmartrecruiters_servicenow_744000146839589,security,rest20,True,PE+PV
+Q0157,S1,Pworkday_myhrabc_R2613849,security,S1,False,OT
+Q0158,newtitle,Pworkday_livenation_JR-89071,software engineering,newtitle,True,AO
+Q0159,S1,Pworkday_warnerbros_R000106140,data and AI/ML,S1,True,AO
+Q0160,newtitle,Pworkday_pfizer_4961866,data and AI/ML,newtitle,False,OT
+Q0161,S1,Pworkday_kla_2635148,software engineering,S1,False,OT
+Q0162,rest20,Pworkday_micron_JR107644,manufacturing/field,rest20,False,OT
+Q0163,S1,Pworkday_target_R0000475423,data and AI/ML,S1,True,PE
+Q0164,newtitle,Pworkday_visa_REF082414W,finance and accounting,newtitle,False,OT
+Q0165,S1,Pworkday_devonenergy_R26172,legal and compliance,S1,False,OT
+Q0166,S1,Pworkday_motorolasolutions_R68335,software engineering,S1,True,AO
+Q0167,newtitle,Pworkday_travelers_R-52946,IT and infrastructure,newtitle,False,OT
+Q0168,newtitle,Pworkday_micron_JR112358,data and AI/ML,newtitle,False,OT
+Q0169,S1,Pworkday_visa_REF085123W,software engineering,S1,True,AO
+Q0170,S1,Pworkday_nordstrom_R-884830,data and AI/ML,S1,True,AO
+Q0171,S1,Pworkday_fanniemae_JR2839,software engineering,S1,False,OT
+Q0172,rest20,Pworkday_expedia_R-109470,operations and supply chain,rest20,True,PE
+Q0173,newtitle,Pworkday_nvidia_JR2021956,software engineering,newtitle,False,OT
+Q0174,S1,Pworkday_globalhr_01874138,data and AI/ML,S1,True,AO
+Q0175,rest20,Pgreenhouse_databricks_8627551002,data and AI/ML,rest20,False,OT
+Q0176,rest20,Pworkday_att_R-122802,software engineering,rest20,False,OT
+Q0177,S1,Pworkday_motorolasolutions_R68335,software engineering,S1,False,OT
+Q0178,S1,Pworkday_dxctechnology_51590845,software engineering,S1,False,OT
+Q0179,newtitle,Pworkday_intel_JR0281978,software engineering,newtitle,False,OT
+Q0180,S1,Pgreenhouse_block_5423630008,software engineering,S1,False,OT
+Q0181,rest20,Pworkday_nike_R-92073,sales,rest20,False,OT
+Q0182,S1,Pworkday_cisco_2017487,software engineering,S1,False,OT
+Q0183,S1,Pgreenhouse_alphasense_8687641002,software engineering,S1,False,OT
+Q0184,rest20,Pgreenhouse_databricks_8741922002,software engineering,rest20,False,OT
+Q0185,newtitle,Pgreenhouse_celonis_7928952003,IT and infrastructure,newtitle,False,OT
+Q0186,rest20,Pworkday_amgen_R-237974,marketing,rest20,False,OT
+Q0187,rest20,Pworkday_zoetis_JR00021040,IT and infrastructure,rest20,False,OT
+Q0188,S1,Pgreenhouse_block_5406139008,legal and compliance,S1,False,OT
+Q0189,rest20,Pworkday_jll_REQ528201,software engineering,rest20,False,OT
+Q0190,newtitle,Psmartrecruiters_canva_6000000001282666,marketing,newtitle,False,OT
+Q0191,S1,Pgreenhouse_databricks_8635216002,software engineering,S1,False,OT
+Q0192,rest20,Pworkday_cohesity_R04726,sales,rest20,False,OT
+Q0193,newtitle,Pworkday_geaerospace_R5034608,data and AI/ML,newtitle,True,AO
+Q0194,rest20,Pworkday_jll_REQ538008,marketing,rest20,False,OT
+Q0195,rest20,Pworkday_nvidia_JR2015038,software engineering,rest20,False,OT
+Q0196,rest20,Pworkday_mastercard_R-290866,software engineering,rest20,False,OT
+Q0197,S1,Pworkday_msd_R416895,data and AI/ML,S1,False,OT
+Q0198,newtitle,Psmartrecruiters_abbvie_3743990015971276,data and AI/ML,newtitle,False,OT
+Q0199,S1,Pworkday_pacificlife_R17680,software engineering,S1,False,OT
+Q0200,S1,Pworkday_cisco_2023418,security,S1,True,AO
+Q0201,newtitle,Pworkday_gevernova_R5050112,IT and infrastructure,newtitle,False,OT
+Q0202,newtitle,Pworkday_genmills_10129370,data and AI/ML,newtitle,False,OT
+Q0203,newtitle,Pworkday_visa_REF084922W,executive/strategy,newtitle,False,OT
+Q0204,rest20,Psmartrecruiters_servicenow_744000151877639,IT and infrastructure,rest20,False,OT
+Q0205,rest20,Pgreenhouse_celonis_7885761003,IT and infrastructure,rest20,False,OT
+Q0206,rest20,Pworkday_visa_REF088703W,marketing,rest20,False,OT
+Q0207,rest20,Pgreenhouse_coupang_8139229,marketing,rest20,False,OT
+Q0208,rest20,Pworkday_kla_2636296,data and AI/ML,rest20,False,OT
+Q0209,rest20,Pworkday_carrier_30212973,manufacturing/field,rest20,False,OT
+Q0210,rest20,Pworkday_iqvia_R1543646,software engineering,rest20,False,OT
+Q0211,rest20,Pworkday_boeing_JR2026526556,IT and infrastructure,rest20,True,PE
+Q0212,rest20,Pworkday_micron_JR106154,manufacturing/field,rest20,False,OT
+Q0213,newtitle,Pgreenhouse_celonis_7815041003,data and AI/ML,newtitle,False,OT
+Q0214,newtitle,Pworkday_amgen_R-244637,manufacturing/field,newtitle,False,OT
+Q0215,rest20,Pworkday_micron_JR111673,manufacturing/field,rest20,False,OT
+Q0216,newtitle,Pworkday_spgi_327223,data and AI/ML,newtitle,False,OT
+Q0217,S1,Pworkday_statestreet_R-793769,finance and accounting,S1,False,OT
+Q0218,rest20,Pworkday_caci_332553,data and AI/ML,rest20,False,OT
+Q0219,rest20,Psmartrecruiters_servicenow_744000154466958,HR,rest20,False,OT
+Q0220,S1,Pworkday_analogdevices_R265249,data and AI/ML,S1,False,OT
+Q0221,rest20,Pworkday_nvidia_JR2024703,IT and infrastructure,rest20,False,OT
+Q0222,newtitle,Pworkday_livenation_JR-93296,data and AI/ML,newtitle,True,PE
+Q0223,newtitle,Pworkday_mastercard_R-288104,data and AI/ML,newtitle,True,AO
+Q0224,rest20,Pworkday_mastercard_R-289420,HR,rest20,False,OT
+Q0225,S1,Pworkday_jabil_J2464677,software engineering,S1,False,OT
+Q0226,rest20,Pworkday_warnerbros_R000106150,data and AI/ML,rest20,False,OT
+Q0227,rest20,Pworkday_salesforce_JR358505,IT and infrastructure,rest20,False,OT
+Q0228,rest20,Pworkday_micron_JR110204,operations and supply chain,rest20,False,OT
+Q0229,newtitle,Pworkday_kla_2638258,data and AI/ML,newtitle,True,AO
+Q0230,newtitle,Pgreenhouse_block_5415999008,sales,newtitle,False,OT
+Q0231,S1,Pworkday_salesforce_JR353388,software engineering,S1,False,OT
+Q0232,S1,Pworkday_gilead_R0054104,data and AI/ML,S1,False,OT
+Q0233,S1,Pworkday_iqvia_R1531626,data and AI/ML,S1,False,OT
+Q0234,rest20,Pworkday_leidos_R-00193035,IT and infrastructure,rest20,False,OT
+Q0235,S1,Pworkday_nordstrom_R-875863,legal and compliance,S1,True,AO
+Q0236,newtitle,Pworkday_expedia_R-110171,data and AI/ML,newtitle,True,AO
+Q0237,rest20,Pworkday_micron_JR106131,manufacturing/field,rest20,False,OT
+Q0238,newtitle,Pworkday_visa_REF089205W,IT and infrastructure,newtitle,False,OT
+Q0239,rest20,Pworkday_salesforce_JR355156,software engineering,rest20,False,OT
+Q0240,rest20,Pworkday_salesforce_JR362499,executive/strategy,rest20,False,OT
+Q0241,S1,Pworkday_leidos_R-00192138,data and AI/ML,S1,True,PE
+Q0242,rest20,Pgreenhouse_celonis_8016353003,manufacturing/field,rest20,False,OT
+Q0243,newtitle,Pworkday_abbott_31162712,manufacturing/field,newtitle,False,OT
+Q0244,newtitle,Pworkday_cohesity_R04801,sales,newtitle,False,OT
+Q0245,newtitle,Pworkday_jll_REQ539830,data and AI/ML,newtitle,False,OT
+Q0246,rest20,Pworkday_salesforce_JR358862,finance and accounting,rest20,False,OT
+Q0247,newtitle,Pworkday_cisco_2026696,security,newtitle,False,OT
+Q0248,S1,Psmartrecruiters_servicenow_744000152029219,data and AI/ML,S1,False,OT
+Q0249,newtitle,Pworkday_visa_REF088108W,data and AI/ML,newtitle,False,OT
+Q0250,rest20,Pworkday_globalhr_01869919,finance and accounting,rest20,False,OT
+Q0251,rest20,Pgreenhouse_databricks_8628029002,sales,rest20,False,OT
+Q0252,rest20,Pworkday_salesforce_JR361391,IT and infrastructure,rest20,False,OT
+Q0253,S1,Pworkday_workday_JR-0110615,software engineering,S1,True,PE
+Q0254,rest20,Pworkday_leidos_R-00190757,software engineering,rest20,False,OT
+Q0255,S1,Psmartrecruiters_servicenow_744000153655299,data and AI/ML,S1,False,OT
+Q0256,S1,Pworkday_cisco_2022845,security,S1,True,AO
+Q0257,S1,Pworkday_dxctechnology_51589020,software engineering,S1,False,OT
+Q0258,rest20,Pworkday_boeing_JR2026523046,software engineering,rest20,False,OT
+Q0259,rest20,Pgreenhouse_block_5442647008,data and AI/ML,rest20,True,AO
+Q0260,rest20,Pworkday_rockwellautomation_R26-5866,finance and accounting,rest20,False,OT
+Q0261,S1,Pworkday_citi_26989233,software engineering,S1,True,AO
+Q0262,rest20,Pworkday_nvidia_JR2026216,finance and accounting,rest20,True,AO
+Q0263,S1,Psmartrecruiters_servicenow_744000150942129,data and AI/ML,S1,False,OT
+Q0264,rest20,Pworkday_paypal_R0137470,software engineering,rest20,False,OT
+Q0265,rest20,Psmartrecruiters_abbvie_3743990014952326,data and AI/ML,rest20,False,OT
+Q0266,rest20,Pworkday_paloaltonetworks_JR-018188,sales,rest20,False,OT
+Q0267,newtitle,Pgreenhouse_stripe_8248509,IT and infrastructure,newtitle,False,OT
+Q0268,rest20,Pworkday_globalhr_01852857,data and AI/ML,rest20,False,OT
+Q0269,S1,Pgreenhouse_block_5414624008,software engineering,S1,False,OT
+Q0270,S1,Pgreenhouse_block_5381210008,software engineering,S1,False,OT
+Q0271,S1,Pworkday_ecolab_R00305083,data and AI/ML,S1,True,PE
+Q0272,rest20,Pworkday_motorolasolutions_R66449,software engineering,rest20,False,OT
+Q0273,S1,Pworkday_motorolasolutions_R67117,software engineering,S1,False,OT
+Q0274,newtitle,Pworkday_avnet_JR-022116,IT and infrastructure,newtitle,False,OT
+Q0275,newtitle,Pworkday_adobe_R171719,data and AI/ML,newtitle,False,OT
+Q0276,S1,Pworkday_homedepot_Req194668,software engineering,S1,False,OT
+Q0277,rest20,Pworkday_amgen_R-215090,data and AI/ML,rest20,True,AO
+Q0278,S1,Pworkday_gevernova_R5020373,software engineering,S1,False,OT
+Q0279,newtitle,Pgreenhouse_anthropic_5407938008,sales,newtitle,False,OT
+Q0280,rest20,Pworkday_mastercard_R-211833,software engineering,rest20,False,OT
+Q0281,rest20,Pworkday_att_R-122966,sales,rest20,False,OT
+Q0282,rest20,Pworkday_republic_R-185463,operations and supply chain,rest20,False,OT
+Q0283,S1,Pworkday_abbott_31156422,legal and compliance,S1,False,OT
+Q0284,rest20,Pworkday_motorolasolutions_R66511,sales,rest20,False,OT
+Q0285,newtitle,Pworkday_nvidia_JR2021784,data and AI/ML,newtitle,False,OT
+Q0286,rest20,Pgreenhouse_stripe_8177860,software engineering,rest20,False,OT
+Q0287,S1,Pworkday_dxctechnology_51587063,software engineering,S1,True,AO
+Q0288,rest20,Pgreenhouse_stripe_8238098,sales,rest20,False,OT
+Q0289,rest20,Pgreenhouse_carta_7805343003,legal and compliance,rest20,False,OT
+Q0290,rest20,Pworkday_equinix_JR-163544,software engineering,rest20,False,OT
+Q0291,S1,Pgreenhouse_databricks_8560783002,software engineering,S1,False,OT
+Q0292,S1,Pgreenhouse_hp_6220700004,data and AI/ML,S1,False,OT
+Q0293,rest20,Pworkday_micron_JR108778,other,rest20,False,OT
+Q0294,newtitle,Pworkday_salesforce_JR346847,data and AI/ML,newtitle,True,AO
+Q0295,S1,Pworkday_mckesson_JR0153448,software engineering,S1,False,OT
+Q0296,rest20,Pworkday_workday_JR-0108059,software engineering,rest20,False,OT
+Q0297,rest20,Pworkday_att_R-122802,software engineering,rest20,False,OT
+Q0298,rest20,Pworkday_kbr_R2130529,software engineering,rest20,False,OT
+Q0299,rest20,Pworkday_micron_JR105867,manufacturing/field,rest20,False,OT
+Q0300,S1,Pworkday_mastercard_R-282567,data and AI/ML,S1,False,OT
+Q0301,S1,Pworkday_target_R0000475423,data and AI/ML,S1,True,AO
+Q0302,rest20,Pworkday_workday_JR-0109906,sales,rest20,False,OT
+Q0303,newtitle,Pworkday_visa_REF083051W,executive/strategy,newtitle,False,OT
+Q0304,newtitle,Pworkday_spgi_321035,data and AI/ML,newtitle,False,OT
+Q0305,rest20,Pworkday_micron_JR113677,manufacturing/field,rest20,False,OT
+Q0306,newtitle,Pworkday_analogdevices_R264055,data and AI/ML,newtitle,True,AO+PE
+Q0307,rest20,Pworkday_republic_R-186120,operations and supply chain,rest20,False,OT
+Q0308,S1,Pworkday_motorolasolutions_R66303,software engineering,S1,True,AO
+Q0309,S1,Pworkday_cisco_2024098,software engineering,S1,False,OT
+Q0310,rest20,Pworkday_salesforce_JR359944,data and AI/ML,rest20,False,OT
+Q0311,rest20,Pworkday_nvidia_JR2021976,operations and supply chain,rest20,False,OT
+Q0312,rest20,Pworkday_micron_JR103096,manufacturing/field,rest20,False,OT
+Q0313,S1,Pworkday_ntrs_R158514,data and AI/ML,S1,False,OT
+Q0314,S1,Pworkday_ecolab_R00305080,data and AI/ML,S1,False,OT
+Q0315,S1,Psmartrecruiters_servicenow_744000148951705,software engineering,S1,False,OT
+Q0316,rest20,Pworkday_ghr_26035617,sales,rest20,False,OT
+Q0317,newtitle,Pworkday_amgen_R-252035,marketing,newtitle,False,OT
+Q0318,rest20,Pworkday_jabil_J2449584,IT and infrastructure,rest20,False,OT
+Q0319,newtitle,Pworkday_globalhr_01876909,manufacturing/field,newtitle,False,OT
+Q0320,S1,Pworkday_visa_REF088095W,software engineering,S1,False,OT
+Q0321,rest20,Pworkday_msd_R418370,sales,rest20,False,OT
+Q0322,S1,Pworkday_salesforce_JR354027,software engineering,S1,False,OT
+Q0323,rest20,Pworkday_kla_2639783,other,rest20,False,OT
+Q0324,S1,Pworkday_analogdevices_R266396,data and AI/ML,S1,False,OT
+Q0325,rest20,Pworkday_citi_261000053,software engineering,rest20,False,OT
+Q0326,S1,Pworkday_ecolab_R00305080,data and AI/ML,S1,True,AO
+Q0327,rest20,Pgreenhouse_databricks_8540455002,software engineering,rest20,False,OT
+Q0328,rest20,Pworkday_carrier_30217817,data and AI/ML,rest20,True,AO
+Q0329,rest20,Pworkday_republic_R-184897,operations and supply chain,rest20,False,OT
+Q0330,newtitle,Pworkday_micron_JR92604,software engineering,newtitle,False,OT
+Q0331,rest20,Pworkday_ntrs_R158378,IT and infrastructure,rest20,False,OT
+Q0332,rest20,Pworkday_truist_R0118728,manufacturing/field,rest20,False,OT
+Q0333,newtitle,Pworkday_micron_JR110811,data and AI/ML,newtitle,True,AO
+Q0334,S1,Pworkday_nvidia_JR2015832,software engineering,S1,True,AO
+Q0335,S1,Pworkday_paloaltonetworks_JR-022561,sales,S1,False,OT
+Q0336,rest20,Pworkday_micron_JR99113,manufacturing/field,rest20,False,OT
+Q0337,S1,Pashby_ramp_f5b60cf1-c0ec-42c1-89db-ece853e998ab,software engineering,S1,True,AO
+Q0338,rest20,Pworkday_amgen_R-251679,operations and supply chain,rest20,False,OT
+Q0339,S1,Pgreenhouse_alphasense_8687635002,software engineering,S1,False,OT
+Q0340,S1,Pworkday_ghr_26030704,software engineering,S1,False,OT
+Q0341,S1,Pworkday_danaher_R1317110,data and AI/ML,S1,True,AO
+Q0342,S1,Pworkday_leidos_R-00192138,data and AI/ML,S1,False,OT
+Q0343,S1,Pworkday_truist_R0113506,data and AI/ML,S1,True,PE
+Q0344,rest20,Pworkday_nvidia_JR2018371,software engineering,rest20,False,OT
+Q0345,S1,Pworkday_cisco_2022845,security,S1,True,AO
+Q0346,rest20,Pworkday_micron_JR113339,manufacturing/field,rest20,False,OT
+Q0347,rest20,Pworkday_salesforce_JR358452,HR,rest20,False,OT
+Q0348,rest20,Psmartrecruiters_abbvie_3743990015600877,manufacturing/field,rest20,False,OT
+Q0349,rest20,Pworkday_cisco_2023830,marketing,rest20,False,OT
+Q0350,newtitle,Pworkday_iqvia_R1562482,data and AI/ML,newtitle,False,OT
+Q0351,rest20,Pgreenhouse_celonis_7742439003,manufacturing/field,rest20,False,OT
+Q0352,newtitle,Pworkday_caci_332026,software engineering,newtitle,False,OT
+Q0353,newtitle,Pworkday_lplfinancial_R-054145,operations and supply chain,newtitle,True,PE
+Q0354,S1,Psmartrecruiters_servicenow_744000139371520,data and AI/ML,S1,True,AO
+Q0355,newtitle,Pworkday_jabil_J2466766,data and AI/ML,newtitle,False,OT
+Q0356,rest20,Pgreenhouse_databricks_6322654002,data and AI/ML,rest20,False,OT
+Q0357,rest20,Pworkday_salesforce_JR352778,software engineering,rest20,False,OT
+Q0358,rest20,Pworkday_micron_JR110925,software engineering,rest20,False,OT
+Q0359,rest20,Pworkday_micron_JR108932,manufacturing/field,rest20,False,OT
+Q0360,S1,Pworkday_cisco_2020735,software engineering,S1,False,OT
+Q0361,rest20,Pworkday_micron_JR107719,manufacturing/field,rest20,False,OT
+Q0362,rest20,Pgreenhouse_fivetran_7687902003,software engineering,rest20,False,OT
+Q0363,rest20,Pworkday_micron_JR105381,manufacturing/field,rest20,False,OT
+Q0364,rest20,Pworkday_blackstone_44370,executive/strategy,rest20,False,OT
+Q0365,rest20,Psmartrecruiters_servicenow_744000154137320,IT and infrastructure,rest20,False,OT
+Q0366,rest20,Pworkday_genmills_10128960,data and AI/ML,rest20,False,OT
+Q0367,rest20,Pworkday_livenation_JR-92591,other,rest20,False,OT
+Q0368,newtitle,Psmartrecruiters_servicenow_744000149871496,operations and supply chain,newtitle,True,AO+PE
+Q0369,newtitle,Pworkday_gevernova_R5050112,IT and infrastructure,newtitle,True,PE
+Q0370,rest20,Pworkday_amgen_R-254834,other,rest20,False,OT
+Q0371,rest20,Pworkday_nike_R-90321,data and AI/ML,rest20,False,OT
+Q0372,rest20,Pworkday_gevernova_R5053029,manufacturing/field,rest20,False,OT
+Q0373,rest20,Pworkday_micron_JR107831,manufacturing/field,rest20,False,OT
+Q0374,rest20,Pworkday_carrier_30212819,software engineering,rest20,False,OT
+Q0375,S1,Pgreenhouse_airbnb_7747259,data and AI/ML,S1,False,OT
+Q0376,S1,Pworkday_ecolab_R00305079,data and AI/ML,S1,False,OT
+Q0377,S1,Pworkday_ntrs_R158514,data and AI/ML,S1,False,OT
+Q0378,rest20,Pworkday_salesforce_JR349385,software engineering,rest20,True,AO+PE
+Q0379,newtitle,Pworkday_danaher_R1314269,data and AI/ML,newtitle,True,AO
+Q0380,rest20,Pworkday_tysonfoods_R0465148,manufacturing/field,rest20,False,OT
+Q0381,newtitle,Pworkday_paloaltonetworks_JR-015162,data and AI/ML,newtitle,False,OT
+Q0382,S1,Pworkday_target_R0000475423,data and AI/ML,S1,False,OT
+Q0383,S1,Pworkday_motorolasolutions_R67117,software engineering,S1,False,OT
+Q0384,S1,Pworkday_visa_REF085123W,software engineering,S1,False,OT
+Q0385,S1,Pworkday_ecolab_R00305083,data and AI/ML,S1,False,OT
+Q0386,newtitle,Psmartrecruiters_abbvie_3743990015861667,executive/strategy,newtitle,False,OT
+Q0387,S1,Pgreenhouse_alphasense_8203671002,data and AI/ML,S1,True,AO
+Q0388,S1,Pworkday_paloaltonetworks_JR-022784,software engineering,S1,False,OT
+Q0389,rest20,Pworkday_mckesson_JR0153881,operations and supply chain,rest20,False,OT
+Q0390,rest20,Pworkday_landolakes_R-40841,manufacturing/field,rest20,False,OT
+Q0391,rest20,Pworkday_micron_JR111673,manufacturing/field,rest20,False,OT
+Q0392,rest20,Pworkday_ingrammicro_R-117076,software engineering,rest20,False,OT
+Q0393,newtitle,Pworkday_nvidia_JR2024197,marketing,newtitle,False,OT
+Q0394,newtitle,Pworkday_thrivent_REQ-47040,security,newtitle,False,OT
+Q0395,newtitle,Psmartrecruiters_servicenow_744000154154044,sales,newtitle,True,AO
+Q0396,S1,Pgreenhouse_databricks_8635188002,software engineering,S1,False,OT
+Q0397,S1,Pworkday_paloaltonetworks_JR-021408,data and AI/ML,S1,False,OT
+Q0398,rest20,Pworkday_regeneron_R51031,data and AI/ML,rest20,False,OT
+Q0399,rest20,Pworkday_stryker_R573579,IT and infrastructure,rest20,False,OT
+Q0400,rest20,Pworkday_amgen_R-240318,data and AI/ML,rest20,False,OT
+Q0401,rest20,Pgreenhouse_brex_8787053002,marketing,rest20,True,AO
+Q0402,newtitle,Pworkday_assurant_R-114724,software engineering,newtitle,False,OT
+Q0403,rest20,Pworkday_amgen_R-250459,security,rest20,False,OT
+Q0404,rest20,Pworkday_salesforce_JR343017,marketing,rest20,False,OT
+Q0405,rest20,Pworkday_salesforce_JR357428,software engineering,rest20,False,OT
+Q0406,rest20,Pworkday_gevernova_R5049187,manufacturing/field,rest20,False,OT
+Q0407,newtitle,Pgreenhouse_databricks_8091041002,data and AI/ML,newtitle,False,OT
+Q0408,S1,Pworkday_micron_JR109153,software engineering,S1,False,OT
+Q0409,rest20,Pworkday_micron_JR87597,manufacturing/field,rest20,False,OT
+Q0410,rest20,Pworkday_travelers_R-52988,finance and accounting,rest20,False,OT
+Q0411,rest20,Pworkday_micron_JR112502,manufacturing/field,rest20,False,OT
+Q0412,newtitle,Pworkday_micron_JR109599,data and AI/ML,newtitle,False,OT
+Q0413,rest20,Pworkday_abbott_31163428,data and AI/ML,rest20,False,OT
+Q0414,rest20,Pgreenhouse_databricks_8789428002,IT and infrastructure,rest20,False,OT
+Q0415,rest20,Pworkday_tjx_REQ162116,data and AI/ML,rest20,False,OT
+Q0416,S1,Pworkday_cisco_2020130,finance and accounting,S1,False,OT
+Q0417,newtitle,Pworkday_amgen_R-251199,data and AI/ML,newtitle,False,PV
+Q0418,S1,Pworkday_nordstrom_R-875863,legal and compliance,S1,False,OT
+Q0419,rest20,Pworkday_nvidia_JR2023131,software engineering,rest20,False,OT
+Q0420,rest20,Pgreenhouse_databricks_8494143002,software engineering,rest20,False,OT
+Q0421,rest20,Pworkday_analogdevices_R264808,software engineering,rest20,False,OT
+Q0422,rest20,Pworkday_spgi_328917,IT and infrastructure,rest20,False,OT
+Q0423,S1,Pworkday_adobe_R160198,software engineering,S1,True,AO
+Q0424,rest20,Pworkday_micron_JR111673,manufacturing/field,rest20,False,OT
+Q0425,S1,Pworkday_visa_REF085123W,software engineering,S1,True,AO
+Q0426,rest20,Pworkday_abbott_31158676,operations and supply chain,rest20,False,OT
+Q0427,rest20,Pworkday_statestreet_R-798050,software engineering,rest20,False,OT
+Q0428,rest20,Pworkday_micron_JR109289,manufacturing/field,rest20,False,OT
+Q0429,S1,Pworkday_tjx_REQ162115,operations and supply chain,S1,False,OT
+Q0430,rest20,Pworkday_jll_REQ538933,software engineering,rest20,True,PE
+Q0431,rest20,Pworkday_salesforce_JR361391,IT and infrastructure,rest20,False,OT
+Q0432,rest20,Pgreenhouse_coupang_8139229,marketing,rest20,False,OT
+Q0433,newtitle,Psmartrecruiters_abbvie_3743990015541586,IT and infrastructure,newtitle,False,OT
+Q0434,S1,Pworkday_att_R-122145,software engineering,S1,False,OT
+Q0435,rest20,Pworkday_salesforce_JR355716,IT and infrastructure,rest20,False,OT
+Q0436,newtitle,Pgreenhouse_block_5424561008,data and AI/ML,newtitle,False,OT
+Q0437,rest20,Pworkday_iqvia_R1551819,IT and infrastructure,rest20,False,OT
+Q0438,rest20,Pworkday_micron_JR91514,manufacturing/field,rest20,False,OT
+Q0439,rest20,Pworkday_micron_JR108496,finance and accounting,rest20,False,OT
+Q0440,rest20,Pworkday_thrivent_REQ-48555,security,rest20,True,PE
+Q0441,newtitle,Pworkday_leidos_R-00193984,manufacturing/field,newtitle,True,PE
+Q0442,rest20,Pworkday_ecolab_R00306634,data and AI/ML,rest20,False,OT
+Q0443,rest20,Pworkday_jabil_J2426774,software engineering,rest20,False,OT
+Q0444,newtitle,Pworkday_dxctechnology_51589543,software engineering,newtitle,True,AO
+Q0445,newtitle,Pworkday_micron_JR110811,data and AI/ML,newtitle,True,AO
+Q0446,rest20,Pashby_notion_3f842011-eb04-4b75-bf92-8be5a5ce02b2,sales,rest20,False,OT
+Q0447,rest20,Pworkday_biibhr_REQ24228,marketing,rest20,False,OT
+Q0448,newtitle,Pworkday_workday_JR-0108977,data and AI/ML,newtitle,False,OT
+Q0449,rest20,Pworkday_micron_JR105692,manufacturing/field,rest20,False,OT
+Q0450,S1,Pworkday_expedia_R-104200,software engineering,S1,True,AO
+Q0451,newtitle,Pworkday_ingrammicro_R-116773,IT and infrastructure,newtitle,False,OT
+Q0452,rest20,Pworkday_ecolab_R00298448,security,rest20,False,OT
+Q0453,rest20,Pworkday_nvidia_JR2025791,marketing,rest20,False,OT
+Q0454,rest20,Pworkday_workday_JR-0109906,sales,rest20,False,OT
+Q0455,rest20,Pworkday_micron_JR105755,manufacturing/field,rest20,False,OT
+Q0456,rest20,Pworkday_expedia_R-109380,marketing,rest20,False,OT
+Q0457,S1,Psmartrecruiters_servicenow_744000148951705,software engineering,S1,False,OT
+Q0458,newtitle,Pgreenhouse_onetrust_8138824,software engineering,newtitle,False,OT
+Q0459,rest20,Pworkday_cisco_2024306,sales,rest20,False,OT
+Q0460,S1,Pworkday_nvidia_JR2024747,software engineering,S1,False,OT
+Q0461,newtitle,Pworkday_statestreet_R-797784,security,newtitle,True,PE
+Q0462,newtitle,Pworkday_cigna_26011859,IT and infrastructure,newtitle,False,OT
+Q0463,rest20,Pworkday_micron_JR107141,manufacturing/field,rest20,False,OT
+Q0464,newtitle,Pworkday_clio_REQ-5351,IT and infrastructure,newtitle,False,OT
+Q0465,rest20,Pworkday_cigna_26006449,operations and supply chain,rest20,False,OT
+Q0466,rest20,Pworkday_micron_JR85529,manufacturing/field,rest20,False,OT
+Q0467,newtitle,Pworkday_leidos_R-00194002,software engineering,newtitle,False,OT
+Q0468,newtitle,Pworkday_truist_R0119392,finance and accounting,newtitle,False,OT
+Q0469,rest20,Pworkday_salesforce_JR360367,sales,rest20,False,OT
+Q0470,S1,Pworkday_micron_JR110666,software engineering,S1,False,OT
+Q0471,newtitle,Pworkday_dxctechnology_51584713,data and AI/ML,newtitle,True,AO
+Q0472,S1,Pworkday_ntrs_R161850,security,S1,False,OT
+Q0473,rest20,Pworkday_aksteel_R13473,manufacturing/field,rest20,False,OT
+Q0474,S1,Pworkday_nvidia_JR2024160,software engineering,S1,False,OT
+Q0475,newtitle,Pworkday_cigna_26012065,IT and infrastructure,newtitle,True,AO
+Q0476,rest20,Pworkday_gevernova_R5050731,manufacturing/field,rest20,False,OT
+Q0477,rest20,Pworkday_mckesson_JR0154849,operations and supply chain,rest20,False,OT
+Q0478,newtitle,Pworkday_micron_JR112149,software engineering,newtitle,True,AO
+Q0479,rest20,Pworkday_micron_JR113170,healthcare/clinical,rest20,False,OT
+Q0480,rest20,Pworkday_att_R-124700,sales,rest20,False,OT
+Q0481,S1,Pgreenhouse_block_5421096008,software engineering,S1,False,OT
+Q0482,S1,Psmartrecruiters_servicenow_744000152029049,data and AI/ML,S1,False,OT
+Q0483,S1,Pworkday_caci_332567,software engineering,S1,True,AO
+Q0484,rest20,Pworkday_mastercard_R-291687,software engineering,rest20,False,OT
+Q0485,rest20,Pworkday_homedepot_Req191182,operations and supply chain,rest20,False,OT
+Q0486,newtitle,Psmartrecruiters_abbvie_3743990014881856,data and AI/ML,newtitle,False,OT
+Q0487,S1,Pworkday_cnx_R1716095,operations and supply chain,S1,True,AO
+Q0488,S1,Pworkday_globalhr_01877963,software engineering,S1,False,OT
+Q0489,rest20,Pworkday_fiserv_R-10401297,executive/strategy,rest20,False,OT
+Q0490,rest20,Pworkday_paloaltonetworks_JR-022290,software engineering,rest20,False,OT
+Q0491,S1,Pworkday_citi_26984109,software engineering,S1,False,OT
+Q0492,rest20,Pgreenhouse_stripe_8079918,IT and infrastructure,rest20,False,OT
+Q0493,S1,Pworkday_ghr_26024017,data and AI/ML,S1,True,AO
+Q0494,newtitle,Pworkday_workday_JR-0108016,data and AI/ML,newtitle,False,OT
+Q0495,rest20,Pworkday_att_R-122802,software engineering,rest20,False,OT
+Q0496,newtitle,Pworkday_carrier_30218287,data and AI/ML,newtitle,False,OT
+Q0497,rest20,Pworkday_kla_2639475,IT and infrastructure,rest20,False,OT
+Q0498,rest20,Pworkday_abbott_31163554,operations and supply chain,rest20,False,OT
+Q0499,rest20,Pworkday_nvidia_JR2026216,finance and accounting,rest20,False,OT
+Q0500,S1,Pworkday_intel_JR0287292,data and AI/ML,S1,False,OT
+Q0501,newtitle,Pworkday_statestreet_R-790638,executive/strategy,newtitle,False,OT
+Q0502,newtitle,Pworkday_workday_JR-0105599,data and AI/ML,newtitle,True,AO
+Q0503,rest20,Pworkday_pfizer_4965388,executive/strategy,rest20,False,OT
+Q0504,rest20,Pgreenhouse_databricks_8762366002,IT and infrastructure,rest20,False,OT
+Q0505,rest20,Psmartrecruiters_abbvie_3743990015910346,manufacturing/field,rest20,False,OT
+Q0506,S1,Pworkday_ecolab_R00305080,data and AI/ML,S1,True,AO
+Q0507,rest20,Pworkday_nvidia_JR2020227,IT and infrastructure,rest20,False,OT
+Q0508,newtitle,Psmartrecruiters_servicenow_744000152733049,data and AI/ML,newtitle,False,OT
+Q0509,rest20,Pworkday_paloaltonetworks_JR-022876,other,rest20,False,OT
+Q0510,S1,Pworkday_truist_R0118364,data and AI/ML,S1,False,OT
+Q0511,S1,Pworkday_myhrabc_R2614538,security,S1,False,OT
+Q0512,S1,Pworkday_salesforce_JR342897,software engineering,S1,False,OT
+Q0513,newtitle,Pworkday_xcelenergy_JR116328,data and AI/ML,newtitle,False,OT
+Q0514,rest20,Pworkday_statestreet_R-797844,executive/strategy,rest20,True,AO
+Q0515,S1,Pworkday_cisco_2022975,security,S1,True,AO
+Q0516,newtitle,Pworkday_cisco_2024315,IT and infrastructure,newtitle,True,AO
+Q0517,rest20,Pworkday_micron_JR110074,other,rest20,False,OT
+Q0518,newtitle,Pworkday_cisco_2024135,marketing,newtitle,False,OT
+Q0519,rest20,Pgreenhouse_stripe_8078337,finance and accounting,rest20,False,OT
+Q0520,newtitle,Pworkday_danaher_R1317010,IT and infrastructure,newtitle,True,PE
+Q0521,rest20,Pworkday_visa_REF082409W,software engineering,rest20,True,AO
+Q0522,rest20,Pworkday_cigna_26012237,software engineering,rest20,True,AO
+Q0523,newtitle,Pworkday_carrier_30213243,data and AI/ML,newtitle,True,AO
+Q0524,newtitle,Pworkday_motorolasolutions_R69574,data and AI/ML,newtitle,False,OT
+Q0525,newtitle,Pworkday_nvidia_JR2024816,software engineering,newtitle,False,OT
+Q0526,newtitle,Pworkday_amgen_R-225950,software engineering,newtitle,False,OT
+Q0527,newtitle,Pworkday_dxctechnology_51589550,software engineering,newtitle,False,OT
+Q0528,rest20,Pworkday_target_R0000475361,marketing,rest20,False,OT
+Q0529,rest20,Pworkday_truist_R0116390,software engineering,rest20,False,OT
+Q0530,S1,Pworkday_ecolab_R00305074,data and AI/ML,S1,True,PE
+Q0531,rest20,Pworkday_republic_R-186084,operations and supply chain,rest20,False,OT
+Q0532,newtitle,Pworkday_amgen_R-235756,software engineering,newtitle,True,AO
+Q0533,rest20,Pgreenhouse_anthropic_5066995008,security,rest20,False,OT
+Q0534,rest20,Pworkday_paloaltonetworks_JR-018030,software engineering,rest20,False,OT
+Q0535,S1,Pworkday_iqvia_R1552092,software engineering,S1,False,OT
+Q0536,rest20,Pworkday_micron_JR112502,manufacturing/field,rest20,False,OT
+Q0537,rest20,Pworkday_assurant_R-115469,data and AI/ML,rest20,False,OT
+Q0538,newtitle,Pgreenhouse_databricks_8337361002,marketing,newtitle,False,OT
+Q0539,rest20,Pgreenhouse_fivetran_7735422003,marketing,rest20,False,OT
+Q0540,S1,Pworkday_ecolab_R00305083,data and AI/ML,S1,True,PE
+Q0541,rest20,Pworkday_salesforce_JR353846,IT and infrastructure,rest20,False,OT
+Q0542,rest20,Pworkday_republic_R-185613,sales,rest20,False,OT
+Q0543,S1,Pworkday_leidos_R-00192138,data and AI/ML,S1,True,AO
+Q0544,S1,Pgreenhouse_block_5369947008,software engineering,S1,False,OT
+Q0545,rest20,Pworkday_elevancehealth_JR209189,security,rest20,False,OT
+Q0546,rest20,Pworkday_analogdevices_R266494,manufacturing/field,rest20,False,OT
+Q0547,rest20,Pworkday_salesforce_JR362202,software engineering,rest20,False,OT
+Q0548,S1,Pworkday_iqvia_R1552095,software engineering,S1,False,OT
+Q0549,newtitle,Pworkday_mastercard_R-282020,software engineering,newtitle,True,AO
+Q0550,rest20,Pworkday_gilead_R0054707,data and AI/ML,rest20,True,AO
+Q0551,newtitle,Psmartrecruiters_AveryDennison_744000151565088,manufacturing/field,newtitle,False,OT
+Q0552,newtitle,Pworkday_micron_JR96904,software engineering,newtitle,False,OT
+Q0553,newtitle,Pgreenhouse_databricks_8574912002,software engineering,newtitle,False,OT
+Q0554,newtitle,Pworkday_pfizer_4961866,data and AI/ML,newtitle,False,OT
+Q0555,S1,Pworkday_allstate_R33006,software engineering,S1,False,OT
+Q0556,S1,Pworkday_mastercard_R-288109,software engineering,S1,False,OT
+Q0557,S1,Pworkday_globalhr_01871468,security,S1,False,OT
+Q0558,rest20,Pashby_notion_edb12109-aa32-461a-b764-1850a2314e0d,marketing,rest20,False,OT
+Q0559,rest20,Pworkday_tjx_REQ166326,customer service/support,rest20,False,OT
+Q0560,S1,Pworkday_xcelenergy_JR116767,data and AI/ML,S1,False,OT
+Q0561,rest20,Pworkday_salesforce_JR354494,executive/strategy,rest20,False,OT
+Q0562,rest20,Pgreenhouse_celonis_7875762003,other,rest20,False,OT
+Q0563,newtitle,Pworkday_nike_R-91486,software engineering,newtitle,False,OT
+Q0564,S1,Pworkday_ecolab_R00305079,data and AI/ML,S1,False,OT
+Q0565,newtitle,Psmartrecruiters_servicenow_744000153019169,data and AI/ML,newtitle,False,OT
+Q0566,rest20,Pworkday_intel_JR0287417,manufacturing/field,rest20,False,OT
+Q0567,newtitle,Pworkday_nvidia_JR2026144,IT and infrastructure,newtitle,True,PE
+Q0568,rest20,Pworkday_micron_JR113225,manufacturing/field,rest20,True,AO
+Q0569,rest20,Pworkday_republic_R-185991,operations and supply chain,rest20,False,OT
+Q0570,S1,Pgreenhouse_alphasense_8213367002,data and AI/ML,S1,True,AO
+Q0571,newtitle,Pworkday_gevernova_R5047912,software engineering,newtitle,True,AO
+Q0572,rest20,Pworkday_micron_JR110074,other,rest20,False,OT
+Q0573,rest20,Pworkday_carrier_30216362,security,rest20,False,OT
+Q0574,rest20,Pgreenhouse_brex_8864170002,operations and supply chain,rest20,False,OT
+Q0575,rest20,Pgreenhouse_netskope_8184639,data and AI/ML,rest20,False,OT
+Q0576,newtitle,Pworkday_amgen_R-256479,IT and infrastructure,newtitle,False,OT
+Q0577,newtitle,Pworkday_intel_JR0287931,data and AI/ML,newtitle,False,OT
+Q0578,rest20,Pgreenhouse_anthropic_5445577008,marketing,rest20,False,OT
+Q0579,rest20,Psmartrecruiters_abbvie_3743990014685156,IT and infrastructure,rest20,False,OT
+Q0580,rest20,Pworkday_abbott_31158903,manufacturing/field,rest20,False,OT
+Q0581,S1,Pworkday_truist_R0118364,data and AI/ML,S1,False,OT
+Q0582,rest20,Pworkday_paloaltonetworks_JR-022303,security,rest20,False,OT
+Q0583,S1,Pworkday_paloaltonetworks_JR-018773,software engineering,S1,False,OT
+Q0584,newtitle,Pworkday_micron_JR106129,data and AI/ML,newtitle,False,OT
+Q0585,rest20,Pworkday_danaher_R1318252,IT and infrastructure,rest20,False,OT
+Q0586,rest20,Pworkday_cisco_2023216,software engineering,rest20,False,OT
+Q0587,S1,Pashby_ramp_198150d6-789a-4ef8-999f-93a49656d4f1,software engineering,S1,True,AO
+Q0588,newtitle,Pworkday_cdw_R26_00002705,data and AI/ML,newtitle,True,PE
+Q0589,rest20,Pworkday_salesforce_JR349385,software engineering,rest20,False,OT
+Q0590,newtitle,Pworkday_statestreet_R-796994,data and AI/ML,newtitle,False,OT
+Q0591,rest20,Pworkday_cohesity_R04491,other,rest20,False,OT
+Q0592,newtitle,Pworkday_myhrabc_R2615880,security,newtitle,True,PE
+Q0593,rest20,Pworkday_arcticwolf_R26_1121,software engineering,rest20,False,OT
+Q0594,rest20,Pworkday_abbott_31159447,security,rest20,False,OT
+Q0595,rest20,Pworkday_ally_R2600203,security,rest20,False,OT
+Q0596,newtitle,Pworkday_paloaltonetworks_JR-019529,IT and infrastructure,newtitle,True,PE
+Q0597,rest20,Pworkday_rockwellautomation_R26-5832,manufacturing/field,rest20,False,OT
+Q0598,newtitle,Pworkday_genmills_10128326,data and AI/ML,newtitle,True,AO
+Q0599,rest20,Pworkday_spartannash_R89461,operations and supply chain,rest20,False,OT
+Q0600,newtitle,Pworkday_equinix_JR-162593,IT and infrastructure,newtitle,False,OT

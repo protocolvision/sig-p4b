@@ -1,0 +1,7 @@
+map,subset,n,correct,partial,wrong,strict,strict_lo,strict_hi,lenient
+"first map, first draw",all 60,60,44,6,10,0.733,0.61,0.829,0.833
+"first map, first draw",universe-weighted 40,40,31,2,7,0.775,0.625,0.877,0.825
+"first map, first draw",AI-titled 20,20,13,4,3,0.65,0.433,0.819,0.85
+"final map, fresh draw",all 60,60,54,5,1,0.9,0.799,0.953,0.983
+"final map, fresh draw",universe-weighted 40,40,36,3,1,0.9,0.769,0.96,0.975
+"final map, fresh draw",AI-titled 20,20,18,2,0,0.9,0.699,0.972,1.0

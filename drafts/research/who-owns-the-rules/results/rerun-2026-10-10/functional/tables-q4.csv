@@ -1,0 +1,275 @@
+question,function,measure,value,low,high,n
+Q4,ALL,ai_titled_postings,2945.0,,,2945
+Q4,ALL,ai_titled_with_text,2945.0,,,2945
+Q4,ALL,share_with_reports_to_phrase,0.07809847198641766,0.06894764802888212,0.08834855940389419,2945
+Q4,ALL,reports_to_dept:data and AI/ML,64.0,,,230
+Q4,ALL,reports_to_dept_share:data and AI/ML,0.2782608695652174,0.22434865596103182,0.33945863923366415,230
+Q4,ALL,reports_to_dept:no function named,42.0,,,230
+Q4,ALL,reports_to_dept_share:no function named,0.1826086956521739,0.13803021551275643,0.23761552074631812,230
+Q4,ALL,reports_to_dept:software engineering,36.0,,,230
+Q4,ALL,reports_to_dept_share:software engineering,0.1565217391304348,0.1152524555367842,0.20907649192166633,230
+Q4,ALL,reports_to_dept:manufacturing/field,17.0,,,230
+Q4,ALL,reports_to_dept_share:manufacturing/field,0.07391304347826087,0.04665639409037411,0.11516938883276705,230
+Q4,ALL,reports_to_dept:sales,11.0,,,230
+Q4,ALL,reports_to_dept_share:sales,0.04782608695652174,0.02691191997994499,0.08359707414257214,230
+Q4,ALL,reports_to_dept:IT and infrastructure,10.0,,,230
+Q4,ALL,reports_to_dept_share:IT and infrastructure,0.043478260869565216,0.023785037609777793,0.078171158379302,230
+Q4,ALL,reports_to_dept:finance and accounting,8.0,,,230
+Q4,ALL,reports_to_dept_share:finance and accounting,0.034782608695652174,0.01772810274500357,0.06712249697720155,230
+Q4,ALL,reports_to_dept:security,8.0,,,230
+Q4,ALL,reports_to_dept_share:security,0.034782608695652174,0.01772810274500357,0.06712249697720155,230
+Q4,ALL,reports_to_dept:operations and supply chain,7.0,,,230
+Q4,ALL,reports_to_dept_share:operations and supply chain,0.030434782608695653,0.0148190979616452,0.061478703627122586,230
+Q4,ALL,reports_to_dept:product/design,7.0,,,230
+Q4,ALL,reports_to_dept_share:product/design,0.030434782608695653,0.0148190979616452,0.061478703627122586,230
+Q4,ALL,reports_to_dept:marketing,5.0,,,230
+Q4,ALL,reports_to_dept_share:marketing,0.021739130434782608,0.009320420004020075,0.049871785317873035,230
+Q4,ALL,reports_to_dept:executive/strategy,5.0,,,230
+Q4,ALL,reports_to_dept_share:executive/strategy,0.021739130434782608,0.009320420004020075,0.049871785317873035,230
+Q4,ALL,reports_to_dept:legal and compliance,5.0,,,230
+Q4,ALL,reports_to_dept_share:legal and compliance,0.021739130434782608,0.009320420004020075,0.049871785317873035,230
+Q4,ALL,reports_to_dept:customer service/support,2.0,,,230
+Q4,ALL,reports_to_dept_share:customer service/support,0.008695652173913044,0.00238785955888787,0.03114595136269323,230
+Q4,ALL,reports_to_dept:healthcare/clinical,2.0,,,230
+Q4,ALL,reports_to_dept_share:healthcare/clinical,0.008695652173913044,0.00238785955888787,0.03114595136269323,230
+Q4,ALL,reports_to_dept:HR,1.0,,,230
+Q4,ALL,reports_to_dept_share:HR,0.004347826086956522,0.0007678910476641264,0.024213121740479647,230
+Q4,sales,share_with_reports_to_phrase,0.05555555555555555,0.027168409228588992,0.11024209711144381,126
+Q4,sales,reports_to_dept:sales,4.0,,,7
+Q4,sales,reports_to_dept:no function named,1.0,,,7
+Q4,sales,reports_to_dept:product/design,1.0,,,7
+Q4,sales,reports_to_dept:software engineering,1.0,,,7
+Q4,customer service/support,share_with_reports_to_phrase,0.12,0.04166741357068093,0.29956192183373487,25
+Q4,customer service/support,reports_to_dept:no function named,2.0,,,3
+Q4,customer service/support,reports_to_dept:customer service/support,1.0,,,3
+Q4,marketing,share_with_reports_to_phrase,0.11538461538461539,0.06190440604142224,0.2049720968617468,78
+Q4,marketing,reports_to_dept:marketing,5.0,,,9
+Q4,marketing,reports_to_dept:product/design,2.0,,,9
+Q4,marketing,reports_to_dept:data and AI/ML,1.0,,,9
+Q4,marketing,reports_to_dept:no function named,1.0,,,9
+Q4,finance and accounting,share_with_reports_to_phrase,0.4074074074074074,0.24514513372857347,0.5927361694463591,27
+Q4,finance and accounting,reports_to_dept:finance and accounting,3.0,,,11
+Q4,finance and accounting,reports_to_dept:data and AI/ML,2.0,,,11
+Q4,finance and accounting,reports_to_dept:software engineering,2.0,,,11
+Q4,finance and accounting,reports_to_dept:operations and supply chain,1.0,,,11
+Q4,finance and accounting,reports_to_dept:no function named,1.0,,,11
+Q4,finance and accounting,reports_to_dept:executive/strategy,1.0,,,11
+Q4,finance and accounting,reports_to_dept:legal and compliance,1.0,,,11
+Q4,HR,share_with_reports_to_phrase,0.3076923076923077,0.1268049716161809,0.5763111218666236,13
+Q4,HR,reports_to_dept:manufacturing/field,3.0,,,4
+Q4,HR,reports_to_dept:no function named,1.0,,,4
+Q4,legal and compliance,share_with_reports_to_phrase,0.13333333333333333,0.037360469891359285,0.3788249920651624,15
+Q4,legal and compliance,reports_to_dept:legal and compliance,1.0,,,2
+Q4,legal and compliance,reports_to_dept:data and AI/ML,1.0,,,2
+Q4,IT and infrastructure,share_with_reports_to_phrase,0.08994708994708994,0.06508018457261819,0.12306484729399875,378
+Q4,IT and infrastructure,reports_to_dept:data and AI/ML,10.0,,,34
+Q4,IT and infrastructure,reports_to_dept:software engineering,5.0,,,34
+Q4,IT and infrastructure,reports_to_dept:IT and infrastructure,5.0,,,34
+Q4,IT and infrastructure,reports_to_dept:no function named,5.0,,,34
+Q4,IT and infrastructure,reports_to_dept:manufacturing/field,4.0,,,34
+Q4,IT and infrastructure,reports_to_dept:sales,2.0,,,34
+Q4,IT and infrastructure,reports_to_dept:healthcare/clinical,1.0,,,34
+Q4,IT and infrastructure,reports_to_dept:executive/strategy,1.0,,,34
+Q4,IT and infrastructure,reports_to_dept:HR,1.0,,,34
+Q4,security,share_with_reports_to_phrase,0.10526315789473684,0.06583727213184383,0.16415009966105354,152
+Q4,security,reports_to_dept:security,6.0,,,16
+Q4,security,reports_to_dept:data and AI/ML,6.0,,,16
+Q4,security,reports_to_dept:legal and compliance,2.0,,,16
+Q4,security,reports_to_dept:no function named,2.0,,,16
+Q4,software engineering,share_with_reports_to_phrase,0.05272108843537415,0.037387129334383665,0.07386155612469865,588
+Q4,software engineering,reports_to_dept:software engineering,13.0,,,31
+Q4,software engineering,reports_to_dept:no function named,8.0,,,31
+Q4,software engineering,reports_to_dept:data and AI/ML,7.0,,,31
+Q4,software engineering,reports_to_dept:IT and infrastructure,2.0,,,31
+Q4,software engineering,reports_to_dept:manufacturing/field,1.0,,,31
+Q4,data and AI/ML,share_with_reports_to_phrase,0.06639839034205232,0.052529339665463984,0.08360609505684066,994
+Q4,data and AI/ML,reports_to_dept:data and AI/ML,35.0,,,66
+Q4,data and AI/ML,reports_to_dept:no function named,8.0,,,66
+Q4,data and AI/ML,reports_to_dept:finance and accounting,5.0,,,66
+Q4,data and AI/ML,reports_to_dept:product/design,4.0,,,66
+Q4,data and AI/ML,reports_to_dept:software engineering,4.0,,,66
+Q4,data and AI/ML,reports_to_dept:executive/strategy,2.0,,,66
+Q4,data and AI/ML,reports_to_dept:IT and infrastructure,2.0,,,66
+Q4,data and AI/ML,reports_to_dept:security,2.0,,,66
+Q4,data and AI/ML,reports_to_dept:operations and supply chain,2.0,,,66
+Q4,data and AI/ML,reports_to_dept:manufacturing/field,1.0,,,66
+Q4,data and AI/ML,reports_to_dept:sales,1.0,,,66
+Q4,operations and supply chain,share_with_reports_to_phrase,0.1509433962264151,0.07852324257781651,0.2705450454365954,53
+Q4,operations and supply chain,reports_to_dept:operations and supply chain,3.0,,,8
+Q4,operations and supply chain,reports_to_dept:no function named,3.0,,,8
+Q4,operations and supply chain,reports_to_dept:legal and compliance,1.0,,,8
+Q4,operations and supply chain,reports_to_dept:data and AI/ML,1.0,,,8
+Q4,manufacturing/field,share_with_reports_to_phrase,0.08222811671087533,0.058531647835348415,0.11435282696992496,377
+Q4,manufacturing/field,reports_to_dept:software engineering,10.0,,,31
+Q4,manufacturing/field,reports_to_dept:no function named,10.0,,,31
+Q4,manufacturing/field,reports_to_dept:manufacturing/field,8.0,,,31
+Q4,manufacturing/field,reports_to_dept:customer service/support,1.0,,,31
+Q4,manufacturing/field,reports_to_dept:sales,1.0,,,31
+Q4,manufacturing/field,reports_to_dept:operations and supply chain,1.0,,,31
+Q4,healthcare/clinical,share_with_reports_to_phrase,0.5,0.15003570882017145,0.8499642911798285,4
+Q4,healthcare/clinical,reports_to_dept:sales,1.0,,,2
+Q4,healthcare/clinical,reports_to_dept:healthcare/clinical,1.0,,,2
+Q4,executive/strategy,share_with_reports_to_phrase,0.06451612903225806,0.025372494807644,0.15447732658187263,62
+Q4,executive/strategy,reports_to_dept:sales,1.0,,,4
+Q4,executive/strategy,reports_to_dept:data and AI/ML,1.0,,,4
+Q4,executive/strategy,reports_to_dept:software engineering,1.0,,,4
+Q4,executive/strategy,reports_to_dept:IT and infrastructure,1.0,,,4
+Q4,other,share_with_reports_to_phrase,0.03773584905660377,0.010410068833819272,0.12754523150959113,53
+Q4,other,reports_to_dept:sales,1.0,,,2
+Q4,other,reports_to_dept:executive/strategy,1.0,,,2
+Q4,ALL,share_with_part_of_team_phrase,0.300169779286927,0.283885215504936,0.3169750002489383,2945
+Q4,ALL,part_of_team_dept:no function named,515.0,,,884
+Q4,ALL,part_of_team_dept_share:no function named,0.582579185520362,0.5497819963524542,0.6146617512709959,884
+Q4,ALL,part_of_team_dept:data and AI/ML,133.0,,,884
+Q4,ALL,part_of_team_dept_share:data and AI/ML,0.1504524886877828,0.1283993634607741,0.17553052673585548,884
+Q4,ALL,part_of_team_dept:software engineering,83.0,,,884
+Q4,ALL,part_of_team_dept_share:software engineering,0.09389140271493213,0.07638198853595964,0.11491519780899197,884
+Q4,ALL,part_of_team_dept:manufacturing/field,22.0,,,884
+Q4,ALL,part_of_team_dept_share:manufacturing/field,0.024886877828054297,0.016491363455148678,0.03739392419075572,884
+Q4,ALL,part_of_team_dept:sales,22.0,,,884
+Q4,ALL,part_of_team_dept_share:sales,0.024886877828054297,0.016491363455148678,0.03739392419075572,884
+Q4,ALL,part_of_team_dept:product/design,21.0,,,884
+Q4,ALL,part_of_team_dept_share:product/design,0.023755656108597284,0.015589253732653947,0.03604337983621689,884
+Q4,ALL,part_of_team_dept:IT and infrastructure,17.0,,,884
+Q4,ALL,part_of_team_dept_share:IT and infrastructure,0.019230769230769232,0.012040798935325295,0.030581218325411306,884
+Q4,ALL,part_of_team_dept:operations and supply chain,16.0,,,884
+Q4,ALL,part_of_team_dept_share:operations and supply chain,0.01809954751131222,0.011171068830374092,0.029198294353328946,884
+Q4,ALL,part_of_team_dept:customer service/support,15.0,,,884
+Q4,ALL,part_of_team_dept_share:customer service/support,0.016968325791855202,0.010309490843418326,0.027807218263251148,884
+Q4,ALL,part_of_team_dept:finance and accounting,13.0,,,884
+Q4,ALL,part_of_team_dept_share:finance and accounting,0.014705882352941176,0.008613976570589254,0.0249974243820131,884
+Q4,ALL,part_of_team_dept:marketing,9.0,,,884
+Q4,ALL,part_of_team_dept_share:marketing,0.010180995475113122,0.005365302060590567,0.019235482583877545,884
+Q4,ALL,part_of_team_dept:security,8.0,,,884
+Q4,ALL,part_of_team_dept_share:security,0.00904977375565611,0.004592599187387718,0.017755531380046832,884
+Q4,ALL,part_of_team_dept:HR,4.0,,,884
+Q4,ALL,part_of_team_dept_share:HR,0.004524886877828055,0.0017609763778897714,0.011576537881410534,884
+Q4,ALL,part_of_team_dept:legal and compliance,3.0,,,884
+Q4,ALL,part_of_team_dept_share:legal and compliance,0.003393665158371041,0.0011547882606663755,0.009930071921600373,884
+Q4,ALL,part_of_team_dept:executive/strategy,2.0,,,884
+Q4,ALL,part_of_team_dept_share:executive/strategy,0.0022624434389140274,0.0006206500184450359,0.00821155608678815,884
+Q4,ALL,part_of_team_dept:healthcare/clinical,1.0,,,884
+Q4,ALL,part_of_team_dept_share:healthcare/clinical,0.0011312217194570137,0.0001997111905460132,0.006379840837653611,884
+Q4,sales,share_with_part_of_team_phrase,0.2698412698412698,0.19999734616485684,0.353304523189803,126
+Q4,sales,part_of_team_dept:no function named,11.0,,,34
+Q4,sales,part_of_team_dept:sales,11.0,,,34
+Q4,sales,part_of_team_dept:software engineering,7.0,,,34
+Q4,sales,part_of_team_dept:data and AI/ML,3.0,,,34
+Q4,sales,part_of_team_dept:product/design,2.0,,,34
+Q4,customer service/support,share_with_part_of_team_phrase,0.44,0.2666537494700257,0.6293298298043556,25
+Q4,customer service/support,part_of_team_dept:customer service/support,5.0,,,11
+Q4,customer service/support,part_of_team_dept:no function named,4.0,,,11
+Q4,customer service/support,part_of_team_dept:data and AI/ML,1.0,,,11
+Q4,customer service/support,part_of_team_dept:software engineering,1.0,,,11
+Q4,marketing,share_with_part_of_team_phrase,0.24358974358974358,0.16185113739317145,0.3493998645422746,78
+Q4,marketing,part_of_team_dept:no function named,8.0,,,19
+Q4,marketing,part_of_team_dept:marketing,4.0,,,19
+Q4,marketing,part_of_team_dept:data and AI/ML,3.0,,,19
+Q4,marketing,part_of_team_dept:product/design,2.0,,,19
+Q4,marketing,part_of_team_dept:customer service/support,1.0,,,19
+Q4,marketing,part_of_team_dept:sales,1.0,,,19
+Q4,finance and accounting,share_with_part_of_team_phrase,0.5185185185185185,0.33985324586210425,0.6925704935029092,27
+Q4,finance and accounting,part_of_team_dept:finance and accounting,6.0,,,14
+Q4,finance and accounting,part_of_team_dept:data and AI/ML,3.0,,,14
+Q4,finance and accounting,part_of_team_dept:no function named,3.0,,,14
+Q4,finance and accounting,part_of_team_dept:manufacturing/field,1.0,,,14
+Q4,finance and accounting,part_of_team_dept:executive/strategy,1.0,,,14
+Q4,HR,share_with_part_of_team_phrase,0.38461538461538464,0.17709446581236818,0.6447751902773147,13
+Q4,HR,part_of_team_dept:no function named,4.0,,,5
+Q4,HR,part_of_team_dept:sales,1.0,,,5
+Q4,legal and compliance,share_with_part_of_team_phrase,0.4,0.19824228082594664,0.6425355724349229,15
+Q4,legal and compliance,part_of_team_dept:no function named,3.0,,,6
+Q4,legal and compliance,part_of_team_dept:data and AI/ML,1.0,,,6
+Q4,legal and compliance,part_of_team_dept:legal and compliance,1.0,,,6
+Q4,legal and compliance,part_of_team_dept:customer service/support,1.0,,,6
+Q4,IT and infrastructure,share_with_part_of_team_phrase,0.30423280423280424,0.26001271706530693,0.35239200782585217,378
+Q4,IT and infrastructure,part_of_team_dept:no function named,62.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:software engineering,16.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:data and AI/ML,15.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:IT and infrastructure,8.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:operations and supply chain,3.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:customer service/support,3.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:marketing,2.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:product/design,2.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:security,2.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:manufacturing/field,1.0,,,115
+Q4,IT and infrastructure,part_of_team_dept:sales,1.0,,,115
+Q4,security,share_with_part_of_team_phrase,0.20394736842105263,0.14756351111502336,0.2749270177296497,152
+Q4,security,part_of_team_dept:no function named,18.0,,,31
+Q4,security,part_of_team_dept:security,5.0,,,31
+Q4,security,part_of_team_dept:data and AI/ML,3.0,,,31
+Q4,security,part_of_team_dept:software engineering,1.0,,,31
+Q4,security,part_of_team_dept:legal and compliance,1.0,,,31
+Q4,security,part_of_team_dept:sales,1.0,,,31
+Q4,security,part_of_team_dept:product/design,1.0,,,31
+Q4,security,part_of_team_dept:customer service/support,1.0,,,31
+Q4,software engineering,share_with_part_of_team_phrase,0.2857142857142857,0.2506824939117186,0.32352790292419153,588
+Q4,software engineering,part_of_team_dept:no function named,107.0,,,168
+Q4,software engineering,part_of_team_dept:data and AI/ML,32.0,,,168
+Q4,software engineering,part_of_team_dept:software engineering,16.0,,,168
+Q4,software engineering,part_of_team_dept:product/design,4.0,,,168
+Q4,software engineering,part_of_team_dept:IT and infrastructure,3.0,,,168
+Q4,software engineering,part_of_team_dept:manufacturing/field,2.0,,,168
+Q4,software engineering,part_of_team_dept:security,1.0,,,168
+Q4,software engineering,part_of_team_dept:customer service/support,1.0,,,168
+Q4,software engineering,part_of_team_dept:HR,1.0,,,168
+Q4,software engineering,part_of_team_dept:operations and supply chain,1.0,,,168
+Q4,data and AI/ML,share_with_part_of_team_phrase,0.2987927565392354,0.2711558330624017,0.3279789394305471,994
+Q4,data and AI/ML,part_of_team_dept:no function named,172.0,,,297
+Q4,data and AI/ML,part_of_team_dept:data and AI/ML,66.0,,,297
+Q4,data and AI/ML,part_of_team_dept:software engineering,24.0,,,297
+Q4,data and AI/ML,part_of_team_dept:product/design,9.0,,,297
+Q4,data and AI/ML,part_of_team_dept:finance and accounting,7.0,,,297
+Q4,data and AI/ML,part_of_team_dept:IT and infrastructure,4.0,,,297
+Q4,data and AI/ML,part_of_team_dept:customer service/support,3.0,,,297
+Q4,data and AI/ML,part_of_team_dept:HR,3.0,,,297
+Q4,data and AI/ML,part_of_team_dept:manufacturing/field,3.0,,,297
+Q4,data and AI/ML,part_of_team_dept:marketing,2.0,,,297
+Q4,data and AI/ML,part_of_team_dept:sales,2.0,,,297
+Q4,data and AI/ML,part_of_team_dept:legal and compliance,1.0,,,297
+Q4,data and AI/ML,part_of_team_dept:operations and supply chain,1.0,,,297
+Q4,operations and supply chain,share_with_part_of_team_phrase,0.16981132075471697,0.09199841772223753,0.29225536823734133,53
+Q4,operations and supply chain,part_of_team_dept:no function named,7.0,,,9
+Q4,operations and supply chain,part_of_team_dept:operations and supply chain,1.0,,,9
+Q4,operations and supply chain,part_of_team_dept:data and AI/ML,1.0,,,9
+Q4,manufacturing/field,share_with_part_of_team_phrase,0.38461538461538464,0.3369035048892778,0.4346550643426549,377
+Q4,manufacturing/field,part_of_team_dept:no function named,99.0,,,145
+Q4,manufacturing/field,part_of_team_dept:software engineering,15.0,,,145
+Q4,manufacturing/field,part_of_team_dept:manufacturing/field,14.0,,,145
+Q4,manufacturing/field,part_of_team_dept:operations and supply chain,10.0,,,145
+Q4,manufacturing/field,part_of_team_dept:IT and infrastructure,2.0,,,145
+Q4,manufacturing/field,part_of_team_dept:data and AI/ML,2.0,,,145
+Q4,manufacturing/field,part_of_team_dept:sales,1.0,,,145
+Q4,manufacturing/field,part_of_team_dept:healthcare/clinical,1.0,,,145
+Q4,manufacturing/field,part_of_team_dept:product/design,1.0,,,145
+Q4,healthcare/clinical,share_with_part_of_team_phrase,0.5,0.15003570882017145,0.8499642911798285,4
+Q4,healthcare/clinical,part_of_team_dept:no function named,1.0,,,2
+Q4,healthcare/clinical,part_of_team_dept:sales,1.0,,,2
+Q4,executive/strategy,share_with_part_of_team_phrase,0.3064516129032258,0.20581430019850633,0.4296745093079456,62
+Q4,executive/strategy,part_of_team_dept:no function named,11.0,,,19
+Q4,executive/strategy,part_of_team_dept:software engineering,2.0,,,19
+Q4,executive/strategy,part_of_team_dept:sales,2.0,,,19
+Q4,executive/strategy,part_of_team_dept:data and AI/ML,2.0,,,19
+Q4,executive/strategy,part_of_team_dept:marketing,1.0,,,19
+Q4,executive/strategy,part_of_team_dept:executive/strategy,1.0,,,19
+Q4,other,share_with_part_of_team_phrase,0.16981132075471697,0.09199841772223753,0.29225536823734133,53
+Q4,other,part_of_team_dept:no function named,5.0,,,9
+Q4,other,part_of_team_dept:sales,1.0,,,9
+Q4,other,part_of_team_dept:software engineering,1.0,,,9
+Q4,other,part_of_team_dept:manufacturing/field,1.0,,,9
+Q4,other,part_of_team_dept:data and AI/ML,1.0,,,9
+Q4,sales,reports_to_own_function_share,0.5714285714285714,0.2504542304090258,0.8417830777373732,7
+Q4,customer service/support,reports_to_own_function_share,0.3333333333333333,0.061490315276160515,0.7923450448735121,3
+Q4,marketing,reports_to_own_function_share,0.5555555555555556,0.26664734574402965,0.8112245705280859,9
+Q4,finance and accounting,reports_to_own_function_share,0.2727272727272727,0.09745880573921469,0.5656502930102462,11
+Q4,HR,reports_to_own_function_share,0.0,0.0,0.48990002040399916,4
+Q4,legal and compliance,reports_to_own_function_share,0.5,0.09452865480086611,0.905471345199134,2
+Q4,IT and infrastructure,reports_to_own_function_share,0.14705882352941177,0.06449346382626417,0.3012838817405195,34
+Q4,security,reports_to_own_function_share,0.375,0.18480982554752803,0.6135935290206519,16
+Q4,software engineering,reports_to_own_function_share,0.41935483870967744,0.26415303073549257,0.5923403564797902,31
+Q4,data and AI/ML,reports_to_own_function_share,0.5303030303030303,0.41157476624932443,0.6456976902808811,66
+Q4,operations and supply chain,reports_to_own_function_share,0.375,0.13684175946152105,0.6942621454161982,8
+Q4,manufacturing/field,reports_to_own_function_share,0.25806451612903225,0.1370154373686976,0.432464724277151,31
+Q4,healthcare/clinical,reports_to_own_function_share,0.5,0.09452865480086611,0.905471345199134,2
+Q4,executive/strategy,reports_to_own_function_share,0.0,0.0,0.48990002040399916,4
+Q4,other,reports_to_own_function_share,0.0,0.0,0.6576280471103807,2
