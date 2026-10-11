@@ -1,6 +1,6 @@
 """Build the public web page of the interactive report for protocolsforbusiness.com/agentcontrolreport2026/.
 
-Same content as the artifact (interactive-src.html with data/map.json inlined), except the meeting box: the website keeps the email form (posts to the sign-up Worker’s /advisory route), the artifact keeps a link to it; wrapped in a full HTML document
+Same content as the artifact (interactive-src.html with data/map.json inlined), except the meeting box: the website keeps the meeting drawer (posts to the sign-up Worker’s /interest route), the artifact keeps a link to it; wrapped in a full HTML document
 with the site's canonical address, description and social tags. Writes <out>/index.html and copies the fonts.
 Usage: python3 build_site_page.py <out_dir>
 """
