@@ -173,6 +173,16 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
 .lawrow .dots { display: flex; flex-wrap: wrap; gap: 3px; padding-top: .2rem; min-width: 0; }
 .lawrow .dots svg { width: 10px; height: 10px; }
 @media (max-width: 520px) { .lawrow { grid-template-columns: 1fr; } }
+/* three-role comparison */
+.rolecmp { margin-top: 2rem; }
+.rolecmp h3 { margin-bottom: .3rem; }
+table.cmp { min-width: 34rem; }
+table.cmp th[scope=row] { font-weight: 600; width: 22%; }
+table.cmp td span { display: block; font-size: .8125rem; color: var(--muted); line-height: 1.4; margin-top: .1rem; }
+table.cmp td.none { color: var(--muted); }
+table.cmp td.fast { color: var(--action); font-weight: 600; }
+table.cmp td.fast span { font-weight: 400; }
+table.cmp td.sched { text-decoration: underline dashed; text-underline-offset: .2em; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
 @media print { .anim .a-slide { transform: none; } .anim .a-draw { stroke-dashoffset: 0; } .anim .a-fade { opacity: 1; } }
 @media (max-width: 520px) {
@@ -255,6 +265,26 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
 <section class="memo" id="p-patterns">
   <h2 id="p-h"></h2><p class="dek" id="p-dek" hidden></p>
   <div id="p-prose"></div>
+<figure class="rolecmp" id="rolecmp">
+  <h3>DevOps and data science took five to six years to reach vendor certification and never had a law; AI agents got both within about three</h3>
+  <p class="small">Three roles measured against the same milestones. Years are counted from when the practice went public.</p>
+  <div class="scroll" tabindex="0" role="region" aria-label="Milestones of three roles">
+  <table class="plain cmp">
+    <thead><tr><th scope="col">Milestone</th><th scope="col">DevOps</th><th scope="col">Data science</th><th scope="col">AI agents</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Practice goes public</th><td>Jun 2009<span>Flickr’s talk on daily deploys</span></td><td>2008<span>Facebook and LinkedIn data teams; title coined</span></td><td>2024<span>earliest practitioner recordings in our sources</span></td></tr>
+      <tr><th scope="row">Job titles appear</th><td>Mar 2011<span>+2 years</span></td><td>2008; 806 ads by Jan 2012<span>+0 to 4 years</span></td><td>By 2026<span>AI titles at 81% of employers; first date not measured</span></td></tr>
+      <tr><th scope="row">Shared metrics</th><td>Mar 2013<span>+4 years, State of DevOps survey</span></td><td class="none">None found</td><td class="none">None yet<span>firms track the share agents handle</span></td></tr>
+      <tr><th scope="row">First vendor certification</th><td>Nov 2014<span>+5 years, AWS</span></td><td>Mar 2014<span>+6 years, Cloudera</span></td><td class="fast">Mar 2025<span>within a year, Salesforce Agentforce</span></td></tr>
+      <tr><th scope="row">Official occupation</th><td>Apr 2025<span>+16 years, apprenticeship framework; no occupation code</span></td><td>Nov 2017<span>+9 years, “Data Scientists” in the 2018 US classification</span></td><td class="none">Not expected<span>our forecast: none in the 2028 classification (70%)</span></td></tr>
+      <tr><th scope="row">Binding law</th><td class="none">None found</td><td class="none">None found</td><td class="fast sched">Jan and Dec 2027<span>scheduled, +2 to 3 years: Colorado, then the EU AI Act</span></td></tr>
+      <tr><th scope="row">Split or successor</th><td>Apr 2023<span>+14 years, platform engineering</span></td><td>2017 to 2019<span>+9 to 11 years, ML and analytics engineers</span></td><td>From Sep 2024<span>products renamed within about three years</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="chart" id="cmpbars" style="margin-top:1.2rem"></div>
+  <figcaption>Dates from our historical role profiles and the agent evidence in this report. The agent start date is uncertain because our recordings begin in 2024; counting from 2023 instead, certification still came within two years. Data science and DevOps dates are from public sources graded in the repository.</figcaption>
+</figure>
   <figure id="fig-profiles" data-anim>
     <h3 id="pf-h"></h3><p class="dek" id="pf-dek" hidden></p>
     <ul id="profiles" class="sm" aria-label="Feature profiles by pattern"></ul>
@@ -532,80 +562,8 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
   "headline": "Inside teams, agent work is spreading the way DevOps did. In hiring, it looks like a race for scarce AI skills",
   "dek": "Which pattern wins is open: the test we fixed in advance could not decide it from public sources.",
   "prose": [
-   "DevOps formed when existing developers and operators took on each other’s work to coordinate, without a new profession or a law. Speakers describe agent work the same way: existing staff taking it on to coordinate functions. Postings tell the other story. Today’s AI roles ask for or prefer AI-specific experience (27 of 30) and name AI teams (13 of 21), the way data science hired a scarce skill. Coders scored the present on neutral features without seeing pattern names, but ten of fifteen features cannot be judged from public sources, so the match is undecided. Field work inside firms is what settles it."
-  ],
-  "timeline": {
-   "headline": "Binding law arrives within three years of the first agent certification; DevOps never had one",
-   "dek": "Both lanes start at the first role-specific vendor certification: AWS DevOps Engineer in November 2014, Agentforce Specialist in March 2025.",
-   "historicalLabel": "DevOps",
-   "presentLabel": "AI agents",
-   "axis": {
-    "min": -6,
-    "max": 11,
-    "unit": "years from the first vendor certification",
-    "nowYear": 1.6
-   },
-   "historical": [
-    {
-     "year": -5.4,
-     "date": "Jun 2009",
-     "text": "practice made public (Flickr, Velocity 2009)"
-    },
-    {
-     "year": -3.7,
-     "date": "Mar 2011",
-     "text": "“DevOps engineer” titles appear in postings"
-    },
-    {
-     "year": -1.7,
-     "date": "Mar 2013",
-     "text": "first shared metrics (State of DevOps survey)"
-    },
-    {
-     "year": 0,
-     "date": "Nov 2014",
-     "text": "first vendor certification (AWS DevOps Engineer)"
-    },
-    {
-     "year": 8.4,
-     "date": "Apr 2023",
-     "text": "platform engineering named as its successor"
-    },
-    {
-     "year": 10.4,
-     "date": "Apr 2025",
-     "text": "US apprenticeship framework; no regulation ever found"
-    }
-   ],
-   "present": [
-    {
-     "year": -1.0,
-     "date": "2024",
-     "text": "AI-governance certification (IAPP AIGP)"
-    },
-    {
-     "year": 0,
-     "date": "Mar 2025",
-     "text": "first agent-scoped certification (Salesforce Agentforce Specialist)"
-    },
-    {
-     "year": 0.7,
-     "date": "Nov 2025",
-     "text": "vendor agent sponsor and owner roles (Microsoft Entra)"
-    },
-    {
-     "year": 1.8,
-     "date": "Jan 2027",
-     "text": "scheduled: Colorado deployer rule names an overseer"
-    },
-    {
-     "year": 2.7,
-     "date": "Dec 2027",
-     "text": "scheduled: EU AI Act high-risk duties apply (Annex III; Annex I systems from Aug 2028)"
-    }
-   ],
-   "caption": "One anchor choice, the first vendor certification, lines the two up; other anchors move the lanes. Practitioner recordings start only in 2024, so earlier agent practice cannot be dated. Dates after today are scheduled."
-  }
+   "DevOps formed when existing developers and operators took on each other’s work to coordinate, without a new profession or a law. Speakers describe agent work the same way: existing staff taking it on to coordinate functions. Postings tell the other story. Today’s AI roles ask for or prefer AI-specific experience (27 of 30) and name AI teams (13 of 21), the way data science hired a scarce skill a decade ago. Coders scored the present on neutral features without seeing pattern names, but ten of fifteen features cannot be judged from public sources, so the match is undecided. Field work inside firms is what settles it."
+  ]
  },
  "changes": {
   "headline": "",
@@ -1344,6 +1302,37 @@ table.plain.hv svg { width: 18px; height: 18px; display: inline-block; vertical-
       box.appendChild(h('div', {'class': 'lawrow'}, [h('div', {'class': 'nm'}, [grp[0], h('span', {text: sum})]), list]));
     });
     [['p', 'A named role changes agent limits in settings or config'], ['w', 'Limits documented, no named editor'], ['r', 'Documentation not retrievable'], ['i', 'Left to the implementer or the user']].forEach(function (x) { var li = h('li'); var gl = g(x[0]); gl.style.cssText = 'width:12px;height:12px'; li.appendChild(gl); li.appendChild(document.createTextNode(x[1])); $('tools-legend').appendChild(li); });
+  })();
+  // ---- three-role comparison bars: years from practice going public to certification and to binding law
+  (function () {
+    var el = document.getElementById('cmpbars'); if (!el) return;
+    var NSv = 'http://www.w3.org/2000/svg';
+    function sv(t, a, x) { var e = document.createElementNS(NSv, t); for (var k in a) e.setAttribute(k, a[k]); if (x != null) e.textContent = x; return e; }
+    var G = [['To first vendor certification', [['DevOps', 5.4], ['Data science', 5.8], ['AI agents', 0.3]]], ['To binding law', [['DevOps', null], ['Data science', null], ['AI agents', 2.6]]]];
+    var W0 = 0;
+    function draw() {
+      var W = Math.round(el.clientWidth); if (!W || W === W0) return; W0 = W; el.textContent = '';
+      var lab = W < 480 ? 92 : 120, x0 = lab, x1 = W - 70, max = 8, X = function (v) { return x0 + (x1 - x0) * v / max; }, row = 22, gh = 26, y = 0, Ht = G.length * (gh + 3 * row) + 30;
+      var v = sv('svg', {width: W, height: Ht, viewBox: '0 0 ' + W + ' ' + Ht, role: 'img', 'aria-label': 'Years from the practice going public to first vendor certification: DevOps 5.4, data science 5.8, AI agents under one. To binding law: DevOps and data science none, AI agents about 2.6 (scheduled).'});
+      G.forEach(function (g) {
+        y += 16; v.appendChild(sv('text', {x: 0, y: y, 'font-size': 12.5, 'font-weight': 600, fill: 'currentColor'}, g[0])); y += gh - 10;
+        g[1].forEach(function (r) {
+          var cy = y + row / 2, ag = r[0] === 'AI agents';
+          v.appendChild(sv('text', {x: 0, y: cy + 4, 'font-size': 12, fill: 'currentColor', opacity: .75}, r[0]));
+          v.appendChild(sv('line', {x1: x0, x2: x1, y1: cy, y2: cy, stroke: '#c9c7c0', 'stroke-width': .5}));
+          if (r[1] == null) { v.appendChild(sv('text', {x: x0 + 4, y: cy + 4, 'font-size': 12, fill: '#5f5e5a'}, 'never')); }
+          else {
+            v.appendChild(sv('line', {x1: x0, x2: X(r[1]), y1: cy, y2: cy, stroke: ag ? '#004fcc' : '#5f5e5a', 'stroke-width': ag ? 2 : 1.2, 'stroke-dasharray': ag && g[0] === 'To binding law' ? '4 2' : ''}));
+            v.appendChild(sv('circle', {cx: X(r[1]), cy: cy, r: 3.5, fill: ag ? '#004fcc' : '#5f5e5a'}));
+            v.appendChild(sv('text', {x: X(r[1]) + 8, y: cy + 4, 'font-size': 12, fill: ag ? '#004fcc' : '#5f5e5a'}, r[1] < 1 ? 'under 1 year' : r[1] + ' years' + (ag && g[0] === 'To binding law' ? ' (scheduled)' : '')));
+          }
+          y += row;
+        });
+      });
+      [0, 2, 4, 6, 8].forEach(function (t) { v.appendChild(sv('text', {x: X(t), y: Ht - 4, 'font-size': 11, 'text-anchor': 'middle', fill: '#5f5e5a'}, t)); });
+      el.appendChild(v);
+    }
+    draw(); window.addEventListener('resize', draw);
   })();
   // ---- method walkthrough
   (function () {
