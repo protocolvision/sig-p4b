@@ -8,6 +8,7 @@
  *   POST /signup       — JSON (fetch) or form-encoded (no-JS fallback, redirects back)
  *   POST /talk         — an offer to speak at a session; posted to the group's Discord channel (nothing stored)
  *   POST /advisory     — a request for advisory services; posted to the group's Discord channel (nothing stored)
+ *   POST /interest     — Agent Control Report interest form (email, optional organisation); posted to Discord (nothing stored)
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
@@ -360,6 +361,42 @@ async function advisory(req: Request, env: Env): Promise<Response> {
   return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
 }
 
+async function interest(req: Request, env: Env): Promise<Response> {
+  const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
+  const done = (ok: boolean, error?: string) =>
+    isForm
+      ? Response.redirect(`${SITE}agentcontrolreport2026/?interest=${ok ? "ok" : "error"}#meet`, 303)
+      : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
+  let body: Record<string, string>;
+  try {
+    body = await readBody(req);
+  } catch {
+    return done(false, "Could not read the form.");
+  }
+  if (body._hp) return done(true);
+  const email = clean(body.email, 150), org = clean(body.org, 150);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return done(false, "Please add a valid work email.");
+  const ip = req.headers.get("CF-Connecting-IP") || "unknown";
+  if (await rateLimited(env, ip)) return done(false, "Too many attempts. Try again later.");
+  if (!env.DISCORD_WEBHOOK) return done(false, "Requests are not set up yet. Email hello@protocolvision.org.");
+  const r = await fetch(env.DISCORD_WEBHOOK, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: "Agent Control Report",
+      content: "New Agent Control Report interest form: a reader would like a meeting on agent adoption and control in their firm.",
+      embeds: [{
+        title: org ? `Interest from ${org}`.slice(0, 250) : "Agent Control Report interest",
+        url: `${SITE}agentcontrolreport2026/`,
+        fields: [{ name: "Email", value: email, inline: true }, ...(org ? [{ name: "Organization", value: org, inline: true }] : [])],
+        color: 0x004fcc,
+      }],
+      allowed_mentions: { parse: [] },
+    }),
+  });
+  return r.ok ? done(true) : done(false, "Could not send right now. Email hello@protocolvision.org.");
+}
+
 function csvCell(s: string): string {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
@@ -518,6 +555,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/signup") return signup(req, env, ctx);
     if (req.method === "POST" && url.pathname === "/talk") return talk(req, env);
     if (req.method === "POST" && url.pathname === "/advisory") return advisory(req, env);
+    if (req.method === "POST" && url.pathname === "/interest") return interest(req, env);
     if (req.method === "POST" && url.pathname === "/listing") return listing(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
