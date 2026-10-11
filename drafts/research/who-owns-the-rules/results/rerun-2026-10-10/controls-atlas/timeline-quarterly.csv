@@ -1,0 +1,47 @@
+variant,quarter,new_events,new_types,cum_types_vendor_object_soph,cum_types_object_soph,cum_vendor_object,objects_covered,vendors_cum,median_vendors_per_object,max_soph_new,median_soph_new,share_45_new,cum_share_45,vendors_HARM,vendors_PI,vendors_SENS,vendors_ACC,vendors_TOOL,vendors_AUTO,vendors_DATA,vendors_ID,vendors_NET,vendors_MODEL,vendors_USE,vendors_LOG,vendors_STOR,vendors_INV
+all evidence (archive dates as upper bounds),2021Q1,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+all evidence (archive dates as upper bounds),2021Q2,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+all evidence (archive dates as upper bounds),2021Q3,1,1,1,1,1,1,1,0.0,3.0,3.0,0.0,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+all evidence (archive dates as upper bounds),2021Q4,0,0,1,1,1,1,1,0.0,,,,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+all evidence (archive dates as upper bounds),2022Q1,0,0,1,1,1,1,1,0.0,,,,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+all evidence (archive dates as upper bounds),2022Q2,0,0,1,1,1,1,1,0.0,,,,0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+all evidence (archive dates as upper bounds),2022Q3,3,3,4,4,4,3,3,0.0,2.0,1.0,0.0,0.0,2,0,0,0,0,0,0,0,0,0,1,0,0,1
+all evidence (archive dates as upper bounds),2022Q4,2,2,6,5,5,3,4,0.0,3.0,2.0,0.0,0.0,2,0,0,0,0,0,0,0,0,0,2,0,0,1
+all evidence (archive dates as upper bounds),2023Q1,2,2,8,6,7,4,5,0.0,2.0,1.5,0.0,0.0,3,0,0,1,0,0,0,0,0,0,2,0,0,1
+all evidence (archive dates as upper bounds),2023Q2,7,5,13,9,12,6,7,0.0,3.0,2.0,0.0,0.0,5,0,0,1,2,0,0,0,0,0,2,0,1,1
+all evidence (archive dates as upper bounds),2023Q3,4,4,17,11,15,7,9,0.5,3.0,2.0,0.0,0.0,6,0,0,1,2,0,0,1,0,0,3,0,1,1
+all evidence (archive dates as upper bounds),2023Q4,11,8,25,15,22,10,13,1.0,3.0,2.0,0.0,0.0,8,2,2,1,2,0,1,1,0,0,3,0,1,1
+all evidence (archive dates as upper bounds),2024Q1,20,15,40,20,35,12,17,1.5,3.0,2.0,0.0,0.0,12,4,3,2,2,1,1,1,0,1,5,0,1,2
+all evidence (archive dates as upper bounds),2024Q2,23,15,55,24,45,13,20,2.0,4.0,2.0,0.043,0.014,12,6,5,2,2,1,2,1,0,1,7,1,2,3
+all evidence (archive dates as upper bounds),2024Q3,24,12,67,26,53,13,22,3.0,4.0,2.0,0.042,0.021,14,6,5,3,3,1,2,3,0,1,7,3,2,3
+all evidence (archive dates as upper bounds),2024Q4,15,5,72,28,56,14,23,3.0,4.0,3.0,0.133,0.036,14,6,5,3,4,1,2,3,1,1,8,3,2,3
+all evidence (archive dates as upper bounds),2025Q1,19,12,84,30,67,14,24,3.5,4.0,2.0,0.158,0.053,15,7,8,3,5,2,2,5,1,2,8,3,2,4
+all evidence (archive dates as upper bounds),2025Q2,27,17,101,34,82,14,25,4.5,4.0,4.0,0.519,0.133,16,7,8,3,9,4,2,7,2,4,9,3,3,5
+all evidence (archive dates as upper bounds),2025Q3,27,13,114,34,90,14,26,5.0,4.0,4.0,0.593,0.2,16,7,8,3,12,5,2,8,4,4,9,4,3,5
+all evidence (archive dates as upper bounds),2025Q4,38,13,127,37,97,14,26,6.5,5.0,4.0,0.711,0.287,16,8,8,3,12,5,2,9,4,4,9,4,3,10
+all evidence (archive dates as upper bounds),2026Q1,13,5,132,37,100,14,26,6.5,5.0,4.0,0.692,0.309,16,8,8,3,13,5,2,9,4,4,10,5,3,10
+all evidence (archive dates as upper bounds),2026Q2,28,7,139,39,104,14,26,6.5,5.0,4.0,0.607,0.341,16,8,8,3,15,5,3,10,4,4,10,5,3,10
+all evidence (archive dates as upper bounds),2026Q3,23,7,146,40,106,14,26,7.0,5.0,4.0,0.522,0.355,16,8,8,3,15,5,3,10,4,6,10,5,3,10
+primary only (archive and press excluded),2021Q1,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2021Q2,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2021Q3,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2021Q4,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2022Q1,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2022Q2,0,0,0,0,0,0,0,0.0,,,,,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2022Q3,1,1,1,1,1,1,1,0.0,2.0,2.0,0.0,0.0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2022Q4,1,1,2,2,2,1,2,0.0,3.0,3.0,0.0,0.0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2023Q1,1,1,3,3,3,2,3,0.0,1.0,1.0,0.0,0.0,2,0,0,1,0,0,0,0,0,0,0,0,0,0
+primary only (archive and press excluded),2023Q2,5,4,7,5,7,4,5,0.0,2.0,2.0,0.0,0.0,4,0,0,1,1,0,0,0,0,0,0,0,1,0
+primary only (archive and press excluded),2023Q3,4,4,11,8,10,6,7,0.0,3.0,2.0,0.0,0.0,5,0,0,1,1,0,0,1,0,0,1,0,1,0
+primary only (archive and press excluded),2023Q4,10,8,19,12,17,9,11,1.0,3.0,2.0,0.0,0.0,8,1,2,1,1,0,1,1,0,0,1,0,1,0
+primary only (archive and press excluded),2024Q1,18,13,32,18,28,12,13,1.0,3.0,2.0,0.0,0.0,11,3,3,2,1,1,1,1,0,1,2,0,1,1
+primary only (archive and press excluded),2024Q2,18,11,43,21,36,12,15,1.0,4.0,2.0,0.056,0.017,11,5,5,2,1,1,1,1,0,1,5,0,1,2
+primary only (archive and press excluded),2024Q3,24,12,55,24,44,13,17,2.0,4.0,2.0,0.042,0.024,13,5,5,3,2,1,1,3,0,1,5,2,1,2
+primary only (archive and press excluded),2024Q4,13,5,60,26,46,14,17,2.0,4.0,3.0,0.077,0.032,13,5,5,3,2,1,1,3,1,1,6,2,1,2
+primary only (archive and press excluded),2025Q1,19,12,72,28,57,14,18,3.0,4.0,2.0,0.158,0.053,14,6,8,3,3,2,1,5,1,2,6,2,1,3
+primary only (archive and press excluded),2025Q2,25,16,88,32,71,14,18,4.0,4.0,3.0,0.48,0.129,15,6,8,3,7,4,1,6,2,4,7,2,2,4
+primary only (archive and press excluded),2025Q3,25,13,101,33,80,14,21,4.5,4.0,4.0,0.6,0.201,15,6,8,3,10,5,1,8,4,4,7,3,2,4
+primary only (archive and press excluded),2025Q4,38,14,115,36,88,14,21,6.0,5.0,4.0,0.711,0.297,15,7,8,3,11,5,1,9,4,4,7,3,2,9
+primary only (archive and press excluded),2026Q1,13,5,120,36,91,14,21,6.0,5.0,4.0,0.692,0.321,15,7,8,3,12,5,1,9,4,4,8,4,2,9
+primary only (archive and press excluded),2026Q2,28,7,127,38,95,14,21,6.0,5.0,4.0,0.607,0.354,15,7,8,3,14,5,2,10,4,4,8,4,2,9
+primary only (archive and press excluded),2026Q3,23,7,134,39,97,14,21,6.5,5.0,4.0,0.522,0.368,15,7,8,3,14,5,2,10,4,6,8,4,2,9

@@ -1,0 +1,304 @@
+event_id,date,vendor,product,object,sophistication,is_availability,evidence,stage,stage_raw,date_precision,coding,coder_S,coder_H,adjudication_note
+P-001,2022-08-10,OpenAI,Moderation endpoint,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-002,2022-09-30,OpenAI,OpenAI API rate limits,"Usage, spend and rate limits",1,yes,archive,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-003,2022-12-22,Microsoft,Azure OpenAI abuse monitoring and Limited Access opt-out,"Stored data: retention, training use and encryption",1,no,archive,unstated,unspecified,day,adjudicated,STOR/1/yes,LOG/3/no,"Taxonomy puts exclusion from abuse-monitoring storage in Stored data; quote is future tense (""will include""), archive-only, so not availability"
+P-004,2022-12-31,Microsoft,Azure OpenAI quotas and limits,"Usage, spend and rate limits",1,yes,archive,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-005,2023-01-17,Microsoft,Azure OpenAI content filtering,Harmful and off-limits content,2,yes,archive,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-006,2023-03-10,OpenAI,Usage policies,Harmful and off-limits content,1,no,archive,unstated,unspecified,day,agreed,HARM/1/no,HARM/1/no,
+P-007,2023-04-25,OpenAI,ChatGPT data controls,"Stored data: retention, training use and encryption",1,yes,primary,unstated,unspecified,day,agreed,STOR/1/yes,STOR/1/yes,
+P-008,2023-05,Microsoft,Azure AI Content Safety,Harmful and off-limits content,2,yes,primary,preview,preview,month,agreed,HARM/2/yes,HARM/2/yes,
+P-009,2023-05-17,Google,PaLM API safety settings,Harmful and off-limits content,2,yes,archive,unstated,unspecified,day,adjudicated,HARM/2/yes,HARM/1/yes,"Adjustable thresholds on classifier safety categories; matches agreed P-015 (Gemini safety settings, 2)"
+P-010,2023-08-28,OpenAI,ChatGPT Enterprise,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-011,2023-10,Microsoft,Azure AI Content Safety,Harmful and off-limits content,2,yes,primary,ga,ga,month,agreed,HARM/2/yes,HARM/2/yes,
+P-012,2023-11,Microsoft,Azure AI Content Safety jailbreak risk detection,Prompt attacks and untrusted input,2,yes,primary,preview,preview,month,agreed,PI/2/yes,PI/2/yes,
+P-013,2023-11,Microsoft,Azure AI Content Safety protected material,Harmful and off-limits content,2,yes,primary,preview,preview,month,adjudicated,HARM/2/yes,HARM/1/yes,"Content Safety detection model; matches agreed P-033 (Protected Material GA, 2)"
+P-014,2023-11-28,AWS,Guardrails for Amazon Bedrock,Harmful and off-limits content,2,yes,primary,preview,preview,day,agreed,HARM/2/yes,HARM/2/yes,
+P-015,2023-12-13,Google,Gemini API (Google AI),Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-016,2024-02-21,Anthropic,Acceptable Use Policy,Harmful and off-limits content,1,no,archive,unstated,unspecified,day,agreed,HARM/1/no,HARM/1/no,
+P-017,2024-03,Microsoft,Azure AI Content Safety Prompt Shields,Prompt attacks and untrusted input,2,yes,primary,preview,preview,month,agreed,PI/2/yes,PI/2/yes,
+P-018,2024-03,Microsoft,Azure AI Content Safety groundedness detection,Answer accuracy and presentation,2,yes,primary,preview,preview,month,agreed,ACC/2/yes,ACC/2/yes,
+P-019,2024-03-06,Anthropic,Claude API rate limits,"Usage, spend and rate limits",1,yes,archive,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-020,2024-04-09,Google,Vertex AI Imagen 3 (generative AI on Vertex AI),Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,adjudicated,HARM/2/yes,HARM/1/yes,Safety setting tunes a classifier filter; same as P-009/P-015
+P-021,2024-04-16,OpenAI,OpenAI API Projects,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,adjudicated,USE/3/yes,ID/3/yes,Novel control is the project hierarchy with project-scoped keys; per-project cost limits are coded separately at P-026 (USE 3)
+P-022,2024-04-23,AWS,Guardrails for Amazon Bedrock,Harmful and off-limits content,2,yes,primary,ga,ga,day,agreed,HARM/2/yes,HARM/2/yes,
+P-023,2024-04-23,AWS,Guardrails for Amazon Bedrock,Prompt attacks and untrusted input,2,yes,primary,ga,ga,day,agreed,PI/2/yes,PI/2/yes,
+P-024,2024-04-23,AWS,Guardrails for Amazon Bedrock,Sensitive data in prompts and outputs,2,yes,primary,ga,ga,day,agreed,SENS/2/yes,SENS/2/yes,
+P-025,2024-05,Microsoft,Azure AI Content Safety custom categories (rapid),Harmful and off-limits content,2,yes,primary,preview,preview,month,agreed,HARM/2/yes,HARM/2/yes,
+P-026,2024-05-15,OpenAI,OpenAI API Projects,"Usage, spend and rate limits",3,yes,primary,unstated,unspecified,day,agreed,USE/3/yes,USE/3/yes,
+P-027,2024-05-24,AWS,Amazon Bedrock Agents,Harmful and off-limits content,4,yes,primary,unstated,unspecified,day,adjudicated,TOOL/4/yes,HARM/4/yes,"Guardrail acts on content (object agreed by rule: what is acted on); attached to an agent, both coders 4"
+P-028,2024-06-27,Anthropic,Claude API / Developer Console,"Usage, spend and rate limits",1,yes,primary,ga,ga,day,agreed,USE/1/yes,USE/1/yes,
+P-029,2024-07-10,AWS,Amazon Bedrock Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-030,2024-07-10,AWS,Amazon Bedrock Guardrails,Answer accuracy and presentation,2,yes,primary,unstated,unspecified,day,agreed,ACC/2/yes,ACC/2/yes,
+P-031,2024-07-18,OpenAI,ChatGPT Enterprise Compliance API,"Logs, traces and audit records",3,yes,primary,unstated,unspecified,day,adjudicated,LOG/3/yes,LOG/2/yes,"Compliance export wired into eDiscovery/DLP tools, i.e. records feed label-aware policy; highest feature present"
+P-032,2024-07-24,OpenAI,OpenAI API Enterprise,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-033,2024-08,Microsoft,Azure AI Content Safety Prompt Shields / Protected Material,Prompt attacks and untrusted input,2,yes,primary,ga,ga,month,agreed,PI/2/yes,PI/2/yes,
+P-034,2024-08-01,OpenAI,OpenAI Admin and Audit Log APIs,"Logs, traces and audit records",1,yes,primary,unstated,unspecified,day,adjudicated,LOG/3/yes,LOG/1/yes,"Plain audit-log API; no rule bound to context; same as agreed LOG rows G-035, P-041"
+P-035,2024-08-27,AWS,Amazon Bedrock Agents,Agent tools and actions,4,yes,primary,unstated,unspecified,day,agreed,TOOL/4/yes,TOOL/4/yes,
+P-036,2024-09,Microsoft,Azure AI Content Safety groundedness correction,Answer accuracy and presentation,2,yes,primary,preview,preview,month,agreed,ACC/2/yes,ACC/2/yes,
+P-037,2024-09-10,Anthropic,Claude API / Console Workspaces,"Usage, spend and rate limits",3,yes,primary,unstated,unspecified,day,agreed,USE/3/yes,USE/3/yes,
+P-038,2024-09-10,Anthropic,Claude Enterprise,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,adjudicated,ID/3/no,ID/3/yes,"SSO listed as a launch feature of Claude Enterprise (Sept 2024), not ""coming""; available"
+P-039,2024-09-10,Anthropic,Claude Enterprise,"Logs, traces and audit records",1,no,primary,unstated,unspecified,day,adjudicated,LOG/3/no,LOG/1/no,"Quote: ""will be available in the coming weeks""; announcement only; plain audit log = 1"
+P-040,2024-09-24,Google,Gemini API / AI Studio,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-041,2024-09-25,AWS,Amazon Bedrock Guardrails,"Logs, traces and audit records",1,yes,primary,unstated,unspecified,day,agreed,LOG/1/yes,LOG/1/yes,
+P-042,2024-09-26,OpenAI,Moderation API omni-moderation-latest,Harmful and off-limits content,2,yes,primary,ga,ga,day,agreed,HARM/2/yes,HARM/2/yes,
+P-043,2024-11-21,Anthropic,Claude API Admin API,"Identity, credentials and access rights",3,yes,primary,ga,ga,day,agreed,ID/3/yes,ID/3/yes,
+P-044,2024-12,Microsoft,Azure AI Agent Service,Network destinations,4,yes,primary,preview,preview,month,adjudicated,NET/4/yes,ID/4/yes,"Lead control is no public egress for the agent runtime; agent-runtime scoped, as agreed A-053"
+P-045,2024-12-03,AWS,Bedrock Guardrails Automated Reasoning checks,Answer accuracy and presentation,3,yes,primary,preview,preview,day,agreed,ACC/3/yes,ACC/3/yes,
+P-046,2024-12-04,OpenAI,OpenAI Usage API,"Usage, spend and rate limits",1,yes,primary,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-047,2024-12-04,AWS,Amazon Bedrock Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-048,2025-01-23,OpenAI,Operator,Autonomy and human handover,4,yes,primary,preview,preview,day,agreed,AUTO/4/yes,AUTO/4/yes,
+P-049,2025-02-03,Google,Model Armor,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-050,2025-02-05,OpenAI,OpenAI API data residency,"Model choice, routing and caching",1,yes,primary,unstated,unspecified,day,adjudicated,MODEL/3/yes,MODEL/1/yes,"Region of processing is Model choice by taxonomy; a fixed setting, no context rule"
+P-051,2025-03,Microsoft,Azure OpenAI content filtering,Harmful and off-limits content,2,yes,primary,preview,preview,month,agreed,HARM/2/yes,HARM/2/yes,
+P-052,2025-03-05,Google,Model Armor (AI Protection),Prompt attacks and untrusted input,2,yes,primary,ga,ga,day,agreed,PI/2/yes,PI/2/yes,
+P-053,2025-03-11,OpenAI,Agents SDK,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,adjudicated,HARM/2/yes,HARM/3/yes,"Input/output safety checks, typically model-based tripwires; they do not govern tool calls"
+P-054,2025-03-25,AWS,Amazon Bedrock Guardrails,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,adjudicated,HARM/3/yes,ID/3/yes,"Enforcement is an IAM condition key, i.e. a policy on use of the AI service (taxonomy Identity)"
+P-055,2025-04,Microsoft,Azure AI Agent Service,"Stored data: retention, training use and encryption",1,yes,primary,unstated,unspecified,month,adjudicated,STOR/3/yes,STOR/1/yes,Storage location of thread data; static configuration
+P-056,2025-04-09,Google,Model Armor GKE / load balancer integration,Prompt attacks and untrusted input,3,yes,primary,preview,preview,day,adjudicated,PI/3/yes,HARM/2/yes,Model Armor screens injection/jailbreak first (agreed P-052 = PI); uniform policy across inference traffic = 3
+P-057,2025-04-30,OpenAI,OpenAI API billing,"Usage, spend and rate limits",1,yes,primary,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-058,2025-05,Microsoft,Azure AI Agent Service,"AI inventory, lifecycle and policy management",4,yes,primary,ga,ga,month,agreed,INV/4/yes,INV/4/yes,
+P-059,2025-05-19,Microsoft,Azure AI Content Safety Spotlighting,Prompt attacks and untrusted input,2,yes,primary,preview,preview,day,agreed,PI/2/yes,PI/2/yes,
+P-060,2025-05-19,Microsoft,Azure AI Foundry task adherence,Autonomy and human handover,4,yes,primary,unstated,unspecified,day,adjudicated,AUTO/4/yes,TOOL/4/yes,"Off-task detection on the whole run, outcomes pause/human review: taxonomy Autonomy"
+P-061,2025-05-19,Microsoft,Microsoft Entra Agent ID,"Identity, credentials and access rights",4,yes,primary,preview,preview,day,agreed,ID/4/yes,ID/4/yes,
+P-062,2025-05-22,Anthropic,Claude Opus 4 (ASL-3 deployment measures),Harmful and off-limits content,2,yes,primary,ga,ga,day,agreed,HARM/2/yes,HARM/2/yes,
+P-063,2025-06-26,AWS,Amazon Bedrock Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-064,2025-07-16,AWS,Amazon Bedrock AgentCore,Agent tools and actions,4,yes,primary,preview,preview,day,agreed,TOOL/4/yes,TOOL/4/yes,
+P-065,2025-07-29,Google,Model Armor Vertex AI integration,Harmful and off-limits content,3,yes,primary,preview,preview,day,adjudicated,HARM/3/yes,HARM/2/yes,Object agreed; org-wide default configuration on all new endpoints = policy-aware
+P-066,2025-08-05,AWS,Amazon Bedrock Guardrails,Answer accuracy and presentation,3,yes,primary,ga,ga,day,agreed,ACC/3/yes,ACC/3/yes,
+P-067,2025-08-07,Google,Vertex AI Agent Engine,"Identity, credentials and access rights",4,yes,primary,unstated,unspecified,day,agreed,ID/4/yes,ID/4/yes,
+P-068,2025-08-18,Anthropic,Claude API Usage & Cost API,"Usage, spend and rate limits",1,yes,primary,ga,ga,day,agreed,USE/1/yes,USE/1/yes,
+P-069,2025-08-20,Anthropic,Claude Enterprise Compliance API,"Logs, traces and audit records",1,yes,primary,unstated,unspecified,day,adjudicated,LOG/3/yes,LOG/1/yes,Data-export API for audit; no rule; same as P-034
+P-070,2025-08-21,Anthropic,Claude Team/Enterprise (desktop extensions),Agent tools and actions,3,yes,primary,unstated,unspecified,day,agreed,TOOL/3/yes,TOOL/3/yes,
+P-071,2025-08-21,Google,Vertex AI Agent Engine,Network destinations,4,yes,primary,unstated,unspecified,day,adjudicated,NET/4/yes,NET/1/yes,Private networking for an agent runtime; agent-runtime scoped (A-053 precedent)
+P-072,2025-09-10,Google,Vertex AI Agent Engine Code Execution,Agent tools and actions,4,yes,primary,preview,preview,day,agreed,TOOL/4/yes,TOOL/4/yes,
+P-073,2025-10,Microsoft,Azure OpenAI content filters,Sensitive data in prompts and outputs,2,yes,primary,unstated,unspecified,month,agreed,SENS/2/yes,SENS/2/yes,
+P-074,2025-10-01,OpenAI,OpenAI API IP allowlist,Network destinations,1,yes,primary,unstated,unspecified,day,agreed,NET/1/yes,NET/1/yes,
+P-075,2025-10-13,AWS,Amazon Bedrock AgentCore,"Identity, credentials and access rights",4,yes,primary,ga,ga,day,adjudicated,ID/4/yes,NET/4/yes,Quote is about identity-aware authorization for agents
+P-076,2025-10-24,OpenAI,Enterprise Key Management,"Stored data: retention, training use and encryption",1,yes,primary,unstated,unspecified,day,agreed,STOR/1/yes,STOR/1/yes,
+P-077,2025-10-29,OpenAI,gpt-oss-safeguard,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,adjudicated,HARM/2/yes,HARM/3/yes,Policy-conditioned safety classifier; still a model scoring content
+P-078,2025-11,Microsoft,Azure AI Content Safety Task Adherence,Agent tools and actions,4,yes,primary,preview,preview,month,agreed,TOOL/4/yes,TOOL/4/yes,
+P-079,2025-11-07,Google,Vertex AI Agent Engine,"Identity, credentials and access rights",4,yes,primary,unstated,unspecified,day,agreed,ID/4/yes,ID/4/yes,
+P-080,2025-11-13,OpenAI,OpenAI API RBAC,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-081,2025-11-24,AWS,Amazon Bedrock Guardrails,"AI inventory, lifecycle and policy management",3,yes,primary,unstated,unspecified,day,adjudicated,HARM/3/yes,INV/3/yes,Sharing a policy across an organisation is policy management (taxonomy 14: policy packs)
+P-082,2025-12-02,AWS,Amazon Bedrock AgentCore Policy,Agent tools and actions,5,yes,primary,preview,preview,day,agreed,TOOL/5/yes,TOOL/5/yes,
+P-083,2025-12-10,Google,Model Armor for Google Cloud MCP servers,Prompt attacks and untrusted input,4,yes,primary,preview,preview,day,adjudicated,PI/4/yes,TOOL/4/yes,Taxonomy 2 includes screening tool traffic as untrusted (EG-038); applied to agent-MCP traffic = 4
+P-084,2025-12-18,Anthropic,Claude in Chrome (Team/Enterprise),Agent tools and actions,4,yes,primary,unstated,unspecified,day,adjudicated,NET/4/yes,TOOL/4/yes,Taxonomy 9: URL lists attached to a browsing/computer-use tool are Tools and actions
+P-085,2026-03-03,AWS,Amazon Bedrock AgentCore Policy,Agent tools and actions,5,yes,primary,ga,ga,day,agreed,TOOL/5/yes,TOOL/5/yes,
+P-086,2026-03-12,Google,Gemini API / AI Studio billing,"Usage, spend and rate limits",1,yes,primary,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-087,2026-03-31,AWS,Amazon Bedrock AgentCore Evaluations,"AI inventory, lifecycle and policy management",4,yes,primary,ga,ga,day,agreed,INV/4/yes,INV/4/yes,
+P-088,2026-04-08,Anthropic,Claude Managed Agents,Agent tools and actions,4,yes,primary,beta,beta,day,agreed,TOOL/4/yes,TOOL/4/yes,
+P-089,2026-04-09,Anthropic,Claude Enterprise,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-090,2026-04-16,Anthropic,Claude API task budgets,"Usage, spend and rate limits",4,yes,primary,beta,beta,day,adjudicated,USE/4/yes,USE/1/yes,"Budget for a full agentic loop is session-scoped (agreed P-111 = 4); note: advisory, not enforced"
+P-091,2026-04-22,Google,Model Armor for Google Cloud MCP servers,Prompt attacks and untrusted input,4,yes,primary,ga,ga,day,adjudicated,PI/4/yes,TOOL/4/yes,GA of P-083; same coding
+P-092,2026-04-22,Google,Model Armor with Agent Gateway,Prompt attacks and untrusted input,4,yes,primary,preview,preview,day,adjudicated,HARM/5/yes,TOOL/4/yes,"Model Armor is a screening service (PI, as P-052/P-083); applied at Agent Gateway = 4; no declarative approval engine, so not 5"
+P-093,2026-04-24,Anthropic,Claude API Rate Limits API,"Usage, spend and rate limits",1,yes,primary,ga,ga,day,agreed,USE/1/yes,USE/1/yes,
+P-094,2026-05-04,Anthropic,Claude API Workload Identity Federation,"Identity, credentials and access rights",3,yes,primary,ga,ga,day,agreed,ID/3/yes,ID/3/yes,
+P-095,2026-05-19,Anthropic,Claude Managed Agents,Agent tools and actions,4,yes,primary,ga,ga,day,agreed,TOOL/4/yes,TOOL/4/yes,
+P-096,2026-05-26,OpenAI,OpenAI API workload identity federation,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-097,2026-05-26,OpenAI,OpenAI Admin API,"AI inventory, lifecycle and policy management",3,yes,primary,unstated,unspecified,day,adjudicated,INV/3/yes,ID/3/yes,"API to manage settings (alerts, allowlists, retention, tool permissions) = policy management"
+P-098,2026-05-28,Anthropic,Claude API refusals,Harmful and off-limits content,2,yes,primary,ga,ga,day,agreed,HARM/2/yes,HARM/2/yes,
+P-099,2026-05-28,Anthropic,Claude Enterprise,Agent tools and actions,4,yes,primary,unstated,unspecified,day,adjudicated,TOOL/4/yes,TOOL/3/yes,Per-tool permissions on connectors: rules on which tools an agent may call
+P-100,2026-06-04,OpenAI,Responses / Chat Completions moderation,Harmful and off-limits content,2,yes,primary,unstated,unspecified,day,agreed,HARM/2/yes,HARM/2/yes,
+P-101,2026-06-09,Anthropic,Claude Fable 5,Harmful and off-limits content,2,yes,primary,ga,ga,day,agreed,HARM/2/yes,HARM/2/yes,
+P-102,2026-06-17,AWS,Amazon Bedrock AgentCore Policy,Agent tools and actions,5,yes,primary,unstated,unspecified,day,agreed,TOOL/5/yes,TOOL/5/yes,
+P-103,2026-06-23,OpenAI,OpenAI API Safety Usage Dashboard,"Logs, traces and audit records",1,yes,primary,unstated,unspecified,day,adjudicated,LOG/1/yes,LOG/2/yes,A dashboard is a record; the classifier is coded elsewhere
+P-104,2026-06-24,Google,Gemini Computer Use tool,Agent tools and actions,4,yes,primary,unstated,unspecified,day,adjudicated,TOOL/4/yes,PI/4/yes,Configurable safety policies govern computer-use actions; injection detection is secondary
+P-105,2026-07-01,Anthropic,Claude Enterprise,"Model choice, routing and caching",3,yes,primary,unstated,unspecified,day,agreed,MODEL/3/yes,MODEL/3/yes,
+P-106,2026-07-08,Anthropic,Claude Console API keys,"Identity, credentials and access rights",1,yes,primary,ga,ga,day,agreed,ID/1/yes,ID/1/yes,
+P-107,2026-07-22,OpenAI,OpenAI API spend limits,"Usage, spend and rate limits",1,yes,primary,unstated,unspecified,day,agreed,USE/1/yes,USE/1/yes,
+P-108,2026-08,Microsoft,Foundry Agent Service human-in-the-loop approval,Autonomy and human handover,4,yes,primary,preview,preview,month,adjudicated,AUTO/4/yes,TOOL/4/yes,"An approval step that gates a workflow run (not a named tool): taxonomy Autonomy, mechanism Require a human"
+P-109,2026-08,Microsoft,Foundry Agent Service toolbox network isolation,Network destinations,4,yes,primary,unstated,unspecified,month,adjudicated,NET/4/yes,NET/1/no,Dated documentation article for a usable feature counts as availability; agent toolbox network isolation = 4
+P-110,2026-08-05,Anthropic,Claude Enterprise inference hooks,Harmful and off-limits content,3,yes,primary,beta,beta,day,adjudicated,HARM/3/yes,HARM/4/yes,"Org-wide hold of prompts for an external verdict; acts on prompts, not tool calls or actions, so 3 not 4"
+P-111,2026-08-07,Anthropic,Claude Managed Agents session budget,"Usage, spend and rate limits",4,yes,primary,ga,ga,day,agreed,USE/4/yes,USE/4/yes,
+P-112,2026-08-19,Anthropic,Claude Managed Agents web tools,Agent tools and actions,4,yes,primary,ga,ga,day,adjudicated,NET/4/yes,TOOL/4/yes,Taxonomy 9: domain lists on web_search/web_fetch tools are Tools and actions
+P-113,2026-08-27,Anthropic,Claude Console,"Identity, credentials and access rights",3,yes,primary,ga,ga,day,adjudicated,ID/4/yes,ID/3/yes,Keys bound to an account and its permissions; not agent-specific
+P-114,2026-09-03,OpenAI,Responses API misalignment monitoring,Autonomy and human handover,4,yes,primary,unstated,unspecified,day,agreed,AUTO/4/yes,AUTO/4/yes,
+P-115,2026-09-10,Anthropic,Claude Managed Agents permission policies,Agent tools and actions,5,yes,primary,ga,ga,day,agreed,TOOL/5/yes,TOOL/5/yes,
+P-116,2026-09-15,OpenAI,OpenAI API key governance,"Identity, credentials and access rights",3,yes,primary,unstated,unspecified,day,agreed,ID/3/yes,ID/3/yes,
+P-117,2026-09-29,OpenAI,Agents API computer use,Agent tools and actions,4,yes,primary,unstated,unspecified,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-001,2023-03-13,Guardrails AI,Guardrails (open source),Answer accuracy and presentation,1,yes,primary,beta,alpha,day,adjudicated,ACC/2/yes,ACC/1/yes,Early Guardrails validators were schema/type checks with reask; static rule
+G-002,2023-04-25,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,adjudicated,HARM/1/yes,HARM/2/yes,NeMo topical rails match intent semantically with embeddings/LLM
+G-003,2023-04-25,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-004,2023-04-25,NVIDIA,NeMo Guardrails,Agent tools and actions,1,yes,primary,unstated,unstated,day,adjudicated,TOOL/1/yes,NET/1/yes,Allowlist of external applications (tool integrations) the app may connect to; fixed list
+G-005,2023-08-12,Protect AI (Laiyer.ai),LLM Guard,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-006,2023-08-31,Guardrails AI,Guardrails (open source),Answer accuracy and presentation,2,yes,primary,unstated,unstated,day,agreed,ACC/2/yes,ACC/2/yes,
+G-007,2023-09-27,Cloudflare,AI Gateway,"Usage, spend and rate limits",1,yes,primary,beta,beta,day,agreed,USE/1/yes,USE/1/yes,
+G-008,2023-10-12,Lakera,Lakera Guard,Prompt attacks and untrusted input,2,yes,press,unstated,unstated,day,agreed,PI/2/yes,PI/2/yes,
+G-009,2023-12-07,Meta,Llama Guard,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-010,2023-12-13,NVIDIA,NeMo Guardrails,Harmful and off-limits content,3,yes,primary,beta,beta,day,agreed,HARM/3/yes,HARM/3/yes,
+G-011,2023-12-13,NVIDIA,NeMo Guardrails,Sensitive data in prompts and outputs,2,yes,primary,beta,beta,day,agreed,SENS/2/yes,SENS/2/yes,
+G-012,2024-01-16,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,1,yes,primary,unstated,unstated,day,adjudicated,ACC/1/yes,HARM/2/yes,User-written rules rejecting responses for policy violations; static code rules
+G-013,2024-01-19,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,agreed,USE/3/yes,USE/3/yes,
+G-014,2024-01-23,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,agreed,USE/3/yes,USE/3/yes,
+G-015,2024-01-24,Prompt Security,Prompt Security platform,Harmful and off-limits content,2,yes,press,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-016,2024-01-31,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-017,2024-02-12,Kong,AI Gateway (AI Proxy),"Model choice, routing and caching",1,yes,primary,unstated,unstated,day,agreed,MODEL/1/yes,MODEL/1/yes,
+G-018,2024-02-12,Kong,AI Gateway,Harmful and off-limits content,1,yes,primary,unstated,unstated,day,agreed,HARM/1/yes,HARM/1/yes,
+G-019,2024-02-12,Kong,AI Gateway,Autonomy and human handover,1,yes,primary,unstated,unstated,day,adjudicated,HARM/1/yes,AUTO/1/yes,Fixed prepended instructions steer the whole conversation (taxonomy 6: instruction files)
+G-020,2024-02-12,Kong,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,adjudicated,SENS/2/yes,HARM/2/yes,Generic LLM-based transformation/sanitisation; generic guardrail = Harmful content; model-based = 2
+G-021,2024-02-12,LiteLLM,LiteLLM Proxy,Sensitive data in prompts and outputs,2,yes,primary,unstated,unstated,day,agreed,SENS/2/yes,SENS/2/yes,
+G-022,2024-02-17,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-023,2024-02-20,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-024,2024-02-25,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,agreed,USE/3/yes,USE/3/yes,
+G-025,2024-02-28,NVIDIA,NeMo Guardrails,Prompt attacks and untrusted input,1,yes,primary,unstated,unstated,day,agreed,PI/1/yes,PI/1/yes,
+G-026,2024-03-04,Cloudflare,Firewall for AI,Sensitive data in prompts and outputs,2,no,primary,announced,announced,day,adjudicated,SENS/2/no,PI/1/no,"""Announcing"" Firewall for AI in 2024; availability came with G-061 open beta 2025"
+G-027,2024-03-05,Guardrails AI,Guardrails Hub,"AI inventory, lifecycle and policy management",1,yes,primary,unstated,unstated,day,adjudicated,ACC/1/yes,INV/1/yes,"A hub for distributing validators manages the policies, not answers"
+G-028,2024-03-13,LiteLLM,LiteLLM Proxy,Prompt attacks and untrusted input,1,yes,primary,unstated,unstated,day,agreed,PI/1/yes,PI/1/yes,
+G-029,2024-03-19,Guardrails AI,Guardrails Server,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,adjudicated,HARM/3/yes,HARM/2/yes,Server deployment of the same validators; no identity/context binding added
+G-030,2024-04-18,Meta,Llama Guard 2,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-031,2024-04-18,Meta,Code Shield,Prompt attacks and untrusted input,1,yes,primary,unstated,unstated,day,adjudicated,PI/2/yes,PI/1/yes,Taxonomy 2: code-injection payloads in output; Code Shield uses static analysis rules
+G-032,2024-05-22,Cloudflare,AI Gateway,"Usage, spend and rate limits",1,yes,primary,ga,GA,day,agreed,USE/1/yes,USE/1/yes,
+G-033,2024-05-24,LiteLLM,LiteLLM Proxy,Prompt attacks and untrusted input,2,yes,primary,unstated,unstated,day,agreed,PI/2/yes,PI/2/yes,
+G-034,2024-05-25,Microsoft,Azure API Management,"Usage, spend and rate limits",3,yes,archive,unstated,unstated,day,agreed,USE/3/yes,USE/3/yes,
+G-035,2024-05-26,Microsoft,Azure API Management,"Logs, traces and audit records",1,yes,archive,unstated,unstated,day,agreed,LOG/1/yes,LOG/1/yes,
+G-036,2024-05-28,Kong,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-037,2024-05-28,Kong,AI Gateway,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,agreed,USE/1/yes,USE/1/yes,
+G-038,2024-06-26,LiteLLM,LiteLLM Proxy,Sensitive data in prompts and outputs,1,yes,primary,unstated,unstated,day,adjudicated,SENS/2/yes,SENS/1/yes,Secret detection by pattern/entropy rules
+G-039,2024-07-06,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,3,yes,primary,unstated,unstated,day,agreed,HARM/3/yes,HARM/3/yes,
+G-040,2024-07-23,Meta,Prompt Guard,Prompt attacks and untrusted input,2,yes,primary,unstated,unstated,day,agreed,PI/2/yes,PI/2/yes,
+G-041,2024-07-23,Meta,Llama Guard 3,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-042,2024-07-31,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-043,2024-08-20,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-044,2024-08-26,Portkey,Portkey open-source gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,adjudicated,HARM/2/yes,HARM/1/yes,"Same guardrails as agreed G-050 (Portkey guardrails, 2)"
+G-045,2024-09-09,Databricks,Mosaic AI Gateway / Unity Gateway,"Identity, credentials and access rights",3,yes,primary,preview,preview,day,agreed,ID/3/yes,ID/3/yes,
+G-046,2024-09-09,Databricks,Mosaic AI Gateway / Unity Gateway,Harmful and off-limits content,2,yes,primary,preview,preview,day,agreed,HARM/2/yes,HARM/2/yes,
+G-047,2024-09-11,Kong,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-048,2024-09-11,Kong,AI Gateway,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,agreed,USE/1/yes,USE/1/yes,
+G-049,2024-09-27,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-050,2024-10,Portkey,Portkey AI Gateway,Harmful and off-limits content,2,yes,primary,ga,GA,month,agreed,HARM/2/yes,HARM/2/yes,
+G-051,2024-11,Portkey,Portkey AI Gateway,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,month,agreed,USE/1/yes,USE/1/yes,
+G-052,2024-11-20,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,adjudicated,USE/1/yes,MODEL/3/yes,A budget per provider is a fixed cap; routing is the consequence
+G-053,2024-12-16,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,adjudicated,USE/1/yes,USE/3/yes,Budgets bound to request tags = context-bound (as agreed G-014 per-key budgets 3)
+G-054,2024-12-21,LiteLLM,LiteLLM Proxy,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,agreed,USE/1/yes,USE/1/yes,
+G-055,2025-01,Portkey,Portkey AI Gateway,Sensitive data in prompts and outputs,2,yes,primary,unstated,unstated,month,agreed,SENS/2/yes,SENS/2/yes,
+G-056,2025-01-16,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-057,2025-01-16,NVIDIA,NeMo Guardrails,Prompt attacks and untrusted input,2,yes,primary,unstated,unstated,day,agreed,PI/2/yes,PI/2/yes,
+G-058,2025-02-26,Cloudflare,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-059,2025-02-26,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-060,2025-03,Portkey,Portkey AI Gateway,"AI inventory, lifecycle and policy management",3,yes,primary,unstated,unstated,month,adjudicated,HARM/3/yes,INV/3/yes,Org-level enforcement of guardrails and metadata = policy management and precedence
+G-061,2025-03-19,Cloudflare,Firewall for AI,Sensitive data in prompts and outputs,2,yes,primary,beta,beta,day,adjudicated,SENS/2/yes,INV/2/yes,Open beta; the control described is sensitive-data detection in prompts
+G-062,2025-03-25,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-063,2025-03-27,Kong,AI Gateway,Sensitive data in prompts and outputs,2,yes,primary,unstated,unstated,day,agreed,SENS/2/yes,SENS/2/yes,
+G-064,2025-04,Portkey,Portkey AI Gateway,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,month,agreed,USE/3/yes,USE/3/yes,
+G-065,2025-04-01,LiteLLM,LiteLLM Proxy,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-066,2025-04-29,Meta,LlamaFirewall / Llama Guard 4 / Prompt Guard 2,Prompt attacks and untrusted input,2,yes,primary,unstated,unstated,day,adjudicated,PI/2/yes,HARM/2/yes,LlamaFirewall and Prompt Guard target injection/agent hijack; classifier models
+G-067,2025-05,Portkey,Portkey AI Gateway,"Model choice, routing and caching",3,yes,primary,unstated,unstated,month,adjudicated,MODEL/3/yes,MODEL/1/yes,Model allowlist bound to org/environment
+G-068,2025-05,Portkey,Portkey AI Gateway,Agent tools and actions,4,yes,primary,unstated,unstated,month,agreed,TOOL/4/yes,TOOL/4/yes,
+G-069,2025-06-11,Databricks,Mosaic AI Gateway / Unity Gateway,"Model choice, routing and caching",1,yes,primary,ga,GA,day,adjudicated,HARM/2/yes,MODEL/1/yes,"GA item is the gateway (routing, fallbacks); guardrails stayed in preview so are not counted"
+G-070,2025-06-11,LiteLLM,LiteLLM Proxy,Agent tools and actions,4,yes,primary,unstated,unstated,day,adjudicated,TOOL/4/yes,TOOL/3/yes,Who may use which MCP servers: rule on agent tool access
+G-071,2025-06-11,NVIDIA,NeMo Guardrails,Prompt attacks and untrusted input,1,yes,primary,unstated,unstated,day,agreed,PI/1/yes,PI/1/yes,
+G-072,2025-06-23,Databricks,Mosaic AI Gateway / Unity Gateway,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,agreed,USE/3/yes,USE/3/yes,
+G-073,2025-07-03,Kong,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-074,2025-07-04,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-075,2025-07-12,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-076,2025-07-29,Microsoft,Azure API Management,Harmful and off-limits content,2,yes,archive,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-077,2025-08-06,Microsoft,Azure API Management,Agent tools and actions,4,yes,archive,preview,preview,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-078,2025-08-14,Databricks,Mosaic AI Gateway / Unity Gateway,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,agreed,USE/1/yes,USE/1/yes,
+G-079,2025-08-14,Docker,MCP Gateway,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-080,2025-08-25,Cloudflare,Cloudflare One DLP,Sensitive data in prompts and outputs,3,yes,primary,unstated,unstated,day,adjudicated,SENS/3/yes,SENS/2/yes,DLP profiles applied through identity-aware Gateway policies; highest feature present
+G-081,2025-09,Portkey,Portkey AI Gateway,Agent tools and actions,4,yes,primary,beta,beta,month,adjudicated,TOOL/4/yes,TOOL/3/yes,MCP gateway access controls on agent tools
+G-082,2025-09-15,LiteLLM,LiteLLM Proxy,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-083,2025-09-16,Docker,MCP Gateway,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-084,2025-10-01,Kong,AI Gateway,"Identity, credentials and access rights",4,yes,primary,unstated,unstated,day,adjudicated,ID/4/yes,ID/3/yes,OAuth on MCP traffic authorises delegated agent access to tools (delegation = 4)
+G-085,2025-10-01,Kong,AI Gateway,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-086,2025-10-09,NVIDIA,NeMo Guardrails,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-087,2025-11,Portkey,Portkey AI Gateway,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,month,agreed,USE/3/yes,USE/3/yes,
+G-088,2025-11-06,NVIDIA,NeMo Guardrails,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-089,2025-11-14,Docker,MCP Gateway,Agent tools and actions,4,yes,primary,beta,pre-release,day,adjudicated,TOOL/4/yes,TOOL/3/yes,Enable/disable MCP tools per profile
+G-090,2025-11-16,LiteLLM,LiteLLM Proxy,"AI inventory, lifecycle and policy management",4,yes,primary,unstated,unstated,day,agreed,INV/4/yes,INV/4/yes,
+G-091,2025-12,Portkey,Portkey AI Gateway,Agent tools and actions,4,yes,primary,unstated,unstated,month,adjudicated,TOOL/4/yes,TOOL/3/yes,Guardrail controlling which tool types a request may use
+G-092,2025-12-18,Kong,AI Gateway,Prompt attacks and untrusted input,2,yes,primary,unstated,unstated,day,adjudicated,HARM/2/yes,PI/2/yes,Lakera Guard is primarily injection detection (agreed G-008 = PI 2)
+G-093,2026-01,Portkey,Portkey AI Gateway,Agent tools and actions,4,yes,primary,ga,GA,month,agreed,TOOL/4/yes,TOOL/4/yes,
+G-094,2026-02-07,LiteLLM,LiteLLM Proxy,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-095,2026-02-12,Databricks,Mosaic AI Gateway / Unity Gateway,"Model choice, routing and caching",3,yes,primary,beta,beta,day,adjudicated,HARM/2/yes,MODEL/3/yes,Gateway governing LLM endpoints and coding agents with identity-scoped access; routing is the core
+G-096,2026-02-13,LiteLLM,LiteLLM Proxy,Harmful and off-limits content,2,yes,primary,unstated,unstated,day,agreed,HARM/2/yes,HARM/2/yes,
+G-097,2026-03,Portkey,Portkey AI Gateway,"Logs, traces and audit records",1,yes,primary,unstated,unstated,month,adjudicated,INV/3/yes,LOG/1/yes,Required request metadata exists for attribution in records; fixed rule
+G-098,2026-04,Portkey,Portkey AI Gateway,"Identity, credentials and access rights",4,yes,primary,unstated,unstated,month,agreed,ID/4/yes,ID/4/yes,
+G-099,2026-04-07,Kong,AI Gateway,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-100,2026-04-15,Databricks,Mosaic AI Gateway / Unity Gateway,Agent tools and actions,4,yes,primary,beta,beta,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-101,2026-06-05,Cloudflare,AI Gateway,"Usage, spend and rate limits",1,yes,primary,unstated,unstated,day,adjudicated,USE/3/yes,USE/1/yes,"Cost cap that blocks at the limit (agreed P-107, G-051 = 1)"
+G-102,2026-07-01,NVIDIA,NeMo Guardrails,Agent tools and actions,4,yes,primary,unstated,unstated,day,agreed,TOOL/4/yes,TOOL/4/yes,
+G-103,2026-08-04,Databricks,Mosaic AI Gateway / Unity Gateway,"Model choice, routing and caching",3,yes,primary,ga,GA,day,adjudicated,INV/4/yes,MODEL/1/yes,"GA of the G-095 gateway; service policies stayed beta, so the GA item is the gateway, not a policy engine"
+G-104,2026-08-05,Cloudflare,AI Gateway,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,adjudicated,USE/3/yes,ID/3/yes,Headline control is per-user spend limits
+G-105,2026-08-05,Cloudflare,AI Gateway,"Usage, spend and rate limits",3,yes,primary,unstated,unstated,day,adjudicated,USE/3/yes,USE/2/yes,"Per-user behavioural baseline plus org threshold; identity-bound scoring, highest feature present = 3"
+G-106,2026-08-31,Databricks,Mosaic AI Gateway / Unity Gateway,"Identity, credentials and access rights",4,yes,primary,ga,GA,day,adjudicated,ID/5/yes,ID/3/yes,"Attribute-based grants covering MCP services (tools): agent-tool access; no approval workflow or per-call runtime engine, so not 5"
+G-107,2026-10-07,Databricks,Mosaic AI Gateway / Unity Gateway,Harmful and off-limits content,3,yes,primary,beta,beta,day,adjudicated,HARM/5/yes,HARM/2/yes,Gateway-wide service policy imposing a classifier; not tied to tool calls
+G-108,2026-10-09,Databricks,Mosaic AI Gateway / Unity Gateway,Agent tools and actions,5,yes,primary,beta,beta,day,adjudicated,TOOL/5/yes,TOOL/4/yes,Central declarative service policy evaluated before model and MCP tool calls across callers (cf. agreed P-082 = 5)
+A-001,2021-08-05,Credo AI,Credo AI governance workflow (SaaS),"AI inventory, lifecycle and policy management",3,yes,archive,unstated,not stated,day,adjudicated,INV/3/yes,INV/1/yes,Governance workflow tying models to regulatory/risk context; archive upper bound
+A-002,2022-07-25,GitHub / Microsoft,GitHub Copilot suggestions matching public code,Harmful and off-limits content,1,yes,archive,unstated,not stated,day,agreed,HARM/1/yes,HARM/1/yes,
+A-003,2022-12-07,GitHub / Microsoft,GitHub Copilot for Business,Harmful and off-limits content,3,yes,primary,ga,GA,day,agreed,HARM/3/yes,HARM/3/yes,
+A-004,2023-04-21,Microsoft,Power Virtual Agents (Copilot Studio) DLP policies,Agent tools and actions,3,yes,archive,preview,preview (per page title),day,adjudicated,SENS/3/yes,TOOL/3/yes,"DLP data groups decide which connectors a bot may use; data-classification policy, pre-agentic"
+A-005,2023-06-12,Salesforce,Einstein Trust Layer (AI Cloud),Sensitive data in prompts and outputs,2,no,primary,announced,announced,day,agreed,SENS/2/no,SENS/2/no,
+A-006,2023-10-03,Zendesk,Zendesk AI (advanced data privacy and protection),Sensitive data in prompts and outputs,3,yes,primary,ga,GA (available today),day,agreed,SENS/3/yes,SENS/3/yes,
+A-007,2023-10-10,UiPath,AI Trust Layer,"AI inventory, lifecycle and policy management",3,no,primary,announced,announced (upcoming availability),day,adjudicated,INV/3/no,INV/1/no,"""announced the upcoming availability"""
+A-008,2023-11-08,GitHub / Microsoft,GitHub Copilot,Data and files the AI can reach,3,yes,primary,beta,public beta,day,adjudicated,DATA/1/yes,DATA/3/yes,Org/repo-scoped exclusions (agreed A-078 = DATA 3)
+A-009,2024-04-22,UiPath,Automation Ops - AI Trust Layer policy,"AI inventory, lifecycle and policy management",3,yes,primary,preview,public preview,day,agreed,INV/3/yes,INV/3/yes,
+A-010,2024-04-28,Intercom,Fin AI Agent safeguards,Data and files the AI can reach,1,yes,archive,unstated,not stated,day,adjudicated,ACC/3/yes,DATA/1/yes,"Restriction of answers to the customer's content is grounding-source steering (taxonomy 7); built-in, fixed"
+A-011,2024-04-28,Intercom,Fin AI Agent usage limits and controls,"Usage, spend and rate limits",1,yes,archive,unstated,not stated,day,agreed,USE/1/yes,USE/1/yes,
+A-012,2024-05-06,Microsoft,Microsoft Purview AI Hub,Sensitive data in prompts and outputs,3,yes,primary,preview,public preview (message center post date),day,agreed,SENS/3/yes,SENS/3/yes,
+A-013,2024-06-05,Anysphere,Cursor Privacy Mode,"Stored data: retention, training use and encryption",1,yes,archive,unstated,not stated,day,agreed,STOR/1/yes,STOR/1/yes,
+A-014,2024-10-03,Credo AI,Credo AI Integrations Hub,"AI inventory, lifecycle and policy management",3,yes,press,ga,GA (per release),day,adjudicated,INV/3/yes,INV/1/yes,Same governance platform as A-001; press evidence only
+A-015,2024-10-21,UiPath,Automation Ops - AI Trust Layer policy,"AI inventory, lifecycle and policy management",3,yes,primary,ga,GA,day,agreed,INV/3/yes,INV/3/yes,
+A-016,2024-10-29,Salesforce,Agentforce,Agent tools and actions,4,yes,press,ga,GA,day,adjudicated,AUTO/4/yes,TOOL/4/yes,Agent builder scoping actions and guardrails per agent
+A-017,2024-11-05,Model Context Protocol (spec),MCP specification 2024-11-05,Agent tools and actions,1,no,primary,ga,spec revision (released),day,adjudicated,AUTO/3/no,TOOL/1/no,"Consent principles with ""no technical enforcement""; not a control"
+A-018,2024-11-11,Microsoft,Purview DSPM for AI (formerly AI Hub),Sensitive data in prompts and outputs,3,yes,primary,ga,GA,day,agreed,SENS/3/yes,SENS/3/yes,
+A-019,2024-11-12,GitHub / Microsoft,GitHub Copilot,Data and files the AI can reach,3,yes,primary,ga,GA,day,adjudicated,DATA/1/yes,DATA/3/yes,GA of A-008
+A-020,2024-11-13,ServiceNow,Now Assist Guardian,Harmful and off-limits content,2,no,press,announced,announced,day,agreed,HARM/2/no,HARM/2/no,
+A-021,2025-03-01,UiPath,Automation Ops - AI Trust Layer policy,"AI inventory, lifecycle and policy management",3,yes,primary,ga,release note,month,agreed,INV/3/yes,INV/3/yes,
+A-022,2025-03-26,Model Context Protocol (spec),MCP specification 2025-03-26,"Identity, credentials and access rights",4,yes,primary,ga,spec revision (released),day,adjudicated,ID/4/yes,ID/3/yes,OAuth 2.1 delegated authorisation of agent clients to tool servers (delegation = 4)
+A-023,2025-03-26,Model Context Protocol (spec),MCP specification 2025-03-26,Agent tools and actions,4,yes,primary,ga,spec revision (released),day,adjudicated,TOOL/4/yes,TOOL/1/yes,"Tool annotations describe action risk for client rules; metadata (untrusted hints), coded 4 as agent-action specific"
+A-024,2025-04-08,Okta (Auth0),Auth0 for AI Agents,"Identity, credentials and access rights",4,yes,archive,preview,developer preview (per later Auth0 blog),day,adjudicated,TOOL/4/yes,ID/4/yes,Auth0 identity product (agreed A-042 = ID 4); archive upper bound
+A-025,2025-04-09,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,preview,research preview / beta,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-026,2025-04-09,Google / A2A project,Agent2Agent (A2A) protocol,"Identity, credentials and access rights",4,no,primary,announced,announced / open protocol,day,adjudicated,ID/4/no,ID/3/no,A2A announced as an open protocol; no implementation
+A-027,2025-04-16,OpenAI,Codex CLI,Autonomy and human handover,4,yes,primary,ga,open-source launch,day,agreed,AUTO/4/yes,AUTO/4/yes,
+A-028,2025-05-06,ServiceNow,AI Control Tower,"AI inventory, lifecycle and policy management",5,no,press,announced,announced (Knowledge 2025),day,agreed,INV/5/no,INV/5/no,
+A-029,2025-05-19,GitHub / Microsoft,GitHub Copilot coding agent,Agent tools and actions,4,yes,primary,preview,preview,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-030,2025-05-19,Microsoft,Microsoft Entra Agent ID,"Identity, credentials and access rights",4,yes,press,preview,public preview (Build 2025),day,agreed,ID/4/yes,ID/4/yes,
+A-031,2025-05-22,OpenAI,Codex (cloud),Network destinations,1,yes,primary,ga,changelog entry (cloud product launched 2025-05-16),day,agreed,NET/1/yes,NET/1/yes,
+A-032,2025-06-18,Model Context Protocol (spec),MCP specification 2025-06-18,Autonomy and human handover,4,yes,primary,ga,spec revision (released),day,agreed,AUTO/4/yes,AUTO/4/yes,
+A-033,2025-06-18,Model Context Protocol (spec),MCP specification 2025-06-18,"Identity, credentials and access rights",4,yes,primary,ga,spec revision (released),day,adjudicated,ID/4/yes,ID/3/yes,MCP OAuth resource-server rules; delegation
+A-034,2025-06-23,Okta,Cross App Access (XAA),"Identity, credentials and access rights",4,no,primary,announced,announced,day,agreed,ID/4/no,ID/4/no,
+A-035,2025-06-30,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-036,2025-07-16,GitHub / Microsoft,GitHub Copilot coding agent,Network destinations,4,yes,primary,preview,public preview,day,adjudicated,NET/4/yes,NET/1/yes,"Configurable egress allowlist for the coding agent runtime (agent-runtime scoped, A-053 precedent)"
+A-037,2025-07-24,Anthropic,Claude Code,Autonomy and human handover,4,yes,primary,ga,GA (release note),day,adjudicated,AUTO/4/yes,AUTO/3/yes,Delegation to subagents with own tool scopes
+A-038,2025-07-29,Anysphere,Cursor 1.3,Agent tools and actions,4,yes,primary,ga,release,day,adjudicated,TOOL/4/yes,TOOL/1/yes,Allowlist for agent auto-run commands
+A-039,2025-08-08,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-040,2025-09-12,GitHub / Microsoft,GitHub Copilot (VS Code Insiders),Agent tools and actions,4,yes,primary,preview,preview (Insiders),day,adjudicated,TOOL/4/yes,TOOL/3/yes,MCP registry allowlist governing agent tools; Insiders preview counts as availability
+A-041,2025-09-16,Google / AP2 project,Agent Payments Protocol (AP2),Agent tools and actions,4,no,primary,announced,announced / open protocol,day,adjudicated,TOOL/4/no,USE/4/no,Taxonomy 5: mandates for a specific transaction; announced protocol
+A-042,2025-09-25,Okta (Auth0),Auth0 for AI Agents,"Identity, credentials and access rights",4,yes,primary,ga,developer preview (GA announced),day,agreed,ID/4/yes,ID/4/yes,
+A-043,2025-09-29,Anysphere,Cursor 1.7,Agent tools and actions,4,yes,primary,beta,beta,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-044,2025-09-29,OpenAI and Stripe / ACP project,Agentic Commerce Protocol (ACP),Agent tools and actions,4,no,primary,announced,announced / open protocol,day,agreed,TOOL/4/no,TOOL/4/no,
+A-045,2025-10-01,UiPath,Automation Ops - Studio Web agent design policies,"AI inventory, lifecycle and policy management",3,yes,primary,preview,preview,month,adjudicated,INV/5/yes,INV/3/yes,Design-time governance policy on agent configuration; not a runtime rule on actions
+A-046,2025-10-03,GitHub / Microsoft,GitHub Copilot CLI,Agent tools and actions,4,yes,primary,preview,public preview,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-047,2025-10-06,OpenAI,Codex,"AI inventory, lifecycle and policy management",4,yes,primary,ga,GA,day,adjudicated,INV/5/yes,TOOL/3/yes,"Managed config for one agent product incl. command controls; not cross-agent, so not 5"
+A-048,2025-10-17,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,adjudicated,TOOL/5/yes,TOOL/3/yes,"Managed MCP allow/deny in one agent product; not cross-agent engine, so not 5"
+A-049,2025-10-20,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-050,2025-10-28,GitHub / Microsoft,GitHub Agent HQ / Copilot control plane,"AI inventory, lifecycle and policy management",5,yes,primary,preview,public preview (announced at Universe),day,agreed,INV/5/yes,INV/5/yes,
+A-051,2025-10-29,Anysphere,Cursor 2.0,Agent tools and actions,4,yes,primary,ga,"GA (beta since 1.7, 2025-09-29)",day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-052,2025-10-30,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,adjudicated,TOOL/4/yes,TOOL/3/yes,Policy switch over agent sandbox escape
+A-053,2025-11-01,Microsoft,Global Secure Access for Copilot Studio agents,Network destinations,4,yes,primary,preview,public preview,month,agreed,NET/4/yes,NET/4/yes,
+A-054,2025-11-01,Microsoft,Microsoft Entra Conditional Access for agents,"Identity, credentials and access rights",4,yes,primary,preview,public preview,month,agreed,ID/4/yes,ID/4/yes,
+A-055,2025-11-01,Microsoft,Microsoft Entra ID Protection for Agents,"Identity, credentials and access rights",4,yes,primary,preview,public preview,month,adjudicated,ID/4/yes,ID/2/yes,Risk detection on agent identities; agent identity outranks classifier feature
+A-056,2025-11-01,Microsoft,Microsoft Entra agent registry,"AI inventory, lifecycle and policy management",4,yes,primary,preview,public preview,month,adjudicated,INV/4/yes,INV/3/yes,Agent registry (agreed G-090 = INV 4)
+A-057,2025-11-18,Anthropic,Claude Code,Agent tools and actions,4,yes,primary,ga,GA (release note),day,adjudicated,TOOL/5/yes,TOOL/4/yes,Hook on tool permission requests (agreed A-035 hooks = 4); not central
+A-058,2025-11-18,Microsoft,Microsoft Agent 365,"AI inventory, lifecycle and policy management",5,yes,primary,preview,announced / Frontier early access (page later updated to GA),day,agreed,INV/5/yes,INV/5/yes,
+A-059,2025-11-19,Okta (Auth0),Auth0 for AI Agents,"Identity, credentials and access rights",4,yes,primary,ga,GA,day,adjudicated,TOOL/4/yes,ID/4/yes,Auth0 for AI Agents GA (same as A-024)
+A-060,2025-11-25,Model Context Protocol (spec),MCP specification 2025-11-25,"Identity, credentials and access rights",4,yes,primary,ga,spec revision (released),day,adjudicated,ID/4/yes,ID/3/yes,Incremental scope consent for agent clients
+A-061,2025-12-12,Anthropic,Claude Code,"AI inventory, lifecycle and policy management",4,yes,primary,ga,GA (release note),day,adjudicated,INV/5/yes,INV/3/yes,Managed settings for one agent product; settings precedence = Lifecycle/policy; not cross-agent
+A-062,2026-01-23,Microsoft,Copilot Studio with Defender,Agent tools and actions,4,yes,primary,ga,GA per blog (preview earlier),day,adjudicated,TOOL/5/yes,TOOL/4/yes,"Defender verdict on each tool call; detection-driven, not customer-declared policy with approvals, so 4 not 5"
+A-063,2026-01-23,OpenAI,Codex,Agent tools and actions,4,yes,primary,ga,GA (changelog entry),day,adjudicated,TOOL/5/yes,TOOL/3/yes,Admin-enforced command rules for one agent product
+A-064,2026-02-19,Anthropic,Claude Code,"AI inventory, lifecycle and policy management",4,yes,primary,ga,GA (release note),day,adjudicated,INV/5/yes,INV/3/yes,Audit/block of settings changes in an agent product
+A-065,2026-02-23,Anthropic,Claude Code,"AI inventory, lifecycle and policy management",4,yes,primary,ga,GA (release note),day,adjudicated,INV/5/yes,INV/3/yes,MDM delivery of managed settings for an agent product
+A-066,2026-03-31,Anthropic,Claude Code,Autonomy and human handover,4,yes,primary,ga,GA (release note),day,adjudicated,AUTO/4/yes,TOOL/4/yes,Taxonomy 6 lists permission modes incl. auto-review
+A-067,2026-04-01,Microsoft,Microsoft Entra Agent ID platform,"Identity, credentials and access rights",4,yes,primary,ga,GA,month,agreed,ID/4/yes,ID/4/yes,
+A-068,2026-04-16,GitHub / Microsoft,GitHub Copilot CLI,Agent tools and actions,4,yes,primary,ga,changelog release,day,adjudicated,TOOL/4/yes,TOOL/3/yes,Registry-based MCP allowlist (preview)
+A-069,2026-05-01,Microsoft,Microsoft Entra Lifecycle Workflows for agents,"Identity, credentials and access rights",4,yes,primary,ga,GA,month,agreed,ID/4/yes,ID/4/yes,
+A-070,2026-05-01,Microsoft,Purview data security for Agent 365,Sensitive data in prompts and outputs,4,yes,primary,ga,GA,month,adjudicated,SENS/4/yes,SENS/3/yes,DLP and compliance protections extended to agents in Agent 365
+A-071,2026-05-11,OpenAI,Codex Auto-review,Autonomy and human handover,4,yes,primary,unstated,documented (first ship date not found),day,adjudicated,AUTO/4/yes,TOOL/4/yes,Auto-review run mode (taxonomy 6)
+A-072,2026-05-14,OpenAI,Codex,Agent tools and actions,4,yes,primary,ga,GA,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-073,2026-06-01,Microsoft,Purview DLP for Microsoft 365 Copilot,Data and files the AI can reach,3,yes,primary,preview,preview,month,adjudicated,PI/4/yes,DATA/3/yes,Blocks a grounding source by DLP policy location (taxonomy 7: grounding-source steering); purpose is injection risk
+A-074,2026-07-29,GitHub / Microsoft,GitHub Copilot code review,Agent tools and actions,4,yes,primary,ga,GA,day,agreed,TOOL/4/yes,TOOL/4/yes,
+A-075,2026-07-30,UiPath,Automation Ops - AI Trust Layer policy,"Model choice, routing and caching",3,yes,primary,ga,release note,day,agreed,MODEL/3/yes,MODEL/3/yes,
+A-076,2026-08-06,GitHub / Microsoft,GitHub Copilot clients,Agent tools and actions,4,yes,primary,ga,GA,day,adjudicated,TOOL/4/yes,TOOL/3/yes,Enterprise MCP server allow/deny lists
+A-077,2026-08-24,Okta,Agent SSO / Okta for AI Agents,"Identity, credentials and access rights",4,yes,primary,ga,GA,day,agreed,ID/4/yes,ID/4/yes,
+A-078,2026-09-02,GitHub / Microsoft,GitHub Copilot app and CLI,Data and files the AI can reach,3,yes,primary,ga,GA,day,agreed,DATA/3/yes,DATA/3/yes,
