@@ -1,0 +1,57 @@
+id,code,reason
+X003,edit,Helps strengthen change management controls based on monitored issues
+X004,edit,Provides input shaping pricing guidelines
+X007,apply,Practices change management discipline in service work
+X009,none,Organizational HR change rollout; not rules or controls
+X010,apply,Enforces row-level security and data access policies
+X018,edit,Supports developing and maintaining quality control standards
+X019,edit,Establishes and curates constraints and standards that agents operate under
+X039,edit,Shapes licensing terms and pricing models with partners
+X045,decide,Owns routing rules and escalation logic design
+X051,edit,Builds applications with governance and role-based access control
+X055,apply,Enforces network isolation and access controls on clusters
+X058,edit,Aligns with teams on feature store standards
+X069,edit,Monitors and enhances pricing operations controls
+X076,apply,Runs project change control process including obtaining approvals
+X092,edit,Reviews and helps design internal controls
+X093,edit,Covers model usage policies and change management (fragment)
+X101,decide,Sets launch criteria gating go-live
+X103,decide,Participates in approving change requests
+X106,none,Insurance contract wording; not decision rules
+X122,edit,Maintains documentation of pricing configurations and readiness criteria
+X131,edit,Helps define access control and governance patterns for AI agents
+X142,edit,Defines architecture for agent authorization
+X146,apply,Supports fraud prevention and control activities
+X148,apply,Implements automation with quality controls and change management
+X152,apply,Performs approved changes per change management requirements
+X155,apply,Contributes to implementing clinical protocols
+X168,apply,Maintains governor limit compliance
+X169,decide,Oversees credit approval process; accountable for portfolio
+X192,apply,Applies transformation rules in change management
+X229,apply,Contributes to implementing clinical protocols
+X231,apply,Provisions accounts according to RBAC
+X262,edit,Leads accreditation strategy for agent security controls
+X275,none,Engineering build patterns; not rules or controls
+X301,edit,Reviews labor standards for repricing
+X306,apply,Works in accordance with established policies
+X342,edit,Designs and implements human-in-the-loop controls
+X343,decide,Approves high-value claims and pricing exceptions
+X347,edit,Ensures credit policies and procedures are documented
+X348,apply,Completes underwriting within established standards
+X350,apply,Maintains and adheres to documentation standards
+X354,edit,Operates release governance safety controls and guardrails
+X358,edit,Designs and builds change management platforms
+X359,decide,Owns regulatory reporting change management including controls
+X360,none,Defines service offerings; not rules or controls
+X361,edit,Drives IAM projects including RBAC and access reviews
+X370,edit,Supports DRO on portfolio risk limits and governance
+X378,apply,Monitors compliance with procurement policy
+X385,apply,Ensures implementation of pricing policies
+X397,decide,Oversees credit management including policy exceptions
+X398,edit,Defines roadmap for agentic authorization and governance
+X401,apply,Performs change management and configuration audits
+X406,edit,Ratemaking and increased limit factor pricing
+X411,edit,Assists with delegations of authority
+X413,none,Engineering code standards; not rules of this kind
+X414,apply,Builds continuous controls monitoring and testing
+X419,edit,Architects automation for privileged access controls

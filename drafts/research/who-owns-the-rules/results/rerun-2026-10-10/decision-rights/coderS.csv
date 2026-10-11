@@ -1,0 +1,432 @@
+id,code,reason
+X001,edit,maintains manual and revises thresholds
+X002,edit,implements security and governance controls
+X003,apply,monitors issues to strengthen controls
+X004,none,informs pricing guidelines only
+X005,apply,helps enforce risk programs and policies
+X006,decide,establishes enterprise governance standards
+X007,none,generic service and change discipline
+X008,edit,develops recommendations to adjust credit policies
+X009,none,change management of HR decisions
+X010,apply,enforces row-level security policies
+X011,apply,tests fraud controls
+X012,none,permitting not rules
+X013,edit,designs security controls for agents
+X014,none,translates needs to product capabilities
+X015,apply,ensures compliance with approval thresholds
+X016,apply,validates slips against policy
+X017,apply,ensures alignment with statutory rules
+X018,none,"methodology quality, not rules"
+X019,none,context curation
+X020,decide,sets engineering standards
+X021,decide,establishes enterprise standards and governance
+X022,edit,defines access models and entitlement rules
+X023,apply,negotiates per pricing policies
+X024,edit,onboards compliance rules
+X025,none,RFx documents
+X026,apply,inspection and release approvals to standards
+X027,decide,reviews and approves change requests
+X028,decide,owns enterprise control framework
+X029,apply,"validates pricing, procurement policy"
+X030,edit,integrates access controls
+X031,edit,develops governance processes
+X032,decide,signs off exceptions above threshold
+X033,apply,follows procurement policies
+X034,apply,completes documentation per AML policy
+X035,apply,reviews guidelines for variations
+X036,none,product definition
+X037,apply,reviews access designs
+X038,apply,approves expenses within budget
+X039,none,commercial terms shaping
+X040,decide,chairs committee deciding formulary
+X041,apply,works alerts against criteria
+X042,none,architecture discussion
+X043,none,workflow design
+X044,none,clinical content
+X045,none,automation design
+X046,none,process improvement
+X047,decide,CAB approvals
+X048,edit,designs guardrails and controls
+X049,apply,decides within delegated authority
+X050,apply,checks requirements met
+X051,none,application development
+X052,apply,ensures requirements met
+X053,edit,implements access policies
+X054,edit,defines controls for agents
+X055,apply,enforces security standards
+X056,edit,develops and maintains control procedures
+X057,apply,ensures policy requirements met
+X058,none,align on standards
+X059,edit,enforces and evolves change controls
+X060,edit,implements guardrails
+X061,apply,reviews entitlements against policy
+X062,apply,resolves exceptions
+X063,apply,supports change management boards
+X064,apply,quotes aligned with standards
+X065,apply,ensures solutions meet controls
+X066,apply,ensures adherence to credit policies
+X067,apply,supports review against thresholds
+X068,decide,governs change approvals
+X069,apply,monitors controls
+X070,apply,ensures compliance
+X071,none,proposals
+X072,apply,reviews and validates pricing compliance
+X073,none,build agents
+X074,apply,ensures compliance with thresholds
+X075,apply,ensures policies followed
+X076,apply,evaluates changes and approvals
+X077,edit,builds access controls
+X078,edit,supports developing pricing policies
+X079,apply,decisioning per risk appetite
+X080,none,collaboration
+X081,apply,tests fraud controls
+X082,decide,defines tiers and resolves exceptions
+X083,decide,defines standards
+X084,none,submits proposals
+X085,none,drafts legal documents
+X086,none,product backlog
+X087,edit,implements live rule mitigations
+X088,edit,builds rules-based systems
+X089,apply,ensures compliance
+X090,none,clinical content
+X091,apply,adherence to credit policy
+X092,apply,supports control testing
+X093,none,ambiguous policy mention
+X094,decide,go-live approvals
+X095,edit,designs controls
+X096,none,rotation roles
+X097,edit,implements controls and access models
+X098,edit,designs guardrails
+X099,none,analysis
+X100,none,advisory
+X101,none,launch criteria
+X102,none,transaction materials
+X103,apply,participates in change approval
+X104,apply,operates within limits
+X105,edit,owns access policies
+X106,none,wording
+X107,decide,committee decides limit changes
+X108,decide,defines standards
+X109,decide,chairs committee signs off exceptions
+X110,none,change adoption
+X111,none,use case definition
+X112,edit,designs security controls
+X113,apply,monitors policy changes and operationalizes
+X114,apply,follows formulary and protocols
+X115,decide,authority to lift kill switch overrides
+X116,edit,manages access controls
+X117,decide,establishes global standards
+X118,apply,controls change requests
+X119,edit,builds access policies
+X120,none,integration build
+X121,decide,sets underwriting standards
+X122,none,documentation
+X123,apply,reviews against requirements
+X124,decide,defines engineering standards
+X125,edit,configures discount rules
+X126,apply,reviews per AML policy
+X127,decide,establishes governance standards
+X128,apply,escalates when thresholds required
+X129,apply,validates changes
+X130,apply,underwrites per guidelines
+X131,none,security patterns
+X132,decide,establishes decision rights and thresholds
+X133,apply,executes per policies
+X134,apply,ensures alignment with policies
+X135,none,advice
+X136,edit,tunes screening parameters
+X137,decide,owns policy and exceptions
+X138,apply,follows policies
+X139,apply,reviews per guidelines
+X140,none,provides updates
+X141,none,pricing analyses
+X142,none,reference architecture
+X143,none,strategy delivery
+X144,apply,handles within authority per guidelines
+X145,edit,manages credit policies
+X146,apply,supports control activities
+X147,none,partnership with control functions
+X148,apply,quality controls and change management in implementation
+X149,edit,develops and maintains limits framework
+X150,edit,maintains access policies documentation
+X151,apply,participates in approval activities
+X152,apply,performs changes under change management
+X153,none,improvement objectives
+X154,none,coordination
+X155,apply,implements clinical protocols
+X156,apply,oversight with controls support
+X157,apply,maintains compliance with policy
+X158,edit,implements security policies
+X159,apply,exercises authority per guidelines
+X160,edit,builds rules-based models
+X161,none,advice on guidelines development
+X162,apply,underwrites per governance framework
+X163,apply,checks discounts within bands
+X164,apply,ensures compliance
+X165,apply,ensures compliance
+X166,edit,helps develop and maintain approval policies
+X167,apply,maintains compliance
+X168,none,development workflow
+X169,decide,accountable for credit approval process
+X170,apply,maintains compliance while negotiating
+X171,edit,translates requirements into controls
+X172,apply,learning to apply guidelines
+X173,edit,maintains role-based access and controls
+X174,apply,reviews and approves requirements
+X175,apply,ensures compliance
+X176,edit,administers DLP policies
+X177,none,product lifecycle
+X178,none,assess risks
+X179,decide,establishes governance guardrails and standards
+X180,apply,manages non-standard pricing process
+X181,apply,"monitors transactions, escalates"
+X182,edit,develops controls and governance processes
+X183,none,education
+X184,apply,tests fraud controls
+X185,apply,enforces standards
+X186,edit,operationalizes governance framework
+X187,apply,ensures RBAC compliance
+X188,apply,reviews accuracy
+X189,apply,completes per policy
+X190,decide,manages pricing governance approval
+X191,none,operations
+X192,edit,applies transformation rules
+X193,none,relationships
+X194,apply,ensures compliance
+X195,none,process transformation
+X196,none,mentoring
+X197,apply,underwrites per governance framework
+X198,edit,establishes configurable guardrails
+X199,edit,maintains guideline versions
+X200,decide,owns procurement policy and thresholds
+X201,none,product definition
+X202,edit,implements access controls
+X203,apply,ensures adherence
+X204,none,advice
+X205,apply,"reviews guidelines, escalates"
+X206,none,reports
+X207,apply,underwrites within guidelines
+X208,apply,complies with policies
+X209,apply,assesses compliance controls
+X210,none,reimbursement strategy
+X211,apply,mitigates risks supporting spend approvals
+X212,edit,embeds policy-as-code
+X213,none,scientific input
+X214,apply,monitors fraud controls effectiveness
+X215,apply,applies credit policy
+X216,apply,ensures adherence to guidelines
+X217,none,GenAI practitioner
+X218,edit,maintains standards revises criteria
+X219,edit,establishes change management processes
+X220,none,training
+X221,edit,updates scorecards and cutoffs
+X222,apply,approves invoices per policy
+X223,apply,tests defenses
+X224,none,advice on deals
+X225,apply,ensures alignment with policies
+X226,edit,contributes to guardrail controls
+X227,apply,ensures changes approved
+X228,apply,stays within approved limits
+X229,apply,implements protocols
+X230,decide,owns policy signs off exceptions
+X231,apply,creates accounts with RBAC
+X232,edit,integrates identity controls
+X233,edit,ensures policies remain comprehensive
+X234,decide,establishes architecture standards
+X235,none,customer automation
+X236,none,scientific discussion
+X237,decide,final call price exceptions
+X238,edit,develops pricing strategies quality control
+X239,none,scientific rigor
+X240,apply,monitors against limits
+X241,edit,supports maintenance of policies
+X242,apply,ensures compliance
+X243,apply,coordinates referrals for approval
+X244,edit,builds authorization solutions
+X245,edit,strengthens governance controls
+X246,apply,escalates breaches
+X247,edit,enhances risk assessments standards
+X248,none,develops contracts
+X249,edit,implements RBAC
+X250,apply,ensures adherence
+X251,edit,implements security controls
+X252,edit,maintains controls and recommends
+X253,decide,establishes engineering standards
+X254,apply,processes within thresholds
+X255,none,relationships
+X256,none,agent design
+X257,apply,ensures compliance
+X258,edit,builds discount approval automation
+X259,decide,sets risk parameters and guardrails
+X260,apply,supports control execution
+X261,edit,writes fraud rules thresholds
+X262,none,accreditation strategy
+X263,none,scientific review
+X264,edit,develops procedures and controls
+X265,apply,executes per policies
+X266,none,UX development
+X267,apply,supports underwriting per guidelines
+X268,apply,configuration checks
+X269,none,architecture
+X270,apply,ensures compliance with policies
+X271,decide,owns governance of approvals
+X272,none,preparation materials
+X273,apply,prices per guidelines
+X274,edit,establishes controls
+X275,none,patterns
+X276,apply,ensures compliance
+X277,apply,ensures adherence
+X278,none,strategy
+X279,none,collaboration
+X280,none,understand requirements
+X281,edit,configures access control workflows
+X282,decide,formulates pricing policies
+X283,apply,ensures rules enforced
+X284,edit,implements access controls
+X285,apply,decisions within underwriting policies
+X286,edit,establishes guardrails
+X287,none,translation
+X288,none,investment due diligence
+X289,apply,monitors against guidelines
+X290,apply,governs access adherence to controls
+X291,apply,ensures compliance
+X292,edit,builds policy engine and limits
+X293,edit,manages development of discount guidelines
+X294,edit,supports configuring access controls
+X295,edit,owns fraud controls and retry logic
+X296,edit,implements access controls
+X297,none,file preparation
+X298,apply,monitors exceptions and schedule discipline
+X299,edit,implements and maintains RBAC
+X300,none,documentation
+X301,none,labor standards review
+X302,edit,ensures procedures and controls developed
+X303,apply,checks requisitions against thresholds
+X304,edit,designs and implements RBAC
+X305,none,guidance on policies
+X306,none,clinical documents
+X307,apply,follows controls
+X308,apply,follows change process
+X309,apply,evaluates control impacts in changes
+X310,edit,implements calculation logic and rules
+X311,edit,builds access policy filtering
+X312,edit,makes parameter adjustments within procedures
+X313,edit,contributes constraints rules
+X314,edit,tunes guardrails and refusal rules
+X315,apply,follows change policy
+X316,edit,owns policy enforcement services
+X317,none,knowledge maintenance
+X318,apply,ensures alignment with AML standards
+X319,edit,establishes access patterns
+X320,apply,control execution evidence collection
+X321,edit,builds guardrails
+X322,apply,reviews access requests for controls
+X323,none,negotiation
+X324,none,partnership
+X325,apply,operates within guardrails
+X326,none,project execution
+X327,edit,updates order sets per guidelines
+X328,none,alignment support
+X329,none,development assist
+X330,none,defines operating standard
+X331,none,education
+X332,edit,embeds RBAC controls
+X333,none,tooling improvement
+X334,decide,leads controls and governance framework
+X335,none,agenda
+X336,apply,underwriting analysis
+X337,apply,tracks changes validates processes
+X338,edit,maps gates to change records
+X339,apply,maintains credit standards
+X340,none,records
+X341,apply,ensures within credit guidelines
+X342,none,LLM capabilities
+X343,decide,reviews and approves exception claims
+X344,apply,ensures outputs adhere to standards
+X345,none,design requirements
+X346,edit,configures guardrails
+X347,decide,ensures policies documented in manual
+X348,none,task completion
+X349,apply,abides by standards
+X350,apply,adheres to documentation standards
+X351,apply,complies with laws
+X352,edit,builds policy enforcement integrations
+X353,apply,reviews AML controls
+X354,none,broad MLOps list
+X355,apply,tests controls
+X356,apply,monitors against standards
+X357,edit,sets up and adjusts limits
+X358,none,platform building
+X359,apply,assesses regulatory impact on controls
+X360,none,service definition
+X361,none,IAM project drive
+X362,edit,establishes change controls
+X363,decide,chairs CAB rules on exceptions
+X364,apply,aligns with procurement policies
+X365,edit,manages IAM roles and controls
+X366,edit,configures RBAC and policy enforcement
+X367,edit,authors guardrails and escalation rules
+X368,none,presentations
+X369,apply,evaluates fraud controls
+X370,apply,supports risk limits governance
+X371,apply,ensures adherence
+X372,edit,designs security controls
+X373,none,financial reporting
+X374,none,liaison
+X375,none,monitoring intelligence
+X376,apply,assesses against credit policy
+X377,apply,investigates exceptions
+X378,edit,implements compliance monitoring measures
+X379,apply,reviews requirements met
+X380,none,champion automation
+X381,edit,embeds access policies
+X382,none,change adoption
+X383,apply,maintains compliance
+X384,apply,ensures adherence
+X385,none,implementation of pricing initiatives
+X386,apply,ensures alignment
+X387,apply,oversees fraud prevention protocols
+X388,apply,ensures transactions meet rules
+X389,none,resolves order issues
+X390,none,coordination
+X391,decide,creates standards
+X392,apply,guides enforcement of policies
+X393,apply,monitors against standards
+X394,apply,ensures compliance with policy
+X395,decide,approves transactions over limits
+X396,edit,implements access controls
+X397,decide,oversees policy exceptions
+X398,none,roadmap
+X399,apply,"ensures compliance, documents exceptions"
+X400,decide,owns framework chairs approval forum
+X401,apply,performs change management audits
+X402,apply,ensures compliance
+X403,edit,develops underwriting criteria
+X404,apply,adheres to guidelines
+X405,edit,implements access policies
+X406,none,pricing principles
+X407,none,AI delivery
+X408,apply,follows change process
+X409,edit,implements RBAC
+X410,apply,applies purchasing policy
+X411,none,paperwork assist
+X412,none,stays informed
+X413,decide,develops engineering standards
+X414,apply,builds control monitoring
+X415,edit,develops RBAC capabilities
+X416,edit,designs guardrails encoding rules
+X417,apply,ensures compliance
+X418,edit,defines and maintains review criteria
+X419,none,automation architecture
+X420,apply,interprets policies
+X421,edit,operationalizes policies and recertification
+X422,decide,defines control thresholds
+X423,apply,ensures internal controls
+X424,edit,designs controls and decision logic
+X425,edit,provides policy recommendations
+X426,edit,updates and maintains pricing policy
+X427,none,education
+X428,edit,assists maintaining access controls
+X429,apply,sells per guidelines
+X430,none,project services
+X431,apply,performs control testing
