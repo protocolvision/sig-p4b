@@ -6,7 +6,7 @@ generated_model: claude-opus-5-5
 # Who owns the rules when AI agents join the business?
 
 ::: generated
-AI agents now answer customers, spend money and approve requests, all under rules that someone has to change when they go wrong. Our first report asks who that someone is. We read 118,526 job postings, 1,167 company filings, recorded talks by 30 practitioners, 19 laws and policies, and the documentation of 31 agent products and protocols. The [full report](https://protocolsforbusiness.com/research/agent-control-report-2026/) is interactive; here are the main points.
+AI agents now answer customers, spend money and approve requests, all under rules that someone has to change when they go wrong. The first report asks who that someone is. It reads 118,526 job postings, 1,167 company filings, recorded talks by 30 practitioners, 19 laws and policies, and the documentation of 31 agent products and protocols. The [full report](https://protocolsforbusiness.com/research/agent-control-report-2026/) is interactive; here are the main points.
 
 **The rules live in the vendor's admin settings.** In most agent products an administrator edits what an agent may do, inside the product, under a central policy. That is what the products allow. It doesn't tell us how firms decide a change.
 
@@ -14,11 +14,13 @@ AI agents now answer customers, spend money and approve requests, all under rule
 
 **Some of the work is missing.** Supervising and tuning agents is what people talk about. Finding the unwritten rules a business already runs on, and deciding a change to them across functions, barely appear: of 771 statements, one describes finding an unwritten rule and none describes deciding such a change.
 
-**An early sign: ownership is set up front, not change by change.** Firms seem to own agent rules as standards and frameworks. Mature rule systems such as IT change also name someone to approve each specific change before it goes live. For agents we found almost no one in that seat.
+**An early sign: ownership is set up front, not change by change.** The analysis finds firms seem to own agent rules as standards and frameworks. Mature rule systems such as IT change also name someone to approve each specific change before it goes live. For agents the analysis found almost no one in that seat.
 
 **The law asks for overseers, not owners.** From 2027, the EU AI Act and Colorado's law will require firms using AI for high-risk decisions to name people who can oversee those systems and step in. No law yet names who owns an agent's rules, and none registers agents.
 
-Our advice is simple: write a standard for agent controls, name its owner, reserve sign-off for exceptions, and keep the vendor's console from holding the only copy of an agent's rules. The report ends with five checks you can run in your own firm in an afternoon.
+The analysis suggests: write a standard for agent controls, name its owner, reserve sign-off for exceptions, and keep the vendor's console from holding the only copy of an agent's rules. The report ends with five checks you can run in your own firm in an afternoon.
 
-The [Agent Controls Atlas](https://protocolsforbusiness.com/research/agent-controls-atlas/), the companion report, looks at the controls themselves. All our reports are on the [Research](https://protocolsforbusiness.com/research/#reports) page.
+The [Agent Controls Atlas](https://protocolsforbusiness.com/research/agent-controls-atlas/), the companion report, looks at the controls themselves. Both reports are on the [Research](https://protocolsforbusiness.com/research/#reports) page.
+
+*These are findings of an AI-assisted analysis of public sources. Its suggestions are not a consensus view of the research group or a position of the Protocol Institute.*
 :::
