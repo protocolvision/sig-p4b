@@ -202,7 +202,7 @@ def write_llms():
 - [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
 - [Business Protocol Management]({SITE}research/bpm/) (Markdown for agents: {SITE}research/bpm/index.md?raw=1): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
 - [Who owns the rules when agents join the business?]({SITE}research/agent-control-report-2026/): the 2026 AI agent control report: who edits, decides and oversees AI agents' rules, from job postings, company filings, practitioner recordings, law and 31 agent products
-- [Agent Controls Atlas]({SITE}research/agent-controls-atlas/): the companion report on what agent controls can and can't do: from filters on speech to limits on action, checked one agent at a time rather than across the fleet, and what personal AI use escapes
+- [What controls do AI agent products give firms, and how are they changing?]({SITE}research/agent-controls-atlas/): the companion report on what agent controls can and can't do: from filters on speech to limits on action, checked one agent at a time rather than across the fleet, and what personal AI use escapes
 - [Case studies]({SITE}research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template
 - [Protocol watching guide]({SITE}play/watching/): how to see and record a business protocol
 
