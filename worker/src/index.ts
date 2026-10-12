@@ -365,7 +365,7 @@ async function interest(req: Request, env: Env): Promise<Response> {
   const isForm = !(req.headers.get("Content-Type") || "").includes("application/json");
   const done = (ok: boolean, error?: string) =>
     isForm
-      ? Response.redirect(`${SITE}agentcontrolreport2026/?interest=${ok ? "ok" : "error"}#meet`, 303)
+      ? Response.redirect(`${SITE}research/agent-control-report-2026/?interest=${ok ? "ok" : "error"}#meet`, 303)
       : json(req, ok ? { ok: true } : { error }, ok ? 200 : 400);
   let body: Record<string, string>;
   try {
@@ -387,7 +387,7 @@ async function interest(req: Request, env: Env): Promise<Response> {
       content: "New Agent Control Report interest form: a reader would like a meeting on agent adoption and control in their firm.",
       embeds: [{
         title: org ? `Interest from ${org}`.slice(0, 250) : "Agent Control Report interest",
-        url: `${SITE}agentcontrolreport2026/`,
+        url: `${SITE}research/agent-control-report-2026/`,
         fields: [{ name: "Email", value: email, inline: true }, ...(org ? [{ name: "Organization", value: org, inline: true }] : [])],
         color: 0x004fcc,
       }],

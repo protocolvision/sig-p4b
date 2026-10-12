@@ -8,6 +8,8 @@
 - [Reading map](https://protocolsforbusiness.com/sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research](https://protocolsforbusiness.com/research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
 - [Business Protocol Management](https://protocolsforbusiness.com/research/bpm/) (Markdown for agents: https://protocolsforbusiness.com/research/bpm/index.md?raw=1): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
+- [Who owns the rules when agents join the business?](https://protocolsforbusiness.com/research/agent-control-report-2026/): the 2026 AI agent control report: who edits, decides and oversees AI agents' rules, from job postings, company filings, practitioner recordings, law and 31 agent products
+- [Agent Controls Atlas](https://protocolsforbusiness.com/research/agent-controls-atlas/): the companion report on what agent controls can and can't do: from filters on speech to limits on action, checked one agent at a time rather than across the fleet, and what personal AI use escapes
 - [Case studies](https://protocolsforbusiness.com/research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template
 - [Protocol watching guide](https://protocolsforbusiness.com/play/watching/): how to see and record a business protocol
 

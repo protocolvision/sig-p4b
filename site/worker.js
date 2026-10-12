@@ -19,6 +19,10 @@ export default {
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
+    if (url.pathname === "/agentcontrolreport2026" || url.pathname.startsWith("/agentcontrolreport2026/")) {   // the report moved under /research/; keep ?query (and the #hash, which browsers carry over)
+      url.pathname = "/research/agent-control-report-2026/";
+      return Response.redirect(url.toString(), 301);
+    }
     if (url.pathname.startsWith("/api/kickoff/")) return kickoff(request, env, url);   // the kickoff deck's live layer
     if (url.pathname === "/blyg/webmention") {
       if (request.method === "POST") {
