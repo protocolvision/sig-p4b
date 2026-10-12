@@ -20,7 +20,7 @@ AI agents now answer customers, spend money and approve requests, all under rule
 
 The analysis suggests: write a standard for agent controls, name its owner, reserve sign-off for exceptions, and keep the vendor's console from holding the only copy of an agent's rules. The report ends with five checks you can run in your own firm in an afternoon.
 
-The [Agent Controls Atlas](https://protocolsforbusiness.com/research/agent-controls-atlas/), the companion report, looks at the controls themselves. Both reports are on the [Research](https://protocolsforbusiness.com/research/#reports) page.
+The companion report, [What controls do AI agent products give firms, and how are they changing?](https://protocolsforbusiness.com/research/agent-controls-atlas/), looks at the controls themselves. Both reports are on the [Research](https://protocolsforbusiness.com/research/#reports) page.
 
 *These are findings of an AI-assisted analysis of public sources. Its suggestions are not a consensus view of the research group or a position of the Protocol Institute.*
 :::
