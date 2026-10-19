@@ -51,7 +51,13 @@
         what.textContent = '';
         var a = document.createElement('a'); a.href = n.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = n.title; what.appendChild(a);
         var m = document.createElement('span'); m.className = 'muted small';
-        m.textContent = ' ' + n.cite + ' · ' + n.feature_short; what.appendChild(m);
+        m.textContent = ' ' + n.cite + ' · ';
+        var link = n.links && n.links[n.feature_short];   // e.g. the kickoff deck; site paths resolve from ROOT
+        if (link) {
+          var f = document.createElement('a'); f.className = 'quiet'; f.textContent = n.feature_short;
+          f.href = /^https?:/.test(link) ? link : ROOT + link; m.appendChild(f);
+        } else { m.appendChild(document.createTextNode(n.feature_short)); }
+        what.appendChild(m);
       });
     }).catch(function () {});
   }

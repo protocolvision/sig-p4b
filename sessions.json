@@ -9,7 +9,10 @@
   "cite": "OpenAI, 2026",
   "quote": "The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another.",
   "feature": "Kickoff: how the year runs, and choosing your case",
-  "feature_short": "Kickoff"
+  "feature_short": "Kickoff",
+  "links": {
+   "Kickoff": "kickoffslides08102026/"
+  }
  },
  {
   "date": "2026-11-16",

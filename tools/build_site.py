@@ -22,9 +22,8 @@ NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",
              "case-studies/": "research/cases/", "simulation/": "research/#training", "play/": "research/#training",
              "agentcontrolreport2026/": "research/agent-control-report-2026/"}
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap">')
+# Lora is self-hosted (style.css @font-face); preload the regular Latin file, which every page uses.
+FONTS = '<link rel="preload" href="{rel}assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>'
 
 EXTERNAL_A = re.compile(r'<a (?![^>]*\btarget=)([^>]*\bhref="(https?://[^"]+)"[^>]*)>')
 
@@ -48,7 +47,7 @@ ORG = {"@type": "Organization", "@id": SITE + "#org", "name": "Protocols for Bus
 
 def structured_data(meta):
     """JSON-LD: the organization and site on the home page, breadcrumbs on every page below a section."""
-    path, short = meta["path"], meta["title"].split(" · ")[0]
+    path, short = meta["path"], meta.get("headline") or meta["title"].split(" · ")[0]
     graph = []
     if not path:
         graph = [ORG, {"@type": "WebSite", "@id": SITE + "#site", "name": "Protocols for Business", "url": SITE,
@@ -68,23 +67,36 @@ def structured_data(meta):
                       "mainEntityOfPage": SITE + path, "isPartOf": SITE + "blyg/", "publisher": {"@id": SITE + "#org"},
                       **meta["posting"]})
     if meta.get("article"):
+        dates = {k: meta[f] for k, f in (("datePublished", "published"), ("dateModified", "updated")) if f in meta}
         graph.append({"@type": "Article", "headline": short, "description": meta["desc"], "url": SITE + path,
+                      "mainEntityOfPage": SITE + path, "inLanguage": "en", "image": card_url(meta), **dates,
                       "author": {"@type": "Person", "name": meta["article"], "url": SITE + "about/#people"},
-                      "publisher": {"@id": SITE + "#org"}, "isPartOf": SITE})
+                      "publisher": {k: ORG[k] for k in ("@type", "@id", "name", "url", "logo")}, "isPartOf": SITE})
     if not graph:
         return ""
     return ('<script type="application/ld+json">\n'
             + json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1)
             + "\n</script>\n")
 
+def card_url(meta):
+    return meta.get("card_url") or f'{SITE}assets/cards/{meta.get("card", "home")}.jpg'
+
+def fill_dates(meta, body):
+    """{{updated}} in a page body: its front-matter "updated" date, written out (e.g. 19 October 2026)."""
+    if "updated" in meta:
+        d = _dt.date.fromisoformat(meta["updated"])
+        body = body.replace("{{updated}}", f'<time datetime="{d}">{d.day} {d.strftime("%B %Y")}</time>')
+    return body
+
 def page(meta, body):
+    body = fill_dates(meta, body)
     body = body.replace("{{signup_worker}}", SIGNUP_WORKER)   # forms that post to the Worker without JS
     body = body.replace("{{site}}", SITE)   # absolute site URL in text meant to be copied elsewhere
     path = meta["path"]
     rel = "../" * path.count("/")
     a = lambda s: html.escape(s, quote=True)
     title, desc = meta["title"], meta["desc"]
-    card = meta.get("card_url") or f'{SITE}assets/cards/{meta.get("card", "home")}.jpg'
+    card = card_url(meta)
     nav = "\n".join(
         f'<a href="{rel}{p}"' + (' aria-current="page"' if meta.get("nav") == k else "") + f'>{label}</a>'
         for k, label, p in NAV)
@@ -96,14 +108,19 @@ def page(meta, body):
     if CONFIG.get("google_site_verification") and not path:
         seo += f'<meta name="google-site-verification" content="{a(CONFIG["google_site_verification"])}">\n'
     seo += structured_data(meta)
-    og_extra = "".join(f'<meta property="{k}" content="{a(v)}">\n' for k, v in meta.get("og_extra", []))
+    og = list(meta.get("og_extra", []))
+    if meta.get("article"):   # a dated guide: article Open Graph type and times
+        og += [(f"article:{k}_time", meta[f]) for k, f in (("published", "published"), ("modified", "updated")) if f in meta]
+    if meta.get("card_alt"):
+        og.append(("og:image:alt", meta["card_alt"]))
+    og_extra = "".join(f'<meta property="{k}" content="{a(v)}">\n' for k, v in og)
     return external_links(f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{a(desc)}">
-{seo}<meta property="og:type" content="{meta.get("og_type", "website")}">
+{seo}<meta property="og:type" content="{meta.get("og_type", "article" if meta.get("article") else "website")}">
 {og_extra}<meta property="og:site_name" content="Protocols for Business">
 <meta property="og:title" content="{a(title)}">
 <meta property="og:description" content="{a(desc)}">
@@ -118,7 +135,7 @@ def page(meta, body):
 <link rel="alternate" type="text/plain" title="Summary for language models" href="{rel}llms.txt">
 <link rel="alternate" type="application/rss+xml" title="Protocols for Business blyg" href="{rel}blyg/feed.xml">
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
-{FONTS}
+{FONTS.format(rel=rel)}
 <link rel="stylesheet" href="{rel}style.css">
 {extra_head}<body>
 <header>
@@ -160,7 +177,7 @@ def main():
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page(meta, text[m.end():]))
         if meta.get("markdown"):   # a Markdown copy for agents, links made absolute
-            (out.parent / "index.md").write_text(agent_markdown(meta, text[m.end():]))
+            (out.parent / "index.md").write_text(agent_markdown(meta, fill_dates(meta, text[m.end():])))
         built.append(meta["path"] or "/")
     for old, new in REDIRECTS.items():
         rel = "../" * old.count("/")
@@ -200,7 +217,7 @@ def write_llms():
 - [Sessions]({SITE}sessions/): the reading plan (six themes, each with its sessions), which participants shape as the year goes; how sessions work; how to suggest or challenge a reading; archive
 - [Reading map]({SITE}sessions/map/): 400 readings placed by what they say, with the year's syllabus marked
 - [Research]({SITE}research/): includes Training (protocol watching, workshops, simulation); 2027 focus (AI Native Data Operations), its three premises (abundant cognition, distributed agency, mediation), a call for guest speakers by theme, case studies, how to sponsor or partner
-- [Business Protocol Management]({SITE}research/bpm/) (Markdown for agents: {SITE}research/bpm/index.md?raw=1): the practice guide: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
+- [Business Protocol Management]({SITE}research/bpm/) (Markdown for agents: {SITE}research/bpm/index.md?raw=1): the practice guide for managing AI agents at work: key terms, principles, roles, the See, Design and Evolve phases with steps and outputs, a hardness map template, measures, a worked example, and how it relates to earlier approaches
 - [Who owns the rules when agents join the business?]({SITE}research/agent-control-report-2026/): the 2026 AI agent control report: who edits, decides and oversees AI agents' rules, from job postings, company filings, practitioner recordings, law and 31 agent products
 - [What controls do AI agent products give firms, and how are they changing?]({SITE}research/agent-controls-atlas/): the companion report on what agent controls can and can't do: from filters on speech to limits on action, checked one agent at a time rather than across the fleet, and what personal AI use escapes
 - [Case studies]({SITE}research/cases/): water rate data, construction procurement protocols, the PI brand kit, working smarter with AI (PI26 practices and hazards), a sample template

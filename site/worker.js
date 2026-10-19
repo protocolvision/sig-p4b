@@ -11,6 +11,14 @@ async function ownItem(env, req, id) {
   return r.ok ? r.json() : null;
 }
 
+// Files stamped ?v= by deploy.sh (style.css, site.js) and the fonts never change at the same URL; other
+// assets (figures, cards) may, so they get an hour fresh and a day of stale-while-revalidate.
+function cacheFor(url) {
+  if (url.searchParams.has("v") || url.pathname.startsWith("/assets/fonts/")) return "public, max-age=31536000, immutable";
+  if (url.pathname.startsWith("/assets/")) return "public, max-age=3600, stale-while-revalidate=86400";
+  return null;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -43,6 +51,12 @@ export default {
         headers: { "Content-Type": "application/json", "Cache-Control": "max-age=300" } });
     }
     const res = await env.ASSETS.fetch(request);
+    const cache = cacheFor(url);
+    if (cache && res.ok) {
+      const out = new Response(res.body, res);
+      out.headers.set("Cache-Control", cache);
+      return out;
+    }
     if (url.pathname.startsWith("/blyg/")) {   // W3C discovery: announce the endpoint on every blyg response
       const out = new Response(res.body, res);
       out.headers.append("Link", `<${ENDPOINT}>; rel="webmention"`);

@@ -43,10 +43,14 @@ def short_feature(f):
     if f.startswith("Cognitive Ergonomics"): return "Cognitive Ergonomics project"
     return f.split(":")[0]
 
+def href(url, rel="../"):
+    """Slot links are absolute URLs or paths from the site root (e.g. the kickoff deck)."""
+    return url if re.match(r"https?:", url) else rel + url
+
 def feature_html(s):
     """The session's other item, labelled by kind: research group guest, guest speaker, tooling demo, case study, open slot."""
     f, links = s["feature"], s.get("links", {})
-    link = lambda name: f'<a class="quiet" href="{ea(links[name])}">{e(name)}</a>' if name in links else e(name)
+    link = lambda name: f'<a class="quiet" href="{ea(href(links[name]))}">{e(name)}</a>' if name in links else e(name)
     m = re.match(r"Guest: (.*?) \((.*)\)$", f)
     if m:
         who, what = m.group(1), m.group(2)
@@ -58,7 +62,7 @@ def feature_html(s):
     if f.startswith("Open guest slot"):
         return '<b>Open guest slot</b> <a class="quiet" href="../research/#speak">offer a talk</a>'
     kind, _, rest = f.partition(": ")
-    return f'<b>{e(kind)}</b> {e(rest)}' if rest else f'<b>{e(kind)}</b>'
+    return f'<b>{link(kind)}</b> {e(rest)}' if rest else f'<b>{link(kind)}</b>'
 
 def replace_between(text, name, body):
     pat = re.compile(rf"(<!-- {name}:start -->).*?(<!-- {name}:end -->)", re.S)
@@ -77,7 +81,7 @@ for i, t in enumerate(T["themes"], 1):
         m = re.match(r"Guest: (.*?) \(", s["feature"])
         if m:
             url = s.get("links", {}).get(m.group(1))
-            guests.append(f'<a class="quiet" href="{ea(url)}">{e(m.group(1))}</a>' if url else e(m.group(1)))
+            guests.append(f'<a class="quiet" href="{ea(href(url))}">{e(m.group(1))}</a>' if url else e(m.group(1)))
     meta = f"{n} sessions" + (f" · Guest{'s' if len(guests) > 1 else ''}: {', '.join(guests)}" if guests else "")
     rows = []
     for s in sessions:
@@ -117,8 +121,11 @@ nxt = next((s for s in S if s["end_utc"] > now[:19] + "Z"), None)
 for page, rel in (("src/index.html", ""), ("src/sessions.html", "../")):
     if nxt:
         day = dt.date.fromisoformat(nxt["date"])
+        short = short_feature(nxt["feature"])
+        url = nxt.get("links", {}).get(short)
+        short = f'<a class="quiet" href="{ea(href(url, rel))}">{e(short)}</a>' if url else e(short)
         body = (f'<p><span class="kind">Next session</span> <span class="when">{day.strftime("%A")} {day.day} {day.strftime("%B")} · {nxt["start_utc"][11:16]} UTC</span></p>\n'
-                f'<p class="what"><a href="{ea(nxt["url"])}">{e(nxt["title"])}</a> <span class="muted small">{e(nxt["cite"])} · {e(short_feature(nxt["feature"]))}</span></p>')
+                f'<p class="what"><a href="{ea(nxt["url"])}">{e(nxt["title"])}</a> <span class="muted small">{e(nxt["cite"])} · {short}</span></p>')
     else:
         body = '<p><span class="kind">Next session</span> <span class="when">The year is complete.</span></p>'
     pth = ROOT / page
@@ -181,7 +188,7 @@ for s in S:
     desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
             + (f"\u201c{s['quote']}\u201d\n" if s["quote"] else "")
             + (f"\nAlongside: {s['also_read']['title']} ({s['also_read']['cite']})\n{s['also_read']['url']}\n" if s.get("also_read") else "")
-            + f"\nFeature: {s['feature']}\n" + "".join(f"{k}: {v}\n" for k, v in s.get("links", {}).items()) + f"\nJoin on the Protocol Institute Discord: {DISCORD}\n"
+            + f"\nFeature: {s['feature']}\n" + "".join(f"{k}: {href(v, SITE)}\n" for k, v in s.get("links", {}).items()) + f"\nJoin on the Protocol Institute Discord: {DISCORD}\n"
             f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
     L += ["BEGIN:VEVENT", f"UID:sig-p4b-{d}@protocol-institute", f"DTSTAMP:{stamp}",
           "DTSTART:" + s["start_utc"].replace("-", "").replace(":", ""), "DTEND:" + s["end_utc"].replace("-", "").replace(":", ""),
