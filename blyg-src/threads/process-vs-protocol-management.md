@@ -37,7 +37,7 @@ The practice starts with different questions. Here are six pairs, and where to r
 4. **Compliance**
     - Process: *Is everyone following the procedure?*
     - Protocol: *What could anyone, person or agent, do within this rule's letter that defeats its purpose?*
-    - Read: [OpenAI, "The Hugging Face incident and the road ahead"](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) (Theme I) · [BPM guide: protocols are not products](https://protocolsforbusiness.com/research/bpm/#not-products)
+    - Read: [OpenAI, "The Hugging Face incident and the road ahead"](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) (Theme I) · [BPM guide: protocol thinking](https://protocolsforbusiness.com/research/bpm/#not-products)
 5. **Results**
     - Process: *Did we hit the target?*
     - Protocol: *What didn't go wrong, and which targets are being gamed?*

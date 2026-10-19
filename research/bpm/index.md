@@ -8,9 +8,9 @@ Managing AI agents at work calls for a restructuring beyond the reach of the org
 
 BPM is not Business Process Management, which maps workflows step by step. Nor is it an agent protocol like MCP or A2A, which connects agents to tools and to each other. BPM covers the governance of AI agents at the level of the organization: the rules around those connections, such as signing authority, spending limits and access rights.
 
-## Five questions to carry
+## Five questions to start with
 
-Five questions hold the whole practice. Each one stands alone; take one back to your team this week.
+Each question opens one part of the practice. Start with the one closest to your team’s work.
 
 1. **Which handoffs, approvals and permissions carry your team’s work?** See
 2. **Which rules must hold every time, whoever does the work?** Design · a common hard core

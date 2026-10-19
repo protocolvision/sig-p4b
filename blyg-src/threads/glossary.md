@@ -6,7 +6,7 @@ generated_model: claude-opus-5-5
 # A glossary of the group's terms
 
 ::: generated
-The group uses a small set of words carefully. This is a plain-language list of them, with links to where each is used. The [practice guide](https://protocolsforbusiness.com/research/bpm/) is the reference; this post is the short version.
+The group uses a small set of words carefully. This is a plain-language list of them, with links to where each is used. The [Business Protocol Management guide](https://protocolsforbusiness.com/research/bpm/) is the reference; this post is the short version.
 
 ## The basics
 
@@ -18,7 +18,7 @@ The group uses a small set of words carefully. This is a plain-language list of 
 
 - **Protocol vision.** The capability to see the protocols a business actually runs on, written and unwritten. Most go unnoticed until they break.
 - **Business Protocol Management (BPM).** The practice of finding the few rules a business relies on, building them in, and changing them as it grows. It works on one problem at a time, never a company-wide redesign.
-- **See, Design, Evolve.** BPM's three phases: find the protocols in play; decide what must be strict and what can stay free; run it, learn and amend.
+- **See, Design, Evolve.** BPM's [three phases](https://protocolsforbusiness.com/research/bpm/#phases): find the protocols in play; decide what must be strict and what can stay free; run it, learn and amend.
 - **Protocol watching.** Training for protocol vision: observing a protocol in the wild and recording it. See the [watching guide](https://protocolsforbusiness.com/play/watching/).
 
 ## How strict a protocol is
@@ -27,20 +27,21 @@ The group uses a small set of words carefully. This is a plain-language list of 
 - **Soft.** Held by norms and habits, such as how a team runs its weekly planning. For agents, a soft rule works much like no rule at all.
 - **Free.** Left to the people or agents doing the work.
 - **Hard core.** The small set of hard protocols everything else relies on. Keep it small: every hard rule costs flexibility. The guide proposes [a common hard core](https://protocolsforbusiness.com/research/bpm/#common-core) of eight that most companies seem to share.
-- **Hardness map.** A table that sorts a business's protocols into hard, soft and free, and names who may change each one.
+- **Hardness map.** A [table](https://protocolsforbusiness.com/research/bpm/#hardness-map) that sorts a business's protocols into hard, soft and free, and names who may change each one.
 - **Seam, or interface.** Where teams, agents and partners meet. Strict rules belong at the seams; the inside of each team stays free.
 
 ## Changing protocols
 
-- **Amendment rule.** For each hard protocol: who may change it, how, and who may stop the work.
-- **Promote and soften.** Make a free pattern hard when it keeps paying off; soften a hard rule when it blocks good work.
+- **Amendment rule.** For each hard protocol: who may propose a change, the bar it must clear, who decides, who may stop the work, and when the rule retires. See [Design](https://protocolsforbusiness.com/research/bpm/#design).
+- **Promote and soften.** Make a free pattern hard when it keeps paying off; soften a hard rule when it blocks good work. See [Evolve](https://protocolsforbusiness.com/research/bpm/#evolve).
 - **Liveness.** A protocol's ability to keep being amended without breaking, as industries do with their standards. Theme VI of the year.
 
 ## Records and measures
 
-- **Field log.** One shared record that systems, people and agents write as they work, including the reason for each action.
+- **Field log.** One shared record that systems, people and agents write as they work, including the reason for each action. Built in the [See](https://protocolsforbusiness.com/research/bpm/#see) phase.
 - **Non-event.** A problem that did not happen because a protocol worked: the error caught, the dispute that never started.
-- **Gamed target.** A measure that people or agents have learned to hit without the result it stands for.
+- **Reach.** Evidence that others build on a protocol: different people, implementations and uses, sustained over time.
+- **Gamed target.** A measure that people or agents have learned to hit without the result it stands for. Both are among the guide's [measures](https://protocolsforbusiness.com/research/bpm/#measures).
 - **Emissions.** What systems publish for others to act on: files, logs, events, reports and required disclosures. What an organization emits shows where its protocols live. Theme III of the year.
 
 ## Questions the group is still testing

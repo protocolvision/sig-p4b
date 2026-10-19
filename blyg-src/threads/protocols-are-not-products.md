@@ -30,5 +30,5 @@ So for anyone running operations, the question changes. Not "what outcome do we 
 - **Who takes a cut?** Every extra sign-off or fee at the core taxes everyone who passes through.
 - **Is the purpose in the letter?** If a use would defeat the rule, the rule has to say so. Agents don't read between the lines.
 
-These are open questions for the group this year, not settled answers. Bring your own examples to the [sessions](https://protocolsforbusiness.com/sessions/), or to the [practice guide](https://protocolsforbusiness.com/research/bpm/), where we're working them through.
+These are open questions for the group this year, not settled answers. Bring your own examples to the [sessions](https://protocolsforbusiness.com/sessions/), or to the [Business Protocol Management guide](https://protocolsforbusiness.com/research/bpm/#not-products), where we're working them through.
 :::

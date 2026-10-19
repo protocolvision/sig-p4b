@@ -150,7 +150,7 @@ def page(meta, body):
 <footer aria-label="Site footer">
 <div class="foot-cols">
 <nav aria-labelledby="f-site"><h2 id="f-site">Site</h2><ul>
-<li><a href="{rel}sessions/">Sessions</a></li><li><a href="{rel}research/">Research</a></li><li><a href="{rel}research/bpm/">Practice guide</a></li><li><a href="{rel}blyg/">Feed</a></li><li><a href="{rel}about/">About</a></li>
+<li><a href="{rel}sessions/">Sessions</a></li><li><a href="{rel}research/">Research</a></li><li><a href="{rel}research/bpm/">Business Protocol Management guide</a></li><li><a href="{rel}blyg/">Feed</a></li><li><a href="{rel}about/">About</a></li>
 </ul></nav>
 <nav aria-labelledby="f-join"><h2 id="f-join">Take part</h2><ul>
 <li><button type="button" class="link" data-register>Get session emails</button></li><li><a href="{CALENDAR}">Add the calendar</a></li><li><a href="{rel}research/#speak">Offer a talk</a></li><li><a href="{DISCORD}">Discord</a></li><li><a href="{rel}unsubscribe/">Unsubscribe</a></li>

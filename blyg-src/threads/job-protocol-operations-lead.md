@@ -18,7 +18,7 @@ Below is a sample job description for this emerging role, the Business Protocol 
 - **It looks for what becomes possible.** A rule that holds is something others can build on: a pricing interface a partner can call, an approval a new agent can rely on.
 - **It reports to the COO**, not to security or engineering. Its focus is the business as a whole, not only product growth, sales or software security.
 
-The title and the word "protocols" are ours. If your company already has a name for this, keep your word and keep the curiosity. In [Business Protocol Management](https://protocolsforbusiness.com/research/bpm/) terms, this is the person who sees the protocols before anyone designs them.
+The title and the word "protocols" are ours. If your company already has a name for this, keep your word and keep the curiosity. In [Business Protocol Management](https://protocolsforbusiness.com/research/bpm/#see) terms, this is the person who sees the protocols before anyone designs them.
 
 **Use it freely.** Copy it, adapt it and post it; no permission or credit needed. Replace the text in square brackets first. If you hire for this role, or find the template doesn't fit, tell us in #protocols-for-business on the [Protocol Institute Discord](https://discord.gg/zNJdK7caj). What you learn could become a case study.
 :::
