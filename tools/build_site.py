@@ -71,7 +71,8 @@ def structured_data(meta):
         graph.append({"@type": "Article", "headline": short, "description": meta["desc"], "url": SITE + path,
                       "mainEntityOfPage": SITE + path, "inLanguage": "en", "image": card_url(meta), **dates,
                       "author": {"@type": "Person", "name": meta["article"], "url": SITE + "about/#people"},
-                      "publisher": {k: ORG[k] for k in ("@type", "@id", "name", "url", "logo")}, "isPartOf": SITE})
+                      "publisher": {k: ORG[k] for k in ("@type", "@id", "name", "url", "logo")}, "isPartOf": SITE,
+                      **({"about": meta["about"]} if meta.get("about") else {})})
     if not graph:
         return ""
     return ('<script type="application/ld+json">\n'

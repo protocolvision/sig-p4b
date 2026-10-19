@@ -8,6 +8,14 @@ Managing AI agents at work calls for a restructuring beyond the reach of the org
 
 BPM is not Business Process Management, which maps workflows step by step. Nor is it an agent protocol like MCP or A2A, which connects agents to tools and to each other. BPM covers the governance of AI agents at the level of the organization: the rules around those connections, such as signing authority, spending limits and access rights.
 
+## How should you manage a business when AI agents do the work?
+
+Stop approving each action, and design the few rules under every action instead. A small team can now run thousands of agents, far beyond the reach of any approval queue. Find the handoffs, approvals and permissions under your work; make hard the few that carry everything else, with enforcement by your systems every time; and give people and agents wide freedom inside them. Then amend those rules by a written process, with each round of evidence.
+
+### When BPM fits, and when something else fits better
+
+BPM fits when work crosses teams, agents and partners, and the risk sits at those seams: money, data, commitments, the checks on every output. When the problem lies in the steps inside one team, process management or lean serve better. When you need controls on one agent product, such as prompt filters or tool permissions, an agent-governance platform serves better; BPM decides which of those controls the business requires, and the owner of each.
+
 ## Five questions to start with
 
 Each question opens one part of the practice. Start with the one closest to your team’s work.
@@ -24,6 +32,7 @@ Each question opens one part of the practice. Start with the one closest to your
 - **Audience:** Operations leads, managers, architects and analysts bringing AI agents into day-to-day work.
 - **Scope:** BPM works on one problem or opportunity at a time, such as “our bids keep going out wrong” or “AI could change how we price jobs”, not on a company-wide redesign.
 - **Try it:** Hand this guide to an AI assistant that reads links, and ask it to apply the guide to your own work. The conversation stays between you and the assistant. `Read https://protocolsforbusiness.com/research/bpm/index.md and draw a hardness map of my team's work: list our protocols, mark each hard, soft or free, name the three that form our hard core, and say who should own each. Ask me about our work first.`
+- **Help applying it:** [Protocol Vision Advisory](https://protocolvision.org/), an independent network of consultants and teams, applies BPM with companies as paid strategy and operations work, built on this group’s open research.
 - **Revisions:** The group tests this guide in its sessions and case studies and revises it with members’ findings.
 
 ## 2. Key terms
