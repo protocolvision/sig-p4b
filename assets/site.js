@@ -58,6 +58,14 @@
           f.href = /^https?:/.test(link) ? link : ROOT + link; m.appendChild(f);
         } else { m.appendChild(document.createTextNode(n.feature_short)); }
         what.appendChild(m);
+        var spot = box.querySelector('.spot');   // the fortnight's protocol to watch for
+        if (spot) {
+          spot.textContent = '';
+          if (n.sighting) {
+            var lab = document.createElement('span'); lab.className = 'muted'; lab.textContent = 'For the next two weeks:';
+            spot.appendChild(lab); spot.appendChild(document.createTextNode(' s' + n.sighting.slice(1)));
+          }
+        }
       });
     }).catch(function () {});
   }

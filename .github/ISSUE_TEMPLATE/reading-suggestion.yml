@@ -43,7 +43,7 @@ body:
       label: Theme
       description: Where the reading belongs, or where it should move to.
       options:
-        - "I. What agents are, in practice"
+        - "I. Working alongside agents"
         - "II. Natural coordination"
         - "III. Emissions"
         - "IV. Seeing hardness in incidents"

@@ -244,14 +244,14 @@ Safety-critical industries offer the closest model. Airlines and nuclear plants 
 
 The group tests BPM through its 2027 focus, AI-native data operations. Sessions run every other Monday at 15:30 UTC from 2 November 2026, with a recording of each. Every session gives one primary source a close reading. The themes below mark the program’s starting point; participants shape the readings, guests and cases over the year.
 
-- **2 Nov – 14 Dec 2026:** I. What agents are, in practice · Design
+- **2 Nov – 14 Dec 2026:** I. Working alongside agents · Design
 - **11 Jan – 8 Feb 2027:** II. Natural coordination · See
 - **22 Feb – 19 Apr 2027:** III. Emissions · See
 - **3 May – 28 Jun 2027:** IV. Seeing hardness in incidents · See
 - **12 Jul – 20 Sep 2027:** V. Engineering hardness · Design
 - **4 Oct – 1 Nov 2027:** VI. Operational liveness · Evolve
 
-Ways to take part: [offer a talk](https://protocolsforbusiness.com/research/#speak), carry a [case study](https://protocolsforbusiness.com/research/cases/) through the year, log protocols with the [protocol watching guide](https://protocolsforbusiness.com/play/watching/), or [suggest or challenge a reading](https://protocolsforbusiness.com/sessions/#suggest). The full plan is on [Sessions](https://protocolsforbusiness.com/sessions/).
+Ways to take part: [offer a talk](https://protocolsforbusiness.com/research/#speak), carry a [case study](https://protocolsforbusiness.com/research/cases/) through the year, log one protocol every two weeks with the [protocol watching guide](https://protocolsforbusiness.com/play/watching/), or [suggest or challenge a reading](https://protocolsforbusiness.com/sessions/#suggest). The full plan is on [Sessions](https://protocolsforbusiness.com/sessions/).
 
 ## 11. Sources
 

@@ -7,85 +7,90 @@ X-WR-CALNAME:Protocols for Business
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business research group
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20261102T153000Z
 DTEND:20261102T173000Z
 SUMMARY:Protocols for Business · Governing AI Agents
-DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Governing A
- I Agents (Kolt\, 2024)\nhttps://papers.ssrn.com/sol3/papers.cfm?abstract_
- id=4772956\n“Incentive design\, monitoring\, and enforcement might not 
- be effective for governing AI agents that make uninterpretable decisions 
- and operate at unprecedented speed and scale.”\n\nFeature: Kickoff: how
-  the year runs\, and choosing your case\nKickoff: https://protocolsforbus
- iness.com/kickoffslides08102026/\n\nJoin on the Protocol Institute Discor
- d: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.c
- om/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/
- \nSessions are recorded.
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Governing AI Age
+ nts (Kolt\, 2024)\nhttps://papers.ssrn.com/sol3/papers.cfm?abstract_id=47
+ 72956\n“Incentive design\, monitoring\, and enforcement might not be ef
+ fective for governing AI agents that make uninterpretable decisions and o
+ perate at unprecedented speed and scale.”\n\nSpot one place where someo
+ ne\, human or AI\, acts for your business with discretion you can’t see
+ .\n\nFeature: Kickoff: how the year runs\, and choosing your case\nKickof
+ f: https://protocolsforbusiness.com/kickoffslides08102026/\n\nJoin on the
+  Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: http
+ s://protocolsforbusiness.com/sessions/\nReading map: https://protocolsfor
+ business.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:Protocols for Business · Patterns and problems in multiagent syst
  ems
-DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Patterns an
- d problems in multiagent systems (Anthropic\, 2026)\nhttps://www.anthropi
- c.com/research/multiagent-systems\n“We consistently saw a multiagent tu
- rf war. All of the models we tested quickly assumed that others were purp
- osefully impeding their work\, and began to sabotage others while protect
- ing their own contributions.”\n\nFeature: Guest: Navid Nouhi (Credoble\
- , making a business's reputation readable to AI agents)\nCredoble: https:
- //credoble.com/\n\nJoin on the Protocol Institute Discord: https://discor
- d.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nRea
- ding map: https://protocolsforbusiness.com/sessions/map/\nSessions are re
- corded.
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Patterns and pro
+ blems in multiagent systems (Anthropic\, 2026)\nhttps://www.anthropic.com
+ /research/multiagent-systems\n“We consistently saw a multiagent turf wa
+ r. All of the models we tested quickly assumed that others were purposefu
+ lly impeding their work\, and began to sabotage others while protecting t
+ heir own contributions.”\n\nSpot one place where two teams or tools wor
+ k against each other because each guards its own output.\n\nFeature: Gues
+ t: Navid Nouhi (Credoble\, making a business's reputation readable to AI 
+ agents)\nCredoble: https://credoble.com/\n\nJoin on the Protocol Institut
+ e Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbu
+ siness.com/sessions/\nReading map: https://protocolsforbusiness.com/sessi
+ ons/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
-SUMMARY:Protocols for Business · Model Context Protocol Specification
-DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Model Conte
- xt Protocol Specification (modelcontextprotocol.io\, 2024–)\nhttps://mo
- delcontextprotocol.io/specification/latest\n“subscriptions/listen opens
-  a long-lived notification stream from the server to the client. Unlike o
- ne-off requests\, the stream stays open and delivers notifications until 
- the client cancels it.”\n\nFeature: Guest: Will Binns (Mru\, a fault-to
- lerant operating system for thousand-year autonomous operation)\nWill Bin
- ns: https://wbnns.com/\nMru: https://zenodo.org/records/20579438\n\nJoin 
- on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus
- : https://protocolsforbusiness.com/sessions/\nReading map: https://protoc
- olsforbusiness.com/sessions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Generative AI at Work
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Generative AI at
+  Work (Brynjolfsson\, Li & Raymond\, Quarterly Journal of Economics\, 202
+ 5)\nhttps://doi.org/10.1093/qje/qjae044\n“Less experienced and lower-sk
+ illed workers improve both the speed and quality of their output\, while 
+ the most experienced and highest-skilled workers see small gains in speed
+  and small declines in quality.”\n\nSpot one piece of an expert’s jud
+ gement that a tool or template now hands to newcomers.\n\nFeature: Guest:
+  Will Binns (Mru\, a fault-tolerant operating system for thousand-year au
+ tonomous operation)\nWill Binns: https://wbnns.com/\nMru: https://zenodo.
+ org/records/20579438\n\nJoin on the Protocol Institute Discord: https://d
+ iscord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/
+ \nReading map: https://protocolsforbusiness.com/sessions/map/\nSessions a
+ re recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:Protocols for Business · Ironies of Automation
-DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Ironies of 
- Automation (Bainbridge\, 1983)\nhttps://doi.org/10.1016/0005-1098(83)9004
- 6-8\n“The second irony is that the designer who tries to eliminate the 
- operator still leaves the operator to do the tasks which the designer can
- not think how to automate.”\n\nFeature: Guest: Formal Protocol Theory S
- IG (Stigmergic AI Safety\, presented by Patrick Nast)\n\nJoin on the Prot
- ocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://p
- rotocolsforbusiness.com/sessions/\nReading map: https://protocolsforbusin
- ess.com/sessions/map/\nSessions are recorded.
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Ironies of Autom
+ ation (Bainbridge\, 1983)\nhttps://doi.org/10.1016/0005-1098(83)90046-8\n
+ “The second irony is that the designer who tries to eliminate the opera
+ tor still leaves the operator to do the tasks which the designer cannot t
+ hink how to automate.”\n\nSpot one task left to a person only because n
+ obody could automate it.\n\nFeature: Guest: Formal Protocol Theory SIG (S
+ tigmergic AI Safety\, presented by Patrick Nast)\n\nJoin on the Protocol 
+ Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protoc
+ olsforbusiness.com/sessions/\nReading map: https://protocolsforbusiness.c
+ om/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:Protocols for Business · Quorum Sensing in Bacteria
@@ -95,48 +100,53 @@ DESCRIPTION:Theme II. Natural coordination\n\nReading: Quorum Sensing in B
  molecules called autoinducers that increase in concentration as a functio
  n of cell density. The detection of a minimal threshold stimulatory conce
  ntration of an autoinducer leads to an alteration in gene expression.”\
- n\nFeature: Guest: Distributed Robotics Group (Decentralized Robot Market
- s)\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7ca
- j\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: htt
- ps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ n\nSpot one threshold that triggers action in your team without anyone de
+ ciding.\n\nFeature: Guest: Distributed Robotics Group (Decentralized Robo
+ t Markets)\n\nJoin on the Protocol Institute Discord: https://discord.gg/
+ zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading 
+ map: https://protocolsforbusiness.com/sessions/map/\nSessions are recorde
+ d.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:Protocols for Business · Robustness in bacterial chemotaxis
 DESCRIPTION:Theme II. Natural coordination\n\nReading: Robustness in bacte
  rial chemotaxis (Alon\, Surette\, Barkai & Leibler\, Nature\, 1999)\nhttp
- s://doi.org/10.1038/16483\n\nFeature: Case pitches: one paragraph each\n\
- nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
- llabus: https://protocolsforbusiness.com/sessions/\nReading map: https://
- protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ s://doi.org/10.1038/16483\n\nSpot one feedback loop that keeps something 
+ steady however the conditions around it change.\n\nFeature: Case pitches:
+  one paragraph each\n\nJoin on the Protocol Institute Discord: https://di
+ scord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\
+ nReading map: https://protocolsforbusiness.com/sessions/map/\nSessions ar
+ e recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:Protocols for Business · Reverse Engineering of Biological Comple
  xity
 DESCRIPTION:Theme II. Natural coordination\n\nReading: Reverse Engineering
   of Biological Complexity (Csete & Doyle\, Science\, 2002)\nhttps://doi.o
- rg/10.1126/science.1069981\n\nFeature: Tooling demo: hardness tech and sw
- arm orchestration infrastructure\n\nJoin on the Protocol Institute Discor
- d: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.c
- om/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/
- \nSessions are recorded.
+ rg/10.1126/science.1069981\n\nSpot one small shared core that lets many d
+ ifferent teams or products plug in.\n\nFeature: Tooling demo: hardness te
+ ch and swarm orchestration infrastructure\n\nJoin on the Protocol Institu
+ te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforb
+ usiness.com/sessions/\nReading map: https://protocolsforbusiness.com/sess
+ ions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:Protocols for Business · The Filing Cabinet
@@ -145,17 +155,18 @@ DESCRIPTION:Theme III. Emissions\n\nReading: The Filing Cabinet (Robertson
  entury-information-infrastructure/\n“The filing cabinet does not just s
  tore paper\; it stores information\; and because the modern world depends
   upon and is indeed defined by information\, the filing cabinet must be r
- ecognized as critical to the expansion of modernity.”\n\nFeature: Tooli
- ng demo: hardness tech and swarm orchestration infrastructure\n\nJoin on 
- the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: h
- ttps://protocolsforbusiness.com/sessions/\nReading map: https://protocols
- forbusiness.com/sessions/map/\nSessions are recorded.
+ ecognized as critical to the expansion of modernity.”\n\nSpot one form 
+ or folder structure that decides what your organization can find later.\n
+ \nFeature: Tooling demo: hardness tech and swarm orchestration infrastruc
+ ture\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7
+ caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: h
+ ttps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:Protocols for Business · The Log: What every software engineer sh
@@ -167,35 +178,36 @@ DESCRIPTION:Theme III. Emissions\n\nReading: The Log: What every software
  know-about-real-time-datas-unifying\n“The log is the natural data struc
  ture for handling data flow between systems. The recipe is very simple: T
  ake all the organization's data and put it into a central log for real-ti
- me subscription.”\n\nFeature: Guest: Memory Research Group (Organizatio
- nal Memory Architecture)\n\nJoin on the Protocol Institute Discord: https
- ://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessi
- ons/\nReading map: https://protocolsforbusiness.com/sessions/map/\nSessio
- ns are recorded.
+ me subscription.”\n\nSpot one record that several teams read from to st
+ ay in step.\n\nFeature: Guest: Memory Research Group (Organizational Memo
+ ry Architecture)\n\nJoin on the Protocol Institute Discord: https://disco
+ rd.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nRe
+ ading map: https://protocolsforbusiness.com/sessions/map/\nSessions are r
+ ecorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
-SUMMARY:Protocols for Business · Contracts: Events
-DESCRIPTION:Theme III. Emissions\n\nReading: Contracts: Events (Solidity d
- ocumentation)\nhttps://docs.soliditylang.org/en/latest/contracts.html\n
- “Solidity events give an abstraction on top of the EVM’s logging func
- tionality. Applications can subscribe and listen to these events through 
- the RPC interface of an Ethereum client.”\n\nFeature: Open guest slot: 
- offer a talk\n\nJoin on the Protocol Institute Discord: https://discord.g
- g/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReadin
- g map: https://protocolsforbusiness.com/sessions/map/\nSessions are recor
- ded.
+SUMMARY:Protocols for Business · The Ethnography of Infrastructure
+DESCRIPTION:Theme III. Emissions\n\nReading: The Ethnography of Infrastruc
+ ture (Star\, American Behavioral Scientist 43(3)\, 1999)\nhttps://journal
+ s.sagepub.com/doi/10.1177/00027649921955326\n“It also is frequently mun
+ dane to the point of boredom\, involving things such as plugs\, standards
+ \, and bureaucratic forms.”\n\nSpot one rule you only noticed when it b
+ roke.\n\nFeature: Open guest slot: offer a talk\n\nJoin on the Protocol I
+ nstitute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protoco
+ lsforbusiness.com/sessions/\nReading map: https://protocolsforbusiness.co
+ m/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:Protocols for Business · Aviation Safety Reporting System: progra
@@ -204,17 +216,18 @@ DESCRIPTION:Theme III. Emissions\n\nReading: Aviation Safety Reporting Sys
  tem: program summary (NASA Ames for the FAA\; established April 1976)\nht
  tps://asrs.arc.nasa.gov/overview/summary.html\n“The ASRS collects\, ana
  lyzes\, and responds to voluntarily submitted aviation safety incident re
- ports in order to lessen the likelihood of aviation accidents.”\n\nFeat
- ure: Tooling demo: hardness tech and swarm orchestration infrastructure\n
- \nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nS
- yllabus: https://protocolsforbusiness.com/sessions/\nReading map: https:/
- /protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ ports in order to lessen the likelihood of aviation accidents.”\n\nSpot
+  one channel where people can report a near miss without being blamed.\n\
+ nFeature: Tooling demo: hardness tech and swarm orchestration infrastruct
+ ure\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7c
+ aj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: ht
+ tps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:Protocols for Business · Form 8-K: General Instructions
@@ -222,16 +235,17 @@ DESCRIPTION:Theme III. Emissions\n\nReading: Form 8-K: General Instruction
  s (U.S. Securities and Exchange Commission)\nhttps://www.sec.gov/files/fo
  rm8-k.pdf\n“A report pursuant to Item 1.05 is to be filed within four b
  usiness days after the registrant determines that it has experienced a ma
- terial cybersecurity incident.”\n\nFeature: Open guest slot: offer a ta
- lk\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7ca
- j\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: htt
- ps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ terial cybersecurity incident.”\n\nSpot one event your business must an
+ nounce\, and the deadline it must meet.\n\nFeature: Open guest slot: offe
+ r a talk\n\nJoin on the Protocol Institute Discord: https://discord.gg/zN
+ JdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading ma
+ p: https://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:Protocols for Business · Report of the President’s Commission o
@@ -240,17 +254,18 @@ DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Report of t
  he President’s Commission on the Accident at Three Mile Island (October
   1979\, "Attitudes and Practices")\nhttp://www.pddoc.com/tmi2/kemeny/atti
  tudes_and_practices.htm\n“it became clear that the fundamental problems
-  are people-related problems and not equipment problems.”\n\nFeature: C
- ase study catch-up: member work\n\nJoin on the Protocol Institute Discord
- : https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.co
- m/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/\
- nSessions are recorded.
+  are people-related problems and not equipment problems.”\n\nSpot one h
+ abit or attitude that outranks the written procedure.\n\nFeature: Case st
+ udy catch-up: member work\n\nJoin on the Protocol Institute Discord: http
+ s://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sess
+ ions/\nReading map: https://protocolsforbusiness.com/sessions/map/\nSessi
+ ons are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270517T153000Z
 DTEND:20270517T163000Z
 SUMMARY:Protocols for Business · An Investigation of the Therac-25 Accide
@@ -259,17 +274,18 @@ DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: An Investig
  ation of the Therac-25 Accidents (Leveson & Turner\, IEEE Computer 26(7)\
  , 1993)\nhttps://dl.acm.org/doi/10.1109/MC.1993.274940\n“overconfidence
   in the software and removal of hardware interlocks (making the software 
- into a single point of failure that could lead to an accident)”\n\nFeat
- ure: Guest: Personhood Research Group (Personhood Transformations)\n\nJoi
- n on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllab
- us: https://protocolsforbusiness.com/sessions/\nReading map: https://prot
- ocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ into a single point of failure that could lead to an accident)”\n\nSpot
+  one safety check that moved from people or hardware into software.\n\nFe
+ ature: Guest: Personhood Research Group (Personhood Transformations)\n\nJ
+ oin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyll
+ abus: https://protocolsforbusiness.com/sessions/\nReading map: https://pr
+ otocolsforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270531T153000Z
 DTEND:20270531T163000Z
 SUMMARY:Protocols for Business · Final Report on the accident on 1st June
@@ -277,34 +293,36 @@ SUMMARY:Protocols for Business · Final Report on the accident on 1st June
 DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Final Repor
  t on the accident on 1st June 2009 to the Airbus A330-203\, flight AF 447
   (BEA\, 2012)\nhttps://bea.aero/fileadmin/documents/docspa/2009/f-cp09060
- 1.en/pdf/f-cp090601.en.pdf\n\nFeature: Tooling demo: hardness tech and sw
- arm orchestration infrastructure\n\nJoin on the Protocol Institute Discor
- d: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.c
- om/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/
- \nSessions are recorded.
+ 1.en/pdf/f-cp090601.en.pdf\n\nSpot one moment when automation hands contr
+ ol back to a person who isn’t ready.\n\nFeature: Tooling demo: hardness
+  tech and swarm orchestration infrastructure\n\nJoin on the Protocol Inst
+ itute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsf
+ orbusiness.com/sessions/\nReading map: https://protocolsforbusiness.com/s
+ essions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270614T153000Z
 DTEND:20270614T163000Z
 SUMMARY:Protocols for Business · Columbia Accident Investigation Board Re
  port\, Volume One
 DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Columbia Ac
  cident Investigation Board Report\, Volume One (Columbia Accident Investi
- gation Board\, 2003)\nhttps://ntrs.nasa.gov/citations/20030093634\n\nFeat
- ure: Case study catch-up: member work\n\nJoin on the Protocol Institute D
- iscord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusin
- ess.com/sessions/\nReading map: https://protocolsforbusiness.com/sessions
- /map/\nSessions are recorded.
+ gation Board\, 2003)\nhttps://ntrs.nasa.gov/citations/20030093634\n\nSpot
+  one warning that became normal because nothing went wrong last time.\n\n
+ Feature: Case study catch-up: member work\n\nJoin on the Protocol Institu
+ te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforb
+ usiness.com/sessions/\nReading map: https://protocolsforbusiness.com/sess
+ ions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270628T153000Z
 DTEND:20270628T163000Z
 SUMMARY:Protocols for Business · Postmortem Culture: Learning from Failur
@@ -313,16 +331,18 @@ DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Postmortem
  Culture: Learning from Failure (Google SRE book\, ch. 15)\nhttps://sre.go
  ogle/sre-book/postmortem-culture/\n“it must focus on identifying the co
  ntributing causes of the incident without indicting any individual or tea
- m for bad or inappropriate behavior.”\n\nFeature: Open guest slot: offe
- r a talk\n\nJoin on the Protocol Institute Discord: https://discord.gg/zN
- JdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading ma
- p: https://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ m for bad or inappropriate behavior.”\n\nSpot one way your team learns 
+ from a failure without naming a culprit.\n\nFeature: Open guest slot: off
+ er a talk\n\nJoin on the Protocol Institute Discord: https://discord.gg/z
+ NJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading m
+ ap: https://protocolsforbusiness.com/sessions/map/\nSessions are recorded
+ .
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:Protocols for Business · End-to-End Arguments in System Design
@@ -331,7 +351,8 @@ DESCRIPTION:Theme V. Engineering hardness\n\nReading: End-to-End Arguments
  //web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The func
  tion in question can completely and correctly be implemented only with th
  e knowledge and help of the application standing at the end points of the
-  communication system.”\n\nFeature: Case study catch-up: member work\n\
+  communication system.”\n\nSpot one check that only the two ends of an 
+ exchange can do properly.\n\nFeature: Case study catch-up: member work\n\
  nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
  llabus: https://protocolsforbusiness.com/sessions/\nReading map: https://
  protocolsforbusiness.com/sessions/map/\nSessions are recorded.
@@ -340,24 +361,27 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
-SUMMARY:Protocols for Business · Summary of the Amazon S3 Service Disrupt
- ion in the Northern Virginia (US-EAST-1) Region
-DESCRIPTION:Theme V. Engineering hardness\n\nReading: Summary of the Amazo
- n S3 Service Disruption in the Northern Virginia (US-EAST-1) Region (Amaz
- on Web Services\, 2017)\nhttps://aws.amazon.com/message/41926/\n\nFeature
- : Tooling demo: hardness tech and swarm orchestration infrastructure\n\nJ
- oin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyll
- abus: https://protocolsforbusiness.com/sessions/\nReading map: https://pr
- otocolsforbusiness.com/sessions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Managing in an Age of Modularity
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: Managing in an Age o
+ f Modularity (Baldwin & Clark\, Harvard Business Review\, 1997)\nhttps://
+ hbr.org/1997/09/managing-in-an-age-of-modularity\n“The dozens of design
+  teams scattered around the world had to adhere absolutely to these rules
+ . But each team had full control over the hidden elements of design in it
+ s module.”\n\nSpot one interface everyone builds against and nobody may
+  change alone.\n\nFeature: Tooling demo: hardness tech and swarm orchestr
+ ation infrastructure\n\nJoin on the Protocol Institute Discord: https://d
+ iscord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/
+ \nReading map: https://protocolsforbusiness.com/sessions/map/\nSessions a
+ re recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:Protocols for Business · External Technical Root Cause Analysis: 
@@ -365,33 +389,38 @@ SUMMARY:Protocols for Business · External Technical Root Cause Analysis:
 DESCRIPTION:Theme V. Engineering hardness\n\nReading: External Technical R
  oot Cause Analysis: Channel File 291 (CrowdStrike\, 2024)\nhttps://www.cr
  owdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-C
- ause-Analysis-08.06.2024.pdf\n\nFeature: Case study catch-up: member work
- \n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\
- nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: https
- ://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+ ause-Analysis-08.06.2024.pdf\n\nSpot one change that reaches everyone at 
+ once\, with no staged rollout.\n\nFeature: Case study catch-up: member wo
+ rk\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7ca
+ j\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: htt
+ ps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
-SUMMARY:Protocols for Business · In the Matter of Knight Capital Americas
-  LLC (SEC order)
-DESCRIPTION:Theme V. Engineering hardness\n\nReading: In the Matter of Kni
- ght Capital Americas LLC (SEC order) (U.S. Securities and Exchange Commis
- sion\, 2013)\nhttps://www.sec.gov/files/litigation/admin/2013/34-70694.pd
- f\n\nFeature: Tooling demo: hardness tech and swarm orchestration infrast
- ructure\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJ
- dK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map
- : https://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Algorithms at Work: The New Contested Te
+ rrain of Control
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: Algorithms at Work: 
+ The New Contested Terrain of Control (Kellogg\, Valentine & Christin\, Ac
+ ademy of Management Annals 14(1)\, 2020)\nhttps://doi.org/10.5465/annals.
+ 2018.0174\n“Employers can use algorithms to direct workers by restricti
+ ng and recommending\, evaluate workers by recording and rating\, and disc
+ ipline workers by replacing and rewarding.”\n\nSpot one rule a system e
+ nforces on people by recording\, rating or ranking them.\n\nFeature: Tool
+ ing demo: hardness tech and swarm orchestration infrastructure\n\nJoin on
+  the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: 
+ https://protocolsforbusiness.com/sessions/\nReading map: https://protocol
+ sforbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:Protocols for Business · WHO Surgical Safety Checklist
@@ -400,17 +429,18 @@ DESCRIPTION:Theme V. Engineering hardness\n\nReading: WHO Surgical Safety
  ent-safety/research/safe-surgery/tool-and-resources)\nhttps://www.who.int
  /teams/integrated-health-services/patient-safety/research/safe-surgery/to
  ol-and-resources\n“The rate of death was 1.5% before the checklist was 
- introduced and declined to 0.8% afterward (P=0.003).”\n\nFeature: Guest
- : Protocol Fiction SIG (Protocol Futurism)\n\nJoin on the Protocol Instit
- ute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsfor
- business.com/sessions/\nReading map: https://protocolsforbusiness.com/ses
- sions/map/\nSessions are recorded.
+ introduced and declined to 0.8% afterward (P=0.003).”\n\nSpot one check
+ list that makes a team stop and speak before a risky step.\n\nFeature: Gu
+ est: Protocol Fiction SIG (Protocol Futurism)\n\nJoin on the Protocol Ins
+ titute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocols
+ forbusiness.com/sessions/\nReading map: https://protocolsforbusiness.com/
+ sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:Protocols for Business · Agent Payments Protocol (AP2)
@@ -419,16 +449,17 @@ DESCRIPTION:Theme V. Engineering hardness\n\nReading: Agent Payments Proto
  ducts/ai-machine-learning/announcing-agents-to-payments-ap2-protocol\n“
  AP2 builds trust by using Mandates—tamper-proof\, cryptographically-sig
  ned digital contracts that serve as verifiable proof of a user's instruct
- ions.”\n\nFeature: Case study catch-up: member work\n\nJoin on the Prot
- ocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://p
- rotocolsforbusiness.com/sessions/\nReading map: https://protocolsforbusin
- ess.com/sessions/map/\nSessions are recorded.
+ ions.”\n\nSpot one mandate that limits what an agent may spend or sign 
+ for someone.\n\nFeature: Case study catch-up: member work\n\nJoin on the 
+ Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https
+ ://protocolsforbusiness.com/sessions/\nReading map: https://protocolsforb
+ usiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:Protocols for Business · Reengineering Work: Don’t Automate\, O
@@ -437,20 +468,21 @@ DESCRIPTION:Theme VI. Operational liveness\n\nReading: Reengineering Work:
   Don’t Automate\, Obliterate (Hammer\, 1990)\nhttps://hbr.org/1990/07/r
  eengineering-work-dont-automate-obliterate\n“It is time to stop paving 
  the cow paths. Instead of embedding outdated processes in silicon and sof
- tware\, we should obliterate them and start over.”\n\nAlongside: Toyota
-  Production System (Toyota Motor Corporation)\nhttps://global.toyota/en/c
- ompany/vision-and-philosophy/production-system/\n\nFeature: Cognitive Erg
- onomics project (Timber Stinson-Schroff): a progress update from our sist
- er project\n\nJoin on the Protocol Institute Discord: https://discord.gg/
- zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading 
- map: https://protocolsforbusiness.com/sessions/map/\nSessions are recorde
- d.
+ tware\, we should obliterate them and start over.”\n\nSpot one process 
+ someone wants to redesign from a blank sheet.\n\nAlongside: Decoding the 
+ DNA of the Toyota Production System (Spear & Bowen\, Harvard Business Rev
+ iew\, 1999)\nhttps://hbr.org/1999/09/decoding-the-dna-of-the-toyota-produ
+ ction-system\n\nFeature: Cognitive Ergonomics project (Timber Stinson-Sch
+ roff): a progress update from our sister project\n\nJoin on the Protocol 
+ Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protoc
+ olsforbusiness.com/sessions/\nReading map: https://protocolsforbusiness.c
+ om/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:Protocols for Business · 14 CFR Part 5\, Safety Management System
@@ -459,17 +491,18 @@ DESCRIPTION:Theme VI. Operational liveness\n\nReading: 14 CFR Part 5\, Saf
  ety Management Systems (FAA\, 2015\, expanded 2024)\nhttps://www.ecfr.gov
  /current/title-14/chapter-I/subchapter-A/part-5\n“the formal\, top-down
  \, organization-wide approach to managing safety risk and assuring the ef
- fectiveness of safety risk controls.”\n\nFeature: Guest: Psychohistory 
- SIG (Prophecy Protocols)\n\nJoin on the Protocol Institute Discord: https
- ://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessi
- ons/\nReading map: https://protocolsforbusiness.com/sessions/map/\nSessio
- ns are recorded.
+ fectiveness of safety risk controls.”\n\nSpot one rule with a scheduled
+  review\, and the person who carries it out.\n\nFeature: Guest: Psychohis
+ tory SIG (Prophecy Protocols)\n\nJoin on the Protocol Institute Discord: 
+ https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/
+ sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/\nS
+ essions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20261019T093105Z
+DTSTAMP:20261020T075055Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:Protocols for Business · On Consensus and Humming in the IETF (RF
@@ -477,11 +510,15 @@ SUMMARY:Protocols for Business · On Consensus and Humming in the IETF (RF
 DESCRIPTION:Theme VI. Operational liveness\n\nReading: On Consensus and Hu
  mming in the IETF (RFC 7282) (P. Resnick\, June 2014)\nhttps://www.rfc-ed
  itor.org/rfc/rfc7282\n“We reject: kings\, presidents and voting. We bel
- ieve in: rough consensus and running code.”\n\nFeature: Thesis session:
-  drafting the AI-native\, post-platform organization\n\nJoin on the Proto
- col Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://pr
- otocolsforbusiness.com/sessions/\nReading map: https://protocolsforbusine
- ss.com/sessions/map/\nSessions are recorded.
+ ieve in: rough consensus and running code.”\n\nSpot one decision your g
+ roup makes by rough consensus rather than a vote.\n\nAlongside: What Do I
+  Do in a World of Artificial Intelligence? (Strich\, Mayer & Fiedler\, Jo
+ urnal of the Association for Information Systems\, 2021)\nhttps://doi.org
+ /10.17705/1jais.00663\n\nFeature: Thesis session: drafting the AI-native\
+ , post-platform organization\n\nJoin on the Protocol Institute Discord: h
+ ttps://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/s
+ essions/\nReading map: https://protocolsforbusiness.com/sessions/map/\nSe
+ ssions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT

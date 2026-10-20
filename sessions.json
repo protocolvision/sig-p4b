@@ -3,11 +3,12 @@
   "date": "2026-11-02",
   "start_utc": "2026-11-02T15:30:00Z",
   "end_utc": "2026-11-02T17:30:00Z",
-  "theme": "I. What agents are, in practice",
+  "theme": "I. Working alongside agents",
   "title": "Governing AI Agents",
   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772956",
   "cite": "Kolt, 2024",
   "quote": "Incentive design, monitoring, and enforcement might not be effective for governing AI agents that make uninterpretable decisions and operate at unprecedented speed and scale.",
+  "sighting": "Spot one place where someone, human or AI, acts for your business with discretion you can’t see.",
   "feature": "Kickoff: how the year runs, and choosing your case",
   "feature_short": "Kickoff",
   "links": {
@@ -18,11 +19,12 @@
   "date": "2026-11-16",
   "start_utc": "2026-11-16T15:30:00Z",
   "end_utc": "2026-11-16T16:30:00Z",
-  "theme": "I. What agents are, in practice",
+  "theme": "I. Working alongside agents",
   "title": "Patterns and problems in multiagent systems",
   "url": "https://www.anthropic.com/research/multiagent-systems",
   "cite": "Anthropic, 2026",
   "quote": "We consistently saw a multiagent turf war. All of the models we tested quickly assumed that others were purposefully impeding their work, and began to sabotage others while protecting their own contributions.",
+  "sighting": "Spot one place where two teams or tools work against each other because each guards its own output.",
   "feature": "Guest: Navid Nouhi (Credoble, making a business's reputation readable to AI agents)",
   "feature_short": "Guest: Navid Nouhi",
   "links": {
@@ -33,11 +35,12 @@
   "date": "2026-11-30",
   "start_utc": "2026-11-30T15:30:00Z",
   "end_utc": "2026-11-30T16:30:00Z",
-  "theme": "I. What agents are, in practice",
-  "title": "Model Context Protocol Specification",
-  "url": "https://modelcontextprotocol.io/specification/latest",
-  "cite": "modelcontextprotocol.io, 2024–",
-  "quote": "subscriptions/listen opens a long-lived notification stream from the server to the client. Unlike one-off requests, the stream stays open and delivers notifications until the client cancels it.",
+  "theme": "I. Working alongside agents",
+  "title": "Generative AI at Work",
+  "url": "https://doi.org/10.1093/qje/qjae044",
+  "cite": "Brynjolfsson, Li & Raymond, Quarterly Journal of Economics, 2025",
+  "quote": "Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality.",
+  "sighting": "Spot one piece of an expert’s judgement that a tool or template now hands to newcomers.",
   "feature": "Guest: Will Binns (Mru, a fault-tolerant operating system for thousand-year autonomous operation)",
   "feature_short": "Guest: Will Binns",
   "links": {
@@ -49,11 +52,12 @@
   "date": "2026-12-14",
   "start_utc": "2026-12-14T15:30:00Z",
   "end_utc": "2026-12-14T16:30:00Z",
-  "theme": "I. What agents are, in practice",
+  "theme": "I. Working alongside agents",
   "title": "Ironies of Automation",
   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
   "cite": "Bainbridge, 1983",
   "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
+  "sighting": "Spot one task left to a person only because nobody could automate it.",
   "feature": "Guest: Formal Protocol Theory SIG (Stigmergic AI Safety, presented by Patrick Nast)",
   "feature_short": "Guest: Formal Protocol Theory SIG"
  },
@@ -66,6 +70,7 @@
   "url": "https://doi.org/10.1146/annurev.micro.55.1.165",
   "cite": "Miller & Bassler, 2001",
   "quote": "Quorum sensing bacteria produce and release chemical signal molecules called autoinducers that increase in concentration as a function of cell density. The detection of a minimal threshold stimulatory concentration of an autoinducer leads to an alteration in gene expression.",
+  "sighting": "Spot one threshold that triggers action in your team without anyone deciding.",
   "feature": "Guest: Distributed Robotics Group (Decentralized Robot Markets)",
   "feature_short": "Guest: Distributed Robotics Group"
  },
@@ -78,6 +83,7 @@
   "url": "https://doi.org/10.1038/16483",
   "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
   "quote": "",
+  "sighting": "Spot one feedback loop that keeps something steady however the conditions around it change.",
   "feature": "Case pitches: one paragraph each",
   "feature_short": "Case pitches"
  },
@@ -90,6 +96,7 @@
   "url": "https://doi.org/10.1126/science.1069981",
   "cite": "Csete & Doyle, Science, 2002",
   "quote": "",
+  "sighting": "Spot one small shared core that lets many different teams or products plug in.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -102,6 +109,7 @@
   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
   "cite": "Robertson, 2021",
   "quote": "The filing cabinet does not just store paper; it stores information; and because the modern world depends upon and is indeed defined by information, the filing cabinet must be recognized as critical to the expansion of modernity.",
+  "sighting": "Spot one form or folder structure that decides what your organization can find later.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -114,6 +122,7 @@
   "url": "https://web.archive.org/web/20201230153448/https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
   "cite": "Kreps, 2013",
   "quote": "The log is the natural data structure for handling data flow between systems. The recipe is very simple: Take all the organization's data and put it into a central log for real-time subscription.",
+  "sighting": "Spot one record that several teams read from to stay in step.",
   "feature": "Guest: Memory Research Group (Organizational Memory Architecture)",
   "feature_short": "Guest: Memory Research Group"
  },
@@ -122,10 +131,11 @@
   "start_utc": "2027-03-22T15:30:00Z",
   "end_utc": "2027-03-22T16:30:00Z",
   "theme": "III. Emissions",
-  "title": "Contracts: Events",
-  "url": "https://docs.soliditylang.org/en/latest/contracts.html",
-  "cite": "Solidity documentation",
-  "quote": "Solidity events give an abstraction on top of the EVM’s logging functionality. Applications can subscribe and listen to these events through the RPC interface of an Ethereum client.",
+  "title": "The Ethnography of Infrastructure",
+  "url": "https://journals.sagepub.com/doi/10.1177/00027649921955326",
+  "cite": "Star, American Behavioral Scientist 43(3), 1999",
+  "quote": "It also is frequently mundane to the point of boredom, involving things such as plugs, standards, and bureaucratic forms.",
+  "sighting": "Spot one rule you only noticed when it broke.",
   "feature": "Open guest slot: offer a talk",
   "feature_short": "Open guest slot"
  },
@@ -138,6 +148,7 @@
   "url": "https://asrs.arc.nasa.gov/overview/summary.html",
   "cite": "NASA Ames for the FAA; established April 1976",
   "quote": "The ASRS collects, analyzes, and responds to voluntarily submitted aviation safety incident reports in order to lessen the likelihood of aviation accidents.",
+  "sighting": "Spot one channel where people can report a near miss without being blamed.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -150,6 +161,7 @@
   "url": "https://www.sec.gov/files/form8-k.pdf",
   "cite": "U.S. Securities and Exchange Commission",
   "quote": "A report pursuant to Item 1.05 is to be filed within four business days after the registrant determines that it has experienced a material cybersecurity incident.",
+  "sighting": "Spot one event your business must announce, and the deadline it must meet.",
   "feature": "Open guest slot: offer a talk",
   "feature_short": "Open guest slot"
  },
@@ -162,6 +174,7 @@
   "url": "http://www.pddoc.com/tmi2/kemeny/attitudes_and_practices.htm",
   "cite": "October 1979, \"Attitudes and Practices\"",
   "quote": "it became clear that the fundamental problems are people-related problems and not equipment problems.",
+  "sighting": "Spot one habit or attitude that outranks the written procedure.",
   "feature": "Case study catch-up: member work",
   "feature_short": "Case study catch-up"
  },
@@ -174,6 +187,7 @@
   "url": "https://dl.acm.org/doi/10.1109/MC.1993.274940",
   "cite": "Leveson & Turner, IEEE Computer 26(7), 1993",
   "quote": "overconfidence in the software and removal of hardware interlocks (making the software into a single point of failure that could lead to an accident)",
+  "sighting": "Spot one safety check that moved from people or hardware into software.",
   "feature": "Guest: Personhood Research Group (Personhood Transformations)",
   "feature_short": "Guest: Personhood Research Group"
  },
@@ -186,6 +200,7 @@
   "url": "https://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp090601.en.pdf",
   "cite": "BEA, 2012",
   "quote": "",
+  "sighting": "Spot one moment when automation hands control back to a person who isn’t ready.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -198,6 +213,7 @@
   "url": "https://ntrs.nasa.gov/citations/20030093634",
   "cite": "Columbia Accident Investigation Board, 2003",
   "quote": "",
+  "sighting": "Spot one warning that became normal because nothing went wrong last time.",
   "feature": "Case study catch-up: member work",
   "feature_short": "Case study catch-up"
  },
@@ -210,6 +226,7 @@
   "url": "https://sre.google/sre-book/postmortem-culture/",
   "cite": "Google SRE book, ch. 15",
   "quote": "it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior.",
+  "sighting": "Spot one way your team learns from a failure without naming a culprit.",
   "feature": "Open guest slot: offer a talk",
   "feature_short": "Open guest slot"
  },
@@ -222,6 +239,7 @@
   "url": "https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf",
   "cite": "Saltzer, Reed & Clark, ACM TOCS 2(4), 1984",
   "quote": "The function in question can completely and correctly be implemented only with the knowledge and help of the application standing at the end points of the communication system.",
+  "sighting": "Spot one check that only the two ends of an exchange can do properly.",
   "feature": "Case study catch-up: member work",
   "feature_short": "Case study catch-up"
  },
@@ -230,10 +248,11 @@
   "start_utc": "2027-07-26T15:30:00Z",
   "end_utc": "2027-07-26T16:30:00Z",
   "theme": "V. Engineering hardness",
-  "title": "Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region",
-  "url": "https://aws.amazon.com/message/41926/",
-  "cite": "Amazon Web Services, 2017",
-  "quote": "",
+  "title": "Managing in an Age of Modularity",
+  "url": "https://hbr.org/1997/09/managing-in-an-age-of-modularity",
+  "cite": "Baldwin & Clark, Harvard Business Review, 1997",
+  "quote": "The dozens of design teams scattered around the world had to adhere absolutely to these rules. But each team had full control over the hidden elements of design in its module.",
+  "sighting": "Spot one interface everyone builds against and nobody may change alone.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -246,6 +265,7 @@
   "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
   "cite": "CrowdStrike, 2024",
   "quote": "",
+  "sighting": "Spot one change that reaches everyone at once, with no staged rollout.",
   "feature": "Case study catch-up: member work",
   "feature_short": "Case study catch-up"
  },
@@ -254,10 +274,11 @@
   "start_utc": "2027-08-23T15:30:00Z",
   "end_utc": "2027-08-23T16:30:00Z",
   "theme": "V. Engineering hardness",
-  "title": "In the Matter of Knight Capital Americas LLC (SEC order)",
-  "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
-  "cite": "U.S. Securities and Exchange Commission, 2013",
-  "quote": "",
+  "title": "Algorithms at Work: The New Contested Terrain of Control",
+  "url": "https://doi.org/10.5465/annals.2018.0174",
+  "cite": "Kellogg, Valentine & Christin, Academy of Management Annals 14(1), 2020",
+  "quote": "Employers can use algorithms to direct workers by restricting and recommending, evaluate workers by recording and rating, and discipline workers by replacing and rewarding.",
+  "sighting": "Spot one rule a system enforces on people by recording, rating or ranking them.",
   "feature": "Tooling demo: hardness tech and swarm orchestration infrastructure",
   "feature_short": "Tooling demo"
  },
@@ -270,6 +291,7 @@
   "url": "https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery/tool-and-resources",
   "cite": "WHO: https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery/tool-and-resources",
   "quote": "The rate of death was 1.5% before the checklist was introduced and declined to 0.8% afterward (P=0.003).",
+  "sighting": "Spot one checklist that makes a team stop and speak before a risky step.",
   "feature": "Guest: Protocol Fiction SIG (Protocol Futurism)",
   "feature_short": "Guest: Protocol Fiction SIG"
  },
@@ -282,6 +304,7 @@
   "url": "https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol",
   "cite": "Google Cloud, 16 Sep 2025",
   "quote": "AP2 builds trust by using Mandates—tamper-proof, cryptographically-signed digital contracts that serve as verifiable proof of a user's instructions.",
+  "sighting": "Spot one mandate that limits what an agent may spend or sign for someone.",
   "feature": "Case study catch-up: member work",
   "feature_short": "Case study catch-up"
  },
@@ -294,10 +317,11 @@
   "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
   "cite": "Hammer, 1990",
   "quote": "It is time to stop paving the cow paths. Instead of embedding outdated processes in silicon and software, we should obliterate them and start over.",
+  "sighting": "Spot one process someone wants to redesign from a blank sheet.",
   "also_read": {
-   "title": "Toyota Production System",
-   "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
-   "cite": "Toyota Motor Corporation"
+   "title": "Decoding the DNA of the Toyota Production System",
+   "url": "https://hbr.org/1999/09/decoding-the-dna-of-the-toyota-production-system",
+   "cite": "Spear & Bowen, Harvard Business Review, 1999"
   },
   "feature": "Cognitive Ergonomics project (Timber Stinson-Schroff): a progress update from our sister project",
   "feature_short": "Cognitive Ergonomics project"
@@ -311,6 +335,7 @@
   "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-5",
   "cite": "FAA, 2015, expanded 2024",
   "quote": "the formal, top-down, organization-wide approach to managing safety risk and assuring the effectiveness of safety risk controls.",
+  "sighting": "Spot one rule with a scheduled review, and the person who carries it out.",
   "feature": "Guest: Psychohistory SIG (Prophecy Protocols)",
   "feature_short": "Guest: Psychohistory SIG"
  },
@@ -323,6 +348,12 @@
   "url": "https://www.rfc-editor.org/rfc/rfc7282",
   "cite": "P. Resnick, June 2014",
   "quote": "We reject: kings, presidents and voting. We believe in: rough consensus and running code.",
+  "sighting": "Spot one decision your group makes by rough consensus rather than a vote.",
+  "also_read": {
+   "title": "What Do I Do in a World of Artificial Intelligence?",
+   "url": "https://doi.org/10.17705/1jais.00663",
+   "cite": "Strich, Mayer & Fiedler, Journal of the Association for Information Systems, 2021"
+  },
   "feature": "Thesis session: drafting the AI-native, post-platform organization",
   "feature_short": "Thesis session"
  }

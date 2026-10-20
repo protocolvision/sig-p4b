@@ -22,7 +22,7 @@ for t in T["themes"]:
             S[-1]["also_read"] = r
             continue
         S.append({"theme": f'{t["n"]}. {t["name"]}', "theme_blurb": t["blurb"], "title": r["title"], "url": r["url"],
-                  "cite": r["cite"], "quote": r.get("quote", "")})
+                  "cite": r["cite"], "quote": r.get("quote", ""), "sighting": r.get("sighting", "")})
 assert len(S) == len(SLOTS), f"{len(S)} sessions but {len(SLOTS)} dates in slots.json"
 for s, slot in zip(S, SLOTS):
     s.update(slot)
@@ -88,6 +88,7 @@ for i, t in enumerate(T["themes"], 1):
         also = s.get("also_read")
         rows.append(f'<li><time datetime="{s["date"]}">{int(s["date"][8:])} {dt.date.fromisoformat(s["date"]).strftime("%b %Y")}</time>'
                     f'<span class="rd"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>'
+                    + (f'<br><span class="muted">Spot one {e(s["sighting"])}</span>' if s["sighting"] else "")
                     + (f'<br><span class="muted">Alongside: <a href="{ea(also["url"])}">{e(also["title"])}</a>, {e(also["cite"])}</span>' if also else "")
                     + f'</span><span class="ft">{feature_html(s)}</span></li>')
     out.append(f'<li id="theme-{t["n"].lower()}"><img class="fig-theme" src="../assets/fig/theme-{i}.svg" alt="" width="640" height="120" loading="lazy"><h3><span class="n">{e(t["n"])}.</span>{e(t["name"])}</h3>'
@@ -125,7 +126,8 @@ for page, rel in (("src/index.html", ""), ("src/sessions.html", "../")):
         url = nxt.get("links", {}).get(short)
         short = f'<a class="quiet" href="{ea(href(url, rel))}">{e(short)}</a>' if url else e(short)
         body = (f'<p><span class="kind">Next session</span> <span class="when">{day.strftime("%A")} {day.day} {day.strftime("%B")} · {nxt["start_utc"][11:16]} UTC</span></p>\n'
-                f'<p class="what"><a href="{ea(nxt["url"])}">{e(nxt["title"])}</a> <span class="muted small">{e(nxt["cite"])} · {short}</span></p>')
+                f'<p class="what"><a href="{ea(nxt["url"])}">{e(nxt["title"])}</a> <span class="muted small">{e(nxt["cite"])} · {short}</span></p>'
+                + (f'\n<p class="spot small"><span class="muted">For the next two weeks:</span> spot one {e(nxt["sighting"])}</p>' if nxt["sighting"] else ""))
     else:
         body = '<p><span class="kind">Next session</span> <span class="when">The year is complete.</span></p>'
     pth = ROOT / page
@@ -151,6 +153,7 @@ p.write_text(replace_between(p.read_text(), "jsonld",
 # --- public session data ---
 public = [{"date": s["date"], "start_utc": s["start_utc"], "end_utc": s["end_utc"],
            "theme": s["theme"], "title": s["title"], "url": s["url"], "cite": s["cite"], "quote": s["quote"],
+           **({"sighting": "Spot one " + s["sighting"]} if s["sighting"] else {}),
            **({"also_read": {k: s["also_read"][k] for k in ("title", "url", "cite")}} if s.get("also_read") else {}),
            "feature": s["feature"], "feature_short": short_feature(s["feature"]),
            **({"links": s["links"]} if s.get("links") else {})} for s in S]
@@ -187,6 +190,7 @@ for s in S:
     d = s["date"].replace("-", "")
     desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
             + (f"\u201c{s['quote']}\u201d\n" if s["quote"] else "")
+            + (f"\nSpot one {s['sighting']}\n" if s["sighting"] else "")
             + (f"\nAlongside: {s['also_read']['title']} ({s['also_read']['cite']})\n{s['also_read']['url']}\n" if s.get("also_read") else "")
             + f"\nFeature: {s['feature']}\n" + "".join(f"{k}: {href(v, SITE)}\n" for k, v in s.get("links", {}).items()) + f"\nJoin on the Protocol Institute Discord: {DISCORD}\n"
             f"Syllabus: {SITE}sessions/\nReading map: {SITE}sessions/map/\nSessions are recorded.")
