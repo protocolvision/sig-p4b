@@ -7,7 +7,7 @@ X-WR-CALNAME:Protocols for Business
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business research group
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20261102T153000Z
 DTEND:20261102T173000Z
 SUMMARY:Protocols for Business · Governing AI Agents
@@ -27,7 +27,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:Protocols for Business · Patterns and problems in multiagent syst
@@ -49,7 +49,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
 SUMMARY:Protocols for Business · Generative AI at Work
@@ -71,7 +71,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:Protocols for Business · Ironies of Automation
@@ -90,7 +90,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:Protocols for Business · Quorum Sensing in Bacteria
@@ -111,7 +111,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:Protocols for Business · Robustness in bacterial chemotaxis
@@ -128,7 +128,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:Protocols for Business · Reverse Engineering of Biological Comple
@@ -146,7 +146,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:Protocols for Business · The Filing Cabinet
@@ -166,7 +166,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:Protocols for Business · The Log: What every software engineer sh
@@ -189,7 +189,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
 SUMMARY:Protocols for Business · The Ethnography of Infrastructure
@@ -207,7 +207,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:Protocols for Business · Aviation Safety Reporting System: progra
@@ -227,7 +227,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:Protocols for Business · Form 8-K: General Instructions
@@ -245,7 +245,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:Protocols for Business · Report of the President’s Commission o
@@ -265,7 +265,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270517T153000Z
 DTEND:20270517T163000Z
 SUMMARY:Protocols for Business · The Self-Designing High-Reliability Orga
@@ -286,7 +286,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270531T153000Z
 DTEND:20270531T163000Z
 SUMMARY:Protocols for Business · Final Report on the accident on 1st June
@@ -305,7 +305,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270614T153000Z
 DTEND:20270614T163000Z
 SUMMARY:Protocols for Business · Loss of Thrust in Both Engines After Enc
@@ -328,7 +328,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270628T153000Z
 DTEND:20270628T163000Z
 SUMMARY:Protocols for Business · Columbia Accident Investigation Board Re
@@ -346,7 +346,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
 SUMMARY:Protocols for Business · The Toyota Group and the Aisin Fire
@@ -365,7 +365,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270726T153000Z
 DTEND:20270726T163000Z
 SUMMARY:Protocols for Business · End-to-End Arguments in System Design
@@ -385,7 +385,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
 SUMMARY:Protocols for Business · Managing in an Age of Modularity
@@ -404,7 +404,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:Protocols for Business · Algorithms at Work: The New Contested Te
@@ -425,7 +425,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:Protocols for Business · WHO Surgical Safety Checklist
@@ -445,7 +445,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:Protocols for Business · Agent Payments Protocol (AP2)
@@ -464,7 +464,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:Protocols for Business · Reengineering Work: Don’t Automate\, O
@@ -487,7 +487,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:Protocols for Business · 14 CFR Part 5\, Safety Management System
@@ -509,7 +509,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20261020T082551Z
+DTSTAMP:20261020T191836Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:Protocols for Business · On Consensus and Humming in the IETF (RF

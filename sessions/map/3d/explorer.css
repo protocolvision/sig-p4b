@@ -63,6 +63,7 @@ button.lbl.rd:hover { background: #eef3fd; }
 .sw { display: inline-block; width: .8rem; height: .8rem; border-radius: 50%; }
 .sw.route { background: var(--link); }
 .sw.read { background: #5f5e5a; margin-left: .4rem; }
+.sw.case { background: #b4690e; margin-left: .4rem; }
 .hint { position: absolute; right: .75rem; top: .75rem; margin: 0; font: .8125rem Outfit, system-ui, sans-serif; color: var(--muted); background: rgba(255,255,255,.94); padding: .3rem .55rem; border-radius: 6px; max-width: 20rem; }
 @media (max-width: 40rem) { .legend { display: none; } .hint { left: .75rem; right: auto; } }
 

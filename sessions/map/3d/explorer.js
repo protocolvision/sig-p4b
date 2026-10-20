@@ -40,7 +40,7 @@ function neighbours(r, n = 6) {
 document.getElementById('map-summary').textContent =
   `The map places ${D.readings.length} readings by what they say, in ${D.areas.length} areas: ` +
   areaOrder.map(a => `${a.num}, ${a.name}`).join('; ') + `. The year’s syllabus moves through six themes: ` +
-  M.map(m => `${m.n}, ${m.name}`).join('; ') + '.';
+  M.map(m => `${m.n}, ${m.name}`).join('; ') + `. Orange markers are ${D.readings.filter(r => r.source === 'case').length} case studies the group discusses, incidents and successes.`;
 
 // ---------- panel ----------
 const detail = document.getElementById('detail');
@@ -76,7 +76,7 @@ function renderMovement(m) {
 function renderReading(r) {
   const a = areaById[r.area], s = sessionOf[r.id];
   detail.innerHTML = `<span class="tag" style="background:${a.color};color:${a.ink}">Area ${a.num}: ${esc(a.name)}</span>
-    ${r.read ? ' <span class="tag" style="background:#eceae4;color:#3d3c39">Already read by the group</span>' : ''}
+    ${r.read ? ' <span class="tag" style="background:#eceae4;color:#3d3c39">Already read by the group</span>' : ''}${r.source === 'case' ? ' <span class="tag" style="background:#fbf1e3;color:#8a4f0a">Case study</span>' : ''}
     <h2 id="detail-title" tabindex="-1"><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h2>
     <p class="muted small">${esc(r.cite)}${s !== undefined ? ` · ${sessionText(r.id).toLowerCase()}` : ''}</p>
     ${r.quote ? `<blockquote>“${esc(r.quote)}”</blockquote>` : ''}
@@ -262,13 +262,13 @@ async function build3D() {
   // reading markers
   const markers = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 16, 12), new THREE.MeshLambertMaterial(), D.readings.length);
   const m4 = new THREE.Matrix4(), q = new THREE.Quaternion();
-  const COBALT = new THREE.Color('#004fcc'), MUTED = new THREE.Color('#c9c4b9'), PAPER = new THREE.Color('#fbfaf7'), GREY = new THREE.Color('#5f5e5a');
+  const COBALT = new THREE.Color('#004fcc'), ORANGE = new THREE.Color('#b4690e'), MUTED = new THREE.Color('#c9c4b9'), PAPER = new THREE.Color('#fbfaf7'), GREY = new THREE.Color('#5f5e5a');
   let focusSet = null, selectedId = null;
   function styleMarkers() {
     D.readings.forEach((r, i) => {
       let c, s;
       if (focusSet) [c, s] = focusSet.has(r.id) ? [COBALT, focusSet.size > 10 ? 0.095 : 0.12] : [MUTED, 0.03];
-      else [c, s] = syllabusIds.has(r.id) ? [COBALT, 0.08] : r.read ? [GREY, 0.075] : [new THREE.Color(areaById[r.area].ink), 0.05];
+      else [c, s] = syllabusIds.has(r.id) ? [COBALT, 0.08] : r.source === 'case' ? [ORANGE, 0.07] : r.read ? [GREY, 0.075] : [new THREE.Color(areaById[r.area].ink), 0.05];
       if (r.id === selectedId) s = Math.max(s, 0.14);
       m4.compose(world(r.x, r.y, 0.07), q, new THREE.Vector3(s, s, s));
       markers.setMatrixAt(i, m4); markers.setColorAt(i, c);

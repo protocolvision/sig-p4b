@@ -1,5 +1,5 @@
 {
- "about": "Readings on the Protocols for Business reading map, grouped by area. Readings in the year's syllabus carry their theme.",
+ "about": "Readings on the Protocols for Business reading map, grouped by area. Readings in the year's syllabus carry their theme; case studies the group discusses carry case_study.",
  "map": "https://protocolsforbusiness.com/sessions/map/",
  "suggest": "https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml",
  "readings": [
@@ -552,7 +552,8 @@
    "url": "https://archive.org/details/ancientdoubleent00geij",
    "cite": "Pacioli, 1494, translated by Geijsbeek, 1914",
    "year": 1914,
-   "area": "Culture, time and soft technologies"
+   "area": "Culture, time and soft technologies",
+   "case_study": true
   },
   {
    "title": "Annealing of Exuberance",
@@ -944,7 +945,8 @@
    "url": "https://press.princeton.edu/books/paperback/9780691170817/the-box",
    "cite": "Levinson, Princeton University Press, 2006",
    "year": 2006,
-   "area": "Culture, time and soft technologies"
+   "area": "Culture, time and soft technologies",
+   "case_study": true
   },
   {
    "title": "The Ductus of Protocol Fiction",
@@ -1122,7 +1124,8 @@
    "url": "https://doi.org/10.1162/0033553041382157",
    "cite": "Roth, Sönmez & Ünver, Quarterly Journal of Economics, 2004",
    "year": 2004,
-   "area": "Firms, measurement and governance"
+   "area": "Firms, measurement and governance",
+   "case_study": true
   },
   {
    "title": "Learning from Schelling's Strategy of Conflict",
@@ -1368,7 +1371,8 @@
    "url": "https://www.pnas.org/doi/10.1073/pnas.0711437105",
    "cite": "Ballerini et al., PNAS, 2008",
    "year": 2008,
-   "area": "Protocols and agents"
+   "area": "Protocols and agents",
+   "case_study": true
   },
   {
    "title": "Intro to the Protocol Reader",
@@ -1657,14 +1661,16 @@
    "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa0810119",
    "cite": "Haynes et al., New England Journal of Medicine, 2009",
    "year": 2009,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "About the Universal Postal Union",
    "url": "https://www.upu.int/en/universal-postal-union/about-upu",
    "cite": "Universal Postal Union, founded 1874",
    "year": 1874,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "Aviation Safety Reporting System: program summary",
@@ -1694,7 +1700,8 @@
    "url": "https://files.consumerfinance.gov/f/documents/092016_cfpb_WFBconsentorder.pdf",
    "cite": "Consumer Financial Protection Bureau, 2016",
    "year": 2016,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "Final Report on the accident on 1st June 2009 to the Airbus A330-203, flight AF 447",
@@ -1709,7 +1716,8 @@
    "url": "https://npc.here.now/waterdataexploration/",
    "cite": "Protocols for Business case study, 2026",
    "year": 2026,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "Form 8-K: General Instructions",
@@ -1724,7 +1732,8 @@
    "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
    "cite": "U.S. Securities and Exchange Commission, 2013",
    "year": 2013,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "INPO: Our History",
@@ -1768,7 +1777,8 @@
    "url": "https://skybrary.aero/articles/read-back-or-hear-back",
    "cite": "SKYbrary",
    "year": null,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "Report of the President’s Commission on the Accident at Three Mile Island",
@@ -1790,21 +1800,24 @@
    "url": "https://npc.here.now/waterdatadiscoverycases/",
    "cite": "Protocols for Business case study, 2026",
    "year": 2026,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "The Checklist",
    "url": "https://www.newyorker.com/magazine/2007/12/10/the-checklist",
    "cite": "Gawande, The New Yorker, 2007",
    "year": 2007,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
    "url": "https://ozone.unep.org/treaties/montreal-protocol",
    "cite": "UNEP Ozone Secretariat, 1987",
    "year": 1987,
-   "area": "Safety, reporting and oversight"
+   "area": "Safety, reporting and oversight",
+   "case_study": true
   },
   {
    "title": "The Self-Designing High-Reliability Organization: Aircraft Carrier Flight Operations at Sea",
@@ -2164,42 +2177,48 @@
    "url": "https://www.iana.org/dnssec/ceremonies",
    "cite": "IANA",
    "year": null,
-   "area": "Standards, labs and infrastructure"
+   "area": "Standards, labs and infrastructure",
+   "case_study": true
   },
   {
    "title": "Summary of Principles Agreed at the First International Strategy Meeting on Human Genome Sequencing (Bermuda Principles)",
    "url": "https://web.ornl.gov/sci/techresources/Human_Genome/research/bermuda.shtml",
    "cite": "Human Genome Project, 1996",
    "year": 1996,
-   "area": "Standards, labs and infrastructure"
+   "area": "Standards, labs and infrastructure",
+   "case_study": true
   },
   {
    "title": "Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region",
    "url": "https://aws.amazon.com/message/41926/",
    "cite": "Amazon Web Services, 2017",
    "year": 2017,
-   "area": "Standards, labs and infrastructure"
+   "area": "Standards, labs and infrastructure",
+   "case_study": true
   },
   {
    "title": "The History of the Bar Code",
    "url": "https://www.smithsonianmag.com/innovation/history-bar-code-180956704/",
    "cite": "Smithsonian Magazine, 2015",
    "year": 2015,
-   "area": "Standards, labs and infrastructure"
+   "area": "Standards, labs and infrastructure",
+   "case_study": true
   },
   {
    "title": "UPC: The transformation of retail",
    "url": "https://www.ibm.com/history/upc",
    "cite": "IBM",
    "year": null,
-   "area": "Standards, labs and infrastructure"
+   "area": "Standards, labs and infrastructure",
+   "case_study": true
   },
   {
    "title": "A guide to the Kernel Development Process",
    "url": "https://docs.kernel.org/process/development-process.html",
    "cite": "Linux kernel documentation",
    "year": null,
-   "area": "Systems, logs and failures"
+   "area": "Systems, logs and failures",
+   "case_study": true
   },
   {
    "title": "A New Approach to the Functional Design of a New Computer",
@@ -2234,7 +2253,8 @@
    "url": "https://www.rfc-editor.org/rfc/rfc1958",
    "cite": "Carpenter, IETF, 1996",
    "year": 1996,
-   "area": "Systems, logs and failures"
+   "area": "Systems, logs and failures",
+   "case_study": true
   },
   {
    "title": "Contracts: Events",
@@ -2291,7 +2311,8 @@
    "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
    "cite": "CrowdStrike, 2024",
    "year": 2024,
-   "area": "Systems, logs and failures"
+   "area": "Systems, logs and failures",
+   "case_study": true
   },
   {
    "title": "Genera Concepts",
@@ -2518,7 +2539,8 @@
    "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf",
    "cite": "Anthropic, 2025",
    "year": 2025,
-   "area": "Work, management and AI"
+   "area": "Work, management and AI",
+   "case_study": true
   },
   {
    "title": "DOE-HDBK-1028-2009, Human Performance Improvement Handbook, Vol. 1",
@@ -2640,7 +2662,8 @@
    "url": "https://hbr.org/2012/11/mumbais-models-of-service-excellence",
    "cite": "Thomke, Harvard Business Review, 2012",
    "year": 2012,
-   "area": "Work, management and AI"
+   "area": "Work, management and AI",
+   "case_study": true
   },
   {
    "title": "Normal Accidents: Living with High Risk Technologies",
@@ -2675,7 +2698,8 @@
    "url": "https://peps.python.org/pep-0013/",
    "cite": "Python Software Foundation, 2018",
    "year": 2018,
-   "area": "Work, management and AI"
+   "area": "Work, management and AI",
+   "case_study": true
   },
   {
    "title": "Protocol Review 6: Public-Key Cryptography",
@@ -2781,7 +2805,8 @@
    "url": "https://mail.python.org/pipermail/python-committers/2018-July/005664.html",
    "cite": "van Rossum, python-committers, 2018",
    "year": 2018,
-   "area": "Work, management and AI"
+   "area": "Work, management and AI",
+   "case_study": true
   },
   {
    "title": "User-Generated Software is User-Generated Content",
@@ -2824,7 +2849,8 @@
    "url": "https://www.govinfo.gov/content/pkg/CPRT-106SPRT62291/pdf/CPRT-106SPRT62291.pdf",
    "cite": "U.S. Senate Special Committee on the Year 2000 Technology Problem, 2000",
    "year": 2000,
-   "area": "Work, management and AI"
+   "area": "Work, management and AI",
+   "case_study": true
   },
   {
    "title": "Your AI Product Needs Evals",
