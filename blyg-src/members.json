@@ -12,6 +12,12 @@
   "feed": "https://blyg.aneeshsathe.com/feed.xml"
  },
  {
+  "title": "Ben Mayhew's blyg",
+  "author": "Ben Mayhew",
+  "site": "https://benmayhew.com/blyg/",
+  "feed": "https://benmayhew.com/blyg/feed.xml"
+ },
+ {
   "title": "Notes | Matthew McDowell-Sweet",
   "author": "Matthew McDowell-Sweet",
   "site": "https://www.msweet.net/notes/",

@@ -9,6 +9,9 @@
  *   POST /talk         — an offer to speak at a session; posted to the group's Discord channel (nothing stored)
  *   POST /advisory     — a request for advisory services; posted to the group's Discord channel (nothing stored)
  *   POST /interest     — Agent Control Report interest form (email, optional organisation); posted to Discord (nothing stored)
+ *   POST /listing      — a request to join the Feed's community; kept in KV (listing:…) until handled, and posted to Discord
+ *   GET  /listings.json — pending community requests; requires X-Export-Secret
+ *   POST /listings/done — ?key=listing:… removes a handled request; requires X-Export-Secret
  *   GET  /export.csv   — all sign-ups; requires header X-Export-Secret
  *   GET  /unsubscribe  — ?email=…&t=… (HMAC token included in each export row)
  *   POST /unsubscribe  — email only, from the site's unsubscribe page; same answer whether or not it was listed
@@ -301,13 +304,20 @@ async function listing(req: Request, env: Env): Promise<Response> {
   const blyg = await findBlyg(link);
   const feed = blyg ? null : await findFeed(link);
   if (!blyg && !feed) return done(false, "We couldn’t find a blyg or an RSS/Atom feed at that address. Check the link, or ask on Discord.");
-  if (!env.DISCORD_WEBHOOK) return done(false, "Requests are not set up yet. Message @rafa_0x on Discord.");
+  // keep the request until a facilitator adds or declines it (POST /listings/done), so none is lost in the channel
+  const ts = new Date().toISOString(), key = `listing:${ts}:${crypto.randomUUID().slice(0, 8)}`;
+  await env.SIGNUPS.put(key, JSON.stringify({
+    ts, name, contact, link, note, kind: blyg ? "blyg" : "blog",
+    title: (blyg ? blyg.title : feed!.title) || "", site: blyg ? blyg.site : link,
+    feed: blyg ? blyg.site + "feed.xml" : feed!.feed, author: blyg?.author || "",
+  }));
+  if (!env.DISCORD_WEBHOOK) return done(true);
   const r = await fetch(env.DISCORD_WEBHOOK, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       username: "Protocols for Business blyg",
-      content: `Request to join the Feed’s community with a ${blyg ? "blyg" : "blog (RSS/Atom)"} (add it to blyg-src/members.json):`,
+      content: `Request to join the Feed’s community with a ${blyg ? "blyg" : "blog (RSS/Atom)"} (add it to blyg-src/members.json, then \`worker/listings.sh done ${key}\`):`,
       embeds: [{
         title: ((blyg ? blyg.title : feed!.title) || link).slice(0, 250), url: blyg ? blyg.site : link, description: note || undefined, color: 0x004fcc,
         fields: [
@@ -320,7 +330,30 @@ async function listing(req: Request, env: Env): Promise<Response> {
       allowed_mentions: { parse: [] },
     }),
   });
-  return r.ok ? done(true) : done(false, "Could not send right now. Message @rafa_0x on Discord.");
+  return done(true);  // recorded either way; a failed Discord post only costs the ping
+}
+
+async function listings(req: Request, env: Env, url: URL): Promise<Response> {
+  if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) {
+    return new Response("Forbidden", { status: 403 });
+  }
+  if (req.method === "POST") {
+    const key = url.searchParams.get("key") || "";
+    if (!key.startsWith("listing:")) return new Response("Bad key", { status: 400 });
+    await env.SIGNUPS.delete(key);
+    return new Response(JSON.stringify({ ok: true }), { headers: { "Content-Type": "application/json" } });
+  }
+  const out: unknown[] = [];
+  let cursor: string | undefined;
+  do {
+    const page = await env.SIGNUPS.list({ prefix: "listing:", cursor });
+    for (const k of page.keys) {
+      const v = await env.SIGNUPS.get(k.name);
+      if (v) out.push({ key: k.name, ...JSON.parse(v) });
+    }
+    cursor = page.list_complete ? undefined : page.cursor;
+  } while (cursor);
+  return new Response(JSON.stringify(out, null, 1), { headers: { "Content-Type": "application/json", "Cache-Control": "no-store" } });
 }
 
 async function advisory(req: Request, env: Env): Promise<Response> {
@@ -558,6 +591,7 @@ export default {
     if (req.method === "POST" && url.pathname === "/interest") return interest(req, env);
     if (req.method === "POST" && url.pathname === "/listing") return listing(req, env);
     if (req.method === "GET" && url.pathname === "/export.csv") return exportCsv(req, env, url.origin);
+    if ((req.method === "GET" && url.pathname === "/listings.json") || (req.method === "POST" && url.pathname === "/listings/done")) return listings(req, env, url);
     if (req.method === "GET" && url.pathname === "/unsubscribe") return unsubscribe(url, env);
     if (req.method === "GET" && url.pathname === "/digest") {
       if (!env.EXPORT_SECRET || req.headers.get("X-Export-Secret") !== env.EXPORT_SECRET) return new Response("Forbidden", { status: 403 });
