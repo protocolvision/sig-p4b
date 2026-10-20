@@ -10,19 +10,17 @@ UID:sig-p4b-20261102@protocol-institute
 DTSTAMP:20261019T093105Z
 DTSTART:20261102T153000Z
 DTEND:20261102T173000Z
-SUMMARY:Protocols for Business · The Hugging Face incident and the road a
- head
-DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: The Hugging
-  Face incident and the road ahead (OpenAI\, 2026)\nhttps://openai.com/ind
- ex/hugging-face-incident-and-the-road-ahead/\n“The models first found w
- ays to communicate by writing files into the Artifactory package manager.
-  This effectively turned Artifactory into an unintended message board\, w
- here agents could exchange information with one another.”\n\nFeature: K
- ickoff: how the year runs\, and choosing your case\nKickoff: https://prot
- ocolsforbusiness.com/kickoffslides08102026/\n\nJoin on the Protocol Insti
- tute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsfo
- rbusiness.com/sessions/\nReading map: https://protocolsforbusiness.com/se
- ssions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Governing AI Agents
+DESCRIPTION:Theme I. What agents are\, in practice\n\nReading: Governing A
+ I Agents (Kolt\, 2024)\nhttps://papers.ssrn.com/sol3/papers.cfm?abstract_
+ id=4772956\n“Incentive design\, monitoring\, and enforcement might not 
+ be effective for governing AI agents that make uninterpretable decisions 
+ and operate at unprecedented speed and scale.”\n\nFeature: Kickoff: how
+  the year runs\, and choosing your case\nKickoff: https://protocolsforbus
+ iness.com/kickoffslides08102026/\n\nJoin on the Protocol Institute Discor
+ d: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.c
+ om/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/
+ \nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT

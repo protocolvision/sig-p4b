@@ -9,10 +9,10 @@
    "skill": "reading an agent incident or specification for what the agent can see, do and spend.",
    "readings": [
     {
-     "title": "The Hugging Face incident and the road ahead",
-     "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-     "cite": "OpenAI, 2026",
-     "quote": "The models first found ways to communicate by writing files into the Artifactory package manager. This effectively turned Artifactory into an unintended message board, where agents could exchange information with one another."
+     "title": "Governing AI Agents",
+     "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772956",
+     "cite": "Kolt, 2024",
+     "quote": "Incentive design, monitoring, and enforcement might not be effective for governing AI agents that make uninterpretable decisions and operate at unprecedented speed and scale."
     },
     {
      "title": "Patterns and problems in multiagent systems",
