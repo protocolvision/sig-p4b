@@ -7,7 +7,7 @@ X-WR-CALNAME:Protocols for Business
 X-WR-CALDESC:Biweekly sessions of the Protocol Institute's Protocols for Business research group
 BEGIN:VEVENT
 UID:sig-p4b-20261102@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20261102T153000Z
 DTEND:20261102T173000Z
 SUMMARY:Protocols for Business · Governing AI Agents
@@ -27,7 +27,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261116@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20261116T153000Z
 DTEND:20261116T163000Z
 SUMMARY:Protocols for Business · Patterns and problems in multiagent syst
@@ -49,7 +49,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261130@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
 SUMMARY:Protocols for Business · Generative AI at Work
@@ -71,7 +71,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20261214@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
 SUMMARY:Protocols for Business · Ironies of Automation
@@ -90,7 +90,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270111@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270111T153000Z
 DTEND:20270111T163000Z
 SUMMARY:Protocols for Business · Quorum Sensing in Bacteria
@@ -111,7 +111,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270125@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270125T153000Z
 DTEND:20270125T163000Z
 SUMMARY:Protocols for Business · Robustness in bacterial chemotaxis
@@ -128,7 +128,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270208@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270208T153000Z
 DTEND:20270208T163000Z
 SUMMARY:Protocols for Business · Reverse Engineering of Biological Comple
@@ -146,7 +146,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270222@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270222T153000Z
 DTEND:20270222T163000Z
 SUMMARY:Protocols for Business · The Filing Cabinet
@@ -166,7 +166,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270308@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270308T153000Z
 DTEND:20270308T163000Z
 SUMMARY:Protocols for Business · The Log: What every software engineer sh
@@ -189,7 +189,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270322@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270322T153000Z
 DTEND:20270322T163000Z
 SUMMARY:Protocols for Business · The Ethnography of Infrastructure
@@ -207,7 +207,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270405@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270405T153000Z
 DTEND:20270405T163000Z
 SUMMARY:Protocols for Business · Aviation Safety Reporting System: progra
@@ -227,7 +227,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270419@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270419T153000Z
 DTEND:20270419T163000Z
 SUMMARY:Protocols for Business · Form 8-K: General Instructions
@@ -245,18 +245,99 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270503@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270503T153000Z
 DTEND:20270503T163000Z
 SUMMARY:Protocols for Business · Report of the President’s Commission o
  n the Accident at Three Mile Island
-DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Report of t
- he President’s Commission on the Accident at Three Mile Island (October
-  1979\, "Attitudes and Practices")\nhttp://www.pddoc.com/tmi2/kemeny/atti
- tudes_and_practices.htm\n“it became clear that the fundamental problems
-  are people-related problems and not equipment problems.”\n\nSpot one h
- abit or attitude that outranks the written procedure.\n\nFeature: Case st
- udy catch-up: member work\n\nJoin on the Protocol Institute Discord: http
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: Report of the President
+ ’s Commission on the Accident at Three Mile Island (October 1979\, "Att
+ itudes and Practices")\nhttp://www.pddoc.com/tmi2/kemeny/attitudes_and_pr
+ actices.htm\n“it became clear that the fundamental problems are people-
+ related problems and not equipment problems.”\n\nSpot one habit or atti
+ tude that outranks the written procedure.\n\nFeature: Case study catch-up
+ : member work\n\nJoin on the Protocol Institute Discord: https://discord.
+ gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReadi
+ ng map: https://protocolsforbusiness.com/sessions/map/\nSessions are reco
+ rded.
+LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
+URL:https://protocolsforbusiness.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:sig-p4b-20270517@protocol-institute
+DTSTAMP:20261020T082551Z
+DTSTART:20270517T153000Z
+DTEND:20270517T163000Z
+SUMMARY:Protocols for Business · The Self-Designing High-Reliability Orga
+ nization: Aircraft Carrier Flight Operations at Sea
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: The Self-Designing High-
+ Reliability Organization: Aircraft Carrier Flight Operations at Sea (Roch
+ lin\, La Porte & Roberts\, Naval War College Review 40(4)\, 1987)\nhttps:
+ //digital-commons.usnwc.edu/nwc-review/vol40/iss4/7/\n“Of all activitie
+ s studied by our research group\, flight operations at sea is the closest
+  to the “edge of the envelope”.”\n\nSpot one team where the most ju
+ nior person may stop the work\, and does.\n\nFeature: Guest: Personhood R
+ esearch Group (Personhood Transformations)\n\nJoin on the Protocol Instit
+ ute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsfor
+ business.com/sessions/\nReading map: https://protocolsforbusiness.com/ses
+ sions/map/\nSessions are recorded.
+LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
+URL:https://protocolsforbusiness.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:sig-p4b-20270531@protocol-institute
+DTSTAMP:20261020T082551Z
+DTSTART:20270531T153000Z
+DTEND:20270531T163000Z
+SUMMARY:Protocols for Business · Final Report on the accident on 1st June
+  2009 to the Airbus A330-203\, flight AF 447
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: Final Report on the acci
+ dent on 1st June 2009 to the Airbus A330-203\, flight AF 447 (BEA\, 2012)
+ \nhttps://bea.aero/fileadmin/documents/docspa/2009/f-cp090601.en/pdf/f-cp
+ 090601.en.pdf\n\nSpot one moment when automation hands control back to a 
+ person who isn’t ready.\n\nFeature: Tooling demo: hardness tech and swa
+ rm orchestration infrastructure\n\nJoin on the Protocol Institute Discord
+ : https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.co
+ m/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/\
+ nSessions are recorded.
+LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
+URL:https://protocolsforbusiness.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:sig-p4b-20270614@protocol-institute
+DTSTAMP:20261020T082551Z
+DTSTART:20270614T153000Z
+DTEND:20270614T163000Z
+SUMMARY:Protocols for Business · Loss of Thrust in Both Engines After Enc
+ ountering a Flock of Birds and Subsequent Ditching on the Hudson River\, 
+ US Airways Flight 1549
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: Loss of Thrust in Both E
+ ngines After Encountering a Flock of Birds and Subsequent Ditching on the
+  Hudson River\, US Airways Flight 1549 (NTSB\, 2010)\nhttps://www.ntsb.go
+ v/investigations/AccidentReports/Reports/AAR1003.pdf\n“The professional
+ ism of the flight crewmembers and their excellent crew resource managemen
+ t during the accident sequence contributed to their ability to maintain c
+ ontrol of the airplane.”\n\nSpot one moment when a checklist and a prac
+ tised habit carried a team through something nobody planned for.\n\nFeatu
+ re: Case study catch-up: member work\n\nJoin on the Protocol Institute Di
+ scord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusine
+ ss.com/sessions/\nReading map: https://protocolsforbusiness.com/sessions/
+ map/\nSessions are recorded.
+LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
+URL:https://protocolsforbusiness.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:sig-p4b-20270628@protocol-institute
+DTSTAMP:20261020T082551Z
+DTSTART:20270628T153000Z
+DTEND:20270628T163000Z
+SUMMARY:Protocols for Business · Columbia Accident Investigation Board Re
+ port\, Volume One
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: Columbia Accident Invest
+ igation Board Report\, Volume One (Columbia Accident Investigation Board\
+ , 2003)\nhttps://ntrs.nasa.gov/citations/20030093634\n\nSpot one warning 
+ that became normal because nothing went wrong last time.\n\nFeature: Open
+  guest slot: offer a talk\n\nJoin on the Protocol Institute Discord: http
  s://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sess
  ions/\nReading map: https://protocolsforbusiness.com/sessions/map/\nSessi
  ons are recorded.
@@ -264,115 +345,18 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
-UID:sig-p4b-20270517@protocol-institute
-DTSTAMP:20261020T075055Z
-DTSTART:20270517T153000Z
-DTEND:20270517T163000Z
-SUMMARY:Protocols for Business · An Investigation of the Therac-25 Accide
- nts
-DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: An Investig
- ation of the Therac-25 Accidents (Leveson & Turner\, IEEE Computer 26(7)\
- , 1993)\nhttps://dl.acm.org/doi/10.1109/MC.1993.274940\n“overconfidence
-  in the software and removal of hardware interlocks (making the software 
- into a single point of failure that could lead to an accident)”\n\nSpot
-  one safety check that moved from people or hardware into software.\n\nFe
- ature: Guest: Personhood Research Group (Personhood Transformations)\n\nJ
- oin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyll
- abus: https://protocolsforbusiness.com/sessions/\nReading map: https://pr
- otocolsforbusiness.com/sessions/map/\nSessions are recorded.
-LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
-URL:https://protocolsforbusiness.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:sig-p4b-20270531@protocol-institute
-DTSTAMP:20261020T075055Z
-DTSTART:20270531T153000Z
-DTEND:20270531T163000Z
-SUMMARY:Protocols for Business · Final Report on the accident on 1st June
-  2009 to the Airbus A330-203\, flight AF 447
-DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Final Repor
- t on the accident on 1st June 2009 to the Airbus A330-203\, flight AF 447
-  (BEA\, 2012)\nhttps://bea.aero/fileadmin/documents/docspa/2009/f-cp09060
- 1.en/pdf/f-cp090601.en.pdf\n\nSpot one moment when automation hands contr
- ol back to a person who isn’t ready.\n\nFeature: Tooling demo: hardness
-  tech and swarm orchestration infrastructure\n\nJoin on the Protocol Inst
- itute Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsf
- orbusiness.com/sessions/\nReading map: https://protocolsforbusiness.com/s
- essions/map/\nSessions are recorded.
-LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
-URL:https://protocolsforbusiness.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:sig-p4b-20270614@protocol-institute
-DTSTAMP:20261020T075055Z
-DTSTART:20270614T153000Z
-DTEND:20270614T163000Z
-SUMMARY:Protocols for Business · Columbia Accident Investigation Board Re
- port\, Volume One
-DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Columbia Ac
- cident Investigation Board Report\, Volume One (Columbia Accident Investi
- gation Board\, 2003)\nhttps://ntrs.nasa.gov/citations/20030093634\n\nSpot
-  one warning that became normal because nothing went wrong last time.\n\n
- Feature: Case study catch-up: member work\n\nJoin on the Protocol Institu
- te Discord: https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforb
- usiness.com/sessions/\nReading map: https://protocolsforbusiness.com/sess
- ions/map/\nSessions are recorded.
-LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
-URL:https://protocolsforbusiness.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:sig-p4b-20270628@protocol-institute
-DTSTAMP:20261020T075055Z
-DTSTART:20270628T153000Z
-DTEND:20270628T163000Z
-SUMMARY:Protocols for Business · Postmortem Culture: Learning from Failur
- e
-DESCRIPTION:Theme IV. Seeing hardness in incidents\n\nReading: Postmortem 
- Culture: Learning from Failure (Google SRE book\, ch. 15)\nhttps://sre.go
- ogle/sre-book/postmortem-culture/\n“it must focus on identifying the co
- ntributing causes of the incident without indicting any individual or tea
- m for bad or inappropriate behavior.”\n\nSpot one way your team learns 
- from a failure without naming a culprit.\n\nFeature: Open guest slot: off
- er a talk\n\nJoin on the Protocol Institute Discord: https://discord.gg/z
- NJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading m
- ap: https://protocolsforbusiness.com/sessions/map/\nSessions are recorded
- .
-LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
-URL:https://protocolsforbusiness.com/
-END:VEVENT
-BEGIN:VEVENT
 UID:sig-p4b-20270712@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270712T153000Z
 DTEND:20270712T163000Z
-SUMMARY:Protocols for Business · End-to-End Arguments in System Design
-DESCRIPTION:Theme V. Engineering hardness\n\nReading: End-to-End Arguments
-  in System Design (Saltzer\, Reed & Clark\, ACM TOCS 2(4)\, 1984)\nhttps:
- //web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The func
- tion in question can completely and correctly be implemented only with th
- e knowledge and help of the application standing at the end points of the
-  communication system.”\n\nSpot one check that only the two ends of an 
- exchange can do properly.\n\nFeature: Case study catch-up: member work\n\
- nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSy
- llabus: https://protocolsforbusiness.com/sessions/\nReading map: https://
- protocolsforbusiness.com/sessions/map/\nSessions are recorded.
-LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
-URL:https://protocolsforbusiness.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:sig-p4b-20270726@protocol-institute
-DTSTAMP:20261020T075055Z
-DTSTART:20270726T153000Z
-DTEND:20270726T163000Z
-SUMMARY:Protocols for Business · Managing in an Age of Modularity
-DESCRIPTION:Theme V. Engineering hardness\n\nReading: Managing in an Age o
- f Modularity (Baldwin & Clark\, Harvard Business Review\, 1997)\nhttps://
- hbr.org/1997/09/managing-in-an-age-of-modularity\n“The dozens of design
-  teams scattered around the world had to adhere absolutely to these rules
- . But each team had full control over the hidden elements of design in it
- s module.”\n\nSpot one interface everyone builds against and nobody may
-  change alone.\n\nFeature: Tooling demo: hardness tech and swarm orchestr
- ation infrastructure\n\nJoin on the Protocol Institute Discord: https://d
+SUMMARY:Protocols for Business · The Toyota Group and the Aisin Fire
+DESCRIPTION:Theme IV. Seeing hardness\n\nReading: The Toyota Group and the
+  Aisin Fire (Nishiguchi & Beaudet\, MIT Sloan Management Review\, 1998)\n
+ https://sloanreview.mit.edu/article/the-toyota-group-and-the-aisin-fire/\
+ n“Disaster was averted\, and assembly plants were reopened after only t
+ wo days of shutdown.”\n\nSpot one partner network that would rally to f
+ ix your problem without a contract asking it to.\n\nFeature: Case study c
+ atch-up: member work\n\nJoin on the Protocol Institute Discord: https://d
  iscord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/
  \nReading map: https://protocolsforbusiness.com/sessions/map/\nSessions a
  re recorded.
@@ -380,26 +364,47 @@ LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:sig-p4b-20270726@protocol-institute
+DTSTAMP:20261020T082551Z
+DTSTART:20270726T153000Z
+DTEND:20270726T163000Z
+SUMMARY:Protocols for Business · End-to-End Arguments in System Design
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: End-to-End Arguments
+  in System Design (Saltzer\, Reed & Clark\, ACM TOCS 2(4)\, 1984)\nhttps:
+ //web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf\n“The func
+ tion in question can completely and correctly be implemented only with th
+ e knowledge and help of the application standing at the end points of the
+  communication system.”\n\nSpot one check that only the two ends of an 
+ exchange can do properly.\n\nFeature: Tooling demo: hardness tech and swa
+ rm orchestration infrastructure\n\nJoin on the Protocol Institute Discord
+ : https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.co
+ m/sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/\
+ nSessions are recorded.
+LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
+URL:https://protocolsforbusiness.com/
+END:VEVENT
+BEGIN:VEVENT
 UID:sig-p4b-20270809@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270809T153000Z
 DTEND:20270809T163000Z
-SUMMARY:Protocols for Business · External Technical Root Cause Analysis: 
- Channel File 291
-DESCRIPTION:Theme V. Engineering hardness\n\nReading: External Technical R
- oot Cause Analysis: Channel File 291 (CrowdStrike\, 2024)\nhttps://www.cr
- owdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-C
- ause-Analysis-08.06.2024.pdf\n\nSpot one change that reaches everyone at 
- once\, with no staged rollout.\n\nFeature: Case study catch-up: member wo
- rk\n\nJoin on the Protocol Institute Discord: https://discord.gg/zNJdK7ca
- j\nSyllabus: https://protocolsforbusiness.com/sessions/\nReading map: htt
- ps://protocolsforbusiness.com/sessions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Managing in an Age of Modularity
+DESCRIPTION:Theme V. Engineering hardness\n\nReading: Managing in an Age o
+ f Modularity (Baldwin & Clark\, Harvard Business Review\, 1997)\nhttps://
+ hbr.org/1997/09/managing-in-an-age-of-modularity\n“The dozens of design
+  teams scattered around the world had to adhere absolutely to these rules
+ . But each team had full control over the hidden elements of design in it
+ s module.”\n\nSpot one interface everyone builds against and nobody may
+  change alone.\n\nFeature: Case study catch-up: member work\n\nJoin on th
+ e Protocol Institute Discord: https://discord.gg/zNJdK7caj\nSyllabus: htt
+ ps://protocolsforbusiness.com/sessions/\nReading map: https://protocolsfo
+ rbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270823@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270823T153000Z
 DTEND:20270823T163000Z
 SUMMARY:Protocols for Business · Algorithms at Work: The New Contested Te
@@ -420,7 +425,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270906@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270906T153000Z
 DTEND:20270906T163000Z
 SUMMARY:Protocols for Business · WHO Surgical Safety Checklist
@@ -440,7 +445,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20270920@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20270920T153000Z
 DTEND:20270920T163000Z
 SUMMARY:Protocols for Business · Agent Payments Protocol (AP2)
@@ -459,7 +464,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271004@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20271004T153000Z
 DTEND:20271004T163000Z
 SUMMARY:Protocols for Business · Reengineering Work: Don’t Automate\, O
@@ -482,7 +487,7 @@ URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271018@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20271018T153000Z
 DTEND:20271018T163000Z
 SUMMARY:Protocols for Business · 14 CFR Part 5\, Safety Management System
@@ -492,17 +497,19 @@ DESCRIPTION:Theme VI. Operational liveness\n\nReading: 14 CFR Part 5\, Saf
  /current/title-14/chapter-I/subchapter-A/part-5\n“the formal\, top-down
  \, organization-wide approach to managing safety risk and assuring the ef
  fectiveness of safety risk controls.”\n\nSpot one rule with a scheduled
-  review\, and the person who carries it out.\n\nFeature: Guest: Psychohis
- tory SIG (Prophecy Protocols)\n\nJoin on the Protocol Institute Discord: 
- https://discord.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/
- sessions/\nReading map: https://protocolsforbusiness.com/sessions/map/\nS
- essions are recorded.
+  review\, and the person who carries it out.\n\nAlongside: Postmortem Cul
+ ture: Learning from Failure (Google SRE book\, ch. 15)\nhttps://sre.googl
+ e/sre-book/postmortem-culture/\n\nFeature: Guest: Psychohistory SIG (Prop
+ hecy Protocols)\n\nJoin on the Protocol Institute Discord: https://discor
+ d.gg/zNJdK7caj\nSyllabus: https://protocolsforbusiness.com/sessions/\nRea
+ ding map: https://protocolsforbusiness.com/sessions/map/\nSessions are re
+ corded.
 LOCATION:Protocol Institute Discord · https://discord.gg/zNJdK7caj
 URL:https://protocolsforbusiness.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:sig-p4b-20271101@protocol-institute
-DTSTAMP:20261020T075055Z
+DTSTAMP:20261020T082551Z
 DTSTART:20271101T153000Z
 DTEND:20271101T163000Z
 SUMMARY:Protocols for Business · On Consensus and Humming in the IETF (RF

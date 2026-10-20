@@ -115,9 +115,9 @@
   },
   {
    "n": "IV",
-   "name": "Seeing hardness in incidents",
-   "blurb": "Investigations show where hardness held, where it was missing, and where it cracked.",
-   "skill": "reading an incident report for the rule that held, cracked or was missing.",
+   "name": "Seeing hardness",
+   "blurb": "Investigations of failures and of successes show where hardness held, where it was missing, and where it cracked. Each failure is paired with a success that runs on a similar mechanism.",
+   "skill": "reading a report for the rule that held, cracked or was missing, and for the rule that made a success look boring.",
    "readings": [
     {
      "title": "Report of the President’s Commission on the Accident at Three Mile Island",
@@ -127,11 +127,11 @@
      "sighting": "habit or attitude that outranks the written procedure."
     },
     {
-     "title": "An Investigation of the Therac-25 Accidents",
-     "url": "https://dl.acm.org/doi/10.1109/MC.1993.274940",
-     "cite": "Leveson & Turner, IEEE Computer 26(7), 1993",
-     "quote": "overconfidence in the software and removal of hardware interlocks (making the software into a single point of failure that could lead to an accident)",
-     "sighting": "safety check that moved from people or hardware into software."
+     "title": "The Self-Designing High-Reliability Organization: Aircraft Carrier Flight Operations at Sea",
+     "url": "https://digital-commons.usnwc.edu/nwc-review/vol40/iss4/7/",
+     "cite": "Rochlin, La Porte & Roberts, Naval War College Review 40(4), 1987",
+     "quote": "Of all activities studied by our research group, flight operations at sea is the closest to the “edge of the envelope”.",
+     "sighting": "team where the most junior person may stop the work, and does."
     },
     {
      "title": "Final Report on the accident on 1st June 2009 to the Airbus A330-203, flight AF 447",
@@ -141,6 +141,13 @@
      "sighting": "moment when automation hands control back to a person who isn’t ready."
     },
     {
+     "title": "Loss of Thrust in Both Engines After Encountering a Flock of Birds and Subsequent Ditching on the Hudson River, US Airways Flight 1549",
+     "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+     "cite": "NTSB, 2010",
+     "quote": "The professionalism of the flight crewmembers and their excellent crew resource management during the accident sequence contributed to their ability to maintain control of the airplane.",
+     "sighting": "moment when a checklist and a practised habit carried a team through something nobody planned for."
+    },
+    {
      "title": "Columbia Accident Investigation Board Report, Volume One",
      "url": "https://ntrs.nasa.gov/citations/20030093634",
      "cite": "Columbia Accident Investigation Board, 2003",
@@ -148,19 +155,19 @@
      "sighting": "warning that became normal because nothing went wrong last time."
     },
     {
-     "title": "Postmortem Culture: Learning from Failure",
-     "url": "https://sre.google/sre-book/postmortem-culture/",
-     "cite": "Google SRE book, ch. 15",
-     "quote": "it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior.",
-     "sighting": "way your team learns from a failure without naming a culprit."
+     "title": "The Toyota Group and the Aisin Fire",
+     "url": "https://sloanreview.mit.edu/article/the-toyota-group-and-the-aisin-fire/",
+     "cite": "Nishiguchi & Beaudet, MIT Sloan Management Review, 1998",
+     "quote": "Disaster was averted, and assembly plants were reopened after only two days of shutdown.",
+     "sighting": "partner network that would rally to fix your problem without a contract asking it to."
     }
    ],
-   "short": "Incidents"
+   "short": "Seeing"
   },
   {
    "n": "V",
    "name": "Engineering hardness",
-   "blurb": "Guardrails built into the architecture, from end-to-end design to staged rollouts, checklists and signed mandates for agents.",
+   "blurb": "Guardrails built into the architecture, from end-to-end design to modular design rules, checklists and signed mandates for agents.",
    "skill": "choosing what to harden, and how a system would enforce it.",
    "readings": [
     {
@@ -176,13 +183,6 @@
      "cite": "Baldwin & Clark, Harvard Business Review, 1997",
      "quote": "The dozens of design teams scattered around the world had to adhere absolutely to these rules. But each team had full control over the hidden elements of design in its module.",
      "sighting": "interface everyone builds against and nobody may change alone."
-    },
-    {
-     "title": "External Technical Root Cause Analysis: Channel File 291",
-     "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
-     "cite": "CrowdStrike, 2024",
-     "quote": "",
-     "sighting": "change that reaches everyone at once, with no staged rollout."
     },
     {
      "title": "Algorithms at Work: The New Contested Terrain of Control",
@@ -234,6 +234,13 @@
      "cite": "FAA, 2015, expanded 2024",
      "quote": "the formal, top-down, organization-wide approach to managing safety risk and assuring the effectiveness of safety risk controls.",
      "sighting": "rule with a scheduled review, and the person who carries it out."
+    },
+    {
+     "title": "Postmortem Culture: Learning from Failure",
+     "url": "https://sre.google/sre-book/postmortem-culture/",
+     "cite": "Google SRE book, ch. 15",
+     "quote": "it must focus on identifying the contributing causes of the incident without indicting any individual or team for bad or inappropriate behavior.",
+     "companion": true
     },
     {
      "title": "On Consensus and Humming in the IETF (RFC 7282)",
