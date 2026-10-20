@@ -37,10 +37,10 @@ Each question opens one part of the practice. Start with the one closest to your
 
 ## 2. Key terms
 
-- **Protocol:** A recurring pattern for moving work, making a decision, or finding and trusting data. Protocols run between people, software and machines: handoffs, checklists, approvals, APIs, permissions, alarms.
+- **Protocol:** A reliably repeatable behavior: how work moves, a decision gets made, or data is found and trusted, with the same result each time. The people and agents running it adapt to the case; the result still holds. Protocols run between people, software and machines: handoffs, checklists, approvals, APIs, permissions, alarms.
 - **Hard:** A protocol the system enforces every time, such as a payment limit or a required check before release.
-- **Soft:** A protocol that norms and habits hold in place, such as a team’s weekly planning.
-- **Free:** Anything left to the judgment of the people or agents doing the work.
+- **Soft:** A protocol people hold in place: habits, norms, and written guidance they adapt to the case, such as a recipe, a checklist or a team’s weekly planning.
+- **Free:** Anything left to the judgment of the people or agents doing the work. Free is not formless: a few simple local rules can still produce a reliable pattern.
 - **Hard core:** The small set of hard protocols that carries everything else.
 - **Hardness map:** A table that sorts a business’s protocols into hard, soft and free, and names who may change each one.
 - **Amendment rule:** The written terms for changing a hard protocol: who may propose a change, the bar it must clear, who decides, who may stop the work, and the criteria for retiring the rule.
