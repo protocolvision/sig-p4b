@@ -5,6 +5,7 @@ Sources, in priority order (first one wins on duplicates):
   - planned_arc.json: the first syllabus (26 sessions, their "also read" pieces and Protocolized companions)
   - tools/themes.json: the current syllabus, by theme
   - sources/protocol-vision/inventory.md: the BPM source inventory (unpublished items excluded)
+  - cases.json: case studies the group discusses (incidents and successes), outside the syllabus
   - ~/Documents/rafaelfyi/v4/readings.json: a sample of the Daily NPC finds (prototype) or all (full run)
 Session readings carry a seed area from the current syllabus; everything else is unlabelled.
 """
@@ -88,6 +89,14 @@ def from_inventory():
     return out
 
 
+def from_cases():
+    out = []
+    for c in json.loads((HERE / "cases.json").read_text()):
+        out.append({"title": c["title"], "url": c["url"], "cite": c["cite"], "year": year_of(c["cite"]),
+                    "quote": "", "excerpt": c.get("excerpt", ""), "kind": c.get("kind", ""), "source": "case"})
+    return out
+
+
 def from_readings():
     items = json.loads(READINGS.read_text())
     if not FULL:
@@ -105,7 +114,7 @@ def from_readings():
 def main():
     seen_u, seen_t, corpus = set(), set(), []
     read = [dict(r, source="read", read=True) for r in ALREADY_READ]
-    for r in from_sessions() + read + from_syllabus() + from_inventory() + from_readings():
+    for r in from_sessions() + read + from_syllabus() + from_inventory() + from_cases() + from_readings():
         u, t = norm_url(r["url"]), norm_title(r["title"])
         if not r["url"] or not t or u in seen_u or t in seen_t:
             continue

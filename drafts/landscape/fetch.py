@@ -5,7 +5,7 @@ HTML goes through trafilatura, PDFs through pdftotext. When a page is blocked or
 reading falls back to its title, citation, quote and excerpt. Text never leaves the cache:
 only positions computed from it are published.
 """
-import json, subprocess, tempfile, sys
+import json, re, subprocess, tempfile, sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import requests, trafilatura
@@ -19,6 +19,21 @@ MAX_WORDS = 15000
 
 def fallback(r):
     return "\n".join(x for x in (r["title"], r.get("cite", ""), r.get("quote", ""), r.get("excerpt", "")) if x)
+
+
+def openalex_abstract(r):
+    m = re.search(r"(10\.\d{4,9}/[^\s?#]+)", r["url"])
+    ssrn = re.search(r"ssrn\.com/.*abstract_id=(\d+)", r["url"])
+    doi = m.group(1) if m else (f"10.2139/ssrn.{ssrn.group(1)}" if ssrn else "")
+    if not doi:
+        return ""
+    try:
+        w = requests.get(f"https://api.openalex.org/works/doi:{doi}", timeout=25).json()
+    except Exception:
+        return ""
+    inv = w.get("abstract_inverted_index") or {}
+    pos = {i: word for word, ii in inv.items() for i in ii}
+    return " ".join(pos[i] for i in sorted(pos))
 
 
 def fetch(r):
@@ -44,6 +59,9 @@ def fetch(r):
     except Exception as e:  # network errors fall back to metadata
         how = f"error:{type(e).__name__}"
     words = text.split()
+    if len(words) < 150:  # blocked or thin page: try the paper's abstract from OpenAlex when the link is a DOI
+        text = (text + "\n" + openalex_abstract(r)).strip()
+        words = text.split()
     if len(words) < 150:
         text, how = fallback(r) + ("\n" + text if text else ""), how + "+fallback"
         words = text.split()

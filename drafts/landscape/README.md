@@ -7,8 +7,8 @@ running): http://localhost:8000/drafts/landscape/explorer/
 Pipeline, run from this folder with the local venv (`uv venv --python 3.12 .venv` and
 `uv pip install --python .venv/bin/python fastembed umap-learn scikit-learn scipy numpy trafilatura requests`):
 
-1. `python corpus.py` (add `--full` for all ~490 readings) → `data/corpus.json`
-2. `.venv/bin/python fetch.py` → `cache/text/` (gitignored; passage text never ships)
+1. `python corpus.py` (add `--full` for all ~490 readings) → `data/corpus.json`. Case studies outside the syllabus (incidents and successes) live in `cases.json` and show as orange dots.
+2. `.venv/bin/python fetch.py` → `cache/text/` (gitignored; passage text never ships). Blocked pages with a DOI or SSRN link fall back to the OpenAlex abstract.
 3. `.venv/bin/python layout.py` → `data/landscape.json` (passages embedded locally with bge-small, UMAP
    seeded weakly by the current syllabus areas, k-means areas named by anchor readings, density terrain)
 

@@ -82,13 +82,13 @@
     svg.querySelectorAll('circle.on').forEach(function (c) { c.classList.remove('on'); });
     dots[i].classList.add('on');
     info.innerHTML = '<h2><a href="' + esc(it.u) + '">' + esc(it.t) + '</a></h2><p class="muted">' + esc(it.c) + '</p>' +
-      '<p class="small">' + esc(it.a) + (th ? ' · Theme ' + esc(th.n) + ', ' + esc(th.name) + ' · ' + when(it) : '') + (it.rd ? ' · already read by the group' : '') + '</p>';
+      '<p class="small">' + esc(it.a) + (th ? ' · Theme ' + esc(th.n) + ', ' + esc(th.name) + ' · ' + when(it) : '') + (it.rd ? ' · already read by the group' : '') + (it.cs ? ' · case study' : '') + '</p>';
   }
 
   /* hover card for any dot */
   function showTip(c) {
     var it = D.items[c.dataset.i], th = it.th ? D.themes[it.th - 1] : null;
-    tip.innerHTML = '<strong>' + esc(it.t) + '</strong><span>' + esc(it.a) + (th ? ' · ' + esc(th.n) + ' ' + esc(th.short) : '') + '</span>';
+    tip.innerHTML = '<strong>' + esc(it.t) + '</strong><span>' + esc(it.a) + (th ? ' · ' + esc(th.n) + ' ' + esc(th.short) : '') + (it.cs ? ' · case study' : '') + '</span>';
     var r = c.getBoundingClientRect(), w = wrap.getBoundingClientRect();
     tip.hidden = false;
     var left = Math.min(r.left - w.left + 12, w.width - tip.offsetWidth - 4);

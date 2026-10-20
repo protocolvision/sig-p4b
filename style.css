@@ -194,6 +194,7 @@ svg.map .contours path { fill: none; stroke: #d6d2ca; stroke-width: 1.2; }
 svg.map .contours .c7, svg.map .contours .c9 { stroke: #d0ccc3; }
 svg.map text.area { font: calc(16px / var(--z, 1)) Lora, Georgia, serif; fill: #9a978f; text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
 svg.map circle.o { fill: #a9a6a0; }
+svg.map circle.o.k { fill: var(--bv-2); }
 svg.map circle.s { fill: var(--link); stroke: #fff; stroke-width: 1.5; cursor: pointer; }
 svg.map circle.on { stroke: var(--fg); stroke-width: 2.5; r: 8; }
 svg.map circle:focus-visible { outline: none; stroke: var(--fg); stroke-width: 3; }

@@ -41,6 +41,9 @@ ANCHORS = [
     ("The Republic of Science", "Science, learning and knowledge"),
     ("Augmenting Human Intellect", "Computing and human augmentation"),
     ("Can Programming Be Liberated", "Programming and coordination languages"),
+    ("The Process of Education", "Science, learning and knowledge"),
+    ("Generative AI at Work", "Work, management and AI"),
+    ("OSI: The Internet That Wasn't", "Standards, labs and infrastructure"),
 ]
 PALETTE = ["#d9e6c3", "#f0d3e3", "#cfe3f0", "#efe0c8", "#cfdcf5", "#f5d9cf", "#d6ecdc", "#e7dcf0", "#f3e6c9", "#d3e9ec", "#ecd6de", "#dfe3c8"]
 INK = ["#44621a", "#83325e", "#1c5877", "#6e4a12", "#1f4e9c", "#8a3b22", "#23633a", "#6b3478", "#7a5418", "#1f5f5a", "#7d2f4f", "#4d5a17"]
@@ -148,7 +151,7 @@ def main():
         pts = XY[owner == k]
         readings.append({"id": r["id"], "title": r["title"], "url": r["url"], "cite": r.get("cite", ""),
                          "year": r.get("year"), "quote": r.get("quote", ""), "source": r["source"],
-                         "session": r.get("session"), "read": bool(r.get("read")), "area": int(labels[k]),
+                         "session": r.get("session"), "read": bool(r.get("read")), **({"kind": r["kind"]} if r.get("kind") else {}), "area": int(labels[k]),
                          "x": round(float(RXY[k, 0]), 4), "y": round(float(RXY[k, 1]), 4),
                          "p": [[round(float(a), 4), round(float(b), 4)] for a, b in pts]})
     dates = [s["date"] for s in json.loads((HERE / "planned_arc.json").read_text())]

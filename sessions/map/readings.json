@@ -4,6 +4,20 @@
  "suggest": "https://github.com/protocolvision/sig-p4b/issues/new?template=reading-suggestion.yml",
  "readings": [
   {
+   "title": "A Laboratory For Teaching Object-Oriented Thinking",
+   "url": "https://worrydream.com/refs/Beck_1989_-_A_Laboratory_For_Teaching_Object-Oriented_Thinking.pdf",
+   "cite": "Beck, 1989",
+   "year": 1989,
+   "area": "Biology and information"
+  },
+  {
+   "title": "A Universal Modular Actor Formalism for Artificial Intelligence",
+   "url": "https://worrydream.com/refs/Hewitt_1973_-_A_Universal_Modular_Actor_Formalism_for_Artificial_Intelligence.pdf",
+   "cite": "Hewitt, 1973",
+   "year": 1973,
+   "area": "Biology and information"
+  },
+  {
    "title": "Abstract Machines of Systems Biology",
    "url": "https://worrydream.com/refs/Cardelli_2005_-_Abstract_Machines_of_Systems_Biology.pdf",
    "cite": "Cardelli, 2005",
@@ -18,17 +32,38 @@
    "area": "Biology and information"
   },
   {
-   "title": "Clearing up Mysteries",
-   "url": "https://worrydream.com/refs/Jaynes_1988_-_Clearing_up_Mysteries.pdf",
-   "cite": "Jaynes, 1988",
-   "year": 1988,
+   "title": "Alternative Programming Interfaces for Alternative Programmers",
+   "url": "https://worrydream.com/refs/Schachman_2012_-_Alternative_Programming_Interfaces_for_Alternative_Programmers.pdf",
+   "cite": "Schachman, 2012",
+   "year": 2012,
    "area": "Biology and information"
   },
   {
-   "title": "Collective dynamics of 'small-world' networks",
-   "url": "https://worrydream.com/refs/Watts_1998_-_Collective_dynamics_of_%27small-world%27_networks.pdf",
-   "cite": "Watts, 1998",
-   "year": 1998,
+   "title": "Boxer, A Reconstructible Computational Medium",
+   "url": "https://worrydream.com/refs/diSessa_1986_-_Boxer%2C_A_Reconstructible_Computational_Medium.pdf",
+   "cite": "diSessa, 1986",
+   "year": 1986,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Building Robust Systems",
+   "url": "https://worrydream.com/refs/Sussman_2007_-_Building_Robust_Systems.pdf",
+   "cite": "Sussman, 2007",
+   "year": 2007,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Can Programming Be Liberated from the von Neumann Style",
+   "url": "https://worrydream.com/refs/Backus_1978_-_Can_Programming_Be_Liberated_from_the_von_Neumann_Style.pdf",
+   "cite": "Backus, 1978",
+   "year": 1978,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Collaborative Diffusion, Programming Antiobjects",
+   "url": "https://worrydream.com/refs/Repenning_2006_-_Collaborative_Diffusion%2C_Programming_Antiobjects.pdf",
+   "cite": "Repenning, 2006",
+   "year": 2006,
    "area": "Biology and information"
   },
   {
@@ -39,10 +74,45 @@
    "area": "Biology and information"
   },
   {
-   "title": "Irreversibility and Heat Generation in the Computing Process",
-   "url": "https://worrydream.com/refs/Landauer_1961_-_Irreversibility_and_Heat_Generation_in_the_Computing_Process.pdf",
-   "cite": "Landauer, 1961",
-   "year": 1961,
+   "title": "Graphical Editing by Example",
+   "url": "https://worrydream.com/refs/Kurlander_1993_-_Graphical_Editing_by_Example.pdf",
+   "cite": "Kurlander, 1993",
+   "year": 1993,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Human Problem Solving, The State of the Theory in 1970",
+   "url": "https://worrydream.com/refs/Simon_1970_-_Human_Problem_Solving%2C_The_State_of_the_Theory_in_1970.pdf",
+   "cite": "Simon, 1970",
+   "year": 1970,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Inform 7, The Program",
+   "url": "https://worrydream.com/refs/Nelson_G_2008_-_Inform_7%2C_The_Program.pdf",
+   "cite": "Nelson G, 2008",
+   "year": 2008,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Korz Simple, Symmetric, Subjective, Context-Oriented Programming",
+   "url": "https://worrydream.com/refs/Ungar_2014_-_Korz_Simple%2C_Symmetric%2C_Subjective%2C_Context-Oriented_Programming.pdf",
+   "cite": "Ungar, 2014",
+   "year": 2014,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Modeling Software for learning and doing physics",
+   "url": "https://worrydream.com/refs/Hestenes_1995_-_Modeling_Software_for_learning_and_doing_physics.pdf",
+   "cite": "Hestenes, 1995",
+   "year": 1995,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Natural Language, Semantic Analysis and Interactive Fiction",
+   "url": "https://worrydream.com/refs/Nelson_G_2006_-_Natural_Language%2C_Semantic_Analysis_and_Interactive_Fiction.pdf",
+   "cite": "Nelson G, 2006",
+   "year": 2006,
    "area": "Biology and information"
   },
   {
@@ -53,10 +123,45 @@
    "area": "Biology and information"
   },
   {
-   "title": "Notes on Present Status and Future Progress",
-   "url": "https://worrydream.com/refs/Jaynes_1991_-_Notes_on_Present_Status_and_Future_Progress.pdf",
-   "cite": "Jaynes, 1991",
-   "year": 1991,
+   "title": "Out of the Tar Pit",
+   "url": "https://worrydream.com/refs/Moseley_2006_-_Out_of_the_Tar_Pit.pdf",
+   "cite": "Moseley, 2006",
+   "year": 2006,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Playground, An Object Oriented Simulation System with Agent Rules for Children of All Ages",
+   "url": "https://worrydream.com/refs/Fenton_1989_-_Playground%2C_An_Object_Oriented_Simulation_System_with_Agent_Rules_for_Children_of_All_Ages.pdf",
+   "cite": "Fenton, 1989",
+   "year": 1989,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Programming and Programming Languages",
+   "url": "https://worrydream.com/refs/Kay_2010_-_Programming_and_Programming_Languages.pdf",
+   "cite": "Kay, 2010",
+   "year": 2010,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Programming as Theory Building",
+   "url": "https://cdn.chriskrycho.com/file/chriskrycho-com/resources/naur1985programming.pdf",
+   "cite": "Peter Naur, Microprocessing and Microprogramming, vol. 15, no. 5, pp. 253–261, 1985",
+   "year": 1985,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Programming with Agents",
+   "url": "https://worrydream.com/refs/Travers_1996_-_Programming_with_Agents.pdf",
+   "cite": "Travers, 1996",
+   "year": 1996,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Propagation Networks",
+   "url": "https://worrydream.com/refs/Radul_2009_-_Propagation_Networks.pdf",
+   "cite": "Radul, 2009",
+   "year": 2009,
    "area": "Biology and information"
   },
   {
@@ -66,6 +171,20 @@
    "year": 2001,
    "area": "Biology and information",
    "syllabus_theme": "II. Natural coordination"
+  },
+  {
+   "title": "Recursive Interfaces for Reactive Objects",
+   "url": "https://worrydream.com/refs/Travers_1994_-_Recursive_Interfaces_for_Reactive_Objects.pdf",
+   "cite": "Travers, 1994",
+   "year": 1994,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Representations in Distributed Cognitive Tasks",
+   "url": "https://worrydream.com/refs/Zhang_2004_-_Representations_in_Distributed_Cognitive_Tasks.pdf",
+   "cite": "Zhang, 2004",
+   "year": 2004,
+   "area": "Biology and information"
   },
   {
    "title": "Reverse Engineering of Biological Complexity",
@@ -83,6 +202,13 @@
    "area": "Biology and information"
   },
   {
+   "title": "Robust Design through Diversity",
+   "url": "https://worrydream.com/refs/Sussman_1999_-_Robust_Design_through_Diversity.pdf",
+   "cite": "Sussman, 1999",
+   "year": 1999,
+   "area": "Biology and information"
+  },
+  {
    "title": "Robustness in bacterial chemotaxis",
    "url": "https://doi.org/10.1038/16483",
    "cite": "Alon, Surette, Barkai & Leibler, Nature, 1999",
@@ -91,10 +217,24 @@
    "syllabus_theme": "II. Natural coordination"
   },
   {
-   "title": "Tacit Knowledge, Trust, and the Q of Sapphire",
-   "url": "https://worrydream.com/refs/Collins_2000_-_Tacit_Knowledge%2C_Trust%2C_and_the_Q_of_Sapphire.pdf",
-   "cite": "Collins, 2000",
-   "year": 2000,
+   "title": "Rudiments of Numeracy",
+   "url": "https://worrydream.com/refs/Ehrenberg_1977_-_Rudiments_of_Numeracy.pdf",
+   "cite": "Ehrenberg, 1977",
+   "year": 1977,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Steps Toward Artificial Intelligence",
+   "url": "https://worrydream.com/refs/Minsky_1961_-_Steps_Toward_Artificial_Intelligence.pdf",
+   "cite": "Minsky, 1961",
+   "year": 1961,
+   "area": "Biology and information"
+  },
+  {
+   "title": "The Next 700 Programming Languages",
+   "url": "https://worrydream.com/refs/Landin_1966_-_The_Next_700_Programming_Languages.pdf",
+   "cite": "Landin, 1966",
+   "year": 1966,
    "area": "Biology and information"
   },
   {
@@ -105,17 +245,31 @@
    "area": "Biology and information"
   },
   {
-   "title": "The Tyranny of the Clock",
-   "url": "https://worrydream.com/refs/Sutherland_2012_-_The_Tyranny_of_the_Clock.pdf",
-   "cite": "Sutherland, 2012",
+   "title": "The Structure of a Programming Language Revolution",
+   "url": "https://worrydream.com/refs/Gabriel_2012_-_The_Structure_of_a_Programming_Language_Revolution.pdf",
+   "cite": "Gabriel, 2012",
    "year": 2012,
    "area": "Biology and information"
   },
   {
-   "title": "The Tyranny of the Clock (short)",
-   "url": "https://worrydream.com/refs/Sutherland_2012_-_The_Tyranny_of_the_Clock_%28short%29.pdf",
-   "cite": "Sutherland, 2012",
-   "year": 2012,
+   "title": "Venture, a higher-order probabilistic programming platform with programmable inference",
+   "url": "https://worrydream.com/refs/Mansinghka_2014_-_Venture%2C_a_higher-order_probabilistic_programming_platform_with_programmable_inference.pdf",
+   "cite": "Mansinghka, 2014",
+   "year": 2014,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Why Functional Programming Matters",
+   "url": "https://worrydream.com/refs/Hughes_1990_-_Why_Functional_Programming_Matters.pdf",
+   "cite": "Hughes, 1990",
+   "year": 1990,
+   "area": "Biology and information"
+  },
+  {
+   "title": "Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas",
+   "url": "https://worrydream.com/refs/Minsky_1967_-_Why_programming_is_a_good_medium_for_expressing_poorly_understood_and_sloppily-formulated_ideas.pdf",
+   "cite": "Minsky, 1967",
+   "year": 1967,
    "area": "Biology and information"
   },
   {
@@ -126,11 +280,11 @@
    "area": "Biology and information"
   },
   {
-   "title": "A Laboratory For Teaching Object-Oriented Thinking",
-   "url": "https://worrydream.com/refs/Beck_1989_-_A_Laboratory_For_Teaching_Object-Oriented_Thinking.pdf",
-   "cite": "Beck, 1989",
-   "year": 1989,
-   "area": "Computing and human augmentation"
+   "title": "Zooids, Building Blocks for Swarm User Interfaces",
+   "url": "https://worrydream.com/refs/Le_Goc_2016_-_Zooids%2C_Building_Blocks_for_Swarm_User_Interfaces.pdf",
+   "cite": "Le Goc, 2016",
+   "year": 2016,
+   "area": "Biology and information"
   },
   {
    "title": "A Personal Computer for Children of All Ages",
@@ -161,38 +315,17 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Boxer, A Reconstructible Computational Medium",
-   "url": "https://worrydream.com/refs/diSessa_1986_-_Boxer%2C_A_Reconstructible_Computational_Medium.pdf",
-   "cite": "diSessa, 1986",
-   "year": 1986,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Characterizing the Software Process: A Maturity Framework",
-   "url": "https://apps.dtic.mil/sti/tr/pdf/ADA182895.pdf",
-   "cite": "Watts S. Humphrey, CMU/SEI-87-TR-11, 1987",
-   "year": 1987,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Chronicle of the Death of a Laboratory",
-   "url": "https://worrydream.com/refs/Bardini_2002_-_Chronicle_of_the_Death_of_a_Laboratory.pdf",
-   "cite": "Bardini, 2002",
-   "year": 2002,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Collaborative Diffusion, Programming Antiobjects",
-   "url": "https://worrydream.com/refs/Repenning_2006_-_Collaborative_Diffusion%2C_Programming_Antiobjects.pdf",
-   "cite": "Repenning, 2006",
-   "year": 2006,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Conversation With and Through Computers",
    "url": "https://worrydream.com/refs/Brennan_1990_-_Conversation_With_and_Through_Computers.pdf",
    "cite": "Brennan, 1990",
    "year": 1990,
+   "area": "Computing and human augmentation"
+  },
+  {
+   "title": "Death of the Owner's Manual",
+   "url": "https://blundercheck.timberschroff.com/p/liquid-content",
+   "cite": "Blundercheck, 6 Aug 2026",
+   "year": 2026,
    "area": "Computing and human augmentation"
   },
   {
@@ -231,13 +364,6 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "How Do Committees Invent?",
-   "url": "https://www.melconway.com/research/committees.html",
-   "cite": "Melvin E. Conway, Datamation, 1968",
-   "year": 1968,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Immutable Skills",
    "url": "https://summerlightning.substack.com/p/immutable-skills",
    "cite": "Sachin, Summer Lightning, 2026",
@@ -259,13 +385,6 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Interaction at Lincoln Laboratory in the 1960",
-   "url": "https://worrydream.com/refs/Buxton_2005_-_Interaction_at_Lincoln_Laboratory_in_the_1960.pdf",
-   "cite": "Buxton, 2005",
-   "year": 2005,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Interactive Information Processing, Retrieval, and Transfer",
    "url": "https://worrydream.com/refs/Licklider_1968_-_Interactive_Information_Processing%2C_Retrieval%2C_and_Transfer.pdf",
    "cite": "Licklider, 1968",
@@ -273,25 +392,12 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "J.C.R. Licklider's Vision for the IPTO",
-   "url": "https://worrydream.com/refs/Kita_2003_-_J.C.R._Licklider%27s_Vision_for_the_IPTO.pdf",
-   "cite": "Kita, 2003",
-   "year": 2003,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Man-Computer Symbiosis",
-   "url": "https://worrydream.com/refs/Licklider_1960_-_Man-Computer_Symbiosis.pdf",
-   "cite": "Licklider, 1960",
-   "year": 1960,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Members and Affiliates of the Intergalactic Computer Network",
-   "url": "https://worrydream.com/refs/Licklider_1963_-_Members_and_Affiliates_of_the_Intergalactic_Computer_Network.pdf",
-   "cite": "Licklider, 1963",
-   "year": 1963,
-   "area": "Computing and human augmentation"
+   "title": "Ironies of Automation",
+   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
+   "cite": "Bainbridge, 1983",
+   "year": 1983,
+   "area": "Computing and human augmentation",
+   "syllabus_theme": "I. Working alongside agents"
   },
   {
    "title": "Microelectronics and the Personal Computer",
@@ -308,38 +414,10 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Natural Language, Semantic Analysis and Interactive Fiction",
-   "url": "https://worrydream.com/refs/Nelson_G_2006_-_Natural_Language%2C_Semantic_Analysis_and_Interactive_Fiction.pdf",
-   "cite": "Nelson G, 2006",
-   "year": 2006,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "No Silver Bullet",
-   "url": "https://worrydream.com/refs/Brooks_1986_-_No_Silver_Bullet.pdf",
-   "cite": "Brooks, 1986",
-   "year": 1986,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Noncommand User Interfaces",
    "url": "https://worrydream.com/refs/Nielsen_1993_-_Noncommand_User_Interfaces.pdf",
    "cite": "Nielsen, 1993",
    "year": 1993,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Oral History (Laws)",
-   "url": "https://worrydream.com/refs/Fairbairn_2016_-_Oral_History_%28Laws%29.pdf",
-   "cite": "Fairbairn, 2016",
-   "year": 2016,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Oral History (McJones)",
-   "url": "https://worrydream.com/refs/Taylor_2008_-_Oral_History_%28McJones%29.pdf",
-   "cite": "Taylor, 2008",
-   "year": 2008,
    "area": "Computing and human augmentation"
   },
   {
@@ -350,13 +428,6 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "OSI: The Internet That Wasn't",
-   "url": "https://spectrum.ieee.org/osi-the-internet-that-wasnt",
-   "cite": "Andrew L. Russell, IEEE Spectrum, 2013",
-   "year": 2013,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Personal Computing",
    "url": "https://worrydream.com/refs/Kay_1975_-_Personal_Computing.pdf",
    "cite": "Kay, 1975",
@@ -364,31 +435,10 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Programming as Theory Building",
-   "url": "https://cdn.chriskrycho.com/file/chriskrycho-com/resources/naur1985programming.pdf",
-   "cite": "Peter Naur, Microprocessing and Microprogramming, vol. 15, no. 5, pp. 253–261, 1985",
-   "year": 1985,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Programming with Agents",
-   "url": "https://worrydream.com/refs/Travers_1996_-_Programming_with_Agents.pdf",
-   "cite": "Travers, 1996",
-   "year": 1996,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Prompter, A Domain-Specific Language for Versu",
    "url": "https://worrydream.com/refs/Nelson_G_2014_-_Prompter%2C_A_Domain-Specific_Language_for_Versu.pdf",
    "cite": "Nelson G, 2014",
    "year": 2014,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Reminiscences of the VLSI Revolution",
-   "url": "https://worrydream.com/refs/Conway_L_2012_-_Reminiscences_of_the_VLSI_Revolution.pdf",
-   "cite": "Conway L, 2012",
-   "year": 2012,
    "area": "Computing and human augmentation"
   },
   {
@@ -406,13 +456,6 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Technology and Courage",
-   "url": "https://worrydream.com/refs/Sutherland_1996_-_Technology_and_Courage.pdf",
-   "cite": "Sutherland, 1996",
-   "year": 1996,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "The Benefit of Hindsight in Turkle’s Life on the Screen",
    "url": "https://default.blog/p/the-benefit-of-hindsight-in-turkles",
    "cite": "Clinton Ignatov, default.blog, 2026",
@@ -427,11 +470,12 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "The Emperors Old Clothes",
-   "url": "https://worrydream.com/refs/Hoare_1981_-_The_Emperors_Old_Clothes.pdf",
-   "cite": "Hoare, 1981",
-   "year": 1981,
-   "area": "Computing and human augmentation"
+   "title": "The Filing Cabinet",
+   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
+   "cite": "Robertson, 2021",
+   "year": 2021,
+   "area": "Computing and human augmentation",
+   "syllabus_theme": "III. Emissions"
   },
   {
    "title": "The Future of Computing, Logic or Biology",
@@ -469,13 +513,6 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Vannevar Bush and the Differential Analyzer",
-   "url": "https://worrydream.com/refs/Owens_1986_-_Vannevar_Bush_and_the_Differential_Analyzer.pdf",
-   "cite": "Owens, 1986",
-   "year": 1986,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "Vision and Reality of Hypertext",
    "url": "https://worrydream.com/refs/Mueller-Prove_2002_-_Vision_and_Reality_of_Hypertext.pdf",
    "cite": "Mueller-Prove, 2002",
@@ -490,24 +527,31 @@
    "area": "Computing and human augmentation"
   },
   {
-   "title": "Why programming is a good medium for expressing poorly understood and sloppily-formulated ideas",
-   "url": "https://worrydream.com/refs/Minsky_1967_-_Why_programming_is_a_good_medium_for_expressing_poorly_understood_and_sloppily-formulated_ideas.pdf",
-   "cite": "Minsky, 1967",
-   "year": 1967,
-   "area": "Computing and human augmentation"
-  },
-  {
-   "title": "Zooids, Building Blocks for Swarm User Interfaces",
-   "url": "https://worrydream.com/refs/Le_Goc_2016_-_Zooids%2C_Building_Blocks_for_Swarm_User_Interfaces.pdf",
-   "cite": "Le Goc, 2016",
-   "year": 2016,
-   "area": "Computing and human augmentation"
-  },
-  {
    "title": "A Big Little Idea Called Legibility",
    "url": "https://www.ribbonfarm.com/2010/07/26/a-big-little-idea-called-legibility/",
    "cite": "Ribbonfarm, 26 Jul 2010",
    "year": 2010,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "A Camera, Not an Engine II",
+   "url": "https://contraptions.venkateshrao.com/p/a-camera-not-an-engine-ii",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "A Jury of Mirrors",
+   "url": "https://blundercheck.timberschroff.com/p/a-jury-of-mirrors",
+   "cite": "Timber, Blundercheck, 2025",
+   "year": 2025,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Ancient Double-Entry Bookkeeping: Lucas Pacioli's Treatise",
+   "url": "https://archive.org/details/ancientdoubleent00geij",
+   "cite": "Pacioli, 1494, translated by Geijsbeek, 1914",
+   "year": 1914,
    "area": "Culture, time and soft technologies"
   },
   {
@@ -525,9 +569,23 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Archimedes' Curse",
+   "url": "https://blundercheck.timberschroff.com/p/archimedes-curse-indirection-as-a",
+   "cite": "Timber, Blundercheck, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Be Kind to Your Local NPCs",
    "url": "https://kneelingbus.substack.com/p/be-kind-to-your-local-npcs",
    "cite": "Drew Austin, Kneeling Bus, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Beyond Leverage",
+   "url": "https://blundercheck.timberschroff.com/p/beyond-leverage",
+   "cite": "Timber, Blundercheck, 2026",
    "year": 2026,
    "area": "Culture, time and soft technologies"
   },
@@ -539,9 +597,9 @@
    "area": "Culture, time and soft technologies"
   },
   {
-   "title": "Bots in the Beerlight",
-   "url": "https://kneelingbus.substack.com/p/bots-in-the-beerlight",
-   "cite": "Drew Austin, Kneeling Bus, 2026",
+   "title": "Can the (Social) Oobleck Dance?",
+   "url": "https://contraptions.venkateshrao.com/p/can-the-social-oobleck-dance",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
    "year": 2026,
    "area": "Culture, time and soft technologies"
   },
@@ -553,9 +611,23 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Cascade of Singularities",
+   "url": "https://default.blog/p/cascade-of-singularities",
+   "cite": "Andrey Mir, default.blog, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Chat, Is This Bloodsport?",
    "url": "https://summerlightning.substack.com/p/chat-is-this-bloodsport",
    "cite": "Sachin, Summer Lightning, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Cognitive Farmsteading",
+   "url": "https://contraptions.venkateshrao.com/p/cognitive-farmsteading",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
    "year": 2026,
    "area": "Culture, time and soft technologies"
   },
@@ -588,6 +660,13 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Designing Freedom",
+   "url": "https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf",
+   "cite": "Beer, 1973",
+   "year": 1973,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Devices For The Crafty",
    "url": "https://summerlightning.substack.com/p/devices-for-the-crafty",
    "cite": "Sachin, Summer Lightning, 2025",
@@ -599,6 +678,20 @@
    "url": "https://worrydream.com/refs/Turner_F_2017_-_Don%27t_Be_Evil.pdf",
    "cite": "Turner F, 2017",
    "year": 2017,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "EA Safety",
+   "url": "https://contraptions.venkateshrao.com/p/ea-safety",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Everyone Is On Something",
+   "url": "https://summerlightning.substack.com/p/everyone-is-on-something",
+   "cite": "Sachin, Summer Lightning, 2026",
+   "year": 2026,
    "area": "Culture, time and soft technologies"
   },
   {
@@ -651,6 +744,27 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Human Cumulative Cultural Evolution as a Form of Distributed Computation",
+   "url": "https://worrydream.com/refs/Smaldino_2013_-_Human_Cumulative_Cultural_Evolution_as_a_Form_of_Distributed_Computation.pdf",
+   "cite": "Smaldino, 2013",
+   "year": 2013,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Humanism without (All) Humans",
+   "url": "https://contraptions.venkateshrao.com/p/humanism-without-all-humans",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "I Have No Words and I Must Design",
+   "url": "https://worrydream.com/refs/Costikyan_2002_-_I_Have_No_Words_and_I_Must_Design.pdf",
+   "cite": "Costikyan, 2002",
+   "year": 2002,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Interview (Playboy)",
    "url": "https://worrydream.com/refs/McLuhan_1969_-_Interview_%28Playboy%29.pdf",
    "cite": "McLuhan, 1969",
@@ -665,9 +779,30 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Leverage Points: Places to Intervene in a System",
+   "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/",
+   "cite": "Donella H. Meadows, Whole Earth (Winter 1997) as 'Places to Intervene in a System'; revised version published by the Sustainability Institute, 1999; archived by the Donella Meadows Project / Academy for Systems Change, 1999",
+   "year": 1999,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "LLMs Pre-Commodify Ideas",
+   "url": "https://summerlightning.substack.com/p/llms-pre-commodify-ideas",
+   "cite": "Sachin, Summer Lightning, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Manufactured Present",
    "url": "https://summerlightning.substack.com/p/manufactured-present",
    "cite": "Sachin, Summer Lightning, 2025",
+   "year": 2025,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Mesolomania",
+   "url": "https://blundercheck.timberschroff.com/p/mesolomania",
+   "cite": "Timber, Blundercheck, 2025",
    "year": 2025,
    "area": "Culture, time and soft technologies"
   },
@@ -686,6 +821,13 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Miscellanea + Housekeeping Notes",
+   "url": "https://blundercheck.timberschroff.com/p/miscellanea-housekeeping-notes",
+   "cite": "Timber, Blundercheck, 2025",
+   "year": 2025,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "Our Eukaryotic Moment",
    "url": "https://contraptions.venkateshrao.com/p/our-eukaryotic-moment",
    "cite": "Venkatesh Rao, Contraptions, 2026",
@@ -697,6 +839,20 @@
    "url": "https://kneelingbus.substack.com/p/outsider-trading",
    "cite": "Drew Austin, Kneeling Bus, 2026",
    "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Pace Layering: How Complex Systems Learn and Keep Learning",
+   "url": "https://longnow.org/ideas/pace-layers/",
+   "cite": "Stewart Brand, Originally a chapter in The Clock of the Long Now: Time and Responsibility (Basic Books, 1999); republished in Journal of Design and Science (MIT Press, January 17, 2018); archived on Long Now Foundation Ideas, 1999",
+   "year": 1999,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Pond brains and GPT-4",
+   "url": "https://newsletter.squishy.computer/p/pond-brains-and-gpt-4",
+   "cite": "Gordon Brander, Squishy Computer, 2023",
+   "year": 2023,
    "area": "Culture, time and soft technologies"
   },
   {
@@ -728,13 +884,6 @@
    "area": "Culture, time and soft technologies"
   },
   {
-   "title": "Should “Technological History” Be a Part of Psych Intakes? (Yes.)",
-   "url": "https://default.blog/p/should-technological-history-be-a",
-   "cite": "Katherine Dee, default.blog, 2026",
-   "year": 2026,
-   "area": "Culture, time and soft technologies"
-  },
-  {
    "title": "Silence is a Commons",
    "url": "https://www.davidtinapple.com/illich/1983_silence_commons.html",
    "cite": "Ivan Illich, The CoEvolution Quarterly (Winter 1983); delivered as remarks at the Asahi Symposium \"Science and Man — The Computer-Managed Society,\" Tokyo, 21 March 1982, 1983",
@@ -756,10 +905,45 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "Stop Treating Your Problems with Insecticide",
+   "url": "https://blundercheck.timberschroff.com/p/stop-treating-your-problems-with",
+   "cite": "Timber, Blundercheck, 2026",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Substack note on p(doom) and real risk management",
+   "url": "https://substack.com/@contraptions/note/c-333747644",
+   "cite": "Venkatesh Rao, Contraptions, 10 Sep 2026 (public Substack note)",
+   "year": 2026,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Systems Thinking is Brain Rot for Analysts",
+   "url": "https://blundercheck.timberschroff.com/p/systems-thinking-is-brain-rot-for",
+   "cite": "Timber, Blundercheck, 2025",
+   "year": 2025,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "Technology and Courage",
+   "url": "https://worrydream.com/refs/Sutherland_1996_-_Technology_and_Courage.pdf",
+   "cite": "Sutherland, 1996",
+   "year": 1996,
+   "area": "Culture, time and soft technologies"
+  },
+  {
    "title": "The arts at Facebook",
    "url": "https://worrydream.com/refs/Turner_F_2018_-_The_arts_at_Facebook.pdf",
    "cite": "Turner F, 2018",
    "year": 2018,
+   "area": "Culture, time and soft technologies"
+  },
+  {
+   "title": "The Box: How the Shipping Container Made the World Smaller and the World Economy Bigger",
+   "url": "https://press.princeton.edu/books/paperback/9780691170817/the-box",
+   "cite": "Levinson, Princeton University Press, 2006",
+   "year": 2006,
    "area": "Culture, time and soft technologies"
   },
   {
@@ -777,11 +961,12 @@
    "area": "Culture, time and soft technologies"
   },
   {
-   "title": "The Principles of Collective Animal Behaviour",
-   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1626537/",
-   "cite": "Sumpter, 2006",
-   "year": 2006,
-   "area": "Culture, time and soft technologies"
+   "title": "The Ethnography of Infrastructure",
+   "url": "https://journals.sagepub.com/doi/10.1177/00027649921955326",
+   "cite": "Star, American Behavioral Scientist 43(3), 1999",
+   "year": 1999,
+   "area": "Culture, time and soft technologies",
+   "syllabus_theme": "III. Emissions"
   },
   {
    "title": "The Sex Organs of the Machine World",
@@ -802,13 +987,6 @@
    "url": "https://summerlightning.substack.com/p/the-two-memories",
    "cite": "Sachin, Summer Lightning, 2026",
    "year": 2026,
-   "area": "Culture, time and soft technologies"
-  },
-  {
-   "title": "The Tyranny of Structurelessness",
-   "url": "https://www.jofreeman.com/joreen/tyranny.htm",
-   "cite": "Jo Freeman (aka Joreen), The Second Wave, Vol. 2 No. 1 (1972); also Berkeley Journal of Sociology, Vol. 17 (1972-73); Ms. magazine (July 1973). Canonical text hosted at jofreeman.com, 1972",
-   "year": 1972,
    "area": "Culture, time and soft technologies"
   },
   {
@@ -840,6 +1018,13 @@
    "area": "Culture, time and soft technologies"
   },
   {
+   "title": "A Tale of Two Theories (of Coordination)",
+   "url": "https://contraptions.venkateshrao.com/p/a-tale-of-two-theories-of-coordination",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
+   "area": "Firms, measurement and governance"
+  },
+  {
    "title": "Adversarial Interoperability: Reviving an Elegant Weapon From a More Civilized Age to Slay Today's Monopolies",
    "url": "https://www.eff.org/deeplinks/2019/06/adversarial-interoperability-reviving-elegant-weapon-more-civilized-age-slay",
    "cite": "Cory Doctorow, Deeplinks Blog, Electronic Frontier Foundation, 2019",
@@ -869,13 +1054,6 @@
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "AI Kitcraft workshop, 21–22 Sep 2026",
-   "url": "https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/feedback/2026-09-evidence.md",
-   "cite": "Blyg thread `workshop-kitcraft-2026`",
-   "year": 2026,
-   "area": "Firms, measurement and governance"
-  },
-  {
    "title": "Announcing the Agent2Agent Protocol (A2A)",
    "url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/",
    "cite": "Google Developers Blog, 9 Apr 2025",
@@ -890,6 +1068,14 @@
    "area": "Firms, measurement and governance"
   },
   {
+   "title": "Atoms, Institutions, Blockchains",
+   "url": "https://paragraph.com/@josh-stark/atoms-institutions-blockchains",
+   "cite": "Josh Stark, 2022 (Summer of Protocols edition, 2023)",
+   "year": 2022,
+   "area": "Firms, measurement and governance",
+   "already_read": true
+  },
+  {
    "title": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
    "url": "https://www.nobelprize.org/uploads/2018/06/ostrom_lecture.pdf",
    "cite": "Ostrom, 2009",
@@ -897,61 +1083,45 @@
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "But Who Will Guard the Guardians?",
-   "url": "https://www.nobelprize.org/uploads/2018/06/hurwicz_lecture.pdf",
-   "cite": "Leonid Hurwicz, Nobel Prize Lecture (Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel), delivered December 8, 2007; also published in American Economic Review 98, no. 3 (June 2008): 577-85, 2007",
-   "year": 2007,
+   "title": "Blockchain networks as constitutional and competitive polycentric orders",
+   "url": "https://doi.org/10.1017/S174413742100093X",
+   "cite": "Alston, Law, Murtazashvili, Weiss. J. of Institutional Economics 18(5), 2022",
+   "year": 2022,
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "California water rate data",
-   "url": "https://npc.here.now/waterdatastrategy/",
-   "cite": "Rafael Fernández with the California Data Collaborative",
-   "year": null,
+   "title": "Can Permissionless Blockchains Avoid Governance and the Law?",
+   "url": "https://scholarship.law.nd.edu/ndlsjet/vol2/iss1/1/",
+   "cite": "Alston, Law, Murtazashvili, Weiss. Notre Dame J. on Emerging Tech 2(1), 2021",
+   "year": 2021,
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "Case Study: Ghosts in the System",
-   "url": "https://npcmemo.substack.com/p/case-study-ghosts-in-the-system",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
+   "title": "Constitutions and Blockchains: Competitive Governance of Fundamental Rule Sets",
+   "url": "https://scholarlycommons.law.case.edu/jolti/vol11/iss1/6/",
+   "cite": "Case Western J. of Law, Tech & the Internet 11(1), 2020",
+   "year": 2020,
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "Durable AI Adoption guide (v0.5)",
-   "url": "https://ai.protocolized.dev",
-   "cite": "SIG P4B / Protocol Institute, May 2026",
-   "year": 2026,
+   "title": "Governance as Conflict",
+   "url": "https://blog.block.science/an-introduction-to-governance-as-conflict-constitution-of-shared-values-defining-future-margins-of-disagreement/",
+   "cite": "Eric Alston. MIT Computational Law Report, 2022",
+   "year": 2022,
    "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "Form 8-K: General Instructions",
-   "url": "https://www.sec.gov/files/form8-k.pdf",
-   "cite": "U.S. Securities and Exchange Commission",
-   "year": null,
-   "area": "Firms, measurement and governance",
-   "syllabus_theme": "III. Emissions"
-  },
-  {
-   "title": "Goodhart's Law and Why Measurement is Hard",
-   "url": "https://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measurement-is-hard/",
-   "cite": "David Manheim, Ribbonfarm, 2016",
-   "year": 2016,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "In the Matter of Knight Capital Americas LLC (SEC order)",
-   "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
-   "cite": "U.S. Securities and Exchange Commission, 2013",
-   "year": 2013,
-   "area": "Firms, measurement and governance",
-   "syllabus_theme": "V. Engineering hardness"
   },
   {
    "title": "Job Market Signaling",
    "url": "https://doi.org/10.2307/1882010",
    "cite": "Spence, 1973",
    "year": 1973,
+   "area": "Firms, measurement and governance"
+  },
+  {
+   "title": "Kidney Exchange",
+   "url": "https://doi.org/10.1162/0033553041382157",
+   "cite": "Roth, Sönmez & Ünver, Quarterly Journal of Economics, 2004",
+   "year": 2004,
    "area": "Firms, measurement and governance"
   },
   {
@@ -962,17 +1132,10 @@
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "Liquid Services and Runtime Procurement",
-   "url": "https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "Lost in between Speed and Scale",
-   "url": "https://npcmemo.substack.com/p/lost-in-between-speed-and-scale",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
+   "title": "Legal and Technological Normativity: more (and less) than twin sisters",
+   "url": "https://scholar.lib.vt.edu/ejournals/SPT/v12n3/pdf/hildebrandt.pdf",
+   "cite": "Mireille Hildebrandt, Techné: Research in Philosophy and Technology, vol. 12, no. 3 (Fall 2008), pp. 169–183, 2008",
+   "year": 2008,
    "area": "Firms, measurement and governance"
   },
   {
@@ -991,40 +1154,11 @@
    "syllabus_theme": "VI. Operational liveness"
   },
   {
-   "title": "PDF Hell. Long-live the PDF.",
-   "url": "https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "Rudiments of Numeracy",
-   "url": "https://worrydream.com/refs/Ehrenberg_1977_-_Rudiments_of_Numeracy.pdf",
-   "cite": "Ehrenberg, 1977",
-   "year": 1977,
-   "area": "Firms, measurement and governance"
-  },
-  {
    "title": "Standard Setting Committees: Consensus Governance for Shared Technology Platforms",
    "url": "https://people.bu.edu/tsimcoe/documents/published/SSOCommittees_v3.pdf",
    "cite": "Timothy Simcoe, American Economic Review 102(1): 305-36 (author's self-archived manuscript, Boston University School of Management / NBER), 2012",
    "year": 2012,
    "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
-   "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537",
-   "cite": "Nii, 1986",
-   "year": 1986,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "The Filing Cabinet",
-   "url": "https://placesjournal.org/article/the-filing-cabinet-and-20th-century-information-infrastructure/",
-   "cite": "Robertson, 2021",
-   "year": 2021,
-   "area": "Firms, measurement and governance",
-   "syllabus_theme": "III. Emissions"
   },
   {
    "title": "The Nature of the Firm",
@@ -1041,10 +1175,24 @@
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "The Reading Machine and the Inversion of the Standards Stack",
-   "url": "https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
+   "title": "The Republic of Science: Its Political and Economic Theory",
+   "url": "https://sciencepolicy.colorado.edu/students/envs_5100/polanyi_1967.pdf",
+   "cite": "Michael Polanyi, Minerva 1:54-74, 1962",
+   "year": 1962,
+   "area": "Firms, measurement and governance"
+  },
+  {
+   "title": "The Tyranny of Structurelessness",
+   "url": "https://www.jofreeman.com/joreen/tyranny.htm",
+   "cite": "Jo Freeman (aka Joreen), The Second Wave, Vol. 2 No. 1 (1972); also Berkeley Journal of Sociology, Vol. 17 (1972-73); Ms. magazine (July 1973). Canonical text hosted at jofreeman.com, 1972",
+   "year": 1972,
+   "area": "Firms, measurement and governance"
+  },
+  {
+   "title": "The Use of Knowledge in Society",
+   "url": "https://www.econlib.org/library/Essays/hykKnw.html",
+   "cite": "Hayek, 1945",
+   "year": 1945,
    "area": "Firms, measurement and governance"
   },
   {
@@ -1055,31 +1203,10 @@
    "area": "Firms, measurement and governance"
   },
   {
-   "title": "Understanding Simpson's Paradox",
-   "url": "https://worrydream.com/refs/Pearl_2014_-_Understanding_Simpson%27s_Paradox.pdf",
-   "cite": "Pearl, 2014",
-   "year": 2014,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "User-Generated Software is User-Generated Content",
-   "url": "https://npcmemo.substack.com/p/user-generated-software-is-user-generated",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "What is an Agent is not an Instrument",
-   "url": "https://npcmemo.substack.com/p/what-is-an-agent-is-not-an-instrument",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "Your AI Product Needs Evals",
-   "url": "https://hamel.dev/blog/posts/evals/",
-   "cite": "Husain, 2024",
-   "year": 2024,
+   "title": "What Constitutes a Constitution?",
+   "url": "https://blog.block.science/what-constitutes-a-constitution/",
+   "cite": "Zargham, Alston, Nabben, Ben-Meir. BlockScience, 6 Apr 2023",
+   "year": 2023,
    "area": "Firms, measurement and governance"
   },
   {
@@ -1088,329 +1215,6 @@
    "cite": "rafa, NPC Inc., 2026",
    "year": 2026,
    "area": "Firms, measurement and governance"
-  },
-  {
-   "title": "A History of Haskell, Being Lazy With Class",
-   "url": "https://worrydream.com/refs/Hudak_2007_-_A_History_of_Haskell%2C_Being_Lazy_With_Class.pdf",
-   "cite": "Hudak, 2007",
-   "year": 2007,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "A New Approach to the Functional Design of a New Computer",
-   "url": "https://worrydream.com/refs/Barton_1961_-_A_New_Approach_to_the_Functional_Design_of_a_New_Computer.pdf",
-   "cite": "Barton, 1961",
-   "year": 1961,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "A Structural View of the Cedar Programming Environment",
-   "url": "https://worrydream.com/refs/Swineheart_1986_-_A_Structural_View_of_the_Cedar_Programming_Environment.pdf",
-   "cite": "Swineheart, 1986",
-   "year": 1986,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "A Universal Modular Actor Formalism for Artificial Intelligence",
-   "url": "https://worrydream.com/refs/Hewitt_1973_-_A_Universal_Modular_Actor_Formalism_for_Artificial_Intelligence.pdf",
-   "cite": "Hewitt, 1973",
-   "year": 1973,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Abstraction in Technical Computing",
-   "url": "https://worrydream.com/refs/Bezanson_2015_-_Abstraction_in_Technical_Computing.pdf",
-   "cite": "Bezanson, 2015",
-   "year": 2015,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Alternative Programming Interfaces for Alternative Programmers",
-   "url": "https://worrydream.com/refs/Schachman_2012_-_Alternative_Programming_Interfaces_for_Alternative_Programmers.pdf",
-   "cite": "Schachman, 2012",
-   "year": 2012,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Building Robust Systems",
-   "url": "https://worrydream.com/refs/Sussman_2007_-_Building_Robust_Systems.pdf",
-   "cite": "Sussman, 2007",
-   "year": 2007,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Can Programming Be Liberated from the von Neumann Style",
-   "url": "https://worrydream.com/refs/Backus_1978_-_Can_Programming_Be_Liberated_from_the_von_Neumann_Style.pdf",
-   "cite": "Backus, 1978",
-   "year": 1978,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Contracts: Events",
-   "url": "https://docs.soliditylang.org/en/latest/contracts.html",
-   "cite": "Solidity documentation",
-   "year": null,
-   "area": "Programming and coordination languages",
-   "syllabus_theme": "III. Emissions"
-  },
-  {
-   "title": "Conversational Access to a 2048-Word Machine",
-   "url": "https://worrydream.com/refs/Wilkes_1970_-_Conversational_Access_to_a_2048-Word_Machine.pdf",
-   "cite": "Wilkes, 1970",
-   "year": 1970,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Coordination Languages and their Significance",
-   "url": "https://worrydream.com/refs/Gelernter_1992_-_Coordination_Languages_and_their_Significance.pdf",
-   "cite": "Gelernter, 1992",
-   "year": 1992,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Croquet, A Collaboration System Architecture",
-   "url": "https://worrydream.com/refs/Smith_DA_2003_-_Croquet%2C_A_Collaboration_System_Architecture.pdf",
-   "cite": "Smith DA, 2003",
-   "year": 2003,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Dynamic Program Building",
-   "url": "https://worrydream.com/refs/Brown_1981_-_Dynamic_Program_Building.pdf",
-   "cite": "Brown, 1981",
-   "year": 1981,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Fabrik, A Visual Programming Environment",
-   "url": "https://worrydream.com/refs/Ingalls_1988_-_Fabrik%2C_A_Visual_Programming_Environment.pdf",
-   "cite": "Ingalls, 1988",
-   "year": 1988,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Genera Concepts",
-   "url": "https://worrydream.com/refs/Symbolics_1982_-_Genera_Concepts.pdf",
-   "cite": "Symbolics, 1982",
-   "year": 1982,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Graphical Editing by Example",
-   "url": "https://worrydream.com/refs/Kurlander_1993_-_Graphical_Editing_by_Example.pdf",
-   "cite": "Kurlander, 1993",
-   "year": 1993,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Heuretics, Theoretical and Experimental Study of Heuristic Rules",
-   "url": "https://worrydream.com/refs/Lenat_1982_-_Heuretics%2C_Theoretical_and_Experimental_Study_of_Heuristic_Rules.pdf",
-   "cite": "Lenat, 1982",
-   "year": 1982,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Inform 7, The Program",
-   "url": "https://worrydream.com/refs/Nelson_G_2008_-_Inform_7%2C_The_Program.pdf",
-   "cite": "Nelson G, 2008",
-   "year": 2008,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Korz Simple, Symmetric, Subjective, Context-Oriented Programming",
-   "url": "https://worrydream.com/refs/Ungar_2014_-_Korz_Simple%2C_Symmetric%2C_Subjective%2C_Context-Oriented_Programming.pdf",
-   "cite": "Ungar, 2014",
-   "year": 2014,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Linda in Context",
-   "url": "https://worrydream.com/refs/Carriero_1989_-_Linda_in_Context.pdf",
-   "cite": "Carriero, 1989",
-   "year": 1989,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Out of the Tar Pit",
-   "url": "https://worrydream.com/refs/Moseley_2006_-_Out_of_the_Tar_Pit.pdf",
-   "cite": "Moseley, 2006",
-   "year": 2006,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Playground, An Object Oriented Simulation System with Agent Rules for Children of All Ages",
-   "url": "https://worrydream.com/refs/Fenton_1989_-_Playground%2C_An_Object_Oriented_Simulation_System_with_Agent_Rules_for_Children_of_All_Ages.pdf",
-   "cite": "Fenton, 1989",
-   "year": 1989,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Programming and Programming Languages",
-   "url": "https://worrydream.com/refs/Kay_2010_-_Programming_and_Programming_Languages.pdf",
-   "cite": "Kay, 2010",
-   "year": 2010,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Project Oberon",
-   "url": "https://worrydream.com/refs/Wirth_2005_-_Project_Oberon.pdf",
-   "cite": "Wirth, 2005",
-   "year": 2005,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Propagation Networks",
-   "url": "https://worrydream.com/refs/Radul_2009_-_Propagation_Networks.pdf",
-   "cite": "Radul, 2009",
-   "year": 2009,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Recursive Interfaces for Reactive Objects",
-   "url": "https://worrydream.com/refs/Travers_1994_-_Recursive_Interfaces_for_Reactive_Objects.pdf",
-   "cite": "Travers, 1994",
-   "year": 1994,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Robust Composition",
-   "url": "https://worrydream.com/refs/Miller_2006_-_Robust_Composition.pdf",
-   "cite": "Miller, 2006",
-   "year": 2006,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Robust Design through Diversity",
-   "url": "https://worrydream.com/refs/Sussman_1999_-_Robust_Design_through_Diversity.pdf",
-   "cite": "Sussman, 1999",
-   "year": 1999,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Self (HOPL)",
-   "url": "https://worrydream.com/refs/Ungar_2007_-_Self_%28HOPL%29.pdf",
-   "cite": "Ungar, 2007",
-   "year": 2007,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "STEPS 2012 Progress and Final NSF Report",
-   "url": "https://worrydream.com/refs/Kay_2012_-_STEPS_2012_Progress_and_Final_NSF_Report.pdf",
-   "cite": "Kay, 2012",
-   "year": 2012,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Steps Toward Artificial Intelligence",
-   "url": "https://worrydream.com/refs/Minsky_1961_-_Steps_Toward_Artificial_Intelligence.pdf",
-   "cite": "Minsky, 1961",
-   "year": 1961,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Connection Machine",
-   "url": "https://worrydream.com/refs/Hillis_1985_-_The_Connection_Machine.pdf",
-   "cite": "Hillis, 1985",
-   "year": 1985,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Education of a Computer",
-   "url": "https://worrydream.com/refs/Hopper_1952_-_The_Education_of_a_Computer.pdf",
-   "cite": "Hopper, 1952",
-   "year": 1952,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Interrelation Between Programming Languages and Machine Organization",
-   "url": "https://worrydream.com/refs/Barton_1965_-_The_Interrelation_Between_Programming_Languages_and_Machine_Organization.pdf",
-   "cite": "Barton, 1965",
-   "year": 1965,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The New Culture of Software Development",
-   "url": "https://worrydream.com/refs/Meyer_1989_-_The_New_Culture_of_Software_Development.pdf",
-   "cite": "Meyer, 1989",
-   "year": 1989,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Next 700 Programming Languages",
-   "url": "https://worrydream.com/refs/Landin_1966_-_The_Next_700_Programming_Languages.pdf",
-   "cite": "Landin, 1966",
-   "year": 1966,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The operating system, should there be one",
-   "url": "https://worrydream.com/refs/Kell_2013_-_The_operating_system%2C_should_there_be_one.pdf",
-   "cite": "Kell, 2013",
-   "year": 2013,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Programming Language Aspects of ThingLab",
-   "url": "https://worrydream.com/refs/Borning_1981_-_The_Programming_Language_Aspects_of_ThingLab.pdf",
-   "cite": "Borning, 1981",
-   "year": 1981,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Smalltalk-76 Programming System",
-   "url": "https://worrydream.com/refs/Ingalls_1978_-_The_Smalltalk-76_Programming_System.pdf",
-   "cite": "Ingalls, 1978",
-   "year": 1978,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Structure of a Programming Language Revolution",
-   "url": "https://worrydream.com/refs/Gabriel_2012_-_The_Structure_of_a_Programming_Language_Revolution.pdf",
-   "cite": "Gabriel, 2012",
-   "year": 2012,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "The Structure of Cedar",
-   "url": "https://worrydream.com/refs/Swinehart_1985_-_The_Structure_of_Cedar.pdf",
-   "cite": "Swinehart, 1985",
-   "year": 1985,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Tools for the New Culture",
-   "url": "https://worrydream.com/refs/Meyer_1990_-_Tools_for_the_New_Culture.pdf",
-   "cite": "Meyer, 1990",
-   "year": 1990,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Venture, a higher-order probabilistic programming platform with programmable inference",
-   "url": "https://worrydream.com/refs/Mansinghka_2014_-_Venture%2C_a_higher-order_probabilistic_programming_platform_with_programmable_inference.pdf",
-   "cite": "Mansinghka, 2014",
-   "year": 2014,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Why AM and Eurisko Appear to Work",
-   "url": "https://worrydream.com/refs/Lenat_1983_-_Why_AM_and_Eurisko_Appear_to_Work.pdf",
-   "cite": "Lenat, 1983",
-   "year": 1983,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "Why Functional Programming Matters",
-   "url": "https://worrydream.com/refs/Hughes_1990_-_Why_Functional_Programming_Matters.pdf",
-   "cite": "Hughes, 1990",
-   "year": 1990,
-   "area": "Programming and coordination languages"
-  },
-  {
-   "title": "[INTERNAL DRAFT] Protocol-First Operations Management",
-   "url": "https://npcmemo.substack.com/p/internal-draft-protocol-first-operations",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Protocols and agents"
   },
   {
    "title": "A Phenomenology of Protocols",
@@ -1462,13 +1266,6 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Addressable Space Appendix [serialized], part 6 of 6",
-   "url": "https://summerofprotocols.com/wp-content/uploads/2024/09/55-e75-HART-M5-AP7-8-for-web.pdf",
-   "cite": "Chenoe Hart, Summer of Protocols, 2024",
-   "year": 2024,
-   "area": "Protocols and agents"
-  },
-  {
    "title": "After the Swarm: We are Blooming",
    "url": "https://npcmemo.substack.com/p/bloom",
    "cite": "rafa, NPC Inc., 2026",
@@ -1476,31 +1273,23 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Agent-Shaped Problems",
-   "url": "https://npcmemo.substack.com/p/agent-shaped-problems",
-   "cite": "rafa, NPC Inc., 2026",
+   "title": "Agents are actors",
+   "url": "https://newsletter.squishy.computer/p/agents-are-actors",
+   "cite": "Gordon Brander, Squishy Computer, 2026",
    "year": 2026,
    "area": "Protocols and agents"
   },
   {
-   "title": "Atoms, Institutions, Blockchains",
-   "url": "https://paragraph.com/@josh-stark/atoms-institutions-blockchains",
-   "cite": "Josh Stark, 2022 (Summer of Protocols edition, 2023)",
-   "year": 2022,
-   "area": "Protocols and agents",
-   "already_read": true
+   "title": "Beyond Szabo Scaling",
+   "url": "https://contraptions.venkateshrao.com/p/beyond-szabo-scaling",
+   "cite": "Contraptions, 11 Sep 2025",
+   "year": 2025,
+   "area": "Protocols and agents"
   },
   {
    "title": "Birdwatch: Crowd Wisdom and Bridging Algorithms can Inform Understanding and Reduce the Spread of Misinformation",
    "url": "https://arxiv.org/abs/2210.15723",
    "cite": "Wojcik et al., 2022",
-   "year": 2022,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Blockchain networks as constitutional and competitive polycentric orders",
-   "url": "https://doi.org/10.1017/S174413742100093X",
-   "cite": "Alston, Law, Murtazashvili, Weiss. J. of Institutional Economics 18(5), 2022",
    "year": 2022,
    "area": "Protocols and agents"
   },
@@ -1512,20 +1301,6 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Can Permissionless Blockchains Avoid Governance and the Law?",
-   "url": "https://scholarship.law.nd.edu/ndlsjet/vol2/iss1/1/",
-   "cite": "Alston, Law, Murtazashvili, Weiss. Notre Dame J. on Emerging Tech 2(1), 2021",
-   "year": 2021,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "CEO Memorandum: A Summary of NPC Inc. \"Management Theory\"",
-   "url": "https://npcmemo.substack.com/p/ceo-memorandum-a-summary-of-npc-inc",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Protocols and agents"
-  },
-  {
    "title": "Challenges: Trivial, Grand, and Whitehead",
    "url": "https://protocolized.summerofprotocols.com/p/challenges-trivial-grand-and-whitehead",
    "cite": "Venkatesh Rao, Protocolized, 2026",
@@ -1533,10 +1308,10 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Constitutions and Blockchains: Competitive Governance of Fundamental Rule Sets",
-   "url": "https://scholarlycommons.law.case.edu/jolti/vol11/iss1/6/",
-   "cite": "Case Western J. of Law, Tech & the Internet 11(1), 2020",
-   "year": 2020,
+   "title": "Computational Kindness",
+   "url": "https://neilkakkar.com/computational-kindness.html",
+   "cite": "Neil Kakkar, neilkakkar.com (personal blog), 2019",
+   "year": 2019,
    "area": "Protocols and agents"
   },
   {
@@ -1554,9 +1329,9 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Eisenstein’s Spine and Technology Stabilization",
-   "url": "https://npcmemo.substack.com/p/eisensteins-spine-and-technology",
-   "cite": "rafa, NPC Inc., 2026",
+   "title": "Ethical AI Monogamy…?",
+   "url": "https://default.blog/p/ethical-ai-monogamy",
+   "cite": "Katherine Dee, default.blog, 2026",
    "year": 2026,
    "area": "Protocols and agents"
   },
@@ -1565,27 +1340,6 @@
    "url": "https://summerofprotocols.com/research/exit-to-protocol",
    "cite": "Shuya Gong / SoP",
    "year": null,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Exit to Protocol, part 1 of 2",
-   "url": "https://summerofprotocols.com/wp-content/uploads/2024/03/Exit-to-Protocol-Shuya-Gong.pdf",
-   "cite": "Shuya Gong, Summer of Protocols, 2024",
-   "year": 2024,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Finding Fault Lines within the Firm",
-   "url": "https://protocolized.summerofprotocols.com/p/finding-fault-lines-within-the-firm",
-   "cite": "Rafael Fernández / Protocolized, 11 Jan 2026",
-   "year": 2026,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Governance as Conflict",
-   "url": "https://blog.block.science/an-introduction-to-governance-as-conflict-constitution-of-shared-values-defining-future-margins-of-disagreement/",
-   "cite": "Eric Alston. MIT Computational Law Report, 2022",
-   "year": 2022,
    "area": "Protocols and agents"
   },
   {
@@ -1607,6 +1361,13 @@
    "url": "https://contraptions.venkateshrao.com/p/in-search-of-hardness",
    "cite": "Venkatesh Rao / Contraptions, 16 Dec 2023",
    "year": 2023,
+   "area": "Protocols and agents"
+  },
+  {
+   "title": "Interaction ruling animal collective behavior depends on topological rather than metric distance",
+   "url": "https://www.pnas.org/doi/10.1073/pnas.0711437105",
+   "cite": "Ballerini et al., PNAS, 2008",
+   "year": 2008,
    "area": "Protocols and agents"
   },
   {
@@ -1638,31 +1399,17 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Killswitch Protocols, or On Engineering Recursive System Death",
-   "url": "https://summerofprotocols.com/uncategorized/killswitch-protocols",
-   "cite": "Alston, Killian, David / SoP, 2024",
+   "title": "Massed Muddler Intelligence",
+   "url": "https://contraptions.venkateshrao.com/p/massed-muddler-intelligence",
+   "cite": "Contraptions, 11 Feb 2024",
    "year": 2024,
    "area": "Protocols and agents"
   },
   {
-   "title": "Legal and Technological Normativity: more (and less) than twin sisters",
-   "url": "https://scholar.lib.vt.edu/ejournals/SPT/v12n3/pdf/hildebrandt.pdf",
-   "cite": "Mireille Hildebrandt, Techné: Research in Philosophy and Technology, vol. 12, no. 3 (Fall 2008), pp. 169–183, 2008",
-   "year": 2008,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Managing the Water, Not the Ship",
-   "url": "https://npcmemo.substack.com/p/managing-the-water-not-the-ship",
-   "cite": "rafa, NPC Inc., 2026",
+   "title": "Methods, Madness, Monsters and Magic in New Nature",
+   "url": "https://protocolized.summerofprotocols.com/p/methods-madness-monsters-and-magic",
+   "cite": "Venkatesh Rao, Protocolized, 2026",
    "year": 2026,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Mechanical Currents",
-   "url": "https://protocolized.summerofprotocols.com/p/mechanical-currents",
-   "cite": "Timber Stinson-Schroff / Protocolized, 9 Sep 2025",
-   "year": 2025,
    "area": "Protocols and agents"
   },
   {
@@ -1670,8 +1417,7 @@
    "url": "https://modelcontextprotocol.io/specification/latest",
    "cite": "modelcontextprotocol.io, 2024–",
    "year": 2024,
-   "area": "Protocols and agents",
-   "syllabus_theme": "I. What agents are, in practice"
+   "area": "Protocols and agents"
   },
   {
    "title": "Nature's many attempts to evolve a Nostr",
@@ -1695,11 +1441,12 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "One Tension to Rule Them All (Issue #2: Beyond Trade-Offs)",
-   "url": "https://protocolized.summerofprotocols.com/p/one-tension-to-rule-them-all",
-   "cite": "Timber Stinson-Schroff / Protocolized, 14 Feb 2025",
-   "year": 2025,
-   "area": "Protocols and agents"
+   "title": "Patterns and problems in multiagent systems",
+   "url": "https://www.anthropic.com/research/multiagent-systems",
+   "cite": "Anthropic, 2026",
+   "year": 2026,
+   "area": "Protocols and agents",
+   "syllabus_theme": "I. Working alongside agents"
   },
   {
    "title": "Protocol Bicorder",
@@ -1730,13 +1477,6 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Protocol Review 6: Public-Key Cryptography",
-   "url": "https://npcmemo.substack.com/p/protocol-review-6-public-key-cryptography",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Protocols and agents"
-  },
-  {
    "title": "Protocol Symposium 2026 Registration Open",
    "url": "https://protocolized.summerofprotocols.com/p/protocol-symposium-2026-registration",
    "cite": "Venkatesh Rao, Protocolized, 2026",
@@ -1751,13 +1491,6 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Reconceptualizing Organizational Routines as a Source of Flexibility and Change",
-   "url": "https://escholarship.org/uc/item/6rb6f923",
-   "cite": "Feldman & Pentland, ASQ 48(1), 2003",
-   "year": 2003,
-   "area": "Protocols and agents"
-  },
-  {
    "title": "Safe New World, part 2 of 3",
    "url": "https://summerofprotocols.com/wp-content/uploads/2024/06/10-e36-SCHROFF-2-PAGER.pdf",
    "cite": "Timber Schroff, Summer of Protocols, 2024",
@@ -1768,13 +1501,6 @@
    "title": "Securing Stigmergic Systems",
    "url": "https://protocolized.summerofprotocols.com/p/securing-stigmergic-systems",
    "cite": "Patrick Nast, Protocolized, 2026",
-   "year": 2026,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "Security incident disclosure — July 2026",
-   "url": "https://huggingface.co/blog/security-incident-july-2026",
-   "cite": "Hugging Face, 2026",
    "year": 2026,
    "area": "Protocols and agents"
   },
@@ -1793,13 +1519,6 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Standards Make the World",
-   "url": "https://summerofprotocols.com/research/standards-make-the-world",
-   "cite": "David Lang / SoP, Dec 2023",
-   "year": 2023,
-   "area": "Protocols and agents"
-  },
-  {
    "title": "Stigmergy as a generic mechanism for coordination",
    "url": "https://scispace.com/pdf/stigmergy-as-a-generic-mechanism-for-coordination-definition-1pga56yrns.pdf",
    "cite": "Francis Heylighen, ECCO WP 2011-12",
@@ -1807,10 +1526,17 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "The Ethnography of Infrastructure",
-   "url": "https://journals.sagepub.com/doi/10.1177/00027649921955326",
-   "cite": "Susan Leigh Star, American Behavioral Scientist 43(3), 1999",
-   "year": 1999,
+   "title": "Substrate-Mediated Convergence and the Loss of Epistemic Self-Correction",
+   "url": "https://npcmemo.substack.com/p/substrate-mediated-convergence-and",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Protocols and agents"
+  },
+  {
+   "title": "Tag Yourself: NPCs, Punks, Sheep, and Schizos",
+   "url": "https://npcmemo.substack.com/p/tag-yourself-npcs-punks-sheep-and",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
    "area": "Protocols and agents"
   },
   {
@@ -1818,14 +1544,27 @@
    "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
    "cite": "OpenAI, 2026",
    "year": 2026,
-   "area": "Protocols and agents",
-   "syllabus_theme": "I. What agents are, in practice"
+   "area": "Protocols and agents"
+  },
+  {
+   "title": "The Information Bus: An Architecture for Extensible Distributed Systems",
+   "url": "https://doi.org/10.1145/168619.168624",
+   "cite": "Oki, Pfluegl, Siegel & Skeen, 1993",
+   "year": 1993,
+   "area": "Protocols and agents"
   },
   {
    "title": "The Kafka Index",
    "url": "https://summerofprotocols.com/wp-content/uploads/2024/04/Kafka-Index-Nadia-Asparouhova-1.pdf",
    "cite": "Nadia Asparouhova / SoP, 2024",
    "year": 2024,
+   "area": "Protocols and agents"
+  },
+  {
+   "title": "The Principles of Collective Animal Behaviour",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1626537/",
+   "cite": "Sumpter, 2006",
+   "year": 2006,
    "area": "Protocols and agents"
   },
   {
@@ -1845,13 +1584,6 @@
   {
    "title": "The Swarm and the Formation, part 1 of 4",
    "url": "https://summerofprotocols.com/wp-content/uploads/2024/06/17-e43-FERNANDEZ.pdf",
-   "cite": "Rafael Fernández, Summer of Protocols, 2024",
-   "year": 2024,
-   "area": "Protocols and agents"
-  },
-  {
-   "title": "The Swarm and the Formation, part 4 of 4",
-   "url": "https://summerofprotocols.com/wp-content/uploads/2024/06/FERNANDEZ-Flow-speculative-brochure.pdf",
    "cite": "Rafael Fernández, Summer of Protocols, 2024",
    "year": 2024,
    "area": "Protocols and agents"
@@ -1885,17 +1617,24 @@
    "area": "Protocols and agents"
   },
   {
-   "title": "Welcome to the Swarm",
-   "url": "https://npcmemo.substack.com/p/welcome-to-the-swarm",
-   "cite": "rafa, NPC Inc., 2026",
+   "title": "Walter Mitty Effects in AI Incident Analyses",
+   "url": "https://contraptions.venkateshrao.com/p/walter-mitty-effects-in-ai-incident",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
    "year": 2026,
    "area": "Protocols and agents"
   },
   {
-   "title": "What Constitutes a Constitution?",
-   "url": "https://blog.block.science/what-constitutes-a-constitution/",
-   "cite": "Zargham, Alston, Nabben, Ben-Meir. BlockScience, 6 Apr 2023",
+   "title": "We Just Have to Set Up the Planetary Dev Environment",
+   "url": "https://contraptions.venkateshrao.com/p/we-just-have-to-set-up-the-planetary",
+   "cite": "Contraptions, 22 Dec 2023",
    "year": 2023,
+   "area": "Protocols and agents"
+  },
+  {
+   "title": "Welcome to the Swarm",
+   "url": "https://npcmemo.substack.com/p/welcome-to-the-swarm",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
    "area": "Protocols and agents"
   },
   {
@@ -1914,6 +1653,20 @@
    "syllabus_theme": "VI. Operational liveness"
   },
   {
+   "title": "A Surgical Safety Checklist to Reduce Morbidity and Mortality in a Global Population",
+   "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa0810119",
+   "cite": "Haynes et al., New England Journal of Medicine, 2009",
+   "year": 2009,
+   "area": "Safety, reporting and oversight"
+  },
+  {
+   "title": "About the Universal Postal Union",
+   "url": "https://www.upu.int/en/universal-postal-union/about-upu",
+   "cite": "Universal Postal Union, founded 1874",
+   "year": 1874,
+   "area": "Safety, reporting and oversight"
+  },
+  {
    "title": "Aviation Safety Reporting System: program summary",
    "url": "https://asrs.arc.nasa.gov/overview/summary.html",
    "cite": "NASA Ames for the FAA; established April 1976",
@@ -1922,32 +1675,25 @@
    "syllabus_theme": "III. Emissions"
   },
   {
+   "title": "California water rate data",
+   "url": "https://npc.here.now/waterdatastrategy/",
+   "cite": "Rafael Fernández with the California Data Collaborative",
+   "year": null,
+   "area": "Safety, reporting and oversight"
+  },
+  {
    "title": "Columbia Accident Investigation Board Report, Volume One",
    "url": "https://ntrs.nasa.gov/citations/20030093634",
    "cite": "Columbia Accident Investigation Board, 2003",
    "year": 2003,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "IV. Seeing hardness in incidents"
+   "syllabus_theme": "IV. Seeing hardness"
   },
   {
-   "title": "Coordinate Leadership",
-   "url": "https://blundercheck.timberschroff.com/p/coordinate-leadership",
-   "cite": "Timber Stinson-Schroff, Blundercheck, 2025",
-   "year": 2025,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "Deming's 14 Points",
-   "url": "https://deming.org/explore/fourteen-points/",
-   "cite": "The W. Edwards Deming Institute",
-   "year": null,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "DOE-HDBK-1028-2009, Human Performance Improvement Handbook, Vol. 1",
-   "url": "https://www.energy.gov/sites/default/files/2026-04/doe-hdbk-1028-2009_volume1_0.pdf",
-   "cite": "US Department of Energy, June 2009",
-   "year": 2009,
+   "title": "Consent Order: Wells Fargo Bank, N.A.",
+   "url": "https://files.consumerfinance.gov/f/documents/092016_cfpb_WFBconsentorder.pdf",
+   "cite": "Consumer Financial Protection Bureau, 2016",
+   "year": 2016,
    "area": "Safety, reporting and oversight"
   },
   {
@@ -1956,20 +1702,28 @@
    "cite": "BEA, 2012",
    "year": 2012,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "IV. Seeing hardness in incidents"
+   "syllabus_theme": "IV. Seeing hardness"
   },
   {
-   "title": "How Complex Systems Fail",
-   "url": "https://how.complexsystems.fail/",
-   "cite": "Richard I. Cook, 1998",
-   "year": 1998,
+   "title": "Five cases in data coordination",
+   "url": "https://npc.here.now/waterdataexploration/",
+   "cite": "Protocols for Business case study, 2026",
+   "year": 2026,
    "area": "Safety, reporting and oversight"
   },
   {
-   "title": "Infrastructure of Firm Control",
-   "url": "https://npcmemo.substack.com/p/infrastructure-of-firm-control",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
+   "title": "Form 8-K: General Instructions",
+   "url": "https://www.sec.gov/files/form8-k.pdf",
+   "cite": "U.S. Securities and Exchange Commission",
+   "year": null,
+   "area": "Safety, reporting and oversight",
+   "syllabus_theme": "III. Emissions"
+  },
+  {
+   "title": "In the Matter of Knight Capital Americas LLC (SEC order)",
+   "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
+   "cite": "U.S. Securities and Exchange Commission, 2013",
+   "year": 2013,
    "area": "Safety, reporting and oversight"
   },
   {
@@ -1987,18 +1741,12 @@
    "area": "Safety, reporting and oversight"
   },
   {
-   "title": "Normal Accidents: Living with High Risk Technologies",
-   "url": "https://press.princeton.edu/books/paperback/9780691004129/normal-accidents",
-   "cite": "Charles Perrow; Princeton UP, 1984, updated edition 1999",
-   "year": 1984,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "Organization Design: An Information Processing View",
-   "url": "https://doi.org/10.1287/inte.4.3.28",
-   "cite": "Galbraith, 1974",
-   "year": 1974,
-   "area": "Safety, reporting and oversight"
+   "title": "Loss of Thrust in Both Engines After Encountering a Flock of Birds and Subsequent Ditching on the Hudson River, US Airways Flight 1549",
+   "url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/AAR1003.pdf",
+   "cite": "NTSB, 2010",
+   "year": 2010,
+   "area": "Safety, reporting and oversight",
+   "syllabus_theme": "IV. Seeing hardness"
   },
   {
    "title": "Out Front on Airline Safety: Two Decades of Continuous Evolution",
@@ -2013,440 +1761,74 @@
    "cite": "Google SRE book, ch. 15",
    "year": null,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "IV. Seeing hardness in incidents"
+   "syllabus_theme": "VI. Operational liveness"
   },
   {
-   "title": "Report of the President's Commission on the Accident at Three Mile Island (Kemeny Report)",
+   "title": "Read-back or hear-back",
+   "url": "https://skybrary.aero/articles/read-back-or-hear-back",
+   "cite": "SKYbrary",
+   "year": null,
+   "area": "Safety, reporting and oversight"
+  },
+  {
+   "title": "Report of the President’s Commission on the Accident at Three Mile Island",
    "url": "http://www.pddoc.com/tmi2/kemeny/attitudes_and_practices.htm",
    "cite": "October 1979, \"Attitudes and Practices\"",
    "year": 1979,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "IV. Seeing hardness in incidents"
+   "syllabus_theme": "IV. Seeing hardness"
   },
   {
-   "title": "Resource Management on the Flight Deck (NASA CP-2120)",
-   "url": "https://ntrs.nasa.gov/citations/19800013796",
-   "cite": "Cooper, White & Lauber, eds., 1980",
-   "year": 1980,
+   "title": "RSS 2.0 Specification",
+   "url": "https://www.rssboard.org/rss-specification",
+   "cite": "RSS Advisory Board, 2003",
+   "year": 2003,
    "area": "Safety, reporting and oversight"
   },
   {
-   "title": "Safe New World",
-   "url": "https://summerofprotocols.com/safe-new-world-web",
-   "cite": "SoP Module Three, web 8 Aug 2024",
-   "year": 2024,
+   "title": "Seven precedents for water rate discovery",
+   "url": "https://npc.here.now/waterdatadiscoverycases/",
+   "cite": "Protocols for Business case study, 2026",
+   "year": 2026,
    "area": "Safety, reporting and oversight"
   },
   {
-   "title": "Safe New World, part 1 of 3",
-   "url": "https://summerofprotocols.com/wp-content/uploads/2024/04/Safe-New-World-Timber-Stinson-Schroff.pdf",
-   "cite": "Timber Schroff, Summer of Protocols, 2024",
-   "year": 2024,
+   "title": "The Checklist",
+   "url": "https://www.newyorker.com/magazine/2007/12/10/the-checklist",
+   "cite": "Gawande, The New Yorker, 2007",
+   "year": 2007,
+   "area": "Safety, reporting and oversight"
+  },
+  {
+   "title": "The Montreal Protocol on Substances that Deplete the Ozone Layer",
+   "url": "https://ozone.unep.org/treaties/montreal-protocol",
+   "cite": "UNEP Ozone Secretariat, 1987",
+   "year": 1987,
    "area": "Safety, reporting and oversight"
   },
   {
    "title": "The Self-Designing High-Reliability Organization: Aircraft Carrier Flight Operations at Sea",
    "url": "https://digital-commons.usnwc.edu/nwc-review/vol40/iss4/7/",
-   "cite": "Rochlin, La Porte & Roberts, *Naval War College Review* 40(4), 1987",
+   "cite": "Rochlin, La Porte & Roberts, Naval War College Review 40(4), 1987",
    "year": 1987,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "The Tragedy-Fueled Step Function",
-   "url": "https://blundercheck.timberschroff.com/p/the-tragedy-fueled-step-function",
-   "cite": "Blundercheck, 8 Jun 2023",
-   "year": 2023,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "Toyota Production System",
-   "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
-   "cite": "Toyota Motor Corporation",
-   "year": null,
    "area": "Safety, reporting and oversight",
-   "syllabus_theme": "VI. Operational liveness"
+   "syllabus_theme": "IV. Seeing hardness"
   },
   {
-   "title": "WHO Surgical Safety Checklist, with Haynes et al., NEJM 2009",
+   "title": "The Toyota Group and the Aisin Fire",
+   "url": "https://sloanreview.mit.edu/article/the-toyota-group-and-the-aisin-fire/",
+   "cite": "Nishiguchi & Beaudet, MIT Sloan Management Review, 1998",
+   "year": 1998,
+   "area": "Safety, reporting and oversight",
+   "syllabus_theme": "IV. Seeing hardness"
+  },
+  {
+   "title": "WHO Surgical Safety Checklist",
    "url": "https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery/tool-and-resources",
    "cite": "WHO: https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery/tool-and-resources",
    "year": null,
    "area": "Safety, reporting and oversight",
    "syllabus_theme": "V. Engineering hardness"
-  },
-  {
-   "title": "Working in Practice but Not in Theory: Theoretical Challenges of \"High-Reliability Organizations\"",
-   "url": "https://polisci.berkeley.edu/sites/default/files/people/u3825/LaPorte-WorkinginPracticebutNotinTheory.pdf",
-   "cite": "La Porte & Consolini, *J-PART* 1(1), 1991",
-   "year": 1991,
-   "area": "Safety, reporting and oversight"
-  },
-  {
-   "title": "A Camera, Not an Engine II",
-   "url": "https://contraptions.venkateshrao.com/p/a-camera-not-an-engine-ii",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "A Jury of Mirrors",
-   "url": "https://blundercheck.timberschroff.com/p/a-jury-of-mirrors",
-   "cite": "Timber, Blundercheck, 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "A New Composite Sovereign: The Model (LLM) Against the Historical Archetypes of Authority",
-   "url": "https://npcmemo.substack.com/p/a-new-composite-sovereign-the-model",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "A Tale of Two Theories (of Coordination)",
-   "url": "https://contraptions.venkateshrao.com/p/a-tale-of-two-theories-of-coordination",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Agents are actors",
-   "url": "https://newsletter.squishy.computer/p/agents-are-actors",
-   "cite": "Gordon Brander, Squishy Computer, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Archimedes' Curse",
-   "url": "https://blundercheck.timberschroff.com/p/archimedes-curse-indirection-as-a",
-   "cite": "Timber, Blundercheck, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Beyond Leverage",
-   "url": "https://blundercheck.timberschroff.com/p/beyond-leverage",
-   "cite": "Timber, Blundercheck, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Beyond Szabo Scaling",
-   "url": "https://contraptions.venkateshrao.com/p/beyond-szabo-scaling",
-   "cite": "Contraptions, 11 Sep 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Can the (Social) Oobleck Dance?",
-   "url": "https://contraptions.venkateshrao.com/p/can-the-social-oobleck-dance",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Cascade of Singularities",
-   "url": "https://default.blog/p/cascade-of-singularities",
-   "cite": "Andrey Mir, default.blog, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Cognitive Ergonomics",
-   "url": "https://blundercheck.timberschroff.com/p/cognitive-ergonomics",
-   "cite": "Timber, Blundercheck, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Cognitive Farmsteading",
-   "url": "https://contraptions.venkateshrao.com/p/cognitive-farmsteading",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Computational Kindness",
-   "url": "https://neilkakkar.com/computational-kindness.html",
-   "cite": "Neil Kakkar, neilkakkar.com (personal blog), 2019",
-   "year": 2019,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Coordination Headwinds",
-   "url": "https://contraptions.venkateshrao.com/p/coordination-headwinds",
-   "cite": "Venkatesh Rao, Contraptions, 2021",
-   "year": 2021,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Death of the Owner's Manual",
-   "url": "https://blundercheck.timberschroff.com/p/liquid-content",
-   "cite": "Blundercheck, 6 Aug 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Designing Freedom",
-   "url": "https://systemsorienteddesign.net/wp-content/uploads/2022/10/Designing-Freedom_Staford-Beer.pdf",
-   "cite": "Beer, 1973",
-   "year": 1973,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Durable AI Adoption",
-   "url": "https://protocolized.summerofprotocols.com/p/durable-ai-adoption",
-   "cite": "Sachin Benny and Rafael Fernández / Protocolized, 25 Jun 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "EA Safety",
-   "url": "https://contraptions.venkateshrao.com/p/ea-safety",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Ethical AI Monogamy…?",
-   "url": "https://default.blog/p/ethical-ai-monogamy",
-   "cite": "Katherine Dee, default.blog, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Everyone Is On Something",
-   "url": "https://summerlightning.substack.com/p/everyone-is-on-something",
-   "cite": "Sachin, Summer Lightning, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Human Cumulative Cultural Evolution as a Form of Distributed Computation",
-   "url": "https://worrydream.com/refs/Smaldino_2013_-_Human_Cumulative_Cultural_Evolution_as_a_Form_of_Distributed_Computation.pdf",
-   "cite": "Smaldino, 2013",
-   "year": 2013,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Humanism without (All) Humans",
-   "url": "https://contraptions.venkateshrao.com/p/humanism-without-all-humans",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "I Have No Words and I Must Design",
-   "url": "https://worrydream.com/refs/Costikyan_2002_-_I_Have_No_Words_and_I_Must_Design.pdf",
-   "cite": "Costikyan, 2002",
-   "year": 2002,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Ironies of Automation",
-   "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
-   "cite": "Bainbridge, 1983",
-   "year": 1983,
-   "area": "Scaling, automation and coordination",
-   "syllabus_theme": "I. What agents are, in practice"
-  },
-  {
-   "title": "Leverage Points: Places to Intervene in a System",
-   "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/",
-   "cite": "Donella H. Meadows, Whole Earth (Winter 1997) as 'Places to Intervene in a System'; revised version published by the Sustainability Institute, 1999; archived by the Donella Meadows Project / Academy for Systems Change, 1999",
-   "year": 1999,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "LLMs Pre-Commodify Ideas",
-   "url": "https://summerlightning.substack.com/p/llms-pre-commodify-ideas",
-   "cite": "Sachin, Summer Lightning, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Maintaining Everything That Matters",
-   "url": "https://protocolized.summerofprotocols.com/p/maintaining-everything-that-matters",
-   "cite": "Matthew McDowell-Sweet, Protocolized, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Massed Muddler Intelligence",
-   "url": "https://contraptions.venkateshrao.com/p/massed-muddler-intelligence",
-   "cite": "Contraptions, 11 Feb 2024",
-   "year": 2024,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Mesolomania",
-   "url": "https://blundercheck.timberschroff.com/p/mesolomania",
-   "cite": "Timber, Blundercheck, 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Methods, Madness, Monsters and Magic in New Nature",
-   "url": "https://protocolized.summerofprotocols.com/p/methods-madness-monsters-and-magic",
-   "cite": "Venkatesh Rao, Protocolized, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Miscellanea + Housekeeping Notes",
-   "url": "https://blundercheck.timberschroff.com/p/miscellanea-housekeeping-notes",
-   "cite": "Timber, Blundercheck, 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Pace Layering: How Complex Systems Learn and Keep Learning",
-   "url": "https://longnow.org/ideas/pace-layers/",
-   "cite": "Stewart Brand, Originally a chapter in The Clock of the Long Now: Time and Responsibility (Basic Books, 1999); republished in Journal of Design and Science (MIT Press, January 17, 2018); archived on Long Now Foundation Ideas, 1999",
-   "year": 1999,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Patterns and problems in multiagent systems",
-   "url": "https://www.anthropic.com/research/multiagent-systems",
-   "cite": "Anthropic, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination",
-   "syllabus_theme": "I. What agents are, in practice"
-  },
-  {
-   "title": "Phreaks, Packets and Prompts",
-   "url": "https://summerlightning.substack.com/p/phreaks-packets-and-prompts",
-   "cite": "Sachin, Summer Lightning, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Pond brains and GPT-4",
-   "url": "https://newsletter.squishy.computer/p/pond-brains-and-gpt-4",
-   "cite": "Gordon Brander, Squishy Computer, 2023",
-   "year": 2023,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Reengineering Work: Don't Automate, Obliterate",
-   "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
-   "cite": "Hammer, 1990",
-   "year": 1990,
-   "area": "Scaling, automation and coordination",
-   "syllabus_theme": "VI. Operational liveness"
-  },
-  {
-   "title": "Software Acceleration and Desynchronization",
-   "url": "https://ferd.ca/software-acceleration-and-desynchronization.html",
-   "cite": "Fred Hébert (mononcqc), ferd.ca — \"My bad opinions\", 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Stop Treating Your Problems with Insecticide",
-   "url": "https://blundercheck.timberschroff.com/p/stop-treating-your-problems-with",
-   "cite": "Timber, Blundercheck, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Substack note on p(doom) and real risk management",
-   "url": "https://substack.com/@contraptions/note/c-333747644",
-   "cite": "Venkatesh Rao, Contraptions, 10 Sep 2026 (public Substack note)",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Substrate-Mediated Convergence and the Loss of Epistemic Self-Correction",
-   "url": "https://npcmemo.substack.com/p/substrate-mediated-convergence-and",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Systems Thinking is Brain Rot for Analysts",
-   "url": "https://blundercheck.timberschroff.com/p/systems-thinking-is-brain-rot-for",
-   "cite": "Timber, Blundercheck, 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Tag Yourself: NPCs, Punks, Sheep, and Schizos",
-   "url": "https://npcmemo.substack.com/p/tag-yourself-npcs-punks-sheep-and",
-   "cite": "rafa, NPC Inc., 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "The Accelerationist Case for Frontier Pacing",
-   "url": "https://contraptions.venkateshrao.com/p/the-accelerationist-case-for-frontier",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "The Crooked Timber of AI",
-   "url": "https://protocolized.summerofprotocols.com/p/the-crooked-timber-of-ai",
-   "cite": "Venkatesh Rao, Protocolized, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "The Curiously Playable Universe",
-   "url": "https://contraptions.venkateshrao.com/p/the-curiously-playable-universe",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "The need for basic research in industry",
-   "url": "https://worrydream.com/refs/Goldman_1975_-_The_need_for_basic_research_in_industry.pdf",
-   "cite": "Goldman, 1975",
-   "year": 1975,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "The Use of Knowledge in Society",
-   "url": "https://www.econlib.org/library/Essays/hykKnw.html",
-   "cite": "Hayek, 1945",
-   "year": 1945,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Toward a Critical Technical Practice: Lessons Learned in Trying to Reform AI",
-   "url": "https://pages.gseis.ucla.edu/faculty/agre/critical.html",
-   "cite": "Philip E. Agre, Chapter in Geof Bowker, Les Gasser, Leigh Star, and Bill Turner (eds), Bridging the Great Divide: Social Science, Technical Systems, and Cooperative Work, Lawrence Erlbaum, 1997",
-   "year": 1997,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Voice of the Turtle",
-   "url": "https://worrydream.com/refs/Lenat_2008_-_Voice_of_the_Turtle.pdf",
-   "cite": "Lenat, 2008",
-   "year": 2008,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Walter Mitty Effects in AI Incident Analyses",
-   "url": "https://contraptions.venkateshrao.com/p/walter-mitty-effects-in-ai-incident",
-   "cite": "Venkatesh Rao, Contraptions, 2026",
-   "year": 2026,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "We Just Have to Set Up the Planetary Dev Environment",
-   "url": "https://contraptions.venkateshrao.com/p/we-just-have-to-set-up-the-planetary",
-   "cite": "Contraptions, 22 Dec 2023",
-   "year": 2023,
-   "area": "Scaling, automation and coordination"
-  },
-  {
-   "title": "Why Does AI Development Look Like 1980s Software Planning?",
-   "url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
-   "cite": "Sachin Benny, Summer Lightning, 2025",
-   "year": 2025,
-   "area": "Scaling, automation and coordination"
   },
   {
    "title": "A City is Not a Tree",
@@ -2481,6 +1863,13 @@
    "url": "https://worrydream.com/refs/Yeo_2007_-_Before_Memex.pdf",
    "cite": "Yeo, 2007",
    "year": 2007,
+   "area": "Science, learning and knowledge"
+  },
+  {
+   "title": "Clearing up Mysteries",
+   "url": "https://worrydream.com/refs/Jaynes_1988_-_Clearing_up_Mysteries.pdf",
+   "cite": "Jaynes, 1988",
+   "year": 1988,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2519,17 +1908,17 @@
    "area": "Science, learning and knowledge"
   },
   {
+   "title": "Goodhart's Law and Why Measurement is Hard",
+   "url": "https://ribbonfarm.com/2016/06/09/goodharts-law-and-why-measurement-is-hard/",
+   "cite": "David Manheim, Ribbonfarm, 2016",
+   "year": 2016,
+   "area": "Science, learning and knowledge"
+  },
+  {
    "title": "How a Cockpit Remembers Its Speeds",
    "url": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1903_1",
    "cite": "Hutchins, 1995",
    "year": 1995,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Human Problem Solving, The State of the Theory in 1970",
-   "url": "https://worrydream.com/refs/Simon_1970_-_Human_Problem_Solving%2C_The_State_of_the_Theory_in_1970.pdf",
-   "cite": "Simon, 1970",
-   "year": 1970,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2554,13 +1943,6 @@
    "area": "Science, learning and knowledge"
   },
   {
-   "title": "Man, A Course of Study",
-   "url": "https://worrydream.com/refs/Bruner_1965_-_Man%2C_A_Course_of_Study.pdf",
-   "cite": "Bruner, 1965",
-   "year": 1965,
-   "area": "Science, learning and knowledge"
-  },
-  {
    "title": "Mathematical Discovery, Hadamard Resurected",
    "url": "https://worrydream.com/refs/Liljedahl_2004_-_Mathematical_Discovery%2C_Hadamard_Resurected.pdf",
    "cite": "Liljedahl, 2004",
@@ -2575,24 +1957,17 @@
    "area": "Science, learning and knowledge"
   },
   {
-   "title": "Mathematics on a Distant Planet",
-   "url": "https://worrydream.com/refs/Hamming_1998_-_Mathematics_on_a_Distant_Planet.pdf",
-   "cite": "Hamming, 1998",
-   "year": 1998,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Modeling Software for learning and doing physics",
-   "url": "https://worrydream.com/refs/Hestenes_1995_-_Modeling_Software_for_learning_and_doing_physics.pdf",
-   "cite": "Hestenes, 1995",
-   "year": 1995,
-   "area": "Science, learning and knowledge"
-  },
-  {
    "title": "Notes for a Modeling Theory of Science, Cognition and Instruction",
    "url": "https://worrydream.com/refs/Hestenes_2006_-_Notes_for_a_Modeling_Theory_of_Science%2C_Cognition_and_Instruction.pdf",
    "cite": "Hestenes, 2006",
    "year": 2006,
+   "area": "Science, learning and knowledge"
+  },
+  {
+   "title": "Notes on Present Status and Future Progress",
+   "url": "https://worrydream.com/refs/Jaynes_1991_-_Notes_on_Present_Status_and_Future_Progress.pdf",
+   "cite": "Jaynes, 1991",
+   "year": 1991,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2614,34 +1989,6 @@
    "url": "https://worrydream.com/refs/Amarel_1966_-_On_the_Mechanization_of_Creative_Processes.pdf",
    "cite": "Amarel, 1966",
    "year": 1966,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Operationalism, An Interpretation of the Philosophy of Ancient Greek Geometry",
-   "url": "https://worrydream.com/refs/Blasjo_2022_-_Operationalism%2C_An_Interpretation_of_the_Philosophy_of_Ancient_Greek_Geometry.pdf",
-   "cite": "Blasjo, 2022",
-   "year": 2022,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Pretense and Representation",
-   "url": "https://worrydream.com/refs/Leslie_1987_-_Pretense_and_Representation.pdf",
-   "cite": "Leslie, 1987",
-   "year": 1987,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Representations in Distributed Cognitive Tasks",
-   "url": "https://worrydream.com/refs/Zhang_2004_-_Representations_in_Distributed_Cognitive_Tasks.pdf",
-   "cite": "Zhang, 2004",
-   "year": 2004,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "Resistance by Scientists to Scientific Discovery",
-   "url": "https://worrydream.com/refs/Barber_1961_-_Resistance_by_Scientists_to_Scientific_Discovery.pdf",
-   "cite": "Barber, 1961",
-   "year": 1961,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2673,6 +2020,13 @@
    "area": "Science, learning and knowledge"
   },
   {
+   "title": "Tacit Knowledge, Trust, and the Q of Sapphire",
+   "url": "https://worrydream.com/refs/Collins_2000_-_Tacit_Knowledge%2C_Trust%2C_and_the_Q_of_Sapphire.pdf",
+   "cite": "Collins, 2000",
+   "year": 2000,
+   "area": "Science, learning and knowledge"
+  },
+  {
    "title": "The Center of Why",
    "url": "https://worrydream.com/refs/Kay_2004_-_The_Center_of_Why.pdf",
    "cite": "Kay, 2004",
@@ -2684,6 +2038,13 @@
    "url": "https://worrydream.com/refs/Goody_1963_-_The_Consequences_of_Literacy.pdf",
    "cite": "Goody, 1963",
    "year": 1963,
+   "area": "Science, learning and knowledge"
+  },
+  {
+   "title": "The Curiously Playable Universe",
+   "url": "https://contraptions.venkateshrao.com/p/the-curiously-playable-universe",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2701,17 +2062,10 @@
    "area": "Science, learning and knowledge"
   },
   {
-   "title": "The Republic of Science: Its Political and Economic Theory",
-   "url": "https://sciencepolicy.colorado.edu/students/envs_5100/polanyi_1967.pdf",
-   "cite": "Michael Polanyi, Minerva 1:54-74, 1962",
-   "year": 1962,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "The Unreasonable Effectiveness of Mathematics in the Natural Sciences",
-   "url": "https://worrydream.com/refs/Wigner_1960_-_The_Unreasonable_Effectiveness_of_Mathematics_in_the_Natural_Sciences.pdf",
-   "cite": "Wigner, 1960",
-   "year": 1960,
+   "title": "Toward a Critical Technical Practice: Lessons Learned in Trying to Reform AI",
+   "url": "https://pages.gseis.ucla.edu/faculty/agre/critical.html",
+   "cite": "Philip E. Agre, Chapter in Geof Bowker, Les Gasser, Leigh Star, and Bill Turner (eds), Bridging the Great Divide: Social Science, Technical Systems, and Cooperative Work, Lawrence Erlbaum, 1997",
+   "year": 1997,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2722,17 +2076,17 @@
    "area": "Science, learning and knowledge"
   },
   {
+   "title": "Understanding Simpson's Paradox",
+   "url": "https://worrydream.com/refs/Pearl_2014_-_Understanding_Simpson%27s_Paradox.pdf",
+   "cite": "Pearl, 2014",
+   "year": 2014,
+   "area": "Science, learning and knowledge"
+  },
+  {
    "title": "Visualisation and Cognition",
    "url": "https://worrydream.com/refs/Latour_1986_-_Visualisation_and_Cognition.pdf",
    "cite": "Latour, 1986",
    "year": 1986,
-   "area": "Science, learning and knowledge"
-  },
-  {
-   "title": "What is mathematics",
-   "url": "https://worrydream.com/refs/Devlin_2013_-_What_is_mathematics.pdf",
-   "cite": "Devlin, 2013",
-   "year": 2013,
    "area": "Science, learning and knowledge"
   },
   {
@@ -2747,8 +2101,126 @@
    "url": "https://dl.acm.org/doi/10.1109/MC.1993.274940",
    "cite": "Leveson & Turner, IEEE Computer 26(7), 1993",
    "year": 1993,
-   "area": "Systems, logs and failures",
-   "syllabus_theme": "IV. Seeing hardness in incidents"
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Chronicle of the Death of a Laboratory",
+   "url": "https://worrydream.com/refs/Bardini_2002_-_Chronicle_of_the_Death_of_a_Laboratory.pdf",
+   "cite": "Bardini, 2002",
+   "year": 2002,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Interaction at Lincoln Laboratory in the 1960",
+   "url": "https://worrydream.com/refs/Buxton_2005_-_Interaction_at_Lincoln_Laboratory_in_the_1960.pdf",
+   "cite": "Buxton, 2005",
+   "year": 2005,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "J.C.R. Licklider's Vision for the IPTO",
+   "url": "https://worrydream.com/refs/Kita_2003_-_J.C.R._Licklider%27s_Vision_for_the_IPTO.pdf",
+   "cite": "Kita, 2003",
+   "year": 2003,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Memories, A Personal History of Bell Telephone Laboratories",
+   "url": "https://worrydream.com/refs/Noll_2015_-_Memories%2C_A_Personal_History_of_Bell_Telephone_Laboratories.pdf",
+   "cite": "Noll, 2015",
+   "year": 2015,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "OSI: The Internet That Wasn't",
+   "url": "https://spectrum.ieee.org/osi-the-internet-that-wasnt",
+   "cite": "Andrew L. Russell, IEEE Spectrum, 2013",
+   "year": 2013,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Phreaks, Packets and Prompts",
+   "url": "https://summerlightning.substack.com/p/phreaks-packets-and-prompts",
+   "cite": "Sachin, Summer Lightning, 2026",
+   "year": 2026,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Reminiscences of the VLSI Revolution",
+   "url": "https://worrydream.com/refs/Conway_L_2012_-_Reminiscences_of_the_VLSI_Revolution.pdf",
+   "cite": "Conway L, 2012",
+   "year": 2012,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Resource Management on the Flight Deck (NASA CP-2120)",
+   "url": "https://ntrs.nasa.gov/citations/19800013796",
+   "cite": "Cooper, White & Lauber, eds., 1980",
+   "year": 1980,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Root KSK Ceremonies",
+   "url": "https://www.iana.org/dnssec/ceremonies",
+   "cite": "IANA",
+   "year": null,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Summary of Principles Agreed at the First International Strategy Meeting on Human Genome Sequencing (Bermuda Principles)",
+   "url": "https://web.ornl.gov/sci/techresources/Human_Genome/research/bermuda.shtml",
+   "cite": "Human Genome Project, 1996",
+   "year": 1996,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region",
+   "url": "https://aws.amazon.com/message/41926/",
+   "cite": "Amazon Web Services, 2017",
+   "year": 2017,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "The History of the Bar Code",
+   "url": "https://www.smithsonianmag.com/innovation/history-bar-code-180956704/",
+   "cite": "Smithsonian Magazine, 2015",
+   "year": 2015,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "UPC: The transformation of retail",
+   "url": "https://www.ibm.com/history/upc",
+   "cite": "IBM",
+   "year": null,
+   "area": "Standards, labs and infrastructure"
+  },
+  {
+   "title": "A guide to the Kernel Development Process",
+   "url": "https://docs.kernel.org/process/development-process.html",
+   "cite": "Linux kernel documentation",
+   "year": null,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "A New Approach to the Functional Design of a New Computer",
+   "url": "https://worrydream.com/refs/Barton_1961_-_A_New_Approach_to_the_Functional_Design_of_a_New_Computer.pdf",
+   "cite": "Barton, 1961",
+   "year": 1961,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "A Structural View of the Cedar Programming Environment",
+   "url": "https://worrydream.com/refs/Swineheart_1986_-_A_Structural_View_of_the_Cedar_Programming_Environment.pdf",
+   "cite": "Swineheart, 1986",
+   "year": 1986,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Abstraction in Technical Computing",
+   "url": "https://worrydream.com/refs/Bezanson_2015_-_Abstraction_in_Technical_Computing.pdf",
+   "cite": "Bezanson, 2015",
+   "year": 2015,
+   "area": "Systems, logs and failures"
   },
   {
    "title": "Architectural Considerations for a New Generation of Protocols",
@@ -2758,10 +2230,52 @@
    "area": "Systems, logs and failures"
   },
   {
+   "title": "Architectural Principles of the Internet (RFC 1958)",
+   "url": "https://www.rfc-editor.org/rfc/rfc1958",
+   "cite": "Carpenter, IETF, 1996",
+   "year": 1996,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Contracts: Events",
+   "url": "https://docs.soliditylang.org/en/latest/contracts.html",
+   "cite": "Solidity documentation",
+   "year": null,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Conversational Access to a 2048-Word Machine",
+   "url": "https://worrydream.com/refs/Wilkes_1970_-_Conversational_Access_to_a_2048-Word_Machine.pdf",
+   "cite": "Wilkes, 1970",
+   "year": 1970,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Coordination Languages and their Significance",
+   "url": "https://worrydream.com/refs/Gelernter_1992_-_Coordination_Languages_and_their_Significance.pdf",
+   "cite": "Gelernter, 1992",
+   "year": 1992,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Croquet, A Collaboration System Architecture",
+   "url": "https://worrydream.com/refs/Smith_DA_2003_-_Croquet%2C_A_Collaboration_System_Architecture.pdf",
+   "cite": "Smith DA, 2003",
+   "year": 2003,
+   "area": "Systems, logs and failures"
+  },
+  {
    "title": "Distributed Simulation and the Time Warp Operating System",
    "url": "https://worrydream.com/refs/Jefferson_1987_-_Distributed_Simulation_and_the_Time_Warp_Operating_System.pdf",
    "cite": "Jefferson, 1987",
    "year": 1987,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Dynamic Program Building",
+   "url": "https://worrydream.com/refs/Brown_1981_-_Dynamic_Program_Building.pdf",
+   "cite": "Brown, 1981",
+   "year": 1981,
    "area": "Systems, logs and failures"
   },
   {
@@ -2777,8 +2291,14 @@
    "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
    "cite": "CrowdStrike, 2024",
    "year": 2024,
-   "area": "Systems, logs and failures",
-   "syllabus_theme": "V. Engineering hardness"
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Genera Concepts",
+   "url": "https://worrydream.com/refs/Symbolics_1982_-_Genera_Concepts.pdf",
+   "cite": "Symbolics, 1982",
+   "year": 1982,
+   "area": "Systems, logs and failures"
   },
   {
    "title": "Hints for Computer System Design",
@@ -2788,19 +2308,39 @@
    "area": "Systems, logs and failures"
   },
   {
-   "title": "RSS 2.0 Specification",
-   "url": "https://www.rssboard.org/rss-specification",
-   "cite": "RSS Advisory Board, 2003",
-   "year": 2003,
+   "title": "Linda in Context",
+   "url": "https://worrydream.com/refs/Carriero_1989_-_Linda_in_Context.pdf",
+   "cite": "Carriero, 1989",
+   "year": 1989,
    "area": "Systems, logs and failures"
   },
   {
-   "title": "Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region",
-   "url": "https://aws.amazon.com/message/41926/",
-   "cite": "Amazon Web Services, 2017",
-   "year": 2017,
-   "area": "Systems, logs and failures",
-   "syllabus_theme": "V. Engineering hardness"
+   "title": "Project Oberon",
+   "url": "https://worrydream.com/refs/Wirth_2005_-_Project_Oberon.pdf",
+   "cite": "Wirth, 2005",
+   "year": 2005,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Robust Composition",
+   "url": "https://worrydream.com/refs/Miller_2006_-_Robust_Composition.pdf",
+   "cite": "Miller, 2006",
+   "year": 2006,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Self (HOPL)",
+   "url": "https://worrydream.com/refs/Ungar_2007_-_Self_%28HOPL%29.pdf",
+   "cite": "Ungar, 2007",
+   "year": 2007,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The Connection Machine",
+   "url": "https://worrydream.com/refs/Hillis_1985_-_The_Connection_Machine.pdf",
+   "cite": "Hillis, 1985",
+   "year": 1985,
+   "area": "Systems, logs and failures"
   },
   {
    "title": "The Design Philosophy of the DARPA Internet Protocols",
@@ -2810,10 +2350,17 @@
    "area": "Systems, logs and failures"
   },
   {
-   "title": "The Information Bus: An Architecture for Extensible Distributed Systems",
-   "url": "https://doi.org/10.1145/168619.168624",
-   "cite": "Oki, Pfluegl, Siegel & Skeen, 1993",
-   "year": 1993,
+   "title": "The Emperors Old Clothes",
+   "url": "https://worrydream.com/refs/Hoare_1981_-_The_Emperors_Old_Clothes.pdf",
+   "cite": "Hoare, 1981",
+   "year": 1981,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The Interrelation Between Programming Languages and Machine Organization",
+   "url": "https://worrydream.com/refs/Barton_1965_-_The_Interrelation_Between_Programming_Languages_and_Machine_Organization.pdf",
+   "cite": "Barton, 1965",
+   "year": 1965,
    "area": "Systems, logs and failures"
   },
   {
@@ -2825,11 +2372,466 @@
    "syllabus_theme": "III. Emissions"
   },
   {
+   "title": "The New Culture of Software Development",
+   "url": "https://worrydream.com/refs/Meyer_1989_-_The_New_Culture_of_Software_Development.pdf",
+   "cite": "Meyer, 1989",
+   "year": 1989,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The operating system, should there be one",
+   "url": "https://worrydream.com/refs/Kell_2013_-_The_operating_system%2C_should_there_be_one.pdf",
+   "cite": "Kell, 2013",
+   "year": 2013,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The Smalltalk-76 Programming System",
+   "url": "https://worrydream.com/refs/Ingalls_1978_-_The_Smalltalk-76_Programming_System.pdf",
+   "cite": "Ingalls, 1978",
+   "year": 1978,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The Structure of Cedar",
+   "url": "https://worrydream.com/refs/Swinehart_1985_-_The_Structure_of_Cedar.pdf",
+   "cite": "Swinehart, 1985",
+   "year": 1985,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "The Tyranny of the Clock",
+   "url": "https://worrydream.com/refs/Sutherland_2012_-_The_Tyranny_of_the_Clock.pdf",
+   "cite": "Sutherland, 2012",
+   "year": 2012,
+   "area": "Systems, logs and failures"
+  },
+  {
+   "title": "Tools for the New Culture",
+   "url": "https://worrydream.com/refs/Meyer_1990_-_Tools_for_the_New_Culture.pdf",
+   "cite": "Meyer, 1990",
+   "year": 1990,
+   "area": "Systems, logs and failures"
+  },
+  {
    "title": "Virtual Time",
    "url": "https://worrydream.com/refs/Jefferson_1985_-_Virtual_Time.pdf",
    "cite": "Jefferson, 1985",
    "year": 1985,
    "area": "Systems, logs and failures"
+  },
+  {
+   "title": "[INTERNAL DRAFT] Protocol-First Operations Management",
+   "url": "https://npcmemo.substack.com/p/internal-draft-protocol-first-operations",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "A New Composite Sovereign: The Model (LLM) Against the Historical Archetypes of Authority",
+   "url": "https://npcmemo.substack.com/p/a-new-composite-sovereign-the-model",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Agent-Shaped Problems",
+   "url": "https://npcmemo.substack.com/p/agent-shaped-problems",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "AI Kitcraft workshop, 21–22 Sep 2026",
+   "url": "https://github.com/protocolvision/workshop-kitkraft/blob/main/workshop-dev/feedback/2026-09-evidence.md",
+   "cite": "Blyg thread `workshop-kitcraft-2026`",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Algorithms at Work: The New Contested Terrain of Control",
+   "url": "https://doi.org/10.5465/annals.2018.0174",
+   "cite": "Kellogg, Valentine & Christin, Academy of Management Annals 14(1), 2020",
+   "year": 2020,
+   "area": "Work, management and AI",
+   "syllabus_theme": "V. Engineering hardness"
+  },
+  {
+   "title": "Case Study: Ghosts in the System",
+   "url": "https://npcmemo.substack.com/p/case-study-ghosts-in-the-system",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "CEO Memorandum: A Summary of NPC Inc. \"Management Theory\"",
+   "url": "https://npcmemo.substack.com/p/ceo-memorandum-a-summary-of-npc-inc",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Characterizing the Software Process: A Maturity Framework",
+   "url": "https://apps.dtic.mil/sti/tr/pdf/ADA182895.pdf",
+   "cite": "Watts S. Humphrey, CMU/SEI-87-TR-11, 1987",
+   "year": 1987,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Cognitive Ergonomics",
+   "url": "https://blundercheck.timberschroff.com/p/cognitive-ergonomics",
+   "cite": "Timber, Blundercheck, 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Coordinate Leadership",
+   "url": "https://blundercheck.timberschroff.com/p/coordinate-leadership",
+   "cite": "Timber Stinson-Schroff, Blundercheck, 2025",
+   "year": 2025,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Coordination Headwinds",
+   "url": "https://contraptions.venkateshrao.com/p/coordination-headwinds",
+   "cite": "Venkatesh Rao, Contraptions, 2021",
+   "year": 2021,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Decoding the DNA of the Toyota Production System",
+   "url": "https://hbr.org/1999/09/decoding-the-dna-of-the-toyota-production-system",
+   "cite": "Spear & Bowen, Harvard Business Review, 1999",
+   "year": 1999,
+   "area": "Work, management and AI",
+   "syllabus_theme": "VI. Operational liveness"
+  },
+  {
+   "title": "Deming's 14 Points",
+   "url": "https://deming.org/explore/fourteen-points/",
+   "cite": "The W. Edwards Deming Institute",
+   "year": null,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Disrupting the first reported AI-orchestrated cyber espionage campaign",
+   "url": "https://assets.anthropic.com/m/ec212e6566a0d47/original/Disrupting-the-first-reported-AI-orchestrated-cyber-espionage-campaign.pdf",
+   "cite": "Anthropic, 2025",
+   "year": 2025,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "DOE-HDBK-1028-2009, Human Performance Improvement Handbook, Vol. 1",
+   "url": "https://www.energy.gov/sites/default/files/2026-04/doe-hdbk-1028-2009_volume1_0.pdf",
+   "cite": "US Department of Energy, June 2009",
+   "year": 2009,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Durable AI Adoption",
+   "url": "https://protocolized.summerofprotocols.com/p/durable-ai-adoption",
+   "cite": "Sachin Benny and Rafael Fernández / Protocolized, 25 Jun 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Durable AI Adoption guide (v0.5)",
+   "url": "https://ai.protocolized.dev",
+   "cite": "SIG P4B / Protocol Institute, May 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Eisenstein’s Spine and Technology Stabilization",
+   "url": "https://npcmemo.substack.com/p/eisensteins-spine-and-technology",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Finding Fault Lines within the Firm",
+   "url": "https://protocolized.summerofprotocols.com/p/finding-fault-lines-within-the-firm",
+   "cite": "Rafael Fernández / Protocolized, 11 Jan 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Generative AI at Work",
+   "url": "https://doi.org/10.1093/qje/qjae044",
+   "cite": "Brynjolfsson, Li & Raymond, Quarterly Journal of Economics, 2025",
+   "year": 2025,
+   "area": "Work, management and AI",
+   "syllabus_theme": "I. Working alongside agents"
+  },
+  {
+   "title": "Governing AI Agents",
+   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772956",
+   "cite": "Kolt, 2024",
+   "year": 2024,
+   "area": "Work, management and AI",
+   "syllabus_theme": "I. Working alongside agents"
+  },
+  {
+   "title": "How Complex Systems Fail",
+   "url": "https://how.complexsystems.fail/",
+   "cite": "Richard I. Cook, 1998",
+   "year": 1998,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "How Do Committees Invent?",
+   "url": "https://www.melconway.com/research/committees.html",
+   "cite": "Melvin E. Conway, Datamation, 1968",
+   "year": 1968,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Infrastructure of Firm Control",
+   "url": "https://npcmemo.substack.com/p/infrastructure-of-firm-control",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Killswitch Protocols, or On Engineering Recursive System Death",
+   "url": "https://summerofprotocols.com/uncategorized/killswitch-protocols",
+   "cite": "Alston, Killian, David / SoP, 2024",
+   "year": 2024,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Liquid Services and Runtime Procurement",
+   "url": "https://npcmemo.substack.com/p/liquid-services-and-runtime-procurement",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Lost in between Speed and Scale",
+   "url": "https://npcmemo.substack.com/p/lost-in-between-speed-and-scale",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Managing in an Age of Modularity",
+   "url": "https://hbr.org/1997/09/managing-in-an-age-of-modularity",
+   "cite": "Baldwin & Clark, Harvard Business Review, 1997",
+   "year": 1997,
+   "area": "Work, management and AI",
+   "syllabus_theme": "V. Engineering hardness"
+  },
+  {
+   "title": "Managing the Water, Not the Ship",
+   "url": "https://npcmemo.substack.com/p/managing-the-water-not-the-ship",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Mechanical Currents",
+   "url": "https://protocolized.summerofprotocols.com/p/mechanical-currents",
+   "cite": "Timber Stinson-Schroff / Protocolized, 9 Sep 2025",
+   "year": 2025,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Mumbai's Models of Service Excellence",
+   "url": "https://hbr.org/2012/11/mumbais-models-of-service-excellence",
+   "cite": "Thomke, Harvard Business Review, 2012",
+   "year": 2012,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Normal Accidents: Living with High Risk Technologies",
+   "url": "https://press.princeton.edu/books/paperback/9780691004129/normal-accidents",
+   "cite": "Charles Perrow; Princeton UP, 1984, updated edition 1999",
+   "year": 1984,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "One Tension to Rule Them All (Issue #2: Beyond Trade-Offs)",
+   "url": "https://protocolized.summerofprotocols.com/p/one-tension-to-rule-them-all",
+   "cite": "Timber Stinson-Schroff / Protocolized, 14 Feb 2025",
+   "year": 2025,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Organization Design: An Information Processing View",
+   "url": "https://doi.org/10.1287/inte.4.3.28",
+   "cite": "Galbraith, 1974",
+   "year": 1974,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "PDF Hell. Long-live the PDF.",
+   "url": "https://npcmemo.substack.com/p/pdf-hell-long-live-the-pdf",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "PEP 13: Python Language Governance",
+   "url": "https://peps.python.org/pep-0013/",
+   "cite": "Python Software Foundation, 2018",
+   "year": 2018,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Protocol Review 6: Public-Key Cryptography",
+   "url": "https://npcmemo.substack.com/p/protocol-review-6-public-key-cryptography",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Reconceptualizing Organizational Routines as a Source of Flexibility and Change",
+   "url": "https://escholarship.org/uc/item/6rb6f923",
+   "cite": "Feldman & Pentland, ASQ 48(1), 2003",
+   "year": 2003,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Reengineering Work: Don't Automate, Obliterate",
+   "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate",
+   "cite": "Hammer, 1990",
+   "year": 1990,
+   "area": "Work, management and AI",
+   "syllabus_theme": "VI. Operational liveness"
+  },
+  {
+   "title": "Safe New World",
+   "url": "https://summerofprotocols.com/safe-new-world-web",
+   "cite": "SoP Module Three, web 8 Aug 2024",
+   "year": 2024,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Safe New World, part 1 of 3",
+   "url": "https://summerofprotocols.com/wp-content/uploads/2024/04/Safe-New-World-Timber-Stinson-Schroff.pdf",
+   "cite": "Timber Schroff, Summer of Protocols, 2024",
+   "year": 2024,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Security incident disclosure — July 2026",
+   "url": "https://huggingface.co/blog/security-incident-july-2026",
+   "cite": "Hugging Face, 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Software Acceleration and Desynchronization",
+   "url": "https://ferd.ca/software-acceleration-and-desynchronization.html",
+   "cite": "Fred Hébert (mononcqc), ferd.ca — \"My bad opinions\", 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Standards Make the World",
+   "url": "https://summerofprotocols.com/research/standards-make-the-world",
+   "cite": "David Lang / SoP, Dec 2023",
+   "year": 2023,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "The Accelerationist Case for Frontier Pacing",
+   "url": "https://contraptions.venkateshrao.com/p/the-accelerationist-case-for-frontier",
+   "cite": "Venkatesh Rao, Contraptions, 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "The Blackboard Model of Problem Solving and the Evolution of Blackboard Architectures",
+   "url": "https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/537",
+   "cite": "Nii, 1986",
+   "year": 1986,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "The Reading Machine and the Inversion of the Standards Stack",
+   "url": "https://npcmemo.substack.com/p/the-reading-machine-and-the-inversion",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "The Swarm and the Formation, part 4 of 4",
+   "url": "https://summerofprotocols.com/wp-content/uploads/2024/06/FERNANDEZ-Flow-speculative-brochure.pdf",
+   "cite": "Rafael Fernández, Summer of Protocols, 2024",
+   "year": 2024,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "The Tragedy-Fueled Step Function",
+   "url": "https://blundercheck.timberschroff.com/p/the-tragedy-fueled-step-function",
+   "cite": "Blundercheck, 8 Jun 2023",
+   "year": 2023,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Toyota Production System",
+   "url": "https://global.toyota/en/company/vision-and-philosophy/production-system/",
+   "cite": "Toyota Motor Corporation",
+   "year": null,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Transfer of power",
+   "url": "https://mail.python.org/pipermail/python-committers/2018-July/005664.html",
+   "cite": "van Rossum, python-committers, 2018",
+   "year": 2018,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "User-Generated Software is User-Generated Content",
+   "url": "https://npcmemo.substack.com/p/user-generated-software-is-user-generated",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "What Do I Do in a World of Artificial Intelligence?",
+   "url": "https://doi.org/10.17705/1jais.00663",
+   "cite": "Strich, Mayer & Fiedler, Journal of the Association for Information Systems, 2021",
+   "year": 2021,
+   "area": "Work, management and AI",
+   "syllabus_theme": "VI. Operational liveness"
+  },
+  {
+   "title": "What is an Agent is not an Instrument",
+   "url": "https://npcmemo.substack.com/p/what-is-an-agent-is-not-an-instrument",
+   "cite": "rafa, NPC Inc., 2026",
+   "year": 2026,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Why Does AI Development Look Like 1980s Software Planning?",
+   "url": "https://summerlightning.substack.com/p/why-does-ai-development-look-like",
+   "cite": "Sachin Benny, Summer Lightning, 2025",
+   "year": 2025,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Working in Practice but Not in Theory: Theoretical Challenges of \"High-Reliability Organizations\"",
+   "url": "https://polisci.berkeley.edu/sites/default/files/people/u3825/LaPorte-WorkinginPracticebutNotinTheory.pdf",
+   "cite": "La Porte & Consolini, *J-PART* 1(1), 1991",
+   "year": 1991,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Y2K Aftermath: Crisis Averted",
+   "url": "https://www.govinfo.gov/content/pkg/CPRT-106SPRT62291/pdf/CPRT-106SPRT62291.pdf",
+   "cite": "U.S. Senate Special Committee on the Year 2000 Technology Problem, 2000",
+   "year": 2000,
+   "area": "Work, management and AI"
+  },
+  {
+   "title": "Your AI Product Needs Evals",
+   "url": "https://hamel.dev/blog/posts/evals/",
+   "cite": "Husain, 2024",
+   "year": 2024,
+   "area": "Work, management and AI"
   }
  ]
 }

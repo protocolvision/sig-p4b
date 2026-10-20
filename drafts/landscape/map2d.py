@@ -50,12 +50,13 @@ def main():
     for idx in order:
         r = L["readings"][idx]
         t = theme_of.get(r["id"])
-        cls = f"s t{t}" if t else "o"
+        case = r.get("source") == "case"
+        cls = f"s t{t}" if t else ("o k" if case else "o")
         attrs = f' tabindex="0" role="button" aria-label="{e(r["title"])}"' if t else ""
         tip = f'<title>{e(r["title"])}</title>' if t else ""
         dots.append(f'<circle cx="{sx(r["x"]):.0f}" cy="{sy(r["y"]):.0f}" r="{5 if t else 3}" class="{cls}" data-i="{len(items)}"{attrs}>{tip}</circle>')
         items.append({"t": r["title"], "u": r["url"], "c": r["cite"], "a": areas[r["area"]]["name"], "ar": area_ix[r["area"]], "th": t,
-                      "s": session_of.get(r["id"]), "co": r["id"] in companion, "rd": bool(r.get("read"))})
+                      "s": session_of.get(r["id"]), "co": r["id"] in companion, "rd": bool(r.get("read")), "cs": case})
     # place area labels, nudging any that would overlap an earlier one
     placed, labels = [], []
     for k, a in sorted(enumerate(L["areas"]), key=lambda ka: ka[1]["y"]):
@@ -129,7 +130,7 @@ def main():
     body = f'''<!-- {{"title": "Reading map · Protocols for Business", "desc": "{len(L["readings"])} readings placed by what they say, with this year’s reading plan marked.", "path": "sessions/map/", "nav": "sessions", "card": "syllabus"}} -->
 <p class="meta"><a href="../">Sessions</a></p>
 <h1>Reading map</h1>
-<p class="lede">This map shows {len(L["readings"])} readings. Readings about similar ideas sit close together. The blue dots are this year’s reading plan. Point at a theme to see its readings. Select an area name, or click anywhere on the map, to look closer at that part.</p>
+<p class="lede">This map shows {len(L["readings"])} readings. Readings about similar ideas sit close together. The blue dots are this year’s reading plan; the orange dots are case studies the group discusses, incidents and successes. Point at a theme to see its readings. Select an area name, or click anywhere on the map, to look closer at that part.</p>
 <div class="map-wrap"><div class="map-zoom" role="group" aria-label="Zoom"><button type="button" data-z="in" aria-label="Zoom in">+</button><button type="button" data-z="out" aria-label="Zoom out">−</button><button type="button" data-z="reset">Reset</button></div>{svg}<div class="map-tip" hidden></div></div>
 <div id="map-info" class="map-info" aria-live="polite"><p class="muted">Select a blue dot, or choose a theme above.</p></div>
 <p class="small muted"><a href="3d/">Open the map in 3D</a> (best on a computer) · <a href="readings.json">All readings as data</a> · <a href="../#suggest">Suggest or challenge a reading</a></p>
