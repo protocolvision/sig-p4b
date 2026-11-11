@@ -26,6 +26,14 @@ To schedule a speaker, replace an open slot; to move one, swap two features. Rea
 Commit and push: Sessions, the next-session box, the calendar and the open-slot count on Research update together.
 A short blyg post about schedule changes is welcome (see below); confirm guests are happy to be named.
 
+## Session recordings
+
+After a session, c3po (the Protocol Institute's pipeline) posts links to the summary, transcript, subtitles and audio in Discord.
+1. Copy the summary, transcript and subtitles into `sessions/YYYY-MM-DD/`, with a short README that links the originals.
+   The audio stays where it is (about 1 GB; GitHub refuses files over 100 MB): link it.
+2. Write the session's blyg post as `blyg-src/threads/session-YYYY-MM-DD.md`, quoting from the transcript.
+   List participants by the name they use on Discord, and leave out personal details from the introductions.
+
 ## Publishing
 
 - **Site:** commit and push to `main`. GitHub builds, checks and publishes to https://protocolsforbusiness.com in a minute or two.
