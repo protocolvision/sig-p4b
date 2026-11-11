@@ -32,7 +32,7 @@ After a session, c3po (the Protocol Institute's pipeline) posts links to the sum
 1. Copy the summary, transcript and subtitles into `sessions/YYYY-MM-DD/`, with a short README that links the originals.
    The audio stays where it is (about 1 GB; GitHub refuses files over 100 MB): link it.
 2. Write the session's blyg post as `blyg-src/threads/session-YYYY-MM-DD.md`, quoting from the transcript.
-   List participants by the name they use on Discord, and leave out personal details from the introductions.
+   Leave out participants' names: give a count, and attribute quotes by role or background.
 
 ## Publishing
 
