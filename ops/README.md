@@ -29,7 +29,7 @@ A short blyg post about schedule changes is welcome (see below); confirm guests 
 ## Session recordings
 
 After a session, OpenRecapper (the recording bot on the Protocol Institute Discord) posts links to the summary, transcript, subtitles and audio in Discord.
-1. Copy the summary, transcript and subtitles into `sessions/YYYY-MM-DD/`, with a short README that links the originals.
+1. Copy the summary, transcript and subtitles into `ops/sessions/YYYY-MM-DD/`, with a short README that links the originals.
    The audio stays where it is (about 1 GB; GitHub refuses files over 100 MB): link it.
 2. Write the session's blyg post as `blyg-src/threads/session-YYYY-MM-DD.md`, quoting from the transcript.
    Leave out participants' names: give a count, and attribute quotes by role or background.
