@@ -32,7 +32,7 @@ for s, slot in zip(S, SLOTS):
 e = lambda s: html.escape(s, quote=False)
 ea = lambda s: html.escape(s, quote=True)
 label = lambda d: f"{int(d[8:])} {dt.date.fromisoformat(d).strftime('%B %Y')}"
-DISCORD = "https://discord.gg/zNJdK7caj"
+DISCORD = "https://discord.gg/WVZePd7Tt"
 SITE = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text())["site"]
 
 def short_feature(f):

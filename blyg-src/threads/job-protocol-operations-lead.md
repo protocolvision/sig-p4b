@@ -20,7 +20,7 @@ Below is a sample job description for this emerging role, the Business Protocol 
 
 The title and the word "protocols" are ours. If your company already has a name for this, keep your word and keep the curiosity. In [Business Protocol Management](https://protocolsforbusiness.com/research/bpm/#see) terms, this is the person who sees the protocols before anyone designs them.
 
-**Use it freely.** Copy it, adapt it and post it; no permission or credit needed. Replace the text in square brackets first. If you hire for this role, or find the template doesn't fit, tell us in #protocols-for-business on the [Protocol Institute Discord](https://discord.gg/zNJdK7caj). What you learn could become a case study.
+**Use it freely.** Copy it, adapt it and post it; no permission or credit needed. Replace the text in square brackets first. If you hire for this role, or find the template doesn't fit, tell us in #protocols-for-business on the [Protocol Institute Discord](https://discord.gg/WVZePd7Tt). What you learn could become a case study.
 :::
 
 ---
