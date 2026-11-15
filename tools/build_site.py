@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 CONFIG = json.loads((ROOT / "config.json").read_text())
 SITE = CONFIG["site"]
 SIGNUP_WORKER = CONFIG["signup_worker"].rstrip("/")
-DISCORD = "https://discord.gg/WVZePd7Tt"
+DISCORD = "https://discord.gg/xtbTKKDdTQ"
 CALENDAR = "https://calendar.google.com/calendar/u/0/r?cid=hello@summerofprotocols.com&amp;cid=c_9ba26af3b621a8cc31de65c2e87988ea2b4a90837d042320a9eb39e1dd9a2949@group.calendar.google.com"
 NAV = [("sessions", "Sessions", "sessions/"), ("research", "Research", "research/"), ("feed", "Feed", "blyg/"), ("about", "About", "about/")]
 REDIRECTS = {"syllabus/": "sessions/", "observations/": "play/watching/",

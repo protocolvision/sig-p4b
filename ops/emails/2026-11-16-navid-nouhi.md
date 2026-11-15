@@ -17,7 +17,7 @@ Our first guest! Navid Nouhi from Credoble (https://credoble.com/) is talking ab
 After that we read Anthropic's "Patterns and problems in multiagent systems" (https://www.anthropic.com/research/multiagent-systems) together. A teaser: the models fell into a "multiagent turf war", sabotaging each other while guarding their own work. Sound like any org you know?
 
 **When:** Monday 16 November, 15:30–16:30 UTC. That's 16:30 in Berlin, 10:30 in New York and 7:30 in San Francisco.
-**Where:** the Protocol Institute Discord, in `#protocols-for-business`: https://discord.gg/WVZePd7Tt
+**Where:** the Protocol Institute Discord, in `#protocols-for-business`: https://discord.gg/xtbTKKDdTQ
 The session is recorded. Nothing to prepare, we read together.
 
 **Protocol watch**
