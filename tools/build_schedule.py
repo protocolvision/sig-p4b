@@ -21,8 +21,13 @@ for t in T["themes"]:
         if r.get("companion") and S:
             S[-1]["also_read"] = r
             continue
-        S.append({"theme": f'{t["n"]}. {t["name"]}', "theme_blurb": t["blurb"], "title": r["title"], "url": r["url"],
+        S.append({"theme": f'{t["n"]}. {t["name"]}', "theme_n": t["n"], "theme_blurb": t["blurb"], "title": r["title"], "url": r["url"],
                   "cite": r["cite"], "quote": r.get("quote", ""), "sighting": r.get("sighting", "")})
+# A slot with "carried_over": true repeats the previous session's reading (the group didn't get to it);
+# the readings after it move one date later. Make a later reading a companion to keep the dates aligned.
+for i, slot in enumerate(SLOTS):
+    if slot.get("carried_over"):
+        S.insert(i, {**S[i - 1], "carried_from": SLOTS[i - 1]["date"]})
 assert len(S) == len(SLOTS), f"{len(S)} sessions but {len(SLOTS)} dates in slots.json"
 for s, slot in zip(S, SLOTS):
     s.update(slot)
@@ -73,9 +78,8 @@ def replace_between(text, name, body):
 out = [f'<p>{e(T["summary"])}</p>', '<ol class="plan" role="list">']
 k = 0
 for i, t in enumerate(T["themes"], 1):
-    n = sum(1 for r in t["readings"] if not r.get("companion"))
-    sessions = S[k:k + n]
-    k += n
+    sessions = [s for s in S if s["theme_n"] == t["n"]]
+    n = len(sessions)
     guests = []
     for s in sessions:
         m = re.match(r"Guest: (.*?) \(", s["feature"])
@@ -88,6 +92,7 @@ for i, t in enumerate(T["themes"], 1):
         also = s.get("also_read")
         rows.append(f'<li><time datetime="{s["date"]}">{int(s["date"][8:])} {dt.date.fromisoformat(s["date"]).strftime("%b %Y")}</time>'
                     f'<span class="rd"><a href="{ea(s["url"])}">{e(s["title"])}</a> <span class="muted">{e(s["cite"])}</span>'
+                    + (f'<br><span class="muted">Carried over from {label(s["carried_from"])}</span>' if s.get("carried_from") else "")
                     + (f'<br><span class="muted">Spot one {e(s["sighting"])}</span>' if s["sighting"] else "")
                     + (f'<br><span class="muted">Alongside: <a href="{ea(also["url"])}">{e(also["title"])}</a>, {e(also["cite"])}</span>' if also else "")
                     + f'</span><span class="ft">{feature_html(s)}</span></li>')
@@ -155,6 +160,7 @@ public = [{"date": s["date"], "start_utc": s["start_utc"], "end_utc": s["end_utc
            "theme": s["theme"], "title": s["title"], "url": s["url"], "cite": s["cite"], "quote": s["quote"],
            **({"sighting": "Spot one " + s["sighting"]} if s["sighting"] else {}),
            **({"also_read": {k: s["also_read"][k] for k in ("title", "url", "cite")}} if s.get("also_read") else {}),
+           **({"carried_over_from": s["carried_from"]} if s.get("carried_from") else {}),
            "feature": s["feature"], "feature_short": short_feature(s["feature"]),
            **({"links": s["links"]} if s.get("links") else {})} for s in S]
 (ROOT / "sessions.json").write_text(json.dumps(public, ensure_ascii=False, indent=1) + "\n")
@@ -189,6 +195,7 @@ L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Protocol Institute//SIG P4B//E
 for s in S:
     d = s["date"].replace("-", "")
     desc = (f"Theme {s['theme']}\n\nReading: {s['title']} ({s['cite']})\n{s['url']}\n"
+            + (f"Carried over from {label(s['carried_from'])}.\n" if s.get("carried_from") else "")
             + (f"\u201c{s['quote']}\u201d\n" if s["quote"] else "")
             + (f"\nSpot one {s['sighting']}\n" if s["sighting"] else "")
             + (f"\nAlongside: {s['also_read']['title']} ({s['also_read']['cite']})\n{s['also_read']['url']}\n" if s.get("also_read") else "")

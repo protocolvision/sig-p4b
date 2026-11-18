@@ -52,20 +52,21 @@ UID:sig-p4b-20261130@protocol-institute
 DTSTAMP:20261020T194423Z
 DTSTART:20261130T153000Z
 DTEND:20261130T163000Z
-SUMMARY:Protocols for Business · Generative AI at Work
-DESCRIPTION:Theme I. Working alongside agents\n\nReading: Generative AI at
-  Work (Brynjolfsson\, Li & Raymond\, Quarterly Journal of Economics\, 202
- 5)\nhttps://doi.org/10.1093/qje/qjae044\n“Less experienced and lower-sk
- illed workers improve both the speed and quality of their output\, while 
- the most experienced and highest-skilled workers see small gains in speed
-  and small declines in quality.”\n\nSpot one piece of an expert’s jud
- gement that a tool or template now hands to newcomers.\n\nFeature: Guest:
-  Will Binns (Mru\, a fault-tolerant operating system for thousand-year au
- tonomous operation)\nWill Binns: https://wbnns.com/\nMru: https://zenodo.
- org/records/20579438\n\nJoin on the Protocol Institute Discord: https://d
- iscord.gg/xtbTKKDdTQ\nSyllabus: https://protocolsforbusiness.com/sessions
- /\nReading map: https://protocolsforbusiness.com/sessions/map/\nSessions 
- are recorded.
+SUMMARY:Protocols for Business · Patterns and problems in multiagent syst
+ ems
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Patterns and pro
+ blems in multiagent systems (Anthropic\, 2026)\nhttps://www.anthropic.com
+ /research/multiagent-systems\nCarried over from 16 November 2026.\n“We 
+ consistently saw a multiagent turf war. All of the models we tested quick
+ ly assumed that others were purposefully impeding their work\, and began 
+ to sabotage others while protecting their own contributions.”\n\nSpot o
+ ne place where two teams or tools work against each other because each gu
+ ards its own output.\n\nFeature: Guest: Will Binns (Mru\, a fault-toleran
+ t operating system for thousand-year autonomous operation)\nWill Binns: h
+ ttps://wbnns.com/\nMru: https://zenodo.org/records/20579438\n\nJoin on th
+ e Protocol Institute Discord: https://discord.gg/xtbTKKDdTQ\nSyllabus: ht
+ tps://protocolsforbusiness.com/sessions/\nReading map: https://protocolsf
+ orbusiness.com/sessions/map/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/xtbTKKDdTQ
 URL:https://protocolsforbusiness.com/
 END:VEVENT
@@ -74,17 +75,20 @@ UID:sig-p4b-20261214@protocol-institute
 DTSTAMP:20261020T194423Z
 DTSTART:20261214T153000Z
 DTEND:20261214T163000Z
-SUMMARY:Protocols for Business · Ironies of Automation
-DESCRIPTION:Theme I. Working alongside agents\n\nReading: Ironies of Autom
- ation (Bainbridge\, 1983)\nhttps://doi.org/10.1016/0005-1098(83)90046-8\n
- “The second irony is that the designer who tries to eliminate the opera
- tor still leaves the operator to do the tasks which the designer cannot t
- hink how to automate.”\n\nSpot one task left to a person only because n
- obody could automate it.\n\nFeature: Guest: Formal Protocol Theory SIG (S
- tigmergic AI Safety\, presented by Patrick Nast)\n\nJoin on the Protocol 
- Institute Discord: https://discord.gg/xtbTKKDdTQ\nSyllabus: https://proto
- colsforbusiness.com/sessions/\nReading map: https://protocolsforbusiness.
- com/sessions/map/\nSessions are recorded.
+SUMMARY:Protocols for Business · Generative AI at Work
+DESCRIPTION:Theme I. Working alongside agents\n\nReading: Generative AI at
+  Work (Brynjolfsson\, Li & Raymond\, Quarterly Journal of Economics\, 202
+ 5)\nhttps://doi.org/10.1093/qje/qjae044\n“Less experienced and lower-sk
+ illed workers improve both the speed and quality of their output\, while 
+ the most experienced and highest-skilled workers see small gains in speed
+  and small declines in quality.”\n\nSpot one piece of an expert’s jud
+ gement that a tool or template now hands to newcomers.\n\nAlongside: Iron
+ ies of Automation (Bainbridge\, 1983)\nhttps://doi.org/10.1016/0005-1098(
+ 83)90046-8\n\nFeature: Guest: Formal Protocol Theory SIG (Stigmergic AI S
+ afety\, presented by Patrick Nast)\n\nJoin on the Protocol Institute Disc
+ ord: https://discord.gg/xtbTKKDdTQ\nSyllabus: https://protocolsforbusines
+ s.com/sessions/\nReading map: https://protocolsforbusiness.com/sessions/m
+ ap/\nSessions are recorded.
 LOCATION:Protocol Institute Discord · https://discord.gg/xtbTKKDdTQ
 URL:https://protocolsforbusiness.com/
 END:VEVENT

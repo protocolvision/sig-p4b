@@ -17,6 +17,7 @@
  },
  {
   "date": "2026-11-30",
+  "carried_over": true,
   "feature": "Guest: Will Binns (Mru, a fault-tolerant operating system for thousand-year autonomous operation)",
   "links": {
    "Will Binns": "https://wbnns.com/",

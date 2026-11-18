@@ -34,7 +34,8 @@
      "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
      "cite": "Bainbridge, 1983",
      "quote": "The second irony is that the designer who tries to eliminate the operator still leaves the operator to do the tasks which the designer cannot think how to automate.",
-     "sighting": "task left to a person only because nobody could automate it."
+     "sighting": "task left to a person only because nobody could automate it.",
+     "companion": true
     }
    ],
    "short": "Agents"
