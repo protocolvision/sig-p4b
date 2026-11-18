@@ -1,0 +1,399 @@
+Participants:
+  - Sebastián Aristizábal | UTC+1
+  - Ben
+  - Robert Peake | UTC+1
+  - Dylan Fitzgerald — UTC-6
+  - ComplexSy
+  - Jose Leal
+  - rafa (UTC+1)
+  - Esther!
+  - Mike Casey | UTC -5
+  - daniel ospina - UTC+2
+  - Nav Nouhi (UTC+1)
+  - Matthew McDowell-Sweet (UTC)
+
+---
+
+[rafa (UTC+1)]:
+If this one works, we are now recording. So let me just do a quick intro really quick for the recording. This is the second protocols for business meeting on November sixteenth, Monday, and the '20 27 program. First theme is agents. And today, we are joined by Naved, a very good old friend who has a beautiful dog, and is an expert in search engine optimization and agent search emerging patterns and emerging strategies which are happening today. So with that, I'll pass it on to Navi. Do you wanna give a quick intro? And then just feel free to go ahead. We have a soft stop in about thirty minutes. But if the topic is interesting enough, we can always read async and just ask more questions. So no... For folks, don't feel like we need to rush. We can just ask the questions that we need to ask. Navi? 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Hey. Can you guys hear me? 
+
+[rafa (UTC+1)]:
+Yeah. I can hear you. 
+
+[Nav Nouhi (UTC+1)]:
+Or can you hear Great. Perfect. 
+
+[Ben]:
+Yes. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Thanks. I... Yeah. Navi is my full name. You can also call me now if I have... It's a little more international friendly. So, yes, thanks for the introduction. Yeah. And Raf Raf and I are old good friends, and let me give you just a quick introduction to myself, my background. So I've been in the marketing growth digital space. It's more than twenty years. Started off, on... In paid advertising, like paid paid search, so Google Ads, even, like, Bing and Yahoo way back when. And then as as the as the channels evolved, Meta, TikTok, a little bit of Snap, also all types of native advertising, so display advertising you might see on different, content sites. And then kind of moved into growth, which is the kind of full funnel. So around user acquisition, activation, retention, referral, building the whole funnel, and optimizing that. So whether it be on a software... From a software SaaS perspective, ecommerce, start to consumer, kind of have the full gauntlet, and then obviously SEO, like, just traditional SEO content marketing. And now I've just... Maybe like most of you on the on the in the... On the call, I've just been... Just obsessed. I would almost say when it comes to AI from g t three on. I've just been really trying to understand it and learn about it. I thought this was the future, and I think we have a lot more coming. So got into really AEO, SEO, just much more because I really wasn't a big fan of doing things manually. So... Yeah. So I have started a a small small company, sole entrepreneur called Credible. I'll get I'll get into that later. But, if you guys are interested, I'm happy to talk about it. But I just kind of... Over the past, I would say, two, two and a half years, been really focused on AEO. Also, GEO. So there's engine optimization or generative engine optimization. They're interchangeable. And... Yeah. So I can start with the slide. Is is that long enough intro? I feel like I might have spoken too much. 
+
+[rafa (UTC+1)]:
+Let's rock it. Let's let's rock and roll. For folks on the call, 
+
+[Nav Nouhi (UTC+1)]:
+That's rock and roll. Okay. 
+
+[rafa (UTC+1)]:
+there's a thread in the protocols for business channel where you can drop questions there. And then maybe we'll let... Navi can do a short presentation, then we can do a bunch of q and a afterwards. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Sure. I just realized that I don't have permissions enabled for this 
+
+[rafa (UTC+1)]:
+I can... Do you want me to share it for you? 
+
+[Nav Nouhi (UTC+1)]:
+in yeah. That'd be great, actually. Could you do it? 
+
+[rafa (UTC+1)]:
+I think I... Yeah. Yeah. Yeah. I think we I think we can. Let me see. Give me one quick second. Copy. Share my screen. Okay. See if we get this. Yeah. I see it. 
+
+[Nav Nouhi (UTC+1)]:
+I 
+
+[rafa (UTC+1)]:
+Oh, maybe. 
+
+[Nav Nouhi (UTC+1)]:
+see your old screen. Yeah. 
+
+[rafa (UTC+1)]:
+Okay. Here we go. Can you see this? 
+
+[Nav Nouhi (UTC+1)]:
+There we go. Yeah. Perfect. Awesome. Thank you. 
+
+[rafa (UTC+1)]:
+Okay. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. So how does this get found now versus yesterday? Yeah. I already talked to the introduction, so just come some stats here. Just what's what's the current situation. So everything we're talking about today comes down to three shifts in how people search or look for businesses. First, more than two thirds of Google searches now end on Google. That means the answer sits right in the in the search results, and that's just there. So no longer clicking out into the blue links into my deep into the website. So that's that's the major change from... Previously. Secondly, now asking an assistant is a mainstream habit. Like, I just updated this data. This is from September 26. 1,200,000,000 users are using obviously ChatGPT every week and and it's growing. And that's just GPT. If you add claud and perplexity, you're looking at that number and grows much more. Depending on what survey you read between a quarter and half of consumers now use AI to find local businesses. So if any local business start here, that... That's that's... It's massive. And the third of people don't even type keywords anymore. So it used to be, you know, your secret... Your ninja power was able to to really put together a couple couple words and find find what you're looking for. Now people are literally using average 23 words and trying to get you to prompt users. And that's a significant difference in user behavior, and and they expect a recommendation coming back now. So to put that in perspective, just kinda really quickly, Adobe measured AI referral visits to US retail sites are up a 138% in a year from May, and about... They convert 54% higher than regular traffic. So even though this is just, like, just to be very clear, this is a small percentage of overall... Like, AI referrals are a small percentage of overall website traffic. This is a significant change in user behavior. And even more so, if you understand now, like, it's you're just starting in one place and you're ending with a conversion. 54% of users are converting at higher rate than other channels, which, like, from a user acquisition standpoint is a significant change. So on the next slide, please. Yeah. So couple things. Just kind of map of the rest of the talk here. The main thing to know is, like, there's, like, three layers, on the stack here. So basic SEO, search engine optimization, if you don't know exactly what it stands for, getting a search engine to crawl, understand, and rank your pages. On top of that, there's AEO, answer optimization, like I mentioned earlier, GEO, making your business easily stand out when an AI assistant define trust and name your hands... Name name its answer. And on top of that, like, which is really new, I mean, almost a a few months now, is agent readiness, which is something that I think we're all really excited about. Making sure your site... So it's facts and actions like booking or buying and something can actually be used by a piece of software acting on behalf of a human. There aren't any official standards quite yet for agent readiness, but there are a few frameworks and standards in the pipeline. There's a couple I mentioned. One is specifically Google WebMCP, which is probably gonna be the one that will will be will be the the one to really take... To focus on, and which is actually what I've been focusing on mostly. But in essence, like, this is, like, this is kind of the the... Really quickly, just kind of three topics we'll be discussing today. So next slide. So this is a question people ask me quite often. It's like, isn't this just SEO? Like, AEO and agent readiness. Yeah. Like, okay. Yeah. There there are... There's definitely some overlap. There's, you know, there's... Like I mentioned here, the same foundation. Like, SEO gets your page ranked. AEO gets your business name in an answer. Technical SEO is foundation for both. So, like, what carries over is, like, Google sets itself that there's no special requirement for AI answers beyond indexing and being indexed and being eligible to show a snippet. So this is, like, basic stuff, but that's not actually... That... That's not actually true. There's there's a lot more there. So what it comes down is three basic shifts. So ranking no longer earns you a citation. Meaning, if you if you rank, it used to be like, how can you rank? How... Can you rank page one on Google? Can you be a top 10 listed... Can your site be as top 10 listed on on a... On Google search results page? That is actually not even really close. So on 38% of pages cited, like, they're not actually on top 10. So that... It's a significant difference. What's actually happening is, like, that means, like, the 62% of citations are pages or websites that have been... Are ranking. It's like... It was, like, 10 through a 100 and then, like, a 100 plus. So this is this is deep, deep, deep pages that are not even... Not ranking on Google's search results page. Secondly, kind of many searches. So this this one question becomes several searches behind the scenes. So what's happened now is we will call this, like, a query fan out. So assistant will break out one question to several background searches, which is basically like the... When assistant has sub agents, these are... These these fan out questions are essentially sub agents asking multiple questions across across their index, across the the web. And then what was the the last one mentions over links? So so this is from a HRF study. Over 75 brands they they studied, mentioned, benches of brands across the web correlated to, like, AI visibility three times more strongly than backlinks. So that's pretty significant because backlinks were... Or are a major strategy in in traditional SEO. Again, like, this is this is this is not... To be clear, it's not... It's this correlation, not proof, but this is what I've been seeing and studies have been seeing, across the web. So just next one. Next slide. So just really quickly how AI kind of looks at your website. So when it comes to memories, it's it's what's learned in training. So it's like the first of the training day that it has, which is essentially frozen in time. It's what it knows about you out of the box. It might be a year ago. It depends on the context window. And then second is the live retrieval. So that's just... They... Each each assistant has their own search, and that's live retrieval. They fetch live pages. They write answers on what they find. To do this, like, vendors have specific distinct visitors. So every platform documents them. So for example, OpenAI uses their GBT bot for training. They use OAI search bot for its search index, and then they use a GBT dash user for when a person is actually act... Asking a question. These are all... And there's... I can go into each one for each different assistant, but the point is, like, these are bots. And it's really important to be able to make sure those... These bots are not blocked on your website, which is something that those... Like, this was something that you would actually wanted to filter out these bots, but there's the three bots you want to allow. Because blocking the the training bots and blocking these search bots are completely different decisions and have different consequences. So, like, it's very important to make sure you offer these. And secondly, a text first. So I mentioned here... Or thirdly, text first. It's it's really important to understand that you... A... These assistants, they only... They can't read JavaScript. They can obviously code JavaScript, etcetera, but they cannot read it. So you need to have plain text or... On the on the website. So it it needs to be... When you load the site, everything should load there so you can actually read it. So their crawlers can actually read, decide, and understand what your business is offering. So next slide. So, okay, I'll go this really quickly. Like, technical SEO is the floor. It's just what I kinda mentioned on... Again, it's not replacing AEO, but it... By AEO, but it's a part of AEO. So the machine needs to read read everything. You read your website. So I mentioned earlier the bots and the and the search answer bots, you fill... Allow them to make sure it's findable. So these are classic SEO, technical SEO, site map, clean links, pages are indexed, they're all indexable, relevant pages are indexed. So for example, an index means that you're offering the... It's the the page is public to the Internet. And and there... There's been some practices where people or companies would actually non index, so block search engines and and and AI from looking at their terms and conditions or privacy policy. And, actually, like, I found this I found this in a in a specific use case where a company was doing this, and they didn't realize they were doing it. And once they opened it up and allowed allowed the, assistance to read their terms of... To t's and c's and privacy policy, their their trust. Like, they got they got a lot more traffic from this because this... These are these are pages that are developing trust and showing that this is actual company to the to the assistance, not just some, you know, faceless company. So it's it's actually kinda counterintuitive to some legacy SEO practices. And then, obviously, like, you know, how quickly your page loads, like, for people and machines because you have to understand that page load speed is still really important because assistants are using essentially, like, virtual machines to to to look at your website currently until until there's some of the agent articles are released. And then obviously, like, yeah, like, readable, like, is the content itself? Is it is it factual? Is it structured data? This is this is super important. So it has to be brought... Write HTML, backed by data that who you are, what you're selling, what it costs, and and all that. Just essentially just being honest and and transparent. Next slide. This is kind of also honest and transparent, and consistent is that this is... Believe it or not, this is more common than not. Like, having consistent information across your own site and across other sites that represent you is not something that is a given. I've seen this in audits, like, in in client audits. I've seen many of my clients, like, for example, they might have an old address and some directory that, you know, pulled from their website and and there's something changed. So now the agent's looking at their website realizing, well, this is their webs... You know, their own website has this address, but this other website that has maybe a bit of authority, let's call it... Let's just say Google business profile or Google Maps profile, Different address or phone number, there's inconsistency there, and then there's there's a penalty there. They're not they're not actually gonna trust your, excuse me, your your site. So, like, I'll give you an example for for Credible. So I was... I've been working with it. They they were quoting prices on on my website incorrectly. So I don't know why I had, like, as a... On the homepage and the pricing page, the prices were inconsistent. I had to I had to go fix... I fixed that to fix that, for example. Anyway, so next so next slide. And this is kind of... I did run out on my own side when I first launched it, and this is what you kinda see. So so these so these are AI... So based on AI answer questions, but from my own company. So these are around services that I offer, what what a customer would be looking for, potential buyer would be looking for prompting users. And then and then, obviously, like, when I actually asked when I prompted the the assistance, this is also across GBT, Claude, Perplexity, Gemini, across all the major assistance. So, you know, it's a new it's a new business, and there isn't a lot of information out there. There's information about myself personally, but not much out there. So, yeah, like, this is what this is what happened. This is what happens. And so you you need to prove, not just say, you need proof that your company exists. They don't just... Assistants don't have a reason to just recommend it yet because there's no one else talking about it. So it's really important to start getting your name out there and getting people to to refer you, recommend you. Next slide. And this kinda goes to thought leadership, trust, building expertise around around around your business. So if if you're under category. So for example, like, assistant, you know, any assistant can now write generic content that has zero value. Like, what... Since we're looking for are what you can't make up. So firsthand experience, your own data, a named expert with a view. Like, Google actually has guidance on on this, like, expertise, experience, expertise, authoritative, and and trust. Trust is the most important of all of this. And there's... Know, it's called EAT. It's the acronym for this. And this this is what's most important. Like, if if you can get this, which is any company should be able to do this and and and communicate this, you're you're ahead of the game. Because I don't know if if if many of you remember, there were there were sites kind of spamming the Google search results for many years, just answering random questions people were looking for based on search volume, and the the SERP or the search results page on Google just became irrelevant. And this is... You can look at AI now. AI assistant's saying they're actually looking. They're they're searching on behalf of of us humans, and so they're look... They're trained to under... To, evaluate what we value, and we value trust, evidence, and originality. Next slide, please. And what I'm actually most excited about, or one of the most excited about is what is, like, Asia readiness. So this is something that... Like, if if AEO is being named Asia ready... Asia Asia ready, it's about being usable, which is incredible, from my opinion. Like... So, basically, can a can a software acting on a behalf of a person, like, complete a task? So can they buy something? Can they book a book a meeting? Can they find a price with with, like, with no human intervention? Like, today, like I mentioned here, most most agents are driven by a browser. They read a page, etcetera. So all the things that I mentioned earlier around having raw HTML, site structure, etcetera, is very important for that. But next is really these offer... The sites actually offering actions directly to agents. So so I mentioned Google's WebMCP, which tells an agent directly what they can do. So here are the actions you need to take in order to execute whatever you're trying to do for that human. And so I so I ran them on my website again when I first launched it, and, yeah, I got five out of out of the 13 agent readiness requirements that I actually... We actually measured, I've actually added more than 13 since then. So that's kind of, you know, that's just critical for the feature. And I... You know, I... The next slide, please. This slide goes into, you know, obviously... And you... Everyone probably heard about MetaMuse, Dots, Cloud Duet, Instinct maybe as well. These are all new personal agents, and it's super... I mean, it's... They... Of them launched probably in September more or less. It's it's new. It's it's fresh, but I just want you guys to understand that everyone on this call and everyone in their... And everyone in your social... In your network will have a personal agent in the next, I think, eighteen to twenty four months. And I just... It's it's just gonna be it's gonna be the next, I don't know, like iPhone app at marketplace. Everyone's gonna have an agent doing something for them. Already, you can see it with with Internet traffic. So this was from Cloudflare, yeah, just this past September. Yeah. Over, yeah, over half of the Internet traffic was in human this year. So that that doesn't mean it was it was agents necessarily, but it was bots and also agents. So it's it's coming, and it's significant. And like I mentioned here, 17... This this number is crazy, but, yeah, 1700% growth in daily agents in one year, and that's even... That's growing as well. Stripe, if you if you guys... If you're familiar with link... Stripe link, you save your card to Stripe. They're offering that that service to agents. So you're you're... Now many... You can link your credit cards link and then have your agent use that card. You're you're able to link, I mean, obviously, your email, everything to your agents, and this is this is just the beginning. Like, you'll have... It just will be building... Creating accounts on your behalf, shopping on your behalf, and and just about anything you can think of. I'll stop there. I think the last... It's the last slide of just kind of a short slide saying, you know, things you wanna ask yourself. So if you have a business, put yourself in your buyers... Put your buyers questions to your assistance. Write them down who gets names. You know, fix... Make sure the site... Just... I mean, I know... I... You can revisit the slide. Also, like, I'm... I have a free audit for anyone who's interested. I can... My agents will run an audit on your website and give you kind of, like, the first top three things to do along with, just to kind of categorize, things that you're missing or or you can improve on. So that's... I think that was 15. I don't know. Maybe it was a little more. 
+
+[rafa (UTC+1)]:
+Okay. Can you guys hear me? Yeah. Navid, we got one question. Matt, do you wanna just go ahead and ask your question? 
+
+[Matthew McDowell-Sweet (UTC)]:
+Yes. I do. If I can find the only plan. Cool. So, yeah, it was very, interesting, so thank you for taking us through that. I recently 
+
+[rafa (UTC+1)]:
+Oh, sorry, Matt. And also also give a quick intro. So, Navid... Since Navid is new here, maybe just say who you are. 
+
+[Matthew McDowell-Sweet (UTC)]:
+oh, okay. Cool. Yeah. So I'm Matt. I'm kind of helping Rafa out, leading the protocols for business stuff this year. By day, I work at the mouth office in transport, which is kind of like taking weather data and climate data and translating it into operation decisions. By night, do a lot of writing, do some blogging, and also building a safe share search app called Subset as well. So I recently listened to a podcast with a marketing person from WhisperFlow, and they kind of... It's quite interesting because they almost run, like, a a very human protocol. Like, they organize, like, cabals or groups of, creators on, like, Instagram and and YouTube and TikTok and stuff, to generate, like, demand and and, you know, steer sign ups and interest and all that sort of thing. I'm just wondering, like, how do you see approaches like that which are very much, like, leaning leaning into, you know, verifiable, like, humanity, I suppose. How you see that, like, interoperating with this very much, like, full on agent machine future that we're heading to? Do you do you see them as, like, complementary? Or 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. I listened to the same podcast. I think it was Hector Serrano. 
+
+[Matthew McDowell-Sweet (UTC)]:
+Yeah. Yeah. That'll be the one. Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. It was Lenny's podcast. I mean, that was... 
+
+[Matthew McDowell-Sweet (UTC)]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Yeah. Like, it's it's a bit different. So that... He's... He was focused very much on in... Or or creators as a, like, paid acquisition channel. 
+
+[Matthew McDowell-Sweet (UTC)]:
+Okay. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. And this is more of our organic channel. These are more organic channels. So this is basically... What I'm what I'm suggesting is... Or what I'm... Decision is basically is making sure that your site and your business is readable, understandable, and authoritative in the category that it plays in to AI and and then also allowing agents to work on behalf of their their their humans on... To execute certain things. Now that said, like, I think I I didn't really... Let me answer your question directly. I think it does obviously help specifically for YouTube. So any creator... Any YouTube creator, what happens on YouTube is every every YouTube video has a transcript, and that transcript is indexable and is available to agents, especially Google agents. And if the more mentions, obviously, you have in that transcript of your brand, like, that definitely does help. So it it is beneficial. I wouldn't say it's not beneficial, but, yeah, absolutely beneficial. And quite an impact. I mean, I'm... Like, I... Yeah. It it it will impact it. I haven't measured how much quite yet, but I have seen in in some in some audits and some... For some clients, YouTube as being one one of one of the more cited 
+
+[Matthew McDowell-Sweet (UTC)]:
+Okay. 
+
+[Nav Nouhi (UTC+1)]:
+sources. 
+
+[Matthew McDowell-Sweet (UTC)]:
+That's cool. Yeah. I was just wondering, like, what the, yeah, yeah, kind of what the what the crossover is and stuff like that and where where these two... Where the two kind of very distinct approaches means. That's very cool. Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+It's it's it's in... Like, it's one of the channels. Right? Like, it's it's one of the citation channels. So... Right. Like, it... Yeah. You shouldn't... I'm just like, I am not suggesting that all of... Everything should be from your website. You want... You wanna be quoted still, and you wanna have people... Yeah. You have guest blog posts, all all the... Everything. The backlinking still makes it still as important, but, ultimately, yeah, like, the more you have out there that is that is verifiable, the better off you are in in in the current climate. 
+
+[Matthew McDowell-Sweet (UTC)]:
+Cool. Thank you. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Sure. Thanks for the question. 
+
+[rafa (UTC+1)]:
+Navid, one question on my side, and then we'll open it up to other folks. So Google kinda ended up with a traffic jam of basically listicles and PR announcements and kind of this, like, the type of marketing SEO slop that really, like, contaminated a lot of the results. Where where do you see kind of the AI optimization 
+
+[Dylan Fitzgerald — UTC-6]:
+I 
+
+[rafa (UTC+1)]:
+heading into? Do you see the same type of problem, or do you think it will end up in a different type of problem? 
+
+[Dylan Fitzgerald — UTC-6]:
+type of problem. 
+
+[Nav Nouhi (UTC+1)]:
+I actually think it's 
+
+[Dylan Fitzgerald — UTC-6]:
+Have a 
+
+[Nav Nouhi (UTC+1)]:
+I think it's gonna be... What always worked with Google and SEO is unique quality authority of content. And that's just gonna... It's it's it's just gonna work because that... Because if if... When you think about agents, agents were built by humans, for humans. So they're actually designed to think, obviously, in in in human language and to choose to work or not to work, but to prioritize what what we're looking for and what what we want as humans. And So, yes, like, yeah, you can have a PR release. They're great. Like, it's nice. But PR releases... One thing about PR release, if you're, like, a PR newswire, like, you don't get backlink from from that. They're not gonna link directly to your site. Like, all those all those PR releases are actually no index, so no follow. Meaning that an an AI assistant is not gonna see that that that link and not gonna... You're not gonna contribute the the SEO juice as we as we call it. So, again, like, to answer your question, I I think it's it's it's nice to have, and it's great for LinkedIn, but it's better when someone, for example, authoritative on LinkedIn is is mentioning your site and giving you a a strong review or a a strong shout out or something along those lines. 
+
+[Ben]:
+I had a little follow-up thought on that question too. 
+
+[rafa (UTC+1)]:
+Go ahead. 
+
+[Nav Nouhi (UTC+1)]:
+Sure. Forward. 
+
+[Ben]:
+Yeah. I get... So I was thinking about that. Right? Actually, when you asked that, Rafa, I was kinda thinking about that idea. And my thought was that, like, the old school search engine optimization, it was like a kind of a mediocre heuristic for sorting results and kind of getting the answers or the context to the people that are asking. And to me, it seems like with agents in the mix, well, they're customizable, and they can just do a lot more cognitive work in short periods of time. So I think the the kinda, like, optimal point is is gonna be... Gonna be an optimization away from, like, slop style search engine optimization towards, like, what's... You know, there's less... There's probably gonna be less of an ability to, like, game it because people can, you know, tune their agents to actually get what's legitimately useful for them, versus, like, the one size fits all. Like, here's what comes at the top of the Google search results. Yeah, they could just dig deeper, take more steps, like, you know, sift and, like, filter the results before they return them to the human. So I think it's, anyways, yeah, I think it'll it'll lead towards people finding better search results and, take away the... Some of the ability for people to basically game an algorithm is is sort of my take on it, which is a good thing. 
+
+[Nav Nouhi (UTC+1)]:
+Then you mentioned, like, getting the algorithm. Right? It was looking at different search queries, seeing what what was the high volume or low volume, and just writing generic content, around those search queries. Right? Like, that was gaming the system, like like, HubSpot's kind of a... 
+
+[Ben]:
+Basically. 
+
+[Nav Nouhi (UTC+1)]:
+Right? And what agents are looking to... And looking for, they're looking for full transparency of on the... 
+
+[Ben]:
+Mhmm. 
+
+[Nav Nouhi (UTC+1)]:
+Of of your of your business. Like, I... So so for example, like, a lot of b to b SaaS businesses, they don't... They will not post their pricing. Right? Like, I mean, we all we all been... We all fell for that. Yeah. Book book a meeting. We'll we'll talk. 
+
+[Ben]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+That actually hurts when it come... In in the age of AI. Yeah? It's about being fully transparent, understanding, like, your strengths or weaknesses, 
+
+[Ben]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+and just 
+
+[Ben]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+communicating that versus kind of hiding behind a a paywall or booking or or book a meeting link. 
+
+[Ben]:
+Yeah. Exactly. That's sort of what I was thinking. It's like the agent situation incentivizes literally just putting the good information out there, like, doing better for, like, what people need as far as information. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Yeah. Yeah. It's literally like... Think about it as... The way I look at it is I... As... If I'm talking to my friend, if I'm talking to Raf and Raf is asking me for advice, I'm just gonna give him, you know, straight advice. I'm not gonna I'm not gonna filter it. I'm gonna tell him exactly how I how I... What I think in my experience versus trying to massage it in a way that is going to, you know, to gain the system, like, for example. 
+
+[Ben]:
+Yeah. Well, the other thing I... The other connection I made was that the whole query fan out thing. I mean, I figured they'd be using something like that at Google, but that was what I figured out I had to do for my own system, for my own retrieval. And it just makes sense as, you know, context and information multiplies. Eventually, a simple kind of one dimensional ranking based on, like, a single query is just insufficient because there's all these little, like, corners of the answer space. You know? There's just a... There's a lot of... There's, a whole terrain to explore. So I've, you know, I've actually tuned a model, like, low rank adapter to specifically, like, send out a lot of, like, really specific queries. But, anyways, that was just another little connection I made. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. No. You're you're right. I'll make those connections because a lot of times you ask... Sorry, Ralph. Just... I'll I'll just close it real quick. You 
+
+[rafa (UTC+1)]:
+Yeah. Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+asked a question to an aide... To an assistant, and this... They asked multiple follow-up questions that you never even thought of. Like... 
+
+[rafa (UTC+1)]:
+No. 
+
+[Nav Nouhi (UTC+1)]:
+And, yeah, those are the fan out questions. Right? Like, those are the things that... Yeah. It's just narrowing down the answer for you. Go ahead. 
+
+[rafa (UTC+1)]:
+What... So to to one question is is how do you see the balance between publishing content that models get trained on versus, like, trying to optimize your website for search? Like, how how do you look at that balance? That's the first one. And the second is, do you think there's value in kinda, like, creating add on accounts and trying to ask, like, they're trying to have a conversation as your customer. Like, how do you actually source that information? So those are two questions top of mind, and then we can pass it over to Mike that has another question as well I just saw. 
+
+[Nav Nouhi (UTC+1)]:
+Okay. So the first question was around content. Right? Like, writing content. 
+
+[rafa (UTC+1)]:
+Yeah. The... The balance between, like, aiming for, like, getting trained on versus, like like, I don't know if that's a different content strategy than getting found. I don't know if the content is the same. Like, should should a product, like, commission a book, like, proper book from an author so that they have a higher chance of getting trained on and recognized? Or, like, is the blog game where it's at, or is it, like, the tweeting or whatever whatever it is? 
+
+[Nav Nouhi (UTC+1)]:
+I I I think... So then your second question was around, like, the prompting. Right? Like, you're, like, kind of asking. Trying to... You're trying to ask 
+
+[rafa (UTC+1)]:
+Yeah. Kinda like trying to figure out, like, how do you actually even find out if the chatbots know about you? Like, do you just create add on accounts, or do you take, like, scripts from your customers and, like, ask them very nicely to send you their conversations? 
+
+[Nav Nouhi (UTC+1)]:
+as your The... Like, definitely, meeting notes help because they're gonna ask questions. Right? And those questions, eventually, they kind of roll up into different categories and different... You can... You're gonna break them out and understand, okay. If they're asking the same... You know, you can figure out that this is also the prompt they're gonna be asking after the call, or they've already asked an assistant. So the way that I I think that the the the answer to your... Both questions is try to figure out what... Understand what your customers are asking for and driving your content strategy around that. It's content strategy, FAQs. So you have a product and... Like, FAQs are really important because a lot of question... Many questions people are asking their their assistance eventually end up becoming like FAQs. And then they make it... And, obviously, there's there's the the technical piece about making sure that's readable, but there's there's that piece. And then regarding your con... Like, so the content strategy as traditional SEO versus this, like, AEO optimized content strategy. Like, writing a book, I'm not sure about that. That's something I would love to test and see if it if it if it does help. I I have seen I have seen some people that have offer... Like, build... Write a digital book and then just have it completely open open source it on their website. But it's it's more of the quality of the content. Like, so what what what is in that book? Like, are you using data... Internal data that you've that you've found that can be cited, that can be confirmed by a third party? Like, that's that's what's important to this. If it... If... That's... I think that... That's really... Yeah. That's the core... That's that's the most... One of the most important pieces there. If I if I didn't answer your question, which I don't know if I have, like, 
+
+[rafa (UTC+1)]:
+Mike? I 
+
+[Nav Nouhi (UTC+1)]:
+just follow-up. 
+
+[rafa (UTC+1)]:
+don't know where you're going. Yeah. It's all it's all good. I think... I'm pretty sure you did. Like, I I just didn't... I never thought about the fact that, you know, maybe you should write a book because your customers are more academics and looking for formal, like like, academic links versus, like, you know, write a listicle because they're actually looking for your product and lists. Right? I hadn't thought about that, which is kinda interesting. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. I mean, I I think you should write about, like, what are your what are your customers interested in? Like, what... And write about that. Like, that is... Like, so whether it's a blog post, whether, like, you know, whether it's recent 
+
+[rafa (UTC+1)]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+news. So for example, for for Credible, like, I'm... I haven't launched the content strategy yet, but what I'm focused on is, like, there's, like, just offering, like, here's what I'm seeing, like, based on the data, like, our audits. Like, here's what I'm seeing. That... That's one kinda category. The other one is, like, news, what's happening, what's changing. 
+
+[rafa (UTC+1)]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+Right? Like, it's... That's kind of like... That's... This... I'm really kind of focused on those on those bits and, like, and and then best practices. Like, what should you be doing? What should you be looking for? Like, when you're hiring, like, a AEO agency or some of these tools, like, you know, like, it's that that sort of thing. Those are kind of the categories I I would... I'm focused on for my business. 
+
+[rafa (UTC+1)]:
+Yeah. 
+
+[Nav Nouhi (UTC+1)]:
+And business business is different. Right? Like... Yeah. 
+
+[rafa (UTC+1)]:
+Mike. 
+
+[Mike Casey | UTC -5]:
+Thanks for calling on me. Interesting presentation. Thanks for thanks for sharing it. I guess, as someone who's, like, building a business, in the AI space, I wonder how much durability there is in sort of building legibility for agents to come and query the website. So, like, I just... To make it concrete, I think this is an area where it's gonna just create more space for the labs to monetize and gatekeep access. And, like, a concrete example is there's a company called ModelML. It's like a financial service kind of agentic AI kinda solution. Right? But let's say their website, they have this agents dot TXT file. Right? But how do the agents go about adjudicating competing claims and weighing whether, like, something actually is better at a task. And, like, it seems to me that if ModelML has and does raise a bunch of money, right, and they deploy it on agentic ads, right, on that kind of ad spend, what's the utility of even building out this agentic kind of legibility. It almost feels like you're you're being transparent and in the way giving away your IP to well capitalized businesses. Does that make sense? 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. It's basic... Like, they're just gonna steal your IP. Your IP is what you're saying. Right? Like, if you put it out there, does that... You kind of 
+
+[Mike Casey | UTC -5]:
+Yeah. Yeah. And it's like... 
+
+[Nav Nouhi (UTC+1)]:
+draft off of it? Yeah. 
+
+[Mike Casey | UTC -5]:
+Yeah. It's like your incentive is to be fully transparent, but at the end of the day, it's just cash that wins. And so, like, what's the what's the move in that game? 
+
+[Nav Nouhi (UTC+1)]:
+That... So that's... So that's interesting because I don't I don't know if cash is gonna win in this in this game. I mean, eventually, cash does win. I'll just... Yeah. Because, I mean, my, you know, my my I cut my teeth doing paid ads. Right? Like... And paid ads over the years have just taken over the entire SERP. So you can't get an organic listing until you're, like, halfway down the page. Now AI, like, assistant ads, let's call it, like, Chattypedia ads is is pretty new... Is relatively new. They're they're they're incentivized not to cloud the agents result... The results, the organic results of the agents from from everything that they've communicated so far. I I personally believe, and maybe it's naive of me, but I believe that you should just continue to be as transparent as possible. Obviously, don't want to give out your secret sauce. Like you want to keep some of the... Maybe you have... Maybe you put you... To use the analogy, like a recipe analogy, you provide the recipe but not not the not the way the recipe is built or cooked, for example, and be and be transparent with that. I... That's how that's how I see it. Yeah. 
+
+[Mike Casey | UTC -5]:
+I guess, if I could just ask one quick follow-up. I guess, like, the risk, though, is that all you need to do with the recipe is then send it to Chad, JPT, or Claude and just go, hey. What's the actual, ratio of x to y in this... 
+
+[Nav Nouhi (UTC+1)]:
+Sure. Fair enough. 
+
+[Mike Casey | UTC -5]:
+With these ingredients? 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. I mean... Yeah. 
+
+[Mike Casey | UTC -5]:
+And, like... So that's, like, one. And then the second is, like, the reading that we we have this week is all around these agents being black boxes and nobody knowing, like, what they're doing. So how do how do we, as consumers and business owners, building in the space and trying to make ourselves legible to the agents, actually build confidence that these agentic tools are not just black boxes that are just funneling to the best, paid customers of ChatGPT ads. Does that make sense? 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. They... Yeah. But so... Yeah. It doesn't make sense. It... It's... With Google, it was it was pretty clear if you weren't spending on Google Ads, you you saw a significant drop in your organic your organic results because there's attribution. Like, people understand your... They they... They're exposed to your brand more often, so they will search for those. But to answer your question, like, it's it's... I don't know the answer. Like, I I don't I don't know what's gonna happen with with how ChatGPT ads is gonna is gonna balance the paid versus... Or, like, let's call it organic answers. They they have been... I mean, Altman has been... I've listened to a couple interviews of his, and he's been quite clear saying that's... It's... There's... There won't be a influence, but time will tell. Because, ultimately, you gotta pay for those those GPUs. 
+
+[daniel ospina - UTC+2]:
+If... 
+
+[Mike Casey | UTC -5]:
+Awesome. Thanks. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Yeah. 
+
+[daniel ospina - UTC+2]:
+Yeah. If I may... Because, like, the way I'm seeing it, I'm... And I'm putting it out there more to to check if it resonates is that at the end, this is still a question of positioning. And, like, capital, even for a well capitalized player, not infinite. So they need to figure out where they put their resources. And if you're competing for exactly the same market, capital wins, but there is a lot of different niches coming from product architecture positioning trade offs. No? 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Absolutely. And... Good. 
+
+[daniel ospina - UTC+2]:
+And that And and and and that also, like, applying to how how many ads can you afford versus organic results. The whole theory of organic results is that they are cheaper than ads. So it's more capital efficient, but more medium, long term. And so they're in the positioning game. Like, there's still the same dynamics as with Google. No? 
+
+[Nav Nouhi (UTC+1)]:
+That's yet to be seen. So if... Right now, if you're looking at the primary monetization model of any assistant, whether it's OpenAI, Anthropic, Perplexity, even Google, it's all... It's it's... Well, Google, not quite yet, but with the other the other ones I mentioned, it's a driven based revenue. It's... And that that might be where this goes. I I don't know. I I I feel like the the way I'm the way I'm trying to read the tea leaves here, I think that's what's gonna end up happening. Like, when I mentioned someone having... If you have any agents, you're you're gonna pay for the agent. You're gonna have to pay a monthly fee even in... MetaMuse is is charging for the agent... Their agent services. So it it... We'll see. The... GBT or OpenAI hasn't cracked the code necessarily on ads yet. Now Google, I think... I strongly believe Google will figure out a way to monetize their user base with with or without ads. I I just think Google is... If I if I look at Google just quickly, they... Like, how many of you guys have a Gmail account? I wouldn't say 90 plus percent of us. How... You know, all the data you have on that account, it goes back decades potentially, and all the search data, they just have so much information. I think... And I think what they can do with an agent, building a personal agent for for you is is really something. I think it's gonna be really powerful. And they have, Google Cloud... GCP Google Cloud platform. They have their own chips. I think just overall, they're they're the most... They're the they're the best position being vertically... Completely vertically integrated with the data stack that goes back, you know, more than, you know, almost three decades now, that they that they would not... They would potentially pivot their business. And they have they have signaled that a bit as well, over the over the, over the past, quarter or two in their earnings calls. So it's not a done deal. It's... That what I'm what I'm trying to say with with ads and organic, answers. 
+
+[daniel ospina - UTC+2]:
+Thanks. 
+
+[rafa (UTC+1)]:
+Sorry. Daniel, do have a follow-up? 
+
+[daniel ospina - UTC+2]:
+No. I said thanks. 
+
+[rafa (UTC+1)]:
+Okay. Awesome. So it was originally... The meeting was originally for for an hour. We can just bump the reading to the to the next session. But one one closing closing question, I guess, Naved, what do you think... If you had... You know, we're all... I don't know if we're early, but we're definitely, I I would argue that the folks on this call are definitely not late. Or for people on the call or reading the notes that are kinda like spinning up their agent businesses or whatnot, What do you think is the biggest mistake that folks are making right now or the biggest opportunity that people have as the kind of product recommendations begin to scale through the different AI assistance both at the enterprise and the individual retail level. 
+
+[Nav Nouhi (UTC+1)]:
+Taking... Not understanding or not taking the opportunity or the... Well, let me rephrase that. I'd... I I really believe that this agentic world that... By the way, we're all very early. Like, we're we're we're we're at... I mean, I would... I don't know. We're not the bleeding edge necessarily, but we're very early. I I think you need... We need to take this very seriously. I think the world will be a much different different place in the next eighteen to twenty four months. And, you know, the most used apps will be... Won't be Instagram or social apps. They might they might be, but right up there will be your agent app. So making sure that you're you're focused on that and and taken seriously is is what I would... That's what I think is the biggest opportunity there. 
+
+[rafa (UTC+1)]:
+Great. Maybe maybe one last question. Who who who do you think you're selling to now? Do you think do you think you're still selling to people, or do you think selling to agents is where it's at? I saw a tweet recently with Chad. Build what clankers want. Do you agree with that, or do you think that it's still a people business at the end of the day? 
+
+[Nav Nouhi (UTC+1)]:
+I... Ultimately, it's a people business, but who who's feeding the people that inform... Their information and giving them the options, and that's builder agents. So, yeah, I would say it's better to get out of it now. 
+
+[rafa (UTC+1)]:
+Builds builds 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Build for clankers. 
+
+[rafa (UTC+1)]:
+for the agents. Builds for the climbers. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. Yeah. 
+
+[rafa (UTC+1)]:
+Okay. Well, anybody else anybody else have any other questions? Also, Nav, if you can just drop your link in the thread... Oh, I'll drop it for you. On credible 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. 
+
+[rafa (UTC+1)]:
+credible, I think it is. 
+
+[Nav Nouhi (UTC+1)]:
+The o. 
+
+[rafa (UTC+1)]:
+Credible. Where? Credible.com. 
+
+[Nav Nouhi (UTC+1)]:
+Mhmm. 
+
+[rafa (UTC+1)]:
+Nice. Credible.com. Okay. There you go. Dropping it here for folks to take a look at, and I'm sure I'm sure everybody's AI assistants can ask questions. Thank you so much for joining. If you guys have suggestions for next guest speakers, Specifically, the litmus test is, you know, are you are you actually building AI native businesses? Please feel free to send a note and recommend, and we'll pick up the discussion in in two weeks. If folks want to stay around, you're more than welcome to. Sachin would love to get ten minutes if you're if you're still around, but folks can drop off. Thank you so much, Nav. I'm just gonna go... I'm just gonna show Nav... Show Sachin Crow, by the way. So if you wanna stick around and take a look at it. 
+
+[Nav Nouhi (UTC+1)]:
+Yeah. I'll check it out, actually. Sure. 
+
+[rafa (UTC+1)]:
+Alright. Cheers, guys. 
+
+[Nav Nouhi (UTC+1)]:
+Thanks, guys. 
+
+[Sebastián Aristizábal | UTC+1]:
+Thank you very much for your presentation. 
+
+[Matthew McDowell-Sweet (UTC)]:
+Hello? 
+
+[Nav Nouhi (UTC+1)]:
+I apologize. Thanks for listening, your... All your questions. 
+
+[rafa (UTC+1)]:
+How do I how do I end the recording? Do I record... Stop. Here we go. The browser room.

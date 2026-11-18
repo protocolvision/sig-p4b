@@ -1,0 +1,3243 @@
+1
+00:00:01,390 --> 00:00:02,750
+[rafa (UTC+1)]: If this one works,
+
+2
+00:00:03,070 --> 00:00:04,750
+[rafa (UTC+1)]: we are now recording.
+
+3
+00:00:04,830 --> 00:00:08,510
+[rafa (UTC+1)]: So let me just do a quick intro really quick for the recording.
+
+4
+00:00:09,230 --> 00:00:14,750
+[rafa (UTC+1)]: This is the second protocols for business meeting on November sixteenth,
+
+5
+00:00:14,990 --> 00:00:15,470
+[rafa (UTC+1)]: Monday,
+
+6
+00:00:15,885 --> 00:00:18,205
+[rafa (UTC+1)]: and the '20 27 program.
+
+7
+00:00:19,085 --> 00:00:19,725
+[rafa (UTC+1)]: First
+
+8
+00:00:20,125 --> 00:00:21,965
+[rafa (UTC+1)]: theme is agents.
+
+9
+00:00:22,045 --> 00:00:25,645
+[rafa (UTC+1)]: And today, we are joined by Naved, a very good
+
+10
+00:00:25,965 --> 00:00:26,925
+[rafa (UTC+1)]: old friend
+
+11
+00:00:28,370 --> 00:00:29,890
+[rafa (UTC+1)]: who has a beautiful dog,
+
+12
+00:00:30,530 --> 00:00:33,410
+[rafa (UTC+1)]: and is an expert in search engine optimization
+
+13
+00:00:33,410 --> 00:00:34,610
+[rafa (UTC+1)]: and agent
+
+14
+00:00:35,170 --> 00:00:35,890
+[rafa (UTC+1)]: search
+
+15
+00:00:36,210 --> 00:00:46,505
+[rafa (UTC+1)]: emerging patterns and emerging strategies which are happening today. So with that, I'll pass it on to Navi. Do you wanna give a quick intro? And then just feel free to go ahead.
+
+16
+00:00:47,545 --> 00:00:54,905
+[rafa (UTC+1)]: We have a soft stop in about thirty minutes. But if the topic is interesting enough, we can always read async
+
+17
+00:00:55,145 --> 00:00:58,380
+[rafa (UTC+1)]: and just ask more questions. So no...
+
+18
+00:00:59,260 --> 00:01:04,220
+[rafa (UTC+1)]: For folks, don't feel like we need to rush. We can just ask the questions that we need to ask.
+
+19
+00:01:04,860 --> 00:01:05,660
+[rafa (UTC+1)]: Navi?
+
+20
+00:01:06,095 --> 00:01:08,495
+[Nav Nouhi (UTC+1)]: Yeah. Hey. Can you guys hear me?
+
+21
+00:01:08,860 --> 00:01:09,980
+[rafa (UTC+1)]: Yeah. I can hear you.
+
+22
+00:01:08,895 --> 00:01:09,775
+[Nav Nouhi (UTC+1)]: Or can you hear
+
+23
+00:01:10,255 --> 00:01:11,295
+[Nav Nouhi (UTC+1)]: Great. Perfect.
+
+24
+00:01:11,211 --> 00:01:11,611
+[Ben]: Yes.
+
+25
+00:01:12,015 --> 00:01:12,735
+[Nav Nouhi (UTC+1)]: Yeah.
+
+26
+00:01:12,895 --> 00:01:17,455
+[Nav Nouhi (UTC+1)]: Thanks. I... Yeah. Navi is my full name. You can also call me now if I have...
+
+27
+00:01:17,935 --> 00:01:20,255
+[Nav Nouhi (UTC+1)]: It's a little more international friendly.
+
+28
+00:01:20,735 --> 00:01:21,215
+[Nav Nouhi (UTC+1)]: So,
+
+29
+00:01:21,940 --> 00:01:26,500
+[Nav Nouhi (UTC+1)]: yes, thanks for the introduction. Yeah. And Raf Raf and I are old good friends,
+
+30
+00:01:26,740 --> 00:01:31,460
+[Nav Nouhi (UTC+1)]: and let me give you just a quick introduction to myself, my background. So I've been in
+
+31
+00:01:32,020 --> 00:01:34,420
+[Nav Nouhi (UTC+1)]: the marketing growth
+
+32
+00:01:33,905 --> 00:01:35,505
+[Nav Nouhi (UTC+1)]: digital space.
+
+33
+00:01:36,785 --> 00:01:38,065
+[Nav Nouhi (UTC+1)]: It's more than twenty years.
+
+34
+00:01:38,705 --> 00:01:41,585
+[Nav Nouhi (UTC+1)]: Started off, on... In paid advertising,
+
+35
+00:01:42,065 --> 00:01:45,025
+[Nav Nouhi (UTC+1)]: like paid paid search, so Google Ads,
+
+36
+00:01:45,585 --> 00:01:48,385
+[Nav Nouhi (UTC+1)]: even, like, Bing and Yahoo way back when.
+
+37
+00:01:49,050 --> 00:01:50,570
+[Nav Nouhi (UTC+1)]: And then as as the
+
+38
+00:01:50,970 --> 00:01:53,050
+[Nav Nouhi (UTC+1)]: as the channels evolved, Meta,
+
+39
+00:01:53,690 --> 00:01:54,730
+[Nav Nouhi (UTC+1)]: TikTok,
+
+40
+00:01:54,970 --> 00:01:56,410
+[Nav Nouhi (UTC+1)]: a little bit of Snap,
+
+41
+00:01:57,130 --> 00:01:58,970
+[Nav Nouhi (UTC+1)]: also all types of native
+
+42
+00:01:58,970 --> 00:02:01,850
+[Nav Nouhi (UTC+1)]: advertising, so display advertising you might see on different,
+
+43
+00:02:02,250 --> 00:02:03,290
+[Nav Nouhi (UTC+1)]: content sites.
+
+44
+00:02:03,795 --> 00:02:08,275
+[Nav Nouhi (UTC+1)]: And then kind of moved into growth, which is the kind of full funnel. So around
+
+45
+00:02:08,995 --> 00:02:10,355
+[Nav Nouhi (UTC+1)]: user acquisition,
+
+46
+00:02:10,355 --> 00:02:11,955
+[Nav Nouhi (UTC+1)]: activation, retention,
+
+47
+00:02:12,035 --> 00:02:12,755
+[Nav Nouhi (UTC+1)]: referral,
+
+48
+00:02:13,635 --> 00:02:14,835
+[Nav Nouhi (UTC+1)]: building the whole funnel,
+
+49
+00:02:15,395 --> 00:02:20,790
+[Nav Nouhi (UTC+1)]: and optimizing that. So whether it be on a software... From a software SaaS perspective,
+
+50
+00:02:20,790 --> 00:02:21,670
+[Nav Nouhi (UTC+1)]: ecommerce,
+
+51
+00:02:21,670 --> 00:02:24,870
+[Nav Nouhi (UTC+1)]: start to consumer, kind of have the full gauntlet,
+
+52
+00:02:25,190 --> 00:02:26,710
+[Nav Nouhi (UTC+1)]: and then obviously SEO,
+
+53
+00:02:26,710 --> 00:02:29,270
+[Nav Nouhi (UTC+1)]: like, just traditional SEO content marketing.
+
+54
+00:02:30,205 --> 00:02:40,205
+[Nav Nouhi (UTC+1)]: And now I've just... Maybe like most of you on the on the in the... On the call, I've just been... Just obsessed. I would almost say when it comes to
+
+55
+00:02:41,485 --> 00:02:43,245
+[Nav Nouhi (UTC+1)]: AI
+
+56
+00:02:42,960 --> 00:02:52,560
+[Nav Nouhi (UTC+1)]: from g t three on. I've just been really trying to understand it and learn about it. I thought this was the future, and I think we have a lot more coming. So
+
+57
+00:02:53,200 --> 00:02:54,720
+[Nav Nouhi (UTC+1)]: got into really AEO,
+
+58
+00:02:56,395 --> 00:02:57,115
+[Nav Nouhi (UTC+1)]: SEO,
+
+59
+00:02:57,435 --> 00:03:02,555
+[Nav Nouhi (UTC+1)]: just much more because I really wasn't a big fan of doing things manually.
+
+60
+00:03:03,355 --> 00:03:04,875
+[Nav Nouhi (UTC+1)]: So... Yeah. So
+
+61
+00:03:05,115 --> 00:03:05,675
+[Nav Nouhi (UTC+1)]: I
+
+62
+00:03:06,155 --> 00:03:07,435
+[Nav Nouhi (UTC+1)]: have started a
+
+63
+00:03:07,755 --> 00:03:09,480
+[Nav Nouhi (UTC+1)]: a small small company,
+
+64
+00:03:09,640 --> 00:03:20,680
+[Nav Nouhi (UTC+1)]: sole entrepreneur called Credible. I'll get I'll get into that later. But, if you guys are interested, I'm happy to talk about it. But I just kind of... Over the past, I would say, two, two and a half years, been really focused on AEO.
+
+65
+00:03:20,680 --> 00:03:26,035
+[Nav Nouhi (UTC+1)]: Also, GEO. So there's engine optimization or generative engine optimization. They're interchangeable.
+
+66
+00:03:26,515 --> 00:03:33,395
+[Nav Nouhi (UTC+1)]: And... Yeah. So I can start with the slide. Is is that long enough intro? I feel like I might have
+
+67
+00:03:33,875 --> 00:03:34,675
+[Nav Nouhi (UTC+1)]: spoken too much.
+
+68
+00:03:34,610 --> 00:03:38,210
+[rafa (UTC+1)]: Let's rock it. Let's let's rock and roll. For folks on the call,
+
+69
+00:03:37,370 --> 00:03:38,730
+[Nav Nouhi (UTC+1)]: That's rock and roll. Okay.
+
+70
+00:03:39,145 --> 00:03:42,665
+[rafa (UTC+1)]: there's a thread in the protocols for business channel
+
+71
+00:03:44,665 --> 00:03:46,985
+[rafa (UTC+1)]: where you can drop questions there.
+
+72
+00:03:47,465 --> 00:03:53,545
+[rafa (UTC+1)]: And then maybe we'll let... Navi can do a short presentation, then we can do a bunch of q and a afterwards.
+
+73
+00:03:54,185 --> 00:03:58,585
+[Nav Nouhi (UTC+1)]: Yeah. Sure. I just realized that I don't have permissions enabled for this
+
+74
+00:03:59,670 --> 00:04:02,150
+[rafa (UTC+1)]: I can... Do you want me to share it for you?
+
+75
+00:03:59,705 --> 00:04:01,945
+[Nav Nouhi (UTC+1)]: in
+
+76
+00:04:03,400 --> 00:04:05,800
+[Nav Nouhi (UTC+1)]: yeah. That'd be great, actually. Could you do it?
+
+77
+00:04:03,510 --> 00:04:05,190
+[rafa (UTC+1)]: I think I... Yeah.
+
+78
+00:04:05,670 --> 00:04:08,630
+[rafa (UTC+1)]: Yeah. Yeah. I think we I think we can.
+
+79
+00:04:09,485 --> 00:04:10,925
+[rafa (UTC+1)]: Let me see.
+
+80
+00:04:11,885 --> 00:04:13,645
+[rafa (UTC+1)]: Give me one quick second.
+
+81
+00:04:14,125 --> 00:04:15,245
+[rafa (UTC+1)]: Copy.
+
+82
+00:04:18,525 --> 00:04:19,645
+[rafa (UTC+1)]: Share my screen.
+
+83
+00:04:24,700 --> 00:04:25,340
+[rafa (UTC+1)]: Okay.
+
+84
+00:04:35,915 --> 00:04:39,035
+[rafa (UTC+1)]: See if we get this. Yeah. I see it.
+
+85
+00:04:40,085 --> 00:04:44,085
+[Nav Nouhi (UTC+1)]: I
+
+86
+00:04:40,475 --> 00:04:41,275
+[rafa (UTC+1)]: Oh,
+
+87
+00:04:44,795 --> 00:04:45,195
+[rafa (UTC+1)]: maybe.
+
+88
+00:04:46,645 --> 00:04:47,525
+[Nav Nouhi (UTC+1)]: see your old screen. Yeah.
+
+89
+00:04:47,250 --> 00:04:48,610
+[rafa (UTC+1)]: Okay.
+
+90
+00:04:51,250 --> 00:04:53,090
+[rafa (UTC+1)]: Here we go. Can you see this?
+
+91
+00:04:51,940 --> 00:04:52,820
+[Nav Nouhi (UTC+1)]: There we go.
+
+92
+00:04:53,700 --> 00:04:56,180
+[Nav Nouhi (UTC+1)]: Yeah. Perfect. Awesome. Thank you.
+
+93
+00:04:55,570 --> 00:04:56,050
+[rafa (UTC+1)]: Okay.
+
+94
+00:04:56,740 --> 00:04:57,860
+[Nav Nouhi (UTC+1)]: Yeah. So
+
+95
+00:04:58,340 --> 00:05:00,500
+[Nav Nouhi (UTC+1)]: how does this get found now
+
+96
+00:05:00,900 --> 00:05:02,100
+[Nav Nouhi (UTC+1)]: versus yesterday?
+
+97
+00:05:03,315 --> 00:05:05,395
+[Nav Nouhi (UTC+1)]: Yeah. I already talked to the introduction,
+
+98
+00:05:05,395 --> 00:05:15,315
+[Nav Nouhi (UTC+1)]: so just come some stats here. Just what's what's the current situation. So everything we're talking about today comes down to three shifts in how people search or look for businesses.
+
+99
+00:05:16,020 --> 00:05:23,460
+[Nav Nouhi (UTC+1)]: First, more than two thirds of Google searches now end on Google. That means the answer sits right in the in the search results,
+
+100
+00:05:23,620 --> 00:05:24,020
+[Nav Nouhi (UTC+1)]: and
+
+101
+00:05:24,820 --> 00:05:34,175
+[Nav Nouhi (UTC+1)]: that's just there. So no longer clicking out into the blue links into my deep into the website. So that's that's the major change from... Previously. Secondly,
+
+102
+00:05:34,895 --> 00:05:35,455
+[Nav Nouhi (UTC+1)]: now
+
+103
+00:05:35,855 --> 00:05:42,735
+[Nav Nouhi (UTC+1)]: asking an assistant is a mainstream habit. Like, I just updated this data. This is from September 26. 1,200,000,000
+
+104
+00:05:42,735 --> 00:05:43,535
+[Nav Nouhi (UTC+1)]: users
+
+105
+00:05:43,920 --> 00:05:51,200
+[Nav Nouhi (UTC+1)]: are using obviously ChatGPT every week and and it's growing. And that's just GPT. If you add claud and perplexity, you're looking
+
+106
+00:05:51,520 --> 00:05:53,920
+[Nav Nouhi (UTC+1)]: at that number and grows much more.
+
+107
+00:05:54,800 --> 00:05:56,880
+[Nav Nouhi (UTC+1)]: Depending on what survey you read
+
+108
+00:05:57,315 --> 00:06:03,235
+[Nav Nouhi (UTC+1)]: between a quarter and half of consumers now use AI to find local businesses. So if any local business start here,
+
+109
+00:06:04,275 --> 00:06:06,275
+[Nav Nouhi (UTC+1)]: that... That's that's... It's massive.
+
+110
+00:06:06,675 --> 00:06:16,750
+[Nav Nouhi (UTC+1)]: And the third of people don't even type keywords anymore. So it used to be, you know, your secret... Your ninja power was able to to really put together a couple couple words and find
+
+111
+00:06:17,070 --> 00:06:22,030
+[Nav Nouhi (UTC+1)]: find what you're looking for. Now people are literally using average 23 words
+
+112
+00:06:22,270 --> 00:06:25,470
+[Nav Nouhi (UTC+1)]: and trying to get you to prompt users. And that's a
+
+113
+00:06:26,135 --> 00:06:28,695
+[Nav Nouhi (UTC+1)]: significant difference in user behavior,
+
+114
+00:06:29,735 --> 00:06:42,540
+[Nav Nouhi (UTC+1)]: and and they expect a recommendation coming back now. So to put that in perspective, just kinda really quickly, Adobe measured AI referral visits to US retail sites are up a 138%
+
+115
+00:06:42,540 --> 00:06:43,580
+[Nav Nouhi (UTC+1)]: in a year
+
+116
+00:06:44,540 --> 00:06:45,740
+[Nav Nouhi (UTC+1)]: from May,
+
+117
+00:06:46,060 --> 00:06:47,100
+[Nav Nouhi (UTC+1)]: and about...
+
+118
+00:06:47,180 --> 00:06:49,260
+[Nav Nouhi (UTC+1)]: They convert 54%
+
+119
+00:06:49,420 --> 00:06:56,305
+[Nav Nouhi (UTC+1)]: higher than regular traffic. So even though this is just, like, just to be very clear, this is a small percentage of overall...
+
+120
+00:06:56,625 --> 00:07:02,945
+[Nav Nouhi (UTC+1)]: Like, AI referrals are a small percentage of overall website traffic. This is a significant change in user behavior. And
+
+121
+00:07:03,345 --> 00:07:06,785
+[Nav Nouhi (UTC+1)]: even more so, if you understand now, like, it's
+
+122
+00:07:07,340 --> 00:07:13,980
+[Nav Nouhi (UTC+1)]: you're just starting in one place and you're ending with a conversion. 54% of users are converting at higher rate than
+
+123
+00:07:14,380 --> 00:07:18,780
+[Nav Nouhi (UTC+1)]: other channels, which, like, from a user acquisition standpoint is a significant
+
+124
+00:07:19,180 --> 00:07:20,860
+[Nav Nouhi (UTC+1)]: change. So on the next slide, please.
+
+125
+00:07:25,305 --> 00:07:26,345
+[Nav Nouhi (UTC+1)]: Yeah. So
+
+126
+00:07:26,745 --> 00:07:30,105
+[Nav Nouhi (UTC+1)]: couple things. Just kind of map of the rest of the talk here.
+
+127
+00:07:31,145 --> 00:07:36,185
+[Nav Nouhi (UTC+1)]: The main thing to know is, like, there's, like, three layers, on the stack here. So basic SEO,
+
+128
+00:07:36,540 --> 00:07:37,900
+[Nav Nouhi (UTC+1)]: search engine optimization,
+
+129
+00:07:37,900 --> 00:07:43,980
+[Nav Nouhi (UTC+1)]: if you don't know exactly what it stands for, getting a search engine to crawl, understand, and rank your pages.
+
+130
+00:07:44,140 --> 00:07:47,020
+[Nav Nouhi (UTC+1)]: On top of that, there's AEO, answer optimization,
+
+131
+00:07:47,020 --> 00:07:48,140
+[Nav Nouhi (UTC+1)]: like I mentioned earlier,
+
+132
+00:07:48,620 --> 00:07:51,660
+[Nav Nouhi (UTC+1)]: GEO, making your business easily stand out
+
+133
+00:07:52,535 --> 00:07:56,215
+[Nav Nouhi (UTC+1)]: when an AI assistant define trust and name your hands...
+
+134
+00:07:56,695 --> 00:07:58,215
+[Nav Nouhi (UTC+1)]: Name name its answer.
+
+135
+00:07:58,455 --> 00:08:03,335
+[Nav Nouhi (UTC+1)]: And on top of that, like, which is really new, I mean, almost a a few months now,
+
+136
+00:08:04,230 --> 00:08:09,190
+[Nav Nouhi (UTC+1)]: is agent readiness, which is something that I think we're all really excited about. Making sure your site...
+
+137
+00:08:09,990 --> 00:08:17,510
+[Nav Nouhi (UTC+1)]: So it's facts and actions like booking or buying and something can actually be used by a piece of software acting on behalf of a human.
+
+138
+00:08:18,765 --> 00:08:20,525
+[Nav Nouhi (UTC+1)]: There aren't any official
+
+139
+00:08:20,845 --> 00:08:26,125
+[Nav Nouhi (UTC+1)]: standards quite yet for agent readiness, but there are a few frameworks and standards
+
+140
+00:08:26,205 --> 00:08:27,565
+[Nav Nouhi (UTC+1)]: in the pipeline.
+
+141
+00:08:28,125 --> 00:08:31,005
+[Nav Nouhi (UTC+1)]: There's a couple I mentioned. One is specifically Google
+
+142
+00:08:31,170 --> 00:08:32,370
+[Nav Nouhi (UTC+1)]: WebMCP,
+
+143
+00:08:32,370 --> 00:08:34,770
+[Nav Nouhi (UTC+1)]: which is probably gonna be the one that will
+
+144
+00:08:35,650 --> 00:08:40,850
+[Nav Nouhi (UTC+1)]: will be will be the the one to really take... To focus on, and which is actually what I've been focusing on mostly.
+
+145
+00:08:41,330 --> 00:08:42,050
+[Nav Nouhi (UTC+1)]: But
+
+146
+00:08:42,210 --> 00:08:49,795
+[Nav Nouhi (UTC+1)]: in essence, like, this is, like, this is kind of the the... Really quickly, just kind of three topics we'll be discussing today. So next slide.
+
+147
+00:08:52,915 --> 00:08:53,635
+[Nav Nouhi (UTC+1)]: So
+
+148
+00:08:53,715 --> 00:09:02,990
+[Nav Nouhi (UTC+1)]: this is a question people ask me quite often. It's like, isn't this just SEO? Like, AEO and agent readiness. Yeah. Like, okay. Yeah. There there are... There's definitely some overlap.
+
+149
+00:09:04,830 --> 00:09:08,590
+[Nav Nouhi (UTC+1)]: There's, you know, there's... Like I mentioned here, the same foundation. Like,
+
+150
+00:09:09,070 --> 00:09:20,645
+[Nav Nouhi (UTC+1)]: SEO gets your page ranked. AEO gets your business name in an answer. Technical SEO is foundation for both. So, like, what carries over is, like, Google sets itself that there's no special requirement for
+
+151
+00:09:21,445 --> 00:09:23,525
+[Nav Nouhi (UTC+1)]: AI answers beyond indexing
+
+152
+00:09:23,525 --> 00:09:28,805
+[Nav Nouhi (UTC+1)]: and being indexed and being eligible to show a snippet. So this is, like, basic stuff, but that's not actually...
+
+153
+00:09:29,445 --> 00:09:30,885
+[Nav Nouhi (UTC+1)]: That... That's not actually
+
+154
+00:09:31,260 --> 00:09:32,940
+[Nav Nouhi (UTC+1)]: true. There's there's a lot more there.
+
+155
+00:09:33,340 --> 00:09:35,740
+[Nav Nouhi (UTC+1)]: So what it comes down is three basic shifts.
+
+156
+00:09:36,620 --> 00:09:37,180
+[Nav Nouhi (UTC+1)]: So
+
+157
+00:09:37,980 --> 00:09:41,100
+[Nav Nouhi (UTC+1)]: ranking no longer earns you a citation. Meaning,
+
+158
+00:09:41,500 --> 00:09:46,540
+[Nav Nouhi (UTC+1)]: if you if you rank, it used to be like, how can you rank? How... Can you rank page one on Google? Can you be a top 10
+
+159
+00:09:47,115 --> 00:09:47,995
+[Nav Nouhi (UTC+1)]: listed...
+
+160
+00:09:48,715 --> 00:09:52,635
+[Nav Nouhi (UTC+1)]: Can your site be as top 10 listed on on a... On Google search results
+
+161
+00:09:53,355 --> 00:09:54,155
+[Nav Nouhi (UTC+1)]: page?
+
+162
+00:09:54,155 --> 00:09:56,555
+[Nav Nouhi (UTC+1)]: That is actually not even
+
+163
+00:09:57,355 --> 00:10:05,510
+[Nav Nouhi (UTC+1)]: really close. So on 38% of pages cited, like, they're not actually on top 10. So that... It's a significant difference.
+
+164
+00:10:05,910 --> 00:10:08,710
+[Nav Nouhi (UTC+1)]: What's actually happening is, like, that means, like, the 62%
+
+165
+00:10:08,710 --> 00:10:09,190
+[Nav Nouhi (UTC+1)]: of
+
+166
+00:10:10,310 --> 00:10:11,750
+[Nav Nouhi (UTC+1)]: citations are
+
+167
+00:10:11,990 --> 00:10:14,470
+[Nav Nouhi (UTC+1)]: pages or websites that have been... Are ranking.
+
+168
+00:10:15,875 --> 00:10:22,355
+[Nav Nouhi (UTC+1)]: It's like... It was, like, 10 through a 100 and then, like, a 100 plus. So this is this is deep, deep, deep
+
+169
+00:10:23,635 --> 00:10:27,475
+[Nav Nouhi (UTC+1)]: pages that are not even... Not ranking on Google's search results page. Secondly,
+
+170
+00:10:28,970 --> 00:10:35,050
+[Nav Nouhi (UTC+1)]: kind of many searches. So this this one question becomes several searches behind the scenes. So what's happened now is
+
+171
+00:10:35,690 --> 00:10:41,610
+[Nav Nouhi (UTC+1)]: we will call this, like, a query fan out. So assistant will break out one question to several background searches,
+
+172
+00:10:42,615 --> 00:10:44,695
+[Nav Nouhi (UTC+1)]: which is basically like the...
+
+173
+00:10:45,175 --> 00:10:51,895
+[Nav Nouhi (UTC+1)]: When assistant has sub agents, these are... These these fan out questions are essentially sub agents asking multiple questions across
+
+174
+00:10:51,975 --> 00:10:53,575
+[Nav Nouhi (UTC+1)]: across their index, across
+
+175
+00:10:54,630 --> 00:10:55,830
+[Nav Nouhi (UTC+1)]: the the web.
+
+176
+00:10:56,310 --> 00:11:00,310
+[Nav Nouhi (UTC+1)]: And then what was the the last one mentions over links? So
+
+177
+00:11:00,870 --> 00:11:06,230
+[Nav Nouhi (UTC+1)]: so this is from a HRF study. Over 75 brands they they studied, mentioned,
+
+178
+00:11:06,470 --> 00:11:07,830
+[Nav Nouhi (UTC+1)]: benches of brands across
+
+179
+00:11:08,075 --> 00:11:13,755
+[Nav Nouhi (UTC+1)]: the web correlated to, like, AI visibility three times more strongly than backlinks.
+
+180
+00:11:13,915 --> 00:11:15,435
+[Nav Nouhi (UTC+1)]: So that's
+
+181
+00:11:15,515 --> 00:11:18,235
+[Nav Nouhi (UTC+1)]: pretty significant because backlinks were...
+
+182
+00:11:18,715 --> 00:11:22,155
+[Nav Nouhi (UTC+1)]: Or are a major strategy in in traditional SEO.
+
+183
+00:11:22,475 --> 00:11:23,275
+[Nav Nouhi (UTC+1)]: Again, like,
+
+184
+00:11:23,860 --> 00:11:31,220
+[Nav Nouhi (UTC+1)]: this is this is this is not... To be clear, it's not... It's this correlation, not proof, but this is what I've been seeing and studies have been seeing,
+
+185
+00:11:31,460 --> 00:11:34,420
+[Nav Nouhi (UTC+1)]: across the web. So just next one.
+
+186
+00:11:35,700 --> 00:11:36,340
+[Nav Nouhi (UTC+1)]: Next slide.
+
+187
+00:11:37,005 --> 00:11:37,645
+[Nav Nouhi (UTC+1)]: So
+
+188
+00:11:38,125 --> 00:11:49,005
+[Nav Nouhi (UTC+1)]: just really quickly how AI kind of looks at your website. So when it comes to memories, it's it's what's learned in training. So it's like the first of the training day that it has, which is essentially
+
+189
+00:11:49,085 --> 00:11:55,320
+[Nav Nouhi (UTC+1)]: frozen in time. It's what it knows about you out of the box. It might be a year ago. It depends on the context window.
+
+190
+00:11:56,600 --> 00:12:02,920
+[Nav Nouhi (UTC+1)]: And then second is the live retrieval. So that's just... They... Each each assistant has their own search,
+
+191
+00:12:03,775 --> 00:12:05,295
+[Nav Nouhi (UTC+1)]: and that's live retrieval.
+
+192
+00:12:05,455 --> 00:12:12,255
+[Nav Nouhi (UTC+1)]: They fetch live pages. They write answers on what they find. To do this, like, vendors have specific
+
+193
+00:12:12,495 --> 00:12:15,855
+[Nav Nouhi (UTC+1)]: distinct visitors. So every platform documents them. So for example,
+
+194
+00:12:16,370 --> 00:12:21,010
+[Nav Nouhi (UTC+1)]: OpenAI uses their GBT bot for training. They use OAI
+
+195
+00:12:21,010 --> 00:12:22,930
+[Nav Nouhi (UTC+1)]: search bot for its search index,
+
+196
+00:12:23,170 --> 00:12:36,045
+[Nav Nouhi (UTC+1)]: and then they use a GBT dash user for when a person is actually act... Asking a question. These are all... And there's... I can go into each one for each different assistant, but the point is, like, these are bots.
+
+197
+00:12:36,445 --> 00:12:37,005
+[Nav Nouhi (UTC+1)]: And
+
+198
+00:12:37,325 --> 00:12:43,005
+[Nav Nouhi (UTC+1)]: it's really important to be able to make sure those... These bots are not blocked on your website, which is something that
+
+199
+00:12:44,460 --> 00:12:45,420
+[Nav Nouhi (UTC+1)]: those... Like,
+
+200
+00:12:46,540 --> 00:12:54,860
+[Nav Nouhi (UTC+1)]: this was something that you would actually wanted to filter out these bots, but there's the three bots you want to allow. Because blocking the the training bots and blocking these search bots are completely
+
+201
+00:12:55,275 --> 00:13:04,795
+[Nav Nouhi (UTC+1)]: different decisions and have different consequences. So, like, it's very important to make sure you offer these. And secondly, a text first. So I mentioned here... Or thirdly, text first.
+
+202
+00:13:06,715 --> 00:13:09,435
+[Nav Nouhi (UTC+1)]: It's it's really important to understand that
+
+203
+00:13:10,180 --> 00:13:10,820
+[Nav Nouhi (UTC+1)]: you...
+
+204
+00:13:11,860 --> 00:13:20,020
+[Nav Nouhi (UTC+1)]: A... These assistants, they only... They can't read JavaScript. They can obviously code JavaScript, etcetera, but they cannot read it. So you need to have plain text or...
+
+205
+00:13:20,340 --> 00:13:22,900
+[Nav Nouhi (UTC+1)]: On the on the website. So it it needs to be...
+
+206
+00:13:23,585 --> 00:13:30,865
+[Nav Nouhi (UTC+1)]: When you load the site, everything should load there so you can actually read it. So their crawlers can actually read, decide, and understand what your business is offering.
+
+207
+00:13:31,025 --> 00:13:32,145
+[Nav Nouhi (UTC+1)]: So next slide.
+
+208
+00:13:33,105 --> 00:13:33,345
+[Nav Nouhi (UTC+1)]: So,
+
+209
+00:13:35,520 --> 00:13:44,000
+[Nav Nouhi (UTC+1)]: okay, I'll go this really quickly. Like, technical SEO is the floor. It's just what I kinda mentioned on... Again, it's not replacing AEO, but
+
+210
+00:13:44,320 --> 00:13:49,200
+[Nav Nouhi (UTC+1)]: it... By AEO, but it's a part of AEO. So the machine needs to read
+
+211
+00:13:49,615 --> 00:13:51,455
+[Nav Nouhi (UTC+1)]: read everything. You read your website.
+
+212
+00:13:51,855 --> 00:13:58,335
+[Nav Nouhi (UTC+1)]: So I mentioned earlier the bots and the and the search answer bots, you fill... Allow them to make sure it's findable. So these are classic
+
+213
+00:13:58,895 --> 00:13:59,695
+[Nav Nouhi (UTC+1)]: SEO,
+
+214
+00:13:59,855 --> 00:14:05,110
+[Nav Nouhi (UTC+1)]: technical SEO, site map, clean links, pages are indexed, they're all indexable,
+
+215
+00:14:05,270 --> 00:14:06,630
+[Nav Nouhi (UTC+1)]: relevant pages
+
+216
+00:14:06,630 --> 00:14:13,510
+[Nav Nouhi (UTC+1)]: are indexed. So for example, an index means that you're offering the... It's the the page is public to the Internet.
+
+217
+00:14:14,345 --> 00:14:20,105
+[Nav Nouhi (UTC+1)]: And and there... There's been some practices where people or companies would actually non index, so
+
+218
+00:14:20,585 --> 00:14:27,545
+[Nav Nouhi (UTC+1)]: block search engines and and and AI from looking at their terms and conditions or privacy policy.
+
+219
+00:14:28,130 --> 00:14:37,890
+[Nav Nouhi (UTC+1)]: And, actually, like, I found this I found this in a in a specific use case where a company was doing this, and they didn't realize they were doing it. And once they opened it up and allowed allowed the,
+
+220
+00:14:38,690 --> 00:14:45,505
+[Nav Nouhi (UTC+1)]: assistance to read their terms of... To t's and c's and privacy policy, their their trust. Like, they got they got a lot more
+
+221
+00:14:45,905 --> 00:14:49,825
+[Nav Nouhi (UTC+1)]: traffic from this because this... These are these are pages that are
+
+222
+00:14:50,225 --> 00:15:01,520
+[Nav Nouhi (UTC+1)]: developing trust and showing that this is actual company to the to the assistance, not just some, you know, faceless company. So it's it's actually kinda counterintuitive to some legacy SEO practices.
+
+223
+00:15:03,200 --> 00:15:12,485
+[Nav Nouhi (UTC+1)]: And then, obviously, like, you know, how quickly your page loads, like, for people and machines because you have to understand that page load speed is still really important
+
+224
+00:15:12,885 --> 00:15:13,605
+[Nav Nouhi (UTC+1)]: because
+
+225
+00:15:14,085 --> 00:15:18,085
+[Nav Nouhi (UTC+1)]: assistants are using essentially, like, virtual machines to to
+
+226
+00:15:19,045 --> 00:15:23,125
+[Nav Nouhi (UTC+1)]: to look at your website currently until until there's some
+
+227
+00:15:23,125 --> 00:15:24,405
+[Nav Nouhi (UTC+1)]: of the agent
+
+228
+00:15:25,390 --> 00:15:26,590
+[Nav Nouhi (UTC+1)]: articles are released.
+
+229
+00:15:26,910 --> 00:15:34,030
+[Nav Nouhi (UTC+1)]: And then obviously, like, yeah, like, readable, like, is the content itself? Is it is it factual? Is it structured data? This is this is super important.
+
+230
+00:15:34,430 --> 00:15:40,270
+[Nav Nouhi (UTC+1)]: So it has to be brought... Write HTML, backed by data that who you are, what you're selling, what it costs,
+
+231
+00:15:41,775 --> 00:15:46,495
+[Nav Nouhi (UTC+1)]: and and all that. Just essentially just being honest and and transparent.
+
+232
+00:15:46,975 --> 00:15:47,855
+[Nav Nouhi (UTC+1)]: Next slide.
+
+233
+00:15:49,295 --> 00:15:52,655
+[Nav Nouhi (UTC+1)]: This is kind of also honest and transparent,
+
+234
+00:15:52,895 --> 00:15:53,695
+[Nav Nouhi (UTC+1)]: and consistent
+
+235
+00:15:54,130 --> 00:15:59,890
+[Nav Nouhi (UTC+1)]: is that this is... Believe it or not, this is more common than not. Like, having consistent information
+
+236
+00:15:59,890 --> 00:16:05,890
+[Nav Nouhi (UTC+1)]: across your own site and across other sites that represent you is not something that is a given.
+
+237
+00:16:06,555 --> 00:16:15,595
+[Nav Nouhi (UTC+1)]: I've seen this in audits, like, in in client audits. I've seen many of my clients, like, for example, they might have an old address and some directory that,
+
+238
+00:16:15,915 --> 00:16:27,870
+[Nav Nouhi (UTC+1)]: you know, pulled from their website and and there's something changed. So now the agent's looking at their website realizing, well, this is their webs... You know, their own website has this address, but this other website that has maybe a bit of authority,
+
+239
+00:16:28,590 --> 00:16:32,030
+[Nav Nouhi (UTC+1)]: let's call it... Let's just say Google business profile or Google Maps profile,
+
+240
+00:16:32,535 --> 00:16:40,775
+[Nav Nouhi (UTC+1)]: Different address or phone number, there's inconsistency there, and then there's there's a penalty there. They're not they're not actually gonna trust your, excuse me, your
+
+241
+00:16:41,655 --> 00:16:42,775
+[Nav Nouhi (UTC+1)]: your site.
+
+242
+00:16:42,935 --> 00:16:45,335
+[Nav Nouhi (UTC+1)]: So, like, I'll give you an example
+
+243
+00:16:45,895 --> 00:16:53,070
+[Nav Nouhi (UTC+1)]: for for Credible. So I was... I've been working with it. They they were quoting prices on on my website incorrectly.
+
+244
+00:16:53,070 --> 00:16:55,710
+[Nav Nouhi (UTC+1)]: So I don't know why I had, like, as a...
+
+245
+00:16:56,030 --> 00:17:02,590
+[Nav Nouhi (UTC+1)]: On the homepage and the pricing page, the prices were inconsistent. I had to I had to go fix... I fixed that to fix that, for example.
+
+246
+00:17:04,115 --> 00:17:06,595
+[Nav Nouhi (UTC+1)]: Anyway, so next so next slide. And
+
+247
+00:17:07,235 --> 00:17:10,915
+[Nav Nouhi (UTC+1)]: this is kind of... I did run out on my own side when I first launched it, and
+
+248
+00:17:12,275 --> 00:17:14,115
+[Nav Nouhi (UTC+1)]: this is what you kinda see. So
+
+249
+00:17:14,835 --> 00:17:16,995
+[Nav Nouhi (UTC+1)]: so these
+
+250
+00:17:16,050 --> 00:17:27,010
+[Nav Nouhi (UTC+1)]: so these are AI... So based on AI answer questions, but from my own company. So these are around services that I offer, what what a customer would be looking for, potential buyer would be looking for prompting
+
+251
+00:17:27,490 --> 00:17:29,010
+[Nav Nouhi (UTC+1)]: users. And then
+
+252
+00:17:29,365 --> 00:17:35,685
+[Nav Nouhi (UTC+1)]: and then, obviously, like, when I actually asked when I prompted the the assistance, this is also across GBT,
+
+253
+00:17:35,685 --> 00:17:37,125
+[Nav Nouhi (UTC+1)]: Claude, Perplexity,
+
+254
+00:17:37,365 --> 00:17:38,245
+[Nav Nouhi (UTC+1)]: Gemini,
+
+255
+00:17:40,005 --> 00:17:41,525
+[Nav Nouhi (UTC+1)]: across all the major assistance.
+
+256
+00:17:42,165 --> 00:17:42,725
+[Nav Nouhi (UTC+1)]: So,
+
+257
+00:17:43,525 --> 00:17:43,925
+[Nav Nouhi (UTC+1)]: you know,
+
+258
+00:17:44,830 --> 00:17:52,110
+[Nav Nouhi (UTC+1)]: it's a new it's a new business, and there isn't a lot of information out there. There's information about myself personally, but not much out there. So,
+
+259
+00:17:53,150 --> 00:17:56,030
+[Nav Nouhi (UTC+1)]: yeah, like, this is what this is what happened. This is what happens.
+
+260
+00:17:56,430 --> 00:17:57,870
+[Nav Nouhi (UTC+1)]: And so you you need to prove,
+
+261
+00:17:58,425 --> 00:18:01,225
+[Nav Nouhi (UTC+1)]: not just say, you need proof that your company exists.
+
+262
+00:18:02,185 --> 00:18:14,130
+[Nav Nouhi (UTC+1)]: They don't just... Assistants don't have a reason to just recommend it yet because there's no one else talking about it. So it's really important to start getting your name out there and getting people to to refer you, recommend you. Next slide.
+
+263
+00:18:15,330 --> 00:18:16,610
+[Nav Nouhi (UTC+1)]: And this kinda goes
+
+264
+00:18:17,330 --> 00:18:18,050
+[Nav Nouhi (UTC+1)]: to
+
+265
+00:18:19,170 --> 00:18:20,450
+[Nav Nouhi (UTC+1)]: thought leadership,
+
+266
+00:18:20,530 --> 00:18:21,250
+[Nav Nouhi (UTC+1)]: trust,
+
+267
+00:18:21,570 --> 00:18:22,770
+[Nav Nouhi (UTC+1)]: building expertise
+
+268
+00:18:23,970 --> 00:18:30,545
+[Nav Nouhi (UTC+1)]: around around around your business. So if if you're under category. So for example, like, assistant,
+
+269
+00:18:31,425 --> 00:18:34,225
+[Nav Nouhi (UTC+1)]: you know, any assistant can now write generic content
+
+270
+00:18:35,105 --> 00:18:39,505
+[Nav Nouhi (UTC+1)]: that has zero value. Like, what... Since we're looking for are
+
+271
+00:18:40,400 --> 00:18:45,360
+[Nav Nouhi (UTC+1)]: what you can't make up. So firsthand experience, your own data, a named expert with a view.
+
+272
+00:18:45,600 --> 00:18:46,960
+[Nav Nouhi (UTC+1)]: Like, Google actually
+
+273
+00:18:47,200 --> 00:18:50,640
+[Nav Nouhi (UTC+1)]: has guidance on on this, like, expertise,
+
+274
+00:18:50,800 --> 00:18:55,455
+[Nav Nouhi (UTC+1)]: experience, expertise, authoritative, and and trust. Trust is the most important of all of this.
+
+275
+00:18:56,095 --> 00:18:58,095
+[Nav Nouhi (UTC+1)]: And there's... Know, it's called EAT.
+
+276
+00:18:58,975 --> 00:19:00,495
+[Nav Nouhi (UTC+1)]: It's the acronym for this.
+
+277
+00:19:01,215 --> 00:19:11,140
+[Nav Nouhi (UTC+1)]: And this this is what's most important. Like, if if you can get this, which is any company should be able to do this and and and communicate this, you're you're ahead of the game. Because
+
+278
+00:19:11,540 --> 00:19:20,740
+[Nav Nouhi (UTC+1)]: I don't know if if if many of you remember, there were there were sites kind of spamming the Google search results for many years, just answering random questions people were looking for based on search volume,
+
+279
+00:19:21,435 --> 00:19:25,995
+[Nav Nouhi (UTC+1)]: and the the SERP or the search results page on Google just became irrelevant.
+
+280
+00:19:27,035 --> 00:19:32,635
+[Nav Nouhi (UTC+1)]: And this is... You can look at AI now. AI assistant's saying they're actually looking.
+
+281
+00:19:33,930 --> 00:19:34,730
+[Nav Nouhi (UTC+1)]: They're
+
+282
+00:19:34,810 --> 00:19:40,250
+[Nav Nouhi (UTC+1)]: they're searching on behalf of of us humans, and so they're look... They're trained to under... To,
+
+283
+00:19:41,290 --> 00:19:44,170
+[Nav Nouhi (UTC+1)]: evaluate what we value, and we value
+
+284
+00:19:44,810 --> 00:19:46,650
+[Nav Nouhi (UTC+1)]: trust, evidence, and originality.
+
+285
+00:19:46,970 --> 00:19:47,770
+[Nav Nouhi (UTC+1)]: Next slide, please.
+
+286
+00:19:48,995 --> 00:19:55,875
+[Nav Nouhi (UTC+1)]: And what I'm actually most excited about, or one of the most excited about is what is, like, Asia readiness. So
+
+287
+00:19:56,915 --> 00:19:58,355
+[Nav Nouhi (UTC+1)]: this is something that...
+
+288
+00:19:59,635 --> 00:20:01,395
+[Nav Nouhi (UTC+1)]: Like, if if AEO
+
+289
+00:20:01,990 --> 00:20:07,430
+[Nav Nouhi (UTC+1)]: is being named Asia ready... Asia Asia ready, it's about being usable, which is incredible,
+
+290
+00:20:07,670 --> 00:20:19,285
+[Nav Nouhi (UTC+1)]: from my opinion. Like... So, basically, can a can a software acting on a behalf of a person, like, complete a task? So can they buy something? Can they book a book a meeting? Can they
+
+291
+00:20:19,845 --> 00:20:23,365
+[Nav Nouhi (UTC+1)]: find a price with with, like, with no human intervention?
+
+292
+00:20:23,845 --> 00:20:31,045
+[Nav Nouhi (UTC+1)]: Like, today, like I mentioned here, most most agents are driven by a browser. They read a page, etcetera. So all the things that I mentioned earlier around having
+
+293
+00:20:32,270 --> 00:20:33,630
+[Nav Nouhi (UTC+1)]: raw HTML,
+
+294
+00:20:34,430 --> 00:20:38,990
+[Nav Nouhi (UTC+1)]: site structure, etcetera, is very important for that. But next is really these
+
+295
+00:20:39,310 --> 00:20:42,990
+[Nav Nouhi (UTC+1)]: offer... The sites actually offering actions directly to agents. So
+
+296
+00:20:43,575 --> 00:20:46,215
+[Nav Nouhi (UTC+1)]: so I mentioned Google's WebMCP,
+
+297
+00:20:46,775 --> 00:20:49,655
+[Nav Nouhi (UTC+1)]: which tells an agent directly
+
+298
+00:20:49,655 --> 00:20:53,975
+[Nav Nouhi (UTC+1)]: what they can do. So here are the actions you need to take in order to execute
+
+299
+00:20:54,535 --> 00:20:56,695
+[Nav Nouhi (UTC+1)]: whatever you're trying to do for that human.
+
+300
+00:20:57,570 --> 00:20:59,890
+[Nav Nouhi (UTC+1)]: And so I so I ran them on my website
+
+301
+00:21:00,290 --> 00:21:01,010
+[Nav Nouhi (UTC+1)]: again
+
+302
+00:21:01,650 --> 00:21:11,010
+[Nav Nouhi (UTC+1)]: when I first launched it, and, yeah, I got five out of out of the 13 agent readiness requirements that I actually... We actually measured, I've actually added more than 13 since then. So
+
+303
+00:21:11,725 --> 00:21:14,845
+[Nav Nouhi (UTC+1)]: that's kind of, you know, that's just critical
+
+304
+00:21:15,565 --> 00:21:23,085
+[Nav Nouhi (UTC+1)]: for the feature. And I... You know, I... The next slide, please. This slide goes into, you know, obviously... And you... Everyone probably heard about MetaMuse,
+
+305
+00:21:23,720 --> 00:21:26,760
+[Nav Nouhi (UTC+1)]: Dots, Cloud Duet, Instinct maybe as well.
+
+306
+00:21:27,720 --> 00:21:31,480
+[Nav Nouhi (UTC+1)]: These are all new personal agents, and it's super... I mean, it's... They...
+
+307
+00:21:31,880 --> 00:21:34,120
+[Nav Nouhi (UTC+1)]: Of them launched probably in September more or less.
+
+308
+00:21:36,375 --> 00:21:41,495
+[Nav Nouhi (UTC+1)]: It's it's new. It's it's fresh, but I just want you guys to understand that
+
+309
+00:21:42,055 --> 00:21:51,095
+[Nav Nouhi (UTC+1)]: everyone on this call and everyone in their... And everyone in your social... In your network will have a personal agent in the next, I think, eighteen to twenty four months.
+
+310
+00:21:52,110 --> 00:21:55,630
+[Nav Nouhi (UTC+1)]: And I just... It's it's just gonna be it's gonna be the next,
+
+311
+00:21:55,950 --> 00:22:00,590
+[Nav Nouhi (UTC+1)]: I don't know, like iPhone app at marketplace. Everyone's gonna have an agent doing something for them.
+
+312
+00:22:01,150 --> 00:22:04,350
+[Nav Nouhi (UTC+1)]: Already, you can see it with with Internet traffic. So
+
+313
+00:22:04,925 --> 00:22:06,845
+[Nav Nouhi (UTC+1)]: this was from Cloudflare,
+
+314
+00:22:07,565 --> 00:22:09,325
+[Nav Nouhi (UTC+1)]: yeah, just this past September.
+
+315
+00:22:09,645 --> 00:22:17,005
+[Nav Nouhi (UTC+1)]: Yeah. Over, yeah, over half of the Internet traffic was in human this year. So that that doesn't mean it was it was agents necessarily, but it was
+
+316
+00:22:17,570 --> 00:22:18,370
+[Nav Nouhi (UTC+1)]: bots
+
+317
+00:22:18,690 --> 00:22:20,130
+[Nav Nouhi (UTC+1)]: and also agents.
+
+318
+00:22:20,450 --> 00:22:23,330
+[Nav Nouhi (UTC+1)]: So it's it's coming, and it's significant.
+
+319
+00:22:23,330 --> 00:22:28,610
+[Nav Nouhi (UTC+1)]: And like I mentioned here, 17... This this number is crazy, but, yeah, 1700%
+
+320
+00:22:28,690 --> 00:22:33,565
+[Nav Nouhi (UTC+1)]: growth in daily agents in one year, and that's even... That's growing as well. Stripe,
+
+321
+00:22:34,365 --> 00:22:37,485
+[Nav Nouhi (UTC+1)]: if you if you guys... If you're familiar with link...
+
+322
+00:22:37,885 --> 00:22:39,005
+[Nav Nouhi (UTC+1)]: Stripe link,
+
+323
+00:22:40,445 --> 00:22:54,790
+[Nav Nouhi (UTC+1)]: you save your card to Stripe. They're offering that that service to agents. So you're you're... Now many... You can link your credit cards link and then have your agent use that card. You're you're able to link, I mean, obviously,
+
+324
+00:22:55,190 --> 00:22:56,150
+[Nav Nouhi (UTC+1)]: your email,
+
+325
+00:22:56,310 --> 00:23:04,125
+[Nav Nouhi (UTC+1)]: everything to your agents, and this is this is just the beginning. Like, you'll have... It just will be building... Creating accounts on your behalf, shopping
+
+326
+00:23:04,125 --> 00:23:10,125
+[Nav Nouhi (UTC+1)]: on your behalf, and and just about anything you can think of. I'll stop there. I think the last... It's the last slide of just kind of
+
+327
+00:23:10,780 --> 00:23:13,340
+[Nav Nouhi (UTC+1)]: a short slide saying, you know,
+
+328
+00:23:13,900 --> 00:23:15,500
+[Nav Nouhi (UTC+1)]: things you wanna ask yourself.
+
+329
+00:23:16,220 --> 00:23:19,660
+[Nav Nouhi (UTC+1)]: So if you have a business, put yourself in your buyers...
+
+330
+00:23:20,060 --> 00:23:22,940
+[Nav Nouhi (UTC+1)]: Put your buyers questions to your assistance. Write them down who gets names.
+
+331
+00:23:24,255 --> 00:23:28,815
+[Nav Nouhi (UTC+1)]: You know, fix... Make sure the site... Just... I mean, I know... I... You can revisit the slide. Also,
+
+332
+00:23:29,215 --> 00:23:35,615
+[Nav Nouhi (UTC+1)]: like, I'm... I have a free audit for anyone who's interested. I can... My agents will run an audit on your website
+
+333
+00:23:35,855 --> 00:23:41,340
+[Nav Nouhi (UTC+1)]: and give you kind of, like, the first top three things to do along with, just to kind of categorize,
+
+334
+00:23:43,420 --> 00:23:45,980
+[Nav Nouhi (UTC+1)]: things that you're missing or or you can improve on.
+
+335
+00:23:46,300 --> 00:23:49,020
+[Nav Nouhi (UTC+1)]: So that's... I think that was 15. I don't know. Maybe it was a little more.
+
+336
+00:23:52,895 --> 00:23:53,615
+[rafa (UTC+1)]: Okay.
+
+337
+00:23:54,175 --> 00:23:56,095
+[rafa (UTC+1)]: Can you guys hear me? Yeah.
+
+338
+00:23:59,295 --> 00:24:01,455
+[rafa (UTC+1)]: Navid, we got one question.
+
+339
+00:24:03,170 --> 00:24:05,490
+[rafa (UTC+1)]: Matt, do you wanna just go ahead and ask your question?
+
+340
+00:24:11,530 --> 00:24:13,690
+[Matthew McDowell-Sweet (UTC)]: Yes. I do. If I can find the only plan.
+
+341
+00:24:14,490 --> 00:24:15,530
+[Matthew McDowell-Sweet (UTC)]: Cool. So,
+
+342
+00:24:16,010 --> 00:24:20,330
+[Matthew McDowell-Sweet (UTC)]: yeah, it was very, interesting, so thank you for taking us through that.
+
+343
+00:24:21,050 --> 00:24:21,930
+[Matthew McDowell-Sweet (UTC)]: I recently
+
+344
+00:24:21,185 --> 00:24:28,305
+[rafa (UTC+1)]: Oh, sorry, Matt. And also also give a quick intro. So, Navid... Since Navid is new here, maybe just say who you are.
+
+345
+00:24:29,145 --> 00:24:32,665
+[Matthew McDowell-Sweet (UTC)]: oh, okay. Cool. Yeah. So I'm Matt. I'm kind of
+
+346
+00:24:33,225 --> 00:24:36,185
+[Matthew McDowell-Sweet (UTC)]: helping Rafa out, leading the protocols for business stuff this year.
+
+347
+00:24:37,180 --> 00:24:39,580
+[Matthew McDowell-Sweet (UTC)]: By day, I work at the mouth office in
+
+348
+00:24:39,820 --> 00:24:42,140
+[Matthew McDowell-Sweet (UTC)]: transport, which is kind of like taking
+
+349
+00:24:43,660 --> 00:24:47,740
+[Matthew McDowell-Sweet (UTC)]: weather data and climate data and translating it into operation decisions.
+
+350
+00:24:48,380 --> 00:24:50,860
+[Matthew McDowell-Sweet (UTC)]: By night, do a lot of writing, do some blogging,
+
+351
+00:24:51,945 --> 00:24:52,825
+[Matthew McDowell-Sweet (UTC)]: and also
+
+352
+00:24:53,065 --> 00:24:56,905
+[Matthew McDowell-Sweet (UTC)]: building a safe share search app called Subset as well.
+
+353
+00:24:58,905 --> 00:25:04,825
+[Matthew McDowell-Sweet (UTC)]: So I recently listened to a podcast with a marketing person from WhisperFlow, and they kind of...
+
+354
+00:25:05,560 --> 00:25:12,040
+[Matthew McDowell-Sweet (UTC)]: It's quite interesting because they almost run, like, a a very human protocol. Like, they organize, like, cabals or groups of,
+
+355
+00:25:12,600 --> 00:25:16,840
+[Matthew McDowell-Sweet (UTC)]: creators on, like, Instagram and and YouTube and TikTok and stuff,
+
+356
+00:25:17,320 --> 00:25:19,640
+[Matthew McDowell-Sweet (UTC)]: to generate, like, demand and and,
+
+357
+00:25:20,295 --> 00:25:23,095
+[Matthew McDowell-Sweet (UTC)]: you know, steer sign ups and interest and all that sort of thing.
+
+358
+00:25:23,495 --> 00:25:29,495
+[Matthew McDowell-Sweet (UTC)]: I'm just wondering, like, how do you see approaches like that which are very much, like, leaning leaning into,
+
+359
+00:25:31,495 --> 00:25:31,895
+[Matthew McDowell-Sweet (UTC)]: you know,
+
+360
+00:25:32,900 --> 00:25:33,860
+[Matthew McDowell-Sweet (UTC)]: verifiable,
+
+361
+00:25:33,860 --> 00:25:35,300
+[Matthew McDowell-Sweet (UTC)]: like, humanity, I suppose.
+
+362
+00:25:36,980 --> 00:25:40,580
+[Matthew McDowell-Sweet (UTC)]: How you see that, like, interoperating with this very much,
+
+363
+00:25:40,580 --> 00:25:41,060
+[Matthew McDowell-Sweet (UTC)]: like,
+
+364
+00:25:41,460 --> 00:25:43,460
+[Matthew McDowell-Sweet (UTC)]: full on agent machine
+
+365
+00:25:44,260 --> 00:25:45,140
+[Matthew McDowell-Sweet (UTC)]: future
+
+366
+00:25:45,140 --> 00:25:48,905
+[Matthew McDowell-Sweet (UTC)]: that we're heading to? Do you do you see them as, like, complementary? Or
+
+367
+00:25:49,865 --> 00:25:53,945
+[Nav Nouhi (UTC+1)]: Yeah. I listened to the same podcast. I think it was Hector Serrano.
+
+368
+00:25:54,105 --> 00:25:55,545
+[Matthew McDowell-Sweet (UTC)]: Yeah. Yeah. That'll be the one. Yeah.
+
+369
+00:25:54,825 --> 00:25:55,385
+[Nav Nouhi (UTC+1)]: Yeah.
+
+370
+00:25:56,105 --> 00:25:57,945
+[Nav Nouhi (UTC+1)]: It was Lenny's podcast.
+
+371
+00:25:57,945 --> 00:25:58,825
+[Nav Nouhi (UTC+1)]: I mean, that was...
+
+372
+00:25:58,360 --> 00:25:58,760
+[Matthew McDowell-Sweet (UTC)]: Yeah.
+
+373
+00:25:59,545 --> 00:26:00,985
+[Nav Nouhi (UTC+1)]: Yeah. Yeah. Like,
+
+374
+00:26:02,280 --> 00:26:06,440
+[Nav Nouhi (UTC+1)]: it's it's a bit different. So that... He's... He was focused very much on
+
+375
+00:26:07,080 --> 00:26:11,640
+[Nav Nouhi (UTC+1)]: in... Or or creators as a, like, paid acquisition channel.
+
+376
+00:26:12,775 --> 00:26:13,175
+[Matthew McDowell-Sweet (UTC)]: Okay.
+
+377
+00:26:13,975 --> 00:26:17,255
+[Nav Nouhi (UTC+1)]: Yeah. And this is more of our organic channel.
+
+378
+00:26:17,255 --> 00:26:21,975
+[Nav Nouhi (UTC+1)]: These are more organic channels. So this is basically... What I'm what I'm suggesting is... Or what I'm...
+
+379
+00:26:24,055 --> 00:26:25,495
+[Nav Nouhi (UTC+1)]: Decision is basically
+
+380
+00:26:25,830 --> 00:26:29,590
+[Nav Nouhi (UTC+1)]: is making sure that your site and your business is
+
+381
+00:26:30,470 --> 00:26:31,510
+[Nav Nouhi (UTC+1)]: readable,
+
+382
+00:26:31,590 --> 00:26:32,550
+[Nav Nouhi (UTC+1)]: understandable,
+
+383
+00:26:32,630 --> 00:26:33,990
+[Nav Nouhi (UTC+1)]: and authoritative
+
+384
+00:26:33,990 --> 00:26:39,750
+[Nav Nouhi (UTC+1)]: in the category that it plays in to AI
+
+385
+00:26:38,945 --> 00:26:42,065
+[Nav Nouhi (UTC+1)]: and and then also allowing agents to
+
+386
+00:26:43,425 --> 00:26:46,305
+[Nav Nouhi (UTC+1)]: work on behalf of their their their humans
+
+387
+00:26:46,465 --> 00:26:54,225
+[Nav Nouhi (UTC+1)]: on... To execute certain things. Now that said, like, I think I I didn't really... Let me answer your question directly. I think it does obviously help
+
+388
+00:26:55,400 --> 00:26:57,080
+[Nav Nouhi (UTC+1)]: specifically for
+
+389
+00:26:57,240 --> 00:26:58,440
+[Nav Nouhi (UTC+1)]: YouTube. So
+
+390
+00:26:58,760 --> 00:27:02,440
+[Nav Nouhi (UTC+1)]: any creator... Any YouTube creator, what happens on YouTube is
+
+391
+00:27:03,240 --> 00:27:07,320
+[Nav Nouhi (UTC+1)]: every every YouTube video has a transcript, and that transcript is indexable
+
+392
+00:27:07,795 --> 00:27:09,475
+[Nav Nouhi (UTC+1)]: and is available to agents,
+
+393
+00:27:09,715 --> 00:27:11,475
+[Nav Nouhi (UTC+1)]: especially Google agents.
+
+394
+00:27:12,355 --> 00:27:20,275
+[Nav Nouhi (UTC+1)]: And if the more mentions, obviously, you have in that transcript of your brand, like, that definitely does help. So it it is beneficial. I wouldn't say it's not beneficial, but,
+
+395
+00:27:20,755 --> 00:27:21,875
+[Nav Nouhi (UTC+1)]: yeah, absolutely beneficial.
+
+396
+00:27:26,580 --> 00:27:33,380
+[Nav Nouhi (UTC+1)]: And quite an impact. I mean, I'm... Like, I... Yeah. It it it will impact it. I haven't measured how much quite yet,
+
+397
+00:27:33,620 --> 00:27:38,675
+[Nav Nouhi (UTC+1)]: but I have seen in in some in some audits and some... For some clients,
+
+398
+00:27:39,875 --> 00:27:43,395
+[Nav Nouhi (UTC+1)]: YouTube as being one one of one of the more cited
+
+399
+00:27:43,070 --> 00:27:45,310
+[Matthew McDowell-Sweet (UTC)]: Okay.
+
+400
+00:27:44,115 --> 00:27:44,675
+[Nav Nouhi (UTC+1)]: sources.
+
+401
+00:27:47,070 --> 00:27:55,915
+[Matthew McDowell-Sweet (UTC)]: That's cool. Yeah. I was just wondering, like, what the, yeah, yeah, kind of what the what the crossover is and stuff like that and where where these two... Where the two kind of very distinct approaches means. That's very cool. Yeah.
+
+402
+00:27:55,090 --> 00:27:56,050
+[Nav Nouhi (UTC+1)]: It's
+
+403
+00:27:56,050 --> 00:28:07,925
+[Nav Nouhi (UTC+1)]: it's it's in... Like, it's one of the channels. Right? Like, it's it's one of the citation channels. So... Right. Like, it... Yeah. You shouldn't... I'm just like, I am not suggesting that all of... Everything should be from your website. You want... You wanna be quoted still, and you wanna have
+
+404
+00:28:08,325 --> 00:28:08,965
+[Nav Nouhi (UTC+1)]: people...
+
+405
+00:28:09,125 --> 00:28:18,980
+[Nav Nouhi (UTC+1)]: Yeah. You have guest blog posts, all all the... Everything. The backlinking still makes it still as important, but, ultimately, yeah, like, the more you have out there that is that is verifiable,
+
+406
+00:28:19,140 --> 00:28:23,060
+[Nav Nouhi (UTC+1)]: the better off you are in in in the current climate.
+
+407
+00:28:25,480 --> 00:28:26,360
+[Matthew McDowell-Sweet (UTC)]: Cool. Thank you.
+
+408
+00:28:26,995 --> 00:28:28,035
+[Nav Nouhi (UTC+1)]: Yeah. Sure.
+
+409
+00:28:28,435 --> 00:28:29,235
+[Nav Nouhi (UTC+1)]: Thanks for the question.
+
+410
+00:28:30,590 --> 00:28:31,230
+[rafa (UTC+1)]: Navid,
+
+411
+00:28:31,470 --> 00:28:35,870
+[rafa (UTC+1)]: one question on my side, and then we'll open it up to other folks.
+
+412
+00:28:36,750 --> 00:28:37,550
+[rafa (UTC+1)]: So
+
+413
+00:28:37,790 --> 00:28:41,630
+[rafa (UTC+1)]: Google kinda ended up with a traffic jam of
+
+414
+00:28:41,710 --> 00:28:42,510
+[rafa (UTC+1)]: basically
+
+415
+00:28:42,510 --> 00:28:43,310
+[rafa (UTC+1)]: listicles
+
+416
+00:28:43,825 --> 00:28:45,905
+[rafa (UTC+1)]: and PR announcements
+
+417
+00:28:45,905 --> 00:28:48,865
+[rafa (UTC+1)]: and kind of this, like, the type of marketing
+
+418
+00:28:48,865 --> 00:28:52,625
+[rafa (UTC+1)]: SEO slop that really, like, contaminated a lot of the results.
+
+419
+00:28:53,345 --> 00:28:54,065
+[rafa (UTC+1)]: Where
+
+420
+00:28:54,625 --> 00:28:55,905
+[rafa (UTC+1)]: where do you see
+
+421
+00:28:56,590 --> 00:28:58,990
+[rafa (UTC+1)]: kind of the AI optimization
+
+422
+00:28:57,753 --> 00:28:58,393
+[Dylan Fitzgerald — UTC-6]: I
+
+423
+00:28:59,310 --> 00:29:02,590
+[rafa (UTC+1)]: heading into? Do you see the same type of problem,
+
+424
+00:29:02,750 --> 00:29:05,630
+[rafa (UTC+1)]: or do you think it will end up in a different type of problem?
+
+425
+00:29:05,353 --> 00:29:05,993
+[Dylan Fitzgerald — UTC-6]: type of problem.
+
+426
+00:29:07,280 --> 00:29:08,880
+[Nav Nouhi (UTC+1)]: I actually think it's
+
+427
+00:29:07,913 --> 00:29:08,233
+[Dylan Fitzgerald — UTC-6]: Have a
+
+428
+00:29:09,760 --> 00:29:11,200
+[Nav Nouhi (UTC+1)]: I think it's gonna be...
+
+429
+00:29:12,720 --> 00:29:15,440
+[Nav Nouhi (UTC+1)]: What always worked
+
+430
+00:29:15,035 --> 00:29:17,435
+[Nav Nouhi (UTC+1)]: with Google and SEO
+
+431
+00:29:18,155 --> 00:29:18,875
+[Nav Nouhi (UTC+1)]: is
+
+432
+00:29:19,195 --> 00:29:19,835
+[Nav Nouhi (UTC+1)]: unique
+
+433
+00:29:20,075 --> 00:29:22,155
+[Nav Nouhi (UTC+1)]: quality authority of content.
+
+434
+00:29:22,875 --> 00:29:31,195
+[Nav Nouhi (UTC+1)]: And that's just gonna... It's it's it's just gonna work because that... Because if if... When you think about agents, agents were built
+
+435
+00:29:30,930 --> 00:29:32,450
+[Nav Nouhi (UTC+1)]: by humans, for humans.
+
+436
+00:29:32,930 --> 00:29:35,330
+[Nav Nouhi (UTC+1)]: So they're actually designed to think,
+
+437
+00:29:35,730 --> 00:29:38,050
+[Nav Nouhi (UTC+1)]: obviously, in in in human
+
+438
+00:29:38,050 --> 00:29:38,770
+[Nav Nouhi (UTC+1)]: language
+
+439
+00:29:38,850 --> 00:29:41,250
+[Nav Nouhi (UTC+1)]: and to
+
+440
+00:29:43,345 --> 00:29:44,305
+[Nav Nouhi (UTC+1)]: choose
+
+441
+00:29:46,385 --> 00:29:48,545
+[Nav Nouhi (UTC+1)]: to work or not to work, but to
+
+442
+00:29:50,625 --> 00:29:51,505
+[Nav Nouhi (UTC+1)]: prioritize
+
+443
+00:29:51,985 --> 00:30:01,850
+[Nav Nouhi (UTC+1)]: what what we're looking for and what what we want as humans. And So, yes, like, yeah, you can have a PR release. They're great. Like, it's nice. But PR releases... One thing about PR release,
+
+444
+00:30:02,250 --> 00:30:05,930
+[Nav Nouhi (UTC+1)]: if you're, like, a PR newswire, like, you don't get backlink
+
+445
+00:30:05,930 --> 00:30:11,530
+[Nav Nouhi (UTC+1)]: from from that. They're not gonna link directly to your site. Like, all those all those
+
+446
+00:30:12,295 --> 00:30:14,935
+[Nav Nouhi (UTC+1)]: PR releases are actually no index, so
+
+447
+00:30:15,815 --> 00:30:21,095
+[Nav Nouhi (UTC+1)]: no follow. Meaning that an an AI assistant is not gonna see that that
+
+448
+00:30:21,335 --> 00:30:26,695
+[Nav Nouhi (UTC+1)]: that link and not gonna... You're not gonna contribute the the SEO juice as we as we call it. So,
+
+449
+00:30:27,290 --> 00:30:33,130
+[Nav Nouhi (UTC+1)]: again, like, to answer your question, I I think it's it's it's nice to have, and it's great for LinkedIn,
+
+450
+00:30:33,770 --> 00:30:37,610
+[Nav Nouhi (UTC+1)]: but it's better when someone, for example, authoritative on LinkedIn
+
+451
+00:30:37,850 --> 00:30:38,570
+[Nav Nouhi (UTC+1)]: is
+
+452
+00:30:39,305 --> 00:30:46,265
+[Nav Nouhi (UTC+1)]: is mentioning your site and giving you a a strong review or a a strong shout out or something along those lines.
+
+453
+00:30:51,671 --> 00:30:55,111
+[Ben]: I had a little follow-up thought on that question too.
+
+454
+00:30:55,525 --> 00:30:56,085
+[rafa (UTC+1)]: Go ahead.
+
+455
+00:30:56,280 --> 00:30:57,480
+[Nav Nouhi (UTC+1)]: Sure. Forward.
+
+456
+00:30:57,751 --> 00:31:03,706
+[Ben]: Yeah. I get... So I was thinking about that. Right? Actually, when you asked that, Rafa, I was kinda thinking about that idea.
+
+457
+00:31:03,866 --> 00:31:08,826
+[Ben]: And my thought was that, like, the old school search engine optimization,
+
+458
+00:31:08,826 --> 00:31:09,946
+[Ben]: it was like a
+
+459
+00:31:10,266 --> 00:31:14,186
+[Ben]: kind of a mediocre heuristic for sorting results and kind of getting
+
+460
+00:31:14,841 --> 00:31:21,561
+[Ben]: the answers or the context to the people that are asking. And to me, it seems like with agents in the mix, well, they're customizable,
+
+461
+00:31:22,121 --> 00:31:35,586
+[Ben]: and they can just do a lot more cognitive work in short periods of time. So I think the the kinda, like, optimal point is is gonna be... Gonna be an optimization away from, like, slop style search engine optimization towards, like, what's...
+
+462
+00:31:36,386 --> 00:31:49,681
+[Ben]: You know, there's less... There's probably gonna be less of an ability to, like, game it because people can, you know, tune their agents to actually get what's legitimately useful for them, versus, like, the one size fits all. Like, here's what comes at the top of the Google search results.
+
+463
+00:31:51,121 --> 00:31:58,801
+[Ben]: Yeah, they could just dig deeper, take more steps, like, you know, sift and, like, filter the results before they return them to the human. So I think it's,
+
+464
+00:31:59,576 --> 00:32:05,016
+[Ben]: anyways, yeah, I think it'll it'll lead towards people finding better search results and,
+
+465
+00:32:05,256 --> 00:32:13,576
+[Ben]: take away the... Some of the ability for people to basically game an algorithm is is sort of my take on it, which is a good thing.
+
+466
+00:32:13,250 --> 00:32:17,330
+[Nav Nouhi (UTC+1)]: Then you mentioned, like, getting the algorithm. Right? It was looking at
+
+467
+00:32:18,155 --> 00:32:25,035
+[Nav Nouhi (UTC+1)]: different search queries, seeing what what was the high volume or low volume, and just writing generic
+
+468
+00:32:25,835 --> 00:32:26,715
+[Nav Nouhi (UTC+1)]: content,
+
+469
+00:32:26,875 --> 00:32:29,915
+[Nav Nouhi (UTC+1)]: around those search queries. Right? Like, that was gaming the system,
+
+470
+00:32:30,395 --> 00:32:31,915
+[Nav Nouhi (UTC+1)]: like like, HubSpot's
+
+471
+00:32:31,915 --> 00:32:33,675
+[Nav Nouhi (UTC+1)]: kind of a...
+
+472
+00:32:32,816 --> 00:32:33,376
+[Ben]: Basically.
+
+473
+00:32:34,510 --> 00:32:39,710
+[Nav Nouhi (UTC+1)]: Right? And what agents are looking to... And looking for, they're looking for full transparency
+
+474
+00:32:39,710 --> 00:32:40,830
+[Nav Nouhi (UTC+1)]: of on the...
+
+475
+00:32:40,431 --> 00:32:40,911
+[Ben]: Mhmm.
+
+476
+00:32:41,630 --> 00:32:50,315
+[Nav Nouhi (UTC+1)]: Of of your of your business. Like, I... So so for example, like, a lot of b to b SaaS businesses, they don't... They will not post their
+
+477
+00:32:50,635 --> 00:32:51,435
+[Nav Nouhi (UTC+1)]: pricing.
+
+478
+00:32:51,995 --> 00:32:56,315
+[Nav Nouhi (UTC+1)]: Right? Like, I mean, we all we all been... We all fell for that. Yeah. Book book a meeting. We'll we'll talk.
+
+479
+00:32:52,526 --> 00:32:57,166
+[Ben]: Yeah.
+
+480
+00:32:56,555 --> 00:33:04,820
+[Nav Nouhi (UTC+1)]: That actually hurts when it come... In in the age of AI. Yeah? It's about being fully transparent, understanding, like, your strengths or weaknesses,
+
+481
+00:33:01,406 --> 00:33:01,806
+[Ben]: Yeah.
+
+482
+00:33:05,380 --> 00:33:06,580
+[Nav Nouhi (UTC+1)]: and just
+
+483
+00:33:05,661 --> 00:33:06,461
+[Ben]: Yeah.
+
+484
+00:33:06,820 --> 00:33:12,340
+[Nav Nouhi (UTC+1)]: communicating that versus kind of hiding behind a a paywall or booking or or book a meeting link.
+
+485
+00:33:10,701 --> 00:33:11,501
+[Ben]: Yeah.
+
+486
+00:33:14,701 --> 00:33:18,381
+[Ben]: Exactly. That's sort of what I was thinking. It's like the agent situation incentivizes
+
+487
+00:33:18,366 --> 00:33:23,646
+[Ben]: literally just putting the good information out there, like, doing better for, like, what people need as far as information.
+
+488
+00:33:24,435 --> 00:33:25,315
+[Nav Nouhi (UTC+1)]: Yeah. Yeah.
+
+489
+00:33:26,470 --> 00:33:30,550
+[Nav Nouhi (UTC+1)]: Yeah. It's literally like... Think about it as... The way I look at it is I...
+
+490
+00:33:30,950 --> 00:33:34,710
+[Nav Nouhi (UTC+1)]: As... If I'm talking to my friend, if I'm talking to Raf and Raf is asking me
+
+491
+00:33:35,190 --> 00:33:37,430
+[Nav Nouhi (UTC+1)]: for advice, I'm just gonna give him, you know,
+
+492
+00:33:38,565 --> 00:33:44,565
+[Nav Nouhi (UTC+1)]: straight advice. I'm not gonna I'm not gonna filter it. I'm gonna tell him exactly how I how I... What I think in my experience versus
+
+493
+00:33:44,805 --> 00:33:48,805
+[Nav Nouhi (UTC+1)]: trying to massage it in a way that is going to,
+
+494
+00:33:49,365 --> 00:33:52,005
+[Nav Nouhi (UTC+1)]: you know, to gain the system, like, for example.
+
+495
+00:33:53,516 --> 00:33:53,836
+[Ben]: Yeah.
+
+496
+00:33:54,491 --> 00:34:05,051
+[Ben]: Well, the other thing I... The other connection I made was that the whole query fan out thing. I mean, I figured they'd be using something like that at Google, but that was what I figured out I had to do for my own system, for my own retrieval.
+
+497
+00:34:05,771 --> 00:34:14,236
+[Ben]: And it just makes sense as, you know, context and information multiplies. Eventually, a simple kind of one dimensional ranking based on, like, a single query is just insufficient
+
+498
+00:34:14,236 --> 00:34:28,051
+[Ben]: because there's all these little, like, corners of the answer space. You know? There's just a... There's a lot of... There's, a whole terrain to explore. So I've, you know, I've actually tuned a model, like, low rank adapter to specifically, like, send out a lot of, like, really specific queries.
+
+499
+00:34:28,851 --> 00:34:31,411
+[Ben]: But, anyways, that was just another little connection I made.
+
+500
+00:34:31,895 --> 00:34:40,055
+[Nav Nouhi (UTC+1)]: Yeah. No. You're you're right. I'll make those connections because a lot of times you ask... Sorry, Ralph. Just... I'll I'll just close it real quick. You
+
+501
+00:34:37,970 --> 00:34:38,450
+[rafa (UTC+1)]: Yeah. Yeah.
+
+502
+00:34:40,535 --> 00:34:46,350
+[Nav Nouhi (UTC+1)]: asked a question to an aide... To an assistant, and this... They asked multiple follow-up questions that you never even thought of.
+
+503
+00:34:46,830 --> 00:34:47,630
+[Nav Nouhi (UTC+1)]: Like...
+
+504
+00:34:47,505 --> 00:34:48,225
+[rafa (UTC+1)]: No.
+
+505
+00:34:47,870 --> 00:34:51,630
+[Nav Nouhi (UTC+1)]: And, yeah, those are the fan out questions. Right? Like, those are the things that...
+
+506
+00:34:51,870 --> 00:34:55,310
+[Nav Nouhi (UTC+1)]: Yeah. It's just narrowing down the answer for you. Go ahead.
+
+507
+00:34:55,505 --> 00:34:56,145
+[rafa (UTC+1)]: What...
+
+508
+00:34:56,545 --> 00:34:58,945
+[rafa (UTC+1)]: So to to
+
+509
+00:34:59,980 --> 00:35:00,940
+[rafa (UTC+1)]: one question
+
+510
+00:35:01,100 --> 00:35:01,820
+[rafa (UTC+1)]: is
+
+511
+00:35:02,700 --> 00:35:05,260
+[rafa (UTC+1)]: is how do you see the balance between
+
+512
+00:35:05,580 --> 00:35:08,620
+[rafa (UTC+1)]: publishing content that models get trained on
+
+513
+00:35:09,740 --> 00:35:10,380
+[rafa (UTC+1)]: versus,
+
+514
+00:35:11,595 --> 00:35:17,995
+[rafa (UTC+1)]: like, trying to optimize your website for search? Like, how how do you look at that balance? That's the first one. And the second is,
+
+515
+00:35:18,875 --> 00:35:21,035
+[rafa (UTC+1)]: do you think there's value in kinda, like,
+
+516
+00:35:21,515 --> 00:35:29,390
+[rafa (UTC+1)]: creating add on accounts and trying to ask, like, they're trying to have a conversation as your customer. Like, how do you actually source that information?
+
+517
+00:35:30,430 --> 00:35:35,470
+[rafa (UTC+1)]: So those are two questions top of mind, and then we can pass it over to Mike that has another question as well I just saw.
+
+518
+00:35:35,110 --> 00:35:39,590
+[Nav Nouhi (UTC+1)]: Okay. So the first question was around content. Right? Like, writing content.
+
+519
+00:35:38,205 --> 00:35:39,085
+[rafa (UTC+1)]: Yeah.
+
+520
+00:35:39,565 --> 00:35:40,045
+[rafa (UTC+1)]: The...
+
+521
+00:35:40,605 --> 00:35:44,925
+[rafa (UTC+1)]: The balance between, like, aiming for, like, getting trained on versus,
+
+522
+00:35:45,325 --> 00:35:49,325
+[rafa (UTC+1)]: like like, I don't know if that's a different content strategy
+
+523
+00:35:48,980 --> 00:35:50,420
+[rafa (UTC+1)]: than getting found.
+
+524
+00:35:50,580 --> 00:35:56,340
+[rafa (UTC+1)]: I don't know if the content is the same. Like, should should a product, like, commission a book,
+
+525
+00:35:56,660 --> 00:36:06,485
+[rafa (UTC+1)]: like, proper book from an author so that they have a higher chance of getting trained on and recognized? Or, like, is the blog game where it's at, or is it, like, the tweeting or whatever whatever it is?
+
+526
+00:36:07,540 --> 00:36:12,655
+[Nav Nouhi (UTC+1)]: I I I think... So then your second question was around, like, the
+
+527
+00:36:13,615 --> 00:36:16,015
+[Nav Nouhi (UTC+1)]: prompting. Right? Like, you're, like, kind of asking.
+
+528
+00:36:16,015 --> 00:36:17,535
+[Nav Nouhi (UTC+1)]: Trying to... You're trying to ask
+
+529
+00:36:16,660 --> 00:36:29,945
+[rafa (UTC+1)]: Yeah. Kinda like trying to figure out, like, how do you actually even find out if the chatbots know about you? Like, do you just create add on accounts, or do you take, like, scripts from your customers and, like, ask them very nicely to send you their conversations?
+
+530
+00:36:18,015 --> 00:36:18,895
+[Nav Nouhi (UTC+1)]: as your
+
+531
+00:36:32,750 --> 00:36:33,870
+[Nav Nouhi (UTC+1)]: The... Like,
+
+532
+00:36:34,190 --> 00:36:35,070
+[Nav Nouhi (UTC+1)]: definitely,
+
+533
+00:36:36,110 --> 00:36:40,345
+[Nav Nouhi (UTC+1)]: meeting notes help because they're gonna ask questions. Right? And those questions,
+
+534
+00:36:40,825 --> 00:36:44,105
+[Nav Nouhi (UTC+1)]: eventually, they kind of roll up into different categories and different... You can...
+
+535
+00:36:44,425 --> 00:36:46,265
+[Nav Nouhi (UTC+1)]: You're gonna break them out and understand, okay.
+
+536
+00:36:47,145 --> 00:36:54,505
+[Nav Nouhi (UTC+1)]: If they're asking the same... You know, you can figure out that this is also the prompt they're gonna be asking after the call, or they've already asked an assistant.
+
+537
+00:36:54,800 --> 00:36:55,440
+[Nav Nouhi (UTC+1)]: So
+
+538
+00:36:55,680 --> 00:36:57,280
+[Nav Nouhi (UTC+1)]: the way that I
+
+539
+00:36:58,640 --> 00:37:03,120
+[Nav Nouhi (UTC+1)]: I think that the the the answer to your... Both questions is
+
+540
+00:37:05,120 --> 00:37:08,640
+[Nav Nouhi (UTC+1)]: try to figure out what... Understand what your customers are asking for
+
+541
+00:37:09,345 --> 00:37:09,985
+[Nav Nouhi (UTC+1)]: and
+
+542
+00:37:10,225 --> 00:37:12,545
+[Nav Nouhi (UTC+1)]: driving your content strategy around that.
+
+543
+00:37:13,025 --> 00:37:14,945
+[Nav Nouhi (UTC+1)]: It's content strategy, FAQs.
+
+544
+00:37:14,945 --> 00:37:16,385
+[Nav Nouhi (UTC+1)]: So you have a product and...
+
+545
+00:37:16,625 --> 00:37:19,505
+[Nav Nouhi (UTC+1)]: Like, FAQs are really important because a lot of question...
+
+546
+00:37:19,825 --> 00:37:23,905
+[Nav Nouhi (UTC+1)]: Many questions people are asking their their assistance eventually end up becoming like FAQs.
+
+547
+00:37:24,700 --> 00:37:29,580
+[Nav Nouhi (UTC+1)]: And then they make it... And, obviously, there's there's the the technical piece about making sure that's readable,
+
+548
+00:37:29,740 --> 00:37:30,220
+[Nav Nouhi (UTC+1)]: but
+
+549
+00:37:31,980 --> 00:37:35,900
+[Nav Nouhi (UTC+1)]: there's there's that piece. And then regarding your con... Like, so the
+
+550
+00:37:36,300 --> 00:37:39,340
+[Nav Nouhi (UTC+1)]: content strategy as traditional SEO
+
+551
+00:37:38,995 --> 00:37:41,635
+[Nav Nouhi (UTC+1)]: versus this, like, AEO optimized
+
+552
+00:37:42,195 --> 00:37:52,115
+[Nav Nouhi (UTC+1)]: content strategy. Like, writing a book, I'm not sure about that. That's something I would love to test and see if it if it if it does help. I I have seen I have seen some people
+
+553
+00:37:52,435 --> 00:37:53,475
+[Nav Nouhi (UTC+1)]: that have
+
+554
+00:37:54,700 --> 00:38:01,100
+[Nav Nouhi (UTC+1)]: offer... Like, build... Write a digital book and then just have it completely open open source it on their website.
+
+555
+00:38:01,820 --> 00:38:09,420
+[Nav Nouhi (UTC+1)]: But it's it's more of the quality of the content. Like, so what what what is in that book? Like, are you using data... Internal data that you've that you've found
+
+556
+00:38:09,795 --> 00:38:11,795
+[Nav Nouhi (UTC+1)]: that can be cited, that can be
+
+557
+00:38:13,635 --> 00:38:18,035
+[Nav Nouhi (UTC+1)]: confirmed by a third party? Like, that's that's what's important to this. If it...
+
+558
+00:38:18,435 --> 00:38:18,995
+[Nav Nouhi (UTC+1)]: If...
+
+559
+00:38:19,235 --> 00:38:25,155
+[Nav Nouhi (UTC+1)]: That's... I think that... That's really... Yeah. That's the core... That's that's the most... One of the most important pieces there.
+
+560
+00:38:26,250 --> 00:38:29,450
+[Nav Nouhi (UTC+1)]: If I if I didn't answer your question, which I don't know if I have, like,
+
+561
+00:38:26,640 --> 00:38:27,040
+[rafa (UTC+1)]: Mike?
+
+562
+00:38:29,375 --> 00:38:30,095
+[rafa (UTC+1)]: I
+
+563
+00:38:29,930 --> 00:38:30,890
+[Nav Nouhi (UTC+1)]: just follow-up.
+
+564
+00:38:30,495 --> 00:38:38,415
+[rafa (UTC+1)]: don't know where you're going. Yeah. It's all it's all good. I think... I'm pretty sure you did. Like, I I just didn't... I never thought about the fact that,
+
+565
+00:38:39,135 --> 00:38:46,010
+[rafa (UTC+1)]: you know, maybe you should write a book because your customers are more academics and looking for formal, like like,
+
+566
+00:38:46,010 --> 00:38:48,010
+[rafa (UTC+1)]: academic links versus,
+
+567
+00:38:48,010 --> 00:38:54,890
+[rafa (UTC+1)]: like, you know, write a listicle because they're actually looking for your product and lists. Right? I hadn't thought about that, which is kinda interesting.
+
+568
+00:38:55,160 --> 00:38:58,280
+[Nav Nouhi (UTC+1)]: Yeah. I mean, I I think you should write about, like,
+
+569
+00:38:58,760 --> 00:39:03,720
+[Nav Nouhi (UTC+1)]: what are your what are your customers interested in? Like, what... And write about that.
+
+570
+00:39:04,315 --> 00:39:09,755
+[Nav Nouhi (UTC+1)]: Like, that is... Like, so whether it's a blog post, whether, like, you know, whether it's recent
+
+571
+00:39:04,635 --> 00:39:04,955
+[rafa (UTC+1)]: Yeah.
+
+572
+00:39:09,755 --> 00:39:12,635
+[Nav Nouhi (UTC+1)]: news. So for example, for for Credible, like, I'm...
+
+573
+00:39:12,875 --> 00:39:23,190
+[Nav Nouhi (UTC+1)]: I haven't launched the content strategy yet, but what I'm focused on is, like, there's, like, just offering, like, here's what I'm seeing, like, based on the data, like, our audits. Like, here's what I'm seeing.
+
+574
+00:39:23,990 --> 00:39:27,990
+[Nav Nouhi (UTC+1)]: That... That's one kinda category. The other one is, like, news, what's happening, what's changing.
+
+575
+00:39:24,265 --> 00:39:24,585
+[rafa (UTC+1)]: Yeah.
+
+576
+00:39:29,605 --> 00:39:47,430
+[Nav Nouhi (UTC+1)]: Right? Like, it's... That's kind of like... That's... This... I'm really kind of focused on those on those bits and, like, and and then best practices. Like, what should you be doing? What should you be looking for? Like, when you're hiring, like, a AEO agency or some of these tools, like, you know, like, it's that that sort of thing. Those are kind of the categories I I would... I'm focused on for my business.
+
+577
+00:39:41,240 --> 00:39:41,640
+[rafa (UTC+1)]: Yeah.
+
+578
+00:39:47,990 --> 00:39:50,470
+[Nav Nouhi (UTC+1)]: And business business is different. Right? Like... Yeah.
+
+579
+00:39:52,615 --> 00:39:53,015
+[rafa (UTC+1)]: Mike.
+
+580
+00:39:56,764 --> 00:39:57,804
+[Mike Casey | UTC -5]: Thanks for calling on me.
+
+581
+00:39:58,364 --> 00:40:01,724
+[Mike Casey | UTC -5]: Interesting presentation. Thanks for thanks for sharing it. I guess,
+
+582
+00:40:02,604 --> 00:40:04,844
+[Mike Casey | UTC -5]: as someone who's, like, building a business,
+
+583
+00:40:05,324 --> 00:40:10,524
+[Mike Casey | UTC -5]: in the AI space, I wonder how much durability there is in
+
+584
+00:40:10,859 --> 00:40:11,739
+[Mike Casey | UTC -5]: sort of
+
+585
+00:40:12,539 --> 00:40:17,019
+[Mike Casey | UTC -5]: building legibility for agents to come and query the website. So, like,
+
+586
+00:40:17,499 --> 00:40:22,059
+[Mike Casey | UTC -5]: I just... To make it concrete, I think this is an area where it's gonna just
+
+587
+00:40:22,299 --> 00:40:23,099
+[Mike Casey | UTC -5]: create
+
+588
+00:40:23,604 --> 00:40:28,084
+[Mike Casey | UTC -5]: more space for the labs to monetize and gatekeep access. And, like,
+
+589
+00:40:28,804 --> 00:40:32,004
+[Mike Casey | UTC -5]: a concrete example is there's a company called ModelML.
+
+590
+00:40:32,004 --> 00:40:34,324
+[Mike Casey | UTC -5]: It's like a financial service kind of
+
+591
+00:40:35,124 --> 00:40:42,849
+[Mike Casey | UTC -5]: agentic AI kinda solution. Right? But let's say their website, they have this agents dot TXT file. Right?
+
+592
+00:40:44,289 --> 00:40:45,729
+[Mike Casey | UTC -5]: But how do
+
+593
+00:40:46,209 --> 00:40:47,569
+[Mike Casey | UTC -5]: the agents
+
+594
+00:40:47,569 --> 00:40:49,089
+[Mike Casey | UTC -5]: go about adjudicating
+
+595
+00:40:49,089 --> 00:40:54,274
+[Mike Casey | UTC -5]: competing claims and weighing whether, like, something actually is
+
+596
+00:40:54,434 --> 00:40:56,754
+[Mike Casey | UTC -5]: better at a task. And, like,
+
+597
+00:40:57,394 --> 00:41:00,354
+[Mike Casey | UTC -5]: it seems to me that if ModelML
+
+598
+00:41:00,514 --> 00:41:04,754
+[Mike Casey | UTC -5]: has and does raise a bunch of money, right, and they
+
+599
+00:41:05,799 --> 00:41:10,679
+[Mike Casey | UTC -5]: deploy it on agentic ads, right, on that kind of ad spend,
+
+600
+00:41:11,239 --> 00:41:13,719
+[Mike Casey | UTC -5]: what's the utility of even
+
+601
+00:41:14,599 --> 00:41:17,319
+[Mike Casey | UTC -5]: building out this agentic
+
+602
+00:41:18,014 --> 00:41:19,454
+[Mike Casey | UTC -5]: kind of legibility.
+
+603
+00:41:19,454 --> 00:41:23,374
+[Mike Casey | UTC -5]: It almost feels like you're you're being transparent
+
+604
+00:41:23,534 --> 00:41:25,614
+[Mike Casey | UTC -5]: and in the way giving away
+
+605
+00:41:27,054 --> 00:41:27,854
+[Mike Casey | UTC -5]: your
+
+606
+00:41:27,854 --> 00:41:28,574
+[Mike Casey | UTC -5]: IP
+
+607
+00:41:31,449 --> 00:41:33,689
+[Mike Casey | UTC -5]: to well capitalized businesses.
+
+608
+00:41:34,089 --> 00:41:35,209
+[Mike Casey | UTC -5]: Does that make sense?
+
+609
+00:41:35,805 --> 00:41:38,845
+[Nav Nouhi (UTC+1)]: Yeah. It's basic... Like, they're just gonna steal
+
+610
+00:41:39,005 --> 00:41:43,085
+[Nav Nouhi (UTC+1)]: your IP. Your IP is what you're saying. Right? Like, if you put it out there, does that... You kind of
+
+611
+00:41:42,744 --> 00:41:44,904
+[Mike Casey | UTC -5]: Yeah. Yeah. And it's like...
+
+612
+00:41:44,140 --> 00:41:45,420
+[Nav Nouhi (UTC+1)]: draft off of it? Yeah.
+
+613
+00:41:45,624 --> 00:41:52,664
+[Mike Casey | UTC -5]: Yeah. It's like your incentive is to be fully transparent, but at the end of the day, it's just cash that wins. And so, like, what's the
+
+614
+00:41:53,224 --> 00:41:55,064
+[Mike Casey | UTC -5]: what's the move in that game?
+
+615
+00:41:55,865 --> 00:41:59,785
+[Nav Nouhi (UTC+1)]: That... So that's... So that's interesting because I don't
+
+616
+00:42:00,505 --> 00:42:03,545
+[Nav Nouhi (UTC+1)]: I don't know if cash is gonna win in this in this game.
+
+617
+00:42:04,265 --> 00:42:06,425
+[Nav Nouhi (UTC+1)]: I mean, eventually, cash does win.
+
+618
+00:42:07,065 --> 00:42:19,610
+[Nav Nouhi (UTC+1)]: I'll just... Yeah. Because, I mean, my, you know, my my I cut my teeth doing paid ads. Right? Like... And paid ads over the years have just taken over the entire SERP. So you can't get an organic listing until you're, like, halfway down the page.
+
+619
+00:42:20,490 --> 00:42:21,130
+[Nav Nouhi (UTC+1)]: Now
+
+620
+00:42:21,530 --> 00:42:22,410
+[Nav Nouhi (UTC+1)]: AI, like,
+
+621
+00:42:23,585 --> 00:42:28,465
+[Nav Nouhi (UTC+1)]: assistant ads, let's call it, like, Chattypedia ads is is pretty new... Is relatively new.
+
+622
+00:42:29,825 --> 00:42:30,625
+[Nav Nouhi (UTC+1)]: They're
+
+623
+00:42:30,785 --> 00:42:31,585
+[Nav Nouhi (UTC+1)]: they're
+
+624
+00:42:32,065 --> 00:42:33,585
+[Nav Nouhi (UTC+1)]: they're incentivized
+
+625
+00:42:33,665 --> 00:42:35,905
+[Nav Nouhi (UTC+1)]: not to cloud the
+
+626
+00:42:37,850 --> 00:42:38,650
+[Nav Nouhi (UTC+1)]: agents
+
+627
+00:42:40,010 --> 00:42:45,530
+[Nav Nouhi (UTC+1)]: result... The results, the organic results of the agents from from everything that they've communicated so far.
+
+628
+00:42:47,450 --> 00:42:58,875
+[Nav Nouhi (UTC+1)]: I I personally believe, and maybe it's naive of me, but I believe that you should just continue to be as transparent as possible. Obviously, don't want to give out your secret sauce. Like you want to keep some of the...
+
+629
+00:42:59,275 --> 00:43:04,955
+[Nav Nouhi (UTC+1)]: Maybe you have... Maybe you put you... To use the analogy, like a recipe analogy, you provide the recipe but
+
+630
+00:43:06,660 --> 00:43:11,540
+[Nav Nouhi (UTC+1)]: not not the not the way the recipe is built or cooked, for example,
+
+631
+00:43:12,580 --> 00:43:15,300
+[Nav Nouhi (UTC+1)]: and be and be transparent with that.
+
+632
+00:43:16,420 --> 00:43:17,060
+[Nav Nouhi (UTC+1)]: I...
+
+633
+00:43:17,220 --> 00:43:18,820
+[Nav Nouhi (UTC+1)]: That's how that's how I see it.
+
+634
+00:43:20,265 --> 00:43:20,985
+[Nav Nouhi (UTC+1)]: Yeah.
+
+635
+00:43:20,694 --> 00:43:33,414
+[Mike Casey | UTC -5]: I guess, if I could just ask one quick follow-up. I guess, like, the risk, though, is that all you need to do with the recipe is then send it to Chad, JPT, or Claude and just go, hey. What's the actual, ratio of x to y in this...
+
+636
+00:43:22,985 --> 00:43:23,785
+[Nav Nouhi (UTC+1)]: Sure.
+
+637
+00:43:32,025 --> 00:43:32,505
+[Nav Nouhi (UTC+1)]: Fair enough.
+
+638
+00:43:33,654 --> 00:43:34,774
+[Mike Casey | UTC -5]: With these ingredients?
+
+639
+00:43:34,140 --> 00:43:35,820
+[Nav Nouhi (UTC+1)]: Yeah. I mean... Yeah.
+
+640
+00:43:35,219 --> 00:43:35,859
+[Mike Casey | UTC -5]: And,
+
+641
+00:43:36,019 --> 00:43:47,539
+[Mike Casey | UTC -5]: like... So that's, like, one. And then the second is, like, the reading that we we have this week is all around these agents being black boxes and nobody knowing, like, what they're doing. So how do how
+
+642
+00:43:47,939 --> 00:43:48,899
+[Mike Casey | UTC -5]: do
+
+643
+00:43:49,234 --> 00:43:50,114
+[Mike Casey | UTC -5]: we,
+
+644
+00:43:50,274 --> 00:43:52,994
+[Mike Casey | UTC -5]: as consumers and business owners,
+
+645
+00:43:53,554 --> 00:43:57,714
+[Mike Casey | UTC -5]: building in the space and trying to make ourselves legible to the agents, actually
+
+646
+00:43:58,194 --> 00:44:00,194
+[Mike Casey | UTC -5]: build confidence that these
+
+647
+00:44:00,354 --> 00:44:06,239
+[Mike Casey | UTC -5]: agentic tools are not just black boxes that are just funneling to the best,
+
+648
+00:44:07,199 --> 00:44:07,999
+[Mike Casey | UTC -5]: paid
+
+649
+00:44:08,159 --> 00:44:08,959
+[Mike Casey | UTC -5]: customers
+
+650
+00:44:08,959 --> 00:44:11,679
+[Mike Casey | UTC -5]: of ChatGPT ads. Does that make sense?
+
+651
+00:44:11,625 --> 00:44:16,025
+[Nav Nouhi (UTC+1)]: Yeah. They... Yeah. But so... Yeah. It doesn't make sense. It... It's...
+
+652
+00:44:16,745 --> 00:44:18,425
+[Nav Nouhi (UTC+1)]: With Google, it was
+
+653
+00:44:19,145 --> 00:44:20,425
+[Nav Nouhi (UTC+1)]: it was pretty
+
+654
+00:44:20,665 --> 00:44:22,985
+[Nav Nouhi (UTC+1)]: clear if you weren't spending
+
+655
+00:44:25,700 --> 00:44:26,980
+[Nav Nouhi (UTC+1)]: on Google Ads,
+
+656
+00:44:27,940 --> 00:44:30,180
+[Nav Nouhi (UTC+1)]: you you saw a significant drop in
+
+657
+00:44:30,900 --> 00:44:31,860
+[Nav Nouhi (UTC+1)]: your organic
+
+658
+00:44:32,180 --> 00:44:41,995
+[Nav Nouhi (UTC+1)]: your organic results because there's attribution. Like, people understand your... They they... They're exposed to your brand more often, so they will search for those. But to answer your question, like,
+
+659
+00:44:43,515 --> 00:44:49,675
+[Nav Nouhi (UTC+1)]: it's it's... I don't know the answer. Like, I I don't I don't know what's gonna happen with with how
+
+660
+00:44:49,915 --> 00:44:51,755
+[Nav Nouhi (UTC+1)]: ChatGPT ads is gonna
+
+661
+00:44:52,235 --> 00:44:53,195
+[Nav Nouhi (UTC+1)]: is gonna balance
+
+662
+00:44:54,050 --> 00:44:56,850
+[Nav Nouhi (UTC+1)]: the paid versus... Or, like, let's call it organic
+
+663
+00:44:57,170 --> 00:45:03,090
+[Nav Nouhi (UTC+1)]: answers. They they have been... I mean, Altman has been... I've listened to a couple interviews of his, and he's been quite
+
+664
+00:45:04,290 --> 00:45:07,570
+[Nav Nouhi (UTC+1)]: clear saying that's... It's... There's... There won't be a
+
+665
+00:45:08,065 --> 00:45:08,945
+[Nav Nouhi (UTC+1)]: influence,
+
+666
+00:45:08,945 --> 00:45:13,985
+[Nav Nouhi (UTC+1)]: but time will tell. Because, ultimately, you gotta pay for those those GPUs.
+
+667
+00:45:15,928 --> 00:45:17,208
+[daniel ospina - UTC+2]: If...
+
+668
+00:45:16,714 --> 00:45:17,354
+[Mike Casey | UTC -5]: Awesome. Thanks.
+
+669
+00:45:18,225 --> 00:45:19,025
+[Nav Nouhi (UTC+1)]: Yeah. Yeah.
+
+670
+00:45:19,768 --> 00:45:21,288
+[daniel ospina - UTC+2]: Yeah. If
+
+671
+00:45:21,128 --> 00:45:30,488
+[daniel ospina - UTC+2]: I may... Because, like, the way I'm seeing it, I'm... And I'm putting it out there more to to check if it resonates is that at the end, this is still a question of
+
+672
+00:45:30,723 --> 00:45:31,523
+[daniel ospina - UTC+2]: positioning.
+
+673
+00:45:31,523 --> 00:45:32,163
+[daniel ospina - UTC+2]: And, like,
+
+674
+00:45:32,643 --> 00:45:33,523
+[daniel ospina - UTC+2]: capital,
+
+675
+00:45:33,523 --> 00:45:42,243
+[daniel ospina - UTC+2]: even for a well capitalized player, not infinite. So they need to figure out where they put their resources. And if you're competing for exactly the same market,
+
+676
+00:45:42,563 --> 00:45:45,843
+[daniel ospina - UTC+2]: capital wins, but there is a lot of different niches coming from
+
+677
+00:45:47,038 --> 00:45:47,838
+[daniel ospina - UTC+2]: product
+
+678
+00:45:47,838 --> 00:45:48,718
+[daniel ospina - UTC+2]: architecture
+
+679
+00:45:48,718 --> 00:45:50,478
+[daniel ospina - UTC+2]: positioning trade offs. No?
+
+680
+00:45:50,990 --> 00:45:52,510
+[Nav Nouhi (UTC+1)]: Yeah. Absolutely. And... Good.
+
+681
+00:45:51,118 --> 00:45:52,638
+[daniel ospina - UTC+2]: And that And
+
+682
+00:45:53,598 --> 00:45:56,478
+[daniel ospina - UTC+2]: and and and that also, like, applying to
+
+683
+00:45:56,958 --> 00:45:59,198
+[daniel ospina - UTC+2]: how how many ads can you afford versus
+
+684
+00:45:59,923 --> 00:46:05,203
+[daniel ospina - UTC+2]: organic results. The whole theory of organic results is that they are cheaper than ads.
+
+685
+00:46:05,203 --> 00:46:12,643
+[daniel ospina - UTC+2]: So it's more capital efficient, but more medium, long term. And so they're in the positioning game. Like, there's still the same dynamics as with Google. No?
+
+686
+00:46:14,380 --> 00:46:15,900
+[Nav Nouhi (UTC+1)]: That's yet to be seen.
+
+687
+00:46:16,380 --> 00:46:17,020
+[Nav Nouhi (UTC+1)]: So
+
+688
+00:46:17,420 --> 00:46:19,820
+[Nav Nouhi (UTC+1)]: if... Right now, if you're looking at
+
+689
+00:46:20,395 --> 00:46:23,835
+[Nav Nouhi (UTC+1)]: the primary monetization model of any assistant,
+
+690
+00:46:23,835 --> 00:46:24,635
+[Nav Nouhi (UTC+1)]: whether it's
+
+691
+00:46:24,875 --> 00:46:25,835
+[Nav Nouhi (UTC+1)]: OpenAI,
+
+692
+00:46:25,835 --> 00:46:26,555
+[Nav Nouhi (UTC+1)]: Anthropic,
+
+693
+00:46:27,115 --> 00:46:28,155
+[Nav Nouhi (UTC+1)]: Perplexity,
+
+694
+00:46:28,875 --> 00:46:29,995
+[Nav Nouhi (UTC+1)]: even Google,
+
+695
+00:46:30,475 --> 00:46:31,515
+[Nav Nouhi (UTC+1)]: it's all...
+
+696
+00:46:31,915 --> 00:46:38,790
+[Nav Nouhi (UTC+1)]: It's it's... Well, Google, not quite yet, but with the other the other ones I mentioned, it's a driven based revenue.
+
+697
+00:46:40,230 --> 00:46:41,910
+[Nav Nouhi (UTC+1)]: It's... And that
+
+698
+00:46:42,470 --> 00:46:44,150
+[Nav Nouhi (UTC+1)]: that might be where this goes.
+
+699
+00:46:45,190 --> 00:46:56,035
+[Nav Nouhi (UTC+1)]: I I don't know. I I I feel like the the way I'm the way I'm trying to read the tea leaves here, I think that's what's gonna end up happening. Like, when I mentioned someone having... If you have any agents,
+
+700
+00:46:56,755 --> 00:47:00,995
+[Nav Nouhi (UTC+1)]: you're you're gonna pay for the agent. You're gonna have to pay a monthly fee even in...
+
+701
+00:47:01,395 --> 00:47:04,450
+[Nav Nouhi (UTC+1)]: MetaMuse is is charging for the agent...
+
+702
+00:47:05,170 --> 00:47:06,770
+[Nav Nouhi (UTC+1)]: Their agent services. So
+
+703
+00:47:07,410 --> 00:47:16,530
+[Nav Nouhi (UTC+1)]: it it... We'll see. The... GBT or OpenAI hasn't cracked the code necessarily on ads yet. Now Google, I think... I strongly
+
+704
+00:47:16,930 --> 00:47:17,730
+[Nav Nouhi (UTC+1)]: believe
+
+705
+00:47:19,355 --> 00:47:20,075
+[Nav Nouhi (UTC+1)]: Google
+
+706
+00:47:20,955 --> 00:47:22,315
+[Nav Nouhi (UTC+1)]: will figure out
+
+707
+00:47:22,715 --> 00:47:24,155
+[Nav Nouhi (UTC+1)]: a way to
+
+708
+00:47:26,075 --> 00:47:27,035
+[Nav Nouhi (UTC+1)]: monetize
+
+709
+00:47:27,035 --> 00:47:28,475
+[Nav Nouhi (UTC+1)]: their user base
+
+710
+00:47:30,890 --> 00:47:31,610
+[Nav Nouhi (UTC+1)]: with
+
+711
+00:47:31,770 --> 00:47:33,370
+[Nav Nouhi (UTC+1)]: with or without ads.
+
+712
+00:47:33,610 --> 00:47:35,610
+[Nav Nouhi (UTC+1)]: I I just think Google is...
+
+713
+00:47:35,850 --> 00:47:36,810
+[Nav Nouhi (UTC+1)]: If I if I
+
+714
+00:47:37,290 --> 00:47:42,090
+[Nav Nouhi (UTC+1)]: look at Google just quickly, they... Like, how many of you guys have a Gmail account?
+
+715
+00:47:43,705 --> 00:47:49,065
+[Nav Nouhi (UTC+1)]: I wouldn't say 90 plus percent of us. How... You know, all the data you have on that account,
+
+716
+00:47:49,785 --> 00:47:52,105
+[Nav Nouhi (UTC+1)]: it goes back decades potentially,
+
+717
+00:47:52,105 --> 00:47:56,585
+[Nav Nouhi (UTC+1)]: and all the search data, they just have so much information. I think... And
+
+718
+00:47:57,510 --> 00:47:59,910
+[Nav Nouhi (UTC+1)]: I think what they can do with an agent,
+
+719
+00:48:00,070 --> 00:48:05,670
+[Nav Nouhi (UTC+1)]: building a personal agent for for you is is really something. I think it's gonna be really powerful.
+
+720
+00:48:05,830 --> 00:48:06,790
+[Nav Nouhi (UTC+1)]: And they have,
+
+721
+00:48:07,190 --> 00:48:22,615
+[Nav Nouhi (UTC+1)]: Google Cloud... GCP Google Cloud platform. They have their own chips. I think just overall, they're they're the most... They're the they're the best position being vertically... Completely vertically integrated with the data stack that goes back, you know, more than, you know, almost three decades now,
+
+722
+00:48:23,895 --> 00:48:25,335
+[Nav Nouhi (UTC+1)]: that they that they would not...
+
+723
+00:48:26,140 --> 00:48:30,860
+[Nav Nouhi (UTC+1)]: They would potentially pivot their business. And they have they have signaled that a bit as well,
+
+724
+00:48:31,820 --> 00:48:32,940
+[Nav Nouhi (UTC+1)]: over the over the,
+
+725
+00:48:33,660 --> 00:48:36,140
+[Nav Nouhi (UTC+1)]: over the past, quarter or two in their earnings calls.
+
+726
+00:48:39,115 --> 00:48:44,635
+[Nav Nouhi (UTC+1)]: So it's not a done deal. It's... That what I'm what I'm trying to say with with ads and organic,
+
+727
+00:48:45,675 --> 00:48:46,075
+[Nav Nouhi (UTC+1)]: answers.
+
+728
+00:48:49,559 --> 00:48:50,359
+[daniel ospina - UTC+2]: Thanks.
+
+729
+00:48:50,410 --> 00:48:51,210
+[rafa (UTC+1)]: Sorry.
+
+730
+00:48:51,450 --> 00:48:52,730
+[rafa (UTC+1)]: Daniel, do have a follow-up?
+
+731
+00:48:55,239 --> 00:48:56,199
+[daniel ospina - UTC+2]: No. I said thanks.
+
+732
+00:48:57,865 --> 00:48:59,145
+[rafa (UTC+1)]: Okay. Awesome.
+
+733
+00:49:00,025 --> 00:49:00,825
+[rafa (UTC+1)]: So
+
+734
+00:49:01,865 --> 00:49:08,985
+[rafa (UTC+1)]: it was originally... The meeting was originally for for an hour. We can just bump the reading to the to the next session.
+
+735
+00:49:10,370 --> 00:49:10,930
+[rafa (UTC+1)]: But
+
+736
+00:49:11,170 --> 00:49:14,850
+[rafa (UTC+1)]: one one closing closing question, I guess, Naved,
+
+737
+00:49:15,810 --> 00:49:16,930
+[rafa (UTC+1)]: what do you think...
+
+738
+00:49:17,250 --> 00:49:18,370
+[rafa (UTC+1)]: If you had...
+
+739
+00:49:18,850 --> 00:49:20,450
+[rafa (UTC+1)]: You know, we're all... I
+
+740
+00:49:21,010 --> 00:49:26,415
+[rafa (UTC+1)]: don't know if we're early, but we're definitely, I I would argue that the folks on this call are definitely not late.
+
+741
+00:49:27,775 --> 00:49:41,200
+[rafa (UTC+1)]: Or for people on the call or reading the notes that are kinda like spinning up their agent businesses or whatnot, What do you think is the biggest mistake that folks are making right now or the biggest opportunity
+
+742
+00:49:42,480 --> 00:49:44,960
+[rafa (UTC+1)]: that people have as the
+
+743
+00:49:45,280 --> 00:49:47,680
+[rafa (UTC+1)]: kind of product recommendations
+
+744
+00:49:47,680 --> 00:49:48,720
+[rafa (UTC+1)]: begin to scale
+
+745
+00:49:49,455 --> 00:49:54,175
+[rafa (UTC+1)]: through the different AI assistance both at the enterprise and the individual retail level.
+
+746
+00:49:57,605 --> 00:49:58,485
+[Nav Nouhi (UTC+1)]: Taking...
+
+747
+00:49:59,445 --> 00:50:02,805
+[Nav Nouhi (UTC+1)]: Not understanding or not taking the opportunity
+
+748
+00:50:02,805 --> 00:50:03,445
+[Nav Nouhi (UTC+1)]: or the...
+
+749
+00:50:04,230 --> 00:50:05,830
+[Nav Nouhi (UTC+1)]: Well, let me rephrase that.
+
+750
+00:50:08,390 --> 00:50:11,190
+[Nav Nouhi (UTC+1)]: I'd... I I really believe that
+
+751
+00:50:11,910 --> 00:50:16,310
+[Nav Nouhi (UTC+1)]: this agentic world that... By the way, we're all very early. Like,
+
+752
+00:50:16,870 --> 00:50:22,285
+[Nav Nouhi (UTC+1)]: we're we're we're we're at... I mean, I would... I don't know. We're not the bleeding edge necessarily, but we're very early.
+
+753
+00:50:22,765 --> 00:50:25,325
+[Nav Nouhi (UTC+1)]: I I think you need... We need to take this very seriously.
+
+754
+00:50:25,645 --> 00:50:31,085
+[Nav Nouhi (UTC+1)]: I think the world will be a much different different place in the next eighteen to twenty four months.
+
+755
+00:50:32,125 --> 00:50:32,365
+[Nav Nouhi (UTC+1)]: And,
+
+756
+00:50:33,460 --> 00:50:38,420
+[Nav Nouhi (UTC+1)]: you know, the most used apps will be... Won't be Instagram or social apps. They
+
+757
+00:50:38,740 --> 00:50:41,700
+[Nav Nouhi (UTC+1)]: might they might be, but right up there will be your agent app.
+
+758
+00:50:42,420 --> 00:50:45,780
+[Nav Nouhi (UTC+1)]: So making sure that you're you're focused on that
+
+759
+00:50:46,925 --> 00:50:51,805
+[Nav Nouhi (UTC+1)]: and and taken seriously is is what I would... That's what I think is the biggest opportunity there.
+
+760
+00:50:52,730 --> 00:50:55,210
+[rafa (UTC+1)]: Great. Maybe maybe one last question.
+
+761
+00:50:57,210 --> 00:51:05,955
+[rafa (UTC+1)]: Who who who do you think you're selling to now? Do you think do you think you're still selling to people, or do you think selling to agents
+
+762
+00:51:05,955 --> 00:51:09,075
+[rafa (UTC+1)]: is where it's at? I saw a tweet recently with Chad.
+
+763
+00:51:09,875 --> 00:51:11,875
+[rafa (UTC+1)]: Build what clankers want.
+
+764
+00:51:12,355 --> 00:51:16,515
+[rafa (UTC+1)]: Do you agree with that, or do you think that it's still a people business at the end of the day?
+
+765
+00:51:16,955 --> 00:51:17,595
+[Nav Nouhi (UTC+1)]: I...
+
+766
+00:51:18,635 --> 00:51:20,315
+[Nav Nouhi (UTC+1)]: Ultimately, it's a people business,
+
+767
+00:51:21,275 --> 00:51:21,995
+[Nav Nouhi (UTC+1)]: but
+
+768
+00:51:22,395 --> 00:51:24,075
+[Nav Nouhi (UTC+1)]: who
+
+769
+00:51:23,380 --> 00:51:26,420
+[Nav Nouhi (UTC+1)]: who's feeding the people that inform... Their information
+
+770
+00:51:26,580 --> 00:51:33,460
+[Nav Nouhi (UTC+1)]: and giving them the options, and that's builder agents. So, yeah, I would say it's better to get out of it now.
+
+771
+00:51:32,335 --> 00:51:33,695
+[rafa (UTC+1)]: Builds builds
+
+772
+00:51:33,700 --> 00:51:34,980
+[Nav Nouhi (UTC+1)]: Yeah. Build for clankers.
+
+773
+00:51:34,255 --> 00:51:35,295
+[rafa (UTC+1)]: for the agents.
+
+774
+00:51:35,615 --> 00:51:37,215
+[rafa (UTC+1)]: Builds for the climbers.
+
+775
+00:51:35,635 --> 00:51:36,275
+[Nav Nouhi (UTC+1)]: Yeah. Yeah.
+
+776
+00:51:37,375 --> 00:51:38,095
+[rafa (UTC+1)]: Okay.
+
+777
+00:51:38,735 --> 00:51:39,455
+[rafa (UTC+1)]: Well,
+
+778
+00:51:39,855 --> 00:51:42,575
+[rafa (UTC+1)]: anybody else anybody else have any other questions?
+
+779
+00:51:43,890 --> 00:51:44,690
+[rafa (UTC+1)]: Also,
+
+780
+00:51:46,210 --> 00:51:52,610
+[rafa (UTC+1)]: Nav, if you can just drop your link in the thread... Oh, I'll drop it for you. On credible
+
+781
+00:51:51,810 --> 00:51:52,450
+[Nav Nouhi (UTC+1)]: Yeah.
+
+782
+00:51:54,450 --> 00:51:55,650
+[rafa (UTC+1)]: credible,
+
+783
+00:51:56,530 --> 00:51:57,490
+[rafa (UTC+1)]: I think it is.
+
+784
+00:51:59,010 --> 00:51:59,730
+[Nav Nouhi (UTC+1)]: The o.
+
+785
+00:51:59,455 --> 00:52:00,095
+[rafa (UTC+1)]: Credible.
+
+786
+00:52:00,495 --> 00:52:02,415
+[rafa (UTC+1)]: Where? Credible.com.
+
+787
+00:52:02,955 --> 00:52:03,355
+[Nav Nouhi (UTC+1)]: Mhmm.
+
+788
+00:52:04,335 --> 00:52:05,375
+[rafa (UTC+1)]: Nice.
+
+789
+00:52:07,295 --> 00:52:09,055
+[rafa (UTC+1)]: Credible.com.
+
+790
+00:52:10,575 --> 00:52:11,135
+[rafa (UTC+1)]: Okay.
+
+791
+00:52:12,100 --> 00:52:16,100
+[rafa (UTC+1)]: There you go. Dropping it here for folks to take a look at,
+
+792
+00:52:16,740 --> 00:52:24,100
+[rafa (UTC+1)]: and I'm sure I'm sure everybody's AI assistants can ask questions. Thank you so much for joining. If you guys have suggestions
+
+793
+00:52:24,100 --> 00:52:26,340
+[rafa (UTC+1)]: for next guest speakers,
+
+794
+00:52:27,355 --> 00:52:29,595
+[rafa (UTC+1)]: Specifically, the litmus test is,
+
+795
+00:52:30,795 --> 00:52:34,795
+[rafa (UTC+1)]: you know, are you are you actually building AI native businesses?
+
+796
+00:52:35,995 --> 00:52:38,715
+[rafa (UTC+1)]: Please feel free to send a note and recommend,
+
+797
+00:52:39,670 --> 00:52:43,350
+[rafa (UTC+1)]: and we'll pick up the discussion in in two weeks.
+
+798
+00:52:44,150 --> 00:52:46,150
+[rafa (UTC+1)]: If folks want to stay around,
+
+799
+00:52:46,630 --> 00:52:48,150
+[rafa (UTC+1)]: you're more than welcome to.
+
+800
+00:52:48,790 --> 00:53:03,625
+[rafa (UTC+1)]: Sachin would love to get ten minutes if you're if you're still around, but folks can drop off. Thank you so much, Nav. I'm just gonna go... I'm just gonna show Nav... Show Sachin Crow, by the way. So if you wanna stick around and take a look at it.
+
+801
+00:53:03,270 --> 00:53:05,190
+[Nav Nouhi (UTC+1)]: Yeah. I'll check it out, actually. Sure.
+
+802
+00:53:05,000 --> 00:53:05,800
+[rafa (UTC+1)]: Alright.
+
+803
+00:53:05,880 --> 00:53:06,600
+[rafa (UTC+1)]: Cheers, guys.
+
+804
+00:53:09,430 --> 00:53:09,990
+[Nav Nouhi (UTC+1)]: Thanks, guys.
+
+805
+00:53:13,140 --> 00:53:14,980
+[Sebastián Aristizábal | UTC+1]: Thank you very much for your presentation.
+
+806
+00:53:13,169 --> 00:53:13,569
+[Matthew McDowell-Sweet (UTC)]: Hello?
+
+807
+00:53:16,165 --> 00:53:18,325
+[Nav Nouhi (UTC+1)]: I apologize. Thanks for listening,
+
+808
+00:53:18,882 --> 00:53:19,922
+[Nav Nouhi (UTC+1)]: your... All your questions.
+
+809
+00:53:20,935 --> 00:53:23,495
+[rafa (UTC+1)]: How do I how do I end the recording?
+
+810
+00:53:24,695 --> 00:53:27,575
+[rafa (UTC+1)]: Do I record... Stop. Here we go.
+
+811
+00:53:28,775 --> 00:53:29,895
+[rafa (UTC+1)]: The browser room.
